@@ -1,0 +1,6 @@
+{
+  "crate": {"minAlpha": 64, "artWidth": 128, "anchor": [646.5, 978], "anchorReviewed": true},
+  "block": {"minAlpha": 64, "artWidth": 128, "anchor": [672.5, 967], "anchorReviewed": true},
+  "tree": {"minAlpha": 64, "artWidth": 128, "anchor": [518.5, 1432], "anchorReviewed": true},
+  "house": {"minAlpha": 64, "artWidth": 128, "anchor": [626, 998], "anchorReviewed": true}
+}

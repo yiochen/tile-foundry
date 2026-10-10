@@ -1,0 +1,29 @@
+{
+  "sourceSize": [
+    1344,
+    1170
+  ],
+  "sourceRect": [
+    247,
+    225,
+    1098,
+    967
+  ],
+  "anchor": [
+    429.5,
+    746
+  ],
+  "anchorSource": [
+    672.5,
+    967
+  ],
+  "size": [
+    859,
+    750
+  ],
+  "cleanup": {
+    "minAlpha": 64,
+    "removedPixels": 84454,
+    "warning": "Review at final size: intentionally faint details can also be removed."
+  }
+}

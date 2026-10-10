@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "check": "atlas / individual PNG parity",
+      "meanChannelDelta": 0.08933567156362834,
+      "maxChannelDelta": 255
+    },
+    {
+      "check": "cell placement and undo",
+      "ok": true
+    },
+    {
+      "check": "scene JSON and preview PNG downloads, valid/invalid import",
+      "ok": true
+    },
+    {
+      "check": "390px mobile viewport",
+      "ok": true
+    },
+    {
+      "check": "320px narrow viewport",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

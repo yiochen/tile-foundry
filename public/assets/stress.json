@@ -1,0 +1,549 @@
+{
+  "version": 1,
+  "name": "Overlap stress test",
+  "width": 11,
+  "height": 12,
+  "roadColumns": [],
+  "objects": [
+    {
+      "tileId": "crate",
+      "col": 0,
+      "row": 0
+    },
+    {
+      "tileId": "tree",
+      "col": 1,
+      "row": 0
+    },
+    {
+      "tileId": "tree",
+      "col": 2,
+      "row": 0
+    },
+    {
+      "tileId": "block",
+      "col": 3,
+      "row": 0
+    },
+    {
+      "tileId": "house",
+      "col": 4,
+      "row": 0
+    },
+    {
+      "tileId": "tree",
+      "col": 5,
+      "row": 0
+    },
+    {
+      "tileId": "block",
+      "col": 6,
+      "row": 0
+    },
+    {
+      "tileId": "tree",
+      "col": 7,
+      "row": 0
+    },
+    {
+      "tileId": "crate",
+      "col": 8,
+      "row": 0
+    },
+    {
+      "tileId": "crate",
+      "col": 9,
+      "row": 0
+    },
+    {
+      "tileId": "house",
+      "col": 10,
+      "row": 0
+    },
+    {
+      "tileId": "crate",
+      "col": 0,
+      "row": 1
+    },
+    {
+      "tileId": "block",
+      "col": 1,
+      "row": 1
+    },
+    {
+      "tileId": "crate",
+      "col": 3,
+      "row": 1
+    },
+    {
+      "tileId": "block",
+      "col": 4,
+      "row": 1
+    },
+    {
+      "tileId": "crate",
+      "col": 6,
+      "row": 1
+    },
+    {
+      "tileId": "tree",
+      "col": 8,
+      "row": 1
+    },
+    {
+      "tileId": "house",
+      "col": 9,
+      "row": 1
+    },
+    {
+      "tileId": "house",
+      "col": 10,
+      "row": 1
+    },
+    {
+      "tileId": "tree",
+      "col": 0,
+      "row": 2
+    },
+    {
+      "tileId": "house",
+      "col": 1,
+      "row": 2
+    },
+    {
+      "tileId": "tree",
+      "col": 2,
+      "row": 2
+    },
+    {
+      "tileId": "crate",
+      "col": 3,
+      "row": 2
+    },
+    {
+      "tileId": "house",
+      "col": 4,
+      "row": 2
+    },
+    {
+      "tileId": "tree",
+      "col": 5,
+      "row": 2
+    },
+    {
+      "tileId": "block",
+      "col": 6,
+      "row": 2
+    },
+    {
+      "tileId": "tree",
+      "col": 7,
+      "row": 2
+    },
+    {
+      "tileId": "crate",
+      "col": 8,
+      "row": 2
+    },
+    {
+      "tileId": "tree",
+      "col": 10,
+      "row": 2
+    },
+    {
+      "tileId": "crate",
+      "col": 0,
+      "row": 3
+    },
+    {
+      "tileId": "block",
+      "col": 1,
+      "row": 3
+    },
+    {
+      "tileId": "tree",
+      "col": 2,
+      "row": 3
+    },
+    {
+      "tileId": "crate",
+      "col": 3,
+      "row": 3
+    },
+    {
+      "tileId": "crate",
+      "col": 4,
+      "row": 3
+    },
+    {
+      "tileId": "crate",
+      "col": 5,
+      "row": 3
+    },
+    {
+      "tileId": "block",
+      "col": 6,
+      "row": 3
+    },
+    {
+      "tileId": "house",
+      "col": 7,
+      "row": 3
+    },
+    {
+      "tileId": "block",
+      "col": 8,
+      "row": 3
+    },
+    {
+      "tileId": "block",
+      "col": 9,
+      "row": 3
+    },
+    {
+      "tileId": "crate",
+      "col": 10,
+      "row": 3
+    },
+    {
+      "tileId": "crate",
+      "col": 4,
+      "row": 4
+    },
+    {
+      "tileId": "block",
+      "col": 5,
+      "row": 4
+    },
+    {
+      "tileId": "crate",
+      "col": 6,
+      "row": 4
+    },
+    {
+      "tileId": "house",
+      "col": 7,
+      "row": 4
+    },
+    {
+      "tileId": "house",
+      "col": 9,
+      "row": 4
+    },
+    {
+      "tileId": "house",
+      "col": 0,
+      "row": 5
+    },
+    {
+      "tileId": "tree",
+      "col": 1,
+      "row": 5
+    },
+    {
+      "tileId": "block",
+      "col": 2,
+      "row": 5
+    },
+    {
+      "tileId": "block",
+      "col": 3,
+      "row": 5
+    },
+    {
+      "tileId": "house",
+      "col": 4,
+      "row": 5
+    },
+    {
+      "tileId": "house",
+      "col": 5,
+      "row": 5
+    },
+    {
+      "tileId": "crate",
+      "col": 6,
+      "row": 5
+    },
+    {
+      "tileId": "tree",
+      "col": 7,
+      "row": 5
+    },
+    {
+      "tileId": "house",
+      "col": 8,
+      "row": 5
+    },
+    {
+      "tileId": "block",
+      "col": 9,
+      "row": 5
+    },
+    {
+      "tileId": "block",
+      "col": 10,
+      "row": 5
+    },
+    {
+      "tileId": "tree",
+      "col": 0,
+      "row": 6
+    },
+    {
+      "tileId": "crate",
+      "col": 1,
+      "row": 6
+    },
+    {
+      "tileId": "tree",
+      "col": 2,
+      "row": 6
+    },
+    {
+      "tileId": "block",
+      "col": 3,
+      "row": 6
+    },
+    {
+      "tileId": "house",
+      "col": 4,
+      "row": 6
+    },
+    {
+      "tileId": "crate",
+      "col": 5,
+      "row": 6
+    },
+    {
+      "tileId": "tree",
+      "col": 6,
+      "row": 6
+    },
+    {
+      "tileId": "block",
+      "col": 7,
+      "row": 6
+    },
+    {
+      "tileId": "house",
+      "col": 8,
+      "row": 6
+    },
+    {
+      "tileId": "tree",
+      "col": 9,
+      "row": 6
+    },
+    {
+      "tileId": "house",
+      "col": 10,
+      "row": 6
+    },
+    {
+      "tileId": "house",
+      "col": 0,
+      "row": 7
+    },
+    {
+      "tileId": "tree",
+      "col": 1,
+      "row": 7
+    },
+    {
+      "tileId": "tree",
+      "col": 2,
+      "row": 7
+    },
+    {
+      "tileId": "house",
+      "col": 3,
+      "row": 7
+    },
+    {
+      "tileId": "block",
+      "col": 4,
+      "row": 7
+    },
+    {
+      "tileId": "tree",
+      "col": 5,
+      "row": 7
+    },
+    {
+      "tileId": "crate",
+      "col": 6,
+      "row": 7
+    },
+    {
+      "tileId": "house",
+      "col": 7,
+      "row": 7
+    },
+    {
+      "tileId": "crate",
+      "col": 9,
+      "row": 7
+    },
+    {
+      "tileId": "crate",
+      "col": 10,
+      "row": 7
+    },
+    {
+      "tileId": "crate",
+      "col": 0,
+      "row": 8
+    },
+    {
+      "tileId": "house",
+      "col": 1,
+      "row": 8
+    },
+    {
+      "tileId": "tree",
+      "col": 2,
+      "row": 8
+    },
+    {
+      "tileId": "crate",
+      "col": 3,
+      "row": 8
+    },
+    {
+      "tileId": "block",
+      "col": 5,
+      "row": 8
+    },
+    {
+      "tileId": "tree",
+      "col": 6,
+      "row": 8
+    },
+    {
+      "tileId": "block",
+      "col": 7,
+      "row": 8
+    },
+    {
+      "tileId": "crate",
+      "col": 8,
+      "row": 8
+    },
+    {
+      "tileId": "crate",
+      "col": 9,
+      "row": 8
+    },
+    {
+      "tileId": "block",
+      "col": 10,
+      "row": 8
+    },
+    {
+      "tileId": "tree",
+      "col": 1,
+      "row": 9
+    },
+    {
+      "tileId": "block",
+      "col": 2,
+      "row": 9
+    },
+    {
+      "tileId": "house",
+      "col": 4,
+      "row": 9
+    },
+    {
+      "tileId": "block",
+      "col": 5,
+      "row": 9
+    },
+    {
+      "tileId": "tree",
+      "col": 6,
+      "row": 9
+    },
+    {
+      "tileId": "block",
+      "col": 7,
+      "row": 9
+    },
+    {
+      "tileId": "tree",
+      "col": 8,
+      "row": 9
+    },
+    {
+      "tileId": "block",
+      "col": 10,
+      "row": 9
+    },
+    {
+      "tileId": "crate",
+      "col": 0,
+      "row": 10
+    },
+    {
+      "tileId": "crate",
+      "col": 1,
+      "row": 10
+    },
+    {
+      "tileId": "tree",
+      "col": 6,
+      "row": 10
+    },
+    {
+      "tileId": "crate",
+      "col": 7,
+      "row": 10
+    },
+    {
+      "tileId": "house",
+      "col": 9,
+      "row": 10
+    },
+    {
+      "tileId": "house",
+      "col": 10,
+      "row": 10
+    },
+    {
+      "tileId": "house",
+      "col": 1,
+      "row": 11
+    },
+    {
+      "tileId": "crate",
+      "col": 2,
+      "row": 11
+    },
+    {
+      "tileId": "house",
+      "col": 4,
+      "row": 11
+    },
+    {
+      "tileId": "house",
+      "col": 5,
+      "row": 11
+    },
+    {
+      "tileId": "crate",
+      "col": 7,
+      "row": 11
+    },
+    {
+      "tileId": "house",
+      "col": 9,
+      "row": 11
+    },
+    {
+      "tileId": "house",
+      "col": 10,
+      "row": 11
+    }
+  ]
+}

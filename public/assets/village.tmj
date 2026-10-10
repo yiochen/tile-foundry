@@ -1,0 +1,922 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "tiledversion": "1.11.2",
+  "orientation": "orthogonal",
+  "renderorder": "right-down",
+  "infinite": false,
+  "width": 11,
+  "height": 12,
+  "tilewidth": 128,
+  "tileheight": 128,
+  "nextlayerid": 3,
+  "nextobjectid": 55,
+  "layers": [
+    {
+      "id": 1,
+      "type": "tilelayer",
+      "name": "Ground",
+      "x": 0,
+      "y": 0,
+      "width": 11,
+      "height": 12,
+      "opacity": 1,
+      "visible": true,
+      "data": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        4,
+        5,
+        4,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        4,
+        5,
+        4,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        5,
+        4,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        4,
+        5,
+        4,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        4,
+        5,
+        4,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        5,
+        4,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        4,
+        5,
+        4,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        4,
+        5,
+        4,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        5,
+        4,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        4,
+        5,
+        4,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        4,
+        5,
+        4,
+        2,
+        3,
+        1,
+        2,
+        3,
+        1,
+        2,
+        3,
+        4,
+        5,
+        4,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "type": "objectgroup",
+      "name": "Y-sorted objects",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "objects": [
+        {
+          "id": 1,
+          "name": "tree",
+          "gid": 102,
+          "x": 64.0,
+          "y": 128,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 2,
+          "name": "crate",
+          "gid": 100,
+          "x": 320.0,
+          "y": 128,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 3,
+          "name": "tree",
+          "gid": 102,
+          "x": 576.0,
+          "y": 128,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 4,
+          "name": "tree",
+          "gid": 102,
+          "x": 1088.0,
+          "y": 128,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 5,
+          "name": "tree",
+          "gid": 102,
+          "x": 1344.0,
+          "y": 128,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 6,
+          "name": "house",
+          "gid": 103,
+          "x": 192.0,
+          "y": 256,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 7,
+          "name": "crate",
+          "gid": 100,
+          "x": 448.0,
+          "y": 256,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 8,
+          "name": "tree",
+          "gid": 102,
+          "x": 576.0,
+          "y": 256,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 9,
+          "name": "crate",
+          "gid": 100,
+          "x": 960.0,
+          "y": 256,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 10,
+          "name": "tree",
+          "gid": 102,
+          "x": 1088.0,
+          "y": 256,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 11,
+          "name": "house",
+          "gid": 103,
+          "x": 1216.0,
+          "y": 256,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 12,
+          "name": "block",
+          "gid": 101,
+          "x": 192.0,
+          "y": 384,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 13,
+          "name": "block",
+          "gid": 101,
+          "x": 320.0,
+          "y": 384,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 14,
+          "name": "block",
+          "gid": 101,
+          "x": 448.0,
+          "y": 384,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 15,
+          "name": "tree",
+          "gid": 102,
+          "x": 576.0,
+          "y": 384,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 16,
+          "name": "tree",
+          "gid": 102,
+          "x": 1088.0,
+          "y": 384,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 17,
+          "name": "block",
+          "gid": 101,
+          "x": 1216.0,
+          "y": 384,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 18,
+          "name": "tree",
+          "gid": 102,
+          "x": 64.0,
+          "y": 512,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 19,
+          "name": "block",
+          "gid": 101,
+          "x": 192.0,
+          "y": 512,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 20,
+          "name": "block",
+          "gid": 101,
+          "x": 448.0,
+          "y": 512,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 21,
+          "name": "tree",
+          "gid": 102,
+          "x": 576.0,
+          "y": 512,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 22,
+          "name": "crate",
+          "gid": 100,
+          "x": 832.0,
+          "y": 512,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 23,
+          "name": "tree",
+          "gid": 102,
+          "x": 1088.0,
+          "y": 512,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 24,
+          "name": "block",
+          "gid": 101,
+          "x": 1216.0,
+          "y": 512,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 25,
+          "name": "tree",
+          "gid": 102,
+          "x": 1344.0,
+          "y": 512,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 26,
+          "name": "tree",
+          "gid": 102,
+          "x": 576.0,
+          "y": 640,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 27,
+          "name": "tree",
+          "gid": 102,
+          "x": 1088.0,
+          "y": 640,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 28,
+          "name": "house",
+          "gid": 103,
+          "x": 192.0,
+          "y": 768,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 29,
+          "name": "crate",
+          "gid": 100,
+          "x": 448.0,
+          "y": 768,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 30,
+          "name": "tree",
+          "gid": 102,
+          "x": 576.0,
+          "y": 768,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 31,
+          "name": "crate",
+          "gid": 100,
+          "x": 704.0,
+          "y": 768,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 32,
+          "name": "crate",
+          "gid": 100,
+          "x": 832.0,
+          "y": 768,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 33,
+          "name": "tree",
+          "gid": 102,
+          "x": 1088.0,
+          "y": 768,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 34,
+          "name": "house",
+          "gid": 103,
+          "x": 1216.0,
+          "y": 768,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 35,
+          "name": "tree",
+          "gid": 102,
+          "x": 64.0,
+          "y": 896,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 36,
+          "name": "block",
+          "gid": 101,
+          "x": 192.0,
+          "y": 896,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 37,
+          "name": "block",
+          "gid": 101,
+          "x": 320.0,
+          "y": 896,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 38,
+          "name": "block",
+          "gid": 101,
+          "x": 448.0,
+          "y": 896,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 39,
+          "name": "crate",
+          "gid": 100,
+          "x": 960.0,
+          "y": 896,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 40,
+          "name": "block",
+          "gid": 101,
+          "x": 1216.0,
+          "y": 896,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 41,
+          "name": "tree",
+          "gid": 102,
+          "x": 1344.0,
+          "y": 896,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 42,
+          "name": "tree",
+          "gid": 102,
+          "x": 576.0,
+          "y": 1024,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 43,
+          "name": "tree",
+          "gid": 102,
+          "x": 1088.0,
+          "y": 1024,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 44,
+          "name": "house",
+          "gid": 103,
+          "x": 320.0,
+          "y": 1152,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 45,
+          "name": "crate",
+          "gid": 100,
+          "x": 832.0,
+          "y": 1152,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 46,
+          "name": "house",
+          "gid": 103,
+          "x": 1216.0,
+          "y": 1152,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 47,
+          "name": "tree",
+          "gid": 102,
+          "x": 64.0,
+          "y": 1280,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 48,
+          "name": "block",
+          "gid": 101,
+          "x": 320.0,
+          "y": 1280,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 49,
+          "name": "block",
+          "gid": 101,
+          "x": 448.0,
+          "y": 1280,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 50,
+          "name": "tree",
+          "gid": 102,
+          "x": 576.0,
+          "y": 1280,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 51,
+          "name": "tree",
+          "gid": 102,
+          "x": 1088.0,
+          "y": 1280,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 52,
+          "name": "tree",
+          "gid": 102,
+          "x": 1344.0,
+          "y": 1280,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 53,
+          "name": "crate",
+          "gid": 100,
+          "x": 704.0,
+          "y": 1408,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        },
+        {
+          "id": 54,
+          "name": "crate",
+          "gid": 100,
+          "x": 1216.0,
+          "y": 1408,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "name": "Ground",
+      "tilewidth": 128,
+      "tileheight": 128,
+      "columns": 0,
+      "tilecount": 5,
+      "tiles": [
+        {
+          "id": 0,
+          "image": "ground/grass-0.png",
+          "imagewidth": 128,
+          "imageheight": 128
+        },
+        {
+          "id": 1,
+          "image": "ground/grass-1.png",
+          "imagewidth": 128,
+          "imageheight": 128
+        },
+        {
+          "id": 2,
+          "image": "ground/grass-2.png",
+          "imagewidth": 128,
+          "imageheight": 128
+        },
+        {
+          "id": 3,
+          "image": "ground/road.png",
+          "imagewidth": 128,
+          "imageheight": 128
+        },
+        {
+          "id": 4,
+          "image": "ground/road-center.png",
+          "imagewidth": 128,
+          "imageheight": 128
+        }
+      ]
+    },
+    {
+      "firstgid": 100,
+      "name": "Overlapping sprites",
+      "tilewidth": 192,
+      "tileheight": 320,
+      "columns": 0,
+      "tilecount": 4,
+      "objectalignment": "bottom",
+      "tileoffset": {
+        "x": 0.0,
+        "y": 8
+      },
+      "tiles": [
+        {
+          "id": 0,
+          "image": "sprites/crate.png",
+          "imagewidth": 192,
+          "imageheight": 320,
+          "properties": [
+            {
+              "name": "groundAnchor",
+              "type": "string",
+              "value": "96,312"
+            }
+          ],
+          "objectgroup": {
+            "type": "objectgroup",
+            "objects": [
+              {
+                "id": 1,
+                "x": 64,
+                "y": 264,
+                "width": 64,
+                "height": 48
+              }
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "image": "sprites/block.png",
+          "imagewidth": 192,
+          "imageheight": 320,
+          "properties": [
+            {
+              "name": "groundAnchor",
+              "type": "string",
+              "value": "96,312"
+            }
+          ],
+          "objectgroup": {
+            "type": "objectgroup",
+            "objects": [
+              {
+                "id": 1,
+                "x": 64,
+                "y": 264,
+                "width": 64,
+                "height": 48
+              }
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "image": "sprites/tree.png",
+          "imagewidth": 192,
+          "imageheight": 320,
+          "properties": [
+            {
+              "name": "groundAnchor",
+              "type": "string",
+              "value": "96,312"
+            }
+          ],
+          "objectgroup": {
+            "type": "objectgroup",
+            "objects": [
+              {
+                "id": 1,
+                "x": 64,
+                "y": 264,
+                "width": 64,
+                "height": 48
+              }
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "image": "sprites/house.png",
+          "imagewidth": 192,
+          "imageheight": 320,
+          "properties": [
+            {
+              "name": "groundAnchor",
+              "type": "string",
+              "value": "96,312"
+            }
+          ],
+          "objectgroup": {
+            "type": "objectgroup",
+            "objects": [
+              {
+                "id": 1,
+                "x": 64,
+                "y": 264,
+                "width": 64,
+                "height": 48
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

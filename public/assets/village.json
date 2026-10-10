@@ -1,0 +1,283 @@
+{
+  "version": 1,
+  "name": "Village lane",
+  "width": 11,
+  "height": 12,
+  "roadColumns": [
+    5,
+    6,
+    7
+  ],
+  "objects": [
+    {
+      "tileId": "tree",
+      "col": 0,
+      "row": 0
+    },
+    {
+      "tileId": "tree",
+      "col": 4,
+      "row": 0
+    },
+    {
+      "tileId": "tree",
+      "col": 8,
+      "row": 0
+    },
+    {
+      "tileId": "tree",
+      "col": 10,
+      "row": 0
+    },
+    {
+      "tileId": "tree",
+      "col": 4,
+      "row": 2
+    },
+    {
+      "tileId": "tree",
+      "col": 8,
+      "row": 2
+    },
+    {
+      "tileId": "tree",
+      "col": 0,
+      "row": 3
+    },
+    {
+      "tileId": "tree",
+      "col": 10,
+      "row": 3
+    },
+    {
+      "tileId": "tree",
+      "col": 4,
+      "row": 4
+    },
+    {
+      "tileId": "tree",
+      "col": 8,
+      "row": 4
+    },
+    {
+      "tileId": "tree",
+      "col": 0,
+      "row": 6
+    },
+    {
+      "tileId": "tree",
+      "col": 10,
+      "row": 6
+    },
+    {
+      "tileId": "tree",
+      "col": 4,
+      "row": 7
+    },
+    {
+      "tileId": "tree",
+      "col": 8,
+      "row": 7
+    },
+    {
+      "tileId": "tree",
+      "col": 0,
+      "row": 9
+    },
+    {
+      "tileId": "tree",
+      "col": 4,
+      "row": 9
+    },
+    {
+      "tileId": "tree",
+      "col": 8,
+      "row": 9
+    },
+    {
+      "tileId": "tree",
+      "col": 10,
+      "row": 9
+    },
+    {
+      "tileId": "tree",
+      "col": 4,
+      "row": 1
+    },
+    {
+      "tileId": "tree",
+      "col": 4,
+      "row": 3
+    },
+    {
+      "tileId": "tree",
+      "col": 4,
+      "row": 5
+    },
+    {
+      "tileId": "tree",
+      "col": 8,
+      "row": 1
+    },
+    {
+      "tileId": "tree",
+      "col": 8,
+      "row": 3
+    },
+    {
+      "tileId": "tree",
+      "col": 8,
+      "row": 5
+    },
+    {
+      "tileId": "house",
+      "col": 1,
+      "row": 1
+    },
+    {
+      "tileId": "house",
+      "col": 9,
+      "row": 1
+    },
+    {
+      "tileId": "house",
+      "col": 1,
+      "row": 5
+    },
+    {
+      "tileId": "house",
+      "col": 9,
+      "row": 5
+    },
+    {
+      "tileId": "house",
+      "col": 2,
+      "row": 8
+    },
+    {
+      "tileId": "house",
+      "col": 9,
+      "row": 8
+    },
+    {
+      "tileId": "block",
+      "col": 1,
+      "row": 2
+    },
+    {
+      "tileId": "block",
+      "col": 2,
+      "row": 2
+    },
+    {
+      "tileId": "block",
+      "col": 3,
+      "row": 2
+    },
+    {
+      "tileId": "block",
+      "col": 9,
+      "row": 2
+    },
+    {
+      "tileId": "block",
+      "col": 1,
+      "row": 3
+    },
+    {
+      "tileId": "block",
+      "col": 3,
+      "row": 3
+    },
+    {
+      "tileId": "block",
+      "col": 9,
+      "row": 3
+    },
+    {
+      "tileId": "block",
+      "col": 1,
+      "row": 6
+    },
+    {
+      "tileId": "block",
+      "col": 2,
+      "row": 6
+    },
+    {
+      "tileId": "block",
+      "col": 3,
+      "row": 6
+    },
+    {
+      "tileId": "block",
+      "col": 9,
+      "row": 6
+    },
+    {
+      "tileId": "block",
+      "col": 2,
+      "row": 9
+    },
+    {
+      "tileId": "block",
+      "col": 3,
+      "row": 9
+    },
+    {
+      "tileId": "crate",
+      "col": 2,
+      "row": 0
+    },
+    {
+      "tileId": "crate",
+      "col": 3,
+      "row": 1
+    },
+    {
+      "tileId": "crate",
+      "col": 7,
+      "row": 1
+    },
+    {
+      "tileId": "crate",
+      "col": 6,
+      "row": 3
+    },
+    {
+      "tileId": "crate",
+      "col": 5,
+      "row": 5
+    },
+    {
+      "tileId": "crate",
+      "col": 6,
+      "row": 5
+    },
+    {
+      "tileId": "crate",
+      "col": 3,
+      "row": 5
+    },
+    {
+      "tileId": "crate",
+      "col": 7,
+      "row": 6
+    },
+    {
+      "tileId": "crate",
+      "col": 6,
+      "row": 8
+    },
+    {
+      "tileId": "crate",
+      "col": 5,
+      "row": 10
+    },
+    {
+      "tileId": "crate",
+      "col": 9,
+      "row": 10
+    }
+  ]
+}

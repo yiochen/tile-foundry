@@ -1,0 +1,241 @@
+{
+  "version": 1,
+  "cellSize": 128,
+  "frameSize": [
+    192,
+    320
+  ],
+  "tiles": [
+    {
+      "id": "crate",
+      "name": "Golden crate",
+      "heightClass": "Low",
+      "material": "Wood",
+      "image": "sprites/crate.png",
+      "source": "assets/source/crate.png",
+      "sourceSize": [
+        716,
+        731
+      ],
+      "sourceRect": [
+        4,
+        4,
+        712,
+        727
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "anchorSource": [
+        358.5,
+        727
+      ],
+      "size": [
+        192,
+        320
+      ],
+      "subpixelShift": [
+        -0.0903954802259932,
+        0.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        181,
+        128,
+        131
+      ],
+      "scale": [
+        0.1807909604519774,
+        0.18118948824343015
+      ],
+      "sourceAnchorMode": "explicit",
+      "anchorReviewed": true,
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      }
+    },
+    {
+      "id": "block",
+      "name": "Coral block",
+      "heightClass": "Low",
+      "material": "Toy brick",
+      "image": "sprites/block.png",
+      "source": "assets/source/block.png",
+      "sourceSize": [
+        859,
+        750
+      ],
+      "sourceRect": [
+        4,
+        4,
+        855,
+        746
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "anchorSource": [
+        429.5,
+        746
+      ],
+      "size": [
+        192,
+        320
+      ],
+      "subpixelShift": [
+        0.0,
+        0.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        200,
+        128,
+        112
+      ],
+      "scale": [
+        0.15041128084606345,
+        0.1509433962264151
+      ],
+      "sourceAnchorMode": "explicit",
+      "anchorReviewed": true,
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      }
+    },
+    {
+      "id": "tree",
+      "name": "Orchard tree",
+      "heightClass": "Tall",
+      "material": "Foliage",
+      "image": "sprites/tree.png",
+      "source": "assets/source/tree.png",
+      "sourceSize": [
+        679,
+        1335
+      ],
+      "sourceRect": [
+        4,
+        4,
+        675,
+        1331
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "anchorSource": [
+        339.5,
+        1331
+      ],
+      "size": [
+        192,
+        320
+      ],
+      "subpixelShift": [
+        0.0,
+        0.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        59,
+        128,
+        253
+      ],
+      "scale": [
+        0.19076005961251863,
+        0.19065561416729465
+      ],
+      "sourceAnchorMode": "explicit",
+      "anchorReviewed": true,
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      }
+    },
+    {
+      "id": "house",
+      "name": "Little cottage",
+      "heightClass": "Medium",
+      "material": "Roof & plaster",
+      "image": "sprites/house.png",
+      "source": "assets/source/house.png",
+      "sourceSize": [
+        612,
+        718
+      ],
+      "sourceRect": [
+        4,
+        4,
+        608,
+        714
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "anchorSource": [
+        306,
+        714
+      ],
+      "size": [
+        192,
+        320
+      ],
+      "subpixelShift": [
+        0.0,
+        0.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        162,
+        128,
+        150
+      ],
+      "scale": [
+        0.2119205298013245,
+        0.2112676056338028
+      ],
+      "sourceAnchorMode": "explicit",
+      "anchorReviewed": true,
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      }
+    }
+  ],
+  "ground": [
+    "ground/grass-0.png",
+    "ground/grass-1.png",
+    "ground/grass-2.png"
+  ],
+  "road": "ground/road.png",
+  "roadCenter": "ground/road-center.png"
+}

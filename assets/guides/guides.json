@@ -1,0 +1,20 @@
+{
+  "frame": [
+    192,
+    320
+  ],
+  "footprint": [
+    128,
+    128
+  ],
+  "anchor": [
+    96.0,
+    312
+  ],
+  "heights": [
+    32,
+    64,
+    96
+  ],
+  "projection": "orthogonal top and front; height extends upward"
+}
