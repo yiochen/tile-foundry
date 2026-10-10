@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+from statistics import median
 from collections import deque
 from pathlib import Path
 
@@ -213,8 +214,63 @@ def generate_guides(directory, frame=(192, 320), footprint=(128, 128), heights=(
                "anchor": [ax, ay], "heights": list(heights), "projection": "orthogonal top and front; height extends upward"})
 
 
+def neighbor_coverage(image, anchor, pitch=(128, 128), min_alpha=250, min_coverage=1.0):
+    """Test a solid-cell sprite against neighbors; free silhouettes must opt out."""
+    if min(*pitch) <= 0 or not 1 <= min_alpha <= 255 or not 0 < min_coverage <= 1:
+        raise ValueError("Require positive pitch, alpha 1..255, and coverage 0..1")
+    if any(int(v) != v for v in anchor):
+        raise ValueError("Coverage check requires an integer normalized anchor")
+    px, py = pitch
+    pad_x, pad_y = image.width, image.height
+    preview = Image.new("RGBA", (3 * px + 2 * pad_x, 3 * py + 2 * pad_y))
+    for row in range(3):
+        for col in range(3):
+            x = round(pad_x + (col + .5) * px - anchor[0])
+            y = round(pad_y + (row + 1) * py - anchor[1])
+            preview.alpha_composite(image, (x, y))
+    box = (pad_x + px, pad_y + py, pad_x + 2 * px, pad_y + 2 * py)
+    alpha = preview.crop(box).getchannel("A")
+    values = list(alpha.tobytes())
+    missing = sum(a < min_alpha for a in values)
+    coverage = 1 - missing / len(values)
+    empty_rows = [y for y in range(py) if all(a < min_alpha for a in values[y * px:(y + 1) * px])]
+    report = {"ok": coverage >= min_coverage, "coveredFraction": coverage,
+              "uncoveredPixels": missing, "testedPixels": len(values), "emptyRows": empty_rows,
+              "pitch": list(pitch), "alphaThreshold": min_alpha, "requiredCoverage": min_coverage,
+              "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."}
+    return report, preview.crop(preview.getbbox())
+
+
+def parallel_edges(image, body_rect=None, min_alpha=250, tolerance=1.0):
+    """Compare opaque side spans in far/near body bands, excluding rounded corners."""
+    if tolerance < 0 or not 1 <= min_alpha <= 255:
+        raise ValueError("Require nonnegative tolerance and alpha 1..255")
+    box = tuple(body_rect) if body_rect is not None else alpha_bounds(image, min_alpha - 1)
+    x0, y0, x1, y1 = box
+    if x0 < 0 or y0 < 0 or x1 > image.width or y1 > image.height or x1 <= x0 or y1 <= y0:
+        raise ValueError("Body rectangle must fit inside the image")
+    alpha = image.getchannel("A")
+    def band(fraction):
+        center = round(y0 + (y1 - y0 - 1) * fraction)
+        spans = []
+        for y in range(max(y0, center - 2), min(y1, center + 3)):
+            row = alpha.crop((x0, y, x1, y + 1)).point(lambda a: 255 if a >= min_alpha else 0).getbbox()
+            if row is None:
+                raise ValueError("No opaque body pixels in the selected band")
+            spans.append((x0 + row[0], x0 + row[2]))
+        return [median(s[0] for s in spans), median(s[1] for s in spans)]
+    far, near = band(.2), band(.8)
+    far_width, near_width = far[1] - far[0], near[1] - near[0]
+    shift = max(abs(near[0] - far[0]), abs(near[1] - far[1]))
+    return {"ok": abs(near_width - far_width) <= tolerance and shift <= tolerance,
+            "farWidth": far_width, "nearWidth": near_width, "widthDelta": near_width - far_width,
+            "sideShift": shift, "tolerance": tolerance, "bodyRect": list(box), "alphaThreshold": min_alpha,
+            "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."}
+
+
 def validate_assets(assets, root):
     errors, warnings = [], []
+    solid_checks = {}
     for asset in assets["tiles"]:
         image = load_rgba(Path(root) / asset["image"])
         ax, ay = asset["anchor"]
@@ -225,7 +281,18 @@ def validate_assets(assets, root):
             warnings.append(f"{asset['id']}: silhouette touches frame edge; inspect for clipping")
         if asset.get("sourceAnchorMode") == "alpha-bottom-center" and not asset.get("anchorReviewed"):
             warnings.append(f"{asset['id']}: automatic anchor; visually verify ground contact")
-    return {"ok": not errors, "errors": errors, "warnings": warnings}
+        if asset.get("solidCell"):
+            options = asset["solidCell"]
+            coverage, _ = neighbor_coverage(image, asset["anchor"], tuple(asset["footprint"]),
+                                            options.get("minAlpha", 250), options.get("minCoverage", 1.0))
+            parallel = parallel_edges(image, options.get("bodyRect"), min_alpha=options.get("minAlpha", 250),
+                                      tolerance=options.get("edgeTolerance", 1.0))
+            solid_checks[asset["id"]] = {"coverage": coverage, "parallel": parallel}
+            if not coverage["ok"]:
+                errors.append(f"{asset['id']}: repeated cells leave {coverage['uncoveredPixels']} uncovered pixels")
+            if not parallel["ok"]:
+                errors.append(f"{asset['id']}: near/far body edges taper or shift")
+    return {"ok": not errors, "errors": errors, "warnings": warnings, "solidChecks": solid_checks}
 
 
 def export_tiled(scene, assets, output):
@@ -321,6 +388,16 @@ def main():
     atlas.add_argument("--no-trim", action="store_true")
     check = sub.add_parser("validate")
     check.add_argument("manifest", type=Path)
+    coverage = sub.add_parser("check-solid")
+    coverage.add_argument("input", type=Path)
+    coverage.add_argument("output", type=Path, help="JSON report; optional PNG proof saved alongside")
+    coverage.add_argument("--anchor", type=int, nargs=2, required=True)
+    coverage.add_argument("--pitch", type=int, nargs=2, default=[128, 128])
+    coverage.add_argument("--min-alpha", type=int, default=250)
+    coverage.add_argument("--min-coverage", type=float, default=1.0)
+    coverage.add_argument("--body-rect", type=int, nargs=4, help="left top right bottom, excluding protruding art")
+    coverage.add_argument("--edge-tolerance", type=float, default=1.0)
+    coverage.add_argument("--preview", action="store_true")
     tiled = sub.add_parser("export-tiled")
     tiled.add_argument("scene", type=Path)
     tiled.add_argument("manifest", type=Path)
@@ -365,6 +442,19 @@ def main():
             result.save(args.output)
             info["meta"]["image"] = args.output.name
             write_json(args.output.with_suffix(".json"), info)
+        elif args.command == "check-solid":
+            image = load_rgba(args.input)
+            report, preview = neighbor_coverage(image, args.anchor, tuple(args.pitch), args.min_alpha, args.min_coverage)
+            parallel = parallel_edges(image, args.body_rect, args.min_alpha, args.edge_tolerance)
+            value = {"ok": report["ok"] and parallel["ok"], "coverage": report, "parallel": parallel}
+            write_json(args.output, value)
+            if args.preview:
+                background = Image.new("RGBA", preview.size, "#ff33cc")
+                background.alpha_composite(preview)
+                background.convert("RGB").save(args.output.with_suffix(".png"))
+            print(json.dumps(value, indent=2))
+            if not value["ok"]:
+                raise SystemExit(1)
         elif args.command == "validate":
             report = validate_assets(json.loads(args.manifest.read_text()), args.manifest.parent)
             print(json.dumps(report, indent=2))

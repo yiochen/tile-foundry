@@ -18,6 +18,67 @@ const download = (blob, name) => {
   link.href = url; link.download = name; link.click(); setTimeout(() => URL.revokeObjectURL(url),1000);
 };
 
+function WorkflowPreview({entry,image,outline}) {
+  const ref=useRef(null);
+  useEffect(()=>{
+    const canvas=ref.current, ctx=canvas.getContext('2d'), W=320;
+    canvas.width=W;canvas.height=552;ctx.clearRect(0,0,W,552);
+    ctx.fillStyle='#f4f6ef';ctx.fillRect(0,0,W,258);
+    ctx.fillStyle='#bdc9b4';
+    for(let y=6;y<258;y+=12)for(let x=6;x<W;x+=12)ctx.fillRect(x,y,1,1);
+    const [ax,ay]=entry.anchor;
+    ctx.drawImage(image,W/2-ax,238-ay);
+    if(outline){ctx.strokeStyle='#357967';ctx.lineWidth=1;ctx.setLineDash([4,3]);
+      ctx.strokeRect(W/2-64,238-entry.metrics.targetBodyHeight,128,entry.metrics.targetBodyHeight);
+      ctx.beginPath();ctx.moveTo(W/2-64,238-(entry.elevation||32));ctx.lineTo(W/2+64,238-(entry.elevation||32));ctx.stroke();ctx.setLineDash([]);}
+    ctx.fillStyle='#357967';ctx.beginPath();ctx.arc(W/2,238,3,0,Math.PI*2);ctx.fill();
+    // Three columns, two rows; ground pitch stays 128 for every workflow.
+    const s=296/384, x=12, y=279, headroom=Math.max(0,entry.artRect[3]-128)*s;
+    ctx.fillStyle='#91d844';ctx.fillRect(x,y,296,256*s+headroom);
+    for(let row=0;row<2;row++)for(let col=0;col<3;col++)ctx.drawImage(image,
+      x+(col+.5)*128*s-ax*s,y+headroom+(row+1)*128*s-ay*s,image.width*s,image.height*s);
+    canvas.dataset.ready='true';
+  },[entry,image,outline]);
+  return <canvas ref={ref} className="workflow-preview" aria-label={`${entry.name}: isolated sprite and six touching neighbors`}/>;
+}
+
+function MaterialScene({data}) {
+  const ref=useRef(null);
+  useEffect(()=>{
+    const c=ref.current, ctx=c.getContext('2d');c.width=1280;c.height=550;
+    ctx.fillStyle='#f4f6ef';ctx.fillRect(0,0,c.width,c.height);
+    const s=.92,pitch=128*s,left=(1280-10*pitch)/2,top=144;
+    for(let row=0;row<3;row++)for(let col=0;col<10;col++){
+      ctx.drawImage(data.images[data.assets.ground[(col+row)%3]],left+col*pitch,top+row*pitch,pitch+.1,pitch+.1);
+    }
+    const heights=[16,32,64,96];
+    for(let row=0;row<3;row++)for(let col=0;col<10;col++){
+      if(col===4||col===5)continue;
+      const material=col<4?'plastic':'wood', height=heights[(col+row)%4];
+      const t=data.workflows.lockedVariants.find(t=>t.material===material&&t.elevation===height), im=data.images[t.image];
+      ctx.drawImage(im,left+(col+.5)*pitch-t.anchor[0]*s,top+(row+1)*pitch-t.anchor[1]*s,im.width*s,im.height*s);
+    }
+    c.dataset.ready='true';
+  },[data]);
+  return <canvas ref={ref} className="material-scene" aria-label="Plastic and wood blocks at four heights, overlapping back rows on the same square grid"/>;
+}
+
+function WorkflowLab({data,outline}) {
+  const [material,setMaterial]=useState('plastic'),[height,setHeight]=useState(32);
+  const locked=data.workflows.lockedVariants.find(t=>t.material===material&&t.elevation===height);
+  const cards=[...data.workflows.cards.slice(0,3),locked];
+  return <div className="workflow-lab">
+    <div className="lab-intro"><p>One shape, four workflows. Compare the complete sprite and touching neighbors below. The SVG target is a 128 × 128 top with a 32 px front wall.</p><div className="lab-controls"><span>SVG material card</span><label><span className="sr-only">Material variant</span><select value={material} onChange={e=>setMaterial(e.target.value)}><option value="plastic">Coral plastic</option><option value="wood">Honey wood</option></select></label><label><span className="sr-only">SVG height</span><select value={height} onChange={e=>setHeight(Number(e.target.value))}>{[16,32,64,96].map(h=><option value={h} key={h}>{h} px high</option>)}</select></label></div></div>
+    <div className="workflow-cards">{cards.map((t,i)=><article className="workflow-card" key={t.id} data-workflow={i}>
+      <div className="workflow-heading"><span className="eyebrow">EXPERIMENT 0{i+1}</span><h3>{t.name}</h3><p>{t.method}</p></div>
+      <WorkflowPreview entry={t} image={data.images[t.image]} outline={outline}/>
+      <dl className="workflow-metrics"><div><dt>Uncovered pixels</dt><dd className={t.metrics.coverage.ok?'metric-pass':'metric-fail'}>{t.metrics.coverage.uncoveredPixels.toLocaleString()} / 16,384</dd></div><div><dt>Far / near width</dt><dd>{t.metrics.parallel.farWidth} / {t.metrics.parallel.nearWidth} px</dd></div><div><dt>Body / SVG target</dt><dd>{t.metrics.bodyHeight} / {t.metrics.targetBodyHeight} px</dd></div><div><dt>SVG silhouette match</dt><dd>{(100*t.metrics.silhouetteIoU).toFixed(1)}%</dd></div><div><dt>Exact SVG alpha</dt><dd>{t.metrics.alphaExact?'Yes':'No'}</dd></div></dl><p className="workflow-note">{t.note}</p>
+    </article>)}</div>
+    <p className="lab-scope">Two whole-object SVG trials, two AI materials, four scripted heights per material. Silhouette metrics do not measure internal detail or color continuity.</p>
+    <section className="reuse-scene"><div><span className="eyebrow">ONE MATERIAL → MANY TILES</span><h3>Shared footprint. Four heights.</h3><p>The same two generated materials feed eight exact SVG variants. Foreground blocks overlap the back rows.</p></div><MaterialScene data={data}/><button className="secondary-button" onClick={()=>document.querySelector('.material-scene').toBlob(blob=>blob&&download(blob,'svg-material-scene.png'))}>Export this scene PNG ↓</button></section>
+  </div>;
+}
+
 function App() {
   const [data,setData] = useState(null), [failure,setFailure] = useState('');
   const [scene,setScene] = useState(null), [preset,setPreset] = useState('village');
@@ -32,11 +93,11 @@ function App() {
   useEffect(() => {
     let alive=true;
     (async () => {
-      const [assets,atlas,village,stress,validation] = await Promise.all(
-        ['tiles.json','atlas.json','village.json','stress.json','validation.json'].map(fetchJSON));
-      const urls=[...assets.tiles.map(t=>t.image),...assets.ground,assets.road,assets.roadCenter,'atlas.png'];
+      const [assets,atlas,village,stress,contact,validation,workflows] = await Promise.all(
+        ['tiles.json','atlas.json','village.json','stress.json','contact.json','validation.json','workflows.json'].map(fetchJSON));
+      const urls=[...new Set([...assets.tiles.map(t=>t.image),...assets.ground,assets.road,assets.roadCenter,'atlas.png',...workflows.cards.map(t=>t.image),...workflows.lockedVariants.map(t=>t.image)])];
       const entries=await Promise.all(urls.map(async url=>[url,await loadImage(base+url)]));
-      if(alive){setData({assets,atlas,village,stress,validation,images:Object.fromEntries(entries)});setScene(village);}
+      if(alive){setData({assets,atlas,village,stress,contact,validation,workflows,images:Object.fromEntries(entries)});setScene(village);}
     })().catch(e=>alive&&setFailure(e.message));
     return () => {alive=false;};
   },[]);
@@ -142,27 +203,27 @@ function App() {
       remember(next);setCell(null);setStatus(`Loaded ${file.name}`);
     }catch(e){setStatus(`Import failed: ${e.message}`);}event.target.value='';
   };
-  if(failure)return <main className="boot"><h1>Tile Foundry</h1><p role="alert">{failure}</p><p>Run <code>python tools/build_demo.py</code> before starting the playground.</p></main>;
+  if(failure)return <main className="boot"><h1>Tile Foundry</h1><p role="alert">{failure}</p><p>Run <code>npm run assets</code> before starting the playground.</p></main>;
   if(!data)return <main className="boot">Loading tiles…</main>;
   return <>
     <header className="app-header"><div className="brand"><div className="brand-mark">▦</div><div><h1>Tile Foundry</h1><span>Generate once. Build a world.</span></div></div><div className="header-right"><span className="project-label">TOY VILLAGE / STUDY 01</span><span className="ready-badge"><i/> Assets ready</span></div></header>
-    <div className="workspace">
+    <div className={'workspace '+(mode==='workflows'?'lab-mode':'')}>
       <aside className="library"><div className="section-heading"><h2>Tile library</h2><span>04</span></div><p className="subtle">One grid. Different silhouettes.</p>
         <div className="asset-grid">{data.assets.tiles.map(t=><button key={t.id} className={'asset-card '+(selected===t.id?'selected':'')} aria-pressed={selected===t.id} onClick={()=>setSelected(t.id)}><div className="asset-preview"><img src={base+t.image} alt=""/></div><strong>{t.name}</strong><span>{t.heightClass} · 1 cell</span></button>)}</div>
         <div className="library-bottom"><span className="eyebrow">THE RECIPE</span><ol><li><span>01</span> Generate isolated art</li><li><span>02</span> Clean & preserve anchor</li><li><span>03</span> Normalize the footprint</li><li><span>04</span> Pack & preview overlap</li></ol><button className="text-button" onClick={()=>setAssetInfo(!assetInfo)}> {assetInfo?'Hide':'View'} processing details ↗</button>{assetInfo&&<p className="detail-text">Alpha floor 64 / 255 · 192 × 320 frames · trimmed atlas · 4 px padding · 2 px extrusion. Original PNGs and prompts are retained.</p>}</div>
       </aside>
       <main className="stage">
-        <div className="stage-heading"><div><span className="eyebrow">OVERLAP PLAYGROUND</span><h2>{mode==='scene'?scene.name:mode==='cuts'?'Full sprite cuts':'Packed atlas'}</h2></div><label className="scene-picker"><span className="sr-only">Scene preset</span><select value={preset} onChange={e=>changePreset(e.target.value)}><option value="village">Village lane</option><option value="stress">Overlap stress test</option></select></label></div>
-        <div className="stage-toolbar"><div className="segmented">{[['scene','Scene'],['cuts','Sprite cuts'],['atlas','Atlas']].map(([id,label])=><button key={id} aria-pressed={mode===id} className={mode===id?'active':''} onClick={()=>setMode(id)}>{label}</button>)}</div><div className="display-options"><label><input type="checkbox" checked={grid} onChange={e=>setGrid(e.target.checked)}/> Grid</label><label><input type="checkbox" checked={anchors} onChange={e=>setAnchors(e.target.checked)}/> Anchors</label><label><input type="checkbox" checked={footprints} onChange={e=>setFootprints(e.target.checked)}/> Collisions</label></div></div>
-        <div className="canvas-wrap" ref={containerRef}><canvas ref={canvasRef} onPointerDown={interact} aria-label="Tile scene preview with square ground cells and sprites overlapping back rows"/></div>
-        <div className="stage-footer"><span>{scene.width} × {scene.height} cells <b>·</b> {scene.objects.length} objects <b>·</b> Ground Y sort</span><span>Orthographic 2D</span></div>
+        <div className="stage-heading"><div><span className="eyebrow">OVERLAP PLAYGROUND</span><h2>{mode==='scene'?scene.name:mode==='cuts'?'Full sprite cuts':mode==='workflows'?'Workflow lab':'Packed atlas'}</h2></div>{mode!=='workflows'&&<label className="scene-picker"><span className="sr-only">Scene preset</span><select value={preset} onChange={e=>changePreset(e.target.value)}><option value="village">Village lane</option><option value="stress">Overlap stress test</option><option value="contact">Solid block contact</option></select></label>}</div>
+        <div className="stage-toolbar"><div className="segmented">{[['scene','Scene'],['cuts','Sprite cuts'],['atlas','Atlas'],['workflows','Workflows']].map(([id,label])=><button key={id} aria-pressed={mode===id} className={mode===id?'active':''} onClick={()=>setMode(id)}>{label}</button>)}</div><div className="display-options">{mode==='workflows'?<label><input type="checkbox" checked={grid} onChange={e=>setGrid(e.target.checked)}/> SVG outline</label>:<><label><input type="checkbox" checked={grid} onChange={e=>setGrid(e.target.checked)}/> Grid</label><label><input type="checkbox" checked={anchors} onChange={e=>setAnchors(e.target.checked)}/> Anchors</label><label><input type="checkbox" checked={footprints} onChange={e=>setFootprints(e.target.checked)}/> Collisions</label></>}</div></div>
+        <div className="canvas-wrap" ref={containerRef} style={mode==='workflows'?{display:'none'}:undefined}><canvas ref={canvasRef} onPointerDown={interact} aria-label="Tile scene preview with square ground cells and sprites overlapping back rows"/></div>
+        {mode==='workflows'?<WorkflowLab data={data} outline={grid}/>:<div className="stage-footer"><span>{scene.width} × {scene.height} cells <b>·</b> {scene.objects.length} objects <b>·</b> Ground Y sort</span><span>Orthographic 2D</span></div>}
       </main>
       <aside className="inspector"><div className="section-heading"><h2>Inspector</h2><span>↗</span></div><div className="inspector-art"><img src={base+tile.image} alt={tile.name}/><span className="pivot-dot"/></div><span className="eyebrow">{tile.material.toUpperCase()}</span><h3>{tile.name}</h3><p className="subtle">{tile.heightClass} silhouette · complete sprite</p><dl><div><dt>Ground cell</dt><dd>128 × 128</dd></div><div><dt>Sprite canvas</dt><dd>192 × 320</dd></div><div><dt>Ground anchor</dt><dd>{tile.anchor.map(Math.round).join(', ')}</dd></div><div><dt>Visible art</dt><dd>{tile.artRect[2]} × {tile.artRect[3]}</dd></div></dl>
         <div className="inspector-section"><label className="control-label" htmlFor="renderer">Sprite source</label><select id="renderer" value={renderer} onChange={e=>setRenderer(e.target.value)}><option value="atlas">Trimmed atlas</option><option value="sprites">Individual PNGs</option></select><label className="control-label" htmlFor="zoom">Scene scale <span>{zoom}%</span></label><input id="zoom" type="range" min="55" max="100" value={zoom} onChange={e=>setZoom(Number(e.target.value))}/></div>
         <div className="inspector-section"><span className="control-label">Cell tool</span><div className="segmented tool-buttons">{['inspect','place','erase'].map(t=><button key={t} aria-pressed={tool===t} className={tool===t?'active':''} onClick={()=>setTool(t)}>{t[0].toUpperCase()+t.slice(1)}</button>)}</div><p className="detail-text">{tool==='place'?'Choose a tile, then tap a ground cell.':tool==='erase'?'Tap a ground cell to remove its object.':'Tap a ground cell to inspect its object.'}</p><button className="secondary-button" disabled={!history.length} onClick={undo}>↶ Undo last edit</button></div>
         <div className="export-actions"><button className="primary-button" onClick={()=>canvasRef.current.toBlob(blob=>blob&&download(blob,'tile-foundry-scene.png'))}>Export preview PNG <span>↓</span></button><button className="secondary-button" onClick={()=>download(new Blob([JSON.stringify(scene,null,2)],{type:'application/json'}),'scene.json')}>Export scene JSON</button><label className="text-button import-button">Import scene JSON <input type="file" accept=".json,application/json" onChange={importScene}/></label></div>
       </aside>
-    </div><div className="status-bar" role="status"><span>{status||'Four generated sprites · reusable ground · anchors reviewed in scene'}</span><span>Source → Crop → Anchor → Atlas → Scene</span></div>
+    </div><div className="status-bar" role="status"><span>{mode==='workflows'?'Four workflows · two generated materials · eight SVG variants':status||'Four generated sprites · reusable ground · anchors reviewed in scene'}</span><span>{mode==='workflows'?'SVG → Reference / Masks → Compare':'Source → Crop → Anchor → Atlas → Scene'}</span></div>
   </>;
 }
 

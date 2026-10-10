@@ -1,0 +1,8 @@
+{
+  "mode": "built-in imagegen",
+  "prompt": "Use case: sketch-to-render. The supplied rasterized SVG is the edit target and exact geometry reference. Create a polished colorful 2D casual-game sprite by adding glossy coral-red plastic lighting, clean bevel highlights and material detail INSIDE this exact shape. Retain the entire composition and object proportions from this image: screen-aligned rectangular top plane, width 128 units, depth 128 units, front wall 32 units high, body total 160 units high, 4 identical circular studs in the exact same positions and sizes. Keep its tall rectangular shape; do not turn it into a short square block. Orthographic parallel projection, equal near/far widths, no edge convergence or perspective scaling. Preserve transparent background, tall canvas framing, bottom contact and shape boundaries. Add detail and shading only; don't move the face boundary, widen or shorten the body, change the silhouette, or rotate. One complete isolated object, no floor, cast shadow, labels, other objects or checkerboard.",
+  "transparentBackground": true,
+  "references": [
+    "assets/templates/block-32/reference-4x.png"
+  ]
+}

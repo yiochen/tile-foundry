@@ -8,6 +8,9 @@ description: Generate and process transparent orthographic game tiles with varia
 Run commands from the Tile Foundry repository root. Read
 [prompt recipes](references/prompts.md) before generating art, and
 [geometry and acceptance](references/geometry.md) before changing anchors or frames.
+For regular geometry, material variants, or repeatable height families, read
+[SVG-led workflows](references/svg-workflows.md) and choose whether the model or
+the SVG owns geometry. Do not assume a raster reference locks the result.
 
 1. Separate logical ground cells from art dimensions. Keep the existing `128 × 128`
    cell and `192 × 320` frame unless the user requires a change. Place the ground
@@ -16,6 +19,8 @@ Run commands from the Tile Foundry repository root. Read
    Supply a guide and an approved style reference to image generation. Generate
    complete isolated transparent objects; do not slice a finished overlapping scene.
    Generate one object per call by default. Save original PNGs and actual prompts.
+   Require orthographic parallel projection: equal near/far widths, parallel side
+   edges, and equal-sized repeated details. A guide alone does not enforce geometry.
 3. Inspect alpha on a contrasting background. Run `crop-alpha` for individual PNGs,
    `split-grid` for a known regular layout, or `split-components` for separated
    silhouettes on transparent sheets. Refer to `python tools/tilekit.py --help`
@@ -27,14 +32,23 @@ Run commands from the Tile Foundry repository root. Read
    for a measured ground contact. Never trust the image bounding box as ground
    contact for floating parts, shadows, asymmetry, or wide foliage. Reject clipping
    and enlarge the frame explicitly when required. Preserve returned JSON metadata.
+   For solid cells, measure opaque body width rather than counting the antialiased
+   fringe or protruding details. The demo block uses 130px full art to obtain a
+   128px opaque body. Keep the logical cell at 128px; do not warp perspective art.
 6. For the demo, add sources to `assets/source/`, set per-source options in
    `assets/source-config.json`, and run `python tools/build_demo.py`. This builds
-   alpha crops, fixed frames, a trimmed atlas, two scenes, guides, validation, and
-   editable Tiled `.tmj` maps. Generic atlas packing uses `pack MANIFEST OUTPUT`.
+   alpha crops, fixed frames, a trimmed atlas, scene presets, guides, validation, and
+   editable Tiled `.tmj` maps. Run `python tools/build_experiments.py` for SVG
+   references, material variants and comparison metrics. `npm run assets` rebuilds
+   both. Generic atlas packing uses `pack MANIFEST OUTPUT`.
 7. Open the React playground with `npm run dev`. Inspect Scene, Sprite cuts, Atlas,
    anchor and collision overlays, dense overlap, and PNG versus atlas rendering.
-   Check desktop and mobile. Save an actual browser screenshot; never substitute
+   Inspect Workflows, SVG outlines, live material/height variants, and the mixed
+   height material scene when changing the SVG path. Check desktop and mobile.
+   Save an actual browser screenshot; never substitute
    a generated mockup for verification. Mark anchors reviewed only after inspection.
+   Run `check-solid` for joinable blocks and inspect the Solid block contact preset.
+   Free silhouettes such as trees and cottages must not be required to fill a cell.
 8. Run `python -m unittest discover -s tests`, `npm run build`, and `npm run verify`.
    Record concrete remaining limitations. Commit originals, prompts, scripts, source
    configuration, normalized outputs, scene files, and screenshot evidence to Git.

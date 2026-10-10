@@ -7,6 +7,8 @@ The demo uses a 128px square logical cell, a 192 × 320 art frame, and a (96,312
 ground anchor. The visible-art width is 128px by default; foliage or roof overhang
 can differ from the actual collision footprint. Demo collision boxes are authored
 64 × 48 rectangles relative to ground contact, not auto-derived from alpha.
+The corrected solid block uses 130px full art, including its antialiased fringe,
+to give a measured 128px opaque body. Its logical cell remains 128×128.
 
 For a cell `(column,row)`, ground anchor is at
 `((column + .5) * 128, (row + 1) * 128)`. Draw back-to-front by that ground Y.
@@ -38,12 +40,29 @@ a top-down draw-order object layer, and a tileset offset of `(0,8)` to compensat
 for the 8px space below the frame's ground anchor. Its stored GIDs point at complete
 sprites, not chopped art fragments. Ground is a separate tile layer.
 
+For a joinable opaque block, run:
+
+```sh
+python tools/tilekit.py check-solid public/assets/sprites/block.png tmp/block-check.json --anchor 96 312 --pitch 128 128 --preview
+```
+
+This writes the report and optional repeated-neighborhood proof on magenta. A
+failure exits nonzero. The central cell must have no alpha below 250 after all
+neighbors are drawn; near/far opaque side spans may differ by at most one pixel.
+Use `--body-rect left top right bottom` to exclude intentional protrusions from
+the side-span check. Review corner shapes, stud sizes, and camera tilt visually.
+Declare `"solidCell": {"minAlpha": 250, "minCoverage": 1.0, "edgeTolerance": 1.0}`
+on a manifest tile to include these checks in `validate`. Keep trees, roofs, and
+other intentionally open silhouettes out of this test. Color/texture continuity
+and mixed-height terrain remain separate requirements.
+
 Acceptance:
 
 - Alpha silhouette is complete; no unexpected glow, solid backdrop, or edge clipping.
 - Crop metadata maps the local anchor back to the correct original ground contact.
 - Normalizing preserves proportions and never silently crops overflowing art.
 - Heights vary, cell pitch stays constant, and near/far instances stay the same size.
+- Opaque solid-cell body covers adjacent cell joins, with parallel near/far edges.
 - Dense front rows cover the appropriate back rows, independent of insertion order.
 - Atlas trimming reconstructs every nonzero source alpha pixel and keeps the anchor.
 - Atlas gutters do not become visible at preview scale.

@@ -6,7 +6,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageChops
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
-from tilekit import crop_alpha, split_grid, component_rects, normalize, pack_atlas, clean_alpha, export_tiled
+from tilekit import crop_alpha, split_grid, component_rects, normalize, pack_atlas, clean_alpha, export_tiled, neighbor_coverage, parallel_edges, validate_assets
 
 
 class TileGeometryTests(unittest.TestCase):
@@ -106,6 +106,38 @@ class TileGeometryTests(unittest.TestCase):
         self.assertEqual(obj["y"]+offset["y"]-320+312,256)
         self.assertEqual(obj["x"]+offset["x"]-192/2+96,192)
         self.assertEqual(tiled["layers"][1]["draworder"],"topdown")
+
+    def test_solid_cell_check_catches_short_body_despite_correct_width(self):
+        image=Image.new("RGBA",(128,112),"red")
+        report,_=neighbor_coverage(image,(64,112))
+        self.assertFalse(report["ok"])
+        self.assertEqual(report["uncoveredPixels"],128*16)
+        self.assertEqual(len(report["emptyRows"]),16)
+
+    def test_solid_cell_check_accepts_full_width_overlapping_body(self):
+        image=Image.new("RGBA",(128,160),"red")
+        report,_=neighbor_coverage(image,(64,160))
+        self.assertTrue(report["ok"])
+        self.assertEqual(report["uncoveredPixels"],0)
+        self.assertTrue(parallel_edges(image)["ok"])
+
+    def test_parallel_check_rejects_perspective_taper(self):
+        image=Image.new("RGBA",(128,160))
+        ImageDraw.Draw(image).polygon([(16,0),(111,0),(127,159),(0,159)],fill="red")
+        report=parallel_edges(image)
+        self.assertFalse(report["ok"])
+        self.assertGreater(report["widthDelta"],10)
+
+    def test_manifest_alpha_threshold_applies_to_both_solid_checks(self):
+        image=Image.new("RGBA",(192,320))
+        ImageDraw.Draw(image).rectangle((32,152,159,311),fill=(255,0,0,220))
+        assets={"tiles":[{"id":"solid","image":"solid.png","anchor":[96,312],"footprint":[128,128],
+                          "solidCell":{"minAlpha":200}}]}
+        with tempfile.TemporaryDirectory() as directory:
+            image.save(Path(directory)/"solid.png")
+            report=validate_assets(assets,directory)
+        self.assertTrue(report["ok"])
+        self.assertEqual(report["solidChecks"]["solid"]["parallel"]["alphaThreshold"],200)
 
 
 if __name__ == "__main__":

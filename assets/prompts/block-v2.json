@@ -1,0 +1,10 @@
+{
+  "mode": "built-in imagegen",
+  "intent": "sketch-to-render",
+  "source": "assets/source/block-v2.png",
+  "referenceImages": [
+    "assets/guides/height-32.png",
+    "public/assets/sprites/block.png (initial version)"
+  ],
+  "prompt": "Use case: sketch-to-render. Asset type: ONE transparent grid-compatible orthographic game tile. Image 1 is the authoritative geometry: the upright axis-aligned rectangle with a square top plane and a shallow front wall. Image 2 supplies ONLY the glossy coral-red toy-plastic material and four raised round studs. Render Image 1's exact rectangular geometry using Image 2's material. ORTHOGRAPHIC PARALLEL PROJECTION, NO PERSPECTIVE: the far/back horizontal edge and near/front horizontal edge must be exactly the same width. The left edge is a straight vertical line, the right edge a straight vertical line; they must remain parallel from top to bottom. Do not make a trapezoid, do not widen the near side, do not shrink the far side, no vanishing points, no angled side faces, no camera lens. Top plane is a full square in image space, width equal to image-space top-plane depth. Front wall is a rectangular horizontal band with height one quarter of the width. Total rectangular body height is 1.25 times its width. Four equal-sized raised studs in a regular 2 by 2 layout; the far pair must be exactly the same size as the near pair and the two rows must have equal spacing. Flat straight flush edges with nearly square corners, opaque body, no contour glow or external cast shadow. Color and soft upper-left highlights match Image 2. Keep empty transparent margins outside the complete sprite, but no empty gaps inside the rectangular body. Omit guide colors, lines, crosshair, ground plane, labels, and all other objects. The asset must meet neighbors flush on all four sides when placed with a row pitch equal to its width."
+}

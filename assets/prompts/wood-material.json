@@ -1,0 +1,6 @@
+{
+  "mode": "built-in imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: opaque flat material detail map for a 2D game sprite; it will be applied to exact SVG face masks by a script. Generate a square, close-up, evenly lit warm honey-colored wood surface, illustrated for a colorful casual game. Soft visible long grain, small natural knots, gentle stylized fibers, appealing clean smooth toy wood. Material fills the entire image edge to edge. Straight-on flat surface, no depth, perspective, boards, plank boundaries, objects, edges, studs, bevels, shadows, text or logos. No heavy lighting gradient. This is a wood material sample, not a render of an object. Opaque background.",
+  "transparentBackground": false,
+  "references": []
+}

@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "primitive": "parallel-block",
+  "size": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    312
+  ],
+  "cellSize": [
+    128,
+    128
+  ],
+  "height": 64,
+  "palette": "coral",
+  "bodyRect": [
+    32.0,
+    120,
+    160.0,
+    312
+  ],
+  "topRect": [
+    32.0,
+    120,
+    160.0,
+    248
+  ],
+  "frontRect": [
+    32.0,
+    248,
+    160.0,
+    312
+  ]
+}

@@ -7,7 +7,7 @@ Use `tools/tilekit.py` for deterministic image processing; use image generation 
 new artwork. Preserve source PNGs and their prompts. Never silently clip a sprite,
 remove a background by color guessing, or slice a flattened overlapping scene.
 
-Run `python -m unittest discover -s tests`, `python tools/build_demo.py`,
+Run `python -m unittest discover -s tests`, `npm run assets`,
 `npm run build`, and `npm run verify` after relevant changes. Inspect the actual
 screenshots, including mobile. Keep the browser renderer and Tiled export aligned
 with the stored ground anchor. Do not claim an AI output is geometrically exact.

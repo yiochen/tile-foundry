@@ -71,11 +71,11 @@ def main():
     config = json.loads(config_path.read_text()) if config_path.exists() else {}
     tiles = []
     for tile_id, (label, height, material) in TILE_NAMES.items():
-        source = ROOT / "assets/source" / f"{tile_id}.png"
+        options = config.get(tile_id, {})
+        source = ROOT / "assets/source" / options.get("sourceFile", f"{tile_id}.png")
         if not source.exists():
             raise SystemExit(f"Missing {source}; add transparent generated assets first")
         source_image = load_rgba(source)
-        options = config.get(tile_id, {})
         cleaned, cleanup_meta = clean_alpha(source_image, options.get("minAlpha", 64))
         cropped, crop_meta = crop_alpha(cleaned, options.get("anchor"), padding=4)
         crop_meta["cleanup"] = cleanup_meta
@@ -85,9 +85,10 @@ def main():
                                      art_width=options.get("artWidth", 128))
         normalized.save(PUBLIC / "sprites" / f"{tile_id}.png")
         tiles.append({"id": tile_id, "name": label, "heightClass": height, "material": material,
-                      "image": f"sprites/{tile_id}.png", "source": f"assets/source/{tile_id}.png",
+                      "image": f"sprites/{tile_id}.png", "source": source.relative_to(ROOT).as_posix(),
                       **meta, "sourceAnchorMode": "explicit" if options.get("anchor") else "alpha-bottom-center",
                       "anchorReviewed": options.get("anchorReviewed", False),
+                      **({"solidCell": options["solidCell"]} if options.get("solidCell") else {}),
                       "collision": {"x": -32, "y": -48, "width": 64, "height": 48}})
     assets = {"version": 1, "cellSize": 128, "frameSize": [192,320], "tiles": tiles,
               "ground": [f"ground/grass-{i}.png" for i in range(3)], "road": "ground/road.png",
@@ -110,13 +111,26 @@ def main():
     write_json(PUBLIC / "stress.json", stress)
     export_tiled(scene, assets, PUBLIC / "village.tmj")
     export_tiled(stress, assets, PUBLIC / "stress.tmj")
+    contact = {"version": 1, "name": "Solid block contact", "width": 9, "height": 6, "roadColumns": [],
+               "objects": [{"tileId": "block", "col": col, "row": row} for row in range(6) for col in range(9)]}
+    write_json(PUBLIC / "contact.json", contact)
+    export_tiled(contact, assets, PUBLIC / "contact.tmj")
     report = validate_assets(assets, PUBLIC)
     boundary = [(x,y) for y in range(128) for x in range(128)
                 if x < 8 or x >= 120 or y < 8 or y >= 120]
     ground_images = [Image.open(PUBLIC / f"ground/grass-{i}.png") for i in range(3)]
     report["groundEdgesMatch"] = all(im.getpixel(point) == (145,216,68,255)
                                     for im in ground_images for point in boundary)
+    png_paths = list((ROOT / "assets").rglob("*.png")) + list(PUBLIC.rglob("*.png"))
+    for path in png_paths:
+        with Image.open(path) as check:
+            check.verify()
+        with Image.open(path) as check:
+            check.load()
+    report["pngIntegrity"] = {"ok": True, "decodedFiles": len(png_paths)}
     write_json(PUBLIC / "validation.json", report)
+    if not report["ok"] or not report["groundEdgesMatch"]:
+        raise SystemExit(f"Demo asset validation failed: {report}")
     print(json.dumps({"assets": len(tiles), "placedObjects": len(scene["objects"]), "atlasSize": atlas.size,
                       "validation": report}, indent=2))
 

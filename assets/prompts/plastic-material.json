@@ -1,0 +1,6 @@
+{
+  "mode": "built-in imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: opaque flat material detail map for a 2D game sprite; it will be applied to exact SVG face masks by a script. Generate a square, close-up, uniformly lit coral-red molded plastic surface with subtle toy-like gloss variation, very fine grain and tiny soft manufacturing marks. The material fills the entire image edge to edge. Straight-on flat surface with no depth or perspective, no objects, studs, edges, bevels, drop shadows, seams, strong directional gradients, writing or logos. Details should be gentle at game scale, rather than scratches or dirt. This is a material sample, not a render of a block. Opaque background.",
+  "transparentBackground": false,
+  "references": []
+}

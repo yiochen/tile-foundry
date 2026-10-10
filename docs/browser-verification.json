@@ -3,8 +3,12 @@
   "results": [
     {
       "check": "atlas / individual PNG parity",
-      "meanChannelDelta": 0.08933567156362834,
+      "meanChannelDelta": 0.08200056503403985,
       "maxChannelDelta": 255
+    },
+    {
+      "check": "solid block contact preset",
+      "ok": true
     },
     {
       "check": "cell placement and undo",
@@ -12,6 +16,14 @@
     },
     {
       "check": "scene JSON and preview PNG downloads, valid/invalid import",
+      "ok": true
+    },
+    {
+      "check": "four workflow cards, live wood/96px variant, SVG overlay, mixed-height PNG export",
+      "ok": true
+    },
+    {
+      "check": "workflow lab at 390px and 320px",
       "ok": true
     },
     {

@@ -11,8 +11,10 @@ Input images: [style reference] supplies palette, materials, edge treatment, and
 lighting; [geometry guide] supplies projected footprint and baseline. The guide is
 not artwork: omit all guide lines, anchor marks, labels, and background.
 Subject: [one object and its visible height].
-Camera: fixed front-facing three-quarter overhead view, top and front visible,
-parallel grid axes, no diamond grid, no vanishing point or perspective shrinking.
+Camera: orthographic parallel projection, top and front visible. Far and near body
+edges have the same width, side edges remain parallel, and repeated details have
+the same size at every depth. No perspective taper, vanishing points, wide-angle
+lens, or diamond grid. A tilted orthographic camera may foreshorten depth equally.
 Composition: one isolated complete silhouette with transparent margins. Ground
 contact stays at the guide's baseline. Height extends upward. Include hidden-back
 parts so the sprite can be rearranged with any neighbor.
@@ -28,6 +30,18 @@ Change only [material/color/surface pattern]. Preserve the outer footprint,
 ground-contact point, top/front division, camera angle, and complete silhouette.
 Keep the background genuinely transparent. Keep height unchanged unless requested.
 Validate alignment afterward; an instruction alone does not guarantee exact pixels.
+
+## Flush solid-cell block
+
+Use [approved style] for material and [geometry guide] as the primary shape.
+Generate an opaque rectangular top-and-front body. Its left and right edges are
+straight and parallel; far and near widths are equal. No trapezoid, side-plane
+convergence, glow, external shadow, or protruding bevel. Repeated studs have equal
+sizes in both rows. Keep corners almost square. At the intended uniform scale,
+the opaque body must span the full [128px] column pitch, and its vertical coverage
+must reach or overlap the next row at [128px] pitch. Keep height upward from the
+fixed ground contact. Validate opacity in a repeated neighborhood and equal side
+spans; regenerate if taper remains. Do not stretch only one axis to hide a failure.
 
 ## Height variant
 

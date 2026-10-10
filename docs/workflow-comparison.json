@@ -1,0 +1,901 @@
+{
+  "version": 1,
+  "cellSize": 128,
+  "target": {
+    "width": 128,
+    "depth": 128,
+    "height": 32,
+    "bodyHeight": 160
+  },
+  "cards": [
+    {
+      "id": "free-block",
+      "name": "Free generation",
+      "image": "workflows/free-block.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        200,
+        128,
+        112
+      ],
+      "method": "Style reference only",
+      "note": "Original baseline: short body and tapered sides.",
+      "metrics": {
+        "coverage": {
+          "ok": false,
+          "coveredFraction": 0.8272705078125,
+          "uncoveredPixels": 2830,
+          "testedPixels": 16384,
+          "emptyRows": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            127
+          ],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": false,
+          "farWidth": 122,
+          "nearWidth": 126,
+          "widthDelta": 4,
+          "sideShift": 2,
+          "tolerance": 1.0,
+          "bodyRect": [
+            33,
+            201,
+            159,
+            311
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 110,
+        "targetBodyHeight": 160,
+        "heightError": -50,
+        "silhouetteIoU": 0.66181640625,
+        "alphaExact": false
+      },
+      "source": "assets/source/block.png",
+      "processing": {
+        "cleanup": {
+          "minAlpha": 64,
+          "removedPixels": 84454,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            1344,
+            1170
+          ],
+          "sourceRect": [
+            247,
+            225,
+            1098,
+            967
+          ],
+          "anchor": [
+            96,
+            312
+          ],
+          "anchorSource": [
+            672.5,
+            967
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            0.0
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            200,
+            128,
+            112
+          ],
+          "scale": [
+            0.15041128084606345,
+            0.1509433962264151
+          ],
+          "sourceAnchorMode": "explicit"
+        }
+      }
+    },
+    {
+      "id": "svg-guided-block",
+      "name": "SVG + style reference",
+      "image": "workflows/svg-guided-block.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        31,
+        179,
+        130,
+        133
+      ],
+      "method": "AI redraws the whole object",
+      "note": "Parallel sides, but the model shortened the SVG body toward the style reference.",
+      "metrics": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            180,
+            160,
+            311
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 131,
+        "targetBodyHeight": 160,
+        "heightError": -29,
+        "silhouetteIoU": 0.818359375,
+        "alphaExact": false
+      },
+      "source": "assets/source/svg-guided-block.png",
+      "processing": {
+        "cleanup": {
+          "minAlpha": 64,
+          "removedPixels": 7114,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            156,
+            754,
+            817,
+            1431
+          ],
+          "anchor": [
+            96,
+            312
+          ],
+          "anchorSource": [
+            486.5,
+            1431
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            0.0
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            31,
+            179,
+            130,
+            133
+          ],
+          "scale": [
+            0.19667170953101362,
+            0.1964549483013294
+          ],
+          "sourceAnchorMode": "explicit"
+        }
+      }
+    },
+    {
+      "id": "svg-only-block",
+      "name": "SVG reference only",
+      "image": "workflows/svg-only-block.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        31,
+        150,
+        130,
+        162
+      ],
+      "method": "AI adds detail to the SVG raster",
+      "note": "Much closer proportions in this trial. Exact pixels and face positions remain model-dependent.",
+      "metrics": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            151,
+            160,
+            311
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 160,
+        "targetBodyHeight": 160,
+        "heightError": 0,
+        "silhouetteIoU": 0.9875291149068323,
+        "alphaExact": false
+      },
+      "source": "assets/source/svg-only-block.png",
+      "processing": {
+        "cleanup": {
+          "minAlpha": 64,
+          "removedPixels": 13150,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            160,
+            768,
+            811,
+            1581
+          ],
+          "anchor": [
+            96,
+            312
+          ],
+          "anchorSource": [
+            485.5,
+            1581
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            0.0
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            31,
+            150,
+            130,
+            162
+          ],
+          "scale": [
+            0.19969278033794163,
+            0.1992619926199262
+          ],
+          "sourceAnchorMode": "explicit"
+        }
+      }
+    },
+    {
+      "id": "locked-plastic-32",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-plastic-32.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored.",
+      "metrics": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 160,
+        "targetBodyHeight": 160,
+        "heightError": 0,
+        "silhouetteIoU": 1.0,
+        "alphaExact": true
+      },
+      "material": "plastic",
+      "elevation": 32
+    }
+  ],
+  "lockedVariants": [
+    {
+      "id": "locked-plastic-16",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-plastic-16.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        168,
+        128,
+        144
+      ],
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored.",
+      "metrics": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            168,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 144,
+        "targetBodyHeight": 144,
+        "heightError": 0,
+        "silhouetteIoU": 1.0,
+        "alphaExact": true
+      },
+      "material": "plastic",
+      "elevation": 16
+    },
+    {
+      "id": "locked-plastic-32",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-plastic-32.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored.",
+      "metrics": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 160,
+        "targetBodyHeight": 160,
+        "heightError": 0,
+        "silhouetteIoU": 1.0,
+        "alphaExact": true
+      },
+      "material": "plastic",
+      "elevation": 32
+    },
+    {
+      "id": "locked-plastic-64",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-plastic-64.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        120,
+        128,
+        192
+      ],
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored.",
+      "metrics": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            120,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 192,
+        "targetBodyHeight": 192,
+        "heightError": 0,
+        "silhouetteIoU": 1.0,
+        "alphaExact": true
+      },
+      "material": "plastic",
+      "elevation": 64
+    },
+    {
+      "id": "locked-plastic-96",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-plastic-96.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        88,
+        128,
+        224
+      ],
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored.",
+      "metrics": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            88,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 224,
+        "targetBodyHeight": 224,
+        "heightError": 0,
+        "silhouetteIoU": 1.0,
+        "alphaExact": true
+      },
+      "material": "plastic",
+      "elevation": 96
+    },
+    {
+      "id": "locked-wood-16",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-wood-16.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        168,
+        128,
+        144
+      ],
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored.",
+      "metrics": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            168,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 144,
+        "targetBodyHeight": 144,
+        "heightError": 0,
+        "silhouetteIoU": 1.0,
+        "alphaExact": true
+      },
+      "material": "wood",
+      "elevation": 16
+    },
+    {
+      "id": "locked-wood-32",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-wood-32.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored.",
+      "metrics": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 160,
+        "targetBodyHeight": 160,
+        "heightError": 0,
+        "silhouetteIoU": 1.0,
+        "alphaExact": true
+      },
+      "material": "wood",
+      "elevation": 32
+    },
+    {
+      "id": "locked-wood-64",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-wood-64.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        120,
+        128,
+        192
+      ],
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored.",
+      "metrics": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            120,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 192,
+        "targetBodyHeight": 192,
+        "heightError": 0,
+        "silhouetteIoU": 1.0,
+        "alphaExact": true
+      },
+      "material": "wood",
+      "elevation": 64
+    },
+    {
+      "id": "locked-wood-96",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-wood-96.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        88,
+        128,
+        224
+      ],
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored.",
+      "metrics": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            88,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 224,
+        "targetBodyHeight": 224,
+        "heightError": 0,
+        "silhouetteIoU": 1.0,
+        "alphaExact": true
+      },
+      "material": "wood",
+      "elevation": 96
+    }
+  ],
+  "scope": "One output for each SVG-reference strategy, two generated materials, four deterministic heights per material. Not a statistical model benchmark. Coverage tests identical solid cells; IoU tests silhouette only."
+}

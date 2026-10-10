@@ -68,24 +68,24 @@
       "heightClass": "Low",
       "material": "Toy brick",
       "image": "sprites/block.png",
-      "source": "assets/source/block.png",
+      "source": "assets/source/block-v2.png",
       "sourceSize": [
-        859,
-        750
+        662,
+        683
       ],
       "sourceRect": [
         4,
         4,
-        855,
-        746
+        658,
+        679
       ],
       "anchor": [
         96,
         312
       ],
       "anchorSource": [
-        429.5,
-        746
+        331,
+        679
       ],
       "size": [
         192,
@@ -100,17 +100,22 @@
         128
       ],
       "artRect": [
-        32,
-        200,
-        128,
-        112
+        31,
+        178,
+        130,
+        134
       ],
       "scale": [
-        0.15041128084606345,
-        0.1509433962264151
+        0.19877675840978593,
+        0.1985185185185185
       ],
       "sourceAnchorMode": "explicit",
       "anchorReviewed": true,
+      "solidCell": {
+        "minAlpha": 250,
+        "minCoverage": 1.0,
+        "edgeTolerance": 1.0
+      },
       "collision": {
         "x": -32,
         "y": -48,
