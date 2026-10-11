@@ -1,0 +1,8 @@
+{
+  "caseId": "dancing-player",
+  "userPrompt": "generate a player dancing spritesheet on tile",
+  "source": "source.png",
+  "generationRecipe": "generation.json",
+  "guide": "guide.json",
+  "result": "processed/result.json"
+}

@@ -1,0 +1,288 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "tiledversion": "1.11.2",
+  "orientation": "orthogonal",
+  "renderorder": "right-down",
+  "infinite": false,
+  "width": 3,
+  "height": 2,
+  "tilewidth": 128,
+  "tileheight": 128,
+  "nextlayerid": 3,
+  "nextobjectid": 2,
+  "layers": [
+    {
+      "id": 1,
+      "type": "tilelayer",
+      "name": "Ground",
+      "x": 0,
+      "y": 0,
+      "width": 3,
+      "height": 2,
+      "opacity": 1,
+      "visible": true,
+      "data": [
+        1,
+        2,
+        3,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "type": "objectgroup",
+      "name": "Y-sorted objects",
+      "draworder": "topdown",
+      "opacity": 1,
+      "visible": true,
+      "objects": [
+        {
+          "id": 1,
+          "name": "character-jump-solid",
+          "gid": 104,
+          "x": 192.0,
+          "y": 192.0,
+          "width": 192,
+          "height": 320,
+          "rotation": 0,
+          "visible": true
+        }
+      ]
+    }
+  ],
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "name": "Ground",
+      "tilewidth": 128,
+      "tileheight": 128,
+      "columns": 0,
+      "tilecount": 5,
+      "tiles": [
+        {
+          "id": 0,
+          "image": "ground/grass-0.png",
+          "imagewidth": 128,
+          "imageheight": 128
+        },
+        {
+          "id": 1,
+          "image": "ground/grass-1.png",
+          "imagewidth": 128,
+          "imageheight": 128
+        },
+        {
+          "id": 2,
+          "image": "ground/grass-2.png",
+          "imagewidth": 128,
+          "imageheight": 128
+        },
+        {
+          "id": 3,
+          "image": "ground/road.png",
+          "imagewidth": 128,
+          "imageheight": 128
+        },
+        {
+          "id": 4,
+          "image": "ground/road-center.png",
+          "imagewidth": 128,
+          "imageheight": 128
+        }
+      ]
+    },
+    {
+      "firstgid": 100,
+      "name": "Overlapping sprites",
+      "tilewidth": 192,
+      "tileheight": 320,
+      "columns": 0,
+      "tilecount": 7,
+      "objectalignment": "bottom",
+      "tileoffset": {
+        "x": 0.0,
+        "y": 72
+      },
+      "tiles": [
+        {
+          "id": 0,
+          "image": "characters/character-box-keyed.png",
+          "imagewidth": 192,
+          "imageheight": 320,
+          "properties": [
+            {
+              "name": "groundAnchor",
+              "type": "string",
+              "value": "96,248"
+            }
+          ],
+          "objectgroup": {
+            "type": "objectgroup",
+            "objects": [
+              {
+                "id": 1,
+                "x": 64,
+                "y": 200,
+                "width": 64,
+                "height": 48
+              }
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "image": "characters/character-stick-keyed.png",
+          "imagewidth": 192,
+          "imageheight": 320,
+          "properties": [
+            {
+              "name": "groundAnchor",
+              "type": "string",
+              "value": "96,248"
+            }
+          ],
+          "objectgroup": {
+            "type": "objectgroup",
+            "objects": [
+              {
+                "id": 1,
+                "x": 64,
+                "y": 200,
+                "width": 64,
+                "height": 48
+              }
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "image": "characters/character-drawn-keyed.png",
+          "imagewidth": 192,
+          "imageheight": 320,
+          "properties": [
+            {
+              "name": "groundAnchor",
+              "type": "string",
+              "value": "96,248"
+            }
+          ],
+          "objectgroup": {
+            "type": "objectgroup",
+            "objects": [
+              {
+                "id": 1,
+                "x": 64,
+                "y": 200,
+                "width": 64,
+                "height": 48
+              }
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "image": "characters/character-raster-keyed.png",
+          "imagewidth": 192,
+          "imageheight": 320,
+          "properties": [
+            {
+              "name": "groundAnchor",
+              "type": "string",
+              "value": "96,248"
+            }
+          ],
+          "objectgroup": {
+            "type": "objectgroup",
+            "objects": [
+              {
+                "id": 1,
+                "x": 64,
+                "y": 200,
+                "width": 64,
+                "height": 48
+              }
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "image": "characters/character-jump-solid-keyed.png",
+          "imagewidth": 192,
+          "imageheight": 320,
+          "properties": [
+            {
+              "name": "groundAnchor",
+              "type": "string",
+              "value": "96,248"
+            }
+          ],
+          "objectgroup": {
+            "type": "objectgroup",
+            "objects": [
+              {
+                "id": 1,
+                "x": 64,
+                "y": 200,
+                "width": 64,
+                "height": 48
+              }
+            ]
+          }
+        },
+        {
+          "id": 5,
+          "image": "characters/character-jump-corners-removal.png",
+          "imagewidth": 192,
+          "imageheight": 320,
+          "properties": [
+            {
+              "name": "groundAnchor",
+              "type": "string",
+              "value": "96,248"
+            }
+          ],
+          "objectgroup": {
+            "type": "objectgroup",
+            "objects": [
+              {
+                "id": 1,
+                "x": 64,
+                "y": 200,
+                "width": 64,
+                "height": 48
+              }
+            ]
+          }
+        },
+        {
+          "id": 6,
+          "image": "characters/character-standing-corners-removal.png",
+          "imagewidth": 192,
+          "imageheight": 320,
+          "properties": [
+            {
+              "name": "groundAnchor",
+              "type": "string",
+              "value": "96,248"
+            }
+          ],
+          "objectgroup": {
+            "type": "objectgroup",
+            "objects": [
+              {
+                "id": 1,
+                "x": 64,
+                "y": 200,
+                "width": 64,
+                "height": 48
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

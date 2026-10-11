@@ -1,0 +1,9 @@
+{
+  "mode": "built-in imagegen",
+  "prompt": "Use case: sketch-to-render. Asset type: one complete isolated transparent 2D game character sprite to use in a later raster-reference experiment. Image 1 is an authored SVG character design and pose reference. Refine this exact original character into polished colorful casual-game illustration: a cheerful original toy courier with an orange cap, warm cream face, two small dark eyes and a friendly smile, cobalt-blue long-sleeved tunic with a brown belt and gold buckle, navy trousers, brown ankle boots, bare hands. Polished colorful casual-game illustration, softly shaded chunky forms, restrained glossy highlights, warm upper-left light, clean edges, no text or logos. Keep the same front-facing pose, proportions, orange cap, blue clothing, two legs and two boots; both boot soles share the same horizontal baseline. Keep the hands at the sides and the silhouette complete. Add soft material lighting and illustrated detail inside the design rather than redesigning its identity. Preserve the tall canvas framing and character placement. Genuine transparent alpha outside the character. No floor, ground, shadow outside the silhouette, labels, text, checkerboard, other objects, or cropping.",
+  "transparent_background": true,
+  "references": [
+    "assets/character-guides/character-only-4x.png"
+  ],
+  "source": "assets/source/character-raster-reference.png"
+}

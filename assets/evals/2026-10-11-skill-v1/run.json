@@ -1,0 +1,32 @@
+{
+  "id": "2026-10-11-skill-v1",
+  "userPrompts": [
+    "generate a lava tile",
+    "generate a player dancing spritesheet on tile"
+  ],
+  "freshGenerationCalls": 3,
+  "execution": "Two independent executor agents; one dance retry after visual failure. Root independently reviewed source/cutouts and added deterministic separator recovery. No extra generation after the retry.",
+  "skillSnapshot": "skill-snapshot.md",
+  "skillSHA256": "0bddbb3fb658269f1df19f60de68085503ad9ae42d358c6621cbbd4f6bb4d7cb",
+  "evolution": "First dance attempt used the initial workflow. Per-pose instructions, robust floor side measurements, and transparent-separator recovery were added after observed failures. Snapshot records the final skill; exact recipes preserve prompts used at each attempt.",
+  "trials": [
+    {
+      "caseId": "lava-tile",
+      "directory": "lava-tile",
+      "report": "lava-tile.json",
+      "expectedStatus": "passed"
+    },
+    {
+      "caseId": "dancing-player",
+      "directory": "dancing-player",
+      "report": "dancing-player.json",
+      "expectedStatus": "failed"
+    },
+    {
+      "caseId": "dancing-player",
+      "directory": "dancing-player-retry",
+      "report": "dancing-player-retry.json",
+      "expectedStatus": "passed"
+    }
+  ]
+}

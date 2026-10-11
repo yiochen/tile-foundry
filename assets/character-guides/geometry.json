@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "frame": [
+    192,
+    320
+  ],
+  "footprint": [
+    128,
+    128
+  ],
+  "floorRect": [
+    32,
+    184,
+    160,
+    312
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "anchorMeaning": "Floor cell center, independent of feet and sprite bounds",
+  "standingFootBaseline": 248,
+  "jumpFootMidpoint": [
+    98,
+    214
+  ],
+  "jumpExpectedElevation": 34,
+  "cornerOuterRect": [
+    30,
+    182,
+    162,
+    314
+  ],
+  "referenceScale": 4
+}

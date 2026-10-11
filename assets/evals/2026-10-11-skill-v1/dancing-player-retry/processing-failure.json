@@ -1,0 +1,67 @@
+{
+  "status": "failed",
+  "stage": "process-on-floor",
+  "error": "Art crosses a sheet gutter; regenerate isolated panels instead of clipping",
+  "command": ".venv/bin/python tools/tilekit.py process-on-floor /tmp/tile-foundry-dance-retry-lg3b0f1_/source.png /tmp/tile-foundry-dance-retry-lg3b0f1_/guide.json /tmp/tile-foundry-dance-retry-lg3b0f1_/processed --min-alpha 32 --fps 8",
+  "source": "source.png",
+  "sourceSHA256": "504c0ff7d119019183cb09b170b2666940ede37c0efa0d4bbf800b31ac794e66",
+  "guide": "guide.json",
+  "sourceSize": [
+    1224,
+    1285
+  ],
+  "minAlpha": 32,
+  "sourcePanelRectangles": [
+    [
+      0,
+      0,
+      367,
+      612
+    ],
+    [
+      428,
+      0,
+      796,
+      612
+    ],
+    [
+      857,
+      0,
+      1224,
+      612
+    ],
+    [
+      0,
+      673,
+      367,
+      1285
+    ],
+    [
+      428,
+      673,
+      796,
+      1285
+    ],
+    [
+      857,
+      673,
+      1224,
+      1285
+    ]
+  ],
+  "gutterViolationPixelsAtOrAboveThreshold": 285,
+  "maximumOffPanelAlpha": 255,
+  "gutterViolationBounds": [
+    683,
+    665,
+    959,
+    673
+  ],
+  "diagnostic": "diagnostics/gutter-violation.png",
+  "diagnosticMeaning": "Magenta pixels are exactly the off-panel source pixels with alpha >=32; purple outlines mark declared panel cuts. No sprite was cropped, clipped, keyed, stretched or accepted.",
+  "poseReview": "The final pair visibly alternates raised-arm directions and opposite crossed steps; source identity is consistent.",
+  "retryBudgetExhausted": true,
+  "normalizedFramesProduced": false,
+  "limitation": "Raised fingertips in panels 5 and 6 extend up to 8 source pixels into the horizontal row gutter; slicing would clip those fully opaque pixels.",
+  "offPanelPixels": "Raised fingertips, not merely weak floor haze"
+}

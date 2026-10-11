@@ -1,0 +1,96 @@
+{
+  "cellSize": 128,
+  "tiles": [
+    {
+      "id": "character-box",
+      "image": "characters/character-box-keyed.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "extraction": "approximate-chroma-key"
+    },
+    {
+      "id": "character-stick",
+      "image": "characters/character-stick-keyed.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "extraction": "approximate-chroma-key"
+    },
+    {
+      "id": "character-drawn",
+      "image": "characters/character-drawn-keyed.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "extraction": "approximate-chroma-key"
+    },
+    {
+      "id": "character-raster",
+      "image": "characters/character-raster-keyed.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "extraction": "approximate-chroma-key"
+    },
+    {
+      "id": "character-jump-solid",
+      "image": "characters/character-jump-solid-keyed.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "extraction": "approximate-chroma-key"
+    },
+    {
+      "id": "character-jump-corners",
+      "image": "characters/character-jump-corners-removal.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "extraction": "detached-alpha"
+    },
+    {
+      "id": "character-standing-corners",
+      "image": "characters/character-standing-corners-removal.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "extraction": "detached-alpha"
+    }
+  ]
+}

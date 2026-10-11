@@ -1,0 +1,5 @@
+{
+  "original": "processed-original/result.json",
+  "current": "processed/result.json",
+  "reason": "Median floor side edges prevent a hand touching the floor from expanding its measured width. Source PNG and generation recipe unchanged."
+}

@@ -1,0 +1,21 @@
+{
+  "mode": "built-in imagegen",
+  "prompt": "Use case: sketch-to-render. Asset type: one transparent 2D character calibration sprite. Image 1 is the only image input and the authoritative geometry/pose guide. Character identity: a cheerful original toy courier with an orange cap, warm cream face, two small dark eyes and a friendly smile, cobalt-blue long-sleeved tunic with a brown belt and gold buckle, navy trousers, brown ankle boots, bare hands. Polished colorful casual-game illustration, softly shaded chunky forms, restrained glossy highlights, warm upper-left light, clean edges, no text or logos. Orthographic front-facing character, no perspective scaling. Preserve the guide's entire tall framing and the character-to-floor scale. The logical floor cell is the screen-aligned square from (32,184) to (160,312) in a 192 by 320 frame. Its ground anchor is its CENTER (96,248), not its front edge or the bottom of the sprite. Keep the floor guide in exactly the same position, shape, flat green color and cream corner marks where present. Do not add floor lighting, thickness, bevels, grass, texture, cast shadows, extra markers, text or labels. Preserve genuine transparent alpha outside the guide and character. Keep the entire character complete, including both boots and hands. No cropping, floor enlargement, camera tilt, isometric diamond, background scene or checkerboard. Fill the stick figure into the courier following the head, spine, arms, legs and shoe posture. Replace all stick lines with complete illustrated anatomy and clothes. The midpoint of the two boot soles must remain at the guide's standing ground position, the floor center (96,248).",
+  "transparentBackground": true,
+  "references": [
+    "assets/character-guides/stick-4x.png"
+  ],
+  "source": "assets/source/character-stick.png",
+  "experiment": {
+    "floorMode": "solid",
+    "pose": "standing",
+    "groundAnchor": [
+      96,
+      248
+    ],
+    "expectedFootMidpoint": [
+      96,
+      248
+    ]
+  }
+}

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import colorsys
 import json
 import math
 from statistics import median
@@ -149,6 +150,286 @@ def normalize(image, frame=(192, 320), anchor_out=(96, 312), art_width=128,
         "footprint": list(footprint), "artRect": [x, y, *size],
         "scale": [sx, sy], "sourceAnchorMode": "explicit" if anchor_in else "alpha-bottom-center",
     }
+
+
+def floor_anchor(image, mode="solid", threshold=64):
+    """Infer a calibration floor from alpha geometry, never from guessed colors.
+
+    Solid guides require a wide connected screen-aligned floor band. Corner guides
+    require four detached small components surrounding one character component.
+    This returns observed geometry; it never forces a redraw into the SVG shape.
+    """
+    if not 1 <= threshold <= 254:
+        raise ValueError("Alpha threshold must be 1..254")
+    if mode == "corners":
+        boxes = component_rects(image, threshold=threshold-1, min_area=max(8, image.width*image.height//20000))
+        if len(boxes) != 5:
+            raise ValueError(f"Expected one character and four detached corner marks; found {len(boxes)} components")
+        character = max(boxes, key=lambda b:(b[2]-b[0])*(b[3]-b[1]))
+        marks = [b for b in boxes if b != character]
+        rect = (min(b[0] for b in marks), min(b[1] for b in marks), max(b[2] for b in marks), max(b[3] for b in marks))
+        cx, cy = (rect[0]+rect[2])/2, (rect[1]+rect[3])/2
+        quadrants = {(int((b[0]+b[2])/2 > cx), int((b[1]+b[3])/2 > cy)) for b in marks}
+        if len(quadrants) != 4 or any((b[2]-b[0]) > (rect[2]-rect[0])*.25 or (b[3]-b[1]) > (rect[3]-rect[1])*.25 for b in marks):
+            raise ValueError("Detached components do not form four small calibration corners")
+        extra = {"characterRect":list(character),"markerRects":[list(b) for b in marks],"nominalSpan":132}
+    elif mode == "solid":
+        alpha = image.getchannel("A")
+        data = alpha.tobytes()
+        rows = []
+        for y in range(image.height):
+            runs=[]; start=None
+            for x in range(image.width+1):
+                opaque=x<image.width and data[y*image.width+x]>=threshold
+                if opaque and start is None: start=x
+                if not opaque and start is not None:
+                    runs.append((start,x)); start=None
+            rows.append(max(runs,key=lambda r:r[1]-r[0],default=(0,0)))
+        maximum=max(r[1]-r[0] for r in rows)
+        if maximum < 8:
+            raise ValueError("No substantial opaque floor or character")
+        bands=[]; start=None
+        for y in range(image.height+1):
+            broad=y<image.height and rows[y][1]-rows[y][0]>=maximum*.88
+            if broad and start is None: start=y
+            if not broad and start is not None:
+                if y-start>=maximum*.3: bands.append((start,y))
+                start=None
+        if not bands:
+            raise ValueError("No wide connected alpha band identifies the floor")
+        top,bottom=bands[-1]
+        # A hand can touch the floor's top edge and protrude into a few rows.
+        # Use typical band edges so that protrusion does not set floor scale.
+        rect=(round(median(r[0] for r in rows[top:bottom])),top,
+              round(median(r[1] for r in rows[top:bottom])),bottom)
+        extra={"nominalSpan":128,"detector":"Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"}
+    else:
+        raise ValueError("Floor mode must be solid or corners")
+    return {"mode":mode,"rect":list(rect),"anchor":[(rect[0]+rect[2])/2,(rect[1]+rect[3])/2],
+            "aspect":(rect[2]-rect[0])/(rect[3]-rect[1]),"alphaThreshold":threshold,**extra}
+
+
+def remove_detached_markers(image, observation):
+    """Keep a complete detached character; reject overlaps instead of cutting feet."""
+    if observation.get("mode") != "corners":
+        raise ValueError("Only detached corner guides can be removed by component isolation")
+    box=tuple(observation["characterRect"])
+    threshold=observation['alphaThreshold']
+    alpha=image.getchannel('A').tobytes();w,h=image.size
+    seed=next((y*w+x for y in range(box[1],box[3]) for x in range(box[0],box[2]) if alpha[y*w+x]>=threshold),None)
+    if seed is None: raise ValueError("Character component is empty")
+    kept={seed};queue=deque([seed])
+    while queue:
+        index=queue.popleft();x,y=index%w,index//w
+        for ny in range(max(0,y-1),min(h,y+2)):
+            for nx in range(max(0,x-1),min(w,x+2)):
+                neighbor=ny*w+nx
+                if neighbor not in kept and alpha[neighbor]>=threshold:
+                    kept.add(neighbor);queue.append(neighbor)
+    # Bounds may overlap even when the actual silhouettes are detached. Keep the
+    # connected pixel set rather than a rectangular crop that could retain marks.
+    pixels=list(image.getdata())
+    output=Image.new('RGBA',image.size)
+    output.putdata([p if i in kept else (0,0,0,0) for i,p in enumerate(pixels)])
+    return output,{"method":"Detached alpha-component isolation; full frame and floor-derived anchor retained", "characterRect":list(box),"exactKeptPixels":True,"keptPixels":len(kept)}
+
+
+def subtract_authored_floor(image, floor):
+    """Diagnostic exact-pixel subtraction of a known registered floor, not chroma key.
+
+    Pixels different from the authored reference are retained. A redrawn or shaded
+    floor therefore remains visible. This cannot unmix antialiased character edges
+    that were composited into an opaque floor; it is not a production matte.
+    """
+    if image.size != floor.size:
+        raise ValueError("Image and registered floor must share a frame")
+    current=list(image.getdata()); reference=list(floor.getdata()); removed=0
+    for i,(p,q) in enumerate(zip(current,reference)):
+        if q[3] and p==q:
+            current[i]=(p[0],p[1],p[2],0); removed+=1
+    output=Image.new("RGBA",image.size);output.putdata(current)
+    probes=[i for i,q in enumerate(reference) if q[3]>=250 and (i%image.width<48 or i%image.width>=144)]
+    residual=sum(current[i][3]>=64 for i in probes)
+    return output,{"method":"Exact RGBA subtraction against the authored floor; diagnostic only", "removedPixels":removed,
+                   "floorMarginResidualPixels":residual,"floorMarginProbePixels":len(probes),
+                   "floorMarginResidualFraction":residual/len(probes) if probes else None,
+                   "productionSafe":False,"limitation":"Redrawn floor pixels and opaque character/floor mixtures cannot be separated exactly"}
+
+
+def remove_floor_chroma(image, observation, key_rgb, hue_tolerance=28, hue_feather=8,
+                        min_saturation=.12, saturation_feather=.10, remove_corner_remnants=False):
+    """Explicit, approximate chroma key inside an already measured floor rectangle.
+
+    The caller supplies the reserved key color; no background color is inferred.
+    Geometry must be measured before keying. Frame and stored anchor do not move.
+    Soft keying cannot recover an exact matte from opaque composited boot edges.
+    """
+    if observation.get('mode') != 'solid':
+        raise ValueError('Chroma floor removal requires a measured solid floor')
+    if len(key_rgb) != 3 or any(not 0 <= c <= 255 for c in key_rgb):
+        raise ValueError('Key RGB must have three values in 0..255')
+    kh,ks,_=colorsys.rgb_to_hsv(*(c/255 for c in key_rgb))
+    if ks < .1:
+        raise ValueError('Key color must have a defined saturated hue')
+    if not 0 < hue_tolerance < 180 or not 0 < hue_feather <= 90:
+        raise ValueError('Hue tolerance/feather must be positive degrees')
+    if not 0 < saturation_feather <= min_saturation <= 1:
+        raise ValueError('Require 0 < saturation feather <= minimum saturation <= 1')
+    rect=observation['rect']
+    left,top,right,bottom=rect
+    if not (0 <= left < right <= image.width and 0 <= top < bottom <= image.height):
+        raise ValueError('Measured floor must fit the full image frame')
+    # Three pixels include the Lanczos fringe after floor-derived normalization.
+    region=(max(0,math.floor(left)-3),max(0,math.floor(top)-3),
+            min(image.width,math.ceil(right)+3),min(image.height,math.ceil(bottom)+3))
+    output=image.copy();src=image.load();dst=output.load()
+    keyed=cleared=0;removed_alpha=0
+    for y in range(region[1],region[3]):
+        for x in range(region[0],region[2]):
+            r,g,b,a=src[x,y]
+            if not a: continue
+            h,s,_=colorsys.rgb_to_hsv(r/255,g/255,b/255)
+            distance=abs(h-kh)*360;distance=min(distance,360-distance)
+            hue_weight=max(0,min(1,(hue_tolerance+hue_feather-distance)/hue_feather))
+            sat_weight=max(0,min(1,(s-min_saturation+saturation_feather)/saturation_feather))
+            weight=hue_weight*sat_weight
+            alpha=round(a*(1-weight))
+            if alpha < a:
+                keyed+=1;cleared+=int(alpha==0);removed_alpha+=a-alpha
+                dst[x,y]=(r,g,b,alpha) if alpha else (0,0,0,0)
+    remnants=[]
+    if remove_corner_remnants:
+        # Authored cream L accents can become white and survive a green hue key.
+        # Remove only detached, pale components wholly in a known corner region.
+        span=min(right-left,bottom-top);reach=span*.18
+        corners=[(cx-reach,cy-reach,cx+reach,cy+reach)
+                 for cx in (left,right) for cy in (top,bottom)]
+        for box in component_rects(output,threshold=0,min_area=1):
+            if not any(box[0]>=c[0] and box[1]>=c[1] and box[2]<=c[2] and box[3]<=c[3] for c in corners):
+                continue
+            visible=[p for p in output.crop(box).getdata() if p[3]]
+            if visible and all(colorsys.rgb_to_hsv(*(c/255 for c in p[:3]))[1] <= .3 for p in visible):
+                output.paste((0,0,0,0),box);remnants.append(list(box))
+    return output,{'method':'Explicit floor-region chroma key with a soft hue/saturation matte',
+        'keyRGB':list(key_rgb),'keyHueDegrees':round(kh*360,2),'hueToleranceDegrees':hue_tolerance,
+        'hueFeatherDegrees':hue_feather,'minSaturation':min_saturation,
+        'saturationFeather':saturation_feather,'region':list(region),'regionPaddingPixels':3,
+        'keyedPixels':keyed,'clearedPixels':cleared,'removedAlphaMass':removed_alpha,
+        'removedCornerRemnants':remnants,'size':list(image.size),'anchor':observation['anchor'],
+        'exactCharacterMatte':False,'limitation':'Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed'}
+
+
+def composite_reference(floor, character, scale=4):
+    """Composite known separate layers for an AI guide; keep their complete frame."""
+    if floor.size != character.size or scale < 1:
+        raise ValueError("Guide layers must share a frame and scale must be positive")
+    output=floor.copy()
+    output.alpha_composite(character)
+    return output,output.resize((output.width*scale,output.height*scale),Image.Resampling.LANCZOS)
+
+
+def prepare_floor_material(image, cell_size=128):
+    """Uniformly resample a complete square ground material; never crop or fill holes."""
+    if cell_size<1 or image.width!=image.height:
+        raise ValueError('Ground material must be a complete square; no axis stretching or cropping')
+    if image.getchannel('A').getextrema()[0]<250:
+        raise ValueError('Ground material has transparent gaps; regenerate a full opaque square')
+    result=image.resize((cell_size,cell_size),Image.Resampling.LANCZOS)
+    return result,{'version':1,'kind':'floor','size':[cell_size,cell_size],
+        'anchor':[cell_size/2,cell_size/2],'footprint':[cell_size,cell_size],
+        'sourceSize':list(image.size),'scale':cell_size/image.width,
+        'method':'Whole square material, uniform resampling; no crop or guessed-color removal'}
+
+
+def process_floor_object(image,key_rgb,frame=(192,320),anchor=(96,248),cell_size=128,min_alpha=32):
+    """Calibrate the intact floor, then key it without fitting the character's feet."""
+    cleaned,cleanup=clean_alpha(image,min_alpha)
+    floor=floor_anchor(cleaned)
+    if not .95<=floor['aspect']<=1.05:
+        raise ValueError('Calibration floor is not square enough; regenerate instead of warping')
+    scale=cell_size/(floor['rect'][2]-floor['rect'][0])
+    intact,normalization=normalize(cleaned,frame=frame,anchor_out=anchor,
+        anchor_in=floor['anchor'],scale=scale,footprint=(cell_size,cell_size))
+    registered={**floor_anchor(intact),'anchor':list(anchor)}
+    cutout,chroma=remove_floor_chroma(intact,registered,key_rgb)
+    return cutout,{'size':list(frame),'anchor':list(anchor),'footprint':[cell_size,cell_size],
+        'floor':floor,'cleanup':cleanup,'normalization':normalization,'chroma':chroma,
+        'anchorMode':'Measured calibration-floor center, independent of feet or cutout bounds'}
+
+
+def process_object_sheet(image,guide,min_alpha=32,allow_gutter_drift=False):
+    """Split only known isolated guide panels; reject opaque art in their gutters."""
+    if guide.get('kind')!='object-sheet' or guide.get('version')!=1:
+        raise ValueError('Expected version 1 object-sheet guide JSON')
+    sx,sy=image.width/guide['size'][0],image.height/guide['size'][1]
+    if abs(sx/sy-1)>.01:
+        raise ValueError('Generated canvas aspect differs from guide; refusing distorted panel cuts')
+    cleaned,cleanup=clean_alpha(image,min_alpha)
+    rectangles=[tuple(round(c['rect'][i]*(sx if i%2==0 else sy)) for i in range(4)) for c in guide['cells']]
+    alpha=cleaned.getchannel('A').tobytes()
+    if allow_gutter_drift:
+        if len(rectangles)!=guide['columns']*guide['rows']:
+            raise ValueError('Alpha-seam recovery requires a complete rectangular panel grid')
+        def clear_separator(start,end,vertical):
+            clear=[]
+            for value in range(start,end):
+                occupied=any(alpha[y*image.width+value] for y in range(image.height)) if vertical else any(alpha[value*image.width:(value+1)*image.width])
+                clear.append(not occupied)
+            bands=[];first=None
+            for i in range(len(clear)+1):
+                if i<len(clear) and clear[i] and first is None:first=i
+                if (i==len(clear) or not clear[i]) and first is not None:
+                    bands.append((start+first,start+i));first=None
+            if not bands:raise ValueError('No completely transparent separator in the guide gutter; generate isolated poses')
+            left,right=max(bands,key=lambda b:b[1]-b[0])
+            return (left+right)//2
+        xs=[0]+[clear_separator(rectangles[c-1][2],rectangles[c][0],True)
+                for c in range(1,guide['columns'])]+[image.width]
+        ys=[0]+[clear_separator(rectangles[(r-1)*guide['columns']][3],rectangles[r*guide['columns']][1],False)
+                for r in range(1,guide['rows'])]+[image.height]
+        rectangles=[(xs[c],ys[r],xs[c+1],ys[r+1]) for r in range(guide['rows']) for c in range(guide['columns'])]
+    # Validate guide geometry, and ensure crops contain all nonzero cleaned art.
+    covered=bytearray(image.width*image.height)
+    for left,top,right,bottom in rectangles:
+        if not (0<=left<right<=image.width and 0<=top<bottom<=image.height):
+            raise ValueError('Guide panel exceeds source canvas')
+        for y in range(top,bottom):
+            start=y*image.width+left;end=y*image.width+right
+            if any(covered[start:end]):raise ValueError('Guide panels overlap')
+            covered[start:end]=b'\x01'*(right-left)
+    if any(a and not inside for a,inside in zip(alpha,covered)):
+        raise ValueError('Art crosses a sheet gutter; regenerate isolated panels instead of clipping')
+    frames=[]
+    for i,rect in enumerate(rectangles):
+        cutout,info=process_floor_object(cleaned.crop(rect),guide['keyRGB'],
+            tuple(guide['frame']),tuple(guide['anchor']),guide['cellSize'],min_alpha)
+        info.update({'index':i,'sourceRect':list(rect),'sheetCleanup':cleanup,
+            'panelIsolation':'transparent-separators' if allow_gutter_drift else 'strict-guide-panels'})
+        frames.append((cutout,info))
+    return frames
+
+
+def render_floor_repeat(image,repeats=3):
+    output=Image.new('RGBA',(image.width*repeats,image.height*repeats))
+    for y in range(repeats):
+        for x in range(repeats):output.paste(image,(x*image.width,y*image.height))
+    return output
+
+
+def render_anchored_frames(frames,anchor=(96,248),dark=False):
+    """Review each full frame at one world point, never at the visible foot bottom."""
+    views=[]
+    for image in frames:
+        view=Image.new('RGBA',(256,384),'#18222e' if dark else '#f4f6ef')
+        draw=ImageDraw.Draw(view)
+        draw.rectangle((64,200,191,327),fill='#283543' if dark else '#dfe5dc',outline='#6b7f70')
+        view.alpha_composite(image,(128-anchor[0],264-anchor[1]))
+        draw.line((120,264,136,264),fill='#b72e74',width=1)
+        draw.line((128,256,128,272),fill='#b72e74',width=1)
+        views.append(view)
+    strip=Image.new('RGBA',(256*len(views),384))
+    for i,view in enumerate(views):strip.paste(view,(i*256,0))
+    return views,strip
 
 
 def pack_atlas(items, columns=4, padding=4, extrusion=2, trim=True):
@@ -299,6 +580,10 @@ def export_tiled(scene, assets, output):
     tile_by_id = {tile["id"]: (index, tile) for index, tile in enumerate(assets["tiles"])}
     w, h = scene["width"], scene["height"]
     size = assets["cellSize"]
+    alignment=scene.get('groundAnchorAlignment','bottom')
+    if alignment not in ('bottom','center'):
+        raise ValueError("groundAnchorAlignment must be bottom or center")
+    row_offset=.5 if alignment=='center' else 1
     # Image collection avoids assuming image height == logical map cell height.
     object_tiles = []
     for index, tile in enumerate(assets["tiles"]):
@@ -319,7 +604,7 @@ def export_tiled(scene, assets, output):
             raise ValueError(f"Unknown tile ID: {obj['tileId']}")
         index, _ = tile_by_id[obj["tileId"]]
         objects.append({"id": i + 1, "name": obj["tileId"], "gid": 100 + index,
-                        "x": (obj["col"] + .5) * size, "y": (obj["row"] + 1) * size,
+                        "x": (obj["col"] + .5) * size, "y": (obj["row"] + row_offset) * size,
                         "width": fw, "height": fh, "rotation": 0, "visible": True})
     ground_tiles = [{"id": i, "image": f"ground/{name}.png", "imagewidth": size, "imageheight": size}
                     for i, name in enumerate(["grass-0", "grass-1", "grass-2", "road", "road-center"])]
@@ -402,9 +687,86 @@ def main():
     tiled.add_argument("scene", type=Path)
     tiled.add_argument("manifest", type=Path)
     tiled.add_argument("output", type=Path)
+    floor = sub.add_parser("floor-anchor", help="Infer a calibration cell center from alpha geometry")
+    floor.add_argument("input", type=Path)
+    floor.add_argument("output", type=Path)
+    floor.add_argument("--mode", choices=("solid","corners"), default="solid")
+    floor.add_argument("--min-alpha", type=int, default=64)
+    subtract = sub.add_parser("subtract-floor", help="Diagnostic exact-pixel subtraction against an authored registered floor")
+    subtract.add_argument("input", type=Path)
+    subtract.add_argument("floor", type=Path)
+    subtract.add_argument("output", type=Path)
+    isolate = sub.add_parser("isolate-marked", help="Remove four detached calibration corners and retain the character frame")
+    isolate.add_argument("input", type=Path)
+    isolate.add_argument("output", type=Path)
+    isolate.add_argument("--min-alpha", type=int, default=64)
+    chroma = sub.add_parser("key-floor", help="Explicit color key inside a measured floor; retains its anchor and full frame")
+    chroma.add_argument("input",type=Path)
+    chroma.add_argument("output",type=Path)
+    chroma.add_argument("--key-rgb",type=int,nargs=3,required=True)
+    chroma.add_argument("--hue-tolerance",type=float,default=28)
+    chroma.add_argument("--hue-feather",type=float,default=8)
+    chroma.add_argument("--min-saturation",type=float,default=.12)
+    chroma.add_argument("--saturation-feather",type=float,default=.10)
+    chroma.add_argument("--remove-corner-remnants",action="store_true")
+    chroma.add_argument("--min-alpha",type=int,default=64)
+    ground=image_args('floor-material')
+    ground.add_argument('--cell-size',type=int,default=128)
+    sheet=sub.add_parser('process-on-floor',help='Normalize isolated guide panels from their floors, then chroma-key them')
+    sheet.add_argument('input',type=Path)
+    sheet.add_argument('guide',type=Path,help='Layout JSON from calibration_guides.py')
+    sheet.add_argument('output',type=Path,help='Directory for frames, spritesheet, and result.json')
+    sheet.add_argument('--min-alpha',type=int,default=32)
+    sheet.add_argument('--fps',type=float,default=8)
+    sheet.add_argument('--allow-gutter-drift',action='store_true',help='Recover only across wholly transparent separators; preserves all cleaned source alpha')
     args = parser.parse_args()
     try:
-        if args.command == "guides":
+        if args.command == "floor-anchor":
+            write_json(args.output,floor_anchor(load_rgba(args.input),args.mode,args.min_alpha))
+        elif args.command == 'floor-material':
+            with Image.open(args.input) as source: image=source.convert('RGBA')
+            result,info=prepare_floor_material(image,args.cell_size)
+            args.output.parent.mkdir(parents=True,exist_ok=True);result.save(args.output)
+            write_json(args.output.with_suffix('.json'),{**info,'image':args.output.name})
+        elif args.command == 'process-on-floor':
+            if args.fps<=0:raise ValueError('FPS must be positive')
+            guide=json.loads(args.guide.read_text())
+            frames=process_object_sheet(load_rgba(args.input),guide,args.min_alpha,args.allow_gutter_drift)
+            directory=args.output;directory.mkdir(parents=True,exist_ok=True)
+            (directory/'frames').mkdir(exist_ok=True)
+            columns=guide['columns'];rows=guide['rows'];fw,fh=guide['frame']
+            sheet_image=Image.new('RGBA',(columns*fw,rows*fh));entries=[]
+            for i,(result,info) in enumerate(frames):
+                name=f'frames/frame-{i:02}.png';result.save(directory/name)
+                sheet_image.paste(result,((i%columns)*fw,(i//columns)*fh))
+                entries.append({'id':f'frame-{i:02}','image':name,'durationMs':1000/args.fps,**info})
+            sheet_image.save(directory/'sheet.png')
+            write_json(directory/'result.json',{'version':1,'kind':'animation' if len(frames)>1 else 'object',
+                'cellSize':guide['cellSize'],'groundAnchorAlignment':'center','frames':entries,
+                'panelIsolation':'transparent-separators' if args.allow_gutter_drift else 'strict-guide-panels',
+                'sheet':{'image':'sheet.png','columns':columns,'rows':rows,'frame':[fw,fh],'spacing':0},
+                'guideLayout':guide,'sourceSize':list(load_rgba(args.input).size)})
+        elif args.command == "key-floor":
+            image,cleanup=clean_alpha(load_rgba(args.input),args.min_alpha)
+            observation=floor_anchor(image,threshold=args.min_alpha)
+            result,info=remove_floor_chroma(image,observation,args.key_rgb,args.hue_tolerance,
+                args.hue_feather,args.min_saturation,args.saturation_feather,args.remove_corner_remnants)
+            args.output.parent.mkdir(parents=True,exist_ok=True)
+            result.save(args.output)
+            write_json(args.output.with_suffix('.json'),{**info,'floor':observation,'cleanup':cleanup})
+        elif args.command in {"subtract-floor","isolate-marked"}:
+            image=load_rgba(args.input)
+            if args.command == "subtract-floor":
+                result,info=subtract_authored_floor(image,load_rgba(args.floor))
+            else:
+                image,cleanup=clean_alpha(image,args.min_alpha)
+                observation=floor_anchor(image,"corners",args.min_alpha)
+                result,info=remove_detached_markers(image,observation)
+                info.update({"floor":observation,"cleanup":cleanup,"anchor":observation['anchor'],"size":list(image.size)})
+            args.output.parent.mkdir(parents=True,exist_ok=True)
+            result.save(args.output)
+            write_json(args.output.with_suffix(".json"),info)
+        elif args.command == "guides":
             generate_guides(args.output)
         elif args.command in {"crop-alpha", "normalize", "clean-alpha"}:
             image = load_rgba(args.input)

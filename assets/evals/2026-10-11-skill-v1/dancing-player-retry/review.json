@@ -1,0 +1,25 @@
+{
+  "reviewer": "Root assistant, independent of the two fresh-generation executor agents",
+  "checks": {
+    "same-player": {
+      "pass": true,
+      "note": "Distinctive coral-jacket player keeps hairstyle, face, clothes, palette and lighting across all six panels."
+    },
+    "dancing-poses": {
+      "pass": true,
+      "note": "All six poses differ. The final two now have opposite raised arms and opposite crossed steps; hands and sneakers are complete after separator recovery."
+    },
+    "cutout-quality": {
+      "pass": true,
+      "note": "Reviewed light/dark normalized strips: green substrate is gone and all fingers/shoes survive; minor edge spill remains possible."
+    },
+    "anchored-playback": {
+      "pass": true,
+      "note": "All frames retain the same ground point. Pose-driven foot elevation and an abrupt first/last transition remain; this is a pilot dance, not a smooth loop."
+    }
+  },
+  "limitations": [
+    "One sample per condition does not establish reliability.",
+    "AI redraw and chroma matting are approximate."
+  ]
+}

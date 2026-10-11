@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "floor": {
+    "version": 1,
+    "kind": "floor",
+    "size": [
+      128,
+      128
+    ],
+    "anchor": [
+      64.0,
+      64.0
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "scale": 0.10207336523125997,
+    "method": "Whole square material, uniform resampling; no crop or guessed-color removal",
+    "image": "skill-evals/lava.png",
+    "id": "lava",
+    "name": "Lava tile"
+  },
+  "animations": [
+    {
+      "id": "dancing-player",
+      "name": "Dance \u00b7 first attempt",
+      "note": "The final two poses repeat. This attempt failed the pose-diversity eval.",
+      "frames": [
+        {
+          "id": "frame-00",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player/frames/frame-00.png"
+        },
+        {
+          "id": "frame-01",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player/frames/frame-01.png"
+        },
+        {
+          "id": "frame-02",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player/frames/frame-02.png"
+        },
+        {
+          "id": "frame-03",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player/frames/frame-03.png"
+        },
+        {
+          "id": "frame-04",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player/frames/frame-04.png"
+        },
+        {
+          "id": "frame-05",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player/frames/frame-05.png"
+        }
+      ],
+      "cellSize": 128,
+      "groundAnchorAlignment": "center",
+      "sheet": "skill-evals/dancing-player/sheet.png",
+      "metadata": "skill-evals/dancing-player/result.json",
+      "guide": "skill-evals/dancing-player/guide.png",
+      "source": "skill-evals/dancing-player/source.png",
+      "recipe": "skill-evals/dancing-player/generation.json"
+    },
+    {
+      "id": "dancing-player-retry",
+      "name": "Dance \u00b7 corrected poses",
+      "note": "Six distinct poses. The floor sets every anchor; shoe edges are approximate. The loop has an abrupt wrap.",
+      "frames": [
+        {
+          "id": "frame-00",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player-retry/frames/frame-00.png"
+        },
+        {
+          "id": "frame-01",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player-retry/frames/frame-01.png"
+        },
+        {
+          "id": "frame-02",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player-retry/frames/frame-02.png"
+        },
+        {
+          "id": "frame-03",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player-retry/frames/frame-03.png"
+        },
+        {
+          "id": "frame-04",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player-retry/frames/frame-04.png"
+        },
+        {
+          "id": "frame-05",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "durationMs": 125.0,
+          "image": "skill-evals/dancing-player-retry/frames/frame-05.png"
+        }
+      ],
+      "cellSize": 128,
+      "groundAnchorAlignment": "center",
+      "sheet": "skill-evals/dancing-player-retry/sheet.png",
+      "metadata": "skill-evals/dancing-player-retry/result.json",
+      "guide": "skill-evals/dancing-player-retry/guide.png",
+      "source": "skill-evals/dancing-player-retry/source.png",
+      "recipe": "skill-evals/dancing-player-retry/generation.json"
+    }
+  ]
+}

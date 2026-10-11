@@ -69,6 +69,7 @@ their observed antialias fringe. None is warped or silhouette-clipped.
 | Original free sprite | 110px | 122 / 126px | 2,830 | 66.2% |
 | SVG + polished style reference | 131px | 128 / 128px | 0 | 81.8% |
 | SVG as sole image reference | 160px | 128 / 128px | 0 | 98.8% |
+| SVG + sphere style reference (follow-up) | 146px | 126 / 128px | 78 | 90.6% |
 | SVG + generated material | 160px | 128 / 128px | 0 | 100% |
 
 The style image competed with the geometric reference: the first SVG trial kept
@@ -77,6 +78,16 @@ image gave much closer geometry. This does not prove that a style reference alwa
 hurts or that sole-reference rendering always succeeds. Each strategy has one
 recorded output. Pixel dimensions alone also miss altered face boundaries and
 stud details; inspection remains necessary.
+
+On 2026-10-11, the original `5610.jpg` attachment was saved unchanged to
+`assets/references/5610.jpg`. A new generated smooth coral-plastic sphere replaces
+the competing block reference in a follow-up. Its block-generation prompt is
+identical to `svg-guided-block.json`; only the second image changes. The resulting
+body is 146px rather than 160px, with 126/128px far/near spans and 78 uncovered
+central-cell pixels. The reference substitution improves silhouette overlap to
+90.6%, but does not eliminate geometric drift. This is one new output compared
+with historical calls, without a recorded model version or seed. See
+[the full sphere experiment](sphere-reference-experiment.md).
 
 The material path generates an opaque flat swatch rather than an object. The
 script removes broad swatch lighting and composites the remaining surface detail
@@ -103,16 +114,22 @@ elevated terrain mesh. Metrics measure silhouette/opacity, not style quality.
 
 ## Verification
 
-- 24 Python tests cover anchor preservation, clipping refusal, fractional anchors,
+- 42 Python tests cover anchor preservation, clipping refusal, fractional anchors,
   alpha cleanup, both sheet-cutting methods, atlas reconstruction/extrusion, and
   Tiled placement math, undersized solid bodies, perspective taper, alpha-threshold
   forwarding, exact SVG coverage at four heights, face partitions, and material
   alpha invariance even under extreme detail input, and rejection of unaligned SVG edges.
+  Character tests additionally cover floor-center detection, detached guide removal,
+  repaint-preserving subtraction, touching-guide refusal, explicit chroma matting,
+  detached pale accents, and cell-center Tiled placement.
+  Skill-eval tests cover full-square materials, missing/mutated provenance,
+  wrong anchors, mandatory visual review, transparent-separator recovery,
+  and refusal of touching panels.
 - The React production build succeeds. Fonts are bundled locally.
 - Browser verification exercises PNG/atlas parity, all four views, overlays, cell
   placement and undo, JSON imports and downloads, PNG export, and 390/320px layouts.
   `browser-verification.json` records the actual results.
-- Workflow verification checks all four cards, live wood/96px controls, SVG outline,
+- Workflow verification checks all five cards, sphere failure metrics, live wood/96px controls, SVG outline,
   mixed-height PNG export, and 390/320px workflow layouts. `preview-workflows.png`
   and `preview-material-scene.png` are actual browser screenshots.
 - An independent agent followed the packaged SVG recipe for a 64px amber/wood
@@ -143,4 +160,5 @@ independent objects; overlapping them does not guarantee continuous rock surface
 Tiled map and tileset formats: <https://doc.mapeditor.org/en/stable/reference/json-map-format/>
 and <https://doc.mapeditor.org/en/stable/manual/editing-tilesets/>.
 Sample object generation prompts are retained in `assets/prompts/generation.json`.
-The user-supplied reference image is not included in the repository.
+The user-supplied reference image is saved unchanged at `assets/references/5610.jpg`;
+its SHA-256 and provenance are recorded in `assets/references/5610.json`.

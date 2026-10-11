@@ -1,0 +1,15 @@
+{
+  "mode": "built-in imagegen",
+  "prompt": "Use case: sketch-to-render. Asset type: reusable transparent 2D game sprite. Image 1 is the exact geometry and composition target, rasterized from an SVG. Image 2 is a material and illustration style reference only. Reskin Image 1 into a polished coral-red toy block in the glossy, colorful casual-game style of Image 2. Keep Image 1's whole canvas framing, rectangular silhouette, bottom contact location, 2 by 2 equal-sized studs, face boundary, and proportions. The top plane is a screen-aligned rectangle 128 units wide by 128 units deep. The front wall is exactly 32 units tall. Four identical studs, equal in both rows. Orthographic parallel projection, zero convergence: left and right sides strictly parallel, identical near and far widths. Add glossy bevel highlights and subtle plastic detail inside the existing shape. Do not tilt, rotate, taper, shorten the depth, enlarge the front studs, or introduce perspective. One complete isolated object on true transparent alpha. No cast shadow, ground, text, labels, other objects, or checkerboard. Retain transparent space above and below as in Image 1.",
+  "transparentBackground": true,
+  "references": [
+    "assets/templates/block-32/reference-4x.png",
+    "assets/source/plastic-style-sphere.png"
+  ],
+  "comparison": {
+    "baseline": "assets/prompts/svg-guided-block.json",
+    "changedVariable": "second reference image only; prompt unchanged",
+    "styleReferenceSubject": "sphere",
+    "output": "assets/source/svg-sphere-block.png"
+  }
+}

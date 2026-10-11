@@ -1,0 +1,3 @@
+.venv/bin/python tools/tilekit.py process-on-floor /tmp/tile-foundry-dance-retry-lg3b0f1_/source.png /tmp/tile-foundry-dance-retry-lg3b0f1_/guide.json /tmp/tile-foundry-dance-retry-lg3b0f1_/processed --min-alpha 32 --fps 8
+Error: Art crosses a sheet gutter; regenerate isolated panels instead of clipping
+Exit code: 1

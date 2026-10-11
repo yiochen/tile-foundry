@@ -355,6 +355,115 @@
       }
     },
     {
+      "id": "svg-sphere-block",
+      "name": "SVG + sphere style",
+      "image": "workflows/svg-sphere-block.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        31,
+        164,
+        130,
+        148
+      ],
+      "method": "Same prompt, sphere replaces block reference",
+      "note": "Same prompt with sphere style: 146/160px body, 126/128px far/near widths, 78 uncovered cell pixels. Geometry still drifts.",
+      "metrics": {
+        "coverage": {
+          "ok": false,
+          "coveredFraction": 0.9952392578125,
+          "uncoveredPixels": 78,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "parallel": {
+          "ok": false,
+          "farWidth": 126,
+          "nearWidth": 128,
+          "widthDelta": 2,
+          "sideShift": 1,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            165,
+            160,
+            311
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        },
+        "bodyHeight": 146,
+        "targetBodyHeight": 160,
+        "heightError": -14,
+        "silhouetteIoU": 0.90625,
+        "alphaExact": false
+      },
+      "source": "assets/source/svg-sphere-block.png",
+      "processing": {
+        "cleanup": {
+          "minAlpha": 64,
+          "removedPixels": 12341,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            150,
+            759,
+            822,
+            1522
+          ],
+          "anchor": [
+            96,
+            312
+          ],
+          "anchorSource": [
+            486,
+            1522
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            0.0
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            31,
+            164,
+            130,
+            148
+          ],
+          "scale": [
+            0.19345238095238096,
+            0.19397116644823068
+          ],
+          "sourceAnchorMode": "explicit"
+        }
+      }
+    },
+    {
       "id": "locked-plastic-32",
       "name": "SVG + AI material",
       "image": "workflows/locked-plastic-32.png",
@@ -897,5 +1006,5 @@
       "elevation": 96
     }
   ],
-  "scope": "One output for each SVG-reference strategy, two generated materials, four deterministic heights per material. Not a statistical model benchmark. Coverage tests identical solid cells; IoU tests silhouette only."
+  "scope": "One saved output for each of three SVG-reference strategies: block style, SVG only, and sphere style. The sphere trial uses the block-style prompt unchanged, replacing only its second input image; calls were made at different times without a recorded model version or seed. Two generated materials, four deterministic heights per material. Not a statistical model benchmark. Coverage tests identical solid cells; IoU tests silhouette only."
 }

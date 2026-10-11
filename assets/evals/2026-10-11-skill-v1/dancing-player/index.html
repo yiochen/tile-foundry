@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dancing player</title>
+<style>
+*{box-sizing:border-box}body{font:16px system-ui,sans-serif;margin:0;padding:24px;background:#f1f2ee;color:#18222e}main{max-width:980px;margin:auto}h1{font-size:26px;margin:0 0 8px}p{max-width:68ch;line-height:1.5}button{font:inherit;padding:9px 16px;border:1px solid #809081;border-radius:8px;background:white;cursor:pointer}.stages{display:flex;flex-wrap:wrap;gap:20px;margin:20px 0}.stage{border-radius:12px;overflow:hidden;background:white;box-shadow:0 1px 5px #18222e20}.stage h2{font-size:15px;margin:0;padding:12px}canvas{display:block;width:256px;height:384px}.gallery{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.gallery img{width:100%;height:auto;background:#fff;border-radius:8px}.note{font-size:14px}.sheet-link{display:inline-block;margin:12px 0}@media(max-width:600px){body{padding:16px}h1{font-size:23px}.stages{justify-content:center}.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style><main>
+<h1>Dancing player</h1><p>Six frames · 8 fps · 128 × 128 tile footprint. Both previews use the stored ground anchor (96,248); the small pink cross marks the fixed ground point.</p>
+<button id="play" type="button">Pause</button><span id="frame-label" aria-live="off"> Frame 1 / 6</span>
+<div class="stages"><div class="stage"><h2>Light tile</h2><canvas id="light" width="256" height="384"></canvas></div><div class="stage"><h2>Dark tile</h2><canvas id="dark" width="256" height="384"></canvas></div></div>
+<div class="gallery">
+<img src="processed/frames/frame-00.png" alt="Dance frame 1">
+<img src="processed/frames/frame-01.png" alt="Dance frame 2">
+<img src="processed/frames/frame-02.png" alt="Dance frame 3">
+<img src="processed/frames/frame-03.png" alt="Dance frame 4">
+<img src="processed/frames/frame-04.png" alt="Dance frame 5">
+<img src="processed/frames/frame-05.png" alt="Dance frame 6">
+</div><a class="sheet-link" href="processed/sheet.png">Open transparent spritesheet</a>
+<p class="note">Pilot dance cycle: the final two poses are similar and the loop has visible height variation. The removed calibration floor has an approximate matte around mixed shoe edges and a few faint floor-line remnants.</p>
+</main><script>
+let images=[],ready=0,running=true,frame=0,last=0;
+for(let i=0;i<6;i++){let image=new Image;image.onload=()=>{if(++ready===6)requestAnimationFrame(tick)};image.src='processed/frames/frame-'+String(i).padStart(2,'0')+'.png';images.push(image)}
+function render(){for(const dark of [false,true]){let c=document.getElementById(dark?'dark':'light'),ctx=c.getContext('2d');ctx.fillStyle=dark?'#18222e':'#f4f6ef';ctx.fillRect(0,0,256,384);ctx.fillStyle=dark?'#283543':'#dfe5dc';ctx.fillRect(64,200,128,128);ctx.strokeStyle='#6b7f70';ctx.strokeRect(64.5,200.5,127,127);ctx.drawImage(images[frame],128-96,264-248);ctx.strokeStyle='#b72e74';ctx.beginPath();ctx.moveTo(120,264.5);ctx.lineTo(136,264.5);ctx.moveTo(128.5,256);ctx.lineTo(128.5,272);ctx.stroke()}document.getElementById('frame-label').textContent=' Frame '+(frame+1)+' / 6'}
+function tick(t){if(running&&t-last>=125){frame=(frame+1)%6;last=t}render();requestAnimationFrame(tick)}
+document.getElementById('play').onclick=()=>{running=!running;document.getElementById('play').textContent=running?'Pause':'Play'};
+</script></html>

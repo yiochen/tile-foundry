@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "caseId": "dancing-player",
+  "userPrompt": "generate a player dancing spritesheet on tile",
+  "status": "passed",
+  "automaticChecks": [
+    {
+      "check": "case-and-user-prompt",
+      "pass": true,
+      "detail": "generate a player dancing spritesheet on tile"
+    },
+    {
+      "check": "unchanged-generated-source",
+      "pass": true,
+      "detail": "504c0ff7d119019183cb09b170b2666940ede37c0efa0d4bbf800b31ac794e66"
+    },
+    {
+      "check": "actual-expanded-prompt",
+      "pass": true,
+      "detail": "Exact nonempty prompt retained"
+    },
+    {
+      "check": "sole-preserved-reference",
+      "pass": true,
+      "detail": [
+        "guide-4x.png"
+      ]
+    },
+    {
+      "check": "result-kind",
+      "pass": true,
+      "detail": "animation"
+    },
+    {
+      "check": "six-frames-in-guide-order",
+      "pass": true,
+      "detail": 6
+    },
+    {
+      "check": "declared-sheet-and-timing",
+      "pass": true,
+      "detail": {
+        "image": "sheet.png",
+        "columns": 3,
+        "rows": 2,
+        "frame": [
+          192,
+          320
+        ],
+        "spacing": 0
+      }
+    },
+    {
+      "check": "center-ground-placement",
+      "pass": true,
+      "detail": "center"
+    },
+    {
+      "check": "source-gutters-isolated",
+      "pass": true,
+      "detail": "Source cuts use strict panels or fully transparent separator lines; no cleaned art is clipped"
+    },
+    {
+      "check": "full-frames-and-fixed-anchors",
+      "pass": true,
+      "detail": "Every frame retains 192x320, footprint128, and anchor96,248"
+    },
+    {
+      "check": "floor-derived-scale-and-position",
+      "pass": true,
+      "detail": "Independent source replay matches measured floor, normalization, panel cuts, and output pixels; no foot fitting"
+    },
+    {
+      "check": "reserved-floor-hue-removed",
+      "pass": true,
+      "detail": {
+        "strongKeyHuePixelsPerFrame": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "note": "Non-key hands/shoes at floor corners are preserved; pale spill is reviewed visually"
+      }
+    },
+    {
+      "check": "explicit-recorded-key",
+      "pass": true,
+      "detail": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "check": "transparent-generation-mode",
+      "pass": true,
+      "detail": true
+    },
+    {
+      "check": "sheet-reconstructs-every-frame",
+      "pass": true,
+      "detail": "No trim drift or overlapping frames"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "same-player",
+      "pass": true,
+      "detail": "Distinctive coral-jacket player keeps hairstyle, face, clothes, palette and lighting across all six panels."
+    },
+    {
+      "check": "dancing-poses",
+      "pass": true,
+      "detail": "All six poses differ. The final two now have opposite raised arms and opposite crossed steps; hands and sneakers are complete after separator recovery."
+    },
+    {
+      "check": "cutout-quality",
+      "pass": true,
+      "detail": "Reviewed light/dark normalized strips: green substrate is gone and all fingers/shoes survive; minor edge spill remains possible."
+    },
+    {
+      "check": "anchored-playback",
+      "pass": true,
+      "detail": "All frames retain the same ground point. Pose-driven foot elevation and an abrupt first/last transition remain; this is a pilot dance, not a smooth loop."
+    }
+  ],
+  "reviewArtifacts": {
+    "lightStrip": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/docs/evals/2026-10-11-skill-v1/dancing-player-retry-review/anchored-light.png",
+    "lightAnimation": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/docs/evals/2026-10-11-skill-v1/dancing-player-retry-review/dance-light.gif",
+    "darkStrip": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/docs/evals/2026-10-11-skill-v1/dancing-player-retry-review/anchored-dark.png",
+    "darkAnimation": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/docs/evals/2026-10-11-skill-v1/dancing-player-retry-review/dance-dark.gif"
+  },
+  "scope": "One fresh behavioral trial or saved artifact replay; does not establish reliability."
+}

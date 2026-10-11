@@ -1,0 +1,10 @@
+{
+  "mode": "built-in imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: one isolated transparent material/style reference for a 2D casual-game sprite experiment. Input Image 1 is an illustration and material reference only, not a composition target. Primary request: generate ONE smooth coral-red sphere with the same cheerful glossy molded toy-plastic material, saturated warm red color, soft chunky shading and clean illustrated highlights as the red toy blocks in the supplied game-art scene. The sphere must be a simple ball with a circular silhouette and continuous unbroken surface: no studs, block shapes, flat faces, panels, seams, logos, or other objects. Its purpose is to convey plastic surface appearance without supplying block proportions. Soft upper-left illumination, rich red shading below and right, gentle gloss, illustrated casual-game rendering rather than a photograph. Center the complete sphere in a square canvas with generous genuinely transparent margins. No scene, floor, external cast shadow, checkerboard, labels, text, frame, or watermark. Do not reproduce or crop anything from the reference scene.",
+  "transparentBackground": true,
+  "references": [
+    "assets/references/5610.jpg"
+  ],
+  "source": "assets/source/plastic-style-sphere.png",
+  "purpose": "Non-block material/style reference for an image substitution trial"
+}

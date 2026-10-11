@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "caseId": "lava-tile",
+  "userPrompt": "generate a lava tile",
+  "status": "passed",
+  "automaticChecks": [
+    {
+      "check": "case-and-user-prompt",
+      "pass": true,
+      "detail": "generate a lava tile"
+    },
+    {
+      "check": "unchanged-generated-source",
+      "pass": true,
+      "detail": "a073ad9ed1dc394e462dfa622f51c5c2e0d4abc2795400de0bf01b30ad547a22"
+    },
+    {
+      "check": "actual-expanded-prompt",
+      "pass": true,
+      "detail": "Exact nonempty prompt retained"
+    },
+    {
+      "check": "sole-preserved-reference",
+      "pass": true,
+      "detail": [
+        "guide-4x.png"
+      ]
+    },
+    {
+      "check": "result-kind",
+      "pass": true,
+      "detail": "floor"
+    },
+    {
+      "check": "runtime-ground-geometry",
+      "pass": true,
+      "detail": {
+        "size": [
+          128,
+          128
+        ],
+        "anchor": [
+          64.0,
+          64.0
+        ]
+      }
+    },
+    {
+      "check": "opaque-full-ground-square",
+      "pass": true,
+      "detail": [
+        255,
+        255
+      ]
+    },
+    {
+      "check": "complete-material-without-crop",
+      "pass": true,
+      "detail": "Reproduces uniform resampling of the untouched complete square"
+    },
+    {
+      "check": "opaque-generation-mode",
+      "pass": true,
+      "detail": false
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "lava-readable",
+      "pass": true,
+      "detail": "At 128px, bright orange/yellow molten channels contrast with irregular dark volcanic crust."
+    },
+    {
+      "check": "floor-projection",
+      "pass": true,
+      "detail": "Source and runtime output are full opaque top-down squares with no cube sides or props."
+    },
+    {
+      "check": "repeat-inspected",
+      "pass": true,
+      "detail": "Inspected actual 3x3 repeat: texture reads continuously overall, with some visible channel mismatch at joins; seamlessness is not claimed."
+    }
+  ],
+  "reviewArtifacts": {
+    "repeat": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/docs/evals/2026-10-11-skill-v1/lava-tile-review/repeat.png"
+  },
+  "scope": "One fresh behavioral trial or saved artifact replay; does not establish reliability."
+}

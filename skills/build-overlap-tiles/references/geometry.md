@@ -10,6 +10,19 @@ can differ from the actual collision footprint. Demo collision boxes are authore
 The corrected solid block uses 130px full art, including its antialiased fringe,
 to give a measured 128px opaque body. Its logical cell remains 128×128.
 
+Character calibration experiments retain that grid/frame but use floor center
+`(96,248)` as the ground anchor. The authored floor is `(32,184)`–`(160,312)`.
+Airborne feet are not the anchor. Detect the floor center with `floor-anchor`;
+use `isolate-marked` only when four guide corners are detached alpha components.
+`subtract-floor` is an exact-reference diagnostic, not a general matte remover.
+An explicitly supplied reserved floor color can be removed with `key-floor`;
+measure and normalize from the intact floor first. The cutout keeps that scale,
+full frame, and anchor. This is approximate chroma matting, not a guarantee of
+unchanged boot edges. Do not treat the visible shoe bottom as anchor error: toe
+length can extend below the cell center. The key operates only in measured floor
+bounds, with a 3px fringe allowance. Green artwork there would also be removed.
+See `docs/character-anchor-experiments.md` for tested limitations and commands.
+
 For a cell `(column,row)`, ground anchor is at
 `((column + .5) * 128, (row + 1) * 128)`. Draw back-to-front by that ground Y.
 Trimmed atlas anchors are relative to the trimmed frame. PNG anchors are relative
@@ -39,6 +52,12 @@ The Tiled exporter uses an image-collection tileset, bottom-centered objects,
 a top-down draw-order object layer, and a tileset offset of `(0,8)` to compensate
 for the 8px space below the frame's ground anchor. Its stored GIDs point at complete
 sprites, not chopped art fragments. Ground is a separate tile layer.
+
+Scenes may set `"groundAnchorAlignment":"center"` for characters; the default
+remains `"bottom"` for prior block/village scenes. Center placement is
+`((column+.5)*cellSize,(row+.5)*cellSize)`. The normalized character local anchor
+`(96,248)` produces Tiled offset `(0,72)` in a `192×320` frame. Browser previews
+must use the same center placement, without snapping airborne soles to the floor.
 
 For a joinable opaque block, run:
 

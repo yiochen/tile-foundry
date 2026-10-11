@@ -1,0 +1,29 @@
+{
+  "run": "2026-10-11-skill-v1",
+  "mode": "saved-artifact-replay",
+  "ok": true,
+  "trials": [
+    {
+      "trial": "lava-tile",
+      "caseId": "lava-tile",
+      "status": "passed",
+      "expectedStatus": "passed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "dancing-player",
+      "caseId": "dancing-player",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "dancing-player-retry",
+      "caseId": "dancing-player",
+      "status": "passed",
+      "expectedStatus": "passed",
+      "matchesExpected": true
+    }
+  ],
+  "scope": "Includes an intentional failed first dance attempt; fresh behavioral reruns require image generation."
+}

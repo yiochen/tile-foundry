@@ -34,6 +34,13 @@ def save_variant(tile_id, name, image, expected, method, note, height=32, **meta
 
 
 def main():
+    baseline_recipe = json.loads((ROOT / "assets/prompts/svg-guided-block.json").read_text())
+    sphere_recipe = json.loads((ROOT / "assets/prompts/svg-sphere-block.json").read_text())
+    if (baseline_recipe["prompt"] != sphere_recipe["prompt"] or
+            baseline_recipe["transparentBackground"] != sphere_recipe["transparentBackground"] or
+            baseline_recipe["references"][0] != sphere_recipe["references"][0] or
+            sphere_recipe["references"] != [baseline_recipe["references"][0], "assets/source/plastic-style-sphere.png"]):
+        raise SystemExit("Sphere comparison must replace only the second reference; keep prompt, SVG, and transparency unchanged")
     PUBLIC.mkdir(parents=True, exist_ok=True)
     template_dir = ROOT / "assets/templates/block-32"
     write_template(template_dir)
@@ -69,7 +76,7 @@ def main():
             image.load()
     results = {"version":1, "cellSize":128, "target":{"width":128,"depth":128,"height":32,"bodyHeight":160},
                "cards":cards, "lockedVariants":variants,
-               "scope":"One output for each SVG-reference strategy, two generated materials, four deterministic heights per material. Not a statistical model benchmark. Coverage tests identical solid cells; IoU tests silhouette only."}
+               "scope":"One saved output for each of three SVG-reference strategies: block style, SVG only, and sphere style. The sphere trial uses the block-style prompt unchanged, replacing only its second input image; calls were made at different times without a recorded model version or seed. Two generated materials, four deterministic heights per material. Not a statistical model benchmark. Coverage tests identical solid cells; IoU tests silhouette only."}
     write_json(ROOT / "public/assets/workflows.json", results)
     write_json(ROOT / "docs/workflow-comparison.json", results)
     print(json.dumps({"cards":[{"id":c["id"],"missing":c["metrics"]["coverage"]["uncoveredPixels"],

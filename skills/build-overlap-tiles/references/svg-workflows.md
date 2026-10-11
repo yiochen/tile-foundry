@@ -44,6 +44,14 @@ against the template. Do not stretch axes independently or clip a misprojected
 render and claim the camera is fixed. A clipping mask cannot correct internal
 stud scaling or misplaced face boundaries.
 
+A follow-up substitutes `assets/source/plastic-style-sphere.png` for the block
+reference, with the original two-image prompt unchanged. The sphere was generated
+from the original `assets/references/5610.jpg`. Actual prompts are saved in
+`assets/prompts/plastic-style-sphere.json` and `svg-sphere-block.json`. This trial
+still shortened the body to 146px and gave 126/128px far/near spans. A non-block
+style reference avoids supplying competing block proportions, but still does not
+lock geometry. See `docs/sphere-reference-experiment.md` for inputs and limits.
+
 ## Geometry-owned material path
 
 Generate an **opaque, flat, evenly lit material swatch** with no objects, studs,
@@ -78,8 +86,8 @@ python tools/build_experiments.py
 npm run dev
 ```
 
-Open **Workflows**. Compare four paths, toggle the SVG outline, switch the fourth
-card's material and height, and inspect the mixed-height scene. The first three
+Open **Workflows**. Compare five trials, toggle the SVG outline, switch the last
+card's material and height, and inspect the mixed-height scene. The first four
 cards have a fixed 32px height target; controls affect only the last card.
 `assets/experiment-config.json` records reviewed anchors and normalization.
 `docs/workflow-comparison.json` retains coverage, silhouette IoU, body dimensions,

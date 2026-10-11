@@ -1,7 +1,56 @@
 {
   "wholeSprites": [
-    {"id":"free-block","name":"Free generation","source":"assets/source/block.png","minAlpha":64,"artWidth":128,"anchor":[672.5,967],"method":"Style reference only","note":"Original baseline: short body and tapered sides."},
-    {"id":"svg-guided-block","name":"SVG + style reference","source":"assets/source/svg-guided-block.png","minAlpha":64,"artWidth":130,"anchor":[486.5,1431],"method":"AI redraws the whole object","note":"Parallel sides, but the model shortened the SVG body toward the style reference."},
-    {"id":"svg-only-block","name":"SVG reference only","source":"assets/source/svg-only-block.png","minAlpha":64,"artWidth":130,"anchor":[485.5,1581],"method":"AI adds detail to the SVG raster","note":"Much closer proportions in this trial. Exact pixels and face positions remain model-dependent."}
+    {
+      "id": "free-block",
+      "name": "Free generation",
+      "source": "assets/source/block.png",
+      "minAlpha": 64,
+      "artWidth": 128,
+      "anchor": [
+        672.5,
+        967
+      ],
+      "method": "Style reference only",
+      "note": "Original baseline: short body and tapered sides."
+    },
+    {
+      "id": "svg-guided-block",
+      "name": "SVG + style reference",
+      "source": "assets/source/svg-guided-block.png",
+      "minAlpha": 64,
+      "artWidth": 130,
+      "anchor": [
+        486.5,
+        1431
+      ],
+      "method": "AI redraws the whole object",
+      "note": "Parallel sides, but the model shortened the SVG body toward the style reference."
+    },
+    {
+      "id": "svg-only-block",
+      "name": "SVG reference only",
+      "source": "assets/source/svg-only-block.png",
+      "minAlpha": 64,
+      "artWidth": 130,
+      "anchor": [
+        485.5,
+        1581
+      ],
+      "method": "AI adds detail to the SVG raster",
+      "note": "Much closer proportions in this trial. Exact pixels and face positions remain model-dependent."
+    },
+    {
+      "id": "svg-sphere-block",
+      "name": "SVG + sphere style",
+      "source": "assets/source/svg-sphere-block.png",
+      "minAlpha": 64,
+      "artWidth": 130,
+      "anchor": [
+        486,
+        1522
+      ],
+      "method": "Same prompt, sphere replaces block reference",
+      "note": "Same prompt with sphere style: 146/160px body, 126/128px far/near widths, 78 uncovered cell pixels. Geometry still drifts."
+    }
   ]
 }

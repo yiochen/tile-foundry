@@ -1,0 +1,14 @@
+{
+  "request": "generate a lava tile",
+  "prompt": "Generate one complete opaque square top-down lava ground material for a colorful 2D game. The supplied plain SVG square defines the full canvas coverage only. Invent the surface: glowing orange molten channels between dark volcanic crust, clear shapes readable at 128px. Fill the entire square to every edge. Aim for opposite-edge continuation so repeated tiles look coherent. No cube, front wall, perspective tilt, frame, labels, empty margins, or objects on the ground. The output is an opaque square material, not an isolated transparent sprite.",
+  "references": [
+    "guide-4x.png"
+  ],
+  "transparentBackground": false,
+  "tool": "image_gen.imagegen",
+  "source": "source.png",
+  "sourceSHA256": "a073ad9ed1dc394e462dfa622f51c5c2e0d4abc2795400de0bf01b30ad547a22",
+  "attempt": 1,
+  "model": null,
+  "seed": null
+}

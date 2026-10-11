@@ -1,0 +1,13 @@
+{
+  "width": 3,
+  "height": 2,
+  "roadColumns": [],
+  "groundAnchorAlignment": "center",
+  "objects": [
+    {
+      "tileId": "character-jump-solid",
+      "col": 1,
+      "row": 1
+    }
+  ]
+}

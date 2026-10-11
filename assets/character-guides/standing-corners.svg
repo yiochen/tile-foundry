@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="320" viewBox="0 0 192 320"><path d="M 32,200 V 184 H 48 M 144,184 H 160 V 200 M 32,296 V 312 H 48 M 144,312 H 160 V 296" fill="none" stroke="#7bd14b" stroke-width="4"/><defs>
+      <linearGradient id="coat" x2="0" y2="1"><stop stop-color="#64bafb"/><stop offset="1" stop-color="#2469bf"/></linearGradient>
+      <linearGradient id="skin" x2="0" y2="1"><stop stop-color="#ffe2a9"/><stop offset="1" stop-color="#eab17b"/></linearGradient>
+      <linearGradient id="cap" x2="0" y2="1"><stop stop-color="#ffb751"/><stop offset="1" stop-color="#e76828"/></linearGradient>
+    </defs>
+    <g stroke="#344d72" stroke-width="2" stroke-linejoin="round">
+      <path d="M 82,195 L 79,233 H 92 L 96,208 L 101,233 H 114 L 109,195 Z" fill="#344b72"/>
+      <path d="M 78,232 H 93 V 246 H 74 Q 72,238 78,232 Z M 100,232 H 114 L 120,244 V 246 H 100 Z" fill="#623b29"/>
+      <path d="M 78,151 L 67,166 L 64,187 L 73,193 L 80,174 M 114,151 L 125,166 L 128,187 L 119,193 L 112,174" fill="url(#coat)"/>
+      <ellipse cx="69" cy="191" rx="7" ry="8" fill="url(#skin)"/>
+      <ellipse cx="123" cy="191" rx="7" ry="8" fill="url(#skin)"/>
+      <path d="M 82,146 Q 96,140 110,146 L 116,198 Q 96,209 76,198 Z" fill="url(#coat)"/>
+      <path d="M 96,149 V 200" fill="none" stroke="#d6edff"/>
+      <rect x="76" y="190" width="40" height="7" rx="2" fill="#5c392a"/>
+      <rect x="92" y="189" width="8" height="9" rx="1" fill="#f9cb68"/>
+      <circle cx="96" cy="121" r="24" fill="url(#skin)"/>
+      <path d="M 72,115 Q 70,92 95,94 Q 123,94 120,115 Z" fill="url(#cap)"/>
+      <path d="M 71,111 Q 96,104 125,113 L 123,118 Q 96,112 73,118 Z" fill="#fa8d32"/>
+      <path d="M 78,98 Q 86,94 95,96" stroke="#ffe09b" fill="none"/>
+    </g>
+    <ellipse cx="87" cy="122" rx="3" ry="4" fill="#293449"/><ellipse cx="105" cy="122" rx="3" ry="4" fill="#293449"/>
+    <path d="M 89,133 Q 96,139 103,133" fill="none" stroke="#8b4c38" stroke-width="2"/>
+    <path d="M 74,247 H 93 M 100,247 H 120" stroke="#3b2922" stroke-width="2"/></svg>

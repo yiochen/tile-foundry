@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "frame": [
+    192,
+    320
+  ],
+  "cellSize": 128,
+  "anchor": [
+    96,
+    248
+  ],
+  "scope": "Seven one-shot trials, one composite reference per trial. Boot silhouettes describe placement, not anchor error; shoe length can extend below center. The floor alone sets normalization. Explicit green key is a post-processing trial on unchanged source PNGs.",
+  "trials": [
+    {
+      "id": "character-box",
+      "guide": "box",
+      "name": "Floor + height box",
+      "pose": "standing",
+      "mode": "solid",
+      "references": [
+        "assets/character-guides/box-4x.png"
+      ],
+      "source": "assets/source/character-box.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            374,
+            1363
+          ],
+          [
+            596,
+            1363
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      }
+    },
+    {
+      "id": "character-stick",
+      "guide": "stick",
+      "name": "Floor + stick pose",
+      "pose": "standing",
+      "mode": "solid",
+      "references": [
+        "assets/character-guides/stick-4x.png"
+      ],
+      "source": "assets/source/character-stick.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            375,
+            1265
+          ],
+          [
+            596,
+            1265
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      }
+    },
+    {
+      "id": "character-drawn",
+      "guide": "drawn",
+      "name": "Floor + detailed SVG",
+      "pose": "standing",
+      "mode": "solid",
+      "references": [
+        "assets/character-guides/drawn-4x.png"
+      ],
+      "source": "assets/source/character-drawn.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            416,
+            1253
+          ],
+          [
+            559,
+            1253
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      }
+    },
+    {
+      "id": "character-raster",
+      "guide": "raster",
+      "name": "Floor + raster character",
+      "pose": "standing",
+      "mode": "solid",
+      "references": [
+        "assets/character-guides/raster-4x.png"
+      ],
+      "source": "assets/source/character-raster.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            411,
+            1249
+          ],
+          [
+            568,
+            1249
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      }
+    },
+    {
+      "id": "character-jump-solid",
+      "guide": "jump-solid",
+      "name": "Jump + solid floor",
+      "pose": "jumping",
+      "mode": "solid",
+      "references": [
+        "assets/character-guides/jump-solid-4x.png"
+      ],
+      "source": "assets/source/character-jump-solid.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            420,
+            978
+          ],
+          [
+            567,
+            1016
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      }
+    },
+    {
+      "id": "character-jump-corners",
+      "guide": "jump-corners",
+      "name": "Jump + detached corners",
+      "pose": "jumping",
+      "mode": "corners",
+      "references": [
+        "assets/character-guides/jump-corners-4x.png"
+      ],
+      "source": "assets/source/character-jump-corners.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            419,
+            1087
+          ],
+          [
+            570,
+            1120
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      }
+    },
+    {
+      "id": "character-standing-corners",
+      "guide": "standing-corners",
+      "name": "Standing + detached corners",
+      "pose": "standing",
+      "mode": "corners",
+      "references": [
+        "assets/character-guides/standing-corners-4x.png"
+      ],
+      "source": "assets/source/character-standing-corners.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            404,
+            1269
+          ],
+          [
+            568,
+            1269
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      }
+    }
+  ],
+  "floorChromaKey": {
+    "keyRGB": [
+      123,
+      209,
+      75
+    ],
+    "hueToleranceDegrees": 28,
+    "hueFeatherDegrees": 8,
+    "minSaturation": 0.12,
+    "saturationFeather": 0.1,
+    "removeCornerRemnants": true,
+    "authorization": "User explicitly requested green floor removal, 2026-10-11",
+    "scope": "Reserved green inside measured solid floor only. Same fixed settings across all five saved solid-floor outputs."
+  }
+}

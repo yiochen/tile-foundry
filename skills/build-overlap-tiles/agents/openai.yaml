@@ -1,4 +1,4 @@
 interface:
   display_name: "Build Overlap Tiles"
-  short_description: "Generate, normalize, and verify overlapping tiles"
-  default_prompt: "Use $build-overlap-tiles to generate a tile set and verify it in Tile Foundry."
+  short_description: "Generate floors and anchored character spritesheets"
+  default_prompt: "Use $build-overlap-tiles to generate a lava tile or a dancing player spritesheet with floor-derived anchors."

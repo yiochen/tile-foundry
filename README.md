@@ -30,8 +30,12 @@ required to run or rebuild the demo.
 | `tools/build_demo.py` | Rebuild all derived demo assets from the original generated PNGs |
 | `tools/svgkit.py` | Parameterized SVG geometry, raster references, face masks, and generated-material compositing |
 | `tools/build_experiments.py` | Reproduce the workflow comparison and eight material/height variants from saved sources |
+| `tools/character_guides.py` / `tools/build_character_experiments.py` | Seven character guide, ground-anchor, and floor-removal trials |
+| `tools/calibration_guides.py` | Sparse square-floor and six-pose SVG guides, with portable panel layouts |
+| `tools/eval_tile_skill.py` / `tools/run_skill_evals.py` | Behavioral eval artifact grader and saved-run replay |
 | `src/` | React scene editor and cuts/atlas preview |
 | `assets/source/` | Original AI-generated transparent images, untouched |
+| `assets/references/5610.jpg` | Original user-supplied game-art reference, saved unchanged with a SHA-256 sidecar |
 | `assets/source-config.json` | Reviewed cleanup, art-width, and optional source-anchor settings |
 | `assets/prompts/generation.json` | Actual prompts used for the initial four assets |
 | `skills/build-overlap-tiles/` | Agent skill with reusable prompts and acceptance checks |
@@ -81,11 +85,39 @@ subcommand for input options. Output paths are explicit; originals are not repla
 - Inspect, place, and erase by logical cell; undo up to 30 edits.
 - Import/export scene JSON and export the actual preview PNG.
 - Separate logical footprint, visible-art bounds, and drawing anchor in the inspector.
-- Workflows: four paths side by side, measured joins, SVG outline, live material/height controls, and a mixed-height scene.
+- Workflows: five trials side by side, block versus sphere style references, measured joins, SVG outline, live material/height controls, and a mixed-height scene.
+- Characters: box, stick, SVG, raster, and jumping guides; floor-derived normalization, five green-key cutouts, two detached extractions, and exact-subtraction comparisons.
+- Animations: playable six-frame dance trials, frame stepping, playback speed, light/dark backgrounds, fixed ground anchors, spritesheet downloads, and the lava tile repeated in a 3 × 3 grid. Open `?view=animations` directly.
+
+## Netlify publishing
+
+`netlify.toml` builds the committed playground with `npm run build`, publishes
+`dist/`, and selects Node.js 22. The processed assets are committed, so cloud
+builds need no Python installation or image-generation credentials. When changing
+saved sources, run `npm run assets` locally and commit the derived assets too.
+
+The Git-connected Netlify project publishes pushes to `main` automatically and
+builds Deploy Previews for pull requests. Local Netlify link state is ignored via
+`.netlify/`.
+
+## Character anchors: tested results
+
+The floor sets position and scale independently of the feet. A visible shoe bottom
+can extend below the cell center without moving the ground anchor. Simple stick
+guides leave more room for character design than detailed artwork. Solid floors
+were repainted, so exact-reference subtraction failed; an explicitly configured
+green chroma key removed the floor from all five saved solid-floor outputs.
+Mixed shoe edges are approximate, and the key hue must be reserved in the floor
+region. Two detached-corner trials also produced cutouts. These are seven single
+generation trials, not a reliability or creativity benchmark.
+
+Character frames stay 192×320 on the same 128px logical grid. Their anchor is
+the floor **center (96,248)**. See [the complete character experiments](docs/character-anchor-experiments.md)
+for exact inputs/prompts, measurements, processing commands, clean sprites, and Tiled export.
 
 ## SVG first: tested results
 
-![Four workflow comparison](docs/preview-workflows.png)
+![Five workflow trials](docs/preview-workflows.png)
 
 The target was a 128×128 top face and a 32px front wall. All AI outputs were
 cleaned and scaled uniformly; none were stretched into the SVG shape.
@@ -95,6 +127,7 @@ cleaned and scaled uniformly; none were stretched into the SVG shape.
 | Initial free generation | 110 / 160px | 2,830 | 66.2% |
 | SVG + polished style reference | 131 / 160px | 0 | 81.8% |
 | SVG reference only | 160 / 160px | 0 | 98.8% |
+| SVG + sphere style reference | 146 / 160px | 78 | 90.6% |
 | SVG geometry + AI material | 160 / 160px | 0 | 100%, exact SVG alpha |
 
 **SVG first works well as guidance. Keep SVG geometry and composite generated
@@ -103,6 +136,11 @@ richer illustration but remains a model redraw. The material path trades some
 illustration freedom for authored silhouettes, faces, studs, lighting, and heights.
 These are individual trials, not a statistical model benchmark. No alpha gaps
 does not imply continuous grain, identical color at joins, or connected terrain.
+
+The sphere follow-up keeps the SVG + block-style prompt unchanged and substitutes
+a generated glossy plastic sphere for the second image. It improves body height
+over that earlier trial, but still shortens the body and widens the near side
+(126px far / 128px near). See [sphere experiment inputs, method, and limitations](docs/sphere-reference-experiment.md).
 
 ```sh
 python tools/svgkit.py template tmp/my-block --height 64 --palette amber
@@ -132,6 +170,32 @@ To use the skill with a coding agent, point it at
 directory if its discovery system requires installation. The skill is packaged
 in this repo and does not change your account-level skills automatically.
 
+## Skill workflow and evals
+
+The repo skill now covers visible floors (for example, **generate a lava tile**)
+and objects/animations on removable calibration floors (for example,
+**generate a player dancing spritesheet on tile**). Its default uses sparse SVG
+guidance, textual appearance, and the intact floor to set scale and anchor before
+explicit green keying. See [the runnable workflow](skills/build-overlap-tiles/references/floor-and-objects.md).
+
+Fresh independent executions produced a lava floor and two dance attempts.
+The first dance failed pose diversity. The corrected retry passed after an
+explicit transparent-separator recovery preserved fingers protruding into the
+planned gutter. Both attempts, strict-cut refusal, exact prompts, original PNGs,
+and independent reviews are retained; no failed generation was hidden.
+See [eval findings and previews](docs/skill-eval-findings.md) and
+[the fresh-run protocol](skills/build-overlap-tiles/evals/protocol.md).
+
+```sh
+# Replay all saved artifact checks, including the expected failed first attempt
+npm run eval:skill
+```
+
+Replay checks sources, geometry, alpha, measured floor normalization, sheet
+reconstruction, and the saved visual reviews. It does not run image generation
+or measure how today's agent follows the skill; a new behavioral score requires
+a fresh execution of the two short prompts.
+
 ## Verify
 
 ```sh
@@ -151,7 +215,8 @@ The current demo covers independent one-cell objects. Connected raised terrain,
 complex bridges, and multi-cell depth interactions need authored adjacency/depth
 rules. See [workflow findings](docs/workflow-findings.md).
 
-The supplied style reference is not redistributed. The sample objects and flat
-material swatches were generated with the built-in image-generation tool; their source files and exact
-prompts are retained. Floor tiles are deterministic procedural assets with a shared
-boundary band. The code is MIT-licensed.
+The original supplied game-art reference is retained unchanged in
+`assets/references/5610.jpg`. Sample objects, the sphere style reference, and flat
+material swatches were generated with the built-in image-generation tool; source
+files and exact prompts are retained. Floor tiles are deterministic procedural
+assets with a shared boundary band. The code is MIT-licensed.

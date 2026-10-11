@@ -3,7 +3,7 @@
   "results": [
     {
       "check": "atlas / individual PNG parity",
-      "meanChannelDelta": 0.08200056503403985,
+      "meanChannelDelta": 0.08249985070238784,
       "maxChannelDelta": 255
     },
     {
@@ -19,11 +19,23 @@
       "ok": true
     },
     {
-      "check": "four workflow cards, live wood/96px variant, SVG overlay, mixed-height PNG export",
+      "check": "five workflow cards, sphere distortion metrics, live wood/96px variant, SVG overlay, mixed-height PNG export",
       "ok": true
     },
     {
       "check": "workflow lab at 390px and 320px",
+      "ok": true
+    },
+    {
+      "check": "seven character guides, floor-derived normalization, five chroma cutouts, exact subtraction comparison, two detached extractions, centered Tiled placement",
+      "ok": true
+    },
+    {
+      "check": "character lab at 390px and 320px",
+      "ok": true
+    },
+    {
+      "check": "playground lava and dance: six-frame playback, manual stepping, fixed anchor, background switch, trial selection, download, 390px/320px layouts",
       "ok": true
     },
     {
@@ -32,6 +44,10 @@
     },
     {
       "check": "320px narrow viewport",
+      "ok": true
+    },
+    {
+      "check": "fresh skill eval floor repeat and six anchored dance frames, light/dark playback, desktop/mobile",
       "ok": true
     }
   ],

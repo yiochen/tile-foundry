@@ -1,0 +1,1512 @@
+{
+  "version": 2,
+  "frame": [
+    192,
+    320
+  ],
+  "cellSize": 128,
+  "anchor": [
+    96,
+    248
+  ],
+  "trials": [
+    {
+      "id": "character-box",
+      "guide": "box",
+      "name": "Floor + height box",
+      "pose": "standing",
+      "mode": "solid",
+      "references": [
+        "assets/character-guides/box-4x.png"
+      ],
+      "source": "assets/source/character-box.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            374,
+            1363
+          ],
+          [
+            596,
+            1363
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      },
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          161,
+          930,
+          811,
+          1579
+        ],
+        "anchor": [
+          486.0,
+          1254.5
+        ],
+        "aspect": 1.0015408320493067,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "withGuide": "characters/character-box-with-guide.png",
+      "guideImage": "characters/character-box-guide.png",
+      "removalImage": "characters/character-box-removal.png",
+      "usableExtraction": false,
+      "keyedImage": "characters/character-box-keyed.png",
+      "chromaRemoval": {
+        "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+        "keyRGB": [
+          123,
+          209,
+          75
+        ],
+        "keyHueDegrees": 98.51,
+        "hueToleranceDegrees": 28,
+        "hueFeatherDegrees": 8,
+        "minSaturation": 0.12,
+        "saturationFeather": 0.1,
+        "region": [
+          29,
+          181,
+          163,
+          315
+        ],
+        "regionPaddingPixels": 3,
+        "keyedPixels": 10900,
+        "clearedPixels": 10863,
+        "removedAlphaMass": 2722702,
+        "removedCornerRemnants": [
+          [
+            34,
+            309,
+            35,
+            310
+          ]
+        ],
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "exactCharacterMatte": false,
+        "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+      },
+      "processing": {
+        "cleanup": {
+          "minAlpha": 64,
+          "removedPixels": 13359,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            161,
+            271,
+            811,
+            1580
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            486.0,
+            1254.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            0.15508021390374438
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            54,
+            128,
+            258
+          ],
+          "scale": [
+            0.19692307692307692,
+            0.1970970206264324
+          ],
+          "sourceAnchorMode": "explicit"
+        }
+      },
+      "removal": {
+        "method": "Exact RGBA subtraction against the authored floor; diagnostic only",
+        "removedPixels": 0,
+        "floorMarginResidualPixels": 4096,
+        "floorMarginProbePixels": 4096,
+        "floorMarginResidualFraction": 1.0,
+        "productionSafe": false,
+        "limitation": "Redrawn floor pixels and opaque character/floor mixtures cannot be separated exactly"
+      },
+      "footMeasurement": {
+        "midpoint": [
+          95.8,
+          269.39
+        ],
+        "uncertaintyPixels": 0.99,
+        "purpose": "Independent sole-midpoint review for evaluation only; not a processing input"
+      },
+      "metrics": {
+        "guideFootMidpoint": [
+          96,
+          248
+        ],
+        "expectedFootMidpoint": [
+          96,
+          248
+        ],
+        "footDelta": [
+          -0.2,
+          21.39
+        ],
+        "floorAspect": 1.0015408320493067,
+        "footDeltaMeaning": "Visible boot silhouette relative to guide, not ground-anchor error; shoe length can extend below cell center",
+        "observedElevation": -21.39,
+        "anchorMode": "Inferred floor center; never fitted to reviewed feet"
+      }
+    },
+    {
+      "id": "character-stick",
+      "guide": "stick",
+      "name": "Floor + stick pose",
+      "pose": "standing",
+      "mode": "solid",
+      "references": [
+        "assets/character-guides/stick-4x.png"
+      ],
+      "source": "assets/source/character-stick.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            375,
+            1265
+          ],
+          [
+            596,
+            1265
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      },
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          161,
+          929,
+          811,
+          1578
+        ],
+        "anchor": [
+          486.0,
+          1253.5
+        ],
+        "aspect": 1.0015408320493067,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "withGuide": "characters/character-stick-with-guide.png",
+      "guideImage": "characters/character-stick-guide.png",
+      "removalImage": "characters/character-stick-removal.png",
+      "usableExtraction": false,
+      "keyedImage": "characters/character-stick-keyed.png",
+      "chromaRemoval": {
+        "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+        "keyRGB": [
+          123,
+          209,
+          75
+        ],
+        "keyHueDegrees": 98.51,
+        "hueToleranceDegrees": 28,
+        "hueFeatherDegrees": 8,
+        "minSaturation": 0.12,
+        "saturationFeather": 0.1,
+        "region": [
+          29,
+          181,
+          163,
+          315
+        ],
+        "regionPaddingPixels": 3,
+        "keyedPixels": 13639,
+        "clearedPixels": 13615,
+        "removedAlphaMass": 3416022,
+        "removedCornerRemnants": [
+          [
+            45,
+            186,
+            46,
+            187
+          ],
+          [
+            146,
+            186,
+            147,
+            187
+          ],
+          [
+            34,
+            197,
+            35,
+            198
+          ],
+          [
+            157,
+            197,
+            158,
+            198
+          ]
+        ],
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "exactCharacterMatte": false,
+        "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+      },
+      "processing": {
+        "cleanup": {
+          "minAlpha": 64,
+          "removedPixels": 12658,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            161,
+            233,
+            811,
+            1579
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            486.0,
+            1253.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            0.08432392273402911
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            47,
+            128,
+            265
+          ],
+          "scale": [
+            0.19692307692307692,
+            0.19687964338781574
+          ],
+          "sourceAnchorMode": "explicit"
+        }
+      },
+      "removal": {
+        "method": "Exact RGBA subtraction against the authored floor; diagnostic only",
+        "removedPixels": 0,
+        "floorMarginResidualPixels": 4096,
+        "floorMarginProbePixels": 4096,
+        "floorMarginResidualFraction": 1.0,
+        "productionSafe": false,
+        "limitation": "Redrawn floor pixels and opaque character/floor mixtures cannot be separated exactly"
+      },
+      "footMeasurement": {
+        "midpoint": [
+          95.9,
+          250.26
+        ],
+        "uncertaintyPixels": 0.98,
+        "purpose": "Independent sole-midpoint review for evaluation only; not a processing input"
+      },
+      "metrics": {
+        "guideFootMidpoint": [
+          96,
+          248
+        ],
+        "expectedFootMidpoint": [
+          96,
+          248
+        ],
+        "footDelta": [
+          -0.1,
+          2.26
+        ],
+        "floorAspect": 1.0015408320493067,
+        "footDeltaMeaning": "Visible boot silhouette relative to guide, not ground-anchor error; shoe length can extend below cell center",
+        "observedElevation": -2.26,
+        "anchorMode": "Inferred floor center; never fitted to reviewed feet"
+      }
+    },
+    {
+      "id": "character-drawn",
+      "guide": "drawn",
+      "name": "Floor + detailed SVG",
+      "pose": "standing",
+      "mode": "solid",
+      "references": [
+        "assets/character-guides/drawn-4x.png"
+      ],
+      "source": "assets/source/character-drawn.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            416,
+            1253
+          ],
+          [
+            559,
+            1253
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      },
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          162,
+          930,
+          810,
+          1577
+        ],
+        "anchor": [
+          486.0,
+          1253.5
+        ],
+        "aspect": 1.001545595054096,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "withGuide": "characters/character-drawn-with-guide.png",
+      "guideImage": "characters/character-drawn-guide.png",
+      "removalImage": "characters/character-drawn-removal.png",
+      "usableExtraction": false,
+      "keyedImage": "characters/character-drawn-keyed.png",
+      "chromaRemoval": {
+        "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+        "keyRGB": [
+          123,
+          209,
+          75
+        ],
+        "keyHueDegrees": 98.51,
+        "hueToleranceDegrees": 28,
+        "hueFeatherDegrees": 8,
+        "minSaturation": 0.12,
+        "saturationFeather": 0.1,
+        "region": [
+          29,
+          181,
+          163,
+          315
+        ],
+        "regionPaddingPixels": 3,
+        "keyedPixels": 13580,
+        "clearedPixels": 13537,
+        "removedAlphaMass": 3413136,
+        "removedCornerRemnants": [
+          [
+            34,
+            183,
+            35,
+            184
+          ],
+          [
+            34,
+            186,
+            46,
+            198
+          ],
+          [
+            146,
+            186,
+            158,
+            198
+          ],
+          [
+            34,
+            299,
+            46,
+            311
+          ],
+          [
+            146,
+            299,
+            158,
+            311
+          ],
+          [
+            32,
+            312,
+            34,
+            313
+          ],
+          [
+            159,
+            312,
+            160,
+            313
+          ]
+        ],
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "exactCharacterMatte": false,
+        "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+      },
+      "processing": {
+        "cleanup": {
+          "minAlpha": 64,
+          "removedPixels": 8630,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            162,
+            460,
+            810,
+            1577
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            486.0,
+            1253.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            0.004923903312430866
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            91,
+            128,
+            221
+          ],
+          "scale": [
+            0.19753086419753085,
+            0.19785138764547897
+          ],
+          "sourceAnchorMode": "explicit"
+        }
+      },
+      "removal": {
+        "method": "Exact RGBA subtraction against the authored floor; diagnostic only",
+        "removedPixels": 8,
+        "floorMarginResidualPixels": 4094,
+        "floorMarginProbePixels": 4096,
+        "floorMarginResidualFraction": 0.99951171875,
+        "productionSafe": false,
+        "limitation": "Redrawn floor pixels and opaque character/floor mixtures cannot be separated exactly"
+      },
+      "footMeasurement": {
+        "midpoint": [
+          96.3,
+          247.9
+        ],
+        "uncertaintyPixels": 0.99,
+        "purpose": "Independent sole-midpoint review for evaluation only; not a processing input"
+      },
+      "metrics": {
+        "guideFootMidpoint": [
+          96,
+          248
+        ],
+        "expectedFootMidpoint": [
+          96,
+          248
+        ],
+        "footDelta": [
+          0.3,
+          -0.1
+        ],
+        "floorAspect": 1.001545595054096,
+        "footDeltaMeaning": "Visible boot silhouette relative to guide, not ground-anchor error; shoe length can extend below cell center",
+        "observedElevation": 0.1,
+        "anchorMode": "Inferred floor center; never fitted to reviewed feet"
+      }
+    },
+    {
+      "id": "character-raster",
+      "guide": "raster",
+      "name": "Floor + raster character",
+      "pose": "standing",
+      "mode": "solid",
+      "references": [
+        "assets/character-guides/raster-4x.png"
+      ],
+      "source": "assets/source/character-raster.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            411,
+            1249
+          ],
+          [
+            568,
+            1249
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      },
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          157,
+          919,
+          816,
+          1575
+        ],
+        "anchor": [
+          486.5,
+          1247.0
+        ],
+        "aspect": 1.0045731707317074,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "withGuide": "characters/character-raster-with-guide.png",
+      "guideImage": "characters/character-raster-guide.png",
+      "removalImage": "characters/character-raster-removal.png",
+      "usableExtraction": false,
+      "keyedImage": "characters/character-raster-keyed.png",
+      "chromaRemoval": {
+        "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+        "keyRGB": [
+          123,
+          209,
+          75
+        ],
+        "keyHueDegrees": 98.51,
+        "hueToleranceDegrees": 28,
+        "hueFeatherDegrees": 8,
+        "minSaturation": 0.12,
+        "saturationFeather": 0.1,
+        "region": [
+          29,
+          181,
+          163,
+          315
+        ],
+        "regionPaddingPixels": 3,
+        "keyedPixels": 13596,
+        "clearedPixels": 13482,
+        "removedAlphaMass": 3343773,
+        "removedCornerRemnants": [
+          [
+            32,
+            182,
+            47,
+            183
+          ],
+          [
+            49,
+            182,
+            50,
+            183
+          ],
+          [
+            53,
+            182,
+            55,
+            183
+          ],
+          [
+            146,
+            182,
+            159,
+            183
+          ],
+          [
+            34,
+            186,
+            46,
+            199
+          ],
+          [
+            146,
+            187,
+            158,
+            199
+          ],
+          [
+            34,
+            298,
+            46,
+            310
+          ],
+          [
+            146,
+            298,
+            158,
+            310
+          ]
+        ],
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "exactCharacterMatte": false,
+        "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+      },
+      "processing": {
+        "cleanup": {
+          "minAlpha": 64,
+          "removedPixels": 11256,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            157,
+            450,
+            817,
+            1575
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            486.5,
+            1247.0
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.09696969696969404,
+            -0.1493333333333169
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            93,
+            128,
+            219
+          ],
+          "scale": [
+            0.19393939393939394,
+            0.19466666666666665
+          ],
+          "sourceAnchorMode": "explicit"
+        }
+      },
+      "removal": {
+        "method": "Exact RGBA subtraction against the authored floor; diagnostic only",
+        "removedPixels": 0,
+        "floorMarginResidualPixels": 4096,
+        "floorMarginProbePixels": 4096,
+        "floorMarginResidualFraction": 1.0,
+        "productionSafe": false,
+        "limitation": "Redrawn floor pixels and opaque character/floor mixtures cannot be separated exactly"
+      },
+      "footMeasurement": {
+        "midpoint": [
+          96.58,
+          248.39
+        ],
+        "uncertaintyPixels": 0.97,
+        "purpose": "Independent sole-midpoint review for evaluation only; not a processing input"
+      },
+      "metrics": {
+        "guideFootMidpoint": [
+          96,
+          248
+        ],
+        "expectedFootMidpoint": [
+          96,
+          248
+        ],
+        "footDelta": [
+          0.58,
+          0.39
+        ],
+        "floorAspect": 1.0045731707317074,
+        "footDeltaMeaning": "Visible boot silhouette relative to guide, not ground-anchor error; shoe length can extend below cell center",
+        "observedElevation": -0.39,
+        "anchorMode": "Inferred floor center; never fitted to reviewed feet"
+      }
+    },
+    {
+      "id": "character-jump-solid",
+      "guide": "jump-solid",
+      "name": "Jump + solid floor",
+      "pose": "jumping",
+      "mode": "solid",
+      "references": [
+        "assets/character-guides/jump-solid-4x.png"
+      ],
+      "source": "assets/source/character-jump-solid.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            420,
+            978
+          ],
+          [
+            567,
+            1016
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      },
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          161,
+          931,
+          810,
+          1578
+        ],
+        "anchor": [
+          485.5,
+          1254.5
+        ],
+        "aspect": 1.0030911901081916,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "withGuide": "characters/character-jump-solid-with-guide.png",
+      "guideImage": "characters/character-jump-solid-guide.png",
+      "removalImage": "characters/character-jump-solid-removal.png",
+      "usableExtraction": false,
+      "keyedImage": "characters/character-jump-solid-keyed.png",
+      "chromaRemoval": {
+        "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+        "keyRGB": [
+          123,
+          209,
+          75
+        ],
+        "keyHueDegrees": 98.51,
+        "hueToleranceDegrees": 28,
+        "hueFeatherDegrees": 8,
+        "minSaturation": 0.12,
+        "saturationFeather": 0.1,
+        "region": [
+          29,
+          181,
+          163,
+          315
+        ],
+        "regionPaddingPixels": 3,
+        "keyedPixels": 16155,
+        "clearedPixels": 16092,
+        "removedAlphaMass": 4023054,
+        "removedCornerRemnants": [
+          [
+            34,
+            186,
+            46,
+            187
+          ],
+          [
+            146,
+            186,
+            156,
+            187
+          ],
+          [
+            157,
+            186,
+            158,
+            187
+          ],
+          [
+            34,
+            188,
+            35,
+            192
+          ],
+          [
+            34,
+            196,
+            35,
+            197
+          ],
+          [
+            34,
+            298,
+            35,
+            303
+          ],
+          [
+            157,
+            298,
+            158,
+            299
+          ],
+          [
+            34,
+            306,
+            35,
+            309
+          ],
+          [
+            36,
+            309,
+            40,
+            310
+          ],
+          [
+            41,
+            309,
+            46,
+            310
+          ],
+          [
+            146,
+            309,
+            157,
+            310
+          ]
+        ],
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "exactCharacterMatte": false,
+        "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+      },
+      "processing": {
+        "cleanup": {
+          "minAlpha": 64,
+          "removedPixels": 16896,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            161,
+            166,
+            810,
+            1578
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            485.5,
+            1254.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            -0.30807365439093815
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            34,
+            128,
+            278
+          ],
+          "scale": [
+            0.19722650231124808,
+            0.19688385269121814
+          ],
+          "sourceAnchorMode": "explicit"
+        }
+      },
+      "removal": {
+        "method": "Exact RGBA subtraction against the authored floor; diagnostic only",
+        "removedPixels": 0,
+        "floorMarginResidualPixels": 4096,
+        "floorMarginProbePixels": 4096,
+        "floorMarginResidualFraction": 1.0,
+        "productionSafe": false,
+        "limitation": "Redrawn floor pixels and opaque character/floor mixtures cannot be separated exactly"
+      },
+      "footMeasurement": {
+        "midpoint": [
+          97.58,
+          197.3
+        ],
+        "uncertaintyPixels": 0.99,
+        "purpose": "Independent sole-midpoint review for evaluation only; not a processing input"
+      },
+      "metrics": {
+        "guideFootMidpoint": [
+          98,
+          214
+        ],
+        "expectedFootMidpoint": [
+          98,
+          214
+        ],
+        "footDelta": [
+          -0.42,
+          -16.7
+        ],
+        "floorAspect": 1.0030911901081916,
+        "footDeltaMeaning": "Visible boot silhouette relative to guide, not ground-anchor error; shoe length can extend below cell center",
+        "observedElevation": 50.7,
+        "anchorMode": "Inferred floor center; never fitted to reviewed feet"
+      }
+    },
+    {
+      "id": "character-jump-corners",
+      "guide": "jump-corners",
+      "name": "Jump + detached corners",
+      "pose": "jumping",
+      "mode": "corners",
+      "references": [
+        "assets/character-guides/jump-corners-4x.png"
+      ],
+      "source": "assets/source/character-jump-corners.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            419,
+            1087
+          ],
+          [
+            570,
+            1120
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      },
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floor": {
+        "mode": "corners",
+        "rect": [
+          152,
+          921,
+          819,
+          1590
+        ],
+        "anchor": [
+          485.5,
+          1255.5
+        ],
+        "aspect": 0.9970104633781763,
+        "alphaThreshold": 64,
+        "characterRect": [
+          194,
+          209,
+          780,
+          1118
+        ],
+        "markerRects": [
+          [
+            152,
+            921,
+            244,
+            1011
+          ],
+          [
+            727,
+            921,
+            819,
+            1011
+          ],
+          [
+            152,
+            1498,
+            244,
+            1590
+          ],
+          [
+            727,
+            1498,
+            819,
+            1590
+          ]
+        ],
+        "nominalSpan": 132
+      },
+      "withGuide": "characters/character-jump-corners-with-guide.png",
+      "guideImage": "characters/character-jump-corners-guide.png",
+      "removalImage": "characters/character-jump-corners-removal.png",
+      "usableExtraction": true,
+      "keyedImage": null,
+      "chromaRemoval": null,
+      "processing": {
+        "cleanup": {
+          "minAlpha": 64,
+          "removedPixels": 21917,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            152,
+            209,
+            819,
+            1590
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            485.5,
+            1255.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            0.12490948587981165
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            30,
+            41,
+            132,
+            273
+          ],
+          "scale": [
+            0.19790104947526238,
+            0.19768283852280955
+          ],
+          "sourceAnchorMode": "explicit"
+        }
+      },
+      "removal": {
+        "method": "Detached alpha-component isolation; full frame and floor-derived anchor retained",
+        "characterRect": [
+          194,
+          209,
+          780,
+          1118
+        ],
+        "exactKeptPixels": true,
+        "keptPixels": 237678,
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            194,
+            209,
+            780,
+            1118
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            485.5,
+            1255.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.2969283276450483,
+            -0.22772277227724658
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            38,
+            41,
+            116,
+            180
+          ],
+          "scale": [
+            0.19795221843003413,
+            0.19801980198019803
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "productionSafe": true
+      },
+      "footMeasurement": {
+        "midpoint": [
+          97.78,
+          217.95
+        ],
+        "uncertaintyPixels": 0.99,
+        "purpose": "Independent sole-midpoint review for evaluation only; not a processing input"
+      },
+      "metrics": {
+        "guideFootMidpoint": [
+          98,
+          214
+        ],
+        "expectedFootMidpoint": [
+          98,
+          214
+        ],
+        "footDelta": [
+          -0.22,
+          3.95
+        ],
+        "floorAspect": 0.9970104633781763,
+        "footDeltaMeaning": "Visible boot silhouette relative to guide, not ground-anchor error; shoe length can extend below cell center",
+        "observedElevation": 30.05,
+        "anchorMode": "Inferred floor center; never fitted to reviewed feet"
+      }
+    },
+    {
+      "id": "character-standing-corners",
+      "guide": "standing-corners",
+      "name": "Standing + detached corners",
+      "pose": "standing",
+      "mode": "corners",
+      "references": [
+        "assets/character-guides/standing-corners-4x.png"
+      ],
+      "source": "assets/source/character-standing-corners.png",
+      "footReview": {
+        "sourceSoles": [
+          [
+            404,
+            1269
+          ],
+          [
+            568,
+            1269
+          ]
+        ],
+        "uncertaintySourcePixels": 5,
+        "role": "Visual sole-midpoint annotations for evaluating placement; never used to set ground anchor"
+      },
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floor": {
+        "mode": "corners",
+        "rect": [
+          151,
+          920,
+          821,
+          1589
+        ],
+        "anchor": [
+          486.0,
+          1254.5
+        ],
+        "aspect": 1.0014947683109119,
+        "alphaThreshold": 64,
+        "characterRect": [
+          288,
+          450,
+          682,
+          1269
+        ],
+        "markerRects": [
+          [
+            151,
+            920,
+            242,
+            1011
+          ],
+          [
+            730,
+            920,
+            821,
+            1011
+          ],
+          [
+            151,
+            1499,
+            242,
+            1589
+          ],
+          [
+            730,
+            1499,
+            821,
+            1589
+          ]
+        ],
+        "nominalSpan": 132
+      },
+      "withGuide": "characters/character-standing-corners-with-guide.png",
+      "guideImage": "characters/character-standing-corners-guide.png",
+      "removalImage": "characters/character-standing-corners-removal.png",
+      "usableExtraction": true,
+      "keyedImage": null,
+      "chromaRemoval": null,
+      "processing": {
+        "cleanup": {
+          "minAlpha": 64,
+          "removedPixels": 18719,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            151,
+            450,
+            821,
+            1589
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            486.0,
+            1254.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            -0.2159789288849936
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            30,
+            90,
+            132,
+            224
+          ],
+          "scale": [
+            0.19701492537313434,
+            0.19666374012291485
+          ],
+          "sourceAnchorMode": "explicit"
+        }
+      },
+      "removal": {
+        "method": "Detached alpha-component isolation; full frame and floor-derived anchor retained",
+        "characterRect": [
+          288,
+          450,
+          682,
+          1269
+        ],
+        "exactKeptPixels": true,
+        "keptPixels": 217811,
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            288,
+            450,
+            682,
+            1269
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            486.0,
+            1254.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            -0.1979695431472095,
+            -0.14957264957263305
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            57,
+            90,
+            78,
+            161
+          ],
+          "scale": [
+            0.19796954314720813,
+            0.19658119658119658
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "productionSafe": true
+      },
+      "footMeasurement": {
+        "midpoint": [
+          96.0,
+          250.85
+        ],
+        "uncertaintyPixels": 0.99,
+        "purpose": "Independent sole-midpoint review for evaluation only; not a processing input"
+      },
+      "metrics": {
+        "guideFootMidpoint": [
+          96,
+          248
+        ],
+        "expectedFootMidpoint": [
+          96,
+          248
+        ],
+        "footDelta": [
+          0.0,
+          2.85
+        ],
+        "floorAspect": 1.0014947683109119,
+        "footDeltaMeaning": "Visible boot silhouette relative to guide, not ground-anchor error; shoe length can extend below cell center",
+        "observedElevation": -2.85,
+        "anchorMode": "Inferred floor center; never fitted to reviewed feet"
+      }
+    }
+  ],
+  "scope": "Seven one-shot trials. Boot reviews describe visible extent, not ground-anchor error. Five explicit green-key cutouts preserve floor-derived normalization; mixed edges are approximate. Exact subtraction is retained as a diagnostic; detached corners preserve selected pixels."
+}
