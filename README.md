@@ -4,6 +4,9 @@ A reproducible image-generation → tile-processing → React-preview workflow f
 square-grid, orthographic top-and-front game art. Full sprites have different heights and
 overlap rows behind them; their logical cells stay the same size.
 
+[Open the playground](https://tile-foundry-yiochen.netlify.app/) ·
+[Play the dance animation](https://tile-foundry-yiochen.netlify.app/?view=animations)
+
 ![Village lane preview](docs/preview-scene.png)
 
 ## Start
@@ -99,6 +102,9 @@ saved sources, run `npm run assets` locally and commit the derived assets too.
 The Git-connected Netlify project publishes pushes to `main` automatically and
 builds Deploy Previews for pull requests. Local Netlify link state is ignored via
 `.netlify/`.
+
+Project: [tile-foundry-yiochen](https://app.netlify.com/projects/tile-foundry-yiochen).
+Production: [tile-foundry-yiochen.netlify.app](https://tile-foundry-yiochen.netlify.app/).
 
 ## Character anchors: tested results
 
