@@ -107,6 +107,31 @@ class TileGeometryTests(unittest.TestCase):
         self.assertEqual(obj["x"]+offset["x"]-192/2+96,192)
         self.assertEqual(tiled["layers"][1]["draworder"],"topdown")
 
+    def test_tiled_block_experiment_changes_all_blocks_and_preserves_other_tiles(self):
+        tiles=[{'id':name,'image':f'sprites/{name}.png','size':[192,320],'anchor':[96,312]}
+               for name in ('block','tree')]
+        variant={'id':'svg-only-block','image':'workflows/svg-only-block.png','size':[192,320],'anchor':[96,312]}
+        assets={'cellSize':128,'tiles':tiles,'blockVariants':[variant]}
+        scene={'width':3,'height':2,'roadColumns':[],'blockExperiment':'svg-only-block',
+               'objects':[{'tileId':name,'col':i,'row':1} for i,name in enumerate(('block','tree','block'))]}
+        with tempfile.TemporaryDirectory() as directory:
+            tiled=export_tiled(scene,assets,Path(directory)/'scene.tmj')
+        sprites=tiled['tilesets'][1]['tiles']
+        objects=tiled['layers'][1]['objects']
+        self.assertEqual([sprites[o['gid']-100]['image'] for o in objects],
+                         ['workflows/svg-only-block.png','sprites/tree.png','workflows/svg-only-block.png'])
+        self.assertEqual([(o['x'],o['y']) for o in objects],[(64,256),(192,256),(320,256)])
+        self.assertEqual(tiled['tilesets'][1]['tileoffset'],{'x':0,'y':8})
+        self.assertEqual(assets['tiles'][0]['image'],'sprites/block.png','Export must not mutate the base manifest')
+        self.assertEqual(tiled['properties'][0]['value'],'svg-only-block')
+
+    def test_tiled_rejects_unknown_block_experiment(self):
+        assets={'cellSize':128,'tiles':[{'id':'block','image':'block.png','size':[192,320],'anchor':[96,312]}]}
+        scene={'width':1,'height':1,'objects':[],'blockExperiment':'missing'}
+        with tempfile.TemporaryDirectory() as directory:
+            with self.assertRaisesRegex(ValueError,'Unknown block experiment'):
+                export_tiled(scene,assets,Path(directory)/'scene.tmj')
+
     def test_solid_cell_check_catches_short_body_despite_correct_width(self):
         image=Image.new("RGBA",(128,112),"red")
         report,_=neighbor_coverage(image,(64,112))

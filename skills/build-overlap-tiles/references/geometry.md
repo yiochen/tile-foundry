@@ -48,6 +48,17 @@ also needs an alpha image and anchor. `export-tiled` requires `cellSize`, sprite
 `tileId`, `col`, and `row`. Keep the `.tmj` output beside the manifest so its relative
 image paths stay valid. Demo ground files live under `ground/` next to that map.
 
+The playground manifest also contains `blockVariants` (normalized tile entries)
+and `blockVariantsAtlas` (the separate trimmed-atlas JSON filename), rebuilt by
+`python tools/build_experiments.py` after `python tools/build_demo.py`. The editor's
+four logical tile IDs remain unchanged. A scene may set `blockExperiment` to a
+variant ID such as `svg-only-block` or `locked-wood-96`; absent or `original`
+keeps the original coral block. The browser and `export-tiled` resolve every
+`tileId: "block"` through that selection, using the variant's stored image,
+frame, and anchor. Heights change visible art, never ground pitch. Unknown
+experiment IDs fail import/export. Keep the extended `tiles.json` with scene JSON
+when exporting experiment scenes to Tiled.
+
 The Tiled exporter uses an image-collection tileset, bottom-centered objects,
 a top-down draw-order object layer, and a tileset offset of `(0,8)` to compensate
 for the 8px space below the frame's ground anchor. Its stored GIDs point at complete

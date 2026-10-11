@@ -5,7 +5,7 @@ from pathlib import Path
 
 from PIL import Image, ImageChops
 from svgkit import write_template, compose
-from tilekit import clean_alpha, normalize, neighbor_coverage, parallel_edges, write_json, load_rgba
+from tilekit import clean_alpha, normalize, neighbor_coverage, parallel_edges, write_json, load_rgba, pack_atlas
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public/assets/workflows"
@@ -79,6 +79,29 @@ def main():
                "scope":"One saved output for each of three SVG-reference strategies: block style, SVG only, and sphere style. The sphere trial uses the block-style prompt unchanged, replacing only its second input image; calls were made at different times without a recorded model version or seed. Two generated materials, four deterministic heights per material. Not a statistical model benchmark. Coverage tests identical solid cells; IoU tests silhouette only."}
     write_json(ROOT / "public/assets/workflows.json", results)
     write_json(ROOT / "docs/workflow-comparison.json", results)
+    # Keep the four logical editor tools while exposing replacement art for every
+    # block. Separate atlas frames retain each variant's stored drawing anchor.
+    manifest_path = ROOT / "public/assets/tiles.json"
+    manifest = json.loads(manifest_path.read_text())
+    block = next(t for t in manifest['tiles'] if t['id'] == 'block')
+    block_variants = []
+    choices = {entry['id']: entry for entry in cards + variants}
+    for entry in choices.values():
+        block_variants.append({
+            **{key: entry[key] for key in ('id', 'name', 'image', 'size', 'anchor', 'artRect')},
+            'footprint': list(block['footprint']), 'collision': dict(block['collision']),
+            'material': entry.get('material', 'Toy brick'),
+            'heightClass': f"{entry['elevation']} px high" if 'elevation' in entry else 'Generated',
+            'method': entry['method'], 'note': entry['note'],
+        })
+    atlas, atlas_meta = pack_atlas([(v['id'], load_rgba(ROOT / 'public/assets' / v['image']), v)
+                                  for v in block_variants])
+    atlas.save(ROOT / 'public/assets/block-variants-atlas.png')
+    atlas_meta['meta']['image'] = 'block-variants-atlas.png'
+    write_json(ROOT / 'public/assets/block-variants-atlas.json', atlas_meta)
+    manifest['blockVariants'] = block_variants
+    manifest['blockVariantsAtlas'] = 'block-variants-atlas.json'
+    write_json(manifest_path, manifest)
     print(json.dumps({"cards":[{"id":c["id"],"missing":c["metrics"]["coverage"]["uncoveredPixels"],
                               "heightError":c["metrics"]["heightError"],"parallel":c["metrics"]["parallel"]["ok"],
                               "IoU":round(c["metrics"]["silhouetteIoU"],4)} for c in cards],

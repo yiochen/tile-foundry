@@ -11,6 +11,10 @@
       "ok": true
     },
     {
+      "check": "all five block experiments: scene-wide art switch, fixed cells, atlas/PNG parity, material and height, undo, JSON round-trip, unknown-ID rejection, preset persistence, mobile layouts",
+      "ok": true
+    },
+    {
       "check": "cell placement and undo",
       "ok": true
     },

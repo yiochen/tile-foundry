@@ -577,7 +577,16 @@ def validate_assets(assets, root):
 
 
 def export_tiled(scene, assets, output):
-    tile_by_id = {tile["id"]: (index, tile) for index, tile in enumerate(assets["tiles"])}
+    tiles = list(assets['tiles'])
+    experiment = scene.get('blockExperiment', 'original')
+    if experiment != 'original':
+        variant = next((t for t in assets.get('blockVariants', []) if t['id'] == experiment), None)
+        if variant is None:
+            raise ValueError(f"Unknown block experiment: {experiment}")
+        if not any(t['id'] == 'block' for t in tiles):
+            raise ValueError("Block experiment requires a block tile in the manifest")
+        tiles = [{**variant, 'id': 'block'} if t['id'] == 'block' else t for t in tiles]
+    tile_by_id = {tile["id"]: (index, tile) for index, tile in enumerate(tiles)}
     w, h = scene["width"], scene["height"]
     size = assets["cellSize"]
     alignment=scene.get('groundAnchorAlignment','bottom')
@@ -586,14 +595,14 @@ def export_tiled(scene, assets, output):
     row_offset=.5 if alignment=='center' else 1
     # Image collection avoids assuming image height == logical map cell height.
     object_tiles = []
-    for index, tile in enumerate(assets["tiles"]):
+    for index, tile in enumerate(tiles):
         fw, fh = tile["size"]
         ax, ay = tile["anchor"]
         object_tiles.append({"id": index, "image": tile["image"], "imagewidth": fw, "imageheight": fh,
             "properties": [{"name": "groundAnchor", "type": "string", "value": f"{ax},{ay}"}],
             "objectgroup": {"type": "objectgroup", "objects": [{"id": 1, "x": ax - 32, "y": ay - 48, "width": 64, "height": 48}]}})
-    anchors = {tuple(t["anchor"]) for t in assets["tiles"]}
-    sizes = {tuple(t["size"]) for t in assets["tiles"]}
+    anchors = {tuple(t["anchor"]) for t in tiles}
+    sizes = {tuple(t["size"]) for t in tiles}
     if len(anchors) != 1 or len(sizes) != 1:
         raise ValueError("Tiled demo exporter expects normalized common frames and anchors")
     ax, ay = next(iter(anchors))
@@ -626,6 +635,8 @@ def export_tiled(scene, assets, output):
                      {"firstgid": 100, "name": "Overlapping sprites", "tilewidth": fw, "tileheight": fh,
                       "columns": 0, "tilecount": len(object_tiles), "objectalignment": "bottom",
                       "tileoffset": {"x": fw / 2 - ax, "y": fh - ay}, "tiles": object_tiles}]}
+    if experiment != 'original':
+        value['properties'] = [{'name': 'blockExperiment', 'type': 'string', 'value': experiment}]
     write_json(output, value)
     return value
 

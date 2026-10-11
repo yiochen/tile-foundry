@@ -49,6 +49,58 @@ try{
   await page.screenshot({path:root+'docs/preview-contact-desktop.png',fullPage:true});
   assert.ok((await page.locator('.stage-footer').innerText()).includes('54 objects'));
   results.push({check:'solid block contact preset',ok:true});
+  const experimentPixels=new Map();
+  const experimentIds=['original','free-block','svg-guided-block','svg-only-block','svg-sphere-block','material'];
+  for(const id of experimentIds){
+    await page.getByLabel('Block experiment',{exact:true}).selectOption(id);
+    const resolved=id==='material'?'locked-plastic-32':id;
+    await page.waitForFunction(expected=>document.querySelector('.canvas-wrap canvas').dataset.blockExperiment===expected,resolved);
+    const pixels=await page.locator('.canvas-wrap canvas').evaluate(c=>Array.from(c.getContext('2d').getImageData(0,0,c.width,c.height).data));
+    if(id==='original')experimentPixels.set(id,pixels);
+    if(id!=='original')assert.notDeepEqual(pixels,experimentPixels.get('original'),`${id} should replace the original block art`);
+    if(id==='svg-only-block')await page.screenshot({path:root+'docs/preview-block-experiments-desktop.png',fullPage:true});
+    await page.getByLabel('Sprite source').selectOption('sprites');
+    await page.evaluate(()=>new Promise(requestAnimationFrame));
+    const individual=await page.locator('.canvas-wrap canvas').evaluate(c=>Array.from(c.getContext('2d').getImageData(0,0,c.width,c.height).data));
+    const mean=pixels.reduce((sum,v,i)=>sum+Math.abs(v-individual[i]),0)/pixels.length;
+    assert.ok(mean<.3,`${id} atlas/PNG parity: ${mean}`);
+    await page.getByLabel('Sprite source').selectOption('atlas');
+  }
+  await page.getByLabel('Block material',{exact:true}).selectOption('wood');
+  await page.getByLabel('Block height',{exact:true}).selectOption('96');
+  await page.waitForFunction(()=>document.querySelector('.canvas-wrap canvas').dataset.blockExperiment==='locked-wood-96');
+  assert.equal(await page.locator('.inspector-art img').getAttribute('src'),'/assets/workflows/locked-wood-96.png');
+  const variantDownloadEvent=page.waitForEvent('download');
+  await page.getByRole('button',{name:'Export scene JSON'}).click();
+  const variantScene=JSON.parse(await readFile(await (await variantDownloadEvent).path(),'utf8'));
+  const baseContact=JSON.parse(await readFile(root+'public/assets/contact.json','utf8'));
+  assert.equal(variantScene.blockExperiment,'locked-wood-96');
+  assert.deepEqual(variantScene.objects,baseContact.objects,'Switching art must retain every logical object and cell');
+  await page.getByLabel('Block experiment',{exact:true}).selectOption('original');
+  await page.getByRole('button',{name:'Undo last edit'}).click();
+  assert.equal(await page.getByLabel('Block height',{exact:true}).inputValue(),'96');
+  await page.locator('input[type=file]').setInputFiles({name:'experiment-scene.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify({...variantScene,blockExperiment:'svg-only-block'}))});
+  await page.waitForFunction(()=>document.querySelector('.canvas-wrap canvas').dataset.blockExperiment==='svg-only-block');
+  await page.locator('input[type=file]').setInputFiles({name:'unknown-experiment.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify({...variantScene,blockExperiment:'missing'}))});
+  assert.ok((await page.getByRole('status').innerText()).includes('Unknown block experiment'));
+  await page.getByLabel('Scene preset').selectOption('village');
+  assert.equal(await page.getByLabel('Block experiment',{exact:true}).inputValue(),'svg-only-block');
+  await page.getByLabel('Scene preset').selectOption('contact');
+  for(const width of [390,320]){
+    await page.setViewportSize({width,height:844});
+    await page.evaluate(()=>new Promise(requestAnimationFrame));
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Block experiment ${width}px overflow`);
+    if(width===390)await page.screenshot({path:root+'docs/preview-block-experiments-mobile.png',fullPage:true});
+    await page.getByLabel('Block experiment',{exact:true}).selectOption('material');
+    await page.getByLabel('Block material',{exact:true}).selectOption('wood');
+    await page.getByLabel('Block height',{exact:true}).selectOption('96');
+    await page.evaluate(()=>new Promise(requestAnimationFrame));
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Block material ${width}px overflow`);
+    await page.getByLabel('Block experiment',{exact:true}).selectOption('svg-only-block');
+  }
+  await page.setViewportSize({width:1440,height:1150});
+  await page.getByLabel('Block experiment',{exact:true}).selectOption('original');
+  results.push({check:'all five block experiments: scene-wide art switch, fixed cells, atlas/PNG parity, material and height, undo, JSON round-trip, unknown-ID rejection, preset persistence, mobile layouts',ok:true});
   await page.getByRole('button',{name:/Orchard tree/}).click();
   await page.getByLabel('Scene preset').selectOption('village');
   const before=await page.locator('.stage-footer').innerText();

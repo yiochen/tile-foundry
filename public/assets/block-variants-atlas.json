@@ -1,0 +1,326 @@
+{
+  "frames": {
+    "free-block": {
+      "frame": {
+        "x": 4,
+        "y": 4,
+        "w": 128,
+        "h": 112
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 200,
+        "w": 128,
+        "h": 112
+      },
+      "anchor": [
+        64,
+        112
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    },
+    "svg-guided-block": {
+      "frame": {
+        "x": 142,
+        "y": 4,
+        "w": 130,
+        "h": 133
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 179,
+        "w": 130,
+        "h": 133
+      },
+      "anchor": [
+        65,
+        133
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    },
+    "svg-only-block": {
+      "frame": {
+        "x": 280,
+        "y": 4,
+        "w": 130,
+        "h": 162
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 150,
+        "w": 130,
+        "h": 162
+      },
+      "anchor": [
+        65,
+        162
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    },
+    "svg-sphere-block": {
+      "frame": {
+        "x": 418,
+        "y": 4,
+        "w": 130,
+        "h": 148
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 31,
+        "y": 164,
+        "w": 130,
+        "h": 148
+      },
+      "anchor": [
+        65,
+        148
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    },
+    "locked-plastic-32": {
+      "frame": {
+        "x": 4,
+        "y": 236,
+        "w": 128,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 152,
+        "w": 128,
+        "h": 160
+      },
+      "anchor": [
+        64,
+        160
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    },
+    "locked-plastic-16": {
+      "frame": {
+        "x": 142,
+        "y": 236,
+        "w": 128,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 168,
+        "w": 128,
+        "h": 144
+      },
+      "anchor": [
+        64,
+        144
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    },
+    "locked-plastic-64": {
+      "frame": {
+        "x": 280,
+        "y": 236,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 120,
+        "w": 128,
+        "h": 192
+      },
+      "anchor": [
+        64,
+        192
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    },
+    "locked-plastic-96": {
+      "frame": {
+        "x": 418,
+        "y": 236,
+        "w": 128,
+        "h": 224
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 88,
+        "w": 128,
+        "h": 224
+      },
+      "anchor": [
+        64,
+        224
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    },
+    "locked-wood-16": {
+      "frame": {
+        "x": 4,
+        "y": 468,
+        "w": 128,
+        "h": 144
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 168,
+        "w": 128,
+        "h": 144
+      },
+      "anchor": [
+        64,
+        144
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    },
+    "locked-wood-32": {
+      "frame": {
+        "x": 142,
+        "y": 468,
+        "w": 128,
+        "h": 160
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 152,
+        "w": 128,
+        "h": 160
+      },
+      "anchor": [
+        64,
+        160
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    },
+    "locked-wood-64": {
+      "frame": {
+        "x": 280,
+        "y": 468,
+        "w": 128,
+        "h": 192
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 120,
+        "w": 128,
+        "h": 192
+      },
+      "anchor": [
+        64,
+        192
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    },
+    "locked-wood-96": {
+      "frame": {
+        "x": 418,
+        "y": 468,
+        "w": 128,
+        "h": 224
+      },
+      "sourceSize": {
+        "w": 192,
+        "h": 320
+      },
+      "spriteSourceSize": {
+        "x": 32,
+        "y": 88,
+        "w": 128,
+        "h": 224
+      },
+      "anchor": [
+        64,
+        224
+      ],
+      "footprint": [
+        128,
+        128
+      ]
+    }
+  },
+  "meta": {
+    "size": {
+      "w": 552,
+      "h": 696
+    },
+    "padding": 4,
+    "extrusion": 2,
+    "trimmed": true,
+    "image": "block-variants-atlas.png"
+  }
+}

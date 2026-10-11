@@ -101,8 +101,22 @@ function App() {
       const [assets,atlas,village,stress,contact,validation,workflows,characters,gallery] = await Promise.all(
         ['tiles.json','atlas.json','village.json','stress.json','contact.json','validation.json','workflows.json','characters.json','skill-gallery.json'].map(fetchJSON));
       const urls=[...new Set([...assets.tiles.map(t=>t.image),...assets.ground,assets.road,assets.roadCenter,'atlas.png',...workflows.cards.map(t=>t.image),...workflows.lockedVariants.map(t=>t.image),...characters.trials.flatMap(t=>[t.guideImage,t.withGuide,t.removalImage,t.keyedImage].filter(Boolean)),gallery.floor.image,...gallery.animations.flatMap(a=>a.frames.map(f=>f.image))])];
+      const blockAtlas=await fetchJSON(assets.blockVariantsAtlas);
+      urls.push(blockAtlas.meta.image);
       const entries=await Promise.all(urls.map(async url=>[url,await loadImage(base+url)]));
-      if(alive){setData({assets,atlas,village,stress,contact,validation,workflows,characters,gallery,images:Object.fromEntries(entries)});setScene(village);}
+      const images=Object.fromEntries(entries);
+      // Restore transparent frame margins before scaling: otherwise canvas
+      // filtering can sample the atlas extrusion instead of transparent pixels.
+      const blockSources={};
+      const blockFrames=Object.fromEntries(assets.blockVariants.map(t=>{
+        const canvas=document.createElement('canvas'), f=blockAtlas.frames[t.id], r=f.frame, trim=f.spriteSourceSize;
+        canvas.width=f.sourceSize.w;canvas.height=f.sourceSize.h;
+        canvas.getContext('2d').drawImage(images[blockAtlas.meta.image],r.x,r.y,r.w,r.h,trim.x,trim.y,r.w,r.h);
+        const source=document.createElement('canvas');source.width=t.size[0];source.height=t.size[1];
+        source.getContext('2d').drawImage(images[t.image],0,0);blockSources[t.id]=source;
+        return [t.id,canvas];
+      }));
+      if(alive){setData({assets,atlas,blockAtlas,blockFrames,blockSources,village,stress,contact,validation,workflows,characters,gallery,images});setScene(village);}
     })().catch(e=>alive&&setFailure(e.message));
     return () => {alive=false;};
   },[]);
@@ -111,7 +125,9 @@ function App() {
     const ro=new ResizeObserver(entries=>setContainerWidth(Math.floor(entries[0].contentRect.width)));
     ro.observe(containerRef.current); return () => ro.disconnect();
   },[data]);
-  const tile=data?.assets.tiles.find(t=>t.id===selected);
+  const blockExperiment=scene?.blockExperiment||'original';
+  const blockVariant=data?.assets.blockVariants.find(t=>t.id===blockExperiment);
+  const tile=selected==='block'&&mode==='scene'&&blockVariant?blockVariant:data?.assets.tiles.find(t=>t.id===selected);
   useEffect(() => {
     if(!data||!scene||!canvasRef.current) return;
     const canvas=canvasRef.current;
@@ -127,8 +143,11 @@ function App() {
     const dot=(x,y,color='#257774')=>{ctx.fillStyle=color;ctx.beginPath();ctx.arc(x,y,3,0,Math.PI*2);ctx.fill();};
     const checker=(x,y,w,h)=>{for(let yy=y;yy<y+h;yy+=12)for(let xx=x;xx<x+w;xx+=12)fill(((xx-x)/12+(yy-y)/12)%2?'#edf0e8':'#f6f7f2',xx,yy,Math.min(12,x+w-xx),Math.min(12,y+h-yy));};
     const drawTile=(id,bx,by,scale)=>{
-      const t=data.assets.tiles.find(t=>t.id===id);
-      if(renderer==='atlas'){
+      const variant=id==='block'&&mode==='scene'?blockVariant:null;
+      const t=variant||data.assets.tiles.find(t=>t.id===id);
+      if(variant){
+        ctx.drawImage((renderer==='atlas'?data.blockFrames:data.blockSources)[variant.id],bx-t.anchor[0]*scale,by-t.anchor[1]*scale,t.size[0]*scale,t.size[1]*scale);
+      }else if(renderer==='atlas'){
         const f=data.atlas.frames[id], r=f.frame;
         ctx.drawImage(data.images['atlas.png'],r.x,r.y,r.w,r.h,bx-f.anchor[0]*scale,by-f.anchor[1]*scale,r.w*scale,r.h*scale);
       }else ctx.drawImage(data.images[t.image],bx-t.anchor[0]*scale,by-t.anchor[1]*scale,t.size[0]*scale,t.size[1]*scale);
@@ -184,10 +203,11 @@ function App() {
       });
     }
     canvas.dataset.ready='true';
-  },[data,scene,mode,renderer,grid,anchors,footprints,zoom,containerWidth,cell]);
+    canvas.dataset.blockExperiment=blockExperiment;
+  },[data,scene,mode,renderer,grid,anchors,footprints,zoom,containerWidth,cell,blockVariant,blockExperiment]);
   const remember=next=>{setHistory(h=>[...h.slice(-29),scene]);setScene(next);};
   const undo=()=>{if(history.length){setScene(history.at(-1));setHistory(h=>h.slice(0,-1));setStatus('Last edit undone');}};
-  const changePreset=value=>{setPreset(value);setScene(data[value]);setHistory([]);setCell(null);};
+  const changePreset=value=>{setPreset(value);setScene({...data[value],blockExperiment});setHistory([]);setCell(null);};
   const interact=event=>{
     if(!layoutRef.current||!scene) return;
     const bounds=canvasRef.current.getBoundingClientRect(), l=layoutRef.current;
@@ -204,6 +224,7 @@ function App() {
     try{const file=event.target.files[0];if(!file)return;const next=JSON.parse(await file.text());
       if(!Number.isInteger(next.width)||!Number.isInteger(next.height)||next.width<1||next.height<1||next.width>40||next.height>40||!Array.isArray(next.objects)||!Array.isArray(next.roadColumns))throw Error('Invalid scene dimensions or arrays');
       if(next.groundAnchorAlignment!==undefined&&!['bottom','center'].includes(next.groundAnchorAlignment))throw Error('Invalid ground anchor alignment');
+      if(next.blockExperiment!==undefined&&next.blockExperiment!=='original'&&!data.assets.blockVariants.some(t=>t.id===next.blockExperiment))throw Error('Unknown block experiment');
       const ids=new Set(data.assets.tiles.map(t=>t.id)), occupied=new Set();
       next.objects.forEach(o=>{const key=`${o.col},${o.row}`;if(!ids.has(o.tileId)||!Number.isInteger(o.col)||!Number.isInteger(o.row)||o.col<0||o.row<0||o.col>=next.width||o.row>=next.height||occupied.has(key))throw Error('Unknown tile, invalid position, or duplicate cell');occupied.add(key);});
       if(next.roadColumns.some(c=>!Number.isInteger(c)||c<0||c>=next.width))throw Error('Invalid road columns');
@@ -216,12 +237,24 @@ function App() {
     <header className="app-header"><div className="brand"><div className="brand-mark">▦</div><div><h1>Tile Foundry</h1><span>Generate once. Build a world.</span></div></div><div className="header-right"><span className="project-label">TOY VILLAGE / STUDY 01</span><span className="ready-badge"><i/> Assets ready</span></div></header>
     <div className={'workspace '+(['workflows','characters','animations'].includes(mode)?'lab-mode':'')}>
       <aside className="library"><div className="section-heading"><h2>Tile library</h2><span>04</span></div><p className="subtle">One grid. Different silhouettes.</p>
-        <div className="asset-grid">{data.assets.tiles.map(t=><button key={t.id} className={'asset-card '+(selected===t.id?'selected':'')} aria-pressed={selected===t.id} onClick={()=>setSelected(t.id)}><div className="asset-preview"><img src={base+t.image} alt=""/></div><strong>{t.name}</strong><span>{t.heightClass} · 1 cell</span></button>)}</div>
+        <div className="asset-grid">{data.assets.tiles.map(t=><button key={t.id} className={'asset-card '+(selected===t.id?'selected':'')} aria-pressed={selected===t.id} onClick={()=>setSelected(t.id)}><div className="asset-preview"><img src={base+(t.id==='block'&&mode==='scene'&&blockVariant?blockVariant.image:t.image)} alt=""/></div><strong>{t.name}</strong><span>{t.heightClass} · 1 cell</span></button>)}</div>
         <div className="library-bottom"><span className="eyebrow">THE RECIPE</span><ol><li><span>01</span> Generate isolated art</li><li><span>02</span> Clean & preserve anchor</li><li><span>03</span> Normalize the footprint</li><li><span>04</span> Pack & preview overlap</li></ol><button className="text-button" onClick={()=>setAssetInfo(!assetInfo)}> {assetInfo?'Hide':'View'} processing details ↗</button>{assetInfo&&<p className="detail-text">Alpha floor 64 / 255 · 192 × 320 frames · trimmed atlas · 4 px padding · 2 px extrusion. Original PNGs and prompts are retained.</p>}</div>
       </aside>
       <main className="stage">
         <div className="stage-heading"><div><span className="eyebrow">OVERLAP PLAYGROUND</span><h2>{mode==='scene'?scene.name:mode==='cuts'?'Full sprite cuts':mode==='workflows'?'Workflow lab':mode==='characters'?'Character anchors':mode==='animations'?'Tiles & animation':'Packed atlas'}</h2></div>{!['workflows','characters','animations'].includes(mode)&&<label className="scene-picker"><span className="sr-only">Scene preset</span><select value={preset} onChange={e=>changePreset(e.target.value)}><option value="village">Village lane</option><option value="stress">Overlap stress test</option><option value="contact">Solid block contact</option></select></label>}</div>
         <div className="stage-toolbar"><div className="segmented">{[['scene','Scene'],['cuts','Sprite cuts'],['atlas','Atlas'],['workflows','Workflows'],['characters','Characters'],['animations','Animations']].map(([id,label])=><button key={id} aria-pressed={mode===id} className={mode===id?'active':''} onClick={()=>setMode(id)}>{label}</button>)}</div><div className="display-options">{['workflows','characters','animations'].includes(mode)?<label><input type="checkbox" checked={grid} onChange={e=>setGrid(e.target.checked)}/> {mode==='workflows'?'SVG outline':'Ground anchor'}</label>:<><label><input type="checkbox" checked={grid} onChange={e=>setGrid(e.target.checked)}/> Grid</label><label><input type="checkbox" checked={anchors} onChange={e=>setAnchors(e.target.checked)}/> Anchors</label><label><input type="checkbox" checked={footprints} onChange={e=>setFootprints(e.target.checked)}/> Collisions</label></>}</div></div>
+        {mode==='scene'&&<div className="scene-experiments">
+          <label>All blocks<select aria-label="Block experiment" value={blockVariant?.id.startsWith('locked-')?'material':blockExperiment} onChange={e=>remember({...scene,blockExperiment:e.target.value==='material'?'locked-plastic-32':e.target.value})}>
+            <option value="original">Original coral block</option>
+            {data.workflows.cards.filter(t=>!t.id.startsWith('locked-')).map(t=><option key={t.id} value={t.id}>{t.name}</option>)}
+            <option value="material">SVG + AI material</option>
+          </select></label>
+          {blockVariant?.id.startsWith('locked-')&&<>
+            <label>Material<select aria-label="Block material" value={blockExperiment.split('-')[1]} onChange={e=>remember({...scene,blockExperiment:`locked-${e.target.value}-${blockExperiment.split('-')[2]}`})}><option value="plastic">Coral plastic</option><option value="wood">Honey wood</option></select></label>
+            <label>Height<select aria-label="Block height" value={blockExperiment.split('-')[2]} onChange={e=>remember({...scene,blockExperiment:`locked-${blockExperiment.split('-')[1]}-${e.target.value}`})}>{[16,32,64,96].map(h=><option key={h} value={h}>{h} px</option>)}</select></label>
+          </>}
+          <p>Replaces every block in this scene. Ground cells stay 128 × 128.</p>
+        </div>}
         <div className="canvas-wrap" ref={containerRef} style={['workflows','characters','animations'].includes(mode)?{display:'none'}:undefined}><canvas ref={canvasRef} onPointerDown={interact} aria-label="Tile scene preview with square ground cells and sprites overlapping back rows"/></div>
         {mode==='workflows'?<WorkflowLab data={data} outline={grid}/>:mode==='characters'?<CharacterLab data={data} showAnchors={grid}/>:mode==='animations'?<AnimationLab data={data} showAnchors={grid}/>:<div className="stage-footer"><span>{scene.width} × {scene.height} cells <b>·</b> {scene.objects.length} objects <b>·</b> Ground Y sort</span><span>Orthographic 2D</span></div>}
       </main>

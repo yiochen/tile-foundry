@@ -242,5 +242,404 @@
     "ground/grass-2.png"
   ],
   "road": "ground/road.png",
-  "roadCenter": "ground/road-center.png"
+  "roadCenter": "ground/road-center.png",
+  "blockVariants": [
+    {
+      "id": "free-block",
+      "name": "Free generation",
+      "image": "workflows/free-block.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        200,
+        128,
+        112
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "Toy brick",
+      "heightClass": "Generated",
+      "method": "Style reference only",
+      "note": "Original baseline: short body and tapered sides."
+    },
+    {
+      "id": "svg-guided-block",
+      "name": "SVG + style reference",
+      "image": "workflows/svg-guided-block.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        31,
+        179,
+        130,
+        133
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "Toy brick",
+      "heightClass": "Generated",
+      "method": "AI redraws the whole object",
+      "note": "Parallel sides, but the model shortened the SVG body toward the style reference."
+    },
+    {
+      "id": "svg-only-block",
+      "name": "SVG reference only",
+      "image": "workflows/svg-only-block.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        31,
+        150,
+        130,
+        162
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "Toy brick",
+      "heightClass": "Generated",
+      "method": "AI adds detail to the SVG raster",
+      "note": "Much closer proportions in this trial. Exact pixels and face positions remain model-dependent."
+    },
+    {
+      "id": "svg-sphere-block",
+      "name": "SVG + sphere style",
+      "image": "workflows/svg-sphere-block.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        31,
+        164,
+        130,
+        148
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "Toy brick",
+      "heightClass": "Generated",
+      "method": "Same prompt, sphere replaces block reference",
+      "note": "Same prompt with sphere style: 146/160px body, 126/128px far/near widths, 78 uncovered cell pixels. Geometry still drifts."
+    },
+    {
+      "id": "locked-plastic-32",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-plastic-32.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "plastic",
+      "heightClass": "32 px high",
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored."
+    },
+    {
+      "id": "locked-plastic-16",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-plastic-16.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        168,
+        128,
+        144
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "plastic",
+      "heightClass": "16 px high",
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored."
+    },
+    {
+      "id": "locked-plastic-64",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-plastic-64.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        120,
+        128,
+        192
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "plastic",
+      "heightClass": "64 px high",
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored."
+    },
+    {
+      "id": "locked-plastic-96",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-plastic-96.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        88,
+        128,
+        224
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "plastic",
+      "heightClass": "96 px high",
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored."
+    },
+    {
+      "id": "locked-wood-16",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-wood-16.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        168,
+        128,
+        144
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "wood",
+      "heightClass": "16 px high",
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored."
+    },
+    {
+      "id": "locked-wood-32",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-wood-32.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "wood",
+      "heightClass": "32 px high",
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored."
+    },
+    {
+      "id": "locked-wood-64",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-wood-64.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        120,
+        128,
+        192
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "wood",
+      "heightClass": "64 px high",
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored."
+    },
+    {
+      "id": "locked-wood-96",
+      "name": "SVG + AI material",
+      "image": "workflows/locked-wood-96.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        312
+      ],
+      "artRect": [
+        32,
+        88,
+        128,
+        224
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "collision": {
+        "x": -32,
+        "y": -48,
+        "width": 64,
+        "height": 48
+      },
+      "material": "wood",
+      "heightClass": "96 px high",
+      "method": "Geometry stays in SVG",
+      "note": "SVG lighting + generated surface detail. Shape and face positions are authored."
+    }
+  ],
+  "blockVariantsAtlas": "block-variants-atlas.json"
 }

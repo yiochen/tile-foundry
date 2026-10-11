@@ -83,6 +83,7 @@ subcommand for input options. Output paths are explicit; originals are not repla
 ## Playground
 
 - Scene / Sprite cuts / Atlas views; village, dense overlap, and solid-contact presets.
+- In Scene, **All blocks** switches every coral block to any of the five experiments. SVG + AI material adds material/height controls; the selection follows preset changes and survives scene JSON export/import and Tiled export.
 - Grid, ground anchors, and authored collision overlays.
 - Compare trimmed-atlas rendering with individual PNG rendering.
 - Inspect, place, and erase by logical cell; undo up to 30 edits.
