@@ -1,0 +1,33 @@
+{
+  "kind": "animation",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "fps": 12,
+  "elevationPx": 32,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "footprint": [
+    128,
+    128
+  ],
+  "geometryOwner": "authored-svg-faces",
+  "order": "row-major",
+  "frameCount": 12
+}

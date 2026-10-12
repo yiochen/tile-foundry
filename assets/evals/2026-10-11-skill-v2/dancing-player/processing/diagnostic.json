@@ -1,0 +1,461 @@
+{
+  "version": 2,
+  "outcome": "processing-failed",
+  "strictFailure": "Error: Art crosses a sheet gutter; regenerate isolated panels instead of clipping",
+  "recoveryFailure": "Error: Calibration floor is not square enough; regenerate instead of warping",
+  "sourceSize": [
+    1024,
+    1536
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    254
+  ],
+  "cleanup": {
+    "minAlpha": 32,
+    "removedPixels": 99734,
+    "warning": "Review at final size: intentionally faint details can also be removed."
+  },
+  "sourcePanelRecovery": {
+    "method": "Same maximal transparent separator-band midpoint algorithm as frozen process_object_sheet; original raw pixels partitioned exhaustively",
+    "xCuts": [
+      0,
+      256,
+      512,
+      768,
+      1024
+    ],
+    "yCuts": [
+      0,
+      509,
+      1047,
+      1536
+    ],
+    "xBands": [
+      [
+        224,
+        288
+      ],
+      [
+        481,
+        544
+      ],
+      [
+        736,
+        800
+      ]
+    ],
+    "yBands": [
+      [
+        458,
+        560
+      ],
+      [
+        982,
+        1112
+      ]
+    ],
+    "everyOriginalPixelAssignedExactlyOnce": true,
+    "noSourcePixelsClipped": true
+  },
+  "sourcePanels": [
+    {
+      "index": 0,
+      "sourceRect": [
+        0,
+        0,
+        256,
+        509
+      ],
+      "sourcePreview": "previews/source-panels/frame-00.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        509
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          46,
+          297,
+          217,
+          457
+        ],
+        "anchor": [
+          131.5,
+          377.0
+        ],
+        "aspect": 1.06875,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    },
+    {
+      "index": 1,
+      "sourceRect": [
+        256,
+        0,
+        512,
+        509
+      ],
+      "sourcePreview": "previews/source-panels/frame-01.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        509
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          44,
+          297,
+          215,
+          457
+        ],
+        "anchor": [
+          129.5,
+          377.0
+        ],
+        "aspect": 1.06875,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    },
+    {
+      "index": 2,
+      "sourceRect": [
+        512,
+        0,
+        768,
+        509
+      ],
+      "sourcePreview": "previews/source-panels/frame-02.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        509
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          43,
+          297,
+          215,
+          457
+        ],
+        "anchor": [
+          129.0,
+          377.0
+        ],
+        "aspect": 1.075,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    },
+    {
+      "index": 3,
+      "sourceRect": [
+        768,
+        0,
+        1024,
+        509
+      ],
+      "sourcePreview": "previews/source-panels/frame-03.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        509
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          40,
+          297,
+          211,
+          457
+        ],
+        "anchor": [
+          125.5,
+          377.0
+        ],
+        "aspect": 1.06875,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    },
+    {
+      "index": 4,
+      "sourceRect": [
+        0,
+        509,
+        256,
+        1047
+      ],
+      "sourcePreview": "previews/source-panels/frame-04.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        538
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          46,
+          308,
+          217,
+          469
+        ],
+        "anchor": [
+          131.5,
+          388.5
+        ],
+        "aspect": 1.062111801242236,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    },
+    {
+      "index": 5,
+      "sourceRect": [
+        256,
+        509,
+        512,
+        1047
+      ],
+      "sourcePreview": "previews/source-panels/frame-05.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        538
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          44,
+          308,
+          215,
+          469
+        ],
+        "anchor": [
+          129.5,
+          388.5
+        ],
+        "aspect": 1.062111801242236,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    },
+    {
+      "index": 6,
+      "sourceRect": [
+        512,
+        509,
+        768,
+        1047
+      ],
+      "sourcePreview": "previews/source-panels/frame-06.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        538
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          34,
+          306,
+          222,
+          472
+        ],
+        "anchor": [
+          128.0,
+          389.0
+        ],
+        "aspect": 1.1325301204819278,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    },
+    {
+      "index": 7,
+      "sourceRect": [
+        768,
+        509,
+        1024,
+        1047
+      ],
+      "sourcePreview": "previews/source-panels/frame-07.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        538
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          40,
+          308,
+          211,
+          469
+        ],
+        "anchor": [
+          125.5,
+          388.5
+        ],
+        "aspect": 1.062111801242236,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    },
+    {
+      "index": 8,
+      "sourceRect": [
+        0,
+        1047,
+        256,
+        1536
+      ],
+      "sourcePreview": "previews/source-panels/frame-08.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        489
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          45,
+          285,
+          219,
+          447
+        ],
+        "anchor": [
+          132.0,
+          366.0
+        ],
+        "aspect": 1.0740740740740742,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    },
+    {
+      "index": 9,
+      "sourceRect": [
+        256,
+        1047,
+        512,
+        1536
+      ],
+      "sourcePreview": "previews/source-panels/frame-09.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        489
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          44,
+          286,
+          216,
+          447
+        ],
+        "anchor": [
+          130.0,
+          366.5
+        ],
+        "aspect": 1.0683229813664596,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    },
+    {
+      "index": 10,
+      "sourceRect": [
+        512,
+        1047,
+        768,
+        1536
+      ],
+      "sourcePreview": "previews/source-panels/frame-10.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        489
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          40,
+          286,
+          216,
+          448
+        ],
+        "anchor": [
+          128.0,
+          367.0
+        ],
+        "aspect": 1.0864197530864197,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    },
+    {
+      "index": 11,
+      "sourceRect": [
+        768,
+        1047,
+        1024,
+        1536
+      ],
+      "sourcePreview": "previews/source-panels/frame-11.png",
+      "durationMs": 83.33333333333333,
+      "actualSize": [
+        256,
+        489
+      ],
+      "isProcessedSprite": false,
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          40,
+          285,
+          211,
+          446
+        ],
+        "anchor": [
+          125.5,
+          365.5
+        ],
+        "aspect": 1.062111801242236,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      }
+    }
+  ],
+  "repairPolicy": "No floor-aspect warp, anchor fitting, per-frame silhouette resizing, background guessing, threshold escalation, or generation retry.",
+  "correction": "Actual saved PNG has transparent separators. The provisional continuous-background inference from tool inline rendering was incorrect; source hashes and original image remain unchanged."
+}

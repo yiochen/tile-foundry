@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "kind": "animation",
+  "status": "processing-failed",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center",
+  "fps": 12,
+  "requestedFrameCount": 12,
+  "intendedFrame": [
+    192,
+    320
+  ],
+  "intendedAnchor": [
+    96,
+    248
+  ],
+  "intendedFootprint": [
+    128,
+    128
+  ],
+  "intendedNominalStandingHeight": 160,
+  "sprites": [],
+  "sourceRecords": [
+    "generation-player.json"
+  ],
+  "guide": "guide.json",
+  "processing": "processing/diagnostic.json",
+  "previews": [
+    "previews/source-player-light.png",
+    "previews/source-player-dark.png",
+    "previews/source-panels/frame-00.png",
+    "previews/source-panels.json",
+    "previews/raw-animation.html",
+    "previews/index.html",
+    "previews/source-gallery-desktop.png",
+    "previews/source-gallery-mobile.png"
+  ],
+  "outcome": "Original 12-pose source retained. Strict guide-panel cuts rejected panel drift; documented transparent-separator recovery then rejected the non-square calibration floor. Complete raw source panels are supplied as diagnostics, with no calibrated runtime sprites or playable loop claimed.",
+  "geometryDeclaration": "Authored intended constraints are not delivered sprite geometry."
+}

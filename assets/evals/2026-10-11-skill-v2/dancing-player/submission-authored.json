@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "caseId": "dancing-player",
+  "userPrompt": "Generate a 12-frame player dancing spritesheet on a 128x128 calibration tile at exactly 12 fps. Keep one player design with nominal 160px standing height, the same anatomy scale and floor-center foot/root anchor in every frame. Remove the calibration floor, retain complete limbs, and deliver a playable loop. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player.",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player",
+  "result": "result.json",
+  "sourceRecords": [
+    "generation-player.json"
+  ],
+  "sources": [
+    {
+      "image": "source-player.png",
+      "source": "source-player.png",
+      "sha256": "5ad50f875b843a7b5c66994024710a9166585e9dfdd257fe434627228d10716a",
+      "recipe": "generation-player.json"
+    }
+  ],
+  "guide": "guide.png",
+  "guideSHA256": "130000fcc2eab194555d3208da339fc410901c9d0f85ccdbea8dc422d75a0378",
+  "guideLayout": "guide.json",
+  "guideLayoutSHA256": "63cd2892517ba902632db5d0fc2e94894acbe582ab99b1cd857eaba841556074",
+  "guideSVG": "guide.svg",
+  "registration": "registration.json",
+  "processingRecipe": "processing-recipe.json",
+  "processingLog": "processing.log",
+  "status": "processing-failed",
+  "diagnostic": "processing/diagnostic.json",
+  "generationCalls": 1,
+  "retries": 0
+}

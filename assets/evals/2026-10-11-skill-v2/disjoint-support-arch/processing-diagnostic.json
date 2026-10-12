@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "status": "unsupported-processing",
+  "error": "Authored panel isolation failed: retained source art crosses the planned gutters/unused panel. The overhead span cannot be cropped to its planned 512x448 virtual frame without clipping. Complete-depth-piece extraction at the fixed source scale is unsupported for this generated input.",
+  "sourceSize": [
+    1335,
+    1178
+  ],
+  "guideSize": [
+    1088,
+    960
+  ],
+  "sourceAspectDrift": 4.993508439021799e-05,
+  "plannedSourcePanelRects": [
+    [
+      0,
+      0,
+      628,
+      550
+    ],
+    [
+      707,
+      0,
+      1335,
+      550
+    ],
+    [
+      0,
+      628,
+      628,
+      1178
+    ]
+  ],
+  "cleanupDiagnostic": {
+    "minAlpha": 32,
+    "removedPixels": 15514,
+    "warning": "Review at final size: intentionally faint details can also be removed."
+  },
+  "retainedAlphaOutsidePlannedPanels": 26030,
+  "outsideAlphaRect": [
+    628,
+    755,
+    812,
+    939
+  ],
+  "minimumAlphaUsedForDiagnostic": 32,
+  "sourcePreserved": true,
+  "spritesWritten": false,
+  "noClippingOrRescalingCorrection": true,
+  "noGenerationRetry": true
+}

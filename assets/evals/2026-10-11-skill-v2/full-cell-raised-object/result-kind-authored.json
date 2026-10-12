@@ -1,0 +1,122 @@
+{
+  "version": 2,
+  "kind": "raised-object",
+  "status": "processed",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "sha256": "990e17d82008ddee04de1fd5b6806413aa6d16ce40e5a5fc07e613b88abbf0b4",
+      "recipe": "generation-01.json",
+      "recipeSHA256": "564a8428412d82ca451c2f51a312274ce1a7c7d6e12ecddb678f5dc8157fd0f9",
+      "guide": "guide.json",
+      "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+      "guideSVG": "guide.svg",
+      "guideRaster": "guide-4x.png",
+      "guideRasterSHA256": "fc3288fdd80be070eff90f7f84f0c6ef207259e2a11ebb7970f1a8370a5b2bc8",
+      "references": [
+        {
+          "image": "references/generation-guide.png",
+          "sha256": "fc3288fdd80be070eff90f7f84f0c6ef207259e2a11ebb7970f1a8370a5b2bc8",
+          "role": "square material extent reference"
+        }
+      ],
+      "role": "appearance-material",
+      "authoredRecipe": "generation-01-authored.json",
+      "authoredRecipeSHA256": "b4ddff782f6a55c9ea51141bee8820bf908d08f054a659c000c31857b2a67db3"
+    }
+  ],
+  "sprites": [
+    {
+      "id": "full-cell-raised-object",
+      "image": "sprites/plinth.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "baseSize": [
+        128,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "supportCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 64,
+      "artRect": [
+        32,
+        120,
+        128,
+        192
+      ],
+      "registration": {
+        "method": "authored-svg-faces",
+        "guide": "template/geometry.json",
+        "guideSHA256": "52384b1c134300a2c067e5115366b1c8d86c0eeb4f25469706af9cdbfe8f43f3",
+        "groundRect": [
+          32,
+          184,
+          160,
+          312
+        ],
+        "nearEdgeAnchor": [
+          96,
+          312
+        ],
+        "centerConversionOffset": [
+          0,
+          -64
+        ]
+      },
+      "topRect": [
+        32,
+        120,
+        160,
+        248
+      ],
+      "frontRect": [
+        32,
+        248,
+        160,
+        312
+      ],
+      "processing": "processing.json"
+    }
+  ],
+  "previews": [
+    "previews/cutout-light-2x.png",
+    "previews/cutout-dark-2x.png",
+    "previews/placement-3x3.png",
+    "previews/placement-3x3-2x.png",
+    "previews/placement-5x5.png",
+    "previews/solid-coverage.png"
+  ],
+  "geometryDeclaration": "Full square base and face elevations are authored SVG geometry, not claimed AI geometric accuracy.",
+  "limitations": [
+    "Generated material edges were preserved. Alpha coverage and parallel-face checks do not prove seamless color/pattern joins.",
+    "Material high-pass compositing changes appearance while retaining exact authored faces."
+  ]
+}

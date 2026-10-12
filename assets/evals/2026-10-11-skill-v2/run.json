@@ -1,0 +1,164 @@
+{
+  "version": 2,
+  "mode": "fresh-behavioral-run",
+  "suite": "suite.json",
+  "suiteSHA256": "be5076593895340aa0c99a206c8e5fd766673a43e405beef801c4c67279fc927",
+  "skillSnapshot": "skill-snapshot/SKILL.md",
+  "skillFiles": {
+    "SKILL.md": "43df5db27aea332fa5ecd0114dcbe42d61edf0d16d87abea1a5b288e77dddee7",
+    "agents/openai.yaml": "3f9f1efb4a06d07b40042a8400419e6f6dc4325e51df991ca2a0f6405dc09bae",
+    "assets/perspective-reference.jpg": "9784bc8c25ce01fb25044f9d866e8487f4e520be4c89588f36046df0ed19e29c",
+    "assets/perspective-reference.json": "5a742adfc22baa172c515715b305f0cc53fcac9f628a2fac5eea4023005cd3ec",
+    "evals/cases.json": "be5076593895340aa0c99a206c8e5fd766673a43e405beef801c4c67279fc927",
+    "evals/protocol.md": "c4f9c7b260a15cb2262efc54529233bac128bfc1c8c67123c489843fa64d59c5",
+    "references/floor-and-objects.md": "bf947dbaf77cf772fc11c4f7bafdd7292b0a93269d46308849e29173e1c45d33",
+    "references/geometry.md": "cbb9b5ee71db3fc35fa89355627744e7ffee6eb0bc9c9b52cbe555d6c55a85e9",
+    "references/projection.md": "51bffc3e8660c26b8a03ab461b1516cb5c3e502dfc61d2ce4125500bd8b3f085",
+    "references/prompts.md": "d51ef17eb69a255af18415ea0b3bfaf6032e43bceac65a3337a5358b6c529a9b",
+    "references/svg-workflows.md": "fbe6379d9c82d11e988a725811cc67d49c57c751ab2177c480a81310d8e7fc71",
+    "scripts/assemble_result.py": "a32dfa1cb47afdc618554072fe3d16bcb7a9a2c37c482069260aa65a87e9d46a",
+    "scripts/evaluate.py": "f078314590174a950d2b1d731c061932ac6c2c30c5d4adf4d22ae8c8188f55bc",
+    "scripts/guide_tools.py": "192a57d770a89474e6815df13113297ce622ba58cc027ef529e62519806bcd03",
+    "scripts/prepare_evals.py": "66fec3dee10f2fb45c7e7d5864ec5446a0c9c6f616bc8a20642eb5604019c9c3",
+    "scripts/requirements.txt": "f7d2bebf5af96c2b4ec2c9c9e3fff2aafe1dcd6db2b6e2ea690f91f8e8d65e1e",
+    "scripts/svg_tools.py": "b9ab121bd088cbf616d1bc9de5708893780e6e5fee07104455b27e5b2b356054",
+    "scripts/tile_tools.py": "52700154f78dccf313b292913cf0f979eda32816ec5febefea690561c8f9c30e"
+  },
+  "trials": [
+    {
+      "caseId": "seamless-square-floor",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seamless-square-floor",
+      "requestFile": "seamless-square-floor/request.txt",
+      "expectedStatus": "failed",
+      "report": "seamless-square-floor.json",
+      "generationCalls": 1,
+      "reason": "Visible texture seams and opposite-edge color jumps."
+    },
+    {
+      "caseId": "lava-tile",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/lava-tile",
+      "requestFile": "lava-tile/request.txt",
+      "expectedStatus": "failed",
+      "report": "lava-tile.json",
+      "generationCalls": 1,
+      "reason": "Correct authored 32px wall; molten-channel joins are discontinuous."
+    },
+    {
+      "caseId": "full-cell-raised-object",
+      "status": "passed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object",
+      "requestFile": "full-cell-raised-object/request.txt",
+      "expectedStatus": "passed",
+      "report": "full-cell-raised-object.json",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "partial-cell-tall-object",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/partial-cell-tall-object",
+      "requestFile": "partial-cell-tall-object/request.txt",
+      "expectedStatus": "failed",
+      "report": "partial-cell-tall-object.json",
+      "generationCalls": 1,
+      "reason": "Height/base scale drift despite successful floor extraction."
+    },
+    {
+      "caseId": "floating-object",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object",
+      "requestFile": "floating-object/request.txt",
+      "expectedStatus": "failed",
+      "report": "floating-object.json",
+      "generationCalls": 1,
+      "reason": "Clearance is usable; ornamented object height is 85px rather than 64px."
+    },
+    {
+      "caseId": "character-directions",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions",
+      "requestFile": "character-directions/request.txt",
+      "expectedStatus": "failed",
+      "report": "character-directions.json",
+      "generationCalls": 1,
+      "reason": "Consistent design, but nominal height is about 181px rather than 160px; physical contact tolerance unverified."
+    },
+    {
+      "caseId": "large-object-2x2",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2",
+      "requestFile": "large-object-2x2/request.txt",
+      "expectedStatus": "failed",
+      "report": "large-object-2x2.json",
+      "generationCalls": 1,
+      "reason": "Foreshortened and shifted foundation does not fill the registered 2x2 footprint."
+    },
+    {
+      "caseId": "large-object-3x2",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2",
+      "requestFile": "large-object-3x2/request.txt",
+      "expectedStatus": "failed",
+      "report": "large-object-3x2.json",
+      "generationCalls": 1,
+      "reason": "Width/depth/base placement drift from the registered 3x2 footprint."
+    },
+    {
+      "caseId": "disjoint-support-arch",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/disjoint-support-arch",
+      "requestFile": "disjoint-support-arch/request.txt",
+      "expectedStatus": "failed",
+      "report": "disjoint-support-arch.json",
+      "generationCalls": 1,
+      "reason": "Overhead span crosses its authored panel; safe registered depth-piece extraction refused."
+    },
+    {
+      "caseId": "animated-waves",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-waves",
+      "requestFile": "animated-waves/request.txt",
+      "expectedStatus": "failed",
+      "report": "animated-waves.json",
+      "generationCalls": 1,
+      "reason": "Material opacity/layout drift; no raised runtime frames delivered."
+    },
+    {
+      "caseId": "animated-lava",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava",
+      "requestFile": "animated-lava/request.txt",
+      "expectedStatus": "failed",
+      "report": "animated-lava.json",
+      "generationCalls": 1,
+      "reason": "Material opacity/layout drift; no raised runtime frames delivered."
+    },
+    {
+      "caseId": "seated-character-separated",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated",
+      "requestFile": "seated-character-separated/request.txt",
+      "expectedStatus": "failed",
+      "report": "seated-character-separated.json",
+      "generationCalls": 2,
+      "reason": "Stool floor is not square enough; character lacks calibration floor, preventing verified recomposition."
+    },
+    {
+      "caseId": "dancing-player",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player",
+      "requestFile": "dancing-player/request.txt",
+      "expectedStatus": "failed",
+      "report": "dancing-player.json",
+      "generationCalls": 1,
+      "reason": "Transparent separator recovery preserved the panels, but every floor failed aspect validation."
+    }
+  ],
+  "id": "2026-10-11-skill-v2",
+  "createdAt": "2026-10-12T02:44:04.748245+00:00",
+  "execution": "Fresh independent executor run; one image-generation attempt per case, two planned calls for separated stool/character; independent root review.",
+  "freshGenerationCalls": 14,
+  "completedCases": 13,
+  "retries": 0
+}

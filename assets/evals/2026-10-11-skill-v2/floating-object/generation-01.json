@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "tool": "image_gen.imagegen",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept\nAsset type: one floating transparent game-object sprite over a removable calibration square.\nPrimary request: Generate a 64px-tall treasure orb floating 48px above the center of a 128x128 calibration tile. Keep the projected ground anchor beneath the orb. Invent an illustrated treasure-orb design with a luminous blue crystal sphere and restrained gold ornament, readable as a game pickup at 64px.\nInput images: Image 1 is a sparse sphere-height/ground registration reference, not an edit target or style reference. Match its 192x320 logical portrait frame, aspect 3:5. Output may be uniformly higher resolution.\nProjection: square-grid top-down oblique game projection, front-facing three-quarter view. The ground cell stays screen-aligned square; height projects upward with parallel edges and fixed feature scale. No diamond-grid floor, tilted square, vanishing point, or camera rotation.\nRegistration: preserve the plain floor rectangle (32,184) through (160,312), exactly 128x128 relative to a 192x320 frame. The fixed projected ground-center/root is (96,248). The orb is centered at x=96, has 64px vertical art height, and floats with its lowest visible point at y=200, giving 48px clearance above y=248; top at y=136, center at (96,168). Its ground projection remains at (96,248); do not recenter the sprite by its silhouette. It has no ground-contact base.\nCalibration: keep the floor uniformly reserved RGB 123,209,75 with no texture, rim, shading, or cast shadow. Keep that hue out of any orb pixels overlapping the floor. The rest of the panel must be genuinely transparent with true alpha.\nConstraints: keep the complete orb inside its panel with the same relative size and placement as the sparse circle. Do not render the circle outline, dotted registration line, ground root mark, labels, scenery, pedestal, chains, supports, other objects, particles, text, watermark or painted checkerboard. Do not stretch or shrink the calibration floor. Deliver one new image. The floor will be measured for uniform normalization and then removed using its explicitly recorded calibration color.",
+  "transparent_background": true,
+  "source": "source-01.png",
+  "sourceSHA256": "827f650887dfd6a721b140792f128ec24fc0cd828af0190b33a45c663482eefd",
+  "references": [
+    "references/generation-guide.png"
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "d0a42bbd5b3a8e7b1dd0cebff8931dfa4315200e7e8e2f359e97b97979471010",
+  "guideSVG": "guide.svg",
+  "guideRaster": "guide-4x.png",
+  "referenceSHA256": {
+    "references/generation-guide.png": "7408fd0bef6ffcb287ae83ac7f63edef05ac3f008b704df35e6cacf4facd2f2d"
+  },
+  "referenceRoles": {
+    "references/generation-guide.png": "sparse orb/clearance guide on explicitly reserved calibration floor"
+  },
+  "transparentBackground": true,
+  "recipeConversion": {
+    "from": "generation-01-authored.json",
+    "purpose": "Lossless portable delivery serialization of same actual image-generation inputs; no new generation or processing.",
+    "unchanged": [
+      "prompt",
+      "tool",
+      "source bytes and hash",
+      "reference bytes and hashes",
+      "transparency"
+    ]
+  }
+}

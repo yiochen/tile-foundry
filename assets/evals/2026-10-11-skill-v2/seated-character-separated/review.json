@@ -1,0 +1,46 @@
+{
+  "reviewer": "Root assistant, independent of fresh executor agents",
+  "independent": true,
+  "spriteSHA256": {},
+  "resultSHA256": "1581e51c255e791391d394bb29544ff322b608f658c5d65c54881949c352e79a",
+  "guideSHA256": "ade15673333df9f95ae3e163e9be96f7001e44288bd9fa342317e94f4c603e50",
+  "checks": {
+    "projection": {
+      "pass": false,
+      "note": "Stool floor is not square enough; character lacks calibration floor, preventing verified recomposition. No complete registered runtime result exists to establish this criterion."
+    },
+    "complete-art": {
+      "pass": false,
+      "note": "Stool floor is not square enough; character lacks calibration floor, preventing verified recomposition. No complete registered runtime result exists to establish this criterion."
+    },
+    "anchor-placement": {
+      "pass": false,
+      "note": "Stool floor is not square enough; character lacks calibration floor, preventing verified recomposition. No complete registered runtime result exists to establish this criterion."
+    },
+    "layer-separation": {
+      "pass": true,
+      "note": "Inspected original stool and character PNGs separately: character image omits stool, and stool image contains no character. Calibrated cutout delivery still failed."
+    },
+    "seated-contact": {
+      "pass": false,
+      "note": "The seated character pose is recognizable, but it lacks the requested calibration floor and normalized support alignment; recomposition at verified common roots cannot be demonstrated."
+    },
+    "complete-layers": {
+      "pass": true,
+      "note": "Both original objects are complete independent generations; no extraction from a flattened overlap was used."
+    },
+    "support-height": {
+      "pass": false,
+      "note": "Stool floor is not square enough; character lacks calibration floor, preventing verified recomposition. No complete registered runtime result exists to establish this criterion."
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Both original generations and reference hashes retained. Stool floor aspect 1.0639 failed validation; character omitted its calibration floor, so no anchors were invented."
+    }
+  },
+  "limitations": [
+    "One fresh attempt per case does not estimate reliability.",
+    "Landmark/perspective judgments are approximate; no AI geometric exactness is claimed."
+  ],
+  "inspection": "Original generated art, actual light/dark cutouts, registration placement and repeated terrain images inspected."
+}

@@ -1,0 +1,171 @@
+{
+  "version": 2,
+  "caseId": "dancing-player",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a 12-frame player dancing spritesheet on a 128x128 calibration tile at exactly 12 fps. Keep one player design with nominal 160px standing height, the same anatomy scale and floor-center foot/root anchor in every frame. Remove the calibration floor, retain complete limbs, and deliver a playable loop. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "5ad50f875b843a7b5c66994024710a9166585e9dfdd257fe434627228d10716a"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "63cd2892517ba902632db5d0fc2e94894acbe582ab99b1cd857eaba841556074"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "animation",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": false,
+      "detail": 0
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "declared-geometry",
+      "pass": false,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": false,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "12-fps-schedule",
+      "pass": true,
+      "detail": "12 fps / 83.333333 ms"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Reviewer identity, independence declaration and hashes of all art, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": false,
+      "detail": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "complete-art",
+      "pass": false,
+      "detail": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "same-player",
+      "pass": true,
+      "detail": "The twelve source poses keep recognizable hair, red jacket, trousers and shoes."
+    },
+    {
+      "check": "dancing-poses",
+      "pass": true,
+      "detail": "Inspected all twelve original poses: distinct arm/stance variations form a dance sequence without obvious missing limbs."
+    },
+    {
+      "check": "design-height",
+      "pass": false,
+      "detail": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "contact-stability",
+      "pass": false,
+      "detail": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "cutout-quality",
+      "pass": false,
+      "detail": "Twelve complete raw panels remain, but green floors could not be calibrated and removed under the frozen aspect tolerance; no usable transparent runtime sprites were delivered."
+    },
+    {
+      "check": "loop",
+      "pass": false,
+      "detail": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "Strict failure and documented transparent-separator recovery retained; all pixels assigned once. Floor aspect ratios 1.062\u20131.133 then failed normalization, so no warping or false runtime sprites were produced."
+    },
+    {
+      "check": "neutralHeightPx",
+      "pass": false,
+      "detail": []
+    },
+    {
+      "check": "rootDriftPx",
+      "pass": false,
+      "detail": []
+    }
+  ],
+  "reviewArtifacts": {},
+  "scope": "Artifact checks and independent review; no fresh generation is performed by the grader."
+}

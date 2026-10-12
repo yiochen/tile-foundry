@@ -1,0 +1,157 @@
+{
+  "version": 2,
+  "caseId": "disjoint-support-arch",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/disjoint-support-arch"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a stone arch spanning three cells across one row. Its two pillars occupy only the left and right 128x128 cells; the center cell is walkable. The arch is 160px tall. Deliver transparent art with explicit disjoint support occupancy and a separate overhead span. Deliver each sprite in a 512x448px frame with local projected ground anchor (256,312). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/disjoint-support-arch."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "99315abdc6d9a83d92defe93c6c081631acfdd0b6d533a9fa4958b25b75f24be"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide-2x.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "80120dcccf1a79f891bb2bd23cb62b9230074e674d285821e7bf872bd116ad9f"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "object",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": false,
+      "detail": 0
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "declared-geometry",
+      "pass": false,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "ground-support-cells",
+      "pass": true,
+      "detail": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "check": "authored-depth-pieces",
+      "pass": false,
+      "detail": "Registered independent depth pieces; passage correctness needs visual review"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Reviewer identity, independence declaration and hashes of all art, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": false,
+      "detail": "Overhead span crosses its authored panel; safe registered depth-piece extraction refused. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "complete-art",
+      "pass": false,
+      "detail": "Overhead span crosses its authored panel; safe registered depth-piece extraction refused. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "Overhead span crosses its authored panel; safe registered depth-piece extraction refused. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "open-passage",
+      "pass": false,
+      "detail": "Separate raw pillars/span suggest an open passage, but no registered assembly exists to validate disjoint occupancy."
+    },
+    {
+      "check": "arch-depth",
+      "pass": false,
+      "detail": "26,030 alpha>=32 pixels lie outside the declared panel cells. No usable registered depth pieces or foreground/background passage preview was delivered."
+    },
+    {
+      "check": "support-placement",
+      "pass": false,
+      "detail": "Overhead span crosses its authored panel; safe registered depth-piece extraction refused. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "Original source and panel diagnostics retained. The overhead end exceeds its panel; no clipping/shrinking or false depth-piece output was performed."
+    }
+  ],
+  "reviewArtifacts": {
+    "depthPieceSHA256": {}
+  },
+  "scope": "Artifact checks and independent review; no fresh generation is performed by the grader."
+}

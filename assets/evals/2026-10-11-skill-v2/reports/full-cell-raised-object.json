@@ -1,0 +1,184 @@
+{
+  "version": 2,
+  "caseId": "full-cell-raised-object",
+  "status": "passed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a square stone plinth with a full 128x128 base and 64px visible height. Preserve the square-grid top-down oblique projection and fixed ground anchor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "appearance-material"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "990e17d82008ddee04de1fd5b6806413aa6d16ce40e5a5fc07e613b88abbf0b4"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/generation-guide.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "source-0-opaque-material",
+      "pass": true,
+      "detail": "Complete opaque square appearance material; registration comes from authored geometry"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "object",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "full-cell-raised-object"
+      ]
+    },
+    {
+      "check": "full-cell-raised-object-frame-margin",
+      "pass": true,
+      "detail": "No retained art at frame edges"
+    },
+    {
+      "check": "full-cell-raised-object-solid-coverage",
+      "pass": true,
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            120,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      }
+    },
+    {
+      "check": "full-cell-raised-object-visible-elevation",
+      "pass": true,
+      "detail": 64
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Reviewer identity, independence declaration and hashes of all art, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "anchor-placement",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "full-base",
+      "pass": true,
+      "detail": "Opaque full cell coverage and parallel edges passed; repeated placement retains 128px pitch and height overlap."
+    },
+    {
+      "check": "visible-height",
+      "pass": true,
+      "detail": "The inspected cutout has a complete 128x128 top and 64px darker front wall; SVG face masks own that geometry, with fresh generated stone detail."
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  ],
+  "reviewArtifacts": {},
+  "scope": "Artifact checks and independent review; no fresh generation is performed by the grader."
+}

@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "request": "Generate a seamless 128x128 mossy stone floor tile. Its opposite edges must connect in a repeated square grid, without visible seams or sudden color/lighting gradient jumps. Keep it flat, with no raised front wall. Deliver an opaque 128x128px tile with local ground-center anchor (64,64). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seamless-square-floor.\n",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seamless-square-floor",
+  "status": "processed",
+  "attempts": 1,
+  "sources": [
+    {
+      "image": "source-01.png",
+      "sha256": "c6ef4ccd24307a525b3c0c0f94922097f4937ad5964784c1d158c4adfcb6ca7f",
+      "recipe": "generation-01.json",
+      "recipeSHA256": "835caafd557a878a2d0dc2fbe54b3ad222ca1a45807a40216c8821097273dc50",
+      "guide": "guide.json",
+      "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+      "guideSVG": "guide.svg",
+      "guideRaster": "guide-4x.png",
+      "guideRasterSHA256": "fc3288fdd80be070eff90f7f84f0c6ef207259e2a11ebb7970f1a8370a5b2bc8",
+      "references": [
+        {
+          "image": "references/generation-guide.png",
+          "sha256": "fc3288fdd80be070eff90f7f84f0c6ef207259e2a11ebb7970f1a8370a5b2bc8",
+          "role": "sparse square extent reference"
+        }
+      ],
+      "role": "whole-asset",
+      "authoredRecipe": "generation-01-authored.json",
+      "authoredRecipeSHA256": "f9ab2f27cf88f99567799cb1b3393bccecd576ef4a0e5eda99c4d7366bbcc4fa"
+    }
+  ],
+  "result": "result.json",
+  "resultSHA256": "b792b4eab9012fcd12a72f95e153d082ea889cb69a0ad214be5d134e3e549b99",
+  "previews": [
+    "previews/repeat-3x3.png",
+    "previews/repeat-5x5.png",
+    "previews/repeat-3x3-2x.png",
+    "previews/repeat-5x5-2x.png"
+  ],
+  "processing": {
+    "tool": "bundled tile_tools.py floor-material; assemble_result.py",
+    "sourceUnchanged": true,
+    "geometricExactness": "128x128 output extent is deterministic; generated texture is not geometrically exact"
+  },
+  "caseId": "seamless-square-floor",
+  "userPrompt": "Generate a seamless 128x128 mossy stone floor tile. Its opposite edges must connect in a repeated square grid, without visible seams or sudden color/lighting gradient jumps. Keep it flat, with no raised front wall. Deliver an opaque 128x128px tile with local ground-center anchor (64,64). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seamless-square-floor.",
+  "guide": "guide.json",
+  "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+  "recipeConversion": "generation-01-authored.json preserved; generation-01.json losslessly serialized to portable public contract"
+}

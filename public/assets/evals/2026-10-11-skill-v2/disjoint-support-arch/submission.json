@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "caseId": "disjoint-support-arch",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/disjoint-support-arch",
+  "userPrompt": "Generate a stone arch spanning three cells across one row. Its two pillars occupy only the left and right 128x128 cells; the center cell is walkable. The arch is 160px tall. Deliver transparent art with explicit disjoint support occupancy and a separate overhead span. Deliver each sprite in a 512x448px frame with local projected ground anchor (256,312). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/disjoint-support-arch.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json",
+      "role": "whole-asset"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "80120dcccf1a79f891bb2bd23cb62b9230074e674d285821e7bf872bd116ad9f",
+  "result": "result.json",
+  "registration": "registration.json",
+  "processingDiagnostic": "processing-diagnostic.json",
+  "previews": [
+    "previews/source-registration-light.png",
+    "previews/source-registration-dark.png"
+  ],
+  "guideFiles": {
+    "guide.svg": "390d1f0f6e42b42e573eeb308496feb60307ae4cc63041722f8ebf5451314b4a",
+    "guide.png": "26d2462af4e8a1d05a2ee82bd9d18a9e752d4afa6111e71a6b7d9bec7819dc4b",
+    "guide.json": "80120dcccf1a79f891bb2bd23cb62b9230074e674d285821e7bf872bd116ad9f",
+    "references/guide-2x.png": "67fdb72c17bbed8385b571538a9f40454b14c3f4b6a4ed56079036c723590c2c"
+  },
+  "registrationSHA256": "72a7c01a809ec8067a1b6dc24904101291a0630be754a1e85d606449f8434619",
+  "resultSHA256": "41735a99b3d4e57b3a91055a22aa717e199a4e77819fd1dedf3a09e7e0a9ba44"
+}

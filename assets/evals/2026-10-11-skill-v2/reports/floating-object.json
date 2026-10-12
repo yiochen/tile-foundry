@@ -1,0 +1,148 @@
+{
+  "version": 2,
+  "caseId": "floating-object",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a 64px-tall treasure orb floating 48px above the center of a 128x128 calibration tile. Keep the projected ground anchor beneath the orb and remove the calibration floor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "827f650887dfd6a721b140792f128ec24fc0cd828af0190b33a45c663482eefd"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/generation-guide.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "d0a42bbd5b3a8e7b1dd0cebff8931dfa4315200e7e8e2f359e97b97979471010"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "object",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "treasure-orb"
+      ]
+    },
+    {
+      "check": "treasure-orb-frame-margin",
+      "pass": true,
+      "detail": "No retained art at frame edges"
+    },
+    {
+      "check": "floating-clearance",
+      "pass": true,
+      "detail": 51
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "ground-support-cells",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Reviewer identity, independence declaration and hashes of all art, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "anchor-placement",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "floating-placement",
+      "pass": false,
+      "detail": "The orb is genuinely above its preserved root; observed clearance is 51px (within the 3px tolerance), but its retained ornamented silhouette is 85px tall rather than the requested 64px."
+    },
+    {
+      "check": "cutout",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  ],
+  "reviewArtifacts": {},
+  "scope": "Artifact checks and independent review; no fresh generation is performed by the grader."
+}

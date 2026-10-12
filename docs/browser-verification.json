@@ -39,7 +39,7 @@
       "ok": true
     },
     {
-      "check": "playground lava and dance: six-frame playback, manual stepping, fixed anchor, background switch, trial selection, download, 390px/320px layouts",
+      "check": "13 fresh cases: exact request and generation prompts, actual sources and grade reports, registered sprites, failures, direction stepping, deep link, current animations, desktop/mobile",
       "ok": true
     },
     {
@@ -48,10 +48,6 @@
     },
     {
       "check": "320px narrow viewport",
-      "ok": true
-    },
-    {
-      "check": "fresh skill eval floor repeat and six anchored dance frames, light/dark playback, desktop/mobile",
       "ok": true
     }
   ],

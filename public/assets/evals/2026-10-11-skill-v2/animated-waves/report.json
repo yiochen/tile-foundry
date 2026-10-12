@@ -1,0 +1,156 @@
+{
+  "version": 2,
+  "caseId": "animated-waves",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-waves"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a 12-frame looping ocean wave tile animation at exactly 12 fps. Each frame has a full 128x128 base and 32px visible front-wall height, in the same top-down oblique projection. Preserve the anchor, base footprint, elevation, and connection to adjacent copies through the animation. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-waves."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "appearance-material"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "a10f03836b1db7543e4f031bad82bdc0d9f74ff7c763b3e95b9c33b4bf6e6a87"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": false,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "source-0-opaque-material",
+      "pass": false,
+      "detail": "Complete opaque square appearance material; registration comes from authored geometry"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "543d17d20da7cf81af7055c9a0944018dccf8db6596d579dc81e2d0997abf777"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "animation",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": false,
+      "detail": 0
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "declared-geometry",
+      "pass": false,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": false,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "12-fps-schedule",
+      "pass": true,
+      "detail": "12 fps / 83.333333 ms"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Reviewer identity, independence declaration and hashes of all art, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": false,
+      "detail": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "complete-art",
+      "pass": false,
+      "detail": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "animated-height",
+      "pass": false,
+      "detail": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "spatial-seams",
+      "pass": false,
+      "detail": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "temporal-loop",
+      "pass": false,
+      "detail": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    {
+      "check": "frame-consistency",
+      "pass": false,
+      "detail": "Twelve source material phases are visible, but opacity/layout drift prevents complete registered runtime frames. No 12fps playable raised tile result was delivered."
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "Original 12-panel generation and failed material samples retained; the compositor refused alpha below 255 instead of coercing opacity or inventing runtime frames."
+    }
+  ],
+  "reviewArtifacts": {},
+  "scope": "Artifact checks and independent review; no fresh generation is performed by the grader."
+}

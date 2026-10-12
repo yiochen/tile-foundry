@@ -5,7 +5,7 @@ square-grid game art in top-down oblique projection. Full sprites have different
 overlap rows behind them; their logical cells stay the same size.
 
 [Open the playground](https://tile-foundry-yiochen.netlify.app/) ·
-[Play the dance animation](https://tile-foundry-yiochen.netlify.app/?view=animations)
+[View all eval results](https://tile-foundry-yiochen.netlify.app/?view=evals)
 
 ![Village lane preview](docs/preview-scene.png)
 
@@ -91,7 +91,8 @@ subcommand for input options. Output paths are explicit; originals are not repla
 - Separate logical footprint, visible-art bounds, and drawing anchor in the inspector.
 - Workflows: five trials side by side, block versus sphere style references, measured joins, SVG outline, live material/height controls, and a mixed-height scene.
 - Characters: box, stick, SVG, raster, and jumping guides; floor-derived normalization, five green-key cutouts, two detached extractions, and exact-subtraction comparisons.
-- Animations: playable six-frame dance trials, frame stepping, playback speed, light/dark backgrounds, fixed ground anchors, spritesheet downloads, and the lava tile repeated in a 3 × 3 grid. Open `?view=animations` directly.
+- Evals: all 13 current cases with exact requests, expanded model prompts, supplied references, originals, processed sprites, recorded grades and review/processing diagnostics. Latest outcomes include failures. Open `?view=evals`, or link directly with `&case=CASE_ID`.
+- Animations: the three current motion cases, including failed generation/processing results and 12 fps previews where runtime frames exist. Historical lava/dance artifacts are retained in the repository archive and removed from the playground.
 
 ## Netlify publishing
 
@@ -187,7 +188,7 @@ scene, output contract and eval tooling travel together. It targets square-grid
 anchors and height. All current animation output/preview schedules use **12 fps**.
 
 The new [13-case suite](skills/build-overlap-tiles/evals/cases.json) is specified
-and **not run**. It includes raised lava with a 32px front wall, seam-free flat
+and has a fresh 14-call run covering all 13 cases. It includes raised lava with a 32px front wall, seam-free flat
 floors, full/partial bases, floating objects, eight directions, 2×2/3×2 footprints,
 a disjoint-support arch, moving waves/lava, separated stool/character layers,
 and a 12-frame dance. Each prepared request names an explicit output directory.
@@ -197,16 +198,21 @@ See [portable eval setup](docs/portable-skill-evals.md) and
 The earlier two-case generation run remains an archive with its original
 flat-lava and 8 fps expectations, sources and reviews. The first dance failed
 pose diversity; the retry passed after transparent-separator recovery.
-Published previews reuse those frames at 12 fps without rewriting their source
-records or counting them as results for the new suite.
+Those historical artifacts are removed from the playground. Current results
+come from fresh generation against the frozen v2 skill and rubric; one case
+passed and twelve failed. See [fresh run findings](docs/skill-eval-v2-findings.md).
 
 ```sh
-# Replay the historical run against its frozen original cases, including its failure
+# Replay all 13 current cases against their frozen rubric and recorded independent review
 npm run eval:skill
 ```
 
-See [historical findings](docs/skill-eval-findings.md). Replay performs no image
-generation; new behavioral scores require fresh execution of the frozen new suite.
+Replay performs no image generation and verifies the recorded outcomes, including
+failures. Use `python tools/run_skill_evals.py --run assets/evals/2026-10-11-skill-v1`
+for the archived pilot. To publish a new run, save it under `assets/evals/<sortable-run-id>/`,
+retain its frozen suite/skill, submissions and reports, then run `npm run assets`.
+The gallery selects the newest actual outcome for each unchanged case rubric;
+a later prepared-but-unrun case does not hide a recorded failure or success.
 
 ## Verify
 

@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "kind": "layered-object",
+  "status": "processing-failed",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center",
+  "intendedFrame": [
+    192,
+    320
+  ],
+  "intendedAnchor": [
+    96,
+    248
+  ],
+  "intendedFootprint": [
+    128,
+    128
+  ],
+  "intendedSupportElevationPx": 48,
+  "intendedNominalStandingHeight": 160,
+  "supportElevationBakedIntoArt": true,
+  "intendedAttachmentPoint": [
+    96,
+    200
+  ],
+  "sprites": [],
+  "sourceRecords": [
+    "generation-stool.json",
+    "generation-character.json"
+  ],
+  "guide": "guide.json",
+  "guides": [
+    "guide-stool.json",
+    "guide-character.json"
+  ],
+  "processing": "processing/diagnostic.json",
+  "previews": [
+    "previews/source-stool-light.png",
+    "previews/source-stool-dark.png",
+    "previews/source-character-light.png",
+    "previews/source-character-dark.png"
+  ],
+  "outcome": "Two original independent layers retained. Stool registration rejected its non-square calibration floor; clean character-only generation omitted calibration floor, leaving measured root registration unsupported. No calibrated 192x320 sprites or successful recomposition claimed.",
+  "geometryDeclaration": "Authored intended constraints are not delivered sprite geometry."
+}

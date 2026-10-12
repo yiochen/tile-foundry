@@ -1,0 +1,83 @@
+{
+  "kind": "object",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center",
+  "frame": [
+    512,
+    576
+  ],
+  "anchor": [
+    256,
+    376
+  ],
+  "footprint": [
+    384,
+    256
+  ],
+  "elevationPx": 128,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "supportCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "registrationAuthoredBeforeGeneration": true,
+  "registrationMethod": "declared-source-canvas",
+  "sprites": [
+    {
+      "id": "greenhouse"
+    }
+  ]
+}

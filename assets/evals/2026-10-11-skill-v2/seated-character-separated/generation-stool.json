@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "tool": "built-in image_gen.imagegen",
+  "prompt": "Use case: stylized-concept\nAsset type: complete isolated wooden stool game sprite on a removable calibration floor.\nExact user request: First generate an isolated wooden stool centered on a 128x128 tile with a 48px-high seat. Then use the stool as a support reference to generate a 160px nominal-height player sitting on it. Deliver the stool and the sitting character as separate transparent layers. The character-only sprite must contain no stool or floor and retain its projected ground anchor plus a 48px support elevation so it aligns when recomposed. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated.\nThis call produces only the stool layer, first. Input image 1 is an authored sparse geometry/layout raster, not a style reference. Generate one complete wooden stool in polished illustrated game art, centered on the plain calibration tile. Keep the 128x128 screen-aligned calibration square at the guide position and its uniform reserved RGB 123,209,75. It is a disposable calibration substrate, not green ground scenery; do not add rim, shading, gradient or cast shadow to it. Keep truly transparent alpha outside stool and square. Reserve the green calibration hue away from all stool parts.\nSquare-grid top-down oblique projection, front-facing three-quarter game view. The square is not a diamond. Show the stool top and front, with parallel edges and equal near/far feature scale, no converging perspective. Stool seat height is 48 logical pixels; height projects vertically upward. Common projected ground center is (96,248) in the 192x320 logical frame. Seat center attachment is (96,200), 48px above that root. The guide shows a 64x48 seat footprint with a small front thickness and legs; use that support geometry. Preserve full legs/seat and all hidden-at-contact parts, without a character or other object. Invent wood appearance, grain and tasteful joinery while retaining the geometry. Omit guide strokes, labels, scenery, text, watermarks, painted checkerboard, external shadow/glow. Keep enough visible calibration floor for uniform measured registration; do not fit or resize the stool by its silhouette. The finished stool is processed independently and saved as a complete transparent layer.",
+  "transparentBackground": true,
+  "references": [
+    "references/guide-stool.png"
+  ],
+  "attempt": 1,
+  "plannedSource": "source-stool.png",
+  "retryAllowed": false,
+  "source": "source-stool.png",
+  "sourceSHA256": "7c3238804abf0405bcfbef87d72d4926de0e49dd906d56d0b20b9b52ed352e7c",
+  "originalToolOutputPath": "/Users/yiouchen/.codex/generated_images/01a12dff-9cee-7ee0-b69b-c5b5b47f9745/exec-9dedb23a-659a-47f5-bf56-2692ab4846da.png",
+  "referenceSHA256": {
+    "references/guide-stool.png": "402334f1ae0ab454d219fec885a7fd446cda7fd2c17343b7b0d246c47068f3bf"
+  },
+  "referenceRoles": {
+    "references/guide-stool.png": "authored stool geometry and floor registration"
+  },
+  "transparency": true,
+  "authoredRecord": "generation-stool-authored.json"
+}

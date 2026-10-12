@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "primitive": "parallel-raised-terrain",
+  "size": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "cellSize": [
+    128,
+    128
+  ],
+  "height": 32,
+  "bodyRect": [
+    32,
+    152,
+    160,
+    312
+  ],
+  "topRect": [
+    32,
+    152,
+    160,
+    280
+  ],
+  "frontRect": [
+    32,
+    280,
+    160,
+    312
+  ],
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "noStuds": true,
+  "palette": [
+    "#368fca",
+    "#14598e",
+    "#8cd5e9"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "kind": "arch",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center",
+  "frame": [
+    512,
+    448
+  ],
+  "anchor": [
+    256,
+    312
+  ],
+  "footprint": [
+    384,
+    128
+  ],
+  "elevationPx": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "supportCells": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "overheadCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "centerCellWalkable": true,
+  "registrationAuthoredBeforeGeneration": true,
+  "depthPieces": [
+    {
+      "id": "left-pillar",
+      "role": "left-pillar",
+      "drawOrder": 1,
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "image": "sprites/left-pillar.png"
+    },
+    {
+      "id": "right-pillar",
+      "role": "right-pillar",
+      "drawOrder": 2,
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "image": "sprites/right-pillar.png"
+    },
+    {
+      "id": "overhead-span",
+      "role": "overhead-span",
+      "drawOrder": 3,
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "image": "sprites/overhead-span.png"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "kind": "object-sheet",
+  "size": [
+    192,
+    320
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "cellSize": 128,
+  "anchor": [
+    96,
+    248
+  ],
+  "keyRGB": [
+    123,
+    209,
+    75
+  ],
+  "columns": 1,
+  "rows": 1,
+  "gutter": 32,
+  "cells": [
+    {
+      "index": 0,
+      "rect": [
+        0,
+        0,
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        32,
+        184,
+        160,
+        312
+      ]
+    }
+  ],
+  "order": "row-major",
+  "subjectRegistration": {
+    "baseSize": [
+      64,
+      64
+    ],
+    "height": 64,
+    "groundClearancePx": 48
+  }
+}

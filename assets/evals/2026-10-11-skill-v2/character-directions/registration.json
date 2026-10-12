@@ -1,0 +1,63 @@
+{
+  "kind": "directions",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center",
+  "elevationPx": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "frameOrder": [
+    "north",
+    "northeast",
+    "east",
+    "southeast",
+    "south",
+    "southwest",
+    "west",
+    "northwest"
+  ],
+  "sprites": [
+    {
+      "id": "north",
+      "direction": "north"
+    },
+    {
+      "id": "northeast",
+      "direction": "northeast"
+    },
+    {
+      "id": "east",
+      "direction": "east"
+    },
+    {
+      "id": "southeast",
+      "direction": "southeast"
+    },
+    {
+      "id": "south",
+      "direction": "south"
+    },
+    {
+      "id": "southwest",
+      "direction": "southwest"
+    },
+    {
+      "id": "west",
+      "direction": "west"
+    },
+    {
+      "id": "northwest",
+      "direction": "northwest"
+    }
+  ],
+  "registrationAuthoredBeforeGeneration": true
+}

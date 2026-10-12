@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "tool": "image_gen.imagegen",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept\nAsset type: seamless opaque lava material swatch for an authored raised game tile.\nPrimary request: Generate one new seamless lava surface material to be used on a raised lava tile whose exact 128x128 square ground base and 32px front wall are authored separately. The top extends upward while the logical ground pitch stays 128px. This generation is the material only, not an AI redraw of the geometry.\nInput images: Image 1 is a sparse square swatch extent reference, not an edit target. Fill the whole opaque square with new material.\nAppearance: illustrated molten orange-red lava with bright yellow-orange branching hot fissures and darker cooling crust. Readable chunky surface shapes and gentle fine texture for a 128px game tile. Uniform lighting and glow distribution across the tile, no global lighting gradient.\nComposition: flat texture, straight overhead screen-aligned square ground plane. All four edges are filled. Left/right and top/bottom colors and fissures must continue seamlessly when identical copies touch. Generate one material square.\nConstraints: opaque full-image surface, no transparent gaps, no border, bevel, raised cube, front wall, studs, perspective distortion, vignette, margin, scenery, props, labels or watermark. The authored compositor will apply this generated material to exact top and front faces in a 192x320 frame with projected ground center (96,248), height axis [0,-1], elevation scale 1.",
+  "transparent_background": false,
+  "source": "source-01.png",
+  "sourceSHA256": "07b63813d3af22f16ce9d5d7639dce220000ddcefff0d1115a828b135af8ae22",
+  "references": [
+    "references/generation-guide.png"
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+  "guideSVG": "guide.svg",
+  "guideRaster": "guide-4x.png",
+  "referenceSHA256": {
+    "references/generation-guide.png": "fc3288fdd80be070eff90f7f84f0c6ef207259e2a11ebb7970f1a8370a5b2bc8"
+  },
+  "referenceRoles": {
+    "references/generation-guide.png": "opaque material swatch extent guide; authored geometry retained in template/"
+  },
+  "transparentBackground": false,
+  "recipeConversion": {
+    "from": "generation-01-authored.json",
+    "purpose": "Lossless portable delivery serialization of same actual image-generation inputs; no new generation or processing.",
+    "unchanged": [
+      "prompt",
+      "tool",
+      "source bytes and hash",
+      "reference bytes and hashes",
+      "transparency"
+    ]
+  }
+}

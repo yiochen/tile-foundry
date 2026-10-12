@@ -1,0 +1,191 @@
+{
+  "kind": "object",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center",
+  "frame": [
+    384,
+    576
+  ],
+  "anchor": [
+    192,
+    376
+  ],
+  "footprint": [
+    256,
+    256
+  ],
+  "elevationPx": 128,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "supportCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "registrationAuthoredBeforeGeneration": true,
+  "registrationMethod": "declared-source-canvas",
+  "version": 2,
+  "status": "processed-with-limits",
+  "sprites": [
+    {
+      "id": "fountain",
+      "image": "sprites/fountain.png",
+      "size": [
+        384,
+        576
+      ],
+      "anchor": [
+        192,
+        376
+      ],
+      "footprint": [
+        256,
+        256
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "supportCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "elevationPx": 128,
+      "artRect": [
+        0,
+        38,
+        377,
+        486
+      ],
+      "registration": {
+        "method": "authored-source-canvas",
+        "guide": "guide.json",
+        "sourceAnchor": [
+          512,
+          1002.6666666666666
+        ],
+        "uniformRequestedScale": 0.375,
+        "alphaBoundsUsedOnlyForStorageCrop": true
+      },
+      "processing": {
+        "sourceSize": [
+          1024,
+          1536
+        ],
+        "sourceRect": [
+          0,
+          21,
+          1014,
+          1496
+        ],
+        "anchor": [
+          192.0,
+          376.0
+        ],
+        "anchorSource": [
+          512.0,
+          1002.6666666666666
+        ],
+        "size": [
+          384,
+          576
+        ],
+        "subpixelShift": [
+          0.12623274161734344,
+          -0.041807909604472115
+        ],
+        "footprint": [
+          256,
+          256
+        ],
+        "artRect": [
+          0,
+          8,
+          380,
+          553
+        ],
+        "scale": [
+          0.3747534516765286,
+          0.3749152542372881
+        ],
+        "sourceAnchorMode": "explicit"
+      }
+    }
+  ],
+  "geometryDeclaration": "Footprint, occupancy, elevation and anchor are authored constraints, not evidence of exact AI geometry.",
+  "geometryPrecision": "Approximate AI artwork; whole source-canvas scale retained without silhouette fitting.",
+  "limitations": [
+    "Generated source contains a translucent halo despite the prompt. No background guessing, keying or alpha cleanup was applied. threshold 0 includes full nonzero alpha bounds; normal resize quantization may drop faint pixels.",
+    "Visible base placement and height may drift from guide; no correction or anchor fitting was performed.",
+    "No single-cell calibration detector was used for this multi-cell asset."
+  ],
+  "previews": [
+    "previews/placement-light.png",
+    "previews/neighbors-light.png",
+    "previews/placement-dark.png",
+    "previews/neighbors-dark.png"
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "version": 2,
+  "caseId": "large-object-2x2",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a stone fountain occupying exactly a 2x2 square of 128px cells (256x256 ground footprint), with 128px visible height. Deliver one complete transparent object, with a ground anchor at the center of the 2x2 footprint. Deliver each sprite in a 384x576px frame with local projected ground anchor (192,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "5b3f10d261ead49c936732336b3fb00c716635d0efdd5ff6ee4cc3a79b50b634"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide-2x.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "cee1a1a4b696596bbefe92e8fcb80bbb6b28aabc96e95786f9c37b6ee60d830c"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "object",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "fountain"
+      ]
+    },
+    {
+      "check": "fountain-frame-margin",
+      "pass": true,
+      "detail": "No retained art at frame edges"
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Reviewer identity, independence declaration and hashes of all art, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": false,
+      "detail": "The fountain is top/front readable, but the base depth is foreshortened rather than occupying the screen-aligned 256x256 ground rectangle."
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "The stone foundation lies above and inside the declared 2x2 ground boundaries; a correct stored center is not proof that its base lands there."
+    },
+    {
+      "check": "multi-cell-size",
+      "pass": false,
+      "detail": "Actual base does not fill the 256x256 ground footprint shown in the independent placement preview; it was not resized or refitted."
+    },
+    {
+      "check": "multi-cell-overlap",
+      "pass": false,
+      "detail": "Whole art survives, but neighbor previews cannot establish correct occupancy/overlap because base placement and depth drift."
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  ],
+  "reviewArtifacts": {},
+  "scope": "Artifact checks and independent review; no fresh generation is performed by the grader."
+}

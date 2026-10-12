@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "caseId": "large-object-3x2",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2",
+  "userPrompt": "Generate a long greenhouse occupying exactly 3x2 cells of 128px each (384x256 footprint), with 128px visible height. Keep a central ground anchor, the shared grid scale, and the complete transparent silhouette. Deliver each sprite in a 512x576px frame with local projected ground anchor (256,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json",
+      "role": "whole-asset"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "21eefd91cc47dab97b9462e6438dfa631be10fe059d46fb699816cdff47cd6e6",
+  "result": "result.json",
+  "registration": "registration.json",
+  "previews": [
+    "previews/placement-light.png",
+    "previews/neighbors-light.png",
+    "previews/placement-dark.png",
+    "previews/neighbors-dark.png"
+  ],
+  "guideFiles": {
+    "guide.svg": "57b4e1a7ca70b7e386731704b6ddf679fad631289aa0522f9963499bc0cf1cb0",
+    "guide.png": "f8bf8b960d1b94855d940401461cfe43cbd02ad7c5e2f985e92df23d8d81fb14",
+    "guide.json": "21eefd91cc47dab97b9462e6438dfa631be10fe059d46fb699816cdff47cd6e6",
+    "references/guide-2x.png": "9acfe5a6c59510b51f4b9b87458730fe2b354f77e03f0f00a089953eb22a79ae"
+  },
+  "registrationSHA256": "b31a7f9bdf7bde24ba7853bfcb4957fb102bc21782d0e994c63421602d7174e7"
+}

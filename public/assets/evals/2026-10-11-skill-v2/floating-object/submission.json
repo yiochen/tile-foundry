@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "caseId": "floating-object",
+  "request": "Generate a 64px-tall treasure orb floating 48px above the center of a 128x128 calibration tile. Keep the projected ground anchor beneath the orb and remove the calibration floor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object.\n",
+  "userPrompt": "Generate a 64px-tall treasure orb floating 48px above the center of a 128x128 calibration tile. Keep the projected ground anchor beneath the orb and remove the calibration floor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object.",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object",
+  "status": "processed",
+  "attempts": 1,
+  "sources": [
+    {
+      "image": "source-01.png",
+      "sha256": "827f650887dfd6a721b140792f128ec24fc0cd828af0190b33a45c663482eefd",
+      "recipe": "generation-01.json",
+      "recipeSHA256": "b66f1e5426d335a71cad06d6842e92e92194a6d8b68c8815f578b8821f6c1a12",
+      "guide": "guide.json",
+      "guideSHA256": "d0a42bbd5b3a8e7b1dd0cebff8931dfa4315200e7e8e2f359e97b97979471010",
+      "guideSVG": "guide.svg",
+      "guideRaster": "guide-4x.png",
+      "guideRasterSHA256": "7408fd0bef6ffcb287ae83ac7f63edef05ac3f008b704df35e6cacf4facd2f2d",
+      "references": [
+        {
+          "image": "references/generation-guide.png",
+          "sha256": "7408fd0bef6ffcb287ae83ac7f63edef05ac3f008b704df35e6cacf4facd2f2d",
+          "role": "sparse object and calibration guide"
+        }
+      ],
+      "role": "whole-asset",
+      "authoredRecipe": "generation-01-authored.json",
+      "authoredRecipeSHA256": "1f1b9990f3683a6c20784345dd9357dcd0fd9030cfcae47bd4d03308594bd569"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "d0a42bbd5b3a8e7b1dd0cebff8931dfa4315200e7e8e2f359e97b97979471010",
+  "result": "result.json",
+  "resultSHA256": "c06168c22112e59335e625df87fe977a9f729be1f1271ada4b03e79210614859",
+  "processing": "processing.json",
+  "previews": [
+    "previews/cutout-light-2x.png",
+    "previews/placement-light.png",
+    "previews/cutout-dark-2x.png",
+    "previews/placement-dark.png"
+  ],
+  "recipeConversion": "generation-01-authored.json preserved; generation-01.json losslessly serialized to portable public contract",
+  "resultKindConversion": {
+    "authoredResult": "result-kind-authored.json",
+    "authoredResultSHA256": "15ab41e5d3070e5f8a8ce3495465ce18b8aa0ea06f34e59a04410ab2c9eebd2e",
+    "originalKind": "floating-object",
+    "canonicalKind": "object",
+    "assetSubtype": "floating-object",
+    "geometryAndArtChanged": false
+  }
+}

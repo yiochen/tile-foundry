@@ -1,0 +1,7 @@
+Use case: stylized-concept
+Asset type: seamless opaque lava material swatch for an authored raised game tile.
+Primary request: Generate one new seamless lava surface material to be used on a raised lava tile whose exact 128x128 square ground base and 32px front wall are authored separately. The top extends upward while the logical ground pitch stays 128px. This generation is the material only, not an AI redraw of the geometry.
+Input images: Image 1 is a sparse square swatch extent reference, not an edit target. Fill the whole opaque square with new material.
+Appearance: illustrated molten orange-red lava with bright yellow-orange branching hot fissures and darker cooling crust. Readable chunky surface shapes and gentle fine texture for a 128px game tile. Uniform lighting and glow distribution across the tile, no global lighting gradient.
+Composition: flat texture, straight overhead screen-aligned square ground plane. All four edges are filled. Left/right and top/bottom colors and fissures must continue seamlessly when identical copies touch. Generate one material square.
+Constraints: opaque full-image surface, no transparent gaps, no border, bevel, raised cube, front wall, studs, perspective distortion, vignette, margin, scenery, props, labels or watermark. The authored compositor will apply this generated material to exact top and front faces in a 192x320 frame with projected ground center (96,248), height axis [0,-1], elevation scale 1.

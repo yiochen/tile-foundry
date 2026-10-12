@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "tool": "image_gen.imagegen",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept\nAsset type: opaque repeatable 128x128 game floor tile, generated at high resolution then uniformly downsampled.\nPrimary request: Generate a seamless mossy stone floor tile. Opposite edges must connect in a repeated square grid without visible seams or sudden color/lighting gradient jumps. Keep it flat with no raised front wall.\nInput images: Image 1 is a sparse square extent reference, not an edit target or style reference. Fill the complete square with new artwork.\nStyle/medium: clean illustrated game material, weathered gray stone with natural soft moss in its shallow joins, readable at 128px.\nComposition: one full opaque square surface occupying the entire image, screen-aligned square-grid top-down oblique ground plane. The whole image becomes a 128x128 tile with ground-center anchor (64,64).\nConstraints: left and right texture edges join; top and bottom texture edges join. Match colors and pattern continuity at both pairs of edges. Uniform diffuse lighting, no directional lighting gradient, vignette, outer border, bevel, raised sides, shadow beyond the tile, props, scenery, text, watermark or empty margins. This is a flat surface, not a cube. Generate one new image.",
+  "transparent_background": false,
+  "source": "source-01.png",
+  "sourceSHA256": "c6ef4ccd24307a525b3c0c0f94922097f4937ad5964784c1d158c4adfcb6ca7f",
+  "references": [
+    {
+      "image": "references/generation-guide.png",
+      "role": "sparse square material extent reference",
+      "sha256": "fc3288fdd80be070eff90f7f84f0c6ef207259e2a11ebb7970f1a8370a5b2bc8"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+  "guideSVG": "guide.svg",
+  "guideRaster": "guide-4x.png"
+}

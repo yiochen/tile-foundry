@@ -1,0 +1,144 @@
+{
+  "version": 2,
+  "caseId": "seamless-square-floor",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seamless-square-floor"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a seamless 128x128 mossy stone floor tile. Its opposite edges must connect in a repeated square grid, without visible seams or sudden color/lighting gradient jumps. Keep it flat, with no raised front wall. Deliver an opaque 128x128px tile with local ground-center anchor (64,64). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seamless-square-floor."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "c6ef4ccd24307a525b3c0c0f94922097f4937ad5964784c1d158c4adfcb6ca7f"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/generation-guide.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "floor",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "mossy-stone-floor"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "opaque-floor",
+      "pass": true,
+      "detail": "Complete opaque square"
+    },
+    {
+      "check": "opposite-edge-continuity",
+      "pass": false,
+      "detail": {
+        "horizontal": 10.9921875,
+        "vertical": 9.942708333333334
+      }
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Reviewer identity, independence declaration and hashes of all art, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "anchor-placement",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "seam-continuity",
+      "pass": false,
+      "detail": "Native and 2x 3x3 repeats visibly cut moss/stone contours at cell boundaries; opposite-edge RGB means are 10.99 and 9.94, above the frozen limit 8."
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  ],
+  "reviewArtifacts": {
+    "repeat-3": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/reports/seamless-square-floor-previews/repeat-3.png",
+    "repeat-5": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/reports/seamless-square-floor-previews/repeat-5.png"
+  },
+  "scope": "Artifact checks and independent review; no fresh generation is performed by the grader."
+}

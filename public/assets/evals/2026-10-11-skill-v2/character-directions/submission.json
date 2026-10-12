@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "caseId": "character-directions",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions",
+  "userPrompt": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json",
+      "role": "whole-asset"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "664e321ee4f2b45cc7d7ab9d4e3e0a082bcb14a82f4655e28e646330c50459e3",
+  "result": "result.json",
+  "registration": "registration.json",
+  "previews": [
+    "previews/directions-light.png",
+    "previews/directions-dark.png"
+  ],
+  "guideFiles": {
+    "guide.svg": "5b2cbc904e5ee12f24d82fc45fce2248ccb13d2611e35f693de91c6ce9b36aa4",
+    "guide.png": "ca51210d1a913284fa46a668766454175441485f887a80deed132ae6670c95f1",
+    "guide.json": "664e321ee4f2b45cc7d7ab9d4e3e0a082bcb14a82f4655e28e646330c50459e3",
+    "references/guide-2x.png": "19f3d3d54a17ea38da144b0598991215574e2ba14040fd5cf783bc7a96085e49"
+  },
+  "registrationSHA256": "b21159f39906c5f021bbae3e3b4634a2e6b18d91b0027aacbf3d1c448f9fa5f4"
+}

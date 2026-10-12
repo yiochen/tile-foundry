@@ -1,0 +1,7 @@
+Use case: stylized-concept
+Asset type: opaque repeatable 128x128 game floor tile, generated at high resolution then uniformly downsampled.
+Primary request: Generate a seamless mossy stone floor tile. Opposite edges must connect in a repeated square grid without visible seams or sudden color/lighting gradient jumps. Keep it flat with no raised front wall.
+Input images: Image 1 is a sparse square extent reference, not an edit target or style reference. Fill the complete square with new artwork.
+Style/medium: clean illustrated game material, weathered gray stone with natural soft moss in its shallow joins, readable at 128px.
+Composition: one full opaque square surface occupying the entire image, screen-aligned square-grid top-down oblique ground plane. The whole image becomes a 128x128 tile with ground-center anchor (64,64).
+Constraints: left and right texture edges join; top and bottom texture edges join. Match colors and pattern continuity at both pairs of edges. Uniform diffuse lighting, no directional lighting gradient, vignette, outer border, bevel, raised sides, shadow beyond the tile, props, scenery, text, watermark or empty margins. This is a flat surface, not a cube. Generate one new image.

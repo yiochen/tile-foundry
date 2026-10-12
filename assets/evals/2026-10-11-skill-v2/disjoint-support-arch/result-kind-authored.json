@@ -1,0 +1,119 @@
+{
+  "kind": "arch",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center",
+  "frame": [
+    512,
+    448
+  ],
+  "anchor": [
+    256,
+    312
+  ],
+  "footprint": [
+    384,
+    128
+  ],
+  "elevationPx": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "supportCells": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "overheadCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "centerCellWalkable": true,
+  "registrationAuthoredBeforeGeneration": true,
+  "version": 2,
+  "status": "blocked",
+  "sprites": [],
+  "depthPieces": [],
+  "authoredDepthPieces": [
+    {
+      "id": "left-pillar",
+      "role": "left-pillar",
+      "drawOrder": 1,
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "image": "sprites/left-pillar.png"
+    },
+    {
+      "id": "right-pillar",
+      "role": "right-pillar",
+      "drawOrder": 2,
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "image": "sprites/right-pillar.png"
+    },
+    {
+      "id": "overhead-span",
+      "role": "overhead-span",
+      "drawOrder": 3,
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "image": "sprites/overhead-span.png"
+    }
+  ],
+  "error": "Authored panel isolation failed: retained source art crosses the planned gutters/unused panel. The overhead span cannot be cropped to its planned 512x448 virtual frame without clipping. Complete-depth-piece extraction at the fixed source scale is unsupported for this generated input.",
+  "processingDiagnostic": "processing-diagnostic.json",
+  "previews": [
+    "previews/source-registration-light.png",
+    "previews/source-registration-dark.png"
+  ],
+  "geometryDeclaration": "Requested ground/support/overhead cells are authored registration. No successful sprite extraction or geometry match is claimed.",
+  "limitations": [
+    "Generated overhead span exceeds its isolated panel; no clipping, alpha-bound anchor fitting, silhouette-based shrinking or flattened-scene slicing was performed.",
+    "Single-cell floor measurement does not support this multi-cell/disjoint geometry."
+  ]
+}

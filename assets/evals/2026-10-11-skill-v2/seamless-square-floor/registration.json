@@ -1,0 +1,22 @@
+{
+  "kind": "floor",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "elevationPx": 0,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "sprites": [
+    {
+      "id": "mossy-stone-floor"
+    }
+  ]
+}

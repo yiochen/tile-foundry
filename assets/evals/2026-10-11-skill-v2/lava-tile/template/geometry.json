@@ -1,0 +1,49 @@
+{
+  "version": 2,
+  "primitive": "plain-parallel-plinth",
+  "size": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "nearEdgeAnchor": [
+    96,
+    312
+  ],
+  "groundRect": [
+    32,
+    184,
+    160,
+    312
+  ],
+  "cellSize": [
+    128,
+    128
+  ],
+  "height": 32,
+  "bodyRect": [
+    32,
+    152,
+    160,
+    312
+  ],
+  "topRect": [
+    32,
+    152,
+    160,
+    280
+  ],
+  "frontRect": [
+    32,
+    280,
+    160,
+    312
+  ],
+  "surfaceColor": "#ca511f",
+  "frontColor": "#792417",
+  "geometryOwner": "authored SVG",
+  "note": "No studs, bevel, border or top lighting gradient; generated material details composite into exact faces."
+}

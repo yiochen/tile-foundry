@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "tool": "image_gen.imagegen",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept\nAsset type: one complete transparent game sprite on a removable calibration floor.\nPrimary request: Generate a tall lantern post on a 128x128 calibration tile. Its centered base is 48x48px, and its nominal height is 160px. Preserve its ground position and size. Invent a readable illustrated lantern design with warm glass light and a stone/metal post; use the supplied sparse guide for base, height and registration only.\nInput images: Image 1 is the sparse geometry/calibration reference, not an edit target or costume/style reference. It uses a 192x320 logical portrait frame. Match this 3:5 canvas aspect and the same relative geometry; output may be uniformly higher resolution.\nProjection: square-grid top-down oblique game projection, front-facing three-quarter view. Ground grid axes stay screen-aligned, height projects vertically upward. Show object top and front with parallel side edges, equal feature scale at near/far depth. No diamond-grid rotation or vanishing-point convergence.\nRegistration: the green floor rectangle is (32,184) through (160,312) in the logical 192x320 frame. Keep this intact flat square, 128x128, with its projected ground-center/root at (96,248). The base is centered around that point, 48x48, and the nominal top of the lantern is 160px above it, at y=88. Keep the full post and lantern inside the panel with transparent margins; base art may extend below the root without changing it.\nCalibration: preserve the square's uniform reserved RGB 123,209,75 exactly, without texture, rim, shading or cast shadow. Reserve that green hue from overlapping parts of the object. Keep true alpha outside the subject and calibration tile.\nConstraints: do not render the guide strokes or labels. No other objects, scenery, floor decorations, painted checkerboard, outer background, watermark or text. Do not move, shrink or rotate the floor to accommodate the subject. Deliver one new image; the calibration substrate will be measured, uniformly normalized, then explicitly keyed by a deterministic processor.",
+  "transparent_background": true,
+  "source": "source-01.png",
+  "sourceSHA256": "392f436983c36c6c423eef761d39fd20f862583b3a6789de57ed1c0100c4fa28",
+  "references": [
+    {
+      "image": "references/generation-guide.png",
+      "role": "sparse height/base guide on explicitly reserved calibration floor",
+      "sha256": "6dd8ca1a6e282e0de86cef395311591ab00476a6130d5b210ae07979b64dd981"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "dd8b1923f1f9cf990398f65a00bec1b1dd736d09e51093f924bd4342cb1538a9",
+  "guideSVG": "guide.svg",
+  "guideRaster": "guide-4x.png"
+}

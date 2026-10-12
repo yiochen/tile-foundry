@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "tool": "image_gen.imagegen",
+  "intent": "generate",
+  "prompt": "Use case: stylized-concept\nAsset type: opaque stone material swatch for a deterministic raised square game plinth.\nPrimary request: Generate one new stone material for a square stone plinth with a full 128x128 base and 64px visible height in top-down oblique square-grid game projection. Authored SVG geometry owns the exact shape; this image generation is the appearance swatch only.\nInput images: Image 1 is a sparse square material extent reference, not an edit target or style reference. Fill the entire opaque image square with stone material.\nAppearance: clean illustrated weathered gray stone, subtle mottling, mineral grain, a few small natural cracks, moderate contrast so the top/front geometry remains readable at 128px. Uniform diffuse lighting with no large-scale directional gradient.\nComposition: a flat material surface viewed straight overhead, screen-aligned square. No depicted 3D object or perspective within this texture.\nConstraints: opaque full-image surface, no empty margin, external shadows, border, bevel, plinth silhouette, studs, symbols, props, scenery, text or watermark. The generated material details will be uniformly fitted to authored exact top/front faces, 64px elevation upward, in a 192x320 sprite frame. The logical footprint stays 128x128 and the projected ground-center anchor stays (96,248); camera profile top-down-oblique-square-grid, height axis [0,-1], elevation scale 1. Generate one new image.",
+  "transparent_background": false,
+  "source": "source-01.png",
+  "sourceSHA256": "990e17d82008ddee04de1fd5b6806413aa6d16ce40e5a5fc07e613b88abbf0b4",
+  "references": [
+    {
+      "image": "references/generation-guide.png",
+      "role": "appearance-material",
+      "sha256": "fc3288fdd80be070eff90f7f84f0c6ef207259e2a11ebb7970f1a8370a5b2bc8"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+  "guideSVG": "guide.svg",
+  "guideRaster": "guide-4x.png"
+}

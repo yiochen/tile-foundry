@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {createServer} from 'vite';
 import {chromium} from 'playwright';
-import {verifySkillEvals} from './verify-skill-evals.mjs';
+import {verifyEvalGallery} from './verify-eval-gallery.mjs';
 
 const root=new URL('../',import.meta.url).pathname;
 const server=await createServer({root,server:{host:'127.0.0.1',port:0},logLevel:'error'});
@@ -213,49 +213,8 @@ try{
   await page.evaluate(()=>new Promise(requestAnimationFrame));
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,'Character 320px overflow');
   results.push({check:'character lab at 390px and 320px',ok:true});
-  await page.setViewportSize({width:1440,height:1000});
-  await page.getByRole('button',{name:'Animations',exact:true}).click();
-  const animationCanvas=page.locator('.animation-preview').first();
-  const publishedGallery=JSON.parse(await readFile(root+'public/assets/skill-gallery.json','utf8'));
-  assert.ok(publishedGallery.animations.every(a=>a.fps===12&&a.frames.every(f=>Math.abs(f.durationMs-1000/12)<.001)));
-  assert.ok((await page.locator('.animation-card').first().innerText()).includes('Default playback: 12 fps'));
-  await animationCanvas.locator('..').waitFor();
-  await page.waitForFunction(()=>document.querySelector('.animation-preview')?.dataset.ready==='true');
-  const seen=new Set();
-  for(let i=0;i<18;i++){
-    seen.add(await animationCanvas.getAttribute('data-frame'));
-    await page.waitForTimeout(65);
-  }
-  assert.equal(seen.size,6,'Playback must show every saved dance frame');
-  await page.getByRole('button',{name:'Pause animation',exact:true}).click();
-  await page.getByRole('button',{name:'Show animation frame 6',exact:true}).click();
-  assert.equal(await page.getByLabel('Animation frame',{exact:true}).inputValue(),'5');
-  assert.equal(await animationCanvas.getAttribute('data-frame'),'frame-05');
-  assert.equal(await animationCanvas.getAttribute('data-anchor'),'96,248');
-  await page.getByLabel('Ground anchor',{exact:true}).check();
-  await page.getByLabel('Animation floor',{exact:true}).selectOption('lava');
-  await page.evaluate(()=>new Promise(requestAnimationFrame));
-  const anchorPixel=await animationCanvas.evaluate(c=>Array.from(c.getContext('2d').getImageData(128,264,1,1).data));
-  assert.ok(anchorPixel[0]>220&&anchorPixel[1]<160,'Ground-center anchor marker must be visible');
-  assert.equal(await page.locator('.lava-repeat img').count(),9);
-  await page.screenshot({path:root+'docs/preview-animations-desktop.png',fullPage:true});
-  const downloadSheet=page.waitForEvent('download');
-  await page.getByRole('link',{name:'Download spritesheet',exact:true}).click();
-  assert.equal((await downloadSheet).suggestedFilename(),'sheet.png');
-  await page.getByLabel('Animation trial',{exact:true}).selectOption('dancing-player');
-  assert.ok((await page.locator('.animation-card').first().innerText()).includes('failed the pose-diversity eval'));
-  await page.getByLabel('Animation trial',{exact:true}).selectOption('dancing-player-retry');
-  await page.getByLabel('Animation speed',{exact:true}).selectOption('2');
-  await page.getByRole('button',{name:'Play animation',exact:true}).click();
-  await page.getByRole('button',{name:'Pause animation',exact:true}).click();
-  await page.getByRole('button',{name:'Show animation frame 1',exact:true}).click();
-  for(const width of [390,320]){
-    await page.setViewportSize({width,height:844});
-    await page.evaluate(()=>new Promise(requestAnimationFrame));
-    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Animation ${width}px overflow`);
-    if(width===390)await page.screenshot({path:root+'docs/preview-animations-mobile.png',fullPage:true});
-  }
-  results.push({check:'playground lava and dance: six-frame playback, manual stepping, fixed anchor, background switch, trial selection, download, 390px/320px layouts',ok:true});
+  results.push(await verifyEvalGallery(page,root,port));
+  await page.goto(`http://127.0.0.1:${port}`,{waitUntil:'networkidle'});
   await page.setViewportSize({width:390,height:844});
   await page.reload({waitUntil:'networkidle'});
   await page.locator('canvas[data-ready="true"]').waitFor();
@@ -267,7 +226,6 @@ try{
   await page.evaluate(()=>new Promise(requestAnimationFrame));
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,'320px horizontal overflow');
   results.push({check:'320px narrow viewport',ok:true});
-  results.push(await verifySkillEvals(browser,root));
   assert.deepEqual(errors,[],'Browser errors');
   await writeFile(root+'docs/browser-verification.json',JSON.stringify({ok:true,results,errors},null,2)+'\n');
   console.log(JSON.stringify({ok:true,results,errors},null,2));

@@ -1,0 +1,41 @@
+{
+  "kind": "raised-object",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "elevationPx": 64,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "baseSize": [
+    128,
+    128
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "groundAnchor": [
+    96,
+    248
+  ],
+  "groundRect": [
+    32,
+    184,
+    160,
+    312
+  ],
+  "geometryOwner": "authored-svg-faces",
+  "sprites": [
+    {
+      "id": "full-cell-raised-object"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "source": "source-character.png",
+  "sourceSize": [
+    971,
+    1619
+  ],
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "outcome": "processing-failed",
+  "error": "No wide connected alpha band identifies the floor",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/process-layers.py\", line 14, in <module>\n    rec['floorObservation']=floor_anchor(image)\n                            ~~~~~~~~~~~~^^^^^^^\n  File \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/skill-snapshot/scripts/tile_tools.py\", line 199, in floor_anchor\n    raise ValueError(\"No wide connected alpha band identifies the floor\")\nValueError: No wide connected alpha band identifies the floor\n"
+}

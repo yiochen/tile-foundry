@@ -1,0 +1,41 @@
+{
+  "kind": "layered-object",
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "elevationPx": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "sprites": [
+    {
+      "id": "stool",
+      "role": "stool",
+      "elevationPx": 48,
+      "supportElevationPx": 48,
+      "attachmentPoint": [
+        96,
+        200
+      ]
+    },
+    {
+      "id": "seated-player",
+      "role": "character",
+      "elevationPx": 160,
+      "nominalStandingHeight": 160,
+      "supportElevationPx": 48,
+      "supportElevationBakedIntoArt": true,
+      "attachmentPoint": [
+        96,
+        200
+      ],
+      "supportReference": "references/stool-reference.png"
+    }
+  ]
+}

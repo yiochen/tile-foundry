@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import './style.css';
 import CharacterLab from './CharacterLab.jsx';
-import AnimationLab from './AnimationLab.jsx';
+import EvalLab from './EvalLab.jsx';
 
 // Vite's base URL keeps asset requests portable under a repository subpath.
 const base = `${import.meta.env.BASE_URL}assets/`;
@@ -86,21 +86,27 @@ function App() {
   const [scene,setScene] = useState(null), [preset,setPreset] = useState('village');
   const [selected,setSelected] = useState('tree'), [mode,setMode] = useState(() => {
     const view=new URLSearchParams(window.location.search).get('view');
-    return ['scene','cuts','atlas','workflows','characters','animations'].includes(view)?view:'scene';
+    return ['scene','cuts','atlas','workflows','characters','animations','evals'].includes(view)?view:'scene';
   });
   const [tool,setTool] = useState('inspect'), [grid,setGrid] = useState(false);
   const [anchors,setAnchors] = useState(false), [footprints,setFootprints] = useState(false);
   const [renderer,setRenderer] = useState('atlas'), [zoom,setZoom] = useState(100);
   const [cell,setCell] = useState(null), [history,setHistory] = useState([]);
   const [status,setStatus] = useState(''), [assetInfo,setAssetInfo] = useState(false);
+  const changeMode = value => {
+    setMode(value);
+    const url=new URL(window.location.href);
+    if(value==='scene')url.searchParams.delete('view');else url.searchParams.set('view',value);
+    url.searchParams.delete('case');window.history.replaceState(null,'',url);
+  };
   const canvasRef=useRef(null), containerRef=useRef(null), layoutRef=useRef(null);
   const [containerWidth,setContainerWidth] = useState(700);
   useEffect(() => {
     let alive=true;
     (async () => {
-      const [assets,atlas,village,stress,contact,validation,workflows,characters,gallery] = await Promise.all(
-        ['tiles.json','atlas.json','village.json','stress.json','contact.json','validation.json','workflows.json','characters.json','skill-gallery.json'].map(fetchJSON));
-      const urls=[...new Set([...assets.tiles.map(t=>t.image),...assets.ground,assets.road,assets.roadCenter,'atlas.png',...workflows.cards.map(t=>t.image),...workflows.lockedVariants.map(t=>t.image),...characters.trials.flatMap(t=>[t.guideImage,t.withGuide,t.removalImage,t.keyedImage].filter(Boolean)),gallery.floor.image,...gallery.animations.flatMap(a=>a.frames.map(f=>f.image))])];
+      const [assets,atlas,village,stress,contact,validation,workflows,characters] = await Promise.all(
+        ['tiles.json','atlas.json','village.json','stress.json','contact.json','validation.json','workflows.json','characters.json'].map(fetchJSON));
+      const urls=[...new Set([...assets.tiles.map(t=>t.image),...assets.ground,assets.road,assets.roadCenter,'atlas.png',...workflows.cards.map(t=>t.image),...workflows.lockedVariants.map(t=>t.image),...characters.trials.flatMap(t=>[t.guideImage,t.withGuide,t.removalImage,t.keyedImage].filter(Boolean))])];
       const blockAtlas=await fetchJSON(assets.blockVariantsAtlas);
       urls.push(blockAtlas.meta.image);
       const entries=await Promise.all(urls.map(async url=>[url,await loadImage(base+url)]));
@@ -116,7 +122,7 @@ function App() {
         source.getContext('2d').drawImage(images[t.image],0,0);blockSources[t.id]=source;
         return [t.id,canvas];
       }));
-      if(alive){setData({assets,atlas,blockAtlas,blockFrames,blockSources,village,stress,contact,validation,workflows,characters,gallery,images});setScene(village);}
+      if(alive){setData({assets,atlas,blockAtlas,blockFrames,blockSources,village,stress,contact,validation,workflows,characters,images});setScene(village);}
     })().catch(e=>alive&&setFailure(e.message));
     return () => {alive=false;};
   },[]);
@@ -235,14 +241,14 @@ function App() {
   if(!data)return <main className="boot">Loading tiles…</main>;
   return <>
     <header className="app-header"><div className="brand"><div className="brand-mark">▦</div><div><h1>Tile Foundry</h1><span>Generate once. Build a world.</span></div></div><div className="header-right"><span className="project-label">TOY VILLAGE / STUDY 01</span><span className="ready-badge"><i/> Assets ready</span></div></header>
-    <div className={'workspace '+(['workflows','characters','animations'].includes(mode)?'lab-mode':'')}>
+    <div className={'workspace '+(['workflows','characters','animations','evals'].includes(mode)?'lab-mode':'')}>
       <aside className="library"><div className="section-heading"><h2>Tile library</h2><span>04</span></div><p className="subtle">One grid. Different silhouettes.</p>
         <div className="asset-grid">{data.assets.tiles.map(t=><button key={t.id} className={'asset-card '+(selected===t.id?'selected':'')} aria-pressed={selected===t.id} onClick={()=>setSelected(t.id)}><div className="asset-preview"><img src={base+(t.id==='block'&&mode==='scene'&&blockVariant?blockVariant.image:t.image)} alt=""/></div><strong>{t.name}</strong><span>{t.heightClass} · 1 cell</span></button>)}</div>
         <div className="library-bottom"><span className="eyebrow">THE RECIPE</span><ol><li><span>01</span> Generate isolated art</li><li><span>02</span> Clean & preserve anchor</li><li><span>03</span> Normalize the footprint</li><li><span>04</span> Pack & preview overlap</li></ol><button className="text-button" onClick={()=>setAssetInfo(!assetInfo)}> {assetInfo?'Hide':'View'} processing details ↗</button>{assetInfo&&<p className="detail-text">Alpha floor 64 / 255 · 192 × 320 frames · trimmed atlas · 4 px padding · 2 px extrusion. Original PNGs and prompts are retained.</p>}</div>
       </aside>
       <main className="stage">
-        <div className="stage-heading"><div><span className="eyebrow">OVERLAP PLAYGROUND</span><h2>{mode==='scene'?scene.name:mode==='cuts'?'Full sprite cuts':mode==='workflows'?'Workflow lab':mode==='characters'?'Character anchors':mode==='animations'?'Tiles & animation':'Packed atlas'}</h2></div>{!['workflows','characters','animations'].includes(mode)&&<label className="scene-picker"><span className="sr-only">Scene preset</span><select value={preset} onChange={e=>changePreset(e.target.value)}><option value="village">Village lane</option><option value="stress">Overlap stress test</option><option value="contact">Solid block contact</option></select></label>}</div>
-        <div className="stage-toolbar"><div className="segmented">{[['scene','Scene'],['cuts','Sprite cuts'],['atlas','Atlas'],['workflows','Workflows'],['characters','Characters'],['animations','Animations']].map(([id,label])=><button key={id} aria-pressed={mode===id} className={mode===id?'active':''} onClick={()=>setMode(id)}>{label}</button>)}</div><div className="display-options">{['workflows','characters','animations'].includes(mode)?<label><input type="checkbox" checked={grid} onChange={e=>setGrid(e.target.checked)}/> {mode==='workflows'?'SVG outline':'Ground anchor'}</label>:<><label><input type="checkbox" checked={grid} onChange={e=>setGrid(e.target.checked)}/> Grid</label><label><input type="checkbox" checked={anchors} onChange={e=>setAnchors(e.target.checked)}/> Anchors</label><label><input type="checkbox" checked={footprints} onChange={e=>setFootprints(e.target.checked)}/> Collisions</label></>}</div></div>
+        <div className="stage-heading"><div><span className="eyebrow">OVERLAP PLAYGROUND</span><h2>{mode==='scene'?scene.name:mode==='cuts'?'Full sprite cuts':mode==='workflows'?'Workflow lab':mode==='characters'?'Character anchors':mode==='animations'?'Animated evals':mode==='evals'?'Skill evals':'Packed atlas'}</h2></div>{!['workflows','characters','animations','evals'].includes(mode)&&<label className="scene-picker"><span className="sr-only">Scene preset</span><select value={preset} onChange={e=>changePreset(e.target.value)}><option value="village">Village lane</option><option value="stress">Overlap stress test</option><option value="contact">Solid block contact</option></select></label>}</div>
+        <div className="stage-toolbar"><div className="segmented">{[['scene','Scene'],['cuts','Sprite cuts'],['atlas','Atlas'],['workflows','Workflows'],['characters','Characters'],['animations','Animations'],['evals','Evals']].map(([id,label])=><button key={id} aria-pressed={mode===id} className={mode===id?'active':''} onClick={()=>changeMode(id)}>{label}</button>)}</div><div className="display-options">{['workflows','characters','animations','evals'].includes(mode)?<label><input type="checkbox" checked={grid} onChange={e=>setGrid(e.target.checked)}/> {mode==='workflows'?'SVG outline':'Ground anchor'}</label>:<><label><input type="checkbox" checked={grid} onChange={e=>setGrid(e.target.checked)}/> Grid</label><label><input type="checkbox" checked={anchors} onChange={e=>setAnchors(e.target.checked)}/> Anchors</label><label><input type="checkbox" checked={footprints} onChange={e=>setFootprints(e.target.checked)}/> Collisions</label></>}</div></div>
         {mode==='scene'&&<div className="scene-experiments">
           <label>All blocks<select aria-label="Block experiment" value={blockVariant?.id.startsWith('locked-')?'material':blockExperiment} onChange={e=>remember({...scene,blockExperiment:e.target.value==='material'?'locked-plastic-32':e.target.value})}>
             <option value="original">Original coral block</option>
@@ -255,15 +261,15 @@ function App() {
           </>}
           <p>Replaces every block in this scene. Ground cells stay 128 × 128.</p>
         </div>}
-        <div className="canvas-wrap" ref={containerRef} style={['workflows','characters','animations'].includes(mode)?{display:'none'}:undefined}><canvas ref={canvasRef} onPointerDown={interact} aria-label="Tile scene preview with square ground cells and sprites overlapping back rows"/></div>
-        {mode==='workflows'?<WorkflowLab data={data} outline={grid}/>:mode==='characters'?<CharacterLab data={data} showAnchors={grid}/>:mode==='animations'?<AnimationLab data={data} showAnchors={grid}/>:<div className="stage-footer"><span>{scene.width} × {scene.height} cells <b>·</b> {scene.objects.length} objects <b>·</b> Ground Y sort</span><span>Orthographic 2D</span></div>}
+        <div className="canvas-wrap" ref={containerRef} style={['workflows','characters','animations','evals'].includes(mode)?{display:'none'}:undefined}><canvas ref={canvasRef} onPointerDown={interact} aria-label="Tile scene preview with square ground cells and sprites overlapping back rows"/></div>
+        {mode==='workflows'?<WorkflowLab data={data} outline={grid}/>:mode==='characters'?<CharacterLab data={data} showAnchors={grid}/>:mode==='animations'?<EvalLab key="animations" onlyAnimations showAnchors={grid}/>:mode==='evals'?<EvalLab key="evals" showAnchors={grid}/>:<div className="stage-footer"><span>{scene.width} × {scene.height} cells <b>·</b> {scene.objects.length} objects <b>·</b> Ground Y sort</span><span>Orthographic 2D</span></div>}
       </main>
       <aside className="inspector"><div className="section-heading"><h2>Inspector</h2><span>↗</span></div><div className="inspector-art"><img src={base+tile.image} alt={tile.name}/><span className="pivot-dot"/></div><span className="eyebrow">{tile.material.toUpperCase()}</span><h3>{tile.name}</h3><p className="subtle">{tile.heightClass} silhouette · complete sprite</p><dl><div><dt>Ground cell</dt><dd>128 × 128</dd></div><div><dt>Sprite canvas</dt><dd>192 × 320</dd></div><div><dt>Ground anchor</dt><dd>{tile.anchor.map(Math.round).join(', ')}</dd></div><div><dt>Visible art</dt><dd>{tile.artRect[2]} × {tile.artRect[3]}</dd></div></dl>
         <div className="inspector-section"><label className="control-label" htmlFor="renderer">Sprite source</label><select id="renderer" value={renderer} onChange={e=>setRenderer(e.target.value)}><option value="atlas">Trimmed atlas</option><option value="sprites">Individual PNGs</option></select><label className="control-label" htmlFor="zoom">Scene scale <span>{zoom}%</span></label><input id="zoom" type="range" min="55" max="100" value={zoom} onChange={e=>setZoom(Number(e.target.value))}/></div>
         <div className="inspector-section"><span className="control-label">Cell tool</span><div className="segmented tool-buttons">{['inspect','place','erase'].map(t=><button key={t} aria-pressed={tool===t} className={tool===t?'active':''} onClick={()=>setTool(t)}>{t[0].toUpperCase()+t.slice(1)}</button>)}</div><p className="detail-text">{tool==='place'?'Choose a tile, then tap a ground cell.':tool==='erase'?'Tap a ground cell to remove its object.':'Tap a ground cell to inspect its object.'}</p><button className="secondary-button" disabled={!history.length} onClick={undo}>↶ Undo last edit</button></div>
         <div className="export-actions"><button className="primary-button" onClick={()=>canvasRef.current.toBlob(blob=>blob&&download(blob,'tile-foundry-scene.png'))}>Export preview PNG <span>↓</span></button><button className="secondary-button" onClick={()=>download(new Blob([JSON.stringify(scene,null,2)],{type:'application/json'}),'scene.json')}>Export scene JSON</button><label className="text-button import-button">Import scene JSON <input type="file" accept=".json,application/json" onChange={importScene}/></label></div>
       </aside>
-    </div><div className="status-bar" role="status"><span>{mode==='workflows'?'Five trials · two generated materials · eight SVG variants':mode==='characters'?'Seven character trials · floor-derived ground anchors':mode==='animations'?'Lava floor · two dance trials · six frames each':status||'Four generated sprites · reusable ground · anchors reviewed in scene'}</span><span>{mode==='workflows'?'SVG → Reference / Masks → Compare':mode==='characters'?'Guide → Pose → Anchor → Extract':mode==='animations'?'Floor center → Anchor → Playback':'Source → Crop → Anchor → Atlas → Scene'}</span></div>
+    </div><div className="status-bar" role="status"><span>{mode==='workflows'?'Five trials · two generated materials · eight SVG variants':mode==='characters'?'Seven character trials · floor-derived ground anchors':mode==='animations'?'Fresh animation evals · 12 fps':mode==='evals'?'Current skill suite · prompts and recorded outcomes':status||'Four generated sprites · reusable ground · anchors reviewed in scene'}</span><span>{mode==='workflows'?'SVG → Reference / Masks → Compare':mode==='characters'?'Guide → Pose → Anchor → Extract':mode==='animations'?'Prompt → Frames → Playback':mode==='evals'?'Prompt → Generate → Review':'Source → Crop → Anchor → Atlas → Scene'}</span></div>
   </>;
 }
 

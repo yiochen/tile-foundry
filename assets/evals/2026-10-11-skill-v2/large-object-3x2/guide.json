@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "kind": "authored-multicell-registration",
+  "size": [
+    512,
+    576
+  ],
+  "frame": [
+    512,
+    576
+  ],
+  "anchor": [
+    256,
+    376
+  ],
+  "footprint": [
+    384,
+    256
+  ],
+  "groundRect": [
+    64.0,
+    248.0,
+    448.0,
+    504.0
+  ],
+  "elevationPx": 128,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "registrationMethod": "declared-source-canvas",
+  "sourceCanvasMapping": "uniform source-canvas scale only; refuse >1% aspect drift or overflow",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center"
+}

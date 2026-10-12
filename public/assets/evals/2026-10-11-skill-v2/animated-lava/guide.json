@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "kind": "authored-material-animation-sheet",
+  "size": [
+    1024,
+    1024
+  ],
+  "columns": 4,
+  "rows": 3,
+  "order": "row-major",
+  "cells": [
+    {
+      "index": 0,
+      "rect": [
+        16,
+        16,
+        240,
+        304
+      ],
+      "materialRect": [
+        64,
+        96,
+        192,
+        224
+      ],
+      "action": "phase 0/12"
+    },
+    {
+      "index": 1,
+      "rect": [
+        272,
+        16,
+        496,
+        304
+      ],
+      "materialRect": [
+        320,
+        96,
+        448,
+        224
+      ],
+      "action": "phase 1/12"
+    },
+    {
+      "index": 2,
+      "rect": [
+        528,
+        16,
+        752,
+        304
+      ],
+      "materialRect": [
+        576,
+        96,
+        704,
+        224
+      ],
+      "action": "phase 2/12"
+    },
+    {
+      "index": 3,
+      "rect": [
+        784,
+        16,
+        1008,
+        304
+      ],
+      "materialRect": [
+        832,
+        96,
+        960,
+        224
+      ],
+      "action": "phase 3/12"
+    },
+    {
+      "index": 4,
+      "rect": [
+        16,
+        368,
+        240,
+        656
+      ],
+      "materialRect": [
+        64,
+        448,
+        192,
+        576
+      ],
+      "action": "phase 4/12"
+    },
+    {
+      "index": 5,
+      "rect": [
+        272,
+        368,
+        496,
+        656
+      ],
+      "materialRect": [
+        320,
+        448,
+        448,
+        576
+      ],
+      "action": "phase 5/12"
+    },
+    {
+      "index": 6,
+      "rect": [
+        528,
+        368,
+        752,
+        656
+      ],
+      "materialRect": [
+        576,
+        448,
+        704,
+        576
+      ],
+      "action": "phase 6/12"
+    },
+    {
+      "index": 7,
+      "rect": [
+        784,
+        368,
+        1008,
+        656
+      ],
+      "materialRect": [
+        832,
+        448,
+        960,
+        576
+      ],
+      "action": "phase 7/12"
+    },
+    {
+      "index": 8,
+      "rect": [
+        16,
+        720,
+        240,
+        1008
+      ],
+      "materialRect": [
+        64,
+        800,
+        192,
+        928
+      ],
+      "action": "phase 8/12"
+    },
+    {
+      "index": 9,
+      "rect": [
+        272,
+        720,
+        496,
+        1008
+      ],
+      "materialRect": [
+        320,
+        800,
+        448,
+        928
+      ],
+      "action": "phase 9/12"
+    },
+    {
+      "index": 10,
+      "rect": [
+        528,
+        720,
+        752,
+        1008
+      ],
+      "materialRect": [
+        576,
+        800,
+        704,
+        928
+      ],
+      "action": "phase 10/12"
+    },
+    {
+      "index": 11,
+      "rect": [
+        784,
+        720,
+        1008,
+        1008
+      ],
+      "materialRect": [
+        832,
+        800,
+        960,
+        928
+      ],
+      "action": "phase 11/12"
+    }
+  ],
+  "materialSampleSize": [
+    128,
+    128
+  ],
+  "sourcePanelIsolation": "opaque square swatches, transparent gutters",
+  "frame": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "cellSize": 128,
+  "height": 32,
+  "topRect": [
+    32,
+    152,
+    160,
+    280
+  ],
+  "frontRect": [
+    32,
+    280,
+    160,
+    312
+  ],
+  "samplingDeclaration": "Only predetermined interior material rectangles are sampled. Material panels contain no sprite silhouette."
+}

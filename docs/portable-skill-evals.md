@@ -1,4 +1,4 @@
-# Portable skill revision and unrun eval suite
+# Portable skill revision and eval suite
 
 The complete `skills/build-overlap-tiles/` folder is reusable outside this project.
 Its instructions reference no playground, source checkout, application name or
@@ -13,7 +13,8 @@ not a visible shoe tip, floating object's bottom, or cropped alpha center.
 No physical camera angle is inferred from the stylized reference.
 
 The suite was specified before changing the skill instructions and before any
-new generation. These 13 cases are **not run**:
+new generation. All 13 now have fresh results in [the v2 findings](skill-eval-v2-findings.md),
+with 14 generation calls, one passed case and twelve failed cases:
 
 | Case | Expected behavior |
 | --- | --- |
@@ -48,12 +49,11 @@ This creates 13 destination-specific requests, a frozen skill/suite and a run
 manifest with `not-run` statuses. The grader lives in the copied skill and accepts
 the independently selected prepared run root, suite, submission, review and report path. Independent visual review
 is required before a structural success can become a pass. Attempts/thresholds
-are frozen; no generation retries or skill tuning are part of this revision.
+are frozen; the fresh v2 run used no generation retries or skill tuning.
 
 The original two-case run is preserved separately with its own `cases.json`.
-Its original 8 fps generation records stay unchanged. Runtime gallery metadata
-and previews now use 12 fps, with the timing derivation recorded. Those reused
-frames and the old flat lava are not results for this new suite.
+Its original 8 fps generation records stay unchanged. The old frames and flat lava are excluded from the playground. Its current
+eval view publishes only results matching the current case rubric.
 
 Validation: copied-skill commands run from an unrelated temporary project;
 requests resolve under the caller's output root; grading rejects obvious seams,

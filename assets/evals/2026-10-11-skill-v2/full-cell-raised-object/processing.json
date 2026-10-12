@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "tool": "bundled svg_tools.py material",
+  "strength": 0.7,
+  "sourceUnchanged": true,
+  "geometrySource": "template/geometry.json",
+  "geometrySHA256": "52384b1c134300a2c067e5115366b1c8d86c0eeb4f25469706af9cdbfe8f43f3",
+  "alphaCopiedFrom": "template/shaded.png",
+  "faceMasks": [
+    {
+      "image": "template/mask-top.png",
+      "sha256": "a9ac9f157708f7e657bdeeae1947230a65007d478db061912004b730f3c263f7"
+    },
+    {
+      "image": "template/mask-front.png",
+      "sha256": "14eb6791ed1712745d9531b5ec262979d0684c7b949c0054b4d7f0d1af61f393"
+    },
+    {
+      "image": "template/mask-studs.png",
+      "sha256": "1a29dbd242947a1c4f762d89bef61be4298f7ac45e8f5a741e45b25aedb33b2e"
+    }
+  ],
+  "normalization": "Generated texture high-pass details uniformly fit each authored face; sprite geometry unchanged.",
+  "coverageReport": "coverage.json",
+  "coverageAnchor": [
+    96,
+    312
+  ],
+  "spriteGroundAnchor": [
+    96,
+    248
+  ],
+  "anchorConversion": {
+    "from": [
+      96,
+      312
+    ],
+    "to": [
+      96,
+      248
+    ],
+    "offset": [
+      0,
+      -64
+    ],
+    "artMoved": false
+  }
+}

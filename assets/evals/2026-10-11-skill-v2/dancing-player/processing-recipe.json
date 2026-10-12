@@ -1,0 +1,66 @@
+{
+  "version": 2,
+  "processor": "skill-snapshot/scripts/tile_tools.py",
+  "command": "process-on-floor",
+  "input": "source-player.png",
+  "guide": "guide.json",
+  "output": "processed",
+  "minAlpha": 32,
+  "fps": 12,
+  "allowGutterDrift": false,
+  "exactExecutedCommand": ".venv/bin/python assets/evals/2026-10-11-skill-v2/skill-snapshot/scripts/tile_tools.py process-on-floor assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png assets/evals/2026-10-11-skill-v2/dancing-player/guide.json assets/evals/2026-10-11-skill-v2/dancing-player/processed --min-alpha 32 --fps 12",
+  "exitCode": 1,
+  "log": "processing.log",
+  "diagnostic": "processing/diagnostic.json",
+  "documentedRecovery": {
+    "output": "recovered",
+    "minAlpha": 32,
+    "fps": 12,
+    "allowGutterDrift": true,
+    "exactExecutedCommand": ".venv/bin/python assets/evals/2026-10-11-skill-v2/skill-snapshot/scripts/tile_tools.py process-on-floor assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png assets/evals/2026-10-11-skill-v2/dancing-player/guide.json assets/evals/2026-10-11-skill-v2/dancing-player/recovered --min-alpha 32 --fps 12 --allow-gutter-drift",
+    "exitCode": 1,
+    "log": "recovery.log"
+  },
+  "sourcePreviewPartitioning": {
+    "method": "Same maximal transparent separator-band midpoint algorithm as frozen process_object_sheet; original raw pixels partitioned exhaustively",
+    "xCuts": [
+      0,
+      256,
+      512,
+      768,
+      1024
+    ],
+    "yCuts": [
+      0,
+      509,
+      1047,
+      1536
+    ],
+    "xBands": [
+      [
+        224,
+        288
+      ],
+      [
+        481,
+        544
+      ],
+      [
+        736,
+        800
+      ]
+    ],
+    "yBands": [
+      [
+        458,
+        560
+      ],
+      [
+        982,
+        1112
+      ]
+    ],
+    "everyOriginalPixelAssignedExactlyOnce": true,
+    "noSourcePixelsClipped": true
+  }
+}

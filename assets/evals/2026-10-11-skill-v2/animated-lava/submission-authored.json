@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "userRequest": "Generate a 12-frame looping moving lava tile animation at exactly 12 fps. Each frame has a full 128x128 base and 32px visible front-wall height, in the same top-down oblique projection. Preserve the anchor, base footprint, elevation, and connection to adjacent copies through the animation. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava.\n",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava",
+  "result": "result.json",
+  "sourceRecords": [
+    "generation-material.json"
+  ],
+  "sources": [
+    {
+      "image": "source-material.png",
+      "sha256": "442ec5bb437ce2ee0a20c53636065f00ce4021e612b68abe5036dd8607b35f77",
+      "recipe": "generation-material.json"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "543d17d20da7cf81af7055c9a0944018dccf8db6596d579dc81e2d0997abf777",
+  "guideRaster": "guide.png",
+  "guideRasterSHA256": "71eaf4d76d4f0e3080dda571aa0a9e5d31e31190ce18357b01c5081d705af25e",
+  "guideSVG": "guide.svg",
+  "registration": "registration.json",
+  "processingRecipe": "process-materials.py",
+  "processingLog": "processing.log",
+  "status": "processing-failed",
+  "diagnostic": "processing/diagnostic.json",
+  "generationCalls": 1,
+  "retries": 0
+}

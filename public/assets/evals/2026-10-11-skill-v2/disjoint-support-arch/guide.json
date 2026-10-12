@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "kind": "independent-depth-piece-sheet",
+  "size": [
+    1088,
+    960
+  ],
+  "frame": [
+    512,
+    448
+  ],
+  "anchor": [
+    256,
+    312
+  ],
+  "columns": 2,
+  "rows": 2,
+  "gutter": 64,
+  "cells": [
+    {
+      "index": 0,
+      "role": "left-pillar",
+      "rect": [
+        0,
+        0,
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "size": [
+        512,
+        448
+      ],
+      "elevationPx": 128,
+      "supportElevationPx": 0,
+      "supportElevationBakedIntoArt": true
+    },
+    {
+      "index": 1,
+      "role": "right-pillar",
+      "rect": [
+        576,
+        0,
+        1088,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "size": [
+        512,
+        448
+      ],
+      "elevationPx": 128,
+      "supportElevationPx": 0,
+      "supportElevationBakedIntoArt": true
+    },
+    {
+      "index": 2,
+      "role": "overhead-span",
+      "rect": [
+        0,
+        512,
+        512,
+        960
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "size": [
+        512,
+        448
+      ],
+      "elevationPx": 32,
+      "supportElevationPx": 128,
+      "supportElevationBakedIntoArt": true
+    }
+  ],
+  "unusedPanelRect": [
+    576,
+    512,
+    1088,
+    960
+  ],
+  "footprint": [
+    384,
+    128
+  ],
+  "groundRect": [
+    64,
+    248,
+    448,
+    376
+  ],
+  "supportCells": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "overheadCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "elevationPx": 160,
+  "registrationMethod": "declared-source-canvas-per-isolated-panel",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center"
+}

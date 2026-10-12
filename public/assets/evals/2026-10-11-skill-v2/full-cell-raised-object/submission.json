@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "request": "Generate a square stone plinth with a full 128x128 base and 64px visible height. Preserve the square-grid top-down oblique projection and fixed ground anchor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object.\n",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object",
+  "status": "processed",
+  "attempts": 1,
+  "sources": [
+    {
+      "image": "source-01.png",
+      "sha256": "990e17d82008ddee04de1fd5b6806413aa6d16ce40e5a5fc07e613b88abbf0b4",
+      "recipe": "generation-01.json",
+      "recipeSHA256": "564a8428412d82ca451c2f51a312274ce1a7c7d6e12ecddb678f5dc8157fd0f9",
+      "guide": "guide.json",
+      "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+      "guideSVG": "guide.svg",
+      "guideRaster": "guide-4x.png",
+      "guideRasterSHA256": "fc3288fdd80be070eff90f7f84f0c6ef207259e2a11ebb7970f1a8370a5b2bc8",
+      "references": [
+        {
+          "image": "references/generation-guide.png",
+          "sha256": "fc3288fdd80be070eff90f7f84f0c6ef207259e2a11ebb7970f1a8370a5b2bc8",
+          "role": "square material extent reference"
+        }
+      ],
+      "role": "appearance-material",
+      "authoredRecipe": "generation-01-authored.json",
+      "authoredRecipeSHA256": "b4ddff782f6a55c9ea51141bee8820bf908d08f054a659c000c31857b2a67db3"
+    }
+  ],
+  "result": "result.json",
+  "resultSHA256": "2ede26b17b87c881e83c1359b689e88f98c19aeb6c932b3b8484b8d7e4de1e4a",
+  "processing": "processing.json",
+  "previews": [
+    "previews/cutout-light-2x.png",
+    "previews/cutout-dark-2x.png",
+    "previews/placement-3x3.png",
+    "previews/placement-3x3-2x.png",
+    "previews/placement-5x5.png",
+    "previews/solid-coverage.png"
+  ],
+  "caseId": "full-cell-raised-object",
+  "userPrompt": "Generate a square stone plinth with a full 128x128 base and 64px visible height. Preserve the square-grid top-down oblique projection and fixed ground anchor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object.",
+  "guide": "guide.json",
+  "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+  "recipeConversion": "generation-01-authored.json preserved; generation-01.json losslessly serialized to portable public contract",
+  "resultKindConversion": {
+    "authoredResult": "result-kind-authored.json",
+    "authoredResultSHA256": "b44e611dc72477d09200416fa098ebd8a28b59b34b7ee634661d8591c5b903a2",
+    "originalKind": "raised-object",
+    "canonicalKind": "object",
+    "assetSubtype": "raised-object",
+    "geometryAndArtChanged": false
+  }
+}

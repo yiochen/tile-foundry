@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "kind": "floor",
+  "size": [
+    128,
+    128
+  ],
+  "cellSize": 128,
+  "anchor": [
+    64,
+    64
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "checks": {
+    "requestExact": true,
+    "outputDirectoryExact": true,
+    "sourceHashExact": true,
+    "referenceHashesExact": true,
+    "guideHashExact": true,
+    "oneGeneration": true,
+    "modelPromptExact": true,
+    "imageSizesExact": true,
+    "sourcePreserved": true,
+    "noIndependentReviewWritten": true
+  },
+  "scope": "delivery/provenance only; no grading or geometry-pass claim",
+  "sourceSHA256": "688a7d7f3f28dd96a06915118b0b828cd4879c8b386bc1a0aa483e126a2d9145",
+  "resultSHA256": "972a47f5b4985368f6057b12777f1e17ad5b991c0a428b24d4424da30d722c23"
+}

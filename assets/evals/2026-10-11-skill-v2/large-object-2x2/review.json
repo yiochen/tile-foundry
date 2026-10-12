@@ -1,0 +1,40 @@
+{
+  "reviewer": "Root assistant, independent of fresh executor agents",
+  "independent": true,
+  "spriteSHA256": {
+    "fountain": "c2e8113ca895b7fac9f624e1c3d91253b0e0ae7332236942413b13088ea9b57a"
+  },
+  "resultSHA256": "9a6cf6654c6d1ecaa14ec51b89f8a08148bb99f561342317600e68b6f32c4ebe",
+  "guideSHA256": "cee1a1a4b696596bbefe92e8fcb80bbb6b28aabc96e95786f9c37b6ee60d830c",
+  "checks": {
+    "projection": {
+      "pass": false,
+      "note": "The fountain is top/front readable, but the base depth is foreshortened rather than occupying the screen-aligned 256x256 ground rectangle."
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "anchor-placement": {
+      "pass": false,
+      "note": "The stone foundation lies above and inside the declared 2x2 ground boundaries; a correct stored center is not proof that its base lands there."
+    },
+    "multi-cell-size": {
+      "pass": false,
+      "note": "Actual base does not fill the 256x256 ground footprint shown in the independent placement preview; it was not resized or refitted."
+    },
+    "multi-cell-overlap": {
+      "pass": false,
+      "note": "Whole art survives, but neighbor previews cannot establish correct occupancy/overlap because base placement and depth drift."
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  },
+  "limitations": [
+    "One fresh attempt per case does not estimate reliability.",
+    "Landmark/perspective judgments are approximate; no AI geometric exactness is claimed."
+  ],
+  "inspection": "Original generated art, actual light/dark cutouts, registration placement and repeated terrain images inspected."
+}

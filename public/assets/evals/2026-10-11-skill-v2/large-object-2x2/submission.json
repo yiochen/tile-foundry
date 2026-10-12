@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "caseId": "large-object-2x2",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2",
+  "userPrompt": "Generate a stone fountain occupying exactly a 2x2 square of 128px cells (256x256 ground footprint), with 128px visible height. Deliver one complete transparent object, with a ground anchor at the center of the 2x2 footprint. Deliver each sprite in a 384x576px frame with local projected ground anchor (192,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json",
+      "role": "whole-asset"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "cee1a1a4b696596bbefe92e8fcb80bbb6b28aabc96e95786f9c37b6ee60d830c",
+  "result": "result.json",
+  "registration": "registration.json",
+  "previews": [
+    "previews/placement-light.png",
+    "previews/neighbors-light.png",
+    "previews/placement-dark.png",
+    "previews/neighbors-dark.png"
+  ],
+  "guideFiles": {
+    "guide.svg": "b6220112570efee63de261a6c916a4619b5702f66f6c756b765e051da0e6d2c5",
+    "guide.png": "d6da241651b5ef47441dc480622d9b6364ca1663474edca2304b405f8dfb65f1",
+    "guide.json": "cee1a1a4b696596bbefe92e8fcb80bbb6b28aabc96e95786f9c37b6ee60d830c",
+    "references/guide-2x.png": "b8feb037e41fe0a02d15c6ad0857a69dae7e3e122abbda311adbf724c5177391"
+  },
+  "registrationSHA256": "6f4f47ec79fada27416129830268ce2d5a3316112e4b91d1232e4bd03eeed3d4"
+}

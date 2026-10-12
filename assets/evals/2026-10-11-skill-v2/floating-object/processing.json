@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "commands": [
+    "tile_tools.py process-on-floor source-01.png guide.json processed --min-alpha 32",
+    "assemble_result.py --input-result processed/result.json --registration registration.json --output result.json"
+  ],
+  "processorResult": "processed/result.json",
+  "processorResultSHA256": "3cc08cdb652b43e40b4b619c90337e032148cbb3dfbdfb02e758c7661b77709f",
+  "sourceUnchanged": true,
+  "finalSpriteCopiedUnchangedFrom": "processed/frames/frame-00.png"
+}

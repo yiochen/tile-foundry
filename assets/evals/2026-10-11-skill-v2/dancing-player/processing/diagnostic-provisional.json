@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "outcome": "processing-failed",
+  "error": "Error: Art crosses a sheet gutter; regenerate isolated panels instead of clipping",
+  "sourceSize": [
+    1024,
+    1536
+  ],
+  "sourceAlphaExtrema": [
+    0,
+    254
+  ],
+  "plannedGutterAndMarginPixels": 835584,
+  "opaquePixelsOutsidePanelsAtAlpha32": 108955,
+  "guideSize": [
+    1024,
+    1536
+  ],
+  "sourceGuideUniformScale": [
+    1.0,
+    1.0
+  ],
+  "recoveryNotAttempted": "Continuous opaque generated scenery/background in all planned gutters; no transparent separator recovery can retain this alpha as independent sprites.",
+  "repairPolicy": "No background guessing, clipping, alpha threshold escalation, or generation retry."
+}

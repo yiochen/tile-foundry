@@ -1,0 +1,75 @@
+{
+  "run": "2026-10-11-skill-v2",
+  "freshGenerationCalls": 14,
+  "retries": 0,
+  "passed": 1,
+  "failed": 12,
+  "trials": [
+    {
+      "caseId": "seamless-square-floor",
+      "status": "failed",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "lava-tile",
+      "status": "failed",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "full-cell-raised-object",
+      "status": "passed",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "partial-cell-tall-object",
+      "status": "failed",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "floating-object",
+      "status": "failed",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "character-directions",
+      "status": "failed",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "large-object-2x2",
+      "status": "failed",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "large-object-3x2",
+      "status": "failed",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "disjoint-support-arch",
+      "status": "failed",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "animated-waves",
+      "status": "failed",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "animated-lava",
+      "status": "failed",
+      "generationCalls": 1
+    },
+    {
+      "caseId": "seated-character-separated",
+      "status": "failed",
+      "generationCalls": 2
+    },
+    {
+      "caseId": "dancing-player",
+      "status": "failed",
+      "generationCalls": 1
+    }
+  ],
+  "scope": "Frozen v2 contract; fresh generation, independent review, no skill tuning or correction generations."
+}

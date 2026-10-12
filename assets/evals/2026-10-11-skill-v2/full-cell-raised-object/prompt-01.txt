@@ -1,0 +1,7 @@
+Use case: stylized-concept
+Asset type: opaque stone material swatch for a deterministic raised square game plinth.
+Primary request: Generate one new stone material for a square stone plinth with a full 128x128 base and 64px visible height in top-down oblique square-grid game projection. Authored SVG geometry owns the exact shape; this image generation is the appearance swatch only.
+Input images: Image 1 is a sparse square material extent reference, not an edit target or style reference. Fill the entire opaque image square with stone material.
+Appearance: clean illustrated weathered gray stone, subtle mottling, mineral grain, a few small natural cracks, moderate contrast so the top/front geometry remains readable at 128px. Uniform diffuse lighting with no large-scale directional gradient.
+Composition: a flat material surface viewed straight overhead, screen-aligned square. No depicted 3D object or perspective within this texture.
+Constraints: opaque full-image surface, no empty margin, external shadows, border, bevel, plinth silhouette, studs, symbols, props, scenery, text or watermark. The generated material details will be uniformly fitted to authored exact top/front faces, 64px elevation upward, in a 192x320 sprite frame. The logical footprint stays 128x128 and the projected ground-center anchor stays (96,248); camera profile top-down-oblique-square-grid, height axis [0,-1], elevation scale 1. Generate one new image.

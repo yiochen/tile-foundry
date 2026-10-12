@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "records": [
+    {
+      "source": "source-stool.png",
+      "sourceSize": [
+        971,
+        1619
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "floorObservation": {
+        "mode": "solid",
+        "rect": [
+          161,
+          928,
+          810,
+          1538
+        ],
+        "anchor": [
+          485.5,
+          1233.0
+        ],
+        "aspect": 1.0639344262295083,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "outcome": "processing-failed",
+      "error": "Calibration floor is not square enough; regenerate instead of warping",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/process-layers.py\", line 15, in <module>\n    output,info=process_floor_object(image,[123,209,75])\n                ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/skill-snapshot/scripts/tile_tools.py\", line 349, in process_floor_object\n    raise ValueError('Calibration floor is not square enough; regenerate instead of warping')\nValueError: Calibration floor is not square enough; regenerate instead of warping\n"
+    },
+    {
+      "source": "source-character.png",
+      "sourceSize": [
+        971,
+        1619
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "outcome": "processing-failed",
+      "error": "No wide connected alpha band identifies the floor",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/process-layers.py\", line 14, in <module>\n    rec['floorObservation']=floor_anchor(image)\n                            ~~~~~~~~~~~~^^^^^^^\n  File \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/skill-snapshot/scripts/tile_tools.py\", line 199, in floor_anchor\n    raise ValueError(\"No wide connected alpha band identifies the floor\")\nValueError: No wide connected alpha band identifies the floor\n"
+    }
+  ],
+  "repairPolicy": "No alpha fitting, geometric warp, source redraw or generation retry."
+}

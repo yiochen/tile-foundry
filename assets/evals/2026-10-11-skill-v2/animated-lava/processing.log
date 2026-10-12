@@ -1,0 +1,342 @@
+{
+  "version": 2,
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "guideSize": [
+    1024,
+    1024
+  ],
+  "sourceUniformScale": 1.224609375,
+  "materialSamplingRecords": [
+    {
+      "index": 0,
+      "authoredMaterialRect": [
+        64,
+        96,
+        192,
+        224
+      ],
+      "actualSourceRect": [
+        78,
+        118,
+        235,
+        274
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        131,
+        255
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    },
+    {
+      "index": 1,
+      "authoredMaterialRect": [
+        320,
+        96,
+        448,
+        224
+      ],
+      "actualSourceRect": [
+        392,
+        118,
+        549,
+        274
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        121,
+        255
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    },
+    {
+      "index": 2,
+      "authoredMaterialRect": [
+        576,
+        96,
+        704,
+        224
+      ],
+      "actualSourceRect": [
+        705,
+        118,
+        862,
+        274
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        130,
+        255
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    },
+    {
+      "index": 3,
+      "authoredMaterialRect": [
+        832,
+        96,
+        960,
+        224
+      ],
+      "actualSourceRect": [
+        1019,
+        118,
+        1176,
+        274
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        127,
+        255
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    },
+    {
+      "index": 4,
+      "authoredMaterialRect": [
+        64,
+        448,
+        192,
+        576
+      ],
+      "actualSourceRect": [
+        78,
+        549,
+        235,
+        705
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        251,
+        254
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    },
+    {
+      "index": 5,
+      "authoredMaterialRect": [
+        320,
+        448,
+        448,
+        576
+      ],
+      "actualSourceRect": [
+        392,
+        549,
+        549,
+        705
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        251,
+        254
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    },
+    {
+      "index": 6,
+      "authoredMaterialRect": [
+        576,
+        448,
+        704,
+        576
+      ],
+      "actualSourceRect": [
+        705,
+        549,
+        862,
+        705
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        252,
+        254
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    },
+    {
+      "index": 7,
+      "authoredMaterialRect": [
+        832,
+        448,
+        960,
+        576
+      ],
+      "actualSourceRect": [
+        1019,
+        549,
+        1176,
+        705
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        251,
+        254
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    },
+    {
+      "index": 8,
+      "authoredMaterialRect": [
+        64,
+        800,
+        192,
+        928
+      ],
+      "actualSourceRect": [
+        78,
+        980,
+        235,
+        1136
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    },
+    {
+      "index": 9,
+      "authoredMaterialRect": [
+        320,
+        800,
+        448,
+        928
+      ],
+      "actualSourceRect": [
+        392,
+        980,
+        549,
+        1136
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    },
+    {
+      "index": 10,
+      "authoredMaterialRect": [
+        576,
+        800,
+        704,
+        928
+      ],
+      "actualSourceRect": [
+        705,
+        980,
+        862,
+        1136
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    },
+    {
+      "index": 11,
+      "authoredMaterialRect": [
+        832,
+        800,
+        960,
+        928
+      ],
+      "actualSourceRect": [
+        1019,
+        980,
+        1176,
+        1136
+      ],
+      "sampleSize": [
+        157,
+        156
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sampling": "Predetermined interior material window; sprite geometry comes solely from authored SVG faces",
+      "outcome": "processing-failed",
+      "error": "Material texture must be opaque; generate a flat material, not an object cutout"
+    }
+  ],
+  "failures": [
+    "frame 0: Material texture must be opaque; generate a flat material, not an object cutout",
+    "frame 1: Material texture must be opaque; generate a flat material, not an object cutout",
+    "frame 2: Material texture must be opaque; generate a flat material, not an object cutout",
+    "frame 3: Material texture must be opaque; generate a flat material, not an object cutout",
+    "frame 4: Material texture must be opaque; generate a flat material, not an object cutout",
+    "frame 5: Material texture must be opaque; generate a flat material, not an object cutout",
+    "frame 6: Material texture must be opaque; generate a flat material, not an object cutout",
+    "frame 7: Material texture must be opaque; generate a flat material, not an object cutout",
+    "frame 8: Material texture must be opaque; generate a flat material, not an object cutout",
+    "frame 9: Material texture must be opaque; generate a flat material, not an object cutout",
+    "frame 10: Material texture must be opaque; generate a flat material, not an object cutout",
+    "frame 11: Material texture must be opaque; generate a flat material, not an object cutout"
+  ],
+  "spritesCreated": 0,
+  "repairPolicy": "No alpha coercion, axis stretching, sample-window fitting, or generation retry."
+}

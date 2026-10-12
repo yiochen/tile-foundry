@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "request": "Generate a raised lava tile with a full 128x128 square base and a visibly 32px-high front wall, in top-down oblique game projection. Its surface should connect with identical neighboring tiles. Keep the logical footprint fixed as the top extends above the cell upper boundary. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/lava-tile.\n",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/lava-tile",
+  "status": "processed",
+  "attempts": 1,
+  "sources": [
+    {
+      "image": "source-01.png",
+      "sha256": "07b63813d3af22f16ce9d5d7639dce220000ddcefff0d1115a828b135af8ae22",
+      "recipe": "generation-01.json",
+      "recipeSHA256": "c045f304cf1a23efd4b8bede1b867115b69958aaa378069f9ee61ced70ab6722",
+      "guide": "guide.json",
+      "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+      "guideSVG": "guide.svg",
+      "guideRaster": "guide-4x.png",
+      "guideRasterSHA256": "fc3288fdd80be070eff90f7f84f0c6ef207259e2a11ebb7970f1a8370a5b2bc8",
+      "references": [
+        {
+          "image": "references/generation-guide.png",
+          "sha256": "fc3288fdd80be070eff90f7f84f0c6ef207259e2a11ebb7970f1a8370a5b2bc8",
+          "role": "square material extent reference"
+        }
+      ],
+      "role": "appearance-material",
+      "authoredRecipe": "generation-01-authored.json",
+      "authoredRecipeSHA256": "49723a83a385c5d0812598450e0bcdacde9ec8b1815008f651e49f78cd6e7363"
+    }
+  ],
+  "result": "result.json",
+  "resultSHA256": "8e0482b6a984bd5353f0caa7a56416509ed6212404da1a190444e5fbea369be1",
+  "processing": "processing.json",
+  "previews": [
+    "previews/cutout-light-2x.png",
+    "previews/cutout-dark-2x.png",
+    "previews/placement-3x3.png",
+    "previews/placement-3x3-2x.png",
+    "previews/placement-5x5.png",
+    "previews/solid-coverage.png"
+  ],
+  "caseId": "lava-tile",
+  "userPrompt": "Generate a raised lava tile with a full 128x128 square base and a visibly 32px-high front wall, in top-down oblique game projection. Its surface should connect with identical neighboring tiles. Keep the logical footprint fixed as the top extends above the cell upper boundary. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/lava-tile.",
+  "guide": "guide.json",
+  "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+  "recipeConversion": "generation-01-authored.json preserved; generation-01.json losslessly serialized to portable public contract",
+  "resultKindConversion": {
+    "authoredResult": "result-kind-authored.json",
+    "authoredResultSHA256": "a9a9d1a1490d61050f65018adb25450bb33fed93cd87b38f4fb9e934e9a09b14",
+    "originalKind": "raised-object",
+    "canonicalKind": "object",
+    "assetSubtype": "raised-object",
+    "geometryAndArtChanged": false
+  }
+}

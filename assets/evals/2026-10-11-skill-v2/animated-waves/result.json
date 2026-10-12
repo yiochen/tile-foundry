@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "kind": "animation",
+  "status": "processing-failed",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center",
+  "fps": 12,
+  "requestedFrameCount": 12,
+  "intendedFrame": [
+    192,
+    320
+  ],
+  "intendedAnchor": [
+    96,
+    248
+  ],
+  "intendedFootprint": [
+    128,
+    128
+  ],
+  "intendedElevationPx": 32,
+  "sprites": [],
+  "sourceRecords": [
+    "generation-material.json"
+  ],
+  "guide": "guide.json",
+  "processing": "processing/diagnostic.json",
+  "previews": [
+    "previews/source-light.png",
+    "previews/source-dark.png",
+    "previews/index.html",
+    "previews/source-gallery-desktop.png",
+    "previews/source-gallery-mobile.png"
+  ],
+  "outcome": "Raw generated material sheet retained. Frozen material compositor refused all samples because they are not fully opaque; no runtime sprites or successful loop claimed.",
+  "geometryDeclaration": "Authored intended constraints are not delivered sprite geometry."
+}

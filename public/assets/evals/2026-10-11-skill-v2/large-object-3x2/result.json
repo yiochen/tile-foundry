@@ -1,0 +1,224 @@
+{
+  "kind": "object",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center",
+  "frame": [
+    512,
+    576
+  ],
+  "anchor": [
+    256,
+    376
+  ],
+  "footprint": [
+    384,
+    256
+  ],
+  "elevationPx": 128,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "supportCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ]
+  ],
+  "registrationAuthoredBeforeGeneration": true,
+  "registrationMethod": "declared-source-canvas",
+  "version": 2,
+  "status": "processed-with-limits",
+  "sprites": [
+    {
+      "id": "greenhouse",
+      "image": "sprites/greenhouse.png",
+      "size": [
+        512,
+        576
+      ],
+      "anchor": [
+        256,
+        376
+      ],
+      "footprint": [
+        384,
+        256
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "supportCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "elevationPx": 128,
+      "artRect": [
+        25,
+        23,
+        476,
+        494
+      ],
+      "registration": {
+        "method": "authored-source-canvas",
+        "guide": "guide.json",
+        "sourceAnchor": [
+          591,
+          868.03125
+        ],
+        "uniformRequestedScale": 0.43316412859560066,
+        "sourceCanvasAspectDrift": 0.0001879699248119593,
+        "alphaBoundsUsedOnlyForStorageCrop": true
+      },
+      "processing": {
+        "sourceSize": [
+          1182,
+          1330
+        ],
+        "sourceRect": [
+          49,
+          23,
+          1170,
+          1330
+        ],
+        "anchor": [
+          256.0,
+          376.0
+        ],
+        "anchorSource": [
+          591.0,
+          868.03125
+        ],
+        "size": [
+          512,
+          576
+        ],
+        "subpixelShift": [
+          0.020517395182849896,
+          0.05685730680949064
+        ],
+        "footprint": [
+          384,
+          256
+        ],
+        "artRect": [
+          21,
+          10,
+          486,
+          566
+        ],
+        "scale": [
+          0.4335414808206958,
+          0.43305279265493496
+        ],
+        "sourceAnchorMode": "explicit"
+      }
+    }
+  ],
+  "geometryDeclaration": "Footprint, occupancy, elevation and anchor are authored constraints, not evidence of exact AI geometry.",
+  "geometryPrecision": "Approximate AI artwork; source-canvas scale retained without silhouette fitting.",
+  "limitations": [
+    "Faint source alpha extends to the bottom source edge; no background guessing, keying or alpha cleanup was applied. threshold 0 includes the full nonzero source alpha bounds; normal resize quantization may drop faint pixels.",
+    "Visible base dimensions and placement may drift from guide; no correction or anchor fitting was performed.",
+    "No single-cell calibration detector was used for this multi-cell asset."
+  ],
+  "previews": [
+    "previews/placement-light.png",
+    "previews/neighbors-light.png",
+    "previews/placement-dark.png",
+    "previews/neighbors-dark.png"
+  ]
+}

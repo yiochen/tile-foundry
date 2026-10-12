@@ -1,0 +1,245 @@
+{
+  "version": 2,
+  "caseId": "character-directions",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "f9ffad56932879bb42a6a26af8e3528439b6e3228428f551b678efd5370cce95"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide-2x.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "664e321ee4f2b45cc7d7ab9d4e3e0a082bcb14a82f4655e28e646330c50459e3"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "directions",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "north",
+        "northeast",
+        "east",
+        "southeast",
+        "south",
+        "southwest",
+        "west",
+        "northwest"
+      ]
+    },
+    {
+      "check": "north-frame-margin",
+      "pass": true,
+      "detail": "No retained art at frame edges"
+    },
+    {
+      "check": "northeast-frame-margin",
+      "pass": true,
+      "detail": "No retained art at frame edges"
+    },
+    {
+      "check": "east-frame-margin",
+      "pass": true,
+      "detail": "No retained art at frame edges"
+    },
+    {
+      "check": "southeast-frame-margin",
+      "pass": true,
+      "detail": "No retained art at frame edges"
+    },
+    {
+      "check": "south-frame-margin",
+      "pass": true,
+      "detail": "No retained art at frame edges"
+    },
+    {
+      "check": "southwest-frame-margin",
+      "pass": true,
+      "detail": "No retained art at frame edges"
+    },
+    {
+      "check": "west-frame-margin",
+      "pass": true,
+      "detail": "No retained art at frame edges"
+    },
+    {
+      "check": "northwest-frame-margin",
+      "pass": true,
+      "detail": "No retained art at frame edges"
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "eight-directions",
+      "pass": true,
+      "detail": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ]
+    },
+    {
+      "check": "upright-bounds-diagnostic",
+      "pass": true,
+      "detail": {
+        "alphaHeights": [
+          189,
+          193,
+          196,
+          196,
+          192,
+          199,
+          197,
+          194
+        ],
+        "note": "Toe length changes bounds; independent neutral standing height determines pass/fail"
+      }
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Reviewer identity, independence declaration and hashes of all art, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "anchor-placement",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "same-character",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "direction-height",
+      "pass": false,
+      "detail": "Neutral upright head-to-root estimates are 180\u2013182px in the actual normalized frames. Spread is small, but the requested nominal height is 160px."
+    },
+    {
+      "check": "direction-contact",
+      "pass": false,
+      "detail": "Stored floor roots are identical; physical heel/support centers are approximate and some rotated views visibly shift. Independent inspection cannot establish the required 2px physical-contact tolerance from these shoe silhouettes."
+    },
+    {
+      "check": "cutout",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    {
+      "check": "neutralHeightPx",
+      "pass": false,
+      "detail": [
+        181,
+        182,
+        181,
+        180,
+        182,
+        181,
+        181,
+        181
+      ]
+    },
+    {
+      "check": "rootDriftPx",
+      "pass": false,
+      "detail": []
+    }
+  ],
+  "reviewArtifacts": {},
+  "scope": "Artifact checks and independent review; no fresh generation is performed by the grader."
+}
