@@ -64,4 +64,3 @@ def export_tiled(scene, assets, output):
         value['properties'] = [{'name': 'blockExperiment', 'type': 'string', 'value': experiment}]
     write_json(output, value)
     return value
-
