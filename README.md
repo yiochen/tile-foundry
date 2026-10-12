@@ -1,7 +1,7 @@
 # Tile Foundry
 
 A reproducible image-generation → tile-processing → React-preview workflow for
-square-grid, orthographic top-and-front game art. Full sprites have different heights and
+square-grid game art in top-down oblique projection. Full sprites have different heights and
 overlap rows behind them; their logical cells stay the same size.
 
 [Open the playground](https://tile-foundry-yiochen.netlify.app/) ·
@@ -160,7 +160,8 @@ calls. The **Workflows** view previews them at a fixed 128px ground pitch.
 
 ![Two materials across four heights](docs/preview-material-scene.png)
 
-Recipes and expanded generation prompts are in the repo skill and `assets/prompts/`.
+Saved experiment recipes and expanded generation prompts are in `assets/prompts/`;
+the skill contains reusable prompting guidance.
 See [detailed findings](docs/workflow-findings.md) and the machine-readable
 [`workflow-comparison.json`](docs/workflow-comparison.json).
 
@@ -179,29 +180,33 @@ in this repo and does not change your account-level skills automatically.
 
 ## Skill workflow and evals
 
-The repo skill now covers visible floors (for example, **generate a lava tile**)
-and objects/animations on removable calibration floors (for example,
-**generate a player dancing spritesheet on tile**). Its default uses sparse SVG
-guidance, textual appearance, and the intact floor to set scale and anchor before
-explicit green keying. See [the runnable workflow](skills/build-overlap-tiles/references/floor-and-objects.md).
+The skill is a self-contained bundle for any project. Copy the complete
+`skills/build-overlap-tiles/` directory; its Python helpers, dependencies, reference
+scene, output contract and eval tooling travel together. It targets square-grid
+**top-down oblique projection**, with independent footprints, art bounds, ground
+anchors and height. All current animation output/preview schedules use **12 fps**.
 
-Fresh independent executions produced a lava floor and two dance attempts.
-The first dance failed pose diversity. The corrected retry passed after an
-explicit transparent-separator recovery preserved fingers protruding into the
-planned gutter. Both attempts, strict-cut refusal, exact prompts, original PNGs,
-and independent reviews are retained; no failed generation was hidden.
-See [eval findings and previews](docs/skill-eval-findings.md) and
-[the fresh-run protocol](skills/build-overlap-tiles/evals/protocol.md).
+The new [13-case suite](skills/build-overlap-tiles/evals/cases.json) is specified
+and **not run**. It includes raised lava with a 32px front wall, seam-free flat
+floors, full/partial bases, floating objects, eight directions, 2×2/3×2 footprints,
+a disjoint-support arch, moving waves/lava, separated stool/character layers,
+and a 12-frame dance. Each prepared request names an explicit output directory.
+See [portable eval setup](docs/portable-skill-evals.md) and
+[the portable protocol](skills/build-overlap-tiles/evals/protocol.md).
+
+The earlier two-case generation run remains an archive with its original
+flat-lava and 8 fps expectations, sources and reviews. The first dance failed
+pose diversity; the retry passed after transparent-separator recovery.
+Published previews reuse those frames at 12 fps without rewriting their source
+records or counting them as results for the new suite.
 
 ```sh
-# Replay all saved artifact checks, including the expected failed first attempt
+# Replay the historical run against its frozen original cases, including its failure
 npm run eval:skill
 ```
 
-Replay checks sources, geometry, alpha, measured floor normalization, sheet
-reconstruction, and the saved visual reviews. It does not run image generation
-or measure how today's agent follows the skill; a new behavioral score requires
-a fresh execution of the two short prompts.
+See [historical findings](docs/skill-eval-findings.md). Replay performs no image
+generation; new behavioral scores require fresh execution of the frozen new suite.
 
 ## Verify
 

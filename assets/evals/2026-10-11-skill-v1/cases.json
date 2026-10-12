@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skill": "skills/build-overlap-tiles/SKILL.md",
+  "cases": [
+    {
+      "id": "lava-tile",
+      "prompt": "generate a lava tile",
+      "kind": "floor",
+      "expected": {"size": [128, 128], "footprint": [128, 128], "anchor": [64, 64], "minimumAlpha": 250},
+      "visualChecks": {
+        "lava-readable": "Glowing lava and volcanic crust read as a lava ground material at game scale.",
+        "floor-projection": "Flat top-down square, no raised cube, props, labels, or empty margins.",
+        "repeat-inspected": "A real 3x3 repeat was inspected and any edge discontinuity is reported; seamlessness is not assumed."
+      }
+    },
+    {
+      "id": "dancing-player",
+      "prompt": "generate a player dancing spritesheet on tile",
+      "kind": "animation",
+      "expected": {"frames": 6, "size": [192, 320], "footprint": [128, 128], "anchor": [96, 248], "columns": 3, "rows": 2, "durationMs": 125},
+      "visualChecks": {
+        "same-player": "One recognizable invented player, with consistent face, outfit, palette, proportions, camera, and lighting.",
+        "dancing-poses": "Six distinct readable dance poses following the guide's arm directions and stance, without unintended duplicate panels or missing/fused limbs.",
+        "cutout-quality": "Floor removal is usable on light and dark backgrounds; report spill, holes, or damaged shoes.",
+        "anchored-playback": "Animation inspected at the stored ground point for drift and scale jitter; no per-frame foot fitting."
+      }
+    }
+  ]
+}

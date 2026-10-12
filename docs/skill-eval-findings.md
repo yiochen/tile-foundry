@@ -1,5 +1,11 @@
 # Repo skill and fresh behavioral evals
 
+This is the historical v1 pilot report. Its two-case rubric and original 8 fps
+records are preserved in `assets/evals/2026-10-11-skill-v1/`. The portable
+[13-case v2 suite](portable-skill-evals.md) is specified but has not been run.
+The gallery derives 12 fps playback from these old frames; that is not a new
+generation or an animation-quality result for v2.
+
 The updated [build-overlap-tiles skill](../skills/build-overlap-tiles/SKILL.md)
 covers visible floor generation and object/animation generation on a removable
 calibration floor. Its [workflow reference](../skills/build-overlap-tiles/references/floor-and-objects.md)

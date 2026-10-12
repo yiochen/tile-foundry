@@ -1,84 +1,92 @@
 ---
 name: build-overlap-tiles
-description: Generate floor tiles, isolated objects, and character animation sheets for Tile Foundry using SVG guides, floor-derived scale and anchors, and removable calibration colors. Use for game tile or spritesheet generation, normalization, atlas packing, and overlap previews.
+description: Generate square-grid game floors, raised objects, characters, and animation sheets in top-down oblique projection, with reusable ground anchors, independent footprints, removable calibration guides, and 12 fps animation.
 ---
 
 # Build overlap tiles
 
-Run commands from the repository root. Generate new artwork with the available
-image-generation tool; use `tools/tilekit.py` for deterministic processing.
-Preserve original outputs, actual expanded prompts, and every supplied reference.
+Use this skill in any target project. Resolve `SKILL_DIR` to the directory
+containing this file and `OUTPUT_DIR` to the user-requested asset destination.
+Keep outputs there; do not assume a repository layout, engine, playground, or API
+credentials. Bundled commands work from any current directory:
 
-## Choose the workflow
+```sh
+python -m pip install -r "$SKILL_DIR/scripts/requirements.txt"
+python "$SKILL_DIR/scripts/guide_tools.py" object "$OUTPUT_DIR/guide"
+```
 
-- **Visible floor**, such as “generate a lava tile”: use a sparse square SVG as
-  the sole image reference and generate a complete opaque ground material. Read
-  [floor and object workflow](references/floor-and-objects.md), floor mode.
-  The output is the floor itself; do not chroma-key its material colors.
-- **Object/player on a tile**, including dancing or airborne poses: use a plain
-  reserved-color calibration floor plus a sparse pose or height guide. Read
-  [floor and object workflow](references/floor-and-objects.md), object mode.
-  Measure the intact floor → uniformly normalize → key the reserved color →
-  retain that frame and anchor. A stick pose leaves appearance to the model;
-  detailed SVG art is appropriate when preserving an existing design.
-- **Raised blocks, precise heights, or connected terrain**: read
-  [SVG-led workflows](references/svg-workflows.md) and
-  [geometry](references/geometry.md). Retain authored SVG geometry and composite
-  AI material when exact silhouettes are required. Existing demo rebuilds use
-  `python tools/build_demo.py` and `python tools/build_experiments.py`.
+Generate new artwork with the available image-generation tool. Use bundled scripts
+for deterministic processing. Retain original generated images, exact expanded
+prompts, references, SVGs, raster guides, and processing metadata.
 
-Use a sole SVG raster reference by default. Describe appearance in text. Add an
-identity/style reference only when requested or needed for continuity, and record
-it; a reference's object shape can bias generated geometry. These are practical
-defaults from small experiments, not proof of reliable geometric fidelity.
+## Target projection
 
-## Geometry that survives post-processing
+Use **top-down oblique projection, square-grid, front-facing three-quarter game
+view**. Ground cells remain screen-aligned squares; object tops and fronts are
+visible, parallel edges retain their direction, and height projects upward over
+the row behind. This is an illustrated parallel-projection convention; “3/4” does
+not specify a physical camera angle. Read [projection](references/projection.md)
+and inspect the bundled reference when choosing a guide. Record the projection
+profile with the result, and use it consistently across poses and frames.
 
-Keep logical footprint, art bounds, and anchor separate. Ground tiles default to
-128×128 with center anchor (64,64). Calibration objects default to a 128px floor,
-192×320 frame, and cell-center anchor (96,248). Legacy block/village art uses
-(96,312); do not transfer that bottom anchor to calibrated characters.
+## Choose geometry and guidance
 
-The measured floor sets scale and position. Character height, shoe length, and
-jump elevation do not alter grid pitch. The visible shoe bottom can extend below
-the center; it is not an anchor error. Never fit animation anchors to boot
-landmarks or recompute them after keying/cropping. Store `groundAnchorAlignment:
-"center"` for calibration-object scenes and preserve it in Tiled export.
+- **Flat floor:** generate an opaque square surface from a sparse SVG raster.
+  Keep the complete square. Inspect repeated neighbors for color/pattern continuity,
+  not just full alpha. Read [floor and object workflow](references/floor-and-objects.md).
+- **Full-cell raised object:** retain a full square logical base and explicit
+  elevation. A raised lava tile includes a front wall. For exact joins, use
+  authored SVG faces plus generated materials; for a whole-object AI render,
+  measure and report any geometry drift. Read [SVG workflows](references/svg-workflows.md).
+- **Partial-base or floating object / character:** use a plain, explicitly reserved
+  calibration color and sparse height/pose guide. Measure the intact visible floor,
+  normalize uniformly, remove the calibration substrate, and retain that frame
+  and anchor. Sparse guides leave appearance to the model.
+- **Directions or animation:** keep the camera, anatomy scale, floor registration,
+  and root fixed. Turn or pose the subject. All animations use **12 fps**
+  (`1000/12` ms per frame). A changing pose may change silhouette bounds; never
+  resize each frame to force an equal bounding-box height.
+- **Multi-cell, disjoint support, arch, or stacked layers:** declare footprint,
+  occupied/support cells, overhead extent, support elevation, and layer/depth
+  pieces before generation. Read [geometry and output contract](references/geometry.md).
+  Preserve complete separate assets. Do not slice a flattened overlapping scene.
 
-For animation, generate known isolated panels with transparent gutters, then
-process each panel's intact floor independently. Strict `process-on-floor` rejects
-art in planned gutters. If panels remain isolated, the documented transparent-
-separator recovery can preserve protruding fingers without clipping. Aspect
-distortion, touching panels, and frame overflow still fail. Never slice a flattened overlapping
-scene or stretch a single axis to make a rejected output pass.
+Use a sole SVG raster reference by default, with style described in text. Supply
+an identity or support reference when continuity/attachment needs it and record
+its role. The bundled scene illustrates projection; it is not a default style
+reference to supply to every image call. A style image's object shape can bias
+geometry. Inspect each input raster before using it.
 
-The calibration floor uses explicitly reserved RGB (123,209,75) by default;
-chroma keying is intentional, not background-color inference. Reserve its hue in
-object parts overlapping the floor, or choose another saturated key color.
-Mixed boot/floor pixels have an approximate matte. Use a plain floor without
-pale accents; detached-corner extraction is an alternative when exact retained
-component pixels matter. Do not remove actual ground textures by this key.
+## Anchors and extraction
 
-## Deliver and check
+Defaults: 128px ground cell; flat floor 128×128 with center anchor (64,64);
+single-cell object 192×320 with projected ground-center anchor (96,248) and
+calibration floor `(32,184)–(160,312)`. Frame size is configurable and must grow
+for large/tall art. Height does not change grid pitch or scale the entire sprite.
 
-Save sources and prompts before processing. Ship normalized PNGs, a result JSON
-with measured floor/normalization/key settings, and per-frame anchors, timing,
-and sheet layout for animations. Inspect cutouts against light and dark grounds,
-and animations at the stored anchor; assess design consistency and motion as well
-as alpha. Report limitations rather than claim exact AI geometry or seamlessness.
+The floor or authored registration determines position/scale independently of
+feet and alpha bounds. Shoe toes can extend below the anchor. Floating art keeps
+its ground projection; a seated layer retains its ground anchor plus separate
+support elevation. Do not apply an elevation twice during recomposition.
 
-Only remove observed weak-alpha haze with an explicit reviewed threshold;
-`process-on-floor --min-alpha 32` is the starting default. Raise it to 64 only
-when inspection supports that choice. Preserve full silhouettes; enlarge frames
-explicitly if needed. Generic `pack`, `validate`, `export-tiled`, `split-grid`,
-and `split-components` commands are available through `tilekit.py --help`.
+Use the explicitly recorded calibration color (default RGB 123,209,75), never
+background-color guessing. Reserve its hue in overlapping object parts.
+Normalize before keying; keep the resulting frame and anchor. Mixed edges have
+an approximate matte. A fully covered floor cannot be measured by the visible-
+floor detector: use authored geometry/registration or report unsupported input.
+The bundled single-cell processor is not a general multi-cell or layer extractor.
 
-Run `python -m unittest discover -s tests`, `npm run assets`, `npm run build`,
-and `npm run verify` after integration changes. Inspect actual desktop/mobile
-screenshots. The existing **Characters** lab compares the saved seven trials;
-`python tools/build_character_experiments.py` rebuilds them.
+## Deliver and evaluate
 
-For behavioral tests of this skill, use [the eval protocol](evals/protocol.md).
-It includes the short lava and dancing-player prompts, fresh generation runs,
-artifact grading, and independent visual review. Do not substitute existing
-courier outputs or a procedural drawing for a fresh-generation eval.
+Deliver transparent sprites (opaque flat floors), per-sprite ground anchors,
+logical occupancy, art bounds, projection, elevation, and animation order/timing.
+Use the portable [output contract](references/geometry.md). Inspect placement,
+light/dark cutouts, repeated terrain, and animation at the stored ground point.
+Never claim exact AI geometry, seamless terrain, or successful separation solely
+from metadata. Keep failures and report limits; do not conceal them with clipping,
+axis stretching, anchor fitting, or grading changes.
+
+The [13-case eval suite](evals/cases.json) is specified before fresh generation.
+Use [the eval protocol](evals/protocol.md) to prepare isolated output destinations
+and independent review. A prepared case is not a passed case. Freeze its rubric
+and this skill snapshot before a run; do not tune the skill to make that run pass.

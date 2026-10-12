@@ -216,6 +216,9 @@ try{
   await page.setViewportSize({width:1440,height:1000});
   await page.getByRole('button',{name:'Animations',exact:true}).click();
   const animationCanvas=page.locator('.animation-preview').first();
+  const publishedGallery=JSON.parse(await readFile(root+'public/assets/skill-gallery.json','utf8'));
+  assert.ok(publishedGallery.animations.every(a=>a.fps===12&&a.frames.every(f=>Math.abs(f.durationMs-1000/12)<.001)));
+  assert.ok((await page.locator('.animation-card').first().innerText()).includes('Default playback: 12 fps'));
   await animationCanvas.locator('..').waitFor();
   await page.waitForFunction(()=>document.querySelector('.animation-preview')?.dataset.ready==='true');
   const seen=new Set();

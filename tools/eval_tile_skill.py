@@ -10,7 +10,7 @@ from tilekit import (load_rgba,prepare_floor_material,process_object_sheet,
                      render_floor_repeat,render_anchored_frames,write_json)
 
 ROOT=Path(__file__).resolve().parents[1]
-CASES=ROOT/'skills/build-overlap-tiles/evals/cases.json'
+CASES=ROOT/'assets/evals/2026-10-11-skill-v1/cases.json'
 
 
 def reserved_hue_residual(image,chroma):

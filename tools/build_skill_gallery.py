@@ -31,16 +31,27 @@ def main():
         submission = json.loads((trial / 'submission.json').read_text())
         result_path = trial / submission['result']
         result = json.loads(result_path.read_text())
+        # Preserve the original 8 fps experiment record; publish the existing
+        # frames under the requested 12 fps playback contract.
+        source_durations = [f['durationMs'] for f in result['frames']]
+        result['fps'] = 12
+        result['playbackDerivation'] = {'sourceDurationMs': source_durations,
+                                       'publishedFPS': 12, 'sourceRecordPreserved': True}
+        for frame in result['frames']:
+            frame['durationMs'] = 1000 / 12
         prefix = f'skill-evals/{folder}'
         frames = []
         for frame in result['frames']:
             frames.append({key: frame[key] for key in ('id', 'size', 'anchor', 'durationMs')})
             frames[-1]['image'] = copy(result_path.parent / frame['image'], f"{prefix}/{frame['image']}")
+        metadata_path = f'{prefix}/result.json'
+        (PUBLIC / metadata_path).write_text(json.dumps(result, indent=2) + '\n')
         animations.append({
             'id': folder, 'name': title, 'note': note, 'frames': frames,
+            'fps': 12,
             'cellSize': result['cellSize'], 'groundAnchorAlignment': result['groundAnchorAlignment'],
             'sheet': copy(result_path.parent / 'sheet.png', f'{prefix}/sheet.png'),
-            'metadata': copy(result_path, f'{prefix}/result.json'),
+            'metadata': metadata_path,
             'guide': copy(trial / 'guide.png', f'{prefix}/guide.png'),
             'source': copy(trial / 'source.png', f'{prefix}/source.png'),
             'recipe': copy(trial / 'generation.json', f'{prefix}/generation.json'),

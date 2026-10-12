@@ -7,7 +7,7 @@
     {
       "id": "frame-00",
       "image": "frames/frame-00.png",
-      "durationMs": 125.0,
+      "durationMs": 83.33333333333333,
       "size": [
         192,
         320
@@ -136,7 +136,7 @@
     {
       "id": "frame-01",
       "image": "frames/frame-01.png",
-      "durationMs": 125.0,
+      "durationMs": 83.33333333333333,
       "size": [
         192,
         320
@@ -265,7 +265,7 @@
     {
       "id": "frame-02",
       "image": "frames/frame-02.png",
-      "durationMs": 125.0,
+      "durationMs": 83.33333333333333,
       "size": [
         192,
         320
@@ -394,7 +394,7 @@
     {
       "id": "frame-03",
       "image": "frames/frame-03.png",
-      "durationMs": 125.0,
+      "durationMs": 83.33333333333333,
       "size": [
         192,
         320
@@ -523,7 +523,7 @@
     {
       "id": "frame-04",
       "image": "frames/frame-04.png",
-      "durationMs": 125.0,
+      "durationMs": 83.33333333333333,
       "size": [
         192,
         320
@@ -652,7 +652,7 @@
     {
       "id": "frame-05",
       "image": "frames/frame-05.png",
-      "durationMs": 125.0,
+      "durationMs": 83.33333333333333,
       "size": [
         192,
         320
@@ -934,5 +934,18 @@
   "sourceSize": [
     1224,
     1285
-  ]
+  ],
+  "fps": 12,
+  "playbackDerivation": {
+    "sourceDurationMs": [
+      125.0,
+      125.0,
+      125.0,
+      125.0,
+      125.0,
+      125.0
+    ],
+    "publishedFPS": 12,
+    "sourceRecordPreserved": true
+  }
 }

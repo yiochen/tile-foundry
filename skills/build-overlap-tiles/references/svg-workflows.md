@@ -1,96 +1,47 @@
-# SVG-led workflow experiments
+# SVG geometry and AI appearance
 
-Choose what owns geometry before generating appearance.
-
-| Path | Good fit | Geometry owner | Main limitation |
-| --- | --- | --- | --- |
-| Complete AI sprite | Trees, foliage, irregular props | Model, then reviewed by a person | Needs anchors and acceptance checks; weak for strict solid joins |
-| SVG raster → whole-object AI render | Regular objects needing rich illustration | Model using an exact reference | A reference can drift; a second style image can override proportions |
-| SVG faces + generated flat materials | Strict footprints, heights, repeatable variants | SVG and scripts | Face layout, bevels, lighting and distinctive features must be authored |
-
-## Exact template and raster reference
+Choose what owns geometry. A whole-object model render can drift from a guide;
+authored SVG faces with generated material keep the silhouette deterministic.
+Use the latter when exact full-base joins or specific elevations are required.
 
 ```sh
-python tools/svgkit.py template tmp/new-block --height 32 --palette coral
+python "$SKILL_DIR/scripts/svg_tools.py" template "$OUTPUT_DIR/template" --height 32 --palette coral
 ```
 
-This writes editable `template.svg`, `shaded.svg`, their 192×320 PNGs,
-`reference-4x.png` (768×1280), four alpha face masks, and `geometry.json`.
-The frame anchor is (96,312), top face 128×128, front face 32px high. Elevation
-extends upward; near/far width stays 128. The flat raster is for image generation;
-the shaded raster supplies deterministic lighting for material compositing.
+This bundled example produces a four-stud block: editable SVG, raster reference,
+shaded SVG, face masks and geometry metadata. It is an example primitive, not a
+general shape generator. Its historical default anchor is the near ground edge
+`[96,312]`; for the shared center-anchor output contract, retain the same image
+and declare projected ground center `[96,248]`. These are different points on
+the same 128px base; do not shift the art or change pitch to convert conventions.
+The top moves upward by `height`, while footprint dimensions stay fixed.
 
-The current primitive is a block with four studs, not a universal prop generator.
-To support a new shape, author its projected silhouette and face masks in code or
-SVG. Keep mask coordinates aligned with the frame and contact anchor. Custom
-dimensions can use `--width`, `--depth`, `--frame`, and `--anchor`. Enlarge the frame
-for extra height instead of allowing clipping. Body edges must align to pixel
-boundaries; use an even width with the CLI's integer anchor.
+Author other silhouettes/masks and larger frames as needed. Keep registration,
+visible elevation and footprint in one coordinate system. Do not silently clip
+art to the floor rectangle: roofs, foliage and elevated surfaces may extend above
+or outside it. A full-base object can occlude its calibration floor, so use
+registered authored geometry rather than pretending the floor is still measurable.
 
-## Whole-object AI detailing
+For a complete AI redraw, inspect the SVG raster, use it as the sole reference,
+and describe appearance in text. Ask for the same base, root, top/front division,
+parallel edges, equal detail scale and genuine alpha. Validate the result; a
+clipping mask cannot repair internal perspective or altered proportions.
+Use an additional identity/style reference only when needed and record its role.
+A neutral material sphere is an option when a shape-bearing style image would
+compete with the guide, but it does not lock geometry.
 
-Inspect the raster before referencing it. Use the SVG raster as the sole image
-first; describe the desired style in text. Ask for detail inside the existing
-silhouette, equal stud sizes, parallel side edges, unchanged top/front division,
-true alpha, and no external shadow. See the expanded actual prompts in
-`assets/prompts/svg-only-block.json` and `svg-guided-block.json`.
-
-If a style image is necessary, clearly call it material/style only. This remains
-a soft constraint. The trial with both images shortened a 160px body to 131px;
-the sole-SVG trial matched the opaque body dimensions after uniform normalization.
-Neither is guaranteed to preserve exact pixels. Measure the anchor, clean only
-observed haze, normalize uniformly, then check coverage, side bands, and silhouette
-against the template. Do not stretch axes independently or clip a misprojected
-render and claim the camera is fixed. A clipping mask cannot correct internal
-stud scaling or misplaced face boundaries.
-
-A follow-up substitutes `assets/source/plastic-style-sphere.png` for the block
-reference, with the original two-image prompt unchanged. The sphere was generated
-from the original `assets/references/5610.jpg`. Actual prompts are saved in
-`assets/prompts/plastic-style-sphere.json` and `svg-sphere-block.json`. This trial
-still shortened the body to 146px and gave 126/128px far/near spans. A non-block
-style reference avoids supplying competing block proportions, but still does not
-lock geometry. See `docs/sphere-reference-experiment.md` for inputs and limits.
-
-## Geometry-owned material path
-
-Generate an **opaque, flat, evenly lit material swatch** with no objects, studs,
-edges, bevels, floor, text or perspective. Request gentle grain/marks appropriate
-at the final 128px width. Save the raw source and expanded prompt. Actual examples
-are `assets/source/plastic-material.png`, `wood-material.png`, and matching prompt
-JSONs. They were made with built-in imagegen, without API credentials.
+For material compositing, generate an opaque flat material swatch with gentle
+surface detail, uniform lighting, and no object, bevel, studs, scenery or camera
+perspective. Preserve its original image and exact prompt. Then:
 
 ```sh
-python tools/svgkit.py material tmp/new-block assets/source/plastic-material.png tmp/new-block-material.png --strength .7
-python tools/tilekit.py check-solid tmp/new-block-material.png tmp/new-block-check.json --anchor 96 312 --pitch 128 128 --min-alpha 250 --min-coverage 1 --edge-tolerance 1
+python "$SKILL_DIR/scripts/svg_tools.py" material "$OUTPUT_DIR/template" "$OUTPUT_DIR/source-material.png" "$OUTPUT_DIR/sprite.png" --strength .7
+python "$SKILL_DIR/scripts/tile_tools.py" check-solid "$OUTPUT_DIR/sprite.png" "$OUTPUT_DIR/coverage.json" --anchor 96 312 --pitch 128 128 --preview
 ```
 
-The script subtracts broad lighting from the material, fits the remaining detail
-to each face, and blends it into SVG shading. It copies the SVG alpha exactly.
-The SVG palette sets the dominant color; the generated swatch supplies grain and
-local color variation. Choose the palette explicitly rather than expecting a
-swatch to recolor the whole object.
-This is AI surface detail with authored geometry and lighting, rather than an AI
-redraw forcibly resized into a rectangle. Adjust `--strength` in [0,1] and inspect
-the result; material detail can be too quiet or too busy.
-
-Reuse the same material across multiple heights/palettes. The tested heights are
-16,32,64,96px; both materials passed exact-alpha, coverage and parallel-edge checks.
-That says nothing about continuous wood grain across cells, internal stylistic
-quality, or connected terrain. Mixed heights still need visual overlap checks.
-
-## Rebuild and compare saved trials
-
-```sh
-python tools/build_experiments.py
-npm run dev
-```
-
-Open **Workflows**. Compare five trials, toggle the SVG outline, switch the last
-card's material and height, and inspect the mixed-height scene. The first four
-cards have a fixed 32px height target; controls affect only the last card.
-`assets/experiment-config.json` records reviewed anchors and normalization.
-`docs/workflow-comparison.json` retains coverage, silhouette IoU, body dimensions,
-and exact-alpha results. IoU is a silhouette metric, not a measure of overall
-image quality. One output per SVG-reference strategy is a useful pilot, not a
-statistical reliability estimate. AI calls are not rerun by the build script.
+`check-solid` uses the near base edge `[96,312]` for its repeated-coverage geometry,
+not the sprite's center root `[96,248]`. The compositor keeps the SVG alpha and
+lighting, fitting generated detail to each face. The chosen SVG palette sets
+base colors. Inspect texture strength and reuse one material across heights at
+the same footprint scale. This does not by itself align material patterns across
+neighbors: full-cell alpha and true seamlessness are separate acceptance checks.

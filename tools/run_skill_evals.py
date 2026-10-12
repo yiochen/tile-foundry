@@ -11,7 +11,8 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--run',type=Path,default=ROOT/'assets/evals/2026-10-11-skill-v1')
     args=parser.parse_args();run=args.run.resolve();record=json.loads((run/'run.json').read_text())
-    cases={c['id']:c for c in json.loads(CASES.read_text())['cases']}
+    cases_path=run/'cases.json'
+    cases={c['id']:c for c in json.loads(cases_path.read_text())['cases']}
     output=ROOT/'docs/evals'/record['id'];reports=[]
     for trial in record['trials']:
         directory=run/trial['directory']

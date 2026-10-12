@@ -1,174 +1,118 @@
-# Visible floors and objects on calibration floors
+# Floors, calibration objects and animation
 
-All commands run from the repository root. Python needs the repository's
-`requirements.txt`; image generation uses the available built-in tool. Supply the
-local SVG **raster** reference, not raw SVG text, to that tool. Inspect the raster
-before using it. Save the untouched model PNG and exact expanded prompt.
+Commands use `SKILL_DIR` (this copied skill's directory) and the requested
+`OUTPUT_DIR`, from any working directory. Install bundled Python dependencies.
+Use an inspected local SVG raster as the image reference; retain SVG/layout too.
+Follow the [projection profile](projection.md) and [output contract](geometry.md).
 
-## Visible floor: “generate a lava tile”
+## Flat visible floor
 
-A visible ground tile is artwork, distinct from a disposable calibration floor.
-Default to a flat top-down square, 128×128 at runtime, no raised front wall.
-
-```sh
-python tools/calibration_guides.py floor tmp/lava/guide
-```
-
-Supply `tmp/lava/guide-4x.png` as the sole reference. Example expanded prompt:
-
-> Generate one complete opaque square top-down lava ground material for a colorful
-> 2D game. The supplied plain SVG square defines the full canvas coverage only.
-> Invent the surface: glowing orange molten channels between dark volcanic crust,
-> clear shapes readable at 128px. Fill the entire square to every edge. Aim for
-> opposite-edge continuation so repeated tiles look coherent. No cube, front
-> wall, perspective tilt, frame, labels, empty margins, or objects on the ground.
-> The output is an opaque square material, not an isolated transparent sprite.
-
-Use `transparent_background: false`. Keep raw `source.png` and `generation.json`.
-Process the complete material without cropping, filling alpha gaps, or stretching:
+A visible floor is final artwork, distinct from disposable calibration color.
+Generate a complete opaque square, 128×128 at runtime, without a front wall.
+For a raised lava tile, use the raised-object workflow instead.
 
 ```sh
-python tools/tilekit.py floor-material tmp/lava/source.png tmp/lava/tile.png
+python "$SKILL_DIR/scripts/guide_tools.py" floor "$OUTPUT_DIR/guide"
 ```
 
-`tile.json` stores size/footprint 128×128, center anchor (64,64), original size,
-and uniform scale. Non-square sources and transparent gaps are refused. Inspect
-an actual 3×3 repeat for edge discontinuities. A full square is geometrically
-repeatable; it does not establish continuous lava patterns. If seamlessness is
-required, preserve an approved opposite-edge band in later variants, as described
-in [prompt recipes](prompts.md). Report visible seams instead of hiding them.
+Prompt example:
 
-## Object on a tile
+> Generate one opaque square [material] floor in the supplied screen-aligned
+> square. Fill every edge with a repeatable surface. Continue patterns and colors
+> across opposite edges; avoid lighting gradients that jump at joins. No raised
+> cube, props, borders, empty margins or text. Keep the top-down ground plane.
 
-The plain green tile is a calibration substrate, not the final ground art. Use
-it for scale and center position, then remove it. Keep actual floor layers separate.
+Use `transparent_background: false`. Preserve `source.png` and its recipe.
 
 ```sh
-python tools/calibration_guides.py object tmp/player/guide
+python "$SKILL_DIR/scripts/tile_tools.py" floor-material "$OUTPUT_DIR/source.png" "$OUTPUT_DIR/tile.png"
 ```
 
-For another pose/object, author the sparse SVG geometry and update its layout JSON;
-preserve the floor and panel rectangles. Use a bounding box for broad height
-constraints or a stick pose for posture. Do not draw costume details if the model
-should invent a design. The supplied box/pose is guidance, not final anatomy.
+This uniformly downsamples the whole square and refuses transparent gaps or
+non-square input. Inspect actual 3×3/5×5 repeats at native and enlarged scale.
+Require connected texture, no seams and no sudden gradient jumps when requested;
+merely recording that a repeat was inspected is not a pass. An approved edge band
+can be preserved in interior edits, but retain the raw image and disclose processing.
 
-Example generation instruction:
-
-> Generate a complete original [subject/design brief] on this plain green square.
-> The reference is a geometry guide: its square establishes position and scale;
-> its stick figure establishes posture. Invent anatomy, clothing, proportions,
-> materials, and expressive details. Retain the screen-aligned square's placement
-> and dimensions; keep it flat, plain RGB 123,209,75, with no rim or cast shadow.
-> Place the character's ground location at the square's center. Shoe toes may
-> extend below it; airborne poses keep that same projected ground location below
-> their feet. Do not copy the stick strokes into the artwork. Keep the full
-> character inside its panel. Outside the square and character is genuine alpha
-> transparency. Reserve the green calibration hue for the floor, especially where
-> the character overlaps it. No checkerboard paint, labels, borders, or scenery.
-
-Use `transparent_background: true`. Inspect original alpha before processing.
+## Partial-base or floating object
 
 ```sh
-python tools/tilekit.py process-on-floor tmp/player/source.png tmp/player/guide.json tmp/player/processed --min-alpha 32
+python "$SKILL_DIR/scripts/guide_tools.py" object "$OUTPUT_DIR/guide"
 ```
 
-The command measures the last wide opaque floor band using median side edges
-(so an intermittent hand protrusion does not enlarge the floor), checks its aspect, scales
-uniformly from its observed width to 128px, and places the observed center at
-(96,248) in a full 192×320 frame. It keys only the registered floor region (3px
-filter-fringe allowance). The default key has hue tolerance ±28°, an 8° hue
-feather, and a saturation transition .02→.12. RGB is never guessed from the image.
-Changing `--key-rgb` in guide creation records another explicit saturated color;
-processing uses that recorded value. Avoid pale accents in these new guides.
+The bundled example is a sparse stick figure over a plain 128px square in a
+192×320 frame. Author another height/pose guide without costume details when
+appearance should remain creative. For floating art, put the guide's ground root
+beneath the subject and specify its elevation/clearance independently.
 
-`processed/result.json` stores source panel bounds, observed floor, alpha cleanup,
-normalization, and key parameters. Every frame retains size, footprint, and anchor.
-Cutout alpha bounds never determine scale or position. Keying is approximate at
-opaque mixed edges; changing the character to green may require another key.
-A floor warped or substantially occluded by art can defeat this detector; reject
-and revise the generation rather than tune feet manually.
+> Generate [subject] in square-grid top-down oblique projection. The plain square
+> defines position and scale; the sparse guide defines [posture/base/height].
+> Invent the visual design. Preserve square size/location and its uniform reserved
+> RGB 123,209,75, without a rim or cast shadow. Keep the projected ground root at
+> its center. [Subject] has [height] and [clearance/support elevation]. Shoe toes
+> may extend below the root; floating art keeps that ground projection beneath it.
+> Reserve the calibration hue in overlapping object parts. Keep the complete
+> subject inside its panel and use true alpha outside object and floor. Omit
+> guide strokes, labels, scenery and checkerboard paint.
 
-## Dancing spritesheet
-
-For a short prompt, use a six-frame dance, three columns by two rows, 8fps.
-This is a declared default, not an inferred user requirement; honor specified
-frame counts, poses, character references, and timing by authoring a suitable guide.
+Use `transparent_background: true`, then inspect source alpha and visible floor.
 
 ```sh
-python tools/calibration_guides.py dance tmp/dance/guide
+python "$SKILL_DIR/scripts/tile_tools.py" process-on-floor "$OUTPUT_DIR/source.png" "$OUTPUT_DIR/guide.json" "$OUTPUT_DIR/processed" --min-alpha 32
 ```
 
-This authors six different sparse stick poses, one plain calibration square per
-192×320 panel, and 32px transparent gutters. The guide canvas is 640×672; its
-4× raster and JSON describe the same row-major panel geometry. Use that single
-composite image as the reference in **one** generation call for design continuity.
+The processor measures the last wide opaque band with median side edges, checks
+square aspect, uniformly normalizes its width to 128px and its center to `[96,248]`,
+then keys the explicitly registered floor region. The default key uses ±28° hue,
+8° feather and saturation transition .02–.12. `--key-rgb` in guide creation records
+another reserved color. Cutout bounds never determine scale or root position.
 
-Add these instructions to the object recipe:
+Mixed edges are approximate. A covered/warped floor, green object parts in the
+key region, or frame overflow can invalidate extraction. Reject/report the
+failure rather than fitting feet, guessing background colors, or clipping art.
+This command does not handle arbitrary multi-cell or hidden support layers.
 
-> Make a six-frame dancing-player spritesheet, exactly three columns and two rows
-> matching the reference's isolated panels. Invent one distinctive player design
-> and keep face, outfit, palette, proportions, scale, camera, and lighting
-> consistent across all frames. Follow each stick pose with believable dancing
-> limbs; show six distinct poses following the guide's arm directions and stance.
-> Do not duplicate panels or mirror a pose into the wrong panel. Repeated holds
-> are appropriate only when requested.
-> Keep one plain green square in every panel. Preserve the reference canvas aspect
-> and panel layout. All gutter regions stay genuinely transparent; no character,
-> shadow, floor, effects, or text may cross into a neighboring panel. No labels.
+## Direction sheets and animation
 
-For the default six-pose guide, explicitly spell out row-major actions in the
-submitted prompt: (1) both elbows bent outward; (2) lean left, left arm raised;
-(3) lean right, right arm raised; (4) both hands overhead, wide stance;
-(5) right arm raised, left arm low, crossed step; (6) left arm raised, right arm
-low, the opposite crossed step. In particular, the final pair must differ in arm
-direction and foot crossing. The first forward test repeated that pair despite
-the visual guide, so inspect those panels rather than assuming pose compliance.
+Directions rotate the subject around its ground root with a fixed camera and
+nominal anatomy scale. Use neutral upright poses when testing height consistency.
+Keep separate complete frames; never normalize each to its own alpha height.
 
-Inspect the full source for clipped limbs, panel drift, extra/merged frames, and
-identity drift. Then process:
+All animation schedules are 12 fps, `1000/12` ms per frame. The bundled six-pose
+example guide is a starting point; frame count, frame size and pose layout can be
+authored for the request. The 12-frame evals require a 12-panel guide; do not
+silently reuse a six-panel guide for them.
 
 ```sh
-python tools/tilekit.py process-on-floor tmp/dance/source.png tmp/dance/guide.json tmp/dance/processed --min-alpha 32 --fps 8
+python "$SKILL_DIR/scripts/guide_tools.py" dance "$OUTPUT_DIR/guide"
 ```
 
-Input aspect may differ by at most 1% due to tool output rounding. Cuts use the
-known guide layout scaled to the returned canvas; source cut rectangles are
-recorded. Cleaned alpha in a gutter causes rejection. Each panel's observed floor
-sets its own scale and anchor. The output includes six full-frame PNGs, a 576×640
-sheet without gutters, and `result.json` with row-major order and 125ms duration.
-Store the same center anchor for every frame; dancing toes do not change it.
-
-Review playback at this fixed ground point for scale jitter, inconsistent design,
-pose progression, and keying damage. A six-frame strip is a pilot animation,
-not automatically a smooth or seamless loop. If poses are repeated or wrong,
-retain that failure and retry once with clearer per-panel instructions.
-
-If the only layout failure is an isolated fingertip drifting into a planned
-gutter, inspect the full source and use explicit safe recovery:
+Use one composite raster for continuity when panels can remain independent.
+Add exact frame count, row-major poses/actions and camera/scale constraints to
+the object prompt. Pose words must describe required action without over-specifying
+costume. Every panel retains the plain square; gutters stay truly transparent.
+Repeated holds are acceptable only when requested. Inspect identity, limbs,
+pose progression, complete silhouette and source panel separation.
 
 ```sh
-python tools/tilekit.py process-on-floor tmp/dance/source.png tmp/dance/guide.json tmp/dance/recovered --min-alpha 32 --fps 8 --allow-gutter-drift
+python "$SKILL_DIR/scripts/tile_tools.py" process-on-floor "$OUTPUT_DIR/source.png" "$OUTPUT_DIR/guide.json" "$OUTPUT_DIR/processed" --min-alpha 32 --fps 12
 ```
 
-Recovery finds a completely transparent row/column separator inside each planned
-gutter, then partitions the entire cleaned canvas there. It retains every cleaned
-source-alpha pixel in exactly one panel and records the actual cuts plus
-`panelIsolation: "transparent-separators"`. The floor still determines all anchors
-and scales. This does not cut overlapping art, move feet, or discard fingertips.
-No transparent separator, a distorted canvas, or output-frame overflow causes
-rejection. Do not increase alpha thresholds to erase real limbs. The first
-forward retry needed this recovery for raised fingers despite having separate
-characters; its strict rejection and recovered result are both retained.
+Cuts use the known guide layout, allowing at most 1% source-aspect rounding.
+Alpha in planned gutters is refused. If independent art merely protrudes into a
+planned gutter, an inspected recovery can partition at actual transparent seams:
 
-After the single generation retry, report a blocker or generate isolated poses
-using the same floor/pose contract and a requested/approved identity reference.
-Pack those complete frames into the final sheet. Keep all failures and references;
-do not add a style reference merely to emulate old experiments.
+```sh
+python "$SKILL_DIR/scripts/tile_tools.py" process-on-floor "$OUTPUT_DIR/source.png" "$OUTPUT_DIR/guide.json" "$OUTPUT_DIR/recovered" --min-alpha 32 --fps 12 --allow-gutter-drift
+```
 
-## Generation record
+Recovery assigns every retained source-alpha pixel to one panel and records cuts.
+It refuses touching art or missing separators; do not raise alpha thresholds to
+erase real limbs. Keep failures. Do not automatically retry eval cases; their
+protocol fixes the allowed attempt budget before a run.
 
-A portable generation recipe contains `prompt` (the exact submitted text),
-`references` (paths relative to the recipe), `transparentBackground`, `tool`, and
-`sourceSHA256` (hash of the unchanged generated source). Preserve each referenced
-file, the guide SVG/layout/raster, and all attempts. This records what actually
-ran; model version/seed may be unavailable and should not be invented.
+Review playback on light/dark grounds at the stored root and declared 12 fps.
+Check anatomy scale rather than constant silhouette bounds: dance/crouch/jump
+poses legitimately change visible extent. Raised animated terrain also needs
+spatial repeats at every frame and last-to-first temporal-loop review. Source
+recipes and per-frame timing/geometry must survive delivery.

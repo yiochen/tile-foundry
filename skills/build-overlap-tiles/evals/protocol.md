@@ -1,100 +1,138 @@
-# Behavioral skill evals
+# Portable behavioral eval protocol
 
-Cases are in [cases.json](cases.json). The two deliberately short user prompts
-exercise mode selection, original image generation, calibration, artifact delivery,
-and review. They are not tests that the skill contains particular words.
+[cases.json](cases.json) defines 13 cases and is currently **specified, not run**.
+It covers appearance, projection, delivery, footprint/anchor geometry, separation,
+seams, direction consistency, and 12 fps motion. Synthetic script tests and old
+artifacts are not fresh behavioral eval results for this suite.
 
-## Fresh run
+## Prepare destinations and freeze the contract
 
-1. Give an independent executor only the user prompt, the repo skill path, and an
-   isolated output directory. It may read referenced skill files and tools, but
-   should not see the grader's expected answer or reuse past experiment art.
-   Available generation tooling is required for a fresh run. One call per case,
-   with at most one explicitly recorded retry for a refused output, is sufficient
-   for this smoke eval; record a blocked/failed case honestly if generation fails.
-2. Ask it to perform the request using the skill, preserving raw source, guide,
-   exact generation recipe, and processed result. It must not alter repo files.
-   Independently inspect what it produces; do not accept its self-assessment as
-   visual grading. Follow the skill's independent-forward-testing guidance when
-   delegation is available and authorized; otherwise a fresh executor session
-   can run the same protocol. No special model or API key is assumed.
-3. Copy the complete run into `assets/evals/<run-id>/<case-id>/`. Never overwrite
-   an earlier run. Create `submission.json` beside it using paths relative to that
-   file (a single shared generation source is allowed for all six dance frames):
+Set both paths explicitly. The skill can be copied anywhere; commands do not
+require a particular repository or working directory.
+
+```sh
+SKILL_DIR="/absolute/path/to/build-overlap-tiles"
+RUN_ROOT="/absolute/path/to/eval-runs/run-001"
+python -m pip install -r "$SKILL_DIR/scripts/requirements.txt"
+python "$SKILL_DIR/scripts/prepare_evals.py" --run-root "$RUN_ROOT"
+```
+
+The destination must be empty and outside the skill directory. Preparation copies
+this complete skill into `skill-snapshot/`, saves the suite and hashes, and creates
+`<case-id>/request.txt` with `{{OUTPUT_DIR}}` replaced by that case's absolute
+output directory. `run.json` starts every trial as `not-run`. No artwork is made.
+Use repeated `--case CASE_ID` to prepare a subset. Never overwrite an earlier run.
+
+Give an executor only its `request.txt`, the frozen skill path, and available
+image-generation tools. Give the expected rubric to the independent reviewer,
+not as an executor's answer key. Follow applicable delegation/permission rules;
+a fresh separate session can execute the same request without subagents.
+The output path in the request is a storage instruction, not text to paint.
+
+## Execute once, retain failures
+
+Use one fresh generation attempt per case, except the seated-layer case's two
+planned calls (stool, then character). Record actual calls, references and any
+unsupported step. Do not automatically retry, edit the rubric after seeing an
+output, tune the skill to pass, recycle old assets, or make manual anchor/scale
+adjustments that hide a failure. A later revision requires a new frozen run.
+
+Save all sources, generation recipes, guides, full output PNGs and geometry under
+the requested case directory. Copy references into that bundle. The result uses
+[the portable output contract](../references/geometry.md), with relative paths.
+If a tool limitation prevents a case, record `blocked` with the concrete reason;
+do not fabricate a partial success.
+
+Example `submission.json` (fill actual resolved paths and request text):
 
 ```json
 {
-  "caseId": "dancing-player",
-  "userPrompt": "generate a player dancing spritesheet on tile",
-  "source": "source.png",
-  "generationRecipe": "generation.json",
+  "caseId": "lava-tile",
+  "outputDirectory": "/absolute/path/to/eval-runs/run-001/lava-tile",
+  "userPrompt": "Exact contents of request.txt, without its final newline",
+  "sources": [{"image": "source-01.png", "recipe": "generation-01.json"}],
   "guide": "guide.json",
-  "result": "processed/result.json"
+  "guideSHA256": "SHA-256 of the authored guide.json",
+  "result": "result.json"
 }
 ```
 
-The generation recipe follows [the workflow record schema](../references/floor-and-objects.md).
-For lava, `result` points at the JSON sidecar from `floor-material`, typically
-`tile.json`. For dance it points at `process-on-floor`'s `result.json`.
-Failed attempts stay in the run, with a reason; don't convert them to passes by
-relabeling existing images or relaxing the authored geometry.
+Each generation recipe stores the exact model prompt, `references` relative to
+the recipe, `referenceSHA256` and `referenceRoles` keyed by those same paths,
+`transparentBackground` (a boolean), `tool`, and `sourceSHA256`. Preserve all
+sources; the layered case has at least two source/recipe records. The source,
+processed art and registration must be inspectable together.
 
-## Grade artifacts and behavior
+Source records default to `role: "whole-asset"`: isolated art uses transparent
+generation and a geometry reference; flat-floor art uses opaque generation.
+For the authored-SVG/material workflow, declare `role: "appearance-material"`
+on that source record. Its generated material is a complete opaque square and
+may have no raster references (`references: []`, empty hash/role maps). Retain
+the SVG faces/masks and material mapping so the reviewer can establish source
+faithfulness. This role does not permit replacing whole-object art after generation.
 
-Run from the repository root:
+Bundled processors retain their measured geometry in their own sidecars. For
+`process-on-floor` or `floor-material`, wrap those outputs in the v2 contract with
+`scripts/assemble_result.py`, as described in [geometry](../references/geometry.md).
+Author registration constraints before generation; they are not measurements
+proving that the output met the requested height or occupancy. Other processors
+must supply the same v2 manifest with actual frame geometry and provenance.
 
-```sh
-python tools/eval_tile_skill.py --case lava-tile --submission assets/evals/RUN/lava-tile/submission.json --output docs/evals/RUN/lava-tile.json
-python tools/eval_tile_skill.py --case dancing-player --submission assets/evals/RUN/dancing-player/submission.json --output docs/evals/RUN/dancing-player.json
-```
-
-The grader checks the preserved source hash and actual prompt/reference record,
-output geometry and alpha, unchanged floor-derived normalization, independent
-source-panel floor measurements, explicit key choice, panel order/timing, and
-source gutter separation (strict panels or explicit fully transparent separator
-recovery). It produces actual floor-repeat or anchored animation
-review artifacts via `tilekit.py`; synthetic assets never stand in for a fresh
-behavioral run. A missing visual review gives `needs-visual-review`, not a pass.
-
-An independent reviewer examines source/guide/final images and the generated
-repeat/animation previews, and writes `review.json` with each `visualChecks` ID:
-
-```json
-{
-  "reviewer": "independent reviewer",
-  "checks": {
-    "lava-readable": {"pass": true, "note": "Observed lava at runtime scale."},
-    "floor-projection": {"pass": true, "note": "Opaque flat square."},
-    "repeat-inspected": {"pass": true, "note": "Repeat inspected; visible seams described here."}
-  },
-  "limitations": ["One sample does not establish reliability."]
-}
-```
-
-Re-run the grader with `--review path/to/review.json`. All automatic and required
-visual checks must pass for `status: passed`. Exit 0 means passed, 1 means failed,
-and 2 means missing visual review. Keep automatic failure and visual failure
-separate; an attractive image with guessed anchors still fails the geometry case.
-Visual quality remains a judgment, not a claim of exact matting or seamless motion.
-
-## Recheck saved runs
-
-Saved fixtures replay the artifact grader without further image generation. This
-checks the pipeline and evidence, not whether today's agent follows the skill:
+## Automatic checks and independent review
 
 ```sh
-npm run eval:skill
+CASE_ID="lava-tile"
+python "$RUN_ROOT/skill-snapshot/scripts/evaluate.py" \
+  --run-root "$RUN_ROOT" --cases "$RUN_ROOT/suite.json" --case "$CASE_ID" \
+  --submission "$RUN_ROOT/$CASE_ID/submission.json" \
+  --output "$RUN_ROOT/reports/$CASE_ID.json"
 ```
 
-That command replays the checked-in run, including its expected failed first
-dance attempt and the successful corrected/recovered attempt. A run's
-`run.json` records expected statuses so the negative example must stay failed.
-For an individual case or a new run:
+The grader reads the independently selected prepared run root to check the frozen
+request and destination; a submission cannot redefine its own storage instruction.
+It checks location/path containment, exact request, unchanged sources and
+references, readable PNGs, expected frame/anchor/occupancy/elevation metadata,
+full-cell alpha/side coverage where applicable, static full-base visible height,
+float clearance, disjoint support/depth-piece registration, separate layer roles and a
+12 fps schedule. Flat-floor opposite-edge RGB deltas and 3×3/5×5 repeats catch
+clear boundary discontinuities. These checks cannot establish correct perspective,
+identity, seam-free texture, hidden anatomy, or stool extraction from metadata.
+
+An independent reviewer inspects originals, processed art and actual previews:
+
+- Repeated floors at native and 2× scale: no gaps, discontinuous patterns or
+  sudden gradients across either axis. A low edge delta is necessary, not sufficient.
+- Raised full bases: visible front-wall height, complete occupancy and back-row overlap.
+- Partial/floating art: proper scale/ground projection and complete floor removal.
+- Eight upright directions: correct orientation, consistent anatomy/standing
+  height and physically plausible support at the common ground root. Shoe toes
+  are not the ground root.
+- Large/arch art: shared cell scale, explicit support occupancy, clear middle
+  passage and correct foreground/background depth-piece occlusion.
+- Layered sitting: stool and character individually clean and complete, with
+  actual recomposition at recorded roots/attachment points and no double elevation.
+- Animation: all frames at 12 fps, constant anatomy scale/root and camera, readable
+  motion and last-to-first looping. Also inspect animated terrain as spatial
+  repeats at every phase and with offset-phase neighbors.
+
+Save `review.json` with an independent reviewer identifier, `independent: true`,
+`spriteSHA256` mapping every sprite and depth-piece ID to its current PNG hash,
+`resultSHA256` and `guideSHA256` binding the review to the delivered metadata,
+and one `{ "pass": true|false, "note": "specific evidence" }` per
+`visualChecks` entry. For direction/dance cases provide `measurements.neutralHeightPx`
+(one neutral-equivalent anatomy/standing-height estimate per pose) and
+`measurements.rootDriftPx` (independent root/contact displacement per pose), with
+landmark reasoning in the corresponding review notes. Do not measure dance
+height solely from an alpha bounding box. Missing review/evidence cannot pass.
 
 ```sh
-python tools/eval_tile_skill.py --case lava-tile --submission assets/evals/RUN/lava-tile/submission.json --review assets/evals/RUN/lava-tile/review.json --output docs/evals/RUN/lava-tile.json
+python "$RUN_ROOT/skill-snapshot/scripts/evaluate.py" \
+  --run-root "$RUN_ROOT" --cases "$RUN_ROOT/suite.json" --case "$CASE_ID" \
+  --submission "$RUN_ROOT/$CASE_ID/submission.json" \
+  --review "$RUN_ROOT/$CASE_ID/review.json" \
+  --output "$RUN_ROOT/reports/$CASE_ID.json"
 ```
 
-New skill behavioral scores require a new run ID and fresh generation. Unit tests
-exercise deliberate bad submissions (wrong anchor, contaminated gutter, missing
-source/prompt record), rather than matching the instruction text.
+Exit codes: passed 0, failed 1, needs independent visual review 2. Keep the full
+case report; do not change thresholds, add correction generations, or omit failed
+frames to upgrade a result. Retain `not-run` until generation actually occurs.
