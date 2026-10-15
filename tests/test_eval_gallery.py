@@ -77,6 +77,42 @@ class EvalGalleryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'escapes'):
             self.build()
 
+    def test_new_assessment_keeps_original_grade_and_art_separate(self):
+        self.run_record('2026-01-01',status='failed')
+        run = self.root/'runs/2026-01-01'
+        record = json.loads((run/'run.json').read_text())
+        record['assessments'] = [{'id':'llm-v1','createdAt':'2026-02-01','label':'LLM visual review',
+            'directory':'assessments/llm-v1','cases':{'floor':{'report':'reports/floor.json',
+                'review':'reviews/floor.json','packet':'packets/floor.json',
+                'expectedStatus':'passed','reason':'No visible seam.'}}}]
+        (run/'run.json').write_text(json.dumps(record))
+        assessment = run/'assessments/llm-v1'
+        (assessment/'reports').mkdir(parents=True);(assessment/'reviews').mkdir()
+        (assessment/'packets').mkdir()
+        preview = assessment/'packets/placement-light.png'
+        Image.new('RGB',(128,128),'gray').save(preview)
+        (assessment/'packets/floor.json').write_text(json.dumps({'assets':[
+            {'role':'placement-preview','path':str(preview)},
+            {'role':'source','path':str(run/'floor/source.png')}]}))
+        (assessment/'policy.json').write_text('{}')
+        (assessment/'reviews/floor.json').write_text('{}')
+        (assessment/'reports/floor.json').write_text(json.dumps({'status':'passed','policy':'llm-visual-v1',
+            'reviewer':'Fixture LLM','visualChecks':[{'check':'seams','pass':True,'detail':'No visible seam.'}],
+            'diagnostics':[{'check':'opposite-edge-continuity','gating':False,'detail':12}]}))
+        case = self.build()['cases'][0]
+        original, latest = case['trials']
+        self.assertEqual(latest,case['latest'])
+        self.assertEqual((original['status'],latest['status']),('failed','passed'))
+        self.assertEqual(original['sources'],latest['sources'])
+        self.assertNotEqual(original['id'],latest['id'])
+        self.assertNotEqual(original['report'],latest['report'])
+        for trial in [original,latest]:
+            saved = json.loads((self.root/'public'/trial['report']).read_text())
+            self.assertEqual(saved['status'],trial['status'])
+        self.assertEqual(latest['diagnostics'][0]['gating'],False)
+        self.assertEqual(len(latest['previews']),1)
+        self.assertTrue((self.root/'public'/latest['previews'][0]['image']).is_file())
+
 
 if __name__=='__main__':
     unittest.main()

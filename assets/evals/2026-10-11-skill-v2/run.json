@@ -160,5 +160,109 @@
   "execution": "Fresh independent executor run; one image-generation attempt per case, two planned calls for separated stool/character; independent root review.",
   "freshGenerationCalls": 14,
   "completedCases": 13,
-  "retries": 0
+  "retries": 0,
+  "assessments": [
+    {
+      "id": "2026-10-14-llm-visual-v1",
+      "label": "LLM visual review",
+      "createdAt": "2026-10-14",
+      "directory": "assessments/2026-10-14-llm-visual-v1",
+      "policy": "llm-visual-v1",
+      "mode": "existing-artifact-reassessment",
+      "newGenerationCalls": 0,
+      "cases": {
+        "seamless-square-floor": {
+          "report": "reports/seamless-square-floor.json",
+          "review": "reviews/seamless-square-floor.json",
+          "packet": "packets/seamless-square-floor/packet.json",
+          "expectedStatus": "passed",
+          "reason": "Passed independent LLM visual review and all delivery checks."
+        },
+        "lava-tile": {
+          "report": "reports/lava-tile.json",
+          "review": "reviews/lava-tile.json",
+          "packet": "packets/lava-tile/packet.json",
+          "expectedStatus": "passed",
+          "reason": "Passed independent LLM visual review and all delivery checks."
+        },
+        "full-cell-raised-object": {
+          "report": "reports/full-cell-raised-object.json",
+          "review": "reviews/full-cell-raised-object.json",
+          "packet": "packets/full-cell-raised-object/packet.json",
+          "expectedStatus": "passed",
+          "reason": "Passed independent LLM visual review and all delivery checks."
+        },
+        "partial-cell-tall-object": {
+          "report": "reports/partial-cell-tall-object.json",
+          "review": "reviews/partial-cell-tall-object.json",
+          "packet": "packets/partial-cell-tall-object/packet.json",
+          "expectedStatus": "failed",
+          "reason": "The lantern and pedestal are turned to a diamond view: their front corner points down the center and two diagonal faces are visible. This does not match the guide screen-aligned square-grid base and single parallel front orientation."
+        },
+        "floating-object": {
+          "report": "reports/floating-object.json",
+          "review": "reviews/floating-object.json",
+          "packet": "packets/floating-object/packet.json",
+          "expectedStatus": "passed",
+          "reason": "Passed independent LLM visual review and all delivery checks."
+        },
+        "character-directions": {
+          "report": "reports/character-directions.json",
+          "review": "reviews/character-directions.json",
+          "packet": "packets/character-directions/packet.json",
+          "expectedStatus": "failed",
+          "reason": "The upright bodies read noticeably taller than the supplied 160px standing guide while their feet remain near the same floor-center root. The crowns rise above the guide crown; this is a visible design-height mismatch, not an assertion of pixel-exact landmark measurements."
+        },
+        "large-object-2x2": {
+          "report": "reports/large-object-2x2.json",
+          "review": "reviews/large-object-2x2.json",
+          "packet": "packets/large-object-2x2/packet.json",
+          "expectedStatus": "failed",
+          "reason": "The fountain base and basin taper toward the back: the two side edges converge and the rear is visibly narrower than the front. It does not preserve parallel square-grid depth edges."
+        },
+        "large-object-3x2": {
+          "report": "reports/large-object-3x2.json",
+          "review": "reviews/large-object-3x2.json",
+          "packet": "packets/large-object-3x2/packet.json",
+          "expectedStatus": "failed",
+          "reason": "Roof ribs fan outward toward the front and the side panels converge toward the rear. This frontal perspective construction does not preserve parallel square-grid depth edges."
+        },
+        "disjoint-support-arch": {
+          "report": "reports/disjoint-support-arch.json",
+          "review": "reviews/disjoint-support-arch.json",
+          "packet": "packets/disjoint-support-arch/packet.json",
+          "expectedStatus": "failed",
+          "reason": "Runtime delivery is incomplete: 0 of 1 required sprites/layers. Raw-source observations do not establish a usable runtime asset."
+        },
+        "animated-waves": {
+          "report": "reports/animated-waves.json",
+          "review": "reviews/animated-waves.json",
+          "packet": "packets/animated-waves/packet.json",
+          "expectedStatus": "failed",
+          "reason": "Runtime delivery is incomplete: 0 of 12 required sprites/layers. Raw-source observations do not establish a usable runtime asset."
+        },
+        "animated-lava": {
+          "report": "reports/animated-lava.json",
+          "review": "reviews/animated-lava.json",
+          "packet": "packets/animated-lava/packet.json",
+          "expectedStatus": "failed",
+          "reason": "Runtime delivery is incomplete: 0 of 12 required sprites/layers. Raw-source observations do not establish a usable runtime asset."
+        },
+        "seated-character-separated": {
+          "report": "reports/seated-character-separated.json",
+          "review": "reviews/seated-character-separated.json",
+          "packet": "packets/seated-character-separated/packet.json",
+          "expectedStatus": "failed",
+          "reason": "Runtime delivery is incomplete: 0 of 2 required sprites/layers. Raw-source observations do not establish a usable runtime asset."
+        },
+        "dancing-player": {
+          "report": "reports/dancing-player.json",
+          "review": "reviews/dancing-player.json",
+          "packet": "packets/dancing-player/packet.json",
+          "expectedStatus": "failed",
+          "reason": "Runtime delivery is incomplete: 0 of 12 required sprites/layers. Raw-source observations do not establish a usable runtime asset."
+        }
+      }
+    }
+  ]
 }

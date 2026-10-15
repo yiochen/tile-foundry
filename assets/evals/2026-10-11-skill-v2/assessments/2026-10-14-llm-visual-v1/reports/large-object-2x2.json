@@ -1,0 +1,179 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "large-object-2x2",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a stone fountain occupying exactly a 2x2 square of 128px cells (256x256 ground footprint), with 128px visible height. Deliver one complete transparent object, with a ground anchor at the center of the 2x2 footprint. Deliver each sprite in a 384x576px frame with local projected ground anchor (192,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "5b3f10d261ead49c936732336b3fb00c716635d0efdd5ff6ee4cc3a79b50b634"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide-2x.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "cee1a1a4b696596bbefe92e8fcb80bbb6b28aabc96e95786f9c37b6ee60d830c"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "object",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "fountain"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": false,
+      "detail": "The fountain base and basin taper toward the back: the two side edges converge and the rear is visibly narrower than the front. It does not preserve parallel square-grid depth edges.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2/sprites/fountain.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-dark.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "The entire fountain, base corners, upper jet and side water streams fit the declared frame at native and 2x scale. No clipping or detached external shadow is visible.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2/sprites/fountain.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-dark.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "The front ground-contact base stops well inside the marked front row instead of reaching the guide footprint front boundary. The placement cross falls at the front basin ledge; the visible support footprint is displaced upward relative to the declared ground rectangle.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2/references/guide-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2/sprites/fountain.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-dark.png"
+      ]
+    },
+    {
+      "check": "multi-cell-size",
+      "pass": false,
+      "detail": "It remains larger than one cell, but the visible support is a shallower, tapered footprint inside the 2x2 square, leaving a broad exposed front strip. It does not read as the guide 256x256 base at the shared grid scale.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2/references/guide-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2/sprites/fountain.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-dark.png"
+      ]
+    },
+    {
+      "check": "multi-cell-overlap",
+      "pass": null,
+      "detail": "The complete single sprite visibly crosses rows and is not raster-sliced. The packet supplies only isolated 2x2 placement, so overlap/occlusion against neighboring tall-row objects cannot be independently inspected.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2/sprites/fountain.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-dark.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The processed fountain retains the raw basin, pedestal, fleur-de-lis, base and water shapes with comparable proportions under the authored-source-canvas declaration. Its source projection/size defects remain visible; no replacement or axis fitting is evident.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-2x2/sprites/fountain.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-2x2/placement-0-dark.png"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "fountain-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 1,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "Codex GPT-6 vision; independent isolated session /root/clean_vision_review; 2026-10-14",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

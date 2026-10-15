@@ -1,0 +1,97 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "seamless-square-floor",
+  "request": "Generate a seamless 128x128 mossy stone floor tile. Its opposite edges must connect in a repeated square grid, without visible seams or sudden color/lighting gradient jumps. Keep it flat, with no raised front wall. Deliver an opaque 128x128px tile with local ground-center anchor (64,64). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seamless-square-floor.",
+  "criteria": {
+    "projection": "Flat screen-aligned top-down ground square with no raised front wall, tilt, diamond-grid rotation, or perspective convergence.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "seam-continuity": "Inspect 3x3 and 5x5 repeats at native and 2x scale: patterns connect across every horizontal/vertical join, with no grid lines or discontinuous gradients. Exact edge metrics alone do not establish seamlessness.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "floor",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "heightAxis": [
+      0,
+      -1
+    ],
+    "elevationScale": 1,
+    "groundAnchorAlignment": "center",
+    "sprites": [
+      {
+        "id": "mossy-stone-floor",
+        "image": "sprites/tile.png",
+        "size": [
+          128,
+          128
+        ],
+        "anchor": [
+          64.0,
+          64.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 0,
+        "index": 0
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "mossy-stone-floor",
+      "registrationMethod": "uniform-square-resampling",
+      "transform": {
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "scale": 0.10207336523125997
+      }
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seamless-square-floor/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seamless-square-floor/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seamless-square-floor/references/generation-guide.png"
+    },
+    {
+      "role": "processed",
+      "id": "mossy-stone-floor",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seamless-square-floor/sprites/tile.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/seamless-square-floor/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/seamless-square-floor/placement-0-dark.png"
+    },
+    {
+      "role": "repeat-3",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/seamless-square-floor/repeat-3.png"
+    },
+    {
+      "role": "repeat-5",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/seamless-square-floor/repeat-5.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/grader-snapshot/references/visual-review.md"
+}

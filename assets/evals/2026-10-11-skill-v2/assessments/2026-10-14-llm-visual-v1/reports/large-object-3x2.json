@@ -1,0 +1,179 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "large-object-3x2",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a long greenhouse occupying exactly 3x2 cells of 128px each (384x256 footprint), with 128px visible height. Keep a central ground anchor, the shared grid scale, and the complete transparent silhouette. Deliver each sprite in a 512x576px frame with local projected ground anchor (256,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "688a7d7f3f28dd96a06915118b0b828cd4879c8b386bc1a0aa483e126a2d9145"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide-2x.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "21eefd91cc47dab97b9462e6438dfa631be10fe059d46fb699816cdff47cd6e6"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "object",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "greenhouse"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": false,
+      "detail": "Roof ribs fan outward toward the front and the side panels converge toward the rear. This frontal perspective construction does not preserve parallel square-grid depth edges.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2/sprites/greenhouse.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-dark.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "The roof finials, glass, door, plants and whole front foundation remain complete with generous frame margins at native and 2x scale. No clipped pieces or detached shadow are visible.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2/sprites/greenhouse.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-dark.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "The common ground cross sits on the front door and the visible foundation ends near the middle of the marked footprint, leaving most of the front row empty. That is inconsistent with a centered two-row support footprint.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2/references/guide-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2/sprites/greenhouse.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-dark.png"
+      ]
+    },
+    {
+      "check": "rectangular-size",
+      "pass": false,
+      "detail": "The delivered building reads as a very shallow facade/roof in the 3x2 guide: the front foundation barely enters the lower row, while the width extends beyond the side footprint marks. It does not preserve the requested ground rectangle at shared cell scale.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2/references/guide-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2/sprites/greenhouse.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-dark.png"
+      ]
+    },
+    {
+      "check": "multi-cell-overlap",
+      "pass": null,
+      "detail": "The whole greenhouse is a complete unsliced sprite, but no tall-row foreground/background overlap scene is provided. The isolated placement cannot establish where independent depth pieces would be required for actors around its two-row footprint.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2/sprites/greenhouse.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-dark.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The glass panels, plants, door, roof members and overall proportions visibly match the whole-asset source under the authored-source-canvas declaration. Source perspective and footprint errors are retained rather than visibly refitted.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/large-object-3x2/sprites/greenhouse.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/large-object-3x2/placement-0-dark.png"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "greenhouse-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "Codex GPT-6 vision; independent isolated session /root/clean_vision_review; 2026-10-14",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

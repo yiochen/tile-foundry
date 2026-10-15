@@ -1,0 +1,63 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {
+    "north": "7474791362b1ab3ee900a2a39e64f5f93806f5d209e8a948849e0d4ed66b3f52",
+    "northeast": "7c58c2ddaaa7787ac698fb4b6867050394bb341fcaf9c47e7f2252f05ce7c81c",
+    "east": "11d2675fcf2537bbf06c5278dcff17713c4ec39bd997d5c7eab192e2fbda7e45",
+    "southeast": "a2c1fdb25dd158a898de01a8702f9b5fac1d212d1d55c769e4e30af8ff7b450d",
+    "south": "2d7a26bcb32047a12b1ac8cb9cca3315d500992b104459576670a332bf949f53",
+    "southwest": "479ba4526aea0ec5407605e271c9006b63a2718bbb918bbf66bd158a6bc1fd04",
+    "west": "79022b09deaef0d17e006fd165a29f4082baa43c29c7484cc25206d2360c2854",
+    "northwest": "b091477067235a72dd594c72fcb52db396234f2abf3759e330aeccc25809bf9c"
+  },
+  "sourceSHA256": {
+    "source-01.png": "f9ffad56932879bb42a6a26af8e3528439b6e3228428f551b678efd5370cce95"
+  },
+  "resultSHA256": "85d0711c7db540c853f0780292bce40817f48c68768e7c7d1c9bbb1e86d88132",
+  "guideSHA256": "664e321ee4f2b45cc7d7ab9d4e3e0a082bcb14a82f4655e28e646330c50459e3",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "same-character": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "direction-height": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "direction-contact": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "cutout": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

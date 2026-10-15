@@ -1,0 +1,15 @@
+{
+  "id": "llm-visual-v1",
+  "assessedAt": "2026-10-14",
+  "mode": "existing-artifact-reassessment",
+  "newGenerationCalls": 0,
+  "instructions": "grader-snapshot/references/visual-review.md",
+  "grader": "grader-snapshot/scripts/evaluate.py",
+  "graderFiles": {
+    "references/visual-review.md": "69310eafca633acb1ba3a273992ca06453b8bceb853ca3f1eeb979ac1162223f",
+    "scripts/requirements.txt": "f7d2bebf5af96c2b4ec2c9c9e3fff2aafe1dcd6db2b6e2ea690f91f8e8d65e1e",
+    "scripts/evaluate.py": "03ae054616db1b156eece83aad9070b9f438a1fba5470539e7fe7ae439b80ea6",
+    "scripts/prepare_review.py": "d94553dce7c6ee99280e0c3346646f2b8433ea1b6500229e7f5c8600fa5dc7db",
+    "scripts/tile_tools.py": "52700154f78dccf313b292913cf0f979eda32816ec5febefea690561c8f9c30e"
+  }
+}

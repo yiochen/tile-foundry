@@ -1,0 +1,191 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "animated-lava",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a 12-frame looping moving lava tile animation at exactly 12 fps. Each frame has a full 128x128 base and 32px visible front-wall height, in the same top-down oblique projection. Preserve the anchor, base footprint, elevation, and connection to adjacent copies through the animation. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "appearance-material"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "442ec5bb437ce2ee0a20c53636065f00ce4021e612b68abe5036dd8607b35f77"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": false,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "source-0-opaque-material",
+      "pass": false,
+      "detail": "Complete opaque square appearance material; registration comes from authored geometry"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "543d17d20da7cf81af7055c9a0944018dccf8db6596d579dc81e2d0997abf777"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "animation",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": false,
+      "detail": 0
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "declared-geometry",
+      "pass": false,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": false,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "12-fps-schedule",
+      "pass": true,
+      "detail": "12 fps / 83.333333 ms"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": null,
+      "detail": "The raw source has twelve isolated material panels with molten channels and dark crust. They are appearance-material samples, not delivered raised sprites; no processed top/front geometry is supplied.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/references/guide.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": null,
+      "detail": "The raw source has twelve isolated material panels with molten channels and dark crust. Final framed alpha, effects and clipping cannot be inspected because processed sprites are absent.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/references/guide.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": null,
+      "detail": "The guide declares a common ground anchor, but the raw material samples have no physical support landmark. No processed placement is supplied.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/references/guide.png"
+      ]
+    },
+    {
+      "check": "animated-height",
+      "pass": null,
+      "detail": "Material variation is visible in the source sheet, but no processed raised frames or playback establish a fixed support/elevation.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/references/guide.png"
+      ]
+    },
+    {
+      "check": "spatial-seams",
+      "pass": null,
+      "detail": "No processed neighbor images or playable animated neighbors, including offset phases, are supplied. Isolated source panels do not establish spatial continuity.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/references/guide.png"
+      ]
+    },
+    {
+      "check": "temporal-loop",
+      "pass": null,
+      "detail": "No actual 12 fps playback is available in the packet. A still source sheet cannot establish the loop transition.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/references/guide.png"
+      ]
+    },
+    {
+      "check": "frame-consistency",
+      "pass": null,
+      "detail": "The raw source has twelve isolated material panels with molten channels and dark crust. Palette is broadly coherent, but final usable frames, geometry and complete runtime alpha are unavailable.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/references/guide.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": null,
+      "detail": "The source is explicitly appearance material. Without processed sprites or processing operations, a source-to-runtime comparison cannot be made.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/animated-lava/references/guide.png"
+      ]
+    }
+  ],
+  "diagnostics": [],
+  "reviewArtifacts": {},
+  "reviewer": "Codex GPT-6 vision; independent isolated session /root/clean_vision_review; 2026-10-14",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

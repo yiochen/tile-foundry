@@ -1,0 +1,251 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "seated-character-separated",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "First generate an isolated wooden stool centered on a 128x128 tile with a 48px-high seat. Then use the stool as a support reference to generate a 160px nominal-height player sitting on it. Deliver the stool and the sitting character as separate transparent layers. The character-only sprite must contain no stool or floor and retain its projected ground anchor plus a 48px support elevation so it aligns when recomposed. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "7c3238804abf0405bcfbef87d72d4926de0e49dd906d56d0b20b9b52ed352e7c"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide-stool.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "source-1-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-1-unchanged",
+      "pass": true,
+      "detail": "ff0710eb3f768da723aef3521ee541e736f5e8e0ee7ef67eac88bb173fe2b7f7"
+    },
+    {
+      "check": "source-1-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-1-references",
+      "pass": true,
+      "detail": [
+        "references/guide-character.png",
+        "references/stool-reference.png"
+      ]
+    },
+    {
+      "check": "source-1-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-1-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-1-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "ade15673333df9f95ae3e163e9be96f7001e44288bd9fa342317e94f4c603e50"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "layered",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": false,
+      "detail": 0
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "declared-geometry",
+      "pass": false,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "separate-layer-roles",
+      "pass": false,
+      "detail": [
+        "stool",
+        "character"
+      ]
+    },
+    {
+      "check": "support-elevation-once",
+      "pass": false,
+      "detail": null
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": false,
+      "detail": "The raw stool top narrows toward the rear and its side edges converge, rather than retaining the guide parallel screen-aligned depth edges. This visible whole-asset source projection mismatch is not resolved by any supplied runtime art, because processed layers are absent.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/stool-reference.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": null,
+      "detail": "The raw stool and seated figure look complete, including the seat, hands and boots. No processed layers establish final frame fit, effects or clipping.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/stool-reference.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": null,
+      "detail": "The guide gives a common ground anchor and support attachment, but no processed layers or registered recomposition establish the delivered physical ground root.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/stool-reference.png"
+      ]
+    },
+    {
+      "check": "layer-separation",
+      "pass": null,
+      "detail": "Raw character art visibly contains no stool/floor and the raw stool contains no character, but no processed runtime alpha layers are supplied. Clean raw sources cannot establish final layer delivery.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/stool-reference.png"
+      ]
+    },
+    {
+      "check": "seated-contact",
+      "pass": null,
+      "detail": "There is no saved processed-layer recomposition at stored transforms. Raw source appearances alone cannot establish pelvis/seat contact or feet alignment without manual adjustment.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/stool-reference.png"
+      ]
+    },
+    {
+      "check": "complete-layers",
+      "pass": null,
+      "detail": "A complete independent raw stool is present and a separate raw character is present. The packet provides no processed layers to establish their complete runtime delivery.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/stool-reference.png"
+      ]
+    },
+    {
+      "check": "support-height",
+      "pass": null,
+      "detail": "The guide declares a 48px support attachment and registration says elevation is baked into art, but there are no delivered layers/transforms or recomposition to establish that seat height is applied exactly once.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/stool-reference.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": null,
+      "detail": "No processed runtime layers or processing operations are supplied for a visual comparison with the independent raw stool and character sources.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/source-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/guide-character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/seated-character-separated/references/stool-reference.png"
+      ]
+    }
+  ],
+  "diagnostics": [],
+  "reviewArtifacts": {},
+  "reviewer": "Codex GPT-6 vision; independent isolated session /root/clean_vision_review; 2026-10-14",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

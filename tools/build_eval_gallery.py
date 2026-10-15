@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Publish recorded evals, keeping frozen rubrics and unrun cases distinct."""
 import argparse
+import copy
 import hashlib
 import json
 from pathlib import Path
@@ -80,6 +81,7 @@ def build_gallery(runs_root, suite_path, public, reports_root, include_archived=
                 status = 'ungraded'
             status = status or 'not-run'
             item = {'id':f'{run_id}:{relative}', 'runId':run_id, 'attempt':order+1,
+                    'assessmentLabel':'Original grading',
                     'status':status, 'prompt':case['prompt'], 'sources':[], 'sprites':[],
                     'depthPieces':[], 'previews':[], 'automaticChecks':[], 'visualChecks':[]}
             if submission:
@@ -132,6 +134,9 @@ def build_gallery(runs_root, suite_path, public, reports_root, include_archived=
                 item['report'] = publish(report_path,report_path.parent,'report.json')
                 item['automaticChecks'] = report.get('automaticChecks',[])
                 item['visualChecks'] = report.get('visualChecks',[])
+                item['diagnostics'] = report.get('diagnostics',[])
+                item['policy'] = report.get('policy')
+                item['reviewer'] = report.get('reviewer')
                 item['scope'] = report.get('scope','')
                 for label,name in report.get('reviewArtifacts',{}).items():
                     if not isinstance(name,str):
@@ -152,9 +157,41 @@ def build_gallery(runs_root, suite_path, public, reports_root, include_archived=
             # A prepared-but-unrun later run does not hide the last actual result.
             if status != 'not-run':
                 target['latest'] = item
+            # A re-assessment uses the same art but preserves separate policy/review/report records.
+            for assessment in sorted(record.get('assessments',[]),key=lambda a:(a['createdAt'],a['id'])):
+                assessment_trial = assessment.get('cases',{}).get(case['id'])
+                if not assessment_trial:
+                    continue
+                assessment_root = within(run/assessment['directory'],run)
+                new_report_path = within(assessment_root/assessment_trial['report'],assessment_root)
+                new_report = read_json(new_report_path)
+                revised = copy.deepcopy(item)
+                revised.update(id=item['id']+'@'+assessment['id'],
+                    assessmentId=assessment['id'],assessmentLabel=assessment['label'],
+                    assessedAt=assessment['createdAt'],status=new_report['status'],
+                    policy=new_report['policy'],reviewer=new_report.get('reviewer'),
+                    reason=assessment_trial.get('reason',''),
+                    automaticChecks=new_report.get('automaticChecks',[]),
+                    visualChecks=new_report.get('visualChecks',[]),
+                    diagnostics=new_report.get('diagnostics',[]),scope=new_report.get('scope',''))
+                suffix = 'assessments/'+assessment['id']+'/'
+                revised['report'] = publish(new_report_path,assessment_root,suffix+'report.json')
+                revised['review'] = publish(assessment_root/assessment_trial['review'],assessment_root,suffix+'review.json')
+                revised['policyRecord'] = publish(assessment_root/'policy.json',assessment_root,suffix+'policy.json')
+                if assessment_trial.get('packet'):
+                    packet = read_json(within(assessment_root/assessment_trial['packet'],assessment_root))
+                    revised['previews'] = []
+                    for asset in packet['assets']:
+                        if asset['role'] not in ('placement-preview','neighbor-preview','repeat-3','repeat-5'):
+                            continue
+                        path = within(asset['path'],assessment_root)
+                        revised['previews'].append({'label':Path(path).stem.replace('-',' '),
+                            'image':publish(path,assessment_root,suffix+path.name)})
+                target['trials'].append(revised)
+                target['latest'] = revised
     gallery = {'version':1,'suiteVersion':suite['version'], 'cases':list(current.values()),
                'archivedCases':list(archived.values()),
-               'ordering':'Runs ordered by createdAt, falling back to sortable run ID; attempts retain recorded order.'}
+               'ordering':'Runs ordered by createdAt; each generation retains original grading and separately dated assessments.'}
     public.mkdir(parents=True,exist_ok=True)
     (public/'eval-gallery.json').write_text(json.dumps(gallery,indent=2)+'\n')
     return gallery

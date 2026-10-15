@@ -1,0 +1,76 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Codex GPT-6 vision; independent isolated session /root/clean_vision_review; 2026-10-14",
+  "independent": true,
+  "spriteSHA256": {
+    "treasure-orb": "7637879b88c75a6627c41a955df4d79503bc6945cefe7dcf11f4d2b5075fddf0"
+  },
+  "sourceSHA256": {
+    "source-01.png": "827f650887dfd6a721b140792f128ec24fc0cd828af0190b33a45c663482eefd"
+  },
+  "resultSHA256": "c06168c22112e59335e625df87fe977a9f729be1f1271ada4b03e79210614859",
+  "guideSHA256": "d0a42bbd5b3a8e7b1dd0cebff8931dfa4315200e7e8e2f359e97b97979471010",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The orb remains centered over an unrotated square floor reference; its rounded volume and lighting are compatible with the elevated game view, with no camera-dependent scale cue.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/references/generation-guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/sprites/orb.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-dark.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The complete blue orb, gold side bands and upper/lower ornaments fit the frame. No clipped tip, external shadow or detached floor material is visible.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/sprites/orb.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-dark.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The physical orb center is vertically above the placement cross at the floor center, matching the guide relation. The root remains beneath the object rather than at its lower ornament.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/references/generation-guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-dark.png"
+      ]
+    },
+    "floating-placement": {
+      "pass": true,
+      "note": "The lower solid ornament visibly floats above the ground cross by approximately the requested clearance, with a substantial empty gap that matches the guide. This is a qualitative comparison, not pixel-exact proof.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/references/generation-guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/sprites/orb.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-dark.png"
+      ]
+    },
+    "cutout": {
+      "pass": true,
+      "note": "Native and 2x light/dark views show the isolated orb without the calibration floor, dashed anchor guide, external shadow or conspicuous holes/spill.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/sprites/orb.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-dark.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The blue vortex, jewels, gold contours and complete silhouette visibly match the raw whole-asset orb. The measured-calibration-floor method is consistent with retaining that art and its floating relation; no replacement geometry is visible.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/references/generation-guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/floating-object/sprites/orb.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/floating-object/placement-0-dark.png"
+      ]
+    }
+  }
+}

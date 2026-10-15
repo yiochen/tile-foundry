@@ -1,0 +1,94 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Codex GPT-6 vision; independent isolated session /root/clean_vision_review; 2026-10-14",
+  "independent": true,
+  "spriteSHA256": {},
+  "sourceSHA256": {
+    "source-player.png": "5ad50f875b843a7b5c66994024710a9166585e9dfdd257fe434627228d10716a"
+  },
+  "resultSHA256": "50123a931ab6fcef304875a5e050a9bbb584794bef5f4ed3c80131025489895f",
+  "guideSHA256": "63cd2892517ba902632db5d0fc2e94894acbe582ab99b1cd857eaba841556074",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "The raw sheet shows a front-facing player with complete-looking poses, but no processed runtime frames establish the delivered projection.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/references/guide.png"
+      ]
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "Limbs appear present in the raw source; final frame fit, alpha and shadows cannot be inspected because processed frames are absent.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/references/guide.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "The raw calibration squares give a floor reference, but no delivered per-frame registration or placement images establish the runtime ground root.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/references/guide.png"
+      ]
+    },
+    "same-player": {
+      "pass": null,
+      "note": "The raw source uses a consistent red-jacket character and palette. Missing processed frames prevent a runtime identity/scale pass.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/references/guide.png"
+      ]
+    },
+    "dancing-poses": {
+      "pass": null,
+      "note": "The raw sheet has useful arm and body variations with visible hands and shoes, but no processed frames or actual playback establish the requested usable twelve-frame dance loop.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/references/guide.png"
+      ]
+    },
+    "design-height": {
+      "pass": null,
+      "note": "The raw figures look substantially larger than the supplied stick-figure calibration, with some pose-dependent body changes. No processed frames establish final anatomy scale, so this runtime judgment is open.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/references/guide.png"
+      ]
+    },
+    "contact-stability": {
+      "pass": null,
+      "note": "Shoes are shown on calibration squares in the raw sheet, but delivered roots and frame placement cannot be checked without processed frames.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/references/guide.png"
+      ]
+    },
+    "cutout-quality": {
+      "pass": null,
+      "note": "The raw sheet retains broad green/brown background and floor art. No final cutout or light/dark runtime preview is supplied; raw background alone does not establish final cutout quality.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/references/guide.png"
+      ]
+    },
+    "loop": {
+      "pass": null,
+      "note": "No actual 12 fps playback is available. Still panels cannot establish last-to-first continuity or perceived scale stability.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/references/guide.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "No processed frames or processing operations are supplied to compare with the raw source.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/source-player.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/dancing-player/references/guide.png"
+      ]
+    }
+  }
+}

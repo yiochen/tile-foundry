@@ -39,7 +39,7 @@
       "ok": true
     },
     {
-      "check": "13 fresh cases: exact request and generation prompts, actual sources and grade reports, registered sprites, failures, direction stepping, deep link, current animations, desktop/mobile",
+      "check": "13 cases: latest LLM assessments, original grade history, non-gating diagnostics, exact prompts and sources, registered sprites, failures, direction stepping, deep link, current animations, desktop/mobile",
       "ok": true
     },
     {

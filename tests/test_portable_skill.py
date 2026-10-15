@@ -11,7 +11,8 @@ from PIL import Image, ImageDraw
 
 SKILL = Path(__file__).resolve().parents[1] / 'skills/build-overlap-tiles'
 sys.path.insert(0, str(SKILL / 'scripts'))
-from evaluate import evaluate
+from evaluate import evaluate, POLICY
+from prepare_review import prepare_review
 from prepare_evals import prepare
 from guide_tools import build
 from assemble_result import assemble
@@ -125,20 +126,114 @@ class PortableSkillTests(unittest.TestCase):
         self.assertTrue(all(c['pass'] for c in report['automaticChecks']))
         self.assertEqual(len(report['reviewArtifacts']),2)
 
-    def test_floor_seam_jump_is_a_failure(self):
+    def review_fixture(self, case, changes=None):
+        packet_dir = self.directory/'visual-packet'
+        prepare_review(self.run_root, case['id'], packet_dir)
+        review = json.loads((packet_dir/'review-template.json').read_text())
+        review['reviewer'] = 'Synthetic unit-test LLM record; no artwork assessment'
+        review['checks'] = {k:{'pass':True,'note':'Synthetic grader fixture only',
+                               'evidence':['sprite.png']} for k in case['visualChecks']}
+        if changes:
+            review['checks'].update(changes)
+        path = self.artifacts/'llm-review.json'
+        path.write_text(json.dumps(review))
+        return path
+
+    def test_pixel_seam_delta_does_not_override_llm_review(self):
         case,path = self.fixture()
         image = Image.new('RGB',(128,128),'black')
         ImageDraw.Draw(image).rectangle((64,0,127,127),fill='white')
         image.save(self.artifacts/'sprite.png')
         report = self.grade(case,path)
-        self.assertEqual(report['status'],'failed')
-        self.assertFalse(next(c for c in report['automaticChecks'] if c['check']=='opposite-edge-continuity')['pass'])
+        self.assertEqual(report['status'],'needs-visual-review')
+        metric = next(c for c in report['diagnostics'] if c['check']=='opposite-edge-continuity')
+        self.assertFalse(metric['gating'])
+        self.assertEqual(metric['detail']['horizontal'],255)
+        self.assertEqual(self.grade(case,path,self.review_fixture(case))['status'],'passed')
 
-    def test_flat_lava_cannot_pass_visible_height_requirement(self):
+    def test_visible_height_is_reviewed_instead_of_pixel_gated(self):
         case,path = self.fixture('lava-tile')
         report = self.grade(case,path)
+        self.assertEqual(report['status'],'needs-visual-review')
+        self.assertTrue(any(c['check']=='fixture-visible-elevation' for c in report['diagnostics']))
+        key = 'visible-height'
+        self.assertIn(key,case['visualChecks'])
+        review = self.review_fixture(case,{key:{'pass':False,'note':'Flat slab has no front wall.',
+                                                'evidence':['sprite.png']}})
+        self.assertEqual(self.grade(case,path,review)['status'],'failed')
+
+    def test_visible_failure_overrules_low_pixel_delta(self):
+        case,path = self.fixture()
+        key = next(iter(case['visualChecks']))
+        review = self.review_fixture(case,{key:{'pass':False,'note':'Synthetic observed visual defect',
+                                                'evidence':['sprite.png']}})
+        self.assertEqual(self.grade(case,path,review)['status'],'failed')
+
+    def test_unmeasurable_visual_metric_cannot_fail_delivery(self):
+        case,path = self.fixture('lava-tile')
+        image = Image.new('RGBA',tuple(case['expected']['size']))
+        # An irregular silhouette has no opaque side bands at the sampled rows.
+        ImageDraw.Draw(image).ellipse((64,40,128,100),fill='#808050')
+        ImageDraw.Draw(image).ellipse((64,240,128,300),fill='#808050')
+        image.save(self.artifacts/'sprite.png')
+        report = self.grade(case,path)
+        self.assertEqual(report['status'],'needs-visual-review')
+        self.assertTrue(all(c['pass'] for c in report['automaticChecks']))
+
+    def test_direction_landmark_estimates_are_non_gating(self):
+        case,path = self.fixture('character-directions')
+        result_path = self.artifacts/'result.json'
+        result = json.loads(result_path.read_text());sprite=result['sprites'][0]
+        result['sprites'] = [dict(sprite,id=f'direction-{i}',index=i,direction=direction)
+                             for i,direction in enumerate(case['expected']['directions'])]
+        result_path.write_text(json.dumps(result))
+        review_path = self.review_fixture(case)
+        review = json.loads(review_path.read_text())
+        review['measurements'] = {'neutralHeightPx':[180]*8,'rootDriftPx':[5]*8}
+        review_path.write_text(json.dumps(review))
+        report = self.grade(case,path,review_path)
+        self.assertEqual(report['status'],'passed')
+        self.assertTrue(any(c['check']=='neutralHeightPx' for c in report['diagnostics']))
+
+    def test_uncertain_or_unsupported_judgment_requires_review(self):
+        case,path = self.fixture()
+        key = next(iter(case['visualChecks']))
+        for entry in [{'pass':None,'note':'Landmark is hidden.','evidence':['sprite.png']},
+                      {'pass':True,'note':'No inspected image supplied.','evidence':[]}]:
+            review = self.review_fixture(case,{key:entry})
+            self.assertEqual(self.grade(case,path,review)['status'],'needs-visual-review')
+        self.assertEqual(self.grade(case,path,self.directory/'missing-review.json')['status'],'needs-visual-review')
+
+    def test_good_visual_review_cannot_override_missing_runtime_art(self):
+        case,path = self.fixture()
+        result_path = self.artifacts/'result.json'
+        result = json.loads(result_path.read_text());result['sprites']=[]
+        result_path.write_text(json.dumps(result))
+        review = self.review_fixture(case)
+        report = self.grade(case,path,review)
         self.assertEqual(report['status'],'failed')
-        self.assertFalse(next(c for c in report['automaticChecks'] if c['check']=='fixture-visible-elevation')['pass'])
+        self.assertFalse(next(c for c in report['automaticChecks'] if c['check']=='sprite-count')['pass'])
+
+    def test_review_packet_has_images_and_hashes_without_old_verdicts(self):
+        case,path = self.fixture()
+        (self.artifacts/'review.json').write_text('{"oldVerdict":"failed","seamScore":999}')
+        result_path = self.artifacts/'result.json'
+        result = json.loads(result_path.read_text());result.update(outcome='Old failed processing verdict',status='failed')
+        result_path.write_text(json.dumps(result))
+        Image.new('RGB',(32,32),'red').save(self.artifacts/'source-gallery-mobile.png')
+        submission = json.loads(path.read_text());submission['previews']=['source-gallery-mobile.png']
+        path.write_text(json.dumps(submission))
+        output = self.directory/'packet'
+        packet = prepare_review(self.run_root,case['id'],output)
+        self.assertEqual(packet['request'],json.loads(path.read_text())['userPrompt'])
+        self.assertTrue(all(Path(a['path']).is_file() for a in packet['assets']))
+        self.assertEqual(len([a for a in packet['assets'] if a['role'].startswith('repeat-')]),2)
+        self.assertNotIn('oldVerdict',json.dumps(packet))
+        self.assertNotIn('Old failed processing verdict',json.dumps(packet))
+        self.assertNotIn('source-gallery-mobile.png',json.dumps(packet))
+        template = json.loads((output/'review-template.json').read_text())
+        self.assertEqual(template['policy'],POLICY)
+        self.assertEqual(template['sourceSHA256'],{'source-01.png':self.digest('source-01.png')})
 
     def test_wrong_destination_and_changed_source_fail(self):
         case,path = self.fixture()
@@ -248,12 +343,7 @@ class PortableSkillTests(unittest.TestCase):
 
     def test_review_is_bound_to_registration_and_result_metadata(self):
         case,path = self.fixture()
-        review = self.artifacts/'review.json'
-        review.write_text(json.dumps({'independent':True,'reviewer':'Synthetic grader fixture',
-                                     'spriteSHA256':{'fixture':self.digest('sprite.png')},
-                                     'resultSHA256':self.digest('result.json'),'guideSHA256':self.digest('guide.json'),
-                                     'checks':{k:{'pass':True,'note':'Synthetic helper test; no artwork quality claim'}
-                                               for k in case['visualChecks']}}))
+        review = self.review_fixture(case)
         self.assertEqual(self.grade(case,path,review)['status'],'passed')
         result_path = self.artifacts/'result.json'
         result = json.loads(result_path.read_text());result['registrationNote']='Changed after review'

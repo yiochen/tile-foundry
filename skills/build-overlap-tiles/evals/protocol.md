@@ -79,7 +79,7 @@ Author registration constraints before generation; they are not measurements
 proving that the output met the requested height or occupancy. Other processors
 must supply the same v2 manifest with actual frame geometry and provenance.
 
-## Automatic checks and independent review
+## Delivery checks and independent LLM visual review
 
 ```sh
 CASE_ID="lava-tile"
@@ -92,17 +92,31 @@ python "$RUN_ROOT/skill-snapshot/scripts/evaluate.py" \
 The grader reads the independently selected prepared run root to check the frozen
 request and destination; a submission cannot redefine its own storage instruction.
 It checks location/path containment, exact request, unchanged sources and
-references, readable PNGs, expected frame/anchor/occupancy/elevation metadata,
-full-cell alpha/side coverage where applicable, static full-base visible height,
-float clearance, disjoint support/depth-piece registration, separate layer roles and a
-12 fps schedule. Flat-floor opposite-edge RGB deltas and 3×3/5×5 repeats catch
-clear boundary discontinuities. These checks cannot establish correct perspective,
-identity, seam-free texture, hidden anatomy, or stool extraction from metadata.
+references, readable PNGs, expected frame dimensions/anchor/occupancy/elevation
+metadata, floor/material opacity, disjoint support/depth-piece registration,
+separate layer roles and a 12 fps schedule. Image-derived edge RGB deltas, coverage,
+bounds, apparent height and clearance are **non-gating diagnostics**. They cannot
+establish visible seams, perspective, anatomy, contact or separation quality.
+
+Prepare evidence for an independent vision-capable LLM:
+
+```sh
+python "$RUN_ROOT/skill-snapshot/scripts/prepare_review.py" \
+  --run-root "$RUN_ROOT" --case "$CASE_ID" \
+  --output "$RUN_ROOT/review-packets/$CASE_ID"
+```
+
+Give the reviewer the packet, review template and [visual-review policy](../references/visual-review.md).
+Withhold old verdicts and pixel metrics. Require actual image inspection at native
+and 2× scale, with repeats and motion playback where applicable. Use the packet's
+filtered registration and fresh placement views; arbitrary cached screenshots
+or raw result notes may expose previous failure explanations.
 
 An independent reviewer inspects originals, processed art and actual previews:
 
 - Repeated floors at native and 2× scale: no gaps, discontinuous patterns or
-  sudden gradients across either axis. A low edge delta is necessary, not sufficient.
+  sudden gradients across either axis. Pixel differences and repeated motifs alone
+  do not establish a visible seam.
 - Raised full bases: visible front-wall height, complete occupancy and back-row overlap.
 - Partial/floating art: proper scale/ground projection and complete floor removal.
 - Eight upright directions: correct orientation, consistent anatomy/standing
@@ -116,15 +130,18 @@ An independent reviewer inspects originals, processed art and actual previews:
   motion and last-to-first looping. Also inspect animated terrain as spatial
   repeats at every phase and with offset-phase neighbors.
 
-Save `review.json` with an independent reviewer identifier, `independent: true`,
+Save `review.json` with `policy: "llm-visual-v1"`, `reviewerType: "llm"`,
+an independent reviewer identifier, `independent: true`,
 `spriteSHA256` mapping every sprite and depth-piece ID to its current PNG hash,
+`sourceSHA256` mapping each original source path to its hash,
 `resultSHA256` and `guideSHA256` binding the review to the delivered metadata,
-and one `{ "pass": true|false, "note": "specific evidence" }` per
-`visualChecks` entry. For direction/dance cases provide `measurements.neutralHeightPx`
-(one neutral-equivalent anatomy/standing-height estimate per pose) and
-`measurements.rootDriftPx` (independent root/contact displacement per pose), with
-landmark reasoning in the corresponding review notes. Do not measure dance
-height solely from an alpha bounding box. Missing review/evidence cannot pass.
+and one `{ "pass": true|false|null, "note": "specific observation",
+"evidence": ["inspected image/preview path"] }` per `visualChecks` entry.
+Use `false` for a visible defect; `null` for insufficient evidence. Requested
+visual sizes are design targets, judged against the guide, without invented
+pixel precision. Optional landmark estimates belong in `measurements` as
+diagnostics. Do not infer standing height solely from an alpha bounding box.
+Missing review/evidence cannot pass, and missing runtime frames still fail delivery.
 
 ```sh
 python "$RUN_ROOT/skill-snapshot/scripts/evaluate.py" \
@@ -135,5 +152,9 @@ python "$RUN_ROOT/skill-snapshot/scripts/evaluate.py" \
 ```
 
 Exit codes: passed 0, failed 1, needs independent visual review 2. Keep the full
-case report; do not change thresholds, add correction generations, or omit failed
-frames to upgrade a result. Retain `not-run` until generation actually occurs.
+case report; do not add correction generations or omit failed frames to upgrade
+a result. Retain `not-run` until generation actually occurs. If the user requests
+a grading-policy change, freeze that policy and grader in a new assessment
+directory, independently review the unchanged images, and save new reviews and
+reports there. Preserve the original skill snapshot, suite, images and grades;
+label the new assessment separately from a fresh generation run.

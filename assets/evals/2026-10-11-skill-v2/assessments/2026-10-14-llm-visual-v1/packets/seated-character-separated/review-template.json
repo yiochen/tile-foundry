@@ -1,0 +1,55 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {},
+  "sourceSHA256": {
+    "source-stool.png": "7c3238804abf0405bcfbef87d72d4926de0e49dd906d56d0b20b9b52ed352e7c",
+    "source-character.png": "ff0710eb3f768da723aef3521ee541e736f5e8e0ee7ef67eac88bb173fe2b7f7"
+  },
+  "resultSHA256": "1581e51c255e791391d394bb29544ff322b608f658c5d65c54881949c352e79a",
+  "guideSHA256": "ade15673333df9f95ae3e163e9be96f7001e44288bd9fa342317e94f4c603e50",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "layer-separation": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "seated-contact": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-layers": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "support-height": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

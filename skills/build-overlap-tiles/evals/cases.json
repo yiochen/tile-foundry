@@ -2,6 +2,7 @@
   "version": 2,
   "status": "specified",
   "skill": "../SKILL.md",
+  "validationPolicy": "llm-visual-v1",
   "common": {
     "projection": "top-down-oblique-square-grid",
     "cellSize": 128,

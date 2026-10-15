@@ -199,19 +199,26 @@ The earlier two-case generation run remains an archive with its original
 flat-lava and 8 fps expectations, sources and reviews. The first dance failed
 pose diversity; the retry passed after transparent-separator recovery.
 Those historical artifacts are removed from the playground. Current results
-come from fresh generation against the frozen v2 skill and rubric; one case
-passed and twelve failed. See [fresh run findings](docs/skill-eval-v2-findings.md).
+come from fresh generation against the frozen v2 skill and rubric. The original
+assessment recorded one pass and twelve failures; it remains available in each
+case's assessment selector. The latest [LLM visual assessment](docs/llm-visual-eval-findings.md)
+reviews those same images without regenerating art. Visual quality uses independent
+image inspection; pixel differences, coverage and bounds are diagnostics. File
+integrity, declared geometry, required frames/layers and 12 fps remain delivery checks.
 
 ```sh
-# Replay all 13 current cases against their frozen rubric and recorded independent review
+# Replay the latest recorded assessment of all 13 cases
 npm run eval:skill
+
+# Reproduce the original grading without changing it
+python tools/run_skill_evals.py --assessment original
 ```
 
 Replay performs no image generation and verifies the recorded outcomes, including
 failures. Use `python tools/run_skill_evals.py --run assets/evals/2026-10-11-skill-v1`
 for the archived pilot. To publish a new run, save it under `assets/evals/<sortable-run-id>/`,
 retain its frozen suite/skill, submissions and reports, then run `npm run assets`.
-The gallery selects the newest actual outcome for each unchanged case rubric;
+The gallery selects the newest assessment for each unchanged case rubric;
 a later prepared-but-unrun case does not hide a recorded failure or success.
 
 ## Verify

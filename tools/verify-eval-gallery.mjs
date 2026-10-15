@@ -10,6 +10,19 @@ export async function verifyEvalGallery(page,root,port){
   await page.setViewportSize({width:1440,height:1000});
   await page.goto(url+'/?view=evals',{waitUntil:'networkidle'});
   await page.locator('[data-evals-ready="true"]').waitFor();
+  const floor = gallery.cases.find(c=>c.id==='seamless-square-floor');
+  assert.equal(floor.latest.policy,'llm-visual-v1');
+  assert.ok(floor.trials.length>=2);
+  assert.notEqual(floor.latest.report,floor.trials[0].report);
+  await page.locator('[data-eval-case="seamless-square-floor"]').click();
+  await page.locator('[data-eval-policy="llm-visual-v1"]').waitFor();
+  assert.equal(await page.locator('.eval-diagnostics').count(),1);
+  assert.ok((await page.locator('.eval-diagnostics summary').innerText()).includes('do not affect grade'));
+  await page.getByLabel('Eval attempt',{exact:true}).selectOption(floor.trials[0].id);
+  await page.locator('[data-eval-policy="original"]').waitFor();
+  assert.equal(await page.getByRole('link',{name:'Full eval report',exact:false}).getAttribute('href'),'/assets/'+floor.trials[0].report);
+  await page.getByLabel('Eval attempt',{exact:true}).selectOption(floor.latest.id);
+  await page.locator('[data-eval-policy="llm-visual-v1"]').waitFor();
   assert.equal(await page.locator('[data-eval-case]').count(),13);
   for(const entry of gallery.cases){
     await page.locator(`[data-eval-case="${entry.id}"]`).click();
@@ -52,5 +65,5 @@ export async function verifyEvalGallery(page,root,port){
   assert.equal(await page.locator('[data-eval-case]').count(),3);
   assert.equal(await page.locator('.eval-result').count(),1);
   assert.equal(await page.getByRole('button',{name:'Evals',exact:true}).count(),1);
-  return {check:'13 fresh cases: exact request and generation prompts, actual sources and grade reports, registered sprites, failures, direction stepping, deep link, current animations, desktop/mobile',ok:true};
+  return {check:'13 cases: latest LLM assessments, original grade history, non-gating diagnostics, exact prompts and sources, registered sprites, failures, direction stepping, deep link, current animations, desktop/mobile',ok:true};
 }

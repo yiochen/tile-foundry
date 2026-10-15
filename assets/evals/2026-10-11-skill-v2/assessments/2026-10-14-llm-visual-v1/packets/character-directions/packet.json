@@ -1,0 +1,622 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "character-directions",
+  "request": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "same-character": "One consistent identity, outfit, proportions and camera; turn the subject, not the camera.",
+    "direction-height": "Eight upright views have the same standing design height within 4px; no per-direction art-bounds fitting.",
+    "direction-contact": "Independent review of the floor registration and physical sole/support center confirms consistent contact; toe length may change the visible bottom.",
+    "cutout": "No calibration floor or pose-guide strokes remain.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "directions",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "heightAxis": [
+      0,
+      -1
+    ],
+    "elevationScale": 1,
+    "groundAnchorAlignment": "center",
+    "frameOrder": [
+      "north",
+      "northeast",
+      "east",
+      "southeast",
+      "south",
+      "southwest",
+      "west",
+      "northwest"
+    ],
+    "sprites": [
+      {
+        "id": "north",
+        "image": "processed/frames/frame-00.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 0,
+        "direction": "N"
+      },
+      {
+        "id": "northeast",
+        "image": "processed/frames/frame-01.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 1,
+        "direction": "NE"
+      },
+      {
+        "id": "east",
+        "image": "processed/frames/frame-02.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 2,
+        "direction": "E"
+      },
+      {
+        "id": "southeast",
+        "image": "processed/frames/frame-03.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 3,
+        "direction": "SE"
+      },
+      {
+        "id": "south",
+        "image": "processed/frames/frame-04.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 4,
+        "direction": "S"
+      },
+      {
+        "id": "southwest",
+        "image": "processed/frames/frame-05.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 5,
+        "direction": "SW"
+      },
+      {
+        "id": "west",
+        "image": "processed/frames/frame-06.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 6,
+        "direction": "W"
+      },
+      {
+        "id": "northwest",
+        "image": "processed/frames/frame-07.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 7,
+        "direction": "NW"
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "north",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          53,
+          102,
+          269,
+          512
+        ],
+        "anchorSource": [
+          161.0,
+          406.5
+        ],
+        "scale": [
+          0.5925925925925926,
+          0.5926829268292683
+        ],
+        "subpixelShift": [
+          0.0,
+          -0.4719512195121922
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "northeast",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          52,
+          102,
+          268,
+          513
+        ],
+        "anchorSource": [
+          159.5,
+          407.0
+        ],
+        "scale": [
+          0.5972222222222222,
+          0.5961070559610706
+        ],
+        "subpixelShift": [
+          -0.20138888888888573,
+          0.187347931873461
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "east",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          50,
+          103,
+          265,
+          513
+        ],
+        "anchorSource": [
+          157.5,
+          407.0
+        ],
+        "scale": [
+          0.5953488372093023,
+          0.5951219512195122
+        ],
+        "subpixelShift": [
+          0.0,
+          0.08292682926830253
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "southeast",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          49,
+          103,
+          265,
+          512
+        ],
+        "anchorSource": [
+          157.0,
+          407.0
+        ],
+        "scale": [
+          0.5925925925925926,
+          0.5916870415647921
+        ],
+        "subpixelShift": [
+          0.0,
+          0.12713936430318995
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "south",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          53,
+          65,
+          269,
+          477
+        ],
+        "anchorSource": [
+          160.5,
+          371.5
+        ],
+        "scale": [
+          0.5972222222222222,
+          0.5946601941747572
+        ],
+        "subpixelShift": [
+          -0.20138888888888573,
+          -0.26334951456308886
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "southwest",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          52,
+          67,
+          268,
+          477
+        ],
+        "anchorSource": [
+          159.5,
+          371.0
+        ],
+        "scale": [
+          0.5972222222222222,
+          0.5951219512195122
+        ],
+        "subpixelShift": [
+          -0.20138888888888573,
+          0.08292682926830253
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "west",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          50,
+          67,
+          265,
+          477
+        ],
+        "anchorSource": [
+          157.5,
+          371.0
+        ],
+        "scale": [
+          0.5953488372093023,
+          0.5951219512195122
+        ],
+        "subpixelShift": [
+          0.0,
+          0.08292682926830253
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "northwest",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          49,
+          66,
+          265,
+          477
+        ],
+        "anchorSource": [
+          157.0,
+          371.5
+        ],
+        "scale": [
+          0.5925925925925926,
+          0.5936739659367397
+        ],
+        "subpixelShift": [
+          0.0,
+          -0.3673965936739876
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions/references/guide-2x.png"
+    },
+    {
+      "role": "processed",
+      "id": "north",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions/processed/frames/frame-00.png"
+    },
+    {
+      "role": "processed",
+      "id": "northeast",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions/processed/frames/frame-01.png"
+    },
+    {
+      "role": "processed",
+      "id": "east",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions/processed/frames/frame-02.png"
+    },
+    {
+      "role": "processed",
+      "id": "southeast",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions/processed/frames/frame-03.png"
+    },
+    {
+      "role": "processed",
+      "id": "south",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions/processed/frames/frame-04.png"
+    },
+    {
+      "role": "processed",
+      "id": "southwest",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions/processed/frames/frame-05.png"
+    },
+    {
+      "role": "processed",
+      "id": "west",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions/processed/frames/frame-06.png"
+    },
+    {
+      "role": "processed",
+      "id": "northwest",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/character-directions/processed/frames/frame-07.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-0-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-1-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-1-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-2-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-2-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-3-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-3-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-4-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-4-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-5-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-5-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-6-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-6-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-7-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/character-directions/placement-7-dark.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/grader-snapshot/references/visual-review.md"
+}

@@ -3,12 +3,12 @@
 import argparse
 import hashlib
 import json
-import math
 from pathlib import Path
 from PIL import Image
 from tile_tools import load_rgba, neighbor_coverage, parallel_edges, render_floor_repeat, write_json
 
 SUITE = Path(__file__).resolve().parents[1] / 'evals/cases.json'
+POLICY = 'llm-visual-v1'
 
 
 def contained(base, name, bundle_root=None):
@@ -34,9 +34,12 @@ def seam_delta(image):
 def evaluate(case, submission_path, review_path=None, output_path=None, run_root=None):
     submission_path = Path(submission_path).resolve()
     base = submission_path.parent
-    checks, visual, artifacts = [], [], {}
+    checks, visual, diagnostics, artifacts = [], [], [], {}
     def check(name, passed, detail):
         checks.append({'check': name, 'pass': bool(passed), 'detail': detail})
+    def diagnostic(name, detail):
+        diagnostics.append({'check':name, 'detail':detail, 'gating':False})
+    source_hashes = {}
     try:
         submission = json.loads(submission_path.read_text())
         if run_root is None:
@@ -69,6 +72,7 @@ def evaluate(case, submission_path, review_path=None, output_path=None, run_root
             recipe_path = contained(base, record['recipe'])
             recipe = json.loads(recipe_path.read_text())
             digest = hashlib.sha256(source.read_bytes()).hexdigest()
+            source_hashes[record['image']] = digest
             check(f'source-{i}-unchanged', recipe.get('sourceSHA256') == digest, digest)
             check(f'source-{i}-actual-prompt', bool(recipe.get('prompt', '').strip()), 'Expanded submitted prompt')
             refs = recipe.get('references', [])
@@ -133,30 +137,33 @@ def evaluate(case, submission_path, review_path=None, output_path=None, run_root
                 border = [alpha.crop(rect).getextrema()[1] for rect in
                           [(0,0,image.width,1),(0,image.height-1,image.width,image.height),
                            (0,0,1,image.height),(image.width-1,0,image.width,image.height)]]
-                check(f"{sprite['id']}-frame-margin", max(border) < 32, 'No retained art at frame edges')
+                diagnostic(f"{sprite['id']}-frame-margin", {'edgeAlphaMax':max(border),
+                           'note':'Inspect complete art visually; edge alpha alone does not establish clipping.'})
             if expected.get('fullBase'):
-                anchor = expected['anchor']
-                coverage, _ = neighbor_coverage(image, (anchor[0], anchor[1]+expected['footprint'][1]/2),
-                                                pitch=tuple(expected['footprint']), min_alpha=expected['minimumAlpha'])
-                sides = parallel_edges(image)
-                check(f"{sprite['id']}-solid-coverage", coverage['ok'] and sides['ok'],
-                      {'coverage': coverage, 'sideSpans': sides})
-                if case['kind'] == 'object':
-                    body = sides['bodyRect']
-                    observed = body[3]-body[1]-expected['footprint'][1]
-                    check(f"{sprite['id']}-visible-elevation", abs(observed-expected['elevationPx']) <=
-                          expected['elevationTolerancePx'], observed)
+                try:
+                    anchor = expected['anchor']
+                    coverage, _ = neighbor_coverage(image, (anchor[0], anchor[1]+expected['footprint'][1]/2),
+                                                    pitch=tuple(expected['footprint']), min_alpha=expected['minimumAlpha'])
+                    sides = parallel_edges(image)
+                    diagnostic(f"{sprite['id']}-solid-coverage", {'coverage': coverage, 'sideSpans': sides})
+                    if case['kind'] == 'object':
+                        body = sides['bodyRect']
+                        observed = body[3]-body[1]-expected['footprint'][1]
+                        diagnostic(f"{sprite['id']}-visible-elevation", {'observedPx':observed,
+                                   'requestedPx':expected['elevationPx']})
+                except (ValueError, TypeError, KeyError) as exc:
+                    diagnostic(f"{sprite['id']}-solid-coverage", {'unavailable':str(exc)})
             if 'groundClearancePx' in expected:
                 box = image.getchannel('A').point(lambda a: 255 if a >= 64 else 0).getbbox()
                 observed = expected['anchor'][1]-box[3] if box else -10000
-                check('floating-clearance', abs(observed-expected['groundClearancePx']) <=
-                      expected['groundClearanceTolerancePx'], observed)
+                diagnostic('floating-clearance', {'observedPx':observed,'requestedPx':expected['groundClearancePx']})
         check('declared-geometry', geometry, 'Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry')
         if case['kind'] == 'floor' and images:
             image = images[0]
             check('opaque-floor', image.getchannel('A').getextrema()[0] >= expected['minimumAlpha'], 'Complete opaque square')
             delta = seam_delta(image)
-            check('opposite-edge-continuity', max(delta.values()) <= expected['seamMeanChannelDeltaMax'], delta)
+            diagnostic('opposite-edge-continuity', {**delta,
+                       'note':'RGB deltas do not determine visible seams; inspect repeated neighbors.'})
             if output_path:
                 previews = Path(output_path).parent / (Path(output_path).stem+'-previews')
                 previews.mkdir(parents=True, exist_ok=True)
@@ -174,8 +181,8 @@ def evaluate(case, submission_path, review_path=None, output_path=None, run_root
             heights = [i.getchannel('A').point(lambda a: 255 if a >= 64 else 0).getbbox() for i in images]
             if heights and all(heights):
                 heights = [b[3]-b[1] for b in heights]
-                check('upright-bounds-diagnostic', True, {'alphaHeights':heights,
-                      'note':'Toe length changes bounds; independent neutral standing height determines pass/fail'})
+                diagnostic('upright-bounds', {'alphaHeights':heights,
+                           'note':'Pose and toe length change bounds; judge anatomy scale and support visually.'})
         if 'supportCells' in expected:
             check('ground-support-cells', result.get('supportCells') == expected['supportCells'], result.get('supportCells'))
         if expected.get('depthPiecesRequired'):
@@ -212,32 +219,29 @@ def evaluate(case, submission_path, review_path=None, output_path=None, run_root
         try:
             review = json.loads(Path(review_path).read_text())
             visual.append({'check':'independent-current-artifacts','pass':review.get('independent') is True and
+                           review.get('policy') == POLICY and review.get('reviewerType') == 'llm' and
                            bool(review.get('reviewer')) and review.get('spriteSHA256') == image_hashes and
+                           review.get('sourceSHA256') == source_hashes and
                            review.get('resultSHA256') == result_digest and review.get('guideSHA256') == guide_digest,
-                           'detail':'Reviewer identity, independence declaration and hashes of all art, registration and result metadata'})
+                           'detail':'Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata'})
             for key, description in case['visualChecks'].items():
                 entry = review.get('checks',{}).get(key,{})
-                visual.append({'check':key,'pass':entry.get('pass') is True and bool(entry.get('note')),
-                               'detail':entry.get('note',description)})
-            for key, limit in [('heightSpreadMaxPx','neutralHeightPx'),('contactDriftMaxPx','rootDriftPx')]:
-                if key in case['expected']:
-                    values = review.get('measurements',{}).get(limit,[])
-                    passed = len(values) == case['expected'].get('frames',1) and all(type(x) in (float,int) and math.isfinite(x) for x in values)
-                    if passed:
-                        observed = max(values)-min(values) if limit == 'neutralHeightPx' else max(values)
-                        passed &= observed <= case['expected'][key]
-                        if limit == 'neutralHeightPx':
-                            passed &= abs(sum(values)/len(values)-case['expected']['elevationPx']) <= case['expected'][key]
-                        else:
-                            passed &= min(values) >= 0
-                    visual.append({'check':limit,'pass':bool(passed),'detail':values})
-        except (OSError, ValueError, TypeError) as exc:
-            visual.append({'check':'independent-review','pass':False,'detail':str(exc)})
+                evidence = entry.get('evidence')
+                supported = bool(entry.get('note')) and isinstance(evidence,list) and bool(evidence) and all(isinstance(p,str) and p for p in evidence)
+                verdict = entry.get('pass') if type(entry.get('pass')) is bool and supported else None
+                visual.append({'check':key,'pass':verdict,'detail':entry.get('note') or description,
+                               'evidence':evidence or []})
+            for key, values in review.get('measurements',{}).items():
+                diagnostic(key, values)
+        except (OSError, ValueError, TypeError, AttributeError) as exc:
+            visual.append({'check':'independent-review','pass':None,'detail':str(exc)})
     automatic_pass = bool(checks) and all(c['pass'] for c in checks)
-    status = 'failed' if not automatic_pass or (visual and not all(c['pass'] for c in visual)) else 'passed' if visual else 'needs-visual-review'
-    report = {'version':2,'caseId':case['id'],'status':status,'automaticChecks':checks,
-              'visualChecks':visual,'reviewArtifacts':artifacts,
-              'scope':'Artifact checks and independent review; no fresh generation is performed by the grader.'}
+    status = ('failed' if not automatic_pass or any(c['pass'] is False for c in visual)
+              else 'passed' if visual and all(c['pass'] is True for c in visual) else 'needs-visual-review')
+    report = {'version':3,'policy':POLICY,'caseId':case['id'],'status':status,'automaticChecks':checks,
+              'visualChecks':visual,'diagnostics':diagnostics,'reviewArtifacts':artifacts,
+              'reviewer':review.get('reviewer') if review_path and 'review' in locals() else None,
+              'scope':'Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated.'}
     if output_path:
         write_json(output_path, report)
     return report

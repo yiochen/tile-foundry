@@ -1,0 +1,41 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {
+    "mossy-stone-floor": "8faf5d33be94c4ea3183d03769a05e716ff32a6ae667edbc843364040b396c88"
+  },
+  "sourceSHA256": {
+    "source-01.png": "c6ef4ccd24307a525b3c0c0f94922097f4937ad5964784c1d158c4adfcb6ca7f"
+  },
+  "resultSHA256": "b792b4eab9012fcd12a72f95e153d082ea889cb69a0ad214be5d134e3e549b99",
+  "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "seam-continuity": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

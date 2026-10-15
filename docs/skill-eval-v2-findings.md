@@ -1,5 +1,11 @@
 # Fresh 13-case skill run
 
+This records the **original grading**. The later [LLM visual assessment](llm-visual-eval-findings.md)
+uses the same unchanged images and preserves these grades separately. In particular,
+the floor's RGB cutoff did not establish a perceptible seam; the original failure
+description below overstated the visual evidence. The playground defaults to the
+latest assessment and offers the original in its assessment selector.
+
 All cases were rerun against the frozen skill and rubric in
 `assets/evals/2026-10-11-skill-v2/`. Three independent executors received the
 requests and workflow instructions; root separately inspected sources, cutouts,
@@ -50,7 +56,8 @@ model prompts/references, original art, processed sprites, checks and diagnostic
 **Animations** filters the same current cases. The old two-case pilot is removed
 from the published gallery; its raw repository archive remains provenance.
 
-Run `npm run eval:skill` to replay the saved sources and independent reviews.
+Run `python tools/run_skill_evals.py --assessment original` to replay this original
+grading. `npm run eval:skill` replays the latest recorded assessment.
 An exit-success replay means the recorded grades were reproduced, including
 failures; it does not mean every case passed. Run `npm run assets` to publish the
 latest recorded outcome for each unchanged case rubric. The site never chooses

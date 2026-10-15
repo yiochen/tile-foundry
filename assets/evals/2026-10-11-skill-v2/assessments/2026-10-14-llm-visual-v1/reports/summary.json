@@ -1,0 +1,100 @@
+{
+  "run": "2026-10-11-skill-v2",
+  "mode": "saved-artifact-replay",
+  "ok": true,
+  "trials": [
+    {
+      "trial": "seamless-square-floor",
+      "caseId": "seamless-square-floor",
+      "status": "passed",
+      "expectedStatus": "passed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "lava-tile",
+      "caseId": "lava-tile",
+      "status": "passed",
+      "expectedStatus": "passed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "full-cell-raised-object",
+      "caseId": "full-cell-raised-object",
+      "status": "passed",
+      "expectedStatus": "passed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "partial-cell-tall-object",
+      "caseId": "partial-cell-tall-object",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "floating-object",
+      "caseId": "floating-object",
+      "status": "passed",
+      "expectedStatus": "passed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "character-directions",
+      "caseId": "character-directions",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "large-object-2x2",
+      "caseId": "large-object-2x2",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "large-object-3x2",
+      "caseId": "large-object-3x2",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "disjoint-support-arch",
+      "caseId": "disjoint-support-arch",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "animated-waves",
+      "caseId": "animated-waves",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "animated-lava",
+      "caseId": "animated-lava",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "seated-character-separated",
+      "caseId": "seated-character-separated",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "dancing-player",
+      "caseId": "dancing-player",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    }
+  ],
+  "scope": "Replays preserved originals and independent reviews, including failures; no new image generation or corrected attempts.",
+  "assessment": "2026-10-14-llm-visual-v1"
+}

@@ -88,5 +88,10 @@ axis stretching, anchor fitting, or grading changes.
 
 The [13-case eval suite](evals/cases.json) is specified before fresh generation.
 Use [the eval protocol](evals/protocol.md) to prepare isolated output destinations
-and independent review. A prepared case is not a passed case. Freeze its rubric
-and this skill snapshot before a run; do not tune the skill to make that run pass.
+and independent LLM visual review. Use the [visual-review policy](references/visual-review.md)
+for perceptible seams, proportions, anchors and motion; pixel metrics are
+diagnostics. Deterministic checks still enforce delivery integrity and declared
+geometry/timing. A prepared case is not a passed case. Freeze its rubric and this
+skill snapshot before a run; do not tune the skill to make that run pass. Record
+an explicitly requested grading-policy change as a separate assessment of the
+unchanged images, preserving the original grades.

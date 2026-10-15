@@ -1,0 +1,76 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Codex GPT-6 vision; independent isolated session /root/clean_vision_review; 2026-10-14",
+  "independent": true,
+  "spriteSHA256": {
+    "full-cell-raised-object": "6ca2f31b576203dc21d85810d6e2cdd05c7da11771ed2e96cd40de6ce758deb6"
+  },
+  "sourceSHA256": {
+    "source-01.png": "990e17d82008ddee04de1fd5b6806413aa6d16ce40e5a5fc07e613b88abbf0b4"
+  },
+  "resultSHA256": "2ede26b17b87c881e83c1359b689e88f98c19aeb6c932b3b8484b8d7e4de1e4a",
+  "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The top is a screen-aligned square and the darker front is a straight rectangular wall. Corresponding edges remain parallel, with no perspective taper.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/sprites/plinth.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/neighbors-0.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "All top/front corners are complete, with clean outer frame margins and no undeclared shadow or clipped silhouette.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/sprites/plinth.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/placement-0-dark.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The raised square is centered on the placement cross and the front wall terminates at the footprint front edge. Its upward top offset matches the authored geometry rather than moving the ground center.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/references/generation-guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/sprites/plinth.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/placement-0-dark.png"
+      ]
+    },
+    "full-base": {
+      "pass": true,
+      "note": "The full rectangular top/front support spans the declared cell width with square corners and no gaps or taper; neighbors meet without exposed background.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/sprites/plinth.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/neighbors-0.png"
+      ]
+    },
+    "visible-height": {
+      "pass": true,
+      "note": "The darker front wall reads as the requested substantial elevation, about half the top depth, and the top extends above the ground-cell upper boundary.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/sprites/plinth.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/assessments/2026-10-14-llm-visual-v1/packets/full-cell-raised-object/placement-0-dark.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The raw file is explicitly appearance material. The processed stone pattern and authored top/front silhouette agree with the listed authored-svg-faces method and pre-material geometry; there is no visible replacement whole-object art.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/sprites/plinth.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-11-skill-v2/full-cell-raised-object/template/template.png"
+      ]
+    }
+  }
+}
