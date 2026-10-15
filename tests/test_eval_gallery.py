@@ -77,6 +77,26 @@ class EvalGalleryTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'escapes'):
             self.build()
 
+    def test_svg_overlay_preserves_original_and_explicit_registration(self):
+        self.run_record('2026-01-01',status='failed')
+        directory = self.root/'runs/2026-01-01/floor'
+        layout = {'kind':'object-sheet','cellSize':128,'size':[128,128],
+                  'frame':[128,128],'anchor':[64,64],
+                  'cells':[{'rect':[0,0,128,128]}],
+                  'subjectRegistration':{'height':80,'baseSize':[32,32]}}
+        (directory/'guide.json').write_text(json.dumps(layout))
+        svg = '<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><path d="M64 64V8" stroke="blue"/></svg>'
+        (directory/'guide.svg').write_text(svg)
+        overlay = self.build()['cases'][0]['latest']['guideOverlay']
+        self.assertEqual(overlay['anchor'],[64,64])
+        self.assertEqual(overlay['size'],[128,128])
+        self.assertEqual(overlay['heightPx'],80)
+        self.assertEqual((self.root/'public'/overlay['image']).read_text(),svg)
+        # A multi-panel SVG needs its own declared per-panel mapping.
+        layout['cells'].append({'rect':[0,0,128,128]})
+        (directory/'guide.json').write_text(json.dumps(layout))
+        self.assertNotIn('guideOverlay',self.build()['cases'][0]['latest'])
+
     def test_new_assessment_keeps_original_grade_and_art_separate(self):
         self.run_record('2026-01-01',status='failed')
         run = self.root/'runs/2026-01-01'

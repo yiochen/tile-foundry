@@ -2876,6 +2876,22 @@
         "submission": "evals/2026-10-11-skill-v2/partial-cell-tall-object/submission.json",
         "guide": "evals/2026-10-11-skill-v2/partial-cell-tall-object/guide.json",
         "guideImage": "evals/2026-10-11-skill-v2/partial-cell-tall-object/guide.png",
+        "guideOverlay": {
+          "image": "evals/2026-10-11-skill-v2/partial-cell-tall-object/guide.svg",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "heightPx": 160,
+          "baseSize": [
+            48,
+            48
+          ]
+        },
         "result": "evals/2026-10-11-skill-v2/partial-cell-tall-object/result.json",
         "kind": "object",
         "anchorAlignment": "center",
@@ -3105,6 +3121,22 @@
           "submission": "evals/2026-10-11-skill-v2/partial-cell-tall-object/submission.json",
           "guide": "evals/2026-10-11-skill-v2/partial-cell-tall-object/guide.json",
           "guideImage": "evals/2026-10-11-skill-v2/partial-cell-tall-object/guide.png",
+          "guideOverlay": {
+            "image": "evals/2026-10-11-skill-v2/partial-cell-tall-object/guide.svg",
+            "size": [
+              192,
+              320
+            ],
+            "anchor": [
+              96,
+              248
+            ],
+            "heightPx": 160,
+            "baseSize": [
+              48,
+              48
+            ]
+          },
           "result": "evals/2026-10-11-skill-v2/partial-cell-tall-object/result.json",
           "kind": "object",
           "anchorAlignment": "center",
@@ -3351,6 +3383,22 @@
           "submission": "evals/2026-10-11-skill-v2/partial-cell-tall-object/submission.json",
           "guide": "evals/2026-10-11-skill-v2/partial-cell-tall-object/guide.json",
           "guideImage": "evals/2026-10-11-skill-v2/partial-cell-tall-object/guide.png",
+          "guideOverlay": {
+            "image": "evals/2026-10-11-skill-v2/partial-cell-tall-object/guide.svg",
+            "size": [
+              192,
+              320
+            ],
+            "anchor": [
+              96,
+              248
+            ],
+            "heightPx": 160,
+            "baseSize": [
+              48,
+              48
+            ]
+          },
           "result": "evals/2026-10-11-skill-v2/partial-cell-tall-object/result.json",
           "kind": "object",
           "anchorAlignment": "center",
@@ -3646,6 +3694,22 @@
         "submission": "evals/2026-10-11-skill-v2/floating-object/submission.json",
         "guide": "evals/2026-10-11-skill-v2/floating-object/guide.json",
         "guideImage": "evals/2026-10-11-skill-v2/floating-object/guide.png",
+        "guideOverlay": {
+          "image": "evals/2026-10-11-skill-v2/floating-object/guide.svg",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "heightPx": 64,
+          "baseSize": [
+            64,
+            64
+          ]
+        },
         "result": "evals/2026-10-11-skill-v2/floating-object/result.json",
         "kind": "object",
         "anchorAlignment": "center",
@@ -3888,6 +3952,22 @@
           "submission": "evals/2026-10-11-skill-v2/floating-object/submission.json",
           "guide": "evals/2026-10-11-skill-v2/floating-object/guide.json",
           "guideImage": "evals/2026-10-11-skill-v2/floating-object/guide.png",
+          "guideOverlay": {
+            "image": "evals/2026-10-11-skill-v2/floating-object/guide.svg",
+            "size": [
+              192,
+              320
+            ],
+            "anchor": [
+              96,
+              248
+            ],
+            "heightPx": 64,
+            "baseSize": [
+              64,
+              64
+            ]
+          },
           "result": "evals/2026-10-11-skill-v2/floating-object/result.json",
           "kind": "object",
           "anchorAlignment": "center",
@@ -4126,6 +4206,22 @@
           "submission": "evals/2026-10-11-skill-v2/floating-object/submission.json",
           "guide": "evals/2026-10-11-skill-v2/floating-object/guide.json",
           "guideImage": "evals/2026-10-11-skill-v2/floating-object/guide.png",
+          "guideOverlay": {
+            "image": "evals/2026-10-11-skill-v2/floating-object/guide.svg",
+            "size": [
+              192,
+              320
+            ],
+            "anchor": [
+              96,
+              248
+            ],
+            "heightPx": 64,
+            "baseSize": [
+              64,
+              64
+            ]
+          },
           "result": "evals/2026-10-11-skill-v2/floating-object/result.json",
           "kind": "object",
           "anchorAlignment": "center",
@@ -10256,6 +10352,19 @@
         "submission": "evals/2026-10-11-skill-v2/seated-character-separated/submission.json",
         "guide": "evals/2026-10-11-skill-v2/seated-character-separated/guide.json",
         "guideImage": "evals/2026-10-11-skill-v2/seated-character-separated/guide.png",
+        "guideOverlay": {
+          "image": "evals/2026-10-11-skill-v2/seated-character-separated/guide.svg",
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "heightPx": null,
+          "baseSize": null
+        },
         "result": "evals/2026-10-11-skill-v2/seated-character-separated/result.json",
         "processing": "evals/2026-10-11-skill-v2/seated-character-separated/processing/diagnostic.json",
         "kind": "layered",
@@ -10525,6 +10634,19 @@
           "submission": "evals/2026-10-11-skill-v2/seated-character-separated/submission.json",
           "guide": "evals/2026-10-11-skill-v2/seated-character-separated/guide.json",
           "guideImage": "evals/2026-10-11-skill-v2/seated-character-separated/guide.png",
+          "guideOverlay": {
+            "image": "evals/2026-10-11-skill-v2/seated-character-separated/guide.svg",
+            "size": [
+              192,
+              320
+            ],
+            "anchor": [
+              96,
+              248
+            ],
+            "heightPx": null,
+            "baseSize": null
+          },
           "result": "evals/2026-10-11-skill-v2/seated-character-separated/result.json",
           "processing": "evals/2026-10-11-skill-v2/seated-character-separated/processing/diagnostic.json",
           "kind": "layered",
@@ -10820,6 +10942,19 @@
           "submission": "evals/2026-10-11-skill-v2/seated-character-separated/submission.json",
           "guide": "evals/2026-10-11-skill-v2/seated-character-separated/guide.json",
           "guideImage": "evals/2026-10-11-skill-v2/seated-character-separated/guide.png",
+          "guideOverlay": {
+            "image": "evals/2026-10-11-skill-v2/seated-character-separated/guide.svg",
+            "size": [
+              192,
+              320
+            ],
+            "anchor": [
+              96,
+              248
+            ],
+            "heightPx": null,
+            "baseSize": null
+          },
           "result": "evals/2026-10-11-skill-v2/seated-character-separated/result.json",
           "processing": "evals/2026-10-11-skill-v2/seated-character-separated/processing/diagnostic.json",
           "kind": "layered",

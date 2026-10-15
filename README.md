@@ -92,6 +92,7 @@ subcommand for input options. Output paths are explicit; originals are not repla
 - Workflows: five trials side by side, block versus sphere style references, measured joins, SVG outline, live material/height controls, and a mixed-height scene.
 - Characters: box, stick, SVG, raster, and jumping guides; floor-derived normalization, five green-key cutouts, two detached extractions, and exact-subtraction comparisons.
 - Evals: all 13 current cases with exact requests, expanded model prompts, supplied references, originals, processed sprites, recorded grades and review/processing diagnostics. Latest outcomes include failures. Open `?view=evals`, or link directly with `&case=CASE_ID`.
+- Single-frame SVG guides can be overlaid on processed results at their recorded ground center and cell scale. Adjust opacity or open the original SVG; add `&overlay=svg` to share the comparison.
 - Animations: the three current motion cases, including failed generation/processing results and 12 fps previews where runtime frames exist. Historical lava/dance artifacts are retained in the repository archive and removed from the playground.
 
 ## Netlify publishing

@@ -26,6 +26,7 @@
 .eval-result-heading{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:18px;font-size:11px;color:var(--muted)}.eval-result-heading h4{margin:0;color:#294137}
 .eval-render{background:#eef1e8;border-radius:8px;padding:16px;display:flex;justify-content:center}
 .eval-sprite-preview{display:block;max-width:100%;width:auto;max-height:460px;height:auto;object-fit:contain}
+.eval-overlay-controls{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:14px 0;font-size:11px;color:var(--muted)}.eval-overlay-controls label{display:flex;align-items:center;gap:7px;min-width:0}.eval-overlay-controls input[type=range]{width:110px}.eval-overlay-controls output{font-variant-numeric:tabular-nums;min-width:30px}.eval-overlay-controls a{color:var(--green)}.has-svg-guide .eval-sprite-preview{width:480px;max-height:none}.eval-overlay-caption{font-size:11px;line-height:1.7;color:var(--muted);margin-top:10px}
 .eval-frame-controls{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:14px 0;font-size:11px;color:var(--muted)}.eval-frame-controls .secondary-button{width:auto;padding:8px 18px}.eval-frame-controls label{display:flex;gap:8px;align-items:center}
 .eval-sprite-strip{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;margin-top:18px}
 .eval-sprite-strip button{background:#eef1e8;border:1px solid transparent;border-radius:6px;padding:8px;min-width:0;font-size:10px;color:var(--muted)}.eval-sprite-strip button[aria-pressed=true]{border-color:var(--green)}

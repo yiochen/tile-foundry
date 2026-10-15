@@ -105,6 +105,20 @@ def build_gallery(runs_root, suite_path, public, reports_root, include_archived=
                 guide_image = next((p for p in [guide.with_suffix('.png'), directory/'guide.png'] if p.is_file()),None)
                 if guide_image:
                     item['guideImage'] = publish(guide_image)
+                layout = read_json(guide)
+                svg = guide.with_suffix('.svg')
+                size, anchor = layout.get('size'), layout.get('anchor')
+                cells = layout.get('cells',[])
+                # Only a complete single-frame guide has an unambiguous 1:1
+                # overlay. Never fit a source sheet or infer a transform from art.
+                if (svg.is_file() and layout.get('kind') == 'object-sheet' and
+                    layout.get('cellSize') == 128 and size == layout.get('frame') and
+                    isinstance(size,list) and len(size)==2 and
+                    isinstance(anchor,list) and len(anchor)==2 and len(cells)==1 and
+                    cells[0].get('rect') == [0,0,*size]):
+                    subject = layout.get('subjectRegistration',{})
+                    item['guideOverlay'] = {'image':publish(svg),'size':size,'anchor':anchor,
+                        'heightPx':subject.get('height'),'baseSize':subject.get('baseSize')}
                 for name in submission.get('previews',[]):
                     if Path(name).suffix.lower() not in ('.png','.jpg','.jpeg','.webp','.gif','.svg'):
                         continue

@@ -6,7 +6,7 @@ const labels = {'not-run':'Not run',passed:'Passed',failed:'Failed',blocked:'Blo
 const statusOf = entry => entry.latest?.status || 'not-run';
 const statusLabel = status => labels[status] || status;
 
-function SpritePreview({sprites, active, compose, showAnchors}) {
+function SpritePreview({sprites, active, compose, showAnchors, guide, showGuide, guideOpacity}) {
   const ref = useRef(null);
   const [error, setError] = useState('');
   useEffect(() => {
@@ -14,16 +14,23 @@ function SpritePreview({sprites, active, compose, showAnchors}) {
     const canvas = ref.current;
     canvas.dataset.ready = 'false';
     setError('');
-    Promise.all(sprites.map(sprite => new Promise((resolve,reject) => {
-      const image = new Image(); image.src = base+sprite.image;
+    const renderGuide = showGuide && guide;
+    Promise.all([...sprites,...(renderGuide?[guide]:[])].map(asset => new Promise((resolve,reject) => {
+      const image = new Image(); image.src = base+asset.image;
       image.onload = () => resolve(image); image.onerror = () => reject(Error('Could not load the recorded sprite.'));
-    }))).then(images => {
+    }))).then(loaded => {
       if (!alive) return;
+      const images = loaded.slice(0,sprites.length), guideImage = renderGuide&&loaded[sprites.length];
+      if(guideImage&&(guideImage.width!==guide.size[0]||guideImage.height!==guide.size[1])){
+        throw Error('The SVG dimensions differ from its recorded frame; overlay cannot be aligned safely.');
+      }
       // Preserve complete registered frames around a shared root, without alpha fitting.
-      const left = Math.min(...sprites.map(s=>-s.anchor[0]));
-      const top = Math.min(...sprites.map(s=>-s.anchor[1]));
-      const right = Math.max(...sprites.map((s,i)=>images[i].width-s.anchor[0]));
-      const bottom = Math.max(...sprites.map((s,i)=>images[i].height-s.anchor[1]));
+      const frames = sprites.map((s,i)=>({...s,size:[images[i].width,images[i].height]}));
+      if(guide)frames.push(guide);
+      const left = Math.min(...frames.map(s=>-s.anchor[0]));
+      const top = Math.min(...frames.map(s=>-s.anchor[1]));
+      const right = Math.max(...frames.map(s=>s.size[0]-s.anchor[0]));
+      const bottom = Math.max(...frames.map(s=>s.size[1]-s.anchor[1]));
       const margin = 24, root = [margin-left,margin-top];
       canvas.width = right-left+2*margin; canvas.height = bottom-top+2*margin;
       const ctx = canvas.getContext('2d');
@@ -32,16 +39,23 @@ function SpritePreview({sprites, active, compose, showAnchors}) {
       ctx.fillStyle = '#d6dfcd';
       ctx.fillRect(root[0]-footprint[0]/2,root[1]-footprint[1]/2,...footprint);
       (compose ? sprites.map((_,i)=>i) : [active]).forEach(i=>ctx.drawImage(images[i],root[0]-sprites[i].anchor[0],root[1]-sprites[i].anchor[1]));
-      if(showAnchors){
+      if(guideImage){
+        ctx.save();ctx.globalAlpha=guideOpacity/100;
+        ctx.drawImage(guideImage,root[0]-guide.anchor[0],root[1]-guide.anchor[1]);ctx.restore();
+      }
+      if(showAnchors||guideImage){
         ctx.strokeStyle = '#c03d80';ctx.lineWidth = 1;
         ctx.beginPath();ctx.moveTo(root[0]-8,root[1]);ctx.lineTo(root[0]+8,root[1]);
         ctx.moveTo(root[0],root[1]-8);ctx.lineTo(root[0],root[1]+8);ctx.stroke();
       }
       canvas.dataset.ready = 'true';canvas.dataset.frame = String(active);
       canvas.dataset.anchor = sprites[active].anchor.join(',');
+      canvas.dataset.guideOverlay = guideImage?'true':'false';
+      canvas.dataset.guideOpacity = String(guideOpacity);
+      canvas.dataset.guideAnchor = guide?.anchor.join(',')||'';
     }).catch(e=>alive&&setError(e.message));
     return () => {alive=false;};
-  },[sprites,active,compose,showAnchors]);
+  },[sprites,active,compose,showAnchors,guide,showGuide,guideOpacity]);
   return <>{error&&<p role="alert">{error}</p>}<canvas ref={ref} className="eval-sprite-preview" aria-label="Recorded sprites at their stored ground anchor"/></>;
 }
 
@@ -64,7 +78,16 @@ function Diagnostics({checks=[]}) {
 
 function TrialResult({trial, entry, showAnchors}) {
   const [frame,setFrame] = useState(0), [playing,setPlaying] = useState(false), [compose,setCompose] = useState(entry.kind==='layered');
+  const [showGuide,setShowGuide] = useState(()=>new URLSearchParams(window.location.search).get('overlay')==='svg');
+  const [guideOpacity,setGuideOpacity] = useState(65);
   const sprites = trial.sprites;
+  const guide = trial.guideOverlay;
+  const toggleGuide = value => {
+    setShowGuide(value);
+    const url=new URL(window.location.href);
+    if(value)url.searchParams.set('overlay','svg');else url.searchParams.delete('overlay');
+    window.history.replaceState(null,'',url);
+  };
   useEffect(() => {
     if(!playing||!sprites.length)return;
     const timer = setTimeout(()=>setFrame(i=>(i+1)%sprites.length),1000/12);
@@ -75,7 +98,15 @@ function TrialResult({trial, entry, showAnchors}) {
     <p className="lab-scope" data-eval-policy={trial.policy||'original'}>{trial.assessmentLabel}{trial.assessedAt&&` · ${trial.assessedAt}`}{trial.policy&&` · ${trial.policy}`}{trial.reviewer&&` · ${trial.reviewer}`}</p>
     {trial.reason&&<p className="eval-failure">{trial.reason}</p>}
     {sprites.length>0?<>
-      <div className="eval-render"><SpritePreview sprites={sprites} active={frame} compose={compose} showAnchors={showAnchors}/></div>
+      <div className={'eval-overlay-comparison'+(guide?' has-svg-guide':'')}>
+        {guide&&<div className="eval-overlay-controls">
+          <label><input type="checkbox" checked={showGuide} onChange={e=>toggleGuide(e.target.checked)}/> SVG guide overlay</label>
+          {showGuide&&<label>Opacity<input aria-label="SVG overlay opacity" type="range" min="10" max="100" step="5" value={guideOpacity} onChange={e=>setGuideOpacity(Number(e.target.value))}/><output>{guideOpacity}%</output></label>}
+          <a href={base+guide.image} target="_blank" rel="noreferrer">Original SVG ↗</a>
+        </div>}
+        <div className="eval-render"><SpritePreview sprites={sprites} active={frame} compose={compose} showAnchors={showAnchors} guide={guide} showGuide={showGuide} guideOpacity={guideOpacity}/></div>
+        {guide&&showGuide&&<p className="eval-overlay-caption">Original SVG at the same ground center and cell scale.{guide.heightPx!=null&&` Guide height: ${guide.heightPx}px above the ground center.`}{guide.baseSize&&` Base: ${guide.baseSize.join(' × ')}px.`} The green square is the calibration floor; the cross marks the shared ground anchor.</p>}
+      </div>
       {sprites.length>1&&<div className="eval-frame-controls">
         {entry.kind==='animation'&&<button className="secondary-button" onClick={()=>setPlaying(p=>!p)}>{playing?'Pause':'Play'} · 12 fps</button>}
         {entry.kind==='layered'&&<label><input type="checkbox" checked={compose} onChange={e=>setCompose(e.target.checked)}/> Recompose layers at stored anchors</label>}
