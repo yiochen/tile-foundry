@@ -39,7 +39,7 @@
       "ok": true
     },
     {
-      "check": "13 cases: registered original SVG overlay and opacity, LLM assessments, original grade history, non-gating diagnostics, exact prompts and sources, registered sprites, failures, direction stepping, deep link, current animations, desktop/mobile",
+      "check": "13 cases: 12 fps player, mouse/touch progress scrubbing, pause and frame stepping, raw source playback without changing grades, SVG overlay, LLM assessments, history, exact prompts/sources, deep links and desktop/mobile",
       "ok": true
     },
     {

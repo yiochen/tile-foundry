@@ -93,6 +93,8 @@ subcommand for input options. Output paths are explicit; originals are not repla
 - Characters: box, stick, SVG, raster, and jumping guides; floor-derived normalization, five green-key cutouts, two detached extractions, and exact-subtraction comparisons.
 - Evals: all 13 current cases with exact requests, expanded model prompts, supplied references, originals, processed sprites, recorded grades and review/processing diagnostics. Latest outcomes include failures. Open `?view=evals`, or link directly with `&case=CASE_ID`.
 - Single-frame SVG guides can be overlaid on processed results at their recorded ground center and cell scale. Adjust opacity or open the original SVG; add `&overlay=svg` to share the comparison.
+- Every multi-sprite result has a looping 12 fps player, a draggable progress bar, previous/next frame controls and direct sprite selection. Scrubbing pauses playback. Directions and layers can be stepped through as sequences.
+- Failed runs can expose clearly labeled raw-source players: complete saved pose panels or material-sheet panels separated in transparent gutters, retaining the original pixels. These previews do not change eval grades or claim calibrated runtime registration.
 - Animations: the three current motion cases, including failed generation/processing results and 12 fps previews where runtime frames exist. Historical lava/dance artifacts are retained in the repository archive and removed from the playground.
 
 ## Netlify publishing

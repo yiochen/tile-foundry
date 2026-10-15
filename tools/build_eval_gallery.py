@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import re
 import shutil
+from eval_preview_sequences import source_sequence
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -144,6 +145,11 @@ def build_gallery(runs_root, suite_path, public, reports_root, include_archived=
                     item['sheet'] = publish(result_path.parent/(sheet['image'] if isinstance(sheet,dict) else sheet))
                 for piece in result.get('depthPieces',[]):
                     item['depthPieces'].append({**piece,'image':publish(result_path.parent/piece['image'])})
+                if not item['sprites'] and (case['kind']=='animation' or len(sources)>1):
+                    try:
+                        item['previewSequence'] = source_sequence(directory,submission,layout,publish)
+                    except ValueError as exc:
+                        item['previewUnavailable'] = str(exc)
             if report:
                 item['report'] = publish(report_path,report_path.parent,'report.json')
                 item['automaticChecks'] = report.get('automaticChecks',[])

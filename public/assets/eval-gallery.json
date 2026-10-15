@@ -8871,6 +8871,247 @@
         "processing": "evals/2026-10-11-skill-v2/animated-waves/processing/diagnostic.json",
         "kind": "animation",
         "anchorAlignment": "center",
+        "previewSequence": {
+          "kind": "unprocessed-source-sequence",
+          "fps": 12,
+          "alignment": "panel-origin",
+          "isProcessedSprite": false,
+          "note": "Raw material panels including their gutters and faint source noise, shown at a fixed panel origin. No floor, height or runtime sprite registration has been produced.",
+          "frames": [
+            {
+              "id": "source-0",
+              "index": 0,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                0,
+                0,
+                314,
+                411
+              ],
+              "size": [
+                314,
+                411
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-1",
+              "index": 1,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                314,
+                0,
+                628,
+                411
+              ],
+              "size": [
+                314,
+                411
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-2",
+              "index": 2,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                628,
+                0,
+                939,
+                411
+              ],
+              "size": [
+                311,
+                411
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-3",
+              "index": 3,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                939,
+                0,
+                1254,
+                411
+              ],
+              "size": [
+                315,
+                411
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-4",
+              "index": 4,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                0,
+                411,
+                314,
+                828
+              ],
+              "size": [
+                314,
+                417
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-5",
+              "index": 5,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                314,
+                411,
+                628,
+                828
+              ],
+              "size": [
+                314,
+                417
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-6",
+              "index": 6,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                628,
+                411,
+                939,
+                828
+              ],
+              "size": [
+                311,
+                417
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-7",
+              "index": 7,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                939,
+                411,
+                1254,
+                828
+              ],
+              "size": [
+                315,
+                417
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-8",
+              "index": 8,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                0,
+                828,
+                314,
+                1254
+              ],
+              "size": [
+                314,
+                426
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-9",
+              "index": 9,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                314,
+                828,
+                628,
+                1254
+              ],
+              "size": [
+                314,
+                426
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-10",
+              "index": 10,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                628,
+                828,
+                939,
+                1254
+              ],
+              "size": [
+                311,
+                426
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-11",
+              "index": 11,
+              "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+              "sourceRect": [
+                939,
+                828,
+                1254,
+                1254
+              ],
+              "size": [
+                315,
+                426
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            }
+          ],
+          "sourceSHA256": {
+            "source-material.png": "a10f03836b1db7543e4f031bad82bdc0d9f74ff7c763b3e95b9c33b4bf6e6a87"
+          },
+          "separatorAlphaMax": 1
+        },
         "report": "evals/2026-10-11-skill-v2/animated-waves/assessments/2026-10-14-llm-visual-v1/report.json",
         "diagnostics": [],
         "policy": "llm-visual-v1",
@@ -9080,6 +9321,247 @@
           "processing": "evals/2026-10-11-skill-v2/animated-waves/processing/diagnostic.json",
           "kind": "animation",
           "anchorAlignment": "center",
+          "previewSequence": {
+            "kind": "unprocessed-source-sequence",
+            "fps": 12,
+            "alignment": "panel-origin",
+            "isProcessedSprite": false,
+            "note": "Raw material panels including their gutters and faint source noise, shown at a fixed panel origin. No floor, height or runtime sprite registration has been produced.",
+            "frames": [
+              {
+                "id": "source-0",
+                "index": 0,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  0,
+                  0,
+                  314,
+                  411
+                ],
+                "size": [
+                  314,
+                  411
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-1",
+                "index": 1,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  314,
+                  0,
+                  628,
+                  411
+                ],
+                "size": [
+                  314,
+                  411
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-2",
+                "index": 2,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  628,
+                  0,
+                  939,
+                  411
+                ],
+                "size": [
+                  311,
+                  411
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-3",
+                "index": 3,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  939,
+                  0,
+                  1254,
+                  411
+                ],
+                "size": [
+                  315,
+                  411
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-4",
+                "index": 4,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  0,
+                  411,
+                  314,
+                  828
+                ],
+                "size": [
+                  314,
+                  417
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-5",
+                "index": 5,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  314,
+                  411,
+                  628,
+                  828
+                ],
+                "size": [
+                  314,
+                  417
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-6",
+                "index": 6,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  628,
+                  411,
+                  939,
+                  828
+                ],
+                "size": [
+                  311,
+                  417
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-7",
+                "index": 7,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  939,
+                  411,
+                  1254,
+                  828
+                ],
+                "size": [
+                  315,
+                  417
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-8",
+                "index": 8,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  0,
+                  828,
+                  314,
+                  1254
+                ],
+                "size": [
+                  314,
+                  426
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-9",
+                "index": 9,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  314,
+                  828,
+                  628,
+                  1254
+                ],
+                "size": [
+                  314,
+                  426
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-10",
+                "index": 10,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  628,
+                  828,
+                  939,
+                  1254
+                ],
+                "size": [
+                  311,
+                  426
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-11",
+                "index": 11,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  939,
+                  828,
+                  1254,
+                  1254
+                ],
+                "size": [
+                  315,
+                  426
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "sourceSHA256": {
+              "source-material.png": "a10f03836b1db7543e4f031bad82bdc0d9f74ff7c763b3e95b9c33b4bf6e6a87"
+            },
+            "separatorAlphaMax": 1
+          },
           "report": "evals/2026-10-11-skill-v2/animated-waves/report.json",
           "diagnostics": [],
           "policy": null,
@@ -9299,6 +9781,247 @@
           "processing": "evals/2026-10-11-skill-v2/animated-waves/processing/diagnostic.json",
           "kind": "animation",
           "anchorAlignment": "center",
+          "previewSequence": {
+            "kind": "unprocessed-source-sequence",
+            "fps": 12,
+            "alignment": "panel-origin",
+            "isProcessedSprite": false,
+            "note": "Raw material panels including their gutters and faint source noise, shown at a fixed panel origin. No floor, height or runtime sprite registration has been produced.",
+            "frames": [
+              {
+                "id": "source-0",
+                "index": 0,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  0,
+                  0,
+                  314,
+                  411
+                ],
+                "size": [
+                  314,
+                  411
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-1",
+                "index": 1,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  314,
+                  0,
+                  628,
+                  411
+                ],
+                "size": [
+                  314,
+                  411
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-2",
+                "index": 2,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  628,
+                  0,
+                  939,
+                  411
+                ],
+                "size": [
+                  311,
+                  411
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-3",
+                "index": 3,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  939,
+                  0,
+                  1254,
+                  411
+                ],
+                "size": [
+                  315,
+                  411
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-4",
+                "index": 4,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  0,
+                  411,
+                  314,
+                  828
+                ],
+                "size": [
+                  314,
+                  417
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-5",
+                "index": 5,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  314,
+                  411,
+                  628,
+                  828
+                ],
+                "size": [
+                  314,
+                  417
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-6",
+                "index": 6,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  628,
+                  411,
+                  939,
+                  828
+                ],
+                "size": [
+                  311,
+                  417
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-7",
+                "index": 7,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  939,
+                  411,
+                  1254,
+                  828
+                ],
+                "size": [
+                  315,
+                  417
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-8",
+                "index": 8,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  0,
+                  828,
+                  314,
+                  1254
+                ],
+                "size": [
+                  314,
+                  426
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-9",
+                "index": 9,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  314,
+                  828,
+                  628,
+                  1254
+                ],
+                "size": [
+                  314,
+                  426
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-10",
+                "index": 10,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  628,
+                  828,
+                  939,
+                  1254
+                ],
+                "size": [
+                  311,
+                  426
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-11",
+                "index": 11,
+                "image": "evals/2026-10-11-skill-v2/animated-waves/source-material.png",
+                "sourceRect": [
+                  939,
+                  828,
+                  1254,
+                  1254
+                ],
+                "size": [
+                  315,
+                  426
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "sourceSHA256": {
+              "source-material.png": "a10f03836b1db7543e4f031bad82bdc0d9f74ff7c763b3e95b9c33b4bf6e6a87"
+            },
+            "separatorAlphaMax": 1
+          },
           "report": "evals/2026-10-11-skill-v2/animated-waves/assessments/2026-10-14-llm-visual-v1/report.json",
           "diagnostics": [],
           "policy": "llm-visual-v1",
@@ -9575,6 +10298,247 @@
         "processing": "evals/2026-10-11-skill-v2/animated-lava/processing/diagnostic.json",
         "kind": "animation",
         "anchorAlignment": "center",
+        "previewSequence": {
+          "kind": "unprocessed-source-sequence",
+          "fps": 12,
+          "alignment": "panel-origin",
+          "isProcessedSprite": false,
+          "note": "Raw material panels including their gutters and faint source noise, shown at a fixed panel origin. No floor, height or runtime sprite registration has been produced.",
+          "frames": [
+            {
+              "id": "source-0",
+              "index": 0,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                0,
+                0,
+                312,
+                424
+              ],
+              "size": [
+                312,
+                424
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-1",
+              "index": 1,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                312,
+                0,
+                627,
+                424
+              ],
+              "size": [
+                315,
+                424
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-2",
+              "index": 2,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                627,
+                0,
+                939,
+                424
+              ],
+              "size": [
+                312,
+                424
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-3",
+              "index": 3,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                939,
+                0,
+                1254,
+                424
+              ],
+              "size": [
+                315,
+                424
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-4",
+              "index": 4,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                0,
+                424,
+                312,
+                823
+              ],
+              "size": [
+                312,
+                399
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-5",
+              "index": 5,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                312,
+                424,
+                627,
+                823
+              ],
+              "size": [
+                315,
+                399
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-6",
+              "index": 6,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                627,
+                424,
+                939,
+                823
+              ],
+              "size": [
+                312,
+                399
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-7",
+              "index": 7,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                939,
+                424,
+                1254,
+                823
+              ],
+              "size": [
+                315,
+                399
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-8",
+              "index": 8,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                0,
+                823,
+                312,
+                1254
+              ],
+              "size": [
+                312,
+                431
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-9",
+              "index": 9,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                312,
+                823,
+                627,
+                1254
+              ],
+              "size": [
+                315,
+                431
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-10",
+              "index": 10,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                627,
+                823,
+                939,
+                1254
+              ],
+              "size": [
+                312,
+                431
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-11",
+              "index": 11,
+              "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+              "sourceRect": [
+                939,
+                823,
+                1254,
+                1254
+              ],
+              "size": [
+                315,
+                431
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            }
+          ],
+          "sourceSHA256": {
+            "source-material.png": "442ec5bb437ce2ee0a20c53636065f00ce4021e612b68abe5036dd8607b35f77"
+          },
+          "separatorAlphaMax": 1
+        },
         "report": "evals/2026-10-11-skill-v2/animated-lava/assessments/2026-10-14-llm-visual-v1/report.json",
         "diagnostics": [],
         "policy": "llm-visual-v1",
@@ -9784,6 +10748,247 @@
           "processing": "evals/2026-10-11-skill-v2/animated-lava/processing/diagnostic.json",
           "kind": "animation",
           "anchorAlignment": "center",
+          "previewSequence": {
+            "kind": "unprocessed-source-sequence",
+            "fps": 12,
+            "alignment": "panel-origin",
+            "isProcessedSprite": false,
+            "note": "Raw material panels including their gutters and faint source noise, shown at a fixed panel origin. No floor, height or runtime sprite registration has been produced.",
+            "frames": [
+              {
+                "id": "source-0",
+                "index": 0,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  0,
+                  0,
+                  312,
+                  424
+                ],
+                "size": [
+                  312,
+                  424
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-1",
+                "index": 1,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  312,
+                  0,
+                  627,
+                  424
+                ],
+                "size": [
+                  315,
+                  424
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-2",
+                "index": 2,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  627,
+                  0,
+                  939,
+                  424
+                ],
+                "size": [
+                  312,
+                  424
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-3",
+                "index": 3,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  939,
+                  0,
+                  1254,
+                  424
+                ],
+                "size": [
+                  315,
+                  424
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-4",
+                "index": 4,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  0,
+                  424,
+                  312,
+                  823
+                ],
+                "size": [
+                  312,
+                  399
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-5",
+                "index": 5,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  312,
+                  424,
+                  627,
+                  823
+                ],
+                "size": [
+                  315,
+                  399
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-6",
+                "index": 6,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  627,
+                  424,
+                  939,
+                  823
+                ],
+                "size": [
+                  312,
+                  399
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-7",
+                "index": 7,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  939,
+                  424,
+                  1254,
+                  823
+                ],
+                "size": [
+                  315,
+                  399
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-8",
+                "index": 8,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  0,
+                  823,
+                  312,
+                  1254
+                ],
+                "size": [
+                  312,
+                  431
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-9",
+                "index": 9,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  312,
+                  823,
+                  627,
+                  1254
+                ],
+                "size": [
+                  315,
+                  431
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-10",
+                "index": 10,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  627,
+                  823,
+                  939,
+                  1254
+                ],
+                "size": [
+                  312,
+                  431
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-11",
+                "index": 11,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  939,
+                  823,
+                  1254,
+                  1254
+                ],
+                "size": [
+                  315,
+                  431
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "sourceSHA256": {
+              "source-material.png": "442ec5bb437ce2ee0a20c53636065f00ce4021e612b68abe5036dd8607b35f77"
+            },
+            "separatorAlphaMax": 1
+          },
           "report": "evals/2026-10-11-skill-v2/animated-lava/report.json",
           "diagnostics": [],
           "policy": null,
@@ -10003,6 +11208,247 @@
           "processing": "evals/2026-10-11-skill-v2/animated-lava/processing/diagnostic.json",
           "kind": "animation",
           "anchorAlignment": "center",
+          "previewSequence": {
+            "kind": "unprocessed-source-sequence",
+            "fps": 12,
+            "alignment": "panel-origin",
+            "isProcessedSprite": false,
+            "note": "Raw material panels including their gutters and faint source noise, shown at a fixed panel origin. No floor, height or runtime sprite registration has been produced.",
+            "frames": [
+              {
+                "id": "source-0",
+                "index": 0,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  0,
+                  0,
+                  312,
+                  424
+                ],
+                "size": [
+                  312,
+                  424
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-1",
+                "index": 1,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  312,
+                  0,
+                  627,
+                  424
+                ],
+                "size": [
+                  315,
+                  424
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-2",
+                "index": 2,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  627,
+                  0,
+                  939,
+                  424
+                ],
+                "size": [
+                  312,
+                  424
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-3",
+                "index": 3,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  939,
+                  0,
+                  1254,
+                  424
+                ],
+                "size": [
+                  315,
+                  424
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-4",
+                "index": 4,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  0,
+                  424,
+                  312,
+                  823
+                ],
+                "size": [
+                  312,
+                  399
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-5",
+                "index": 5,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  312,
+                  424,
+                  627,
+                  823
+                ],
+                "size": [
+                  315,
+                  399
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-6",
+                "index": 6,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  627,
+                  424,
+                  939,
+                  823
+                ],
+                "size": [
+                  312,
+                  399
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-7",
+                "index": 7,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  939,
+                  424,
+                  1254,
+                  823
+                ],
+                "size": [
+                  315,
+                  399
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-8",
+                "index": 8,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  0,
+                  823,
+                  312,
+                  1254
+                ],
+                "size": [
+                  312,
+                  431
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-9",
+                "index": 9,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  312,
+                  823,
+                  627,
+                  1254
+                ],
+                "size": [
+                  315,
+                  431
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-10",
+                "index": 10,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  627,
+                  823,
+                  939,
+                  1254
+                ],
+                "size": [
+                  312,
+                  431
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-11",
+                "index": 11,
+                "image": "evals/2026-10-11-skill-v2/animated-lava/source-material.png",
+                "sourceRect": [
+                  939,
+                  823,
+                  1254,
+                  1254
+                ],
+                "size": [
+                  315,
+                  431
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "sourceSHA256": {
+              "source-material.png": "442ec5bb437ce2ee0a20c53636065f00ce4021e612b68abe5036dd8607b35f77"
+            },
+            "separatorAlphaMax": 1
+          },
           "report": "evals/2026-10-11-skill-v2/animated-lava/assessments/2026-10-14-llm-visual-v1/report.json",
           "diagnostics": [],
           "policy": "llm-visual-v1",
@@ -10369,6 +11815,45 @@
         "processing": "evals/2026-10-11-skill-v2/seated-character-separated/processing/diagnostic.json",
         "kind": "layered",
         "anchorAlignment": "center",
+        "previewSequence": {
+          "kind": "unprocessed-source-sequence",
+          "fps": 12,
+          "alignment": "panel-origin",
+          "isProcessedSprite": false,
+          "note": "Complete raw source assets at a fixed panel origin. Cycling layers is an inspection aid; common runtime registration has not been established.",
+          "frames": [
+            {
+              "id": "source-0",
+              "index": 0,
+              "image": "evals/2026-10-11-skill-v2/seated-character-separated/source-stool.png",
+              "size": [
+                971,
+                1619
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            },
+            {
+              "id": "source-1",
+              "index": 1,
+              "image": "evals/2026-10-11-skill-v2/seated-character-separated/source-character.png",
+              "size": [
+                971,
+                1619
+              ],
+              "anchor": [
+                0,
+                0
+              ]
+            }
+          ],
+          "sourceSHA256": {
+            "source-stool.png": "7c3238804abf0405bcfbef87d72d4926de0e49dd906d56d0b20b9b52ed352e7c",
+            "source-character.png": "ff0710eb3f768da723aef3521ee541e736f5e8e0ee7ef67eac88bb173fe2b7f7"
+          }
+        },
         "report": "evals/2026-10-11-skill-v2/seated-character-separated/assessments/2026-10-14-llm-visual-v1/report.json",
         "diagnostics": [],
         "policy": "llm-visual-v1",
@@ -10651,6 +12136,45 @@
           "processing": "evals/2026-10-11-skill-v2/seated-character-separated/processing/diagnostic.json",
           "kind": "layered",
           "anchorAlignment": "center",
+          "previewSequence": {
+            "kind": "unprocessed-source-sequence",
+            "fps": 12,
+            "alignment": "panel-origin",
+            "isProcessedSprite": false,
+            "note": "Complete raw source assets at a fixed panel origin. Cycling layers is an inspection aid; common runtime registration has not been established.",
+            "frames": [
+              {
+                "id": "source-0",
+                "index": 0,
+                "image": "evals/2026-10-11-skill-v2/seated-character-separated/source-stool.png",
+                "size": [
+                  971,
+                  1619
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-1",
+                "index": 1,
+                "image": "evals/2026-10-11-skill-v2/seated-character-separated/source-character.png",
+                "size": [
+                  971,
+                  1619
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "sourceSHA256": {
+              "source-stool.png": "7c3238804abf0405bcfbef87d72d4926de0e49dd906d56d0b20b9b52ed352e7c",
+              "source-character.png": "ff0710eb3f768da723aef3521ee541e736f5e8e0ee7ef67eac88bb173fe2b7f7"
+            }
+          },
           "report": "evals/2026-10-11-skill-v2/seated-character-separated/report.json",
           "diagnostics": [],
           "policy": null,
@@ -10959,6 +12483,45 @@
           "processing": "evals/2026-10-11-skill-v2/seated-character-separated/processing/diagnostic.json",
           "kind": "layered",
           "anchorAlignment": "center",
+          "previewSequence": {
+            "kind": "unprocessed-source-sequence",
+            "fps": 12,
+            "alignment": "panel-origin",
+            "isProcessedSprite": false,
+            "note": "Complete raw source assets at a fixed panel origin. Cycling layers is an inspection aid; common runtime registration has not been established.",
+            "frames": [
+              {
+                "id": "source-0",
+                "index": 0,
+                "image": "evals/2026-10-11-skill-v2/seated-character-separated/source-stool.png",
+                "size": [
+                  971,
+                  1619
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "id": "source-1",
+                "index": 1,
+                "image": "evals/2026-10-11-skill-v2/seated-character-separated/source-character.png",
+                "size": [
+                  971,
+                  1619
+                ],
+                "anchor": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "sourceSHA256": {
+              "source-stool.png": "7c3238804abf0405bcfbef87d72d4926de0e49dd906d56d0b20b9b52ed352e7c",
+              "source-character.png": "ff0710eb3f768da723aef3521ee541e736f5e8e0ee7ef67eac88bb173fe2b7f7"
+            }
+          },
           "report": "evals/2026-10-11-skill-v2/seated-character-separated/assessments/2026-10-14-llm-visual-v1/report.json",
           "diagnostics": [],
           "policy": "llm-visual-v1",
@@ -11247,6 +12810,174 @@
         "processing": "evals/2026-10-11-skill-v2/dancing-player/processing/diagnostic.json",
         "kind": "animation",
         "anchorAlignment": "center",
+        "previewSequence": {
+          "kind": "unprocessed-source-sequence",
+          "fps": 12,
+          "alignment": "recorded-floor-center",
+          "isProcessedSprite": false,
+          "note": "Raw source panels at their recorded inferred floor centers; calibration floors remain. These are not normalized runtime sprites.",
+          "frames": [
+            {
+              "id": "source-0",
+              "index": 0,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-00.png",
+              "size": [
+                256,
+                509
+              ],
+              "anchor": [
+                131.5,
+                377.0
+              ]
+            },
+            {
+              "id": "source-1",
+              "index": 1,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-01.png",
+              "size": [
+                256,
+                509
+              ],
+              "anchor": [
+                129.5,
+                377.0
+              ]
+            },
+            {
+              "id": "source-2",
+              "index": 2,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-02.png",
+              "size": [
+                256,
+                509
+              ],
+              "anchor": [
+                129.0,
+                377.0
+              ]
+            },
+            {
+              "id": "source-3",
+              "index": 3,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-03.png",
+              "size": [
+                256,
+                509
+              ],
+              "anchor": [
+                125.5,
+                377.0
+              ]
+            },
+            {
+              "id": "source-4",
+              "index": 4,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-04.png",
+              "size": [
+                256,
+                538
+              ],
+              "anchor": [
+                131.5,
+                388.5
+              ]
+            },
+            {
+              "id": "source-5",
+              "index": 5,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-05.png",
+              "size": [
+                256,
+                538
+              ],
+              "anchor": [
+                129.5,
+                388.5
+              ]
+            },
+            {
+              "id": "source-6",
+              "index": 6,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-06.png",
+              "size": [
+                256,
+                538
+              ],
+              "anchor": [
+                128.0,
+                389.0
+              ]
+            },
+            {
+              "id": "source-7",
+              "index": 7,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-07.png",
+              "size": [
+                256,
+                538
+              ],
+              "anchor": [
+                125.5,
+                388.5
+              ]
+            },
+            {
+              "id": "source-8",
+              "index": 8,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-08.png",
+              "size": [
+                256,
+                489
+              ],
+              "anchor": [
+                132.0,
+                366.0
+              ]
+            },
+            {
+              "id": "source-9",
+              "index": 9,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-09.png",
+              "size": [
+                256,
+                489
+              ],
+              "anchor": [
+                130.0,
+                366.5
+              ]
+            },
+            {
+              "id": "source-10",
+              "index": 10,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-10.png",
+              "size": [
+                256,
+                489
+              ],
+              "anchor": [
+                128.0,
+                367.0
+              ]
+            },
+            {
+              "id": "source-11",
+              "index": 11,
+              "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-11.png",
+              "size": [
+                256,
+                489
+              ],
+              "anchor": [
+                125.5,
+                365.5
+              ]
+            }
+          ],
+          "sourceSHA256": {
+            "source-player.png": "5ad50f875b843a7b5c66994024710a9166585e9dfdd257fe434627228d10716a"
+          }
+        },
         "report": "evals/2026-10-11-skill-v2/dancing-player/assessments/2026-10-14-llm-visual-v1/report.json",
         "diagnostics": [],
         "policy": "llm-visual-v1",
@@ -11479,6 +13210,174 @@
           "processing": "evals/2026-10-11-skill-v2/dancing-player/processing/diagnostic.json",
           "kind": "animation",
           "anchorAlignment": "center",
+          "previewSequence": {
+            "kind": "unprocessed-source-sequence",
+            "fps": 12,
+            "alignment": "recorded-floor-center",
+            "isProcessedSprite": false,
+            "note": "Raw source panels at their recorded inferred floor centers; calibration floors remain. These are not normalized runtime sprites.",
+            "frames": [
+              {
+                "id": "source-0",
+                "index": 0,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-00.png",
+                "size": [
+                  256,
+                  509
+                ],
+                "anchor": [
+                  131.5,
+                  377.0
+                ]
+              },
+              {
+                "id": "source-1",
+                "index": 1,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-01.png",
+                "size": [
+                  256,
+                  509
+                ],
+                "anchor": [
+                  129.5,
+                  377.0
+                ]
+              },
+              {
+                "id": "source-2",
+                "index": 2,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-02.png",
+                "size": [
+                  256,
+                  509
+                ],
+                "anchor": [
+                  129.0,
+                  377.0
+                ]
+              },
+              {
+                "id": "source-3",
+                "index": 3,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-03.png",
+                "size": [
+                  256,
+                  509
+                ],
+                "anchor": [
+                  125.5,
+                  377.0
+                ]
+              },
+              {
+                "id": "source-4",
+                "index": 4,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-04.png",
+                "size": [
+                  256,
+                  538
+                ],
+                "anchor": [
+                  131.5,
+                  388.5
+                ]
+              },
+              {
+                "id": "source-5",
+                "index": 5,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-05.png",
+                "size": [
+                  256,
+                  538
+                ],
+                "anchor": [
+                  129.5,
+                  388.5
+                ]
+              },
+              {
+                "id": "source-6",
+                "index": 6,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-06.png",
+                "size": [
+                  256,
+                  538
+                ],
+                "anchor": [
+                  128.0,
+                  389.0
+                ]
+              },
+              {
+                "id": "source-7",
+                "index": 7,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-07.png",
+                "size": [
+                  256,
+                  538
+                ],
+                "anchor": [
+                  125.5,
+                  388.5
+                ]
+              },
+              {
+                "id": "source-8",
+                "index": 8,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-08.png",
+                "size": [
+                  256,
+                  489
+                ],
+                "anchor": [
+                  132.0,
+                  366.0
+                ]
+              },
+              {
+                "id": "source-9",
+                "index": 9,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-09.png",
+                "size": [
+                  256,
+                  489
+                ],
+                "anchor": [
+                  130.0,
+                  366.5
+                ]
+              },
+              {
+                "id": "source-10",
+                "index": 10,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-10.png",
+                "size": [
+                  256,
+                  489
+                ],
+                "anchor": [
+                  128.0,
+                  367.0
+                ]
+              },
+              {
+                "id": "source-11",
+                "index": 11,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-11.png",
+                "size": [
+                  256,
+                  489
+                ],
+                "anchor": [
+                  125.5,
+                  365.5
+                ]
+              }
+            ],
+            "sourceSHA256": {
+              "source-player.png": "5ad50f875b843a7b5c66994024710a9166585e9dfdd257fe434627228d10716a"
+            }
+          },
           "report": "evals/2026-10-11-skill-v2/dancing-player/report.json",
           "diagnostics": [],
           "policy": null,
@@ -11711,6 +13610,174 @@
           "processing": "evals/2026-10-11-skill-v2/dancing-player/processing/diagnostic.json",
           "kind": "animation",
           "anchorAlignment": "center",
+          "previewSequence": {
+            "kind": "unprocessed-source-sequence",
+            "fps": 12,
+            "alignment": "recorded-floor-center",
+            "isProcessedSprite": false,
+            "note": "Raw source panels at their recorded inferred floor centers; calibration floors remain. These are not normalized runtime sprites.",
+            "frames": [
+              {
+                "id": "source-0",
+                "index": 0,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-00.png",
+                "size": [
+                  256,
+                  509
+                ],
+                "anchor": [
+                  131.5,
+                  377.0
+                ]
+              },
+              {
+                "id": "source-1",
+                "index": 1,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-01.png",
+                "size": [
+                  256,
+                  509
+                ],
+                "anchor": [
+                  129.5,
+                  377.0
+                ]
+              },
+              {
+                "id": "source-2",
+                "index": 2,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-02.png",
+                "size": [
+                  256,
+                  509
+                ],
+                "anchor": [
+                  129.0,
+                  377.0
+                ]
+              },
+              {
+                "id": "source-3",
+                "index": 3,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-03.png",
+                "size": [
+                  256,
+                  509
+                ],
+                "anchor": [
+                  125.5,
+                  377.0
+                ]
+              },
+              {
+                "id": "source-4",
+                "index": 4,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-04.png",
+                "size": [
+                  256,
+                  538
+                ],
+                "anchor": [
+                  131.5,
+                  388.5
+                ]
+              },
+              {
+                "id": "source-5",
+                "index": 5,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-05.png",
+                "size": [
+                  256,
+                  538
+                ],
+                "anchor": [
+                  129.5,
+                  388.5
+                ]
+              },
+              {
+                "id": "source-6",
+                "index": 6,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-06.png",
+                "size": [
+                  256,
+                  538
+                ],
+                "anchor": [
+                  128.0,
+                  389.0
+                ]
+              },
+              {
+                "id": "source-7",
+                "index": 7,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-07.png",
+                "size": [
+                  256,
+                  538
+                ],
+                "anchor": [
+                  125.5,
+                  388.5
+                ]
+              },
+              {
+                "id": "source-8",
+                "index": 8,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-08.png",
+                "size": [
+                  256,
+                  489
+                ],
+                "anchor": [
+                  132.0,
+                  366.0
+                ]
+              },
+              {
+                "id": "source-9",
+                "index": 9,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-09.png",
+                "size": [
+                  256,
+                  489
+                ],
+                "anchor": [
+                  130.0,
+                  366.5
+                ]
+              },
+              {
+                "id": "source-10",
+                "index": 10,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-10.png",
+                "size": [
+                  256,
+                  489
+                ],
+                "anchor": [
+                  128.0,
+                  367.0
+                ]
+              },
+              {
+                "id": "source-11",
+                "index": 11,
+                "image": "evals/2026-10-11-skill-v2/dancing-player/previews/source-panels/frame-11.png",
+                "size": [
+                  256,
+                  489
+                ],
+                "anchor": [
+                  125.5,
+                  365.5
+                ]
+              }
+            ],
+            "sourceSHA256": {
+              "source-player.png": "5ad50f875b843a7b5c66994024710a9166585e9dfdd257fe434627228d10716a"
+            }
+          },
           "report": "evals/2026-10-11-skill-v2/dancing-player/assessments/2026-10-14-llm-visual-v1/report.json",
           "diagnostics": [],
           "policy": "llm-visual-v1",

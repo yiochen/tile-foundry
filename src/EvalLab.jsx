@@ -5,8 +5,16 @@ const labels = {'not-run':'Not run',passed:'Passed',failed:'Failed',blocked:'Blo
   ungraded:'Awaiting review','needs-visual-review':'Needs visual review'};
 const statusOf = entry => entry.latest?.status || 'not-run';
 const statusLabel = status => labels[status] || status;
+const imageCache = new Map();
+function loadImage(path) {
+  if(!imageCache.has(path))imageCache.set(path,new Promise((resolve,reject)=>{
+    const image=new Image();image.onload=()=>resolve(image);
+    image.onerror=()=>reject(Error('Could not load the recorded sprite.'));image.src=base+path;
+  }));
+  return imageCache.get(path);
+}
 
-function SpritePreview({sprites, active, compose, showAnchors, guide, showGuide, guideOpacity}) {
+function SpritePreview({sprites, active, compose, showAnchors, guide, showGuide, guideOpacity, raw=false}) {
   const ref = useRef(null);
   const [error, setError] = useState('');
   useEffect(() => {
@@ -15,30 +23,40 @@ function SpritePreview({sprites, active, compose, showAnchors, guide, showGuide,
     canvas.dataset.ready = 'false';
     setError('');
     const renderGuide = showGuide && guide;
-    Promise.all([...sprites,...(renderGuide?[guide]:[])].map(asset => new Promise((resolve,reject) => {
-      const image = new Image(); image.src = base+asset.image;
-      image.onload = () => resolve(image); image.onerror = () => reject(Error('Could not load the recorded sprite.'));
-    }))).then(loaded => {
+    Promise.all([...sprites,...(renderGuide?[guide]:[])].map(asset=>loadImage(asset.image))).then(loaded => {
       if (!alive) return;
       const images = loaded.slice(0,sprites.length), guideImage = renderGuide&&loaded[sprites.length];
       if(guideImage&&(guideImage.width!==guide.size[0]||guideImage.height!==guide.size[1])){
         throw Error('The SVG dimensions differ from its recorded frame; overlay cannot be aligned safely.');
       }
       // Preserve complete registered frames around a shared root, without alpha fitting.
-      const frames = sprites.map((s,i)=>({...s,size:[images[i].width,images[i].height]}));
+      const frames = sprites.map((s,i)=>{
+        const rect=s.sourceRect,image=images[i];
+        if(rect&&!(rect.length===4&&rect.every(Number.isInteger)&&rect[0]>=0&&rect[1]>=0&&rect[2]>rect[0]&&rect[3]>rect[1]&&rect[2]<=image.width&&rect[3]<=image.height)){
+          throw Error('Source preview rectangle exceeds the original image.');
+        }
+        return {...s,size:rect?[rect[2]-rect[0],rect[3]-rect[1]]:[image.width,image.height]};
+      });
       if(guide)frames.push(guide);
       const left = Math.min(...frames.map(s=>-s.anchor[0]));
       const top = Math.min(...frames.map(s=>-s.anchor[1]));
       const right = Math.max(...frames.map(s=>s.size[0]-s.anchor[0]));
       const bottom = Math.max(...frames.map(s=>s.size[1]-s.anchor[1]));
       const margin = 24, root = [margin-left,margin-top];
-      canvas.width = right-left+2*margin; canvas.height = bottom-top+2*margin;
+      canvas.width = Math.ceil(right-left+2*margin); canvas.height = Math.ceil(bottom-top+2*margin);
       const ctx = canvas.getContext('2d');
       ctx.fillStyle = '#eef1e8'; ctx.fillRect(0,0,canvas.width,canvas.height);
       const footprint = sprites[active].footprint || [128,128];
-      ctx.fillStyle = '#d6dfcd';
-      ctx.fillRect(root[0]-footprint[0]/2,root[1]-footprint[1]/2,...footprint);
-      (compose ? sprites.map((_,i)=>i) : [active]).forEach(i=>ctx.drawImage(images[i],root[0]-sprites[i].anchor[0],root[1]-sprites[i].anchor[1]));
+      if(!raw){
+        ctx.fillStyle = '#d6dfcd';
+        ctx.fillRect(root[0]-footprint[0]/2,root[1]-footprint[1]/2,...footprint);
+      }
+      (compose ? sprites.map((_,i)=>i) : [active]).forEach(i=>{
+        const frame=frames[i],x=root[0]-frame.anchor[0],y=root[1]-frame.anchor[1];
+        if(frame.sourceRect){
+          ctx.drawImage(images[i],frame.sourceRect[0],frame.sourceRect[1],...frame.size,x,y,...frame.size);
+        }else ctx.drawImage(images[i],x,y);
+      });
       if(guideImage){
         ctx.save();ctx.globalAlpha=guideOpacity/100;
         ctx.drawImage(guideImage,root[0]-guide.anchor[0],root[1]-guide.anchor[1]);ctx.restore();
@@ -55,8 +73,22 @@ function SpritePreview({sprites, active, compose, showAnchors, guide, showGuide,
       canvas.dataset.guideAnchor = guide?.anchor.join(',')||'';
     }).catch(e=>alive&&setError(e.message));
     return () => {alive=false;};
-  },[sprites,active,compose,showAnchors,guide,showGuide,guideOpacity]);
-  return <>{error&&<p role="alert">{error}</p>}<canvas ref={ref} className="eval-sprite-preview" aria-label="Recorded sprites at their stored ground anchor"/></>;
+  },[sprites,active,compose,showAnchors,guide,showGuide,guideOpacity,raw]);
+  return <>{error&&<p role="alert">{error}</p>}<canvas ref={ref} className="eval-sprite-preview" aria-label={raw?'Unprocessed source sequence preview':'Recorded sprites at their stored ground anchor'}/></>;
+}
+
+function FrameThumbnail({sprite}) {
+  const ref=useRef(null),[error,setError]=useState(false);
+  useEffect(()=>{
+    let alive=true;
+    loadImage(sprite.image).then(image=>{
+      if(!alive)return;
+      const [x,y,right,bottom]=sprite.sourceRect,c=ref.current;
+      c.width=right-x;c.height=bottom-y;c.getContext('2d').drawImage(image,x,y,c.width,c.height,0,0,c.width,c.height);
+    }).catch(()=>alive&&setError(true));
+    return()=>{alive=false;};
+  },[sprite]);
+  return error?<span>Preview unavailable</span>:<canvas ref={ref} aria-label={`Raw source frame ${sprite.index+1}`}/>;
 }
 
 function CheckList({title, checks}) {
@@ -76,12 +108,11 @@ function Diagnostics({checks=[]}) {
   </details>;
 }
 
-function TrialResult({trial, entry, showAnchors}) {
-  const [frame,setFrame] = useState(0), [playing,setPlaying] = useState(false), [compose,setCompose] = useState(entry.kind==='layered');
+function SpritePlayer({sprites, kind, showAnchors, guide, rawSequence}) {
+  const raw=Boolean(rawSequence);
+  const [frame,setFrame] = useState(0), [playing,setPlaying] = useState(false), [compose,setCompose] = useState(kind==='layered'&&!raw);
   const [showGuide,setShowGuide] = useState(()=>new URLSearchParams(window.location.search).get('overlay')==='svg');
   const [guideOpacity,setGuideOpacity] = useState(65);
-  const sprites = trial.sprites;
-  const guide = trial.guideOverlay;
   const toggleGuide = value => {
     setShowGuide(value);
     const url=new URL(window.location.href);
@@ -89,31 +120,63 @@ function TrialResult({trial, entry, showAnchors}) {
     window.history.replaceState(null,'',url);
   };
   useEffect(() => {
-    if(!playing||!sprites.length)return;
-    const timer = setTimeout(()=>setFrame(i=>(i+1)%sprites.length),1000/12);
-    return ()=>clearTimeout(timer);
-  },[playing,frame,sprites]);
-  return <div className="eval-result" data-eval-trial={trial.id}>
-    <div className="eval-result-heading"><h4>Result</h4><span className={'eval-status status-'+trial.status}>{statusLabel(trial.status)}</span><span>{trial.runId}</span></div>
-    <p className="lab-scope" data-eval-policy={trial.policy||'original'}>{trial.assessmentLabel}{trial.assessedAt&&` · ${trial.assessedAt}`}{trial.policy&&` · ${trial.policy}`}{trial.reviewer&&` · ${trial.reviewer}`}</p>
-    {trial.reason&&<p className="eval-failure">{trial.reason}</p>}
-    {sprites.length>0?<>
+    if(!playing||sprites.length<2)return;
+    const started=performance.now(),first=frame;
+    let animation;
+    const tick=now=>{
+      const index=(first+Math.floor((now-started)*12/1000))%sprites.length;
+      setFrame(previous=>previous===index?previous:index);
+      animation=requestAnimationFrame(tick);
+    };
+    animation=requestAnimationFrame(tick);
+    return()=>cancelAnimationFrame(animation);
+    // Frame changes do not restart the clock; seeking always pauses playback.
+  },[playing,sprites]);
+  const seek=index=>{
+    setPlaying(false);setCompose(false);setFrame(Math.max(0,Math.min(sprites.length-1,index)));
+  };
+  const label=sprites[frame].direction||sprites[frame].role;
+  const hasControls=sprites.length>1||kind==='animation';
+  return <div className="eval-player" data-player-source={raw?'raw':'runtime'} data-frame-count={sprites.length} data-playing={playing}>
+      {raw&&<><h4>Raw source player</h4><p className="eval-player-note">{rawSequence.note}</p></>}
       <div className={'eval-overlay-comparison'+(guide?' has-svg-guide':'')}>
         {guide&&<div className="eval-overlay-controls">
           <label><input type="checkbox" checked={showGuide} onChange={e=>toggleGuide(e.target.checked)}/> SVG guide overlay</label>
           {showGuide&&<label>Opacity<input aria-label="SVG overlay opacity" type="range" min="10" max="100" step="5" value={guideOpacity} onChange={e=>setGuideOpacity(Number(e.target.value))}/><output>{guideOpacity}%</output></label>}
           <a href={base+guide.image} target="_blank" rel="noreferrer">Original SVG ↗</a>
         </div>}
-        <div className="eval-render"><SpritePreview sprites={sprites} active={frame} compose={compose} showAnchors={showAnchors} guide={guide} showGuide={showGuide} guideOpacity={guideOpacity}/></div>
+        <div className="eval-render"><SpritePreview sprites={sprites} active={frame} compose={compose} showAnchors={showAnchors&&(!raw||rawSequence.alignment==='recorded-floor-center')} guide={guide} showGuide={showGuide} guideOpacity={guideOpacity} raw={raw}/></div>
         {guide&&showGuide&&<p className="eval-overlay-caption">Original SVG at the same ground center and cell scale.{guide.heightPx!=null&&` Guide height: ${guide.heightPx}px above the ground center.`}{guide.baseSize&&` Base: ${guide.baseSize.join(' × ')}px.`} The green square is the calibration floor; the cross marks the shared ground anchor.</p>}
       </div>
-      {sprites.length>1&&<div className="eval-frame-controls">
-        {entry.kind==='animation'&&<button className="secondary-button" onClick={()=>setPlaying(p=>!p)}>{playing?'Pause':'Play'} · 12 fps</button>}
-        {entry.kind==='layered'&&<label><input type="checkbox" checked={compose} onChange={e=>setCompose(e.target.checked)}/> Recompose layers at stored anchors</label>}
-        <label>Sprite<select aria-label="Eval sprite" value={frame} onChange={e=>{setPlaying(false);setFrame(Number(e.target.value));}}>{sprites.map((s,i)=><option key={s.id} value={i}>{s.direction||s.role||`Frame ${i+1}`}</option>)}</select></label>
+      {hasControls&&<div className="eval-player-timeline">
+        <div className="eval-player-buttons">
+          <button className="secondary-button" aria-label="Previous sprite" disabled={sprites.length<2} onClick={()=>seek((frame-1+sprites.length)%sprites.length)}>Previous</button>
+          <button className="secondary-button" aria-label={playing?'Pause sprite sequence':'Play sprite sequence'} aria-pressed={playing} disabled={sprites.length<2} onClick={()=>{setCompose(false);setPlaying(p=>!p);}}>{playing?'Pause':'Play'}</button>
+          <button className="secondary-button" aria-label="Next sprite" disabled={sprites.length<2} onClick={()=>seek((frame+1)%sprites.length)}>Next</button>
+          <span>12 fps · looping</span>
+        </div>
+        <label className="eval-progress"><span><strong>{compose?'All layers':`Frame ${frame+1} / ${sprites.length}${label?` · ${label}`:''}`}</strong><output>{(frame/12).toFixed(2)}s / {(sprites.length/12).toFixed(2)}s</output></span>
+          <input aria-label="Sprite progress" aria-valuetext={`Frame ${frame+1} of ${sprites.length}${label?`, ${label}`:''}`} type="range" min="0" max={sprites.length-1} step="1" value={frame} disabled={sprites.length<2} onPointerDown={()=>setPlaying(false)} onChange={e=>seek(Number(e.target.value))}/>
+        </label>
+        <div className="eval-frame-controls">
+          {kind==='layered'&&!raw&&<label><input type="checkbox" checked={compose} onChange={e=>{setPlaying(false);setCompose(e.target.checked);}}/> Recompose layers at stored anchors</label>}
+          <label>Sprite<select aria-label="Eval sprite" value={frame} onChange={e=>seek(Number(e.target.value))}>{sprites.map((s,i)=><option key={s.id} value={i}>{s.direction||s.role||`Frame ${i+1}`}</option>)}</select></label>
+        </div>
       </div>}
-      <div className="eval-sprite-strip">{sprites.map((s,i)=><button key={s.id} aria-label={`Show eval sprite ${i+1}`} aria-pressed={frame===i} onClick={()=>{setPlaying(false);setFrame(i);}}><img src={base+s.image} alt={s.direction||s.role||`Processed sprite ${i+1}`} loading="lazy"/><span>{s.direction||s.role||i+1}</span></button>)}</div>
-    </>:<p className="eval-failure">No processed sprites were delivered. The original generation and recorded checks are shown below.</p>}
+      <div className="eval-sprite-strip">{sprites.map((s,i)=><button key={s.id} aria-label={`Show eval sprite ${i+1}`} aria-pressed={frame===i} onClick={()=>seek(i)}>{s.sourceRect?<FrameThumbnail sprite={s}/>:<img src={base+s.image} alt={s.direction||s.role||`${raw?'Raw source':'Processed sprite'} ${i+1}`} loading="lazy"/>}<span>{s.direction||s.role||i+1}</span></button>)}</div>
+  </div>;
+}
+
+function TrialResult({trial, entry, showAnchors}) {
+  return <div className="eval-result" data-eval-trial={trial.id}>
+    <div className="eval-result-heading"><h4>Result</h4><span className={'eval-status status-'+trial.status}>{statusLabel(trial.status)}</span><span>{trial.runId}</span></div>
+    <p className="lab-scope" data-eval-policy={trial.policy||'original'}>{trial.assessmentLabel}{trial.assessedAt&&` · ${trial.assessedAt}`}{trial.policy&&` · ${trial.policy}`}{trial.reviewer&&` · ${trial.reviewer}`}</p>
+    {trial.reason&&<p className="eval-failure">{trial.reason}</p>}
+    {trial.sprites.length>0?<SpritePlayer sprites={trial.sprites} kind={entry.kind} showAnchors={showAnchors} guide={trial.guideOverlay}/>:<>
+      <p className="eval-failure">No processed sprites were delivered. The original generation and recorded checks are shown below.</p>
+      {trial.previewSequence&&<SpritePlayer sprites={trial.previewSequence.frames} kind={entry.kind} showAnchors={showAnchors} rawSequence={trial.previewSequence}/>}
+      {trial.previewUnavailable&&<p className="eval-player-note">Raw sequence unavailable: {trial.previewUnavailable}</p>}
+    </>}
     <div className="eval-downloads">{[['result','Result metadata'],['report','Full eval report'],['review','LLM review evidence'],['policyRecord','Grading policy'],['processing','Processing diagnostic'],['submission','Submission'],['sheet','Spritesheet'],['guide','Guide metadata']].filter(([key])=>trial[key]).map(([key,label])=><a key={key} href={base+trial[key]} target="_blank" rel="noreferrer">{label} ↗</a>)}</div>
     <CheckList title="Delivery checks" checks={trial.automaticChecks}/><CheckList title={trial.policy?'LLM visual review':'Visual review'} checks={trial.visualChecks}/>
     <Diagnostics checks={trial.diagnostics}/>

@@ -76,12 +76,45 @@ export async function verifyEvalGallery(page,root,port){
   }
   await page.locator('[data-eval-case="character-directions"]').click();
   await page.getByLabel('Ground anchor',{exact:true}).check();
+  const progress=page.getByRole('slider',{name:'Sprite progress',exact:true});
+  await progress.scrollIntoViewIfNeeded();
+  const track=await progress.boundingBox();
+  await page.mouse.move(track.x+8,track.y+track.height/2);
+  await page.mouse.down();
+  await page.mouse.move(track.x+track.width-8,track.y+track.height/2,{steps:12});
+  await page.mouse.up();
+  await page.waitForFunction(()=>document.querySelector('.eval-sprite-preview')?.dataset.frame==='7');
+  assert.equal(await progress.inputValue(),'7');
+  assert.equal(await page.locator('.eval-player').getAttribute('data-playing'),'false');
+  assert.equal(await page.locator('.eval-sprite-preview').getAttribute('data-anchor'),'96,248');
+  await page.getByRole('button',{name:'Play sprite sequence',exact:true}).click();
+  await page.waitForFunction(()=>document.querySelector('.eval-sprite-preview')?.dataset.frame==='0');
+  await page.getByRole('button',{name:'Pause sprite sequence',exact:true}).click();
+  const held=await progress.inputValue();
+  await page.waitForTimeout(200);
+  assert.equal(await progress.inputValue(),held,'Pause must hold the selected frame');
+  await progress.press('End');
+  await page.getByRole('button',{name:'Next sprite',exact:true}).click();
+  await page.waitForFunction(()=>document.querySelector('.eval-sprite-preview')?.dataset.frame==='0');
+  await page.getByRole('button',{name:'Previous sprite',exact:true}).click();
+  await page.waitForFunction(()=>document.querySelector('.eval-sprite-preview')?.dataset.frame==='7');
   await page.getByLabel('Eval sprite',{exact:true}).selectOption('7');
   await page.waitForFunction(()=>document.querySelector('.eval-sprite-preview')?.dataset.frame==='7');
+  await page.locator('.eval-player').screenshot({path:root+'docs/preview-eval-player-desktop.png'});
   await page.screenshot({path:root+'docs/preview-evals-desktop.png',fullPage:true});
+  await page.locator('[data-eval-case="seated-character-separated"]').click();
+  await page.locator('.eval-player[data-player-source="raw"][data-frame-count="2"]').waitFor();
+  await page.getByRole('slider',{name:'Sprite progress',exact:true}).press('End');
+  await page.waitForFunction(()=>document.querySelector('.eval-sprite-preview')?.dataset.frame==='1');
   await page.locator('[data-eval-case="dancing-player"]').click();
+  await page.locator('.eval-player[data-player-source="raw"][data-frame-count="12"]').waitFor();
+  assert.ok((await page.locator('.eval-player-note').innerText()).includes('not normalized runtime sprites'));
+  await page.getByRole('slider',{name:'Sprite progress',exact:true}).press('End');
+  await page.waitForFunction(()=>document.querySelector('.eval-sprite-preview')?.dataset.frame==='11');
+  await page.locator('.eval-player').screenshot({path:root+'docs/preview-eval-raw-player-desktop.png'});
   await page.reload({waitUntil:'networkidle'});
   await page.locator('[data-eval-selected="dancing-player"]').waitFor();
+  await page.locator('.eval-sprite-preview[data-ready="true"][data-frame="0"]').waitFor();
   for(const width of [390,320]){
     await page.setViewportSize({width,height:844});
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Eval ${width}px overflow`);
@@ -94,5 +127,35 @@ export async function verifyEvalGallery(page,root,port){
   assert.equal(await page.locator('[data-eval-case]').count(),3);
   assert.equal(await page.locator('.eval-result').count(),1);
   assert.equal(await page.getByRole('button',{name:'Evals',exact:true}).count(),1);
-  return {check:'13 cases: registered original SVG overlay and opacity, LLM assessments, original grade history, non-gating diagnostics, exact prompts and sources, registered sprites, failures, direction stepping, deep link, current animations, desktop/mobile',ok:true};
+  for(const id of ['animated-waves','animated-lava','dancing-player']){
+    const entry=gallery.cases.find(c=>c.id===id);
+    assert.equal(entry.latest.sprites.length,0);
+    assert.equal(entry.latest.status,'failed');
+    assert.equal(entry.latest.previewSequence.isProcessedSprite,false);
+    assert.equal(entry.latest.previewSequence.frames.length,12);
+    await page.locator(`[data-eval-case="${id}"]`).click();
+    await page.locator('.eval-player[data-player-source="raw"][data-frame-count="12"]').waitFor();
+    await page.getByRole('slider',{name:'Sprite progress',exact:true}).press('End');
+    await page.locator('.eval-sprite-preview[data-ready="true"][data-frame="11"]').waitFor();
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,`Raw player overflow: ${id}`);
+    await page.getByRole('button',{name:'Play sprite sequence',exact:true}).click();
+    await page.waitForFunction(()=>document.querySelector('.eval-sprite-preview')?.dataset.frame!=='11');
+    await page.getByRole('button',{name:'Pause sprite sequence',exact:true}).click();
+  }
+  const touchContext=await page.context().browser().newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true});
+  try{
+    const touch=await touchContext.newPage();
+    await touch.goto(url+'/?view=evals&case=character-directions',{waitUntil:'networkidle'});
+    const slider=touch.getByRole('slider',{name:'Sprite progress',exact:true});
+    await slider.scrollIntoViewIfNeeded();
+    const rect=await slider.boundingBox(),session=await touchContext.newCDPSession(touch);
+    await session.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:rect.x+8,y:rect.y+rect.height/2}]});
+    for(let step=1;step<=8;step++)await session.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:rect.x+8+(rect.width-16)*step/8,y:rect.y+rect.height/2}]});
+    await session.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+    await touch.locator('.eval-sprite-preview[data-ready="true"][data-frame="7"]').waitFor();
+    assert.equal(await slider.inputValue(),'7');
+    assert.equal(await touch.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+    await touch.locator('.eval-player').screenshot({path:root+'docs/preview-eval-player-mobile.png'});
+  }finally{await touchContext.close();}
+  return {check:'13 cases: 12 fps player, mouse/touch progress scrubbing, pause and frame stepping, raw source playback without changing grades, SVG overlay, LLM assessments, history, exact prompts/sources, deep links and desktop/mobile',ok:true};
 }
