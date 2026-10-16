@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "kind": "object",
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "frames": [
+    {
+      "id": "frame-00",
+      "image": "frames/frame-00.png",
+      "durationMs": 83.33333333333333,
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          161,
+          928,
+          810,
+          1578
+        ],
+        "anchor": [
+          485.5,
+          1253.0
+        ],
+        "aspect": 0.9984615384615385,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "cleanup": {
+        "minAlpha": 32,
+        "removedPixels": 0,
+        "warning": "Review at final size: intentionally faint details can also be removed."
+      },
+      "normalization": {
+        "sourceSize": [
+          971,
+          1619
+        ],
+        "sourceRect": [
+          161,
+          67,
+          811,
+          1579
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "anchorSource": [
+          485.5,
+          1253.0
+        ],
+        "size": [
+          192,
+          320
+        ],
+        "subpixelShift": [
+          0.09846153846153527,
+          0.2513227513227605
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "artRect": [
+          32,
+          14,
+          128,
+          298
+        ],
+        "scale": [
+          0.19692307692307692,
+          0.1970899470899471
+        ],
+        "sourceAnchorMode": "explicit"
+      },
+      "chroma": {
+        "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+        "keyRGB": [
+          123,
+          209,
+          75
+        ],
+        "keyHueDegrees": 98.51,
+        "hueToleranceDegrees": 28,
+        "hueFeatherDegrees": 8,
+        "minSaturation": 0.12,
+        "saturationFeather": 0.1,
+        "region": [
+          29,
+          181,
+          163,
+          315
+        ],
+        "regionPaddingPixels": 3,
+        "keyedPixels": 14387,
+        "clearedPixels": 14376,
+        "removedAlphaMass": 3524679,
+        "removedCornerRemnants": [],
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "exactCharacterMatte": false,
+        "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+      },
+      "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+      "index": 0,
+      "sourceRect": [
+        0,
+        0,
+        971,
+        1619
+      ],
+      "sheetCleanup": {
+        "minAlpha": 32,
+        "removedPixels": 10793,
+        "warning": "Review at final size: intentionally faint details can also be removed."
+      },
+      "panelIsolation": "strict-guide-panels"
+    }
+  ],
+  "panelIsolation": "strict-guide-panels",
+  "sheet": {
+    "image": "sheet.png",
+    "columns": 1,
+    "rows": 1,
+    "frame": [
+      192,
+      320
+    ],
+    "spacing": 0
+  },
+  "guideLayout": {
+    "version": 1,
+    "kind": "object-sheet",
+    "size": [
+      192,
+      320
+    ],
+    "frame": [
+      192,
+      320
+    ],
+    "cellSize": 128,
+    "anchor": [
+      96,
+      248
+    ],
+    "keyRGB": [
+      123,
+      209,
+      75
+    ],
+    "columns": 1,
+    "rows": 1,
+    "gutter": 32,
+    "cells": [
+      {
+        "index": 0,
+        "rect": [
+          0,
+          0,
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "floorRect": [
+          32,
+          184,
+          160,
+          312
+        ]
+      }
+    ],
+    "order": "row-major",
+    "subjectRegistration": {
+      "baseSize": [
+        48,
+        48
+      ],
+      "height": 160,
+      "groundClearancePx": 0
+    }
+  },
+  "sourceSize": [
+    971,
+    1619
+  ]
+}

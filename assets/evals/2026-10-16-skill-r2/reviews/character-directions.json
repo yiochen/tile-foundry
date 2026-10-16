@@ -1,0 +1,78 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/independent_review_r2",
+  "independent": true,
+  "spriteSHA256": {},
+  "sourceSHA256": {
+    "source-01.png": "7784b3d30de7d9f485479d9f4bea81bd617eeaeedff8c6c19707cc430c7835bb"
+  },
+  "resultSHA256": "43461d27d1295aa693f1654d9d8512c0ed4fe19bbb3c80a0f5069956bc323950",
+  "guideSHA256": "eab7c39b6e3cb66ee8be53ae71df6496db5bb79548cb69efcc6e4b4a13a1cd4a",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "The raw sheet shows eight screen-aligned green floor squares and a broadly consistent oblique view with tops of hair and boots visible. No processed sprites or placement previews are supplied, so the runtime projection cannot receive a visual pass.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/references/guide.png"
+      ]
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "All eight raw figures appear complete and isolated, with heads, arms and boot soles visible. The packet contains no delivered sprite frames, so full silhouettes and effects inside the declared runtime frames cannot be inspected.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/references/guide.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "The original figures stand on central portions of their green squares, but the actual sole/support centers are partly obscured by boots and the floor glow. With no processed frames or stored-root placements, registration against the local guide anchor cannot be verified.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/references/guide.png"
+      ]
+    },
+    "same-character": {
+      "pass": null,
+      "note": "The raw sheet consistently depicts the same brown-haired youth with blue scarf, cream sleeves, brown belt/pouches, dark trousers and brown boots through the stated eight turns. Missing processed directional sprites prevent confirming that this consistency survived into a usable delivery.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/references/guide.png"
+      ]
+    },
+    "direction-height": {
+      "pass": null,
+      "note": "Raw crowns and torso proportions look broadly similar across the sheet; toe extents differ between front, side and rear views. The packet provides no processed frames or declared per-direction operations, so the required common standing design height within 4px cannot be established from these raw silhouettes.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/references/guide.png"
+      ]
+    },
+    "direction-contact": {
+      "pass": null,
+      "note": "The original rear, side and front views show different toe/heel visibility and a green glow around the floor. There are no registered runtime placements to compare physical support centers independently of the visible lowest toes; consistent delivered contact remains unverified.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/references/guide.png"
+      ]
+    },
+    "cutout": {
+      "pass": null,
+      "note": "The source visibly retains the green calibration floors and surrounding glow. No processed transparent sprites are listed, so floor/guide removal in a delivered asset cannot be judged. This is missing runtime evidence, not an observed defect in a supplied cutout.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/references/guide.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "Only the original sheet and guide are available. With no processed sprites or declared transforms, there is no source-to-delivery comparison on which to judge preservation, replacement artwork or fitting.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/references/guide.png"
+      ]
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "mode": "processing-only-comparison",
+  "imageGenerationCalls": 0,
+  "originalRun": "2026-10-16-skill-r4",
+  "comparisonRun": "2026-10-16-chroma-processing",
+  "sourceSHA256": "710953b449c7969bab66aca0fb0fb1a5eb731c95e6ee69021a7f56bde9c559ff",
+  "sourceBytesUnchanged": true,
+  "scope": "Same source, source panel rectangles, floor measurements, normalization, frames, and stored roots. Only the explicit floor-key saturation confidence changes.",
+  "oldSaturationTransition": [
+    0.02,
+    0.12
+  ],
+  "newSaturationTransition": [
+    0.4,
+    0.5
+  ],
+  "frames": [
+    {
+      "index": 0,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 274,
+      "restoredAlphaMass": 38408
+    },
+    {
+      "index": 1,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 250,
+      "restoredAlphaMass": 41972
+    },
+    {
+      "index": 2,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 164,
+      "restoredAlphaMass": 23971
+    },
+    {
+      "index": 3,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 196,
+      "restoredAlphaMass": 30492
+    },
+    {
+      "index": 4,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 208,
+      "restoredAlphaMass": 32989
+    },
+    {
+      "index": 5,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 217,
+      "restoredAlphaMass": 35294
+    },
+    {
+      "index": 6,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 203,
+      "restoredAlphaMass": 32805
+    },
+    {
+      "index": 7,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 257,
+      "restoredAlphaMass": 45748
+    },
+    {
+      "index": 8,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 164,
+      "restoredAlphaMass": 31071
+    },
+    {
+      "index": 9,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 137,
+      "restoredAlphaMass": 20130
+    },
+    {
+      "index": 10,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 162,
+      "restoredAlphaMass": 22995
+    },
+    {
+      "index": 11,
+      "geometryUnchanged": true,
+      "existingRGBUnchanged": true,
+      "alphaNeverDecreased": true,
+      "pixelsWithRestoredAlpha": 257,
+      "restoredAlphaMass": 39720
+    }
+  ],
+  "note": "Restored alpha is diagnostic evidence of changed matte behavior, not a visual quality grade. Independent review is saved separately."
+}

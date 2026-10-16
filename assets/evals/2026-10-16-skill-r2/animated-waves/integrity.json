@@ -1,0 +1,347 @@
+{
+  "source": {
+    "path": "source-01.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaRange": [
+      255,
+      255
+    ],
+    "sha256": "e7b8c279c866a3987cca9423567c5b16c05555da81c8bfb8c3b612b9453dd5d8"
+  },
+  "frameCount": 12,
+  "fps": 12,
+  "durationSumMs": 1000.0,
+  "frames": [
+    {
+      "id": "wave-00",
+      "path": "processed/frames/frame-00.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 0,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "fcbf685d4b85ebac4db0095b8c0eb8e0e2fdfa2071abc310e5b52344b0c7d39c"
+    },
+    {
+      "id": "wave-01",
+      "path": "processed/frames/frame-01.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 1,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "967a3ef4647c38bc463f0a1704ecb1ff6ae61f2653954f9c5b744bf0755931a9"
+    },
+    {
+      "id": "wave-02",
+      "path": "processed/frames/frame-02.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 2,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "2abcdcb4edcb8ce3a23d0a027859dcbcfb497b8300ceb0f54da7737ebff6f9ed"
+    },
+    {
+      "id": "wave-03",
+      "path": "processed/frames/frame-03.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 3,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "2b055c5ce957117d9db4d674a7a2e2ee92311c0004af6d24b33811fa6cfc499a"
+    },
+    {
+      "id": "wave-04",
+      "path": "processed/frames/frame-04.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 4,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "a82f980235ed7e0fc51e88200e129d28790fc30d6d8e16f94a1134891302a460"
+    },
+    {
+      "id": "wave-05",
+      "path": "processed/frames/frame-05.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 5,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "3d011382998b77ec6bf485b955f9ce020f580ae9684f2d99da19fec7531dd349"
+    },
+    {
+      "id": "wave-06",
+      "path": "processed/frames/frame-06.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 6,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "4f00c4f8c00266359559db994aae5e32a6e022db2f358f4b867d1e5a2904935c"
+    },
+    {
+      "id": "wave-07",
+      "path": "processed/frames/frame-07.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 7,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "7d209a159e8499f13e8daae742f6ab0865f6cbee3812e09a5f42e6ba3937b335"
+    },
+    {
+      "id": "wave-08",
+      "path": "processed/frames/frame-08.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 8,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "473a5ca3abca85b93e74a7a3835c350a57d7ed20b9ebf95f342d326c92720892"
+    },
+    {
+      "id": "wave-09",
+      "path": "processed/frames/frame-09.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 9,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "4de2c4d218bd781be2e08db5132c9148e815cd719c88070497667760e9c63dd4"
+    },
+    {
+      "id": "wave-10",
+      "path": "processed/frames/frame-10.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 10,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "3d99fe4122d16c21ad7e2440adcb18d5aebf9fd57ef7cd5b16938e2dedc01cff"
+    },
+    {
+      "id": "wave-11",
+      "path": "processed/frames/frame-11.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "index": 11,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "alphaBytesEqualTemplate": true,
+      "sha256": "375f41d5bf6ba2f7811b17c71b15fbb2b6fb629172707daa40a38e5af6718604"
+    }
+  ],
+  "manifestSHA256": "62a4f114002d33b7ed7bf3b1688cfcb0411dadf5898445b0b422751ee2150d99",
+  "guideSHA256": "21de85fd4c747ac6a20fd8dd1df493b32e1b20a6a5c2fa34745720bbe879a8cf",
+  "submissionSHA256": "c80a6873ba8f52e2682164377be8a4aa7ab634da34c259d84d9a186e82ed59e6",
+  "inspectionScope": "Delivery integrity only; no visual grading performed"
+}

@@ -1,6 +1,6 @@
 # Portable behavioral eval protocol
 
-[cases.json](cases.json) defines 13 cases. Freeze this suite and the skill in a caller-selected
+[cases.json](cases.json) defines the cases. Freeze this suite and the skill in a caller-selected
 workspace before each fresh run. Keep results with that run, outside the skill bundle.
 It covers appearance, projection, delivery, footprint/anchor geometry, separation,
 seams, direction consistency, and 12 fps motion. Synthetic script tests and old

@@ -1,0 +1,29 @@
+{
+  "run": "2026-10-16-skill-r2",
+  "mode": "saved-artifact-replay",
+  "ok": true,
+  "trials": [
+    {
+      "trial": "partial-cell-tall-object",
+      "caseId": "partial-cell-tall-object",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "character-directions",
+      "caseId": "character-directions",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "animated-waves",
+      "caseId": "animated-waves",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    }
+  ],
+  "scope": "Replays preserved originals and independent reviews, including failures; no new image generation or corrected attempts."
+}

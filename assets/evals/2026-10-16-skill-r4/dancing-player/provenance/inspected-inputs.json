@@ -1,0 +1,17 @@
+{
+  "inspected": [
+    "guide.png",
+    "provenance/perspective-reference.jpg"
+  ],
+  "supplied": [
+    "references/guide.png"
+  ],
+  "notSupplied": [
+    "provenance/perspective-reference.jpg"
+  ],
+  "referenceHashes": {
+    "references/guide.png": "943701bec2b1670a4a16a8a77d1f7f19e25505f6487f61dce3df74aea5418964",
+    "provenance/perspective-reference.jpg": "9784bc8c25ce01fb25044f9d866e8487f4e520be4c89588f36046df0ed19e29c"
+  },
+  "projectionReferenceUse": "understanding only; no style transfer or extracted scene assets"
+}

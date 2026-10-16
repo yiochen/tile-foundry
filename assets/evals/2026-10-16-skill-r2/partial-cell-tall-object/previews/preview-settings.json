@@ -1,0 +1,24 @@
+{
+  "generator": "skill-snapshot/scripts/tile_tools.py:render_anchored_frames plus explicit grid compositor",
+  "anchor": [
+    96,
+    248
+  ],
+  "cellSize": 128,
+  "lightDarkWorldRoot": [
+    128,
+    264
+  ],
+  "placementRoots": [
+    [
+      256,
+      224
+    ],
+    [
+      384,
+      352
+    ]
+  ],
+  "enlargement": "2x nearest-neighbor",
+  "artEdits": false
+}

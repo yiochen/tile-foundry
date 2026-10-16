@@ -1,0 +1,11 @@
+{
+  "initialPreviewCanvas": [
+    432,
+    464
+  ],
+  "correction": "Enlarged review canvas to include every complete 192x320 stored frame at 128px pitch, with 24px outer margin. No art, anchor, source or scale changed. Earlier previews retained in previews/initial-canvas.",
+  "currentPreviewCanvas": [
+    496,
+    624
+  ]
+}

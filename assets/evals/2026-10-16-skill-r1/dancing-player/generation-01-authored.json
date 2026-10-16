@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "attempt": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "useCase": "sketch-to-render",
+  "exactPrompt": "Use case: sketch-to-render\nAsset type: 12-frame game character dance source sheet.\nInput image 1 is an authored layout edit target, not an appearance reference. Replace all twelve blue stick figures with the SAME recognizable, appealing stylized human player character. Invent one coherent character design and use it throughout. Keep the input image's 864x1024 canvas, all twelve equal 192x320 panel areas, 4 columns and 3 rows, and 32px transparent gutters exactly registered. Copy the twelve plain green calibration squares in place, unchanged in shape, size and flat uniform RGB 123,209,75. RETAIN all calibration floors in this source image. Transparent alpha everywhere outside the character and calibration squares.\nProjection: square-grid top-down oblique, front-facing three-quarter game view. Ground cells remain screen-aligned squares. Show top and front of the character forms with parallel projection, no diamond-grid isometric floor, no perspective convergence. Keep this camera and lighting fixed across all twelve frames.\nAction: one smooth, playable twelve-phase dance loop in row-major order from the supplied pose guide. Follow its arm/torso/leg gesture progression: elbows bent out; transition leaning left with one arm lifting; left lean hand lifted; sway through center arms opening; right lean one arm lifted; transition both hands rising; both arms overhead; transition down with feet gathering; opposite-arm sway; arms relaxing/opening through center; opposite-arm sway; return transition toward first pose. Frame 12 flows into frame 1. Preserve complete separate limbs and hands in every panel. Do not repeat a hold or omit a phase.\nRegistration: each calibration tile is exactly 128x128 in these layout units. Every frame uses the same local projected ground root at (96,248), the floor center. Nominal neutral standing height is 160px from the complete top of the head/hair to the ground root; keep the same anatomy scale, head size, limb lengths, proportions, costume, palette and character identity in all poses. The provided sticks describe gesture and standing-scale envelope, not the final anatomy. Poses may lean, crouch, or lift arms and change silhouette bounds; do not rescale poses to equal bounding-box height. Feet remain registered around the same floor-center root rather than centered to their silhouette.\nConstraints: all complete art must fit inside its own original 192x320 panel with transparent separation, including raised hands, hair and shoe toes. Preserve ample headroom. No silhouette crossing into gutters. Floor hue is reserved: no green or yellow-green character parts that overlap the calibration tile. No cast shadow, floor rim, scenery, props, guide strokes, labels, text, watermark, painted checkerboard or opaque backdrop. Clean illustrated game sprite edges and readable detail at native scale.",
+  "toolInput": "tool-input-01.json",
+  "transparent_background": true,
+  "references": [
+    {
+      "path": "references/guide-4x.png",
+      "sha256": "7bb7006b557b68d7fd7e02ca2cb6f9f7efb545c76f4c9d8a148b46c887514baa",
+      "role": "authored registration companion, not supplied to tool"
+    },
+    {
+      "path": "references/guide.json",
+      "sha256": "58cc72a012c8e7bfd272c56c819b8493d3abe54f008e57183b687dd5792404a5",
+      "role": "authored registration companion, not supplied to tool"
+    },
+    {
+      "path": "references/guide.png",
+      "sha256": "8227f86d8573a979a06dd1bcd04e1c6f97e18607d0db754eca65e07fd525f5ac",
+      "role": "layout edit target"
+    },
+    {
+      "path": "references/guide.svg",
+      "sha256": "8f10a1c3b13e2b5119008ad4620026fcc318cafaf71ba414386d9b272ec363ee",
+      "role": "authored registration companion, not supplied to tool"
+    },
+    {
+      "path": "references/perspective-reference.jpg",
+      "sha256": "9784bc8c25ce01fb25044f9d866e8487f4e520be4c89588f36046df0ed19e29c",
+      "role": "projection study, not supplied to tool"
+    }
+  ],
+  "sourceImages": [
+    {
+      "path": "source-01.png",
+      "sha256": "67eca338ea51c3a269b2b763d9b799941d99b70e860ee017c64b52c57e7fc1de",
+      "size": [
+        1152,
+        1366
+      ],
+      "mode": "RGBA",
+      "originalToolPath": "/Users/yiouchen/.codex/generated_images/01a14397-1b81-7900-8064-243267fa374b/exec-425ee148-152f-4111-a9e3-26671af01a3d.png",
+      "unchangedCopy": true
+    }
+  ],
+  "status": "generated",
+  "userRequest": "Generate a 12-frame player dancing spritesheet on a 128x128 calibration tile at exactly 12 fps. Keep one player design with nominal 160px standing height, the same anatomy scale and floor-center foot/root anchor in every frame. Remove the calibration floor, retain complete limbs, and deliver a playable loop. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/dancing-player.\n",
+  "seed": null,
+  "seedNote": "Not exposed by built-in tool",
+  "actualGenerationCalls": 1
+}

@@ -1,0 +1,28 @@
+{
+  "mode": "processing-only-source-reuse",
+  "imageGenerationCallsThisRun": 0,
+  "originalGenerationCallsRecorded": 1,
+  "originalGenerationOccurredInAnotherRun": true,
+  "originalGenerationRecipe": "generation-01.json",
+  "originalToolInput": "tool-input-01.json",
+  "originalPrompt": "prompt-01.txt",
+  "sourceImage": "source-01.png",
+  "sourceSHA256": "710953b449c7969bab66aca0fb0fb1a5eb731c95e6ee69021a7f56bde9c559ff",
+  "sourceRecipeBytesUnchanged": true,
+  "artFittingApplied": false,
+  "anchorFittingApplied": false,
+  "additionalImageTransformsAfterFrozenProcessor": false,
+  "frozenSkill": "../skill-snapshot/SKILL.md",
+  "frozenProcessorSHA256": "836e1935bbd733cdca0aa4e82728ca3748ad820aec2da5ce86c6d19d75865490",
+  "frozenAssemblerSHA256": "a32dfa1cb47afdc618554072fe3d16bcb7a9a2c37c482069260aa65a87e9d46a",
+  "limitations": [
+    "This is reuse of a provided original image-generation result, not a fresh generation.",
+    "The stored root and canonical metadata do not certify anatomy, contact, camera, chroma quality, or loop quality.",
+    "Chroma keying uses an approximate soft matte within the measured floor region."
+  ],
+  "previews": [
+    "previews/contact-light.png",
+    "previews/contact-dark.png",
+    "previews/playback.html"
+  ]
+}

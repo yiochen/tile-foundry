@@ -1,0 +1,9 @@
+{
+  "error": "SyntaxError: Identifier top has already been declared",
+  "origin": "Frozen scripts/review_playback.py uses global lexical top, conflicting with window.top",
+  "original": "previews/playback-bundled-original.html",
+  "patched": "previews/playback.html",
+  "change": "Renamed JavaScript-only local identifier top to topBound; no frame, geometry, timing or artwork changes",
+  "originalSHA256": "361a69bf359786a41cfac81a3d1db9a54b06b6252d219de723f4b0db52c59b2c",
+  "patchedSHA256": "5907f988388fa6a4e504555fe4432091947f0fef6cede190ae7c203095dcce5d"
+}

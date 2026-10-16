@@ -1,0 +1,937 @@
+{
+  "kind": "animation",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "fps": 12,
+  "frameCount": 12,
+  "order": "row-major",
+  "sourceLayout": {
+    "columns": 4,
+    "rows": 3
+  },
+  "intendedFrameSize": [
+    192,
+    320
+  ],
+  "intendedGroundAnchor": [
+    96,
+    248
+  ],
+  "intendedFootprint": [
+    128,
+    128
+  ],
+  "authoredGeometry": {
+    "template": "template/geometry.json",
+    "topRect": [
+      32,
+      152,
+      160,
+      280
+    ],
+    "frontRect": [
+      32,
+      280,
+      160,
+      312
+    ],
+    "groundRect": [
+      32,
+      184,
+      160,
+      312
+    ],
+    "nearEdgeAnchor": [
+      96,
+      312
+    ],
+    "centerAnchor": [
+      96,
+      248
+    ],
+    "conversion": {
+      "offset": [
+        0,
+        -64
+      ],
+      "artMoved": false
+    }
+  },
+  "sourceContract": "opaque-appearance-material-phase-atlas",
+  "processingPlan": "Use frozen material_animation.py compose with strength 0.7 and authored terrain SVG face masks; sample only predeclared square material regions at one uniform atlas source scale; preserve complete 192x320 SVG alpha and image placement, then assemble_result.py. No whole-object extraction, keying, geometry correction, motion synthesis, or per-frame anchor fitting.",
+  "limitations": "Authored silhouette, footprint and elevation are deterministic. AI material motion, loop quality, periodicity and seam quality require independent visual review; uniform source registration does not certify generated layout.",
+  "version": 2,
+  "groundAnchorAlignment": "center",
+  "sprites": [
+    {
+      "id": "sprite-00",
+      "index": 0,
+      "image": "processed/frames/frame-00.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-00",
+        "index": 0,
+        "image": "frames/frame-00.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          16,
+          144,
+          240,
+          368
+        ],
+        "sourceRect": [
+          19.59375,
+          176.34375,
+          293.90625,
+          450.65625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "sprite-01",
+      "index": 1,
+      "image": "processed/frames/frame-01.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-01",
+        "index": 1,
+        "image": "frames/frame-01.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          272,
+          144,
+          496,
+          368
+        ],
+        "sourceRect": [
+          333.09375,
+          176.34375,
+          607.40625,
+          450.65625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "sprite-02",
+      "index": 2,
+      "image": "processed/frames/frame-02.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-02",
+        "index": 2,
+        "image": "frames/frame-02.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          528,
+          144,
+          752,
+          368
+        ],
+        "sourceRect": [
+          646.59375,
+          176.34375,
+          920.90625,
+          450.65625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "sprite-03",
+      "index": 3,
+      "image": "processed/frames/frame-03.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-03",
+        "index": 3,
+        "image": "frames/frame-03.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          784,
+          144,
+          1008,
+          368
+        ],
+        "sourceRect": [
+          960.09375,
+          176.34375,
+          1234.40625,
+          450.65625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "sprite-04",
+      "index": 4,
+      "image": "processed/frames/frame-04.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-04",
+        "index": 4,
+        "image": "frames/frame-04.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          16,
+          400,
+          240,
+          624
+        ],
+        "sourceRect": [
+          19.59375,
+          489.84375,
+          293.90625,
+          764.15625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "sprite-05",
+      "index": 5,
+      "image": "processed/frames/frame-05.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-05",
+        "index": 5,
+        "image": "frames/frame-05.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          272,
+          400,
+          496,
+          624
+        ],
+        "sourceRect": [
+          333.09375,
+          489.84375,
+          607.40625,
+          764.15625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "sprite-06",
+      "index": 6,
+      "image": "processed/frames/frame-06.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-06",
+        "index": 6,
+        "image": "frames/frame-06.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          528,
+          400,
+          752,
+          624
+        ],
+        "sourceRect": [
+          646.59375,
+          489.84375,
+          920.90625,
+          764.15625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "sprite-07",
+      "index": 7,
+      "image": "processed/frames/frame-07.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-07",
+        "index": 7,
+        "image": "frames/frame-07.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          784,
+          400,
+          1008,
+          624
+        ],
+        "sourceRect": [
+          960.09375,
+          489.84375,
+          1234.40625,
+          764.15625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "sprite-08",
+      "index": 8,
+      "image": "processed/frames/frame-08.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-08",
+        "index": 8,
+        "image": "frames/frame-08.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          16,
+          656,
+          240,
+          880
+        ],
+        "sourceRect": [
+          19.59375,
+          803.34375,
+          293.90625,
+          1077.65625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "sprite-09",
+      "index": 9,
+      "image": "processed/frames/frame-09.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-09",
+        "index": 9,
+        "image": "frames/frame-09.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          272,
+          656,
+          496,
+          880
+        ],
+        "sourceRect": [
+          333.09375,
+          803.34375,
+          607.40625,
+          1077.65625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "sprite-10",
+      "index": 10,
+      "image": "processed/frames/frame-10.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-10",
+        "index": 10,
+        "image": "frames/frame-10.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          528,
+          656,
+          752,
+          880
+        ],
+        "sourceRect": [
+          646.59375,
+          803.34375,
+          920.90625,
+          1077.65625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "sprite-11",
+      "index": 11,
+      "image": "processed/frames/frame-11.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 32,
+      "processing": {
+        "id": "frame-11",
+        "index": 11,
+        "image": "frames/frame-11.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "durationMs": 83.33333333333333,
+        "guideRect": [
+          784,
+          656,
+          1008,
+          880
+        ],
+        "sourceRect": [
+          960.09375,
+          803.34375,
+          1234.40625,
+          1077.65625
+        ],
+        "artRect": [
+          32,
+          152,
+          128,
+          160
+        ],
+        "templateNearEdgeAnchor": [
+          96,
+          312
+        ],
+        "alphaPreserved": true
+      },
+      "durationMs": 83.33333333333333
+    }
+  ],
+  "geometryDeclaration": "Footprints/elevation/roles are authored constraints; visual verification required"
+}

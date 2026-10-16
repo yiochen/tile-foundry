@@ -1,0 +1,25 @@
+{
+  "caseId": "partial-cell-tall-object",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/partial-cell-tall-object",
+  "userPrompt": "Generate a tall lantern post on a 128x128 calibration tile. Its centered base is 48x48px and its nominal height is 160px. Remove the calibration tile from the final sprite, preserving its ground position and size. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/partial-cell-tall-object.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json",
+      "role": "whole-asset"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "dd8b1923f1f9cf990398f65a00bec1b1dd736d09e51093f924bd4342cb1538a9",
+  "result": "result.json",
+  "registration": "registration.json",
+  "processing": "processing.json",
+  "previews": [
+    "previews/light-native.png",
+    "previews/light-2x.png",
+    "previews/dark-native.png",
+    "previews/dark-2x.png",
+    "previews/placement-native.png",
+    "previews/placement-2x.png"
+  ]
+}

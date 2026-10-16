@@ -7,6 +7,7 @@ from pathlib import Path
 from evaluate import contained, POLICY
 from tile_tools import render_floor_repeat, write_json
 from PIL import Image, ImageDraw
+from review_playback import write_playback
 
 
 def placement_preview(image, sprite, output, dark=False, repeats=1):
@@ -67,19 +68,46 @@ def prepare_review(run_root, case_id, output):
             method = 'uniform-square-resampling'
         if method not in ('authored-svg-faces','measured-calibration-floor','authored-source-canvas','uniform-square-resampling'):
             method = 'unspecified'
+        if processing.get('alphaPreserved') and 'templateNearEdgeAnchor' in processing:
+            method = 'authored-svg-faces'
         normalization = processing.get('normalization',processing)
         operation = {'sprite':sprite['id'],'registrationMethod':method}
+        if 'registrationBasis' in processing:
+            operation['registrationBasis']=processing['registrationBasis']
         operation['transform'] = {k:normalization[k] for k in ('sourceSize','sourceRect','anchorSource','scale','subpixelShift') if k in normalization}
         chroma = processing.get('chroma',{})
         if 'keyRGB' in chroma:operation['keyRGB'] = chroma['keyRGB']
+        uv=processing.get('uvShift',{})
+        if uv:
+            operation['uvShift']={k:uv[k] for k in ('phase','appliedXPixels','appliedYPixels') if type(uv.get(k)) in (int,float)}
         operations.append(operation)
         if method == 'authored-svg-faces':
-            geometry = contained(result_path.parent,registration['guide'],base)
+            geometry_name=registration.get('guide')
+            if not geometry_name:
+                # Standard material helper preserves its processor result separately.
+                for candidate in base.glob('*/result.json'):
+                    metadata=json.loads(candidate.read_text())
+                    record=metadata.get('provenance',{}).get('templateGeometry',{})
+                    corresponding=[f for f in metadata.get('frames',[]) if
+                                   (candidate.parent/f.get('image','')).resolve()==
+                                   (result_path.parent/sprite['image']).resolve()]
+                    if record.get('path') and corresponding:
+                        geometry_name=str((candidate.parent/record['path']).resolve().relative_to(base))
+                        break
+            if not geometry_name:continue
+            geometry = contained(result_path.parent,geometry_name,base)
             # Geometry definitions/raster precede material compositing; omit
             # measured coverage and result commentary from the review packet.
             template = geometry.parent/'template.png'
             if template.is_file():
                 assets.append({'role':'authored-geometry','path':str(contained(geometry.parent,'template.png',base))})
+    if case['kind']=='animation' and result.get('sprites'):
+        path=output/'playback.html'
+        output.mkdir(parents=True,exist_ok=True)
+        frames=result['sprites']
+        write_playback(frames,[contained(result_path.parent,s['image'],base) for s in frames],path,
+                       terrain=bool(case['expected'].get('fullBase')))
+        assets.append({'role':'motion-preview','path':str(path)})
     # Do not forward arbitrary cached previews: gallery screenshots and result
     # prose can expose old verdicts. Rebuild only artwork/registration views.
     output.mkdir(parents=True,exist_ok=True)
@@ -116,8 +144,17 @@ def prepare_review(run_root, case_id, output):
         registration[key] = [{k:s[k] for k in sprite_keys if k in s} for s in result.get(key,[])]
     packet = {'policy':POLICY, 'caseId':case_id, 'request':submission['userPrompt'],
               'criteria':case['visualChecks'], 'registration':registration,'operations':operations,
-              'guide':str(guide), 'assets':assets,
+              'guide':str(guide), 'assets':list({(a['role'],a['path']):a for a in assets}.values()),
               'instructions':str(Path(__file__).resolve().parents[1]/'references/visual-review.md')}
+    if result.get('workflow')=='authored-periodic-material-flow':
+        design=result.get('animationDesign',{})
+        processor=run_root/'skill-snapshot/scripts/material_flow.py'
+        packet['animationOperations']={'authorship':'authored-periodic-texture-translation',
+            'source':'one generated appearance material',
+            'parameters':{k:design[k] for k in ('translationPerCycleNormalized','periodFrames','stationaryEdgeBlendPx',
+                'strength','boundaryReferencePhase','durationMs') if type(design.get(k)) in (int,float)},
+            'translationAxis':'x',
+            'processor':str(processor),'processorSHA256':hashlib.sha256(processor.read_bytes()).hexdigest()}
     write_json(output/'packet.json',packet)
     write_json(output/'review-template.json',template)
     return packet

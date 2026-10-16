@@ -1,0 +1,701 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "animated-lava",
+  "request": "Generate a 12-frame looping moving lava tile animation at exactly 12 fps. Each frame has a full 128x128 base and 32px visible front-wall height, in the same top-down oblique projection. Preserve the anchor, base footprint, elevation, and connection to adjacent copies through the animation. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "animated-height": "Visible elevation and support stay fixed while the surface moves; no camera/scale breathing.",
+    "spatial-seams": "Inspect 3x3 animated neighbors through all phases, including offset-phase neighbors; no cracks, gradient jumps, or visible grid seams.",
+    "temporal-loop": "Motion is readable and the last-to-first transition has no unwanted pop.",
+    "frame-consistency": "All 12 poses/surfaces are usable, with common identity/palette/light and complete alpha.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "animation",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "heightAxis": [
+      0,
+      -1
+    ],
+    "elevationScale": 1,
+    "groundAnchorAlignment": "center",
+    "fps": 12,
+    "sprites": [
+      {
+        "id": "sprite-00",
+        "image": "processed/frames/frame-00.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 0,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-01",
+        "image": "processed/frames/frame-01.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 1,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-02",
+        "image": "processed/frames/frame-02.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 2,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-03",
+        "image": "processed/frames/frame-03.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 3,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-04",
+        "image": "processed/frames/frame-04.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 4,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-05",
+        "image": "processed/frames/frame-05.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 5,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-06",
+        "image": "processed/frames/frame-06.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 6,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-07",
+        "image": "processed/frames/frame-07.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 7,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-08",
+        "image": "processed/frames/frame-08.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 8,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-09",
+        "image": "processed/frames/frame-09.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 9,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-10",
+        "image": "processed/frames/frame-10.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 10,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-11",
+        "image": "processed/frames/frame-11.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 11,
+        "durationMs": 83.33333333333333
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "sprite-00",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          19.59375,
+          176.34375,
+          293.90625,
+          450.65625
+        ]
+      }
+    },
+    {
+      "sprite": "sprite-01",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          333.09375,
+          176.34375,
+          607.40625,
+          450.65625
+        ]
+      }
+    },
+    {
+      "sprite": "sprite-02",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          646.59375,
+          176.34375,
+          920.90625,
+          450.65625
+        ]
+      }
+    },
+    {
+      "sprite": "sprite-03",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          960.09375,
+          176.34375,
+          1234.40625,
+          450.65625
+        ]
+      }
+    },
+    {
+      "sprite": "sprite-04",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          19.59375,
+          489.84375,
+          293.90625,
+          764.15625
+        ]
+      }
+    },
+    {
+      "sprite": "sprite-05",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          333.09375,
+          489.84375,
+          607.40625,
+          764.15625
+        ]
+      }
+    },
+    {
+      "sprite": "sprite-06",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          646.59375,
+          489.84375,
+          920.90625,
+          764.15625
+        ]
+      }
+    },
+    {
+      "sprite": "sprite-07",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          960.09375,
+          489.84375,
+          1234.40625,
+          764.15625
+        ]
+      }
+    },
+    {
+      "sprite": "sprite-08",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          19.59375,
+          803.34375,
+          293.90625,
+          1077.65625
+        ]
+      }
+    },
+    {
+      "sprite": "sprite-09",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          333.09375,
+          803.34375,
+          607.40625,
+          1077.65625
+        ]
+      }
+    },
+    {
+      "sprite": "sprite-10",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          646.59375,
+          803.34375,
+          920.90625,
+          1077.65625
+        ]
+      }
+    },
+    {
+      "sprite": "sprite-11",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          960.09375,
+          803.34375,
+          1234.40625,
+          1077.65625
+        ]
+      }
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "appearance-material",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/references/guide.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-00",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-00.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-01",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-01.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-02",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-02.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-03",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-03.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-04",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-04.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-05",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-05.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-06",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-06.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-07",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-07.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-08",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-08.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-09",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-09.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-10",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-10.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-11",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/processed/frames/frame-11.png"
+    },
+    {
+      "role": "authored-geometry",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-lava/template/template.png"
+    },
+    {
+      "role": "motion-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/playback.html"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-0-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-0.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-1-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-1-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-1.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-2-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-2-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-2.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-3-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-3-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-3.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-4-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-4-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-4.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-5-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-5-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-5.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-6-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-6-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-6.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-7-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-7-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-7.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-8-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-8-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-8.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-9-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-9-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-9.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-10-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-10-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-10.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-11-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/placement-11-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/animated-lava/neighbors-11.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/skills/build-overlap-tiles/references/visual-review.md"
+}

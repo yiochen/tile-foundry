@@ -1,0 +1,41 @@
+{
+  "command": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "tools/tilekit.py",
+    "process-on-floor",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/guide.json",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions/processed",
+    "--min-alpha",
+    "32"
+  ],
+  "workingDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry",
+  "exitCode": 1,
+  "stdout": "processing.stdout.txt",
+  "stderr": "processing.stderr.txt",
+  "sourceSHA256": "7784b3d30de7d9f485479d9f4bea81bd617eeaeedff8c6c19707cc430c7835bb",
+  "guideSHA256": "eab7c39b6e3cb66ee8be53ae71df6496db5bb79548cb69efcc6e4b4a13a1cd4a",
+  "sourceImageProperties": {
+    "fileFormat": "PNG",
+    "originalMode": "RGBA",
+    "size": [
+      1536,
+      1024
+    ],
+    "alphaExtrema": [
+      0,
+      254
+    ],
+    "nonzeroAlphaPixels": 385470,
+    "opaqueAlphaPixels": 0
+  },
+  "wrapper": "tools/tilekit.py",
+  "wrapperSHA256": "3b86bd6cbdb5855d95260b7dff017a4055792714baec72e5653fd683385b470c",
+  "processorSHA256": "52700154f78dccf313b292913cf0f979eda32816ec5febefea690561c8f9c30e",
+  "liveProcessorMatchesFrozenSnapshot": true,
+  "attempts": 1,
+  "imageGenerationCalls": 1,
+  "gutterRecoveryAttempted": false,
+  "manualGeometryAdjustments": false,
+  "clippingOrColorGuessing": false
+}

@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "coverage": {
+    "ok": true,
+    "coveredFraction": 1.0,
+    "uncoveredPixels": 0,
+    "testedPixels": 16384,
+    "emptyRows": [],
+    "pitch": [
+      128,
+      128
+    ],
+    "alphaThreshold": 250,
+    "requiredCoverage": 1.0,
+    "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+  },
+  "parallel": {
+    "ok": true,
+    "farWidth": 128,
+    "nearWidth": 128,
+    "widthDelta": 0,
+    "sideShift": 0,
+    "tolerance": 1.0,
+    "bodyRect": [
+      32,
+      152,
+      160,
+      312
+    ],
+    "alphaThreshold": 250,
+    "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+  }
+}

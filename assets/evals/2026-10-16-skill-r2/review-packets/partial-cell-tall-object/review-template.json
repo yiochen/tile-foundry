@@ -1,0 +1,51 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {
+    "lantern": "34d32aec82839c894abdd4cb5e66dd5c125cf43b0b7888f0752f3b86a70fe0e5"
+  },
+  "sourceSHA256": {
+    "source-01.png": "a5296387b967371a56fbaccc6a0189ab2dff5c8d39915b628fec3ae65e4344d9"
+  },
+  "resultSHA256": "2d840637609de0a16b66f1c09aa4edba17c1f73c7ebd579fc1b80ce2fe0f2b7f",
+  "guideSHA256": "dd8b1923f1f9cf990398f65a00bec1b1dd736d09e51093f924bd4342cb1538a9",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "partial-base": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "visible-height": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "cutout": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

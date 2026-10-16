@@ -1,0 +1,3 @@
+Delivery integrity checked: one attempt; source/reference hashes match; fixed frame and anchor; all referenced deliverables exist.
+Inspected actual previews: light-dark.png, placement.png, guide-comparison.png.
+No independent visual grade was performed by the executor.

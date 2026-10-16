@@ -1,0 +1,73 @@
+{
+  "version": 2,
+  "mode": "fresh-generation-independent-visual-review",
+  "suite": "suite.json",
+  "suiteSHA256": "f5eb7e9313f8aad2590a1619b519b77c975470980c6ce56530661ab69a123048",
+  "skillSnapshot": "skill-snapshot/SKILL.md",
+  "skillFiles": {
+    "SKILL.md": "81a93c5f18e82f619d6e6be192cf4268614a4ef93ab32ad3990b1d29db12add7",
+    "agents/openai.yaml": "3f9f1efb4a06d07b40042a8400419e6f6dc4325e51df991ca2a0f6405dc09bae",
+    "assets/perspective-reference.jpg": "9784bc8c25ce01fb25044f9d866e8487f4e520be4c89588f36046df0ed19e29c",
+    "assets/perspective-reference.json": "5a742adfc22baa172c515715b305f0cc53fcac9f628a2fac5eea4023005cd3ec",
+    "evals/cases.json": "f5eb7e9313f8aad2590a1619b519b77c975470980c6ce56530661ab69a123048",
+    "evals/protocol.md": "d8f2c1a5a03e128ef00be4872bb887cbd3c7296625fbe8f40152539b85e65f87",
+    "references/floor-and-objects.md": "8a93da23786f33bd1624ecc0587f6cfe999c2b7fa05cd422d23e2ad34d968f9e",
+    "references/geometry.md": "cbb9b5ee71db3fc35fa89355627744e7ffee6eb0bc9c9b52cbe555d6c55a85e9",
+    "references/material-animation.md": "7fd7379d39c1cafe35f95db8a4ca535e260836f8dcc5f48a91be876afd908ea6",
+    "references/projection.md": "51bffc3e8660c26b8a03ab461b1516cb5c3e502dfc61d2ce4125500bd8b3f085",
+    "references/prompts.md": "86355e14e230f408103887080e005ba5f47578bdc6726e729db1151b647986e4",
+    "references/svg-workflows.md": "fbe6379d9c82d11e988a725811cc67d49c57c751ab2177c480a81310d8e7fc71",
+    "references/visual-review.md": "69310eafca633acb1ba3a273992ca06453b8bceb853ca3f1eeb979ac1162223f",
+    "scripts/assemble_result.py": "a32dfa1cb47afdc618554072fe3d16bcb7a9a2c37c482069260aa65a87e9d46a",
+    "scripts/evaluate.py": "03ae054616db1b156eece83aad9070b9f438a1fba5470539e7fe7ae439b80ea6",
+    "scripts/guide_tools.py": "eb3aa02064d8a1647a2cb0593f6d16e58b0ecf3ee26d797479d2742226b7aec6",
+    "scripts/material_animation.py": "b60cb45d1bf9c08d28b31839bb91996aa1cb15a4ebaa811c64b31e96fa711ea8",
+    "scripts/prepare_evals.py": "66fec3dee10f2fb45c7e7d5864ec5446a0c9c6f616bc8a20642eb5604019c9c3",
+    "scripts/prepare_review.py": "4fa0eec9a6cf008514d06a851dbe910a98b4c408a0f1857150ba92c8b780cad5",
+    "scripts/requirements.txt": "f7d2bebf5af96c2b4ec2c9c9e3fff2aafe1dcd6db2b6e2ea690f91f8e8d65e1e",
+    "scripts/review_playback.py": "76f370502c3fd0c825682b94cf6f08ab9b23e1388c37c108ec65f227a40eeb1e",
+    "scripts/svg_tools.py": "f6fec2f5c2a312639c9bb84d31a30d8a7032cfce436076d56d9ee0bf5e7f4af1",
+    "scripts/tile_tools.py": "52700154f78dccf313b292913cf0f979eda32816ec5febefea690561c8f9c30e"
+  },
+  "trials": [
+    {
+      "caseId": "partial-cell-tall-object",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/partial-cell-tall-object",
+      "requestFile": "partial-cell-tall-object/request.txt",
+      "expectedStatus": "failed",
+      "report": "partial-cell-tall-object.json",
+      "generationCalls": 1,
+      "review": "reviews/partial-cell-tall-object.json"
+    },
+    {
+      "caseId": "character-directions",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/character-directions",
+      "requestFile": "character-directions/request.txt",
+      "expectedStatus": "failed",
+      "report": "character-directions.json",
+      "generationCalls": 1,
+      "review": "reviews/character-directions.json"
+    },
+    {
+      "caseId": "animated-waves",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves",
+      "requestFile": "animated-waves/request.txt",
+      "expectedStatus": "failed",
+      "report": "animated-waves.json",
+      "generationCalls": 1,
+      "review": "reviews/animated-waves.json"
+    }
+  ],
+  "id": "2026-10-16-skill-r2",
+  "createdAt": "2026-10-16T07:29:00Z",
+  "purpose": "Second skill revision: relative size wording plus terrain-route and character-direction holdouts; unchanged rubric, one generation each",
+  "executorContext": "Fresh subagents: request and frozen skill only; no prior verdicts or intended answer",
+  "actualGenerationCalls": 3,
+  "newGenerationAttemptsPerCase": 1,
+  "reviewPolicy": "llm-visual-v1",
+  "rubricChangesToExistingCases": false,
+  "reviewPacketGeneratorSHA256": "6cb9a4fc2ef53506c98d1da8a0b3d17bf088fcd31ebc198b0c28af87b0dec7e0"
+}

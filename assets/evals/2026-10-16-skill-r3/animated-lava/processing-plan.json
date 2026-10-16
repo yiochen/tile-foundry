@@ -1,0 +1,33 @@
+{
+  "authoredBeforeGeneration": true,
+  "attempt": 1,
+  "maximumGenerationCalls": 1,
+  "sourceRoute": "model-drawn phase atlas; selected to honor explicit 4x3 source panels",
+  "generationInputs": "tool-inputs-01.json",
+  "registration": "registration.json",
+  "guide": "guide.json",
+  "guideSHA256": "21de85fd4c747ac6a20fd8dd1df493b32e1b20a6a5c2fa34745720bbe879a8cf",
+  "materialStrength": 0.7,
+  "references": {
+    "references/guide.png": {
+      "role": "layout edit target: opaque 4x3 square material samples",
+      "sha256": "63a325cd92f009c0c677d0e0079701fe3757d45f0a5a71cb42b42a1a6d1b83bf"
+    }
+  },
+  "inspectedNotSupplied": {
+    "provenance/perspective-reference-inspected.jpg": {
+      "role": "projection understanding only; not image-call input",
+      "sha256": "9784bc8c25ce01fb25044f9d866e8487f4e520be4c89588f36046df0ed19e29c"
+    }
+  },
+  "commandsBeforeGeneration": [
+    "python \"$SKILL_DIR/scripts/material_animation.py\" guide \"$OUTPUT_DIR/guide\"",
+    "python \"$SKILL_DIR/scripts/svg_tools.py\" template \"$OUTPUT_DIR/template\" --height 32 --palette lava --plain --terrain"
+  ],
+  "commandsAfterGeneration": [
+    "python \"$SKILL_DIR/scripts/material_animation.py\" compose \"$OUTPUT_DIR/template\" \"$OUTPUT_DIR/source-01.png\" \"$OUTPUT_DIR/guide.json\" \"$OUTPUT_DIR/processed\" --strength .7",
+    "python \"$SKILL_DIR/scripts/assemble_result.py\" --input-result \"$OUTPUT_DIR/processed/result.json\" --registration \"$OUTPUT_DIR/registration.json\" --output \"$OUTPUT_DIR/result.json\""
+  ],
+  "noCorrectiveGeneration": true,
+  "preserveFailure": true
+}

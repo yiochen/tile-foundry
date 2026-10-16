@@ -1,0 +1,42 @@
+{
+  "generationCalls": 1,
+  "correctiveGenerationCalls": 0,
+  "generationTool": "image_gen.imagegen",
+  "toolInputs": "tool-inputs-01.json",
+  "sourceOriginalPath": "/Users/yiouchen/.codex/generated_images/01a143aa-7eef-7ff2-96f8-84f071782801/exec-7c680601-e0a0-4232-9ba9-77cf40c2babe.png",
+  "sourceSHA256": "d9eb1eb74171ce582ded4a2c2f019bac68311890478bfedb2e2653cce102f054",
+  "unchangedSourcePreserved": true,
+  "referencesActuallySupplied": [],
+  "inspectedNotSupplied": [
+    {
+      "image": "provenance/perspective-reference-inspected-not-supplied.jpg",
+      "SHA256": "9784bc8c25ce01fb25044f9d866e8487f4e520be4c89588f36046df0ed19e29c",
+      "role": "projection convention"
+    }
+  ],
+  "commands": [
+    ".venv/bin/python assets/evals/2026-10-16-skill-flow/skill-snapshot/scripts/guide_tools.py floor assets/evals/2026-10-16-skill-flow/authored-flowing-lava/guide",
+    ".venv/bin/python assets/evals/2026-10-16-skill-flow/skill-snapshot/scripts/svg_tools.py template assets/evals/2026-10-16-skill-flow/authored-flowing-lava/template --height 32 --palette lava --plain --terrain",
+    ".venv/bin/python assets/evals/2026-10-16-skill-flow/skill-snapshot/scripts/material_flow.py compose assets/evals/2026-10-16-skill-flow/authored-flowing-lava/template assets/evals/2026-10-16-skill-flow/authored-flowing-lava/source-01.png assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed --strength .7 --edge-band 16",
+    ".venv/bin/python assets/evals/2026-10-16-skill-flow/skill-snapshot/scripts/assemble_result.py --input-result assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/result.json --registration assets/evals/2026-10-16-skill-flow/authored-flowing-lava/registration.json --output assets/evals/2026-10-16-skill-flow/authored-flowing-lava/result.json",
+    ".venv/bin/python assets/evals/2026-10-16-skill-flow/authored-flowing-lava/prepare_delivery.py",
+    "node assets/evals/2026-10-16-skill-flow/authored-flowing-lava/capture_playback.mjs"
+  ],
+  "commandBaseDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry",
+  "pythonInterpreter": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+  "processingParameters": {
+    "strength": 0.7,
+    "edgeBandLogicalPx": 16,
+    "sourceProcessing": "full square periodic horizontal wrapping, detail modulation with unchanged SVG alpha",
+    "sourceEdited": false,
+    "sourceCropped": false
+  },
+  "retainedScripts": [
+    "prepare_delivery.py",
+    "capture_playback.mjs"
+  ],
+  "authoredGeometry": "template/geometry.json",
+  "geometryAuthority": "Authored SVG, not model drawn geometry. Texture material is not claimed geometrically exact.",
+  "processorSidecar": "processed/result.json",
+  "browserCaptureRecord": "playback-capture.json"
+}

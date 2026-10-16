@@ -1,0 +1,835 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "animated-lava",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a 12-frame looping moving lava tile animation at exactly 12 fps. Each frame has a full 128x128 base and 32px visible front-wall height, in the same top-down oblique projection. Preserve the anchor, base footprint, elevation, and connection to adjacent copies through the animation. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "appearance-material"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "90072466d7219e04f7e254c1842f5126b11468ac15ee1532d3b22d7161f60626"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "source-0-opaque-material",
+      "pass": true,
+      "detail": "Complete opaque square appearance material; registration comes from authored geometry"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "21de85fd4c747ac6a20fd8dd1df493b32e1b20a6a5c2fa34745720bbe879a8cf"
+    },
+    {
+      "check": "registered-guide",
+      "pass": false,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "animation",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "lava-00",
+        "lava-01",
+        "lava-02",
+        "lava-03",
+        "lava-04",
+        "lava-05",
+        "lava-06",
+        "lava-07",
+        "lava-08",
+        "lava-09",
+        "lava-10",
+        "lava-11"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "12-fps-schedule",
+      "pass": true,
+      "detail": "12 fps / 83.333333 ms"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "All twelve processed tiles show a screen-aligned square surface with a horizontal front wall below it. Parallel support edges remain aligned across phases; there is no visible perspective taper or change of camera orientation. The supplied geometry template supports the same top/front construction.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/references/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-dark-native.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "Each processed phase has a complete rectangular top and front wall within its frame. Native and 2\u00d7 inspection plus light/dark placements show no missing face corners, accidental holes, clipped effects, or detached shadow artwork.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-08.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-09.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-dark-native.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": true,
+      "detail": "In the placement views the ground-root cross stays on the same central support axis beneath the elevated surface center. The full-cell top and its front wall align with the authored template and ground registration rather than shifting to follow lava landmarks. This is a qualitative placement judgment, not proof of pixel-exact geometry.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/references/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-dark-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/playback.html",
+        "http://127.0.0.1:8771/animated-lava/playback.html"
+      ]
+    },
+    {
+      "check": "animated-height",
+      "pass": true,
+      "detail": "The same top rectangle, exposed front-wall depth, and support edges are retained in every one of the twelve phases while internal rock/fissure patterns change. The running browser preview and paused offset-phase views preserve those exterior landmarks; I see no shape or camera-scale breathing in the inspected phases.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-dark-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/playback.html",
+        "http://127.0.0.1:8771/animated-lava/playback.html"
+      ]
+    },
+    {
+      "check": "spatial-seams",
+      "pass": false,
+      "detail": "All twelve native 3\u00d73 repeats show a pale upper-edge lighting band resetting at each row boundary, plus abrupt vertical breaks where fissures and rock islands meet an adjacent copy. The same grid remains obvious in native/2\u00d7 5\u00d75 phases 00, 05 and 11 and in the browser with offset neighbor phases enabled at 2\u00d7 on dark. These are hard joins and brightness discontinuities, beyond merely recognizable repeated motifs.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-4.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-6.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-8.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-9.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-00-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-05-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-11-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-00-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-05-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-11-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/playback.html",
+        "http://127.0.0.1:8771/animated-lava/playback.html"
+      ]
+    },
+    {
+      "check": "temporal-loop",
+      "pass": null,
+      "detail": "The browser preview successfully loaded and advanced the displayed phase counter at its stated 12 fps. I inspected changing running states and paused phase 11 followed by phase 0, including offset neighbors at 2\u00d7. However, the available visual observations are still captures, so I cannot confidently judge continuous motion readability or whether the last-to-first change produces an unwanted perceptual pop. Static frame differences alone do not establish that motion criterion.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/playback.html",
+        "http://127.0.0.1:8771/animated-lava/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png"
+      ]
+    },
+    {
+      "check": "frame-consistency",
+      "pass": true,
+      "detail": "All twelve surfaces retain the same orange/yellow molten palette, fractured-rock identity, upper-edge lighting treatment, and complete rectangular alpha silhouette. The individual islands change with phase, but none of the frames introduces a foreign material, missing face, or broken alpha region.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-08.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-09.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-dark-native.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The per-phase rock clusters and bright branching fissures in the source are recognizable on the corresponding processed top faces, with a consistent warmer/lighter treatment. The source is explicitly supplied as appearance material, and the separate authored template accounts for the fixed raised top/front-wall geometry. I see material mapping onto that declared geometry, not a replacement scene or an undisclosed fitted object silhouette.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/references/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "lava-00-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-00-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-01-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-01-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-02-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-02-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-03-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-03-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-04-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-04-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-05-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-05-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-06-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-06-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-07-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-07-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-08-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-08-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-09-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-09-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-10-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-10-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-11-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "lava-11-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "/root/independent_review_r1",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

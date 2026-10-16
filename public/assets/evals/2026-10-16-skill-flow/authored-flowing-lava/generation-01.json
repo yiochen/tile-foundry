@@ -1,0 +1,14 @@
+{
+  "prompt": "Use case: stylized-concept\nAsset type: one seamless opaque square appearance material for a flowing-lava game surface.\nPrimary request: create a single flat lava texture swatch, filled edge to edge, with connected sinuous molten-orange currents and small dark-red cooling islands. Broad gently bending flow lines should read clearly when the texture translates horizontally. Keep texture features evenly distributed with a consistent feature scale.\nStyle/medium: clean illustrated game material, crisp readable forms, warm red-orange lava with restrained yellow-orange highlights, gentle small-scale surface detail.\nComposition/framing: flat square texture only, viewed straight down with no perspective. The entire canvas is the material; no surrounding scene. Periodic left/right and top/bottom edges must continue color and connected patterns smoothly when tiled in either axis.\nLighting: constant average illumination across the canvas. No directional lighting gradient, vignette, or emphasized center.\nConstraints: exactly one complete fully opaque square swatch. No transparency, margins, borders, rim, gutters, scene, objects, raised geometry, bevels, front wall, text, labels, or watermark. No isolated glowing blobs, sparks, or external shadows.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": false,
+  "references": [],
+  "referenceSHA256": {},
+  "referenceRoles": {},
+  "sourceSHA256": "d9eb1eb74171ce582ded4a2c2f019bac68311890478bfedb2e2653cce102f054",
+  "status": "generated",
+  "toolInputs": "tool-inputs-01.json",
+  "actualCallCount": 1,
+  "sourceOriginalPath": "/Users/yiouchen/.codex/generated_images/01a143aa-7eef-7ff2-96f8-84f071782801/exec-7c680601-e0a0-4232-9ba9-77cf40c2babe.png",
+  "generatedAtUTC": "2026-10-16T07:45:20.042591+00:00"
+}

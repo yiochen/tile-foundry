@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "attempt": 1,
+  "prompt": "Use case: stylized-concept\nAsset type: single isolated game prop calibration source\nInput image: supplied sparse SVG raster is an edit target for registration only. Replace the gray subject envelope with a tall lantern post; preserve the green calibration square.\nPrimary request: one complete tall lantern post, with a centered 48x48px screen-aligned square base and nominal 160px crown-to-ground-root height, measured in the reference native 192x320 layout. The entire lantern, including roof, finial and glass, fits below the top envelope limit y=88; projected ground root is (96,248). Invent a readable illustrated lantern with warm lit glass, dark metal post, and stone square foot. Show its top and front faces.\nProjection: top-down oblique square-grid, front-facing three-quarter game view. Ground plane stays screen-aligned, vertical height projects straight upward, parallel edges retain direction and equal near/far scale. No diamond footprint, no vanishing points.\nLayout invariants: preserve reference canvas aspect ratio and relative registration. Keep the full plain green 128x128px square at native rectangle (32,184)-(160,312), uniform RGB 123,209,75. This is a temporary measurement substrate and must remain intact and visible around the small base. Do not remove or decorate it. Keep subject base centered at the floor center and the complete silhouette inside the panel. Keep calibration hue reserved exclusively for the floor.\nStyle/medium: clean softly shaded illustrated game sprite, crisp readable details, controlled neutral lighting.\nConstraints: actual transparent alpha outside the object and calibration square. No scenery, other props, labels, guide strokes, gray placeholder, cast shadow, external glow, or painted checkerboard. Preserve the green square without a rim, perspective warp, texture, or shadow.",
+  "toolInput": "tool-input-01.json",
+  "transparent_background": true,
+  "source": "source-01.png",
+  "sourceSha256": "ff00542778d367350e75708c57b77975cfc2ae48a8be2b06bcd689a3b9c34c3d",
+  "references": [
+    {
+      "path": "references/guide-4x.png",
+      "role": "edit target; authored calibration and subject envelope",
+      "sha256": "c90242a816d6714c84b59acc563b90c4afe023777d982d09e0b81139b4425d63"
+    }
+  ],
+  "originalToolOutputPath": "/Users/yiouchen/.codex/generated_images/01a14397-0190-7d63-91a8-1b35a592a93c/exec-e394883c-89fe-46fd-a23f-1855ac1b2225.png",
+  "seed": null,
+  "seedAvailability": "not returned by built-in tool"
+}

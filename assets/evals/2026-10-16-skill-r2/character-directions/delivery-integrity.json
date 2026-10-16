@@ -1,0 +1,27 @@
+{
+  "checks": "File/provenance integrity only; this is not visual grading.",
+  "exactRequestPreserved": true,
+  "sourceHashMatches": true,
+  "referenceHashesMatch": true,
+  "guideHashMatches": true,
+  "exactToolPromptPreserved": true,
+  "pngsReadAndVerified": [
+    "guide-2x.png",
+    "guide.png",
+    "previews/guide-dark-2x.png",
+    "previews/guide-dark-native.png",
+    "previews/guide-light-2x.png",
+    "previews/guide-light-native.png",
+    "previews/source-authored-registration.png",
+    "previews/source-dark-2x.png",
+    "previews/source-dark-native.png",
+    "previews/source-light-2x.png",
+    "previews/source-light-native.png",
+    "references/guide.png",
+    "source-01.png"
+  ],
+  "imageGenerationCallCount": 1,
+  "runtimeSpriteCount": 0,
+  "processorExitCode": 1,
+  "independentReviewPerformedByExecutor": false
+}

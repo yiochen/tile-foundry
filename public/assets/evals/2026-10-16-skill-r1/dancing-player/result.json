@@ -1,0 +1,53 @@
+{
+  "version": 2,
+  "kind": "animation",
+  "status": "blocked",
+  "diagnostic": "The only generated source was refused by process-on-floor: calibration floor aspect is outside its square tolerance. No safely registered floor-free sprites were produced.",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "groundAnchorAlignment": "center",
+  "fps": 12,
+  "frameOrder": "row-major",
+  "loop": true,
+  "sprites": [],
+  "requestedGeometry": {
+    "frameCount": 12,
+    "frame": [
+      192,
+      320
+    ],
+    "groundAnchor": [
+      96,
+      248
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "nominalStandingHeight": 160,
+    "durationMs": 83.33333333333333,
+    "sourceColumns": 4,
+    "sourceRows": 3
+  },
+  "registration": "registration.json",
+  "processingEvidence": "evidence/processing.json",
+  "processorLog": "evidence/process-strict.log",
+  "previews": [
+    "previews/source-light.png",
+    "previews/source-dark.png",
+    "previews/source-guide-overlay.png",
+    "previews/index.html"
+  ],
+  "geometryDeclaration": "Authored requested geometry is retained separately. No frame geometry or root compliance is claimed for the failed source."
+}

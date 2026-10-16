@@ -1,0 +1,354 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "character-directions",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "99e059df213a430af84ce0803296d9e70a7ea307cc2f8650da950f11092b452b"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "cc60e55ebb3449c3d8cfff98c6b3ed978162a0e95ed377f187dafb7e7912cccf"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "directions",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "player-north",
+        "player-northeast",
+        "player-east",
+        "player-southeast",
+        "player-south",
+        "player-southwest",
+        "player-west",
+        "player-northwest"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "eight-directions",
+      "pass": false,
+      "detail": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ]
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "The original eight isolated panels and registered views retain the same elevated character camera: head and boot tops remain readable, with no depth-dependent size shift or camera rotation. The calibration squares and runtime grid remain screen-aligned. This is a qualitative projection judgment, not exact geometry.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/references/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-2-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-4-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-6-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-2-dark-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-6-light-review-2x.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "All eight delivered sprites retain complete hair, scarf, hands and boots with transparent margin around the silhouette. No limb or scarf end is visibly clipped by the 192x320 frame and no retained cast shadow is visible. Small detached chroma residue is assessed separately under cutout.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-1-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-7-dark-review-2x.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "The square is registered consistently, but its magenta center is visibly above the physical supporting sole region. In the east and west views the cross lies around the boot/ankle region rather than the ground support center; the front and back views also place the supporting soles below it. This comparison uses the heel/sole area and the source floor center, not just the longest toe or alpha bottom.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/references/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-2-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-4-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-6-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-2-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-6-dark-review-2x.png"
+      ]
+    },
+    {
+      "check": "same-character",
+      "pass": true,
+      "detail": "The brown hair and quiff, red scarf, cream sleeves, blue tunic, crossed straps, side pouch, olive trousers and brown gloves/boots consistently identify one character. The subject turns through the requested eight directions while the view and lighting remain consistent.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-0-dark-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-3-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-7-dark-review-2x.png"
+      ]
+    },
+    {
+      "check": "direction-height",
+      "pass": null,
+      "detail": "The upright anatomy looks broadly similar in size, and the source-to-output transforms are declared as floor registration rather than art-bounds fitting. Crown position, shoe orientation and obscured sole support vary slightly across directions. I cannot establish the stated 4px standing-design-height tolerance confidently from those landmarks, and I have not treated silhouette bounds alone as standing height.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/references/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-0-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-1-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-2-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-3-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-4-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-5-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-6-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-7-light-review-2x.png"
+      ]
+    },
+    {
+      "check": "direction-contact",
+      "pass": false,
+      "detail": "Independent comparison of the source squares with the registered feet does not confirm contact at the guide center. The east/west side views expose the heel and sole sufficiently to show the supporting region below the center cross; north/south soles also sit below the center. Toe extension explains some change in the visible bottom but does not account for this common support offset.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/references/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-0-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-2-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-4-dark-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-6-dark-review-2x.png"
+      ]
+    },
+    {
+      "check": "cutout",
+      "pass": false,
+      "detail": "The main calibration squares and gray pose guide are removed, but small detached yellow-green flecks remain beside the northeast scarf and sleeve in processed frame 01. They are visible in the transparent frame at 2x; the runtime grid edge can mask some of this residue in registered placements.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/frame-01-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/frame-06-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-1-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-1-dark-review-2x.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "Every processed view matches its corresponding original pose, outfit details, hair and scarf. The packet discloses separate measured-floor normalization and chroma removal, including the small per-panel scale differences. The visible outputs are consistent with those operations; no replacement illustration or additional undeclared art-bounds geometry fitting is apparent. This visual comparison cannot audit hidden edit history.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-1-light-review-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-6-dark-review-2x.png"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "player-north-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "player-northeast-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "player-east-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "player-southeast-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "player-south-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "player-southwest-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "player-west-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "player-northwest-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "upright-bounds",
+      "detail": {
+        "alphaHeights": [
+          186,
+          187,
+          193,
+          189,
+          186,
+          186,
+          192,
+          183
+        ],
+        "note": "Pose and toe length change bounds; judge anatomy scale and support visually."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "/root/independent_review_characters_final",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

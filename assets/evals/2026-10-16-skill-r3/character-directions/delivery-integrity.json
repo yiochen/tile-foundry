@@ -1,0 +1,173 @@
+{
+  "status": "delivery-files-verified",
+  "independentVisualReview": "pending; executor has not graded artwork",
+  "sources": 1,
+  "generationCalls": 1,
+  "correctionCalls": 0,
+  "processing": "strict guide panels, floor-width registration, explicit reserved-color removal",
+  "sprites": [
+    {
+      "id": "player-north",
+      "direction": "north",
+      "image": "processed/frames/frame-00.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "artRect": [
+        32,
+        73,
+        121,
+        187
+      ],
+      "sha256": "5bb79e7d55b1584444a964305129c66d85dcecbff6aba3adfc7f4c3a32ca21e2"
+    },
+    {
+      "id": "player-northeast",
+      "direction": "northeast",
+      "image": "processed/frames/frame-01.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "artRect": [
+        32,
+        77,
+        109,
+        187
+      ],
+      "sha256": "0253087ce016f6d10dcf2b7edbe32f8a0c9e3d09920d642bd85e73fa3b43da13"
+    },
+    {
+      "id": "player-east",
+      "direction": "east",
+      "image": "processed/frames/frame-02.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "artRect": [
+        33,
+        74,
+        125,
+        194
+      ],
+      "sha256": "bd807bba1e5ab8b48121364df665d6544e96d84eba7b0a57c73d1292a73fd7bc"
+    },
+    {
+      "id": "player-southeast",
+      "direction": "southeast",
+      "image": "processed/frames/frame-03.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "artRect": [
+        51,
+        76,
+        111,
+        190
+      ],
+      "sha256": "427fb07eb21ec3fe1948552c0cb2741a3a6e7437c4a8f52cdc84f93c8d077486"
+    },
+    {
+      "id": "player-south",
+      "direction": "south",
+      "image": "processed/frames/frame-04.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "artRect": [
+        52,
+        74,
+        105,
+        187
+      ],
+      "sha256": "2362b9f12dac8a22522398c7493b2768e8edcdacecdd690fbe974a34a0e20400"
+    },
+    {
+      "id": "player-southwest",
+      "direction": "southwest",
+      "image": "processed/frames/frame-05.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "artRect": [
+        55,
+        78,
+        83,
+        187
+      ],
+      "sha256": "e96c6f030886d25b2827c44c3b023e09aaca6ac50e377ed46acfb4d666a5f8a8"
+    },
+    {
+      "id": "player-west",
+      "direction": "west",
+      "image": "processed/frames/frame-06.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "artRect": [
+        31,
+        74,
+        130,
+        237
+      ],
+      "sha256": "e0879436eabcdea94127e6ceba399753400f6ec43b8750dfcf659294e90441a3"
+    },
+    {
+      "id": "player-northwest",
+      "direction": "northwest",
+      "image": "processed/frames/frame-07.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "artRect": [
+        31,
+        78,
+        131,
+        232
+      ],
+      "sha256": "1c01305df0e4cb1e00c73bf8f58342880794210542aa548d2b970dd38c6e2f02"
+    }
+  ],
+  "resultSHA256": "895716d81799d02352b864012076923349ee6e3d095c8a897085163f0ed819ed",
+  "guideSHA256": "cc60e55ebb3449c3d8cfff98c6b3ed978162a0e95ed377f187dafb7e7912cccf",
+  "sourceSHA256": "99e059df213a430af84ce0803296d9e70a7ea307cc2f8650da950f11092b452b"
+}

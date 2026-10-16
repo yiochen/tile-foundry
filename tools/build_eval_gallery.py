@@ -82,7 +82,7 @@ def build_gallery(runs_root, suite_path, public, reports_root, include_archived=
                 status = 'ungraded'
             status = status or 'not-run'
             item = {'id':f'{run_id}:{relative}', 'runId':run_id, 'attempt':order+1,
-                    'assessmentLabel':'Original grading',
+                    'assessmentLabel':('Processing comparison (same source)' if record.get('mode')=='processing-only-comparison' else 'Original grading'),
                     'status':status, 'prompt':case['prompt'], 'sources':[], 'sprites':[],
                     'depthPieces':[], 'previews':[], 'automaticChecks':[], 'visualChecks':[]}
             if submission:

@@ -1,0 +1,13 @@
+{
+  "request.txt": "bb61f73d30b634c070ba58922aed57cd3a93bea105ac7fb83ac0251c8e69a116",
+  "source-01.png": "710953b449c7969bab66aca0fb0fb1a5eb731c95e6ee69021a7f56bde9c559ff",
+  "generation-01.json": "46144266f6eb9ab1d306a8cc6328e23c64c6d900adbe2ae28bbc6b54805033ff",
+  "tool-input-01.json": "dc5bdcae18e8b07fb730e176ee9335d5319774c6f3b98b8b487933121a553b83",
+  "prompt-01.txt": "c6ab0a56081ba1acd79e119eeb511cb4e435924744d8447852ce5792fc98c786",
+  "registration.json": "90450c2591db65c7b7cda4b5b695a4a4c0ee314a8acba55ae2d5d9d3c279d7a4",
+  "guide.svg": "65d030d8b2cbe0a4e7e7246a56e1ce08d16f9acfe3bc41e5046868bbdf00083f",
+  "guide.json": "b3de3776075edaec4b912ff1064b06937927ae43b11be89102ec5a5bd8fd72e9",
+  "guide.png": "943701bec2b1670a4a16a8a77d1f7f19e25505f6487f61dce3df74aea5418964",
+  "guide-4x.png": "8b00a257280a6d2deab38ea0d6d873a24ad4e29e7a44e2d2a52d7875e72b8d4a",
+  "references/guide.png": "943701bec2b1670a4a16a8a77d1f7f19e25505f6487f61dce3df74aea5418964"
+}

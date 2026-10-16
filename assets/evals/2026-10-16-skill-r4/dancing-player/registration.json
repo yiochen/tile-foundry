@@ -1,0 +1,127 @@
+{
+  "kind": "animation",
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "elevationPx": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "nominalStandingHeight": 160,
+  "sprites": [
+    {
+      "id": "dance-01",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    },
+    {
+      "id": "dance-02",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    },
+    {
+      "id": "dance-03",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    },
+    {
+      "id": "dance-04",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    },
+    {
+      "id": "dance-05",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    },
+    {
+      "id": "dance-06",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    },
+    {
+      "id": "dance-07",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    },
+    {
+      "id": "dance-08",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    },
+    {
+      "id": "dance-09",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    },
+    {
+      "id": "dance-10",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    },
+    {
+      "id": "dance-11",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    },
+    {
+      "id": "dance-12",
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      }
+    }
+  ]
+}

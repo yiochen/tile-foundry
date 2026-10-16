@@ -1,0 +1,384 @@
+{
+  "python": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+  "generationCalls": 1,
+  "correctiveGenerationCalls": 0,
+  "generationTool": "image_gen.imagegen",
+  "source": {
+    "image": "source-01.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "originalMode": "RGB",
+    "alphaExtrema": [
+      255,
+      255
+    ],
+    "sha256": "90072466d7219e04f7e254c1842f5126b11468ac15ee1532d3b22d7161f60626",
+    "preservedUnchanged": true
+  },
+  "processorCopiesSHA256": {
+    "processor-source/material_animation.py": "b60cb45d1bf9c08d28b31839bb91996aa1cb15a4ebaa811c64b31e96fa711ea8",
+    "processor-source/svg_tools.py": "f6fec2f5c2a312639c9bb84d31a30d8a7032cfce436076d56d9ee0bf5e7f4af1",
+    "processor-source/tile_tools.py": "52700154f78dccf313b292913cf0f979eda32816ec5febefea690561c8f9c30e",
+    "processor-source/assemble_result.py": "a32dfa1cb47afdc618554072fe3d16bcb7a9a2c37c482069260aa65a87e9d46a"
+  },
+  "operations": [
+    {
+      "command": "python scripts/material_animation.py guide OUTPUT_DIR/guide",
+      "exitCode": 0,
+      "outcome": "Opaque 1024x1024 guide; 12 sample squares; transparent_background:false."
+    },
+    {
+      "command": "python scripts/svg_tools.py template OUTPUT_DIR/template --height 32 --palette lava --plain",
+      "exitCode": 0,
+      "outcome": "192x320 authored full frame; 128x128 ground base; 32px front face; near-edge anchor [96,312]."
+    },
+    {
+      "command": "python scripts/material_animation.py compose OUTPUT_DIR/template OUTPUT_DIR/source-01.png OUTPUT_DIR/guide.json OUTPUT_DIR/processed --strength .7",
+      "exitCode": 0,
+      "outcome": "12 full RGBA frames, 12 fps, center anchor [96,248], uniform source scale 1.224609375."
+    },
+    {
+      "command": "python scripts/assemble_result.py --input-result OUTPUT_DIR/processed/result.json --registration OUTPUT_DIR/registration.json --output OUTPUT_DIR/result.json",
+      "exitCode": 0,
+      "outcome": "v2 result, 12 sprites."
+    }
+  ],
+  "frames": [
+    {
+      "id": "lava-00",
+      "image": "processed/frames/frame-00.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "efbf56e031bc1f16218c8a060908360771c57d6bf8dfcb3504f5b9b5284a72c3"
+    },
+    {
+      "id": "lava-01",
+      "image": "processed/frames/frame-01.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "5d7077aaf7bd8a2312430f062605ed8f1b89b8b46d4a27bda1e690beb88ccb14"
+    },
+    {
+      "id": "lava-02",
+      "image": "processed/frames/frame-02.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "a746d363cff898b967bfb9cdcbe5af406fde2a06b619821776f1201db450a08d"
+    },
+    {
+      "id": "lava-03",
+      "image": "processed/frames/frame-03.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "2b6a4ec081f7a682dabf3d1421add64a9c2a1c7a7d25df9de20c58b3f8022b42"
+    },
+    {
+      "id": "lava-04",
+      "image": "processed/frames/frame-04.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "e4acd91b879fe07d5f2c112a04bb7b8e3a1aacc4778b64af3cb3cd85e0448787"
+    },
+    {
+      "id": "lava-05",
+      "image": "processed/frames/frame-05.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "f9c038594dcdc411f89548c0a55091edbe94f541b2bee1b30cdb18aa5825874f"
+    },
+    {
+      "id": "lava-06",
+      "image": "processed/frames/frame-06.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "ad47c85a7c177d2631ba044aa39a7d0a9043b3889c8ce06267a8147ead0cfcd5"
+    },
+    {
+      "id": "lava-07",
+      "image": "processed/frames/frame-07.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "a9714374dc3f109f655830ade85bb1bb71d4b2bb499e6abbec8f36c5252691be"
+    },
+    {
+      "id": "lava-08",
+      "image": "processed/frames/frame-08.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "9d7a49cad2aa7bdef9b1bee7c25bf22cd4ca9331b01e83aea2625b7ec464b337"
+    },
+    {
+      "id": "lava-09",
+      "image": "processed/frames/frame-09.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "7e570d7ece431b22247d1dc443dffb1f52f82754fbcd882796f9b388249d6f80"
+    },
+    {
+      "id": "lava-10",
+      "image": "processed/frames/frame-10.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "9d90e0fa61d34cf48e9773cfc2883c6f87ae21ea99d5ce58c711e323ded59f5b"
+    },
+    {
+      "id": "lava-11",
+      "image": "processed/frames/frame-11.png",
+      "size": [
+        192,
+        320
+      ],
+      "groundAnchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "elevationPx": 32,
+      "durationMs": 83.33333333333333,
+      "artBoundsLTRB": [
+        32,
+        152,
+        160,
+        312
+      ],
+      "templateAlphaUnchanged": true,
+      "sha256": "691e6ed3ef7bdf03bff102f8bf7fa124e0f9ff9454f87388072e947abfea30df"
+    }
+  ],
+  "previewBrowserCheck": {
+    "desktopScreenshot": "previews/browser-desktop.jpg",
+    "desktopViewport": [
+      2560,
+      1199
+    ],
+    "mobileScreenshot": "previews/browser-mobile.jpg",
+    "mobileViewport": [
+      390,
+      844
+    ],
+    "mobileBodyScrollWidth": 390,
+    "observedAdvancingFrameLabels": [
+      3,
+      6,
+      7,
+      8
+    ],
+    "pauseAndNextFrameControlsObserved": true,
+    "previewRepair": "Clamped a requestAnimationFrame timestamp that can precede image-decode start time to zero; no source or sprite changes."
+  },
+  "independentVisualReview": "To be arranged by parent; no executor grade recorded."
+}

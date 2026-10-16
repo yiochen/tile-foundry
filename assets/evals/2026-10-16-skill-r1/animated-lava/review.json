@@ -1,0 +1,193 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/independent_review_r1",
+  "independent": true,
+  "spriteSHA256": {
+    "lava-00": "efbf56e031bc1f16218c8a060908360771c57d6bf8dfcb3504f5b9b5284a72c3",
+    "lava-01": "5d7077aaf7bd8a2312430f062605ed8f1b89b8b46d4a27bda1e690beb88ccb14",
+    "lava-02": "a746d363cff898b967bfb9cdcbe5af406fde2a06b619821776f1201db450a08d",
+    "lava-03": "2b6a4ec081f7a682dabf3d1421add64a9c2a1c7a7d25df9de20c58b3f8022b42",
+    "lava-04": "e4acd91b879fe07d5f2c112a04bb7b8e3a1aacc4778b64af3cb3cd85e0448787",
+    "lava-05": "f9c038594dcdc411f89548c0a55091edbe94f541b2bee1b30cdb18aa5825874f",
+    "lava-06": "ad47c85a7c177d2631ba044aa39a7d0a9043b3889c8ce06267a8147ead0cfcd5",
+    "lava-07": "a9714374dc3f109f655830ade85bb1bb71d4b2bb499e6abbec8f36c5252691be",
+    "lava-08": "9d7a49cad2aa7bdef9b1bee7c25bf22cd4ca9331b01e83aea2625b7ec464b337",
+    "lava-09": "7e570d7ece431b22247d1dc443dffb1f52f82754fbcd882796f9b388249d6f80",
+    "lava-10": "9d90e0fa61d34cf48e9773cfc2883c6f87ae21ea99d5ce58c711e323ded59f5b",
+    "lava-11": "691e6ed3ef7bdf03bff102f8bf7fa124e0f9ff9454f87388072e947abfea30df"
+  },
+  "sourceSHA256": {
+    "source-01.png": "90072466d7219e04f7e254c1842f5126b11468ac15ee1532d3b22d7161f60626"
+  },
+  "resultSHA256": "f14456585e60c245dff5e1504b8d77adfedce924b324032c2c4586536f8b49ff",
+  "guideSHA256": "21de85fd4c747ac6a20fd8dd1df493b32e1b20a6a5c2fa34745720bbe879a8cf",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "All twelve processed tiles show a screen-aligned square surface with a horizontal front wall below it. Parallel support edges remain aligned across phases; there is no visible perspective taper or change of camera orientation. The supplied geometry template supports the same top/front construction.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/references/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-dark-native.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Each processed phase has a complete rectangular top and front wall within its frame. Native and 2\u00d7 inspection plus light/dark placements show no missing face corners, accidental holes, clipped effects, or detached shadow artwork.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-08.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-09.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-dark-native.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "In the placement views the ground-root cross stays on the same central support axis beneath the elevated surface center. The full-cell top and its front wall align with the authored template and ground registration rather than shifting to follow lava landmarks. This is a qualitative placement judgment, not proof of pixel-exact geometry.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/references/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-dark-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/playback.html",
+        "http://127.0.0.1:8771/animated-lava/playback.html"
+      ]
+    },
+    "animated-height": {
+      "pass": true,
+      "note": "The same top rectangle, exposed front-wall depth, and support edges are retained in every one of the twelve phases while internal rock/fissure patterns change. The running browser preview and paused offset-phase views preserve those exterior landmarks; I see no shape or camera-scale breathing in the inspected phases.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-dark-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/playback.html",
+        "http://127.0.0.1:8771/animated-lava/playback.html"
+      ]
+    },
+    "spatial-seams": {
+      "pass": false,
+      "note": "All twelve native 3\u00d73 repeats show a pale upper-edge lighting band resetting at each row boundary, plus abrupt vertical breaks where fissures and rock islands meet an adjacent copy. The same grid remains obvious in native/2\u00d7 5\u00d75 phases 00, 05 and 11 and in the browser with offset neighbor phases enabled at 2\u00d7 on dark. These are hard joins and brightness discontinuities, beyond merely recognizable repeated motifs.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-4.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-6.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-8.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-9.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/neighbors-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-00-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-05-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-11-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-00-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-05-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-5x5-phase-11-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/playback.html",
+        "http://127.0.0.1:8771/animated-lava/playback.html"
+      ]
+    },
+    "temporal-loop": {
+      "pass": null,
+      "note": "The browser preview successfully loaded and advanced the displayed phase counter at its stated 12 fps. I inspected changing running states and paused phase 11 followed by phase 0, including offset neighbors at 2\u00d7. However, the available visual observations are still captures, so I cannot confidently judge continuous motion readability or whether the last-to-first change produces an unwanted perceptual pop. Static frame differences alone do not establish that motion criterion.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/playback.html",
+        "http://127.0.0.1:8771/animated-lava/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png"
+      ]
+    },
+    "frame-consistency": {
+      "pass": true,
+      "note": "All twelve surfaces retain the same orange/yellow molten palette, fractured-rock identity, upper-edge lighting treatment, and complete rectangular alpha silhouette. The individual islands change with phase, but none of the frames introduces a foreign material, missing face, or broken alpha region.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-08.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-09.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/processed/frames/frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-placements-dark-native.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The per-phase rock clusters and bright branching fissures in the source are recognizable on the corresponding processed top faces, with a consistent warmer/lighter treatment. The source is explicitly supplied as appearance material, and the separate authored template accounts for the fixed raised top/front-wall geometry. I see material mapping onto that declared geometry, not a replacement scene or an undisclosed fitted object silhouette.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/references/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/animated-lava/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-0-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-1-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/animated-lava/reviewer-frames-row-2-2x.png"
+      ]
+    }
+  }
+}

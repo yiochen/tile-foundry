@@ -1,0 +1,1 @@
+Error: Art crosses a sheet gutter; regenerate isolated panels instead of clipping

@@ -1,0 +1,11 @@
+{
+  "script": "author-guide.py",
+  "rasterizer": "frozen skill scripts/svg_tools.py:rasterize (CairoSVG)",
+  "generationReference": "references/guide.png",
+  "sourceGuideSHA256": "09945c54d536e118660d24651a2751e6fa32a76c121ce4a01f303b3cf2a823a0",
+  "guideSHA256": "eab7c39b6e3cb66ee8be53ae71df6496db5bb79548cb69efcc6e4b4a13a1cd4a",
+  "rasterSHA256": "cf12b9d91375a748cb6b3784c8c09ac17bfc92d41e2324c2cdcee90138815738",
+  "declaredConstraintsAreNotMeasurements": true,
+  "projectionReferenceInspected": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/skill-snapshot/assets/perspective-reference.jpg",
+  "projectionReferenceSuppliedToImageTool": false
+}

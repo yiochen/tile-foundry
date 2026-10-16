@@ -1,0 +1,36 @@
+{
+  "frame": [
+    192,
+    320
+  ],
+  "alphaBounds": [
+    61,
+    14,
+    132,
+    271
+  ],
+  "artRect": [
+    61,
+    14,
+    71,
+    257
+  ],
+  "projectedGroundAnchor": [
+    96,
+    248
+  ],
+  "nominalCrownY": 88,
+  "observedAlphaTopY": 14,
+  "observedTopToGroundAnchorPx": 234,
+  "nominalTopToGroundAnchorPx": 160,
+  "observedTopToGroundAnchorDeltaPx": 74,
+  "alphaNonzeroPixels": 7761,
+  "calibrationFloorSourceRect": [
+    161,
+    928,
+    810,
+    1578
+  ],
+  "calibrationFloorAspect": 0.9984615384615385,
+  "observation": "Alpha top is a geometric diagnostic, not a physical height inference. The generated crown visibly exceeds the guide height. The generated stone foot appears diamond-oriented rather than screen-aligned."
+}

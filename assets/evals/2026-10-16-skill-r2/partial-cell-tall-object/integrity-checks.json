@@ -1,0 +1,16 @@
+{
+  "checked": [
+    "source SHA-256 matches generation recipe",
+    "reference SHA-256 matches generation recipe",
+    "actual sprite PNG is RGBA 192x320",
+    "stored ground anchor is (96,248)",
+    "sprite contains visible alpha",
+    "one generation record only"
+  ],
+  "spriteSHA256": {
+    "lantern": "34d32aec82839c894abdd4cb5e66dd5c125cf43b0b7888f0752f3b86a70fe0e5"
+  },
+  "resultSHA256": "2d840637609de0a16b66f1c09aa4edba17c1f73c7ebd579fc1b80ce2fe0f2b7f",
+  "submissionSHA256": "77e891da0a1310702cfb0193f2160a3f6b59e480e0dc691c13260bb3e5e0c4a2",
+  "independentVisualReview": "not performed by executor"
+}

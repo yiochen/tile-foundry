@@ -1,0 +1,773 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "authored-flowing-lava",
+  "request": "Generate a looping raised lava tile with a visibly moving surface. Use a full 128x128 ground base, 32px visible front-wall height, twelve frames at exactly 12 fps, and the same fixed top-down oblique projection. Deliver transparent 192x320px frames with local projected ground anchor (96,248) and a 4-column by 3-row runtime spritesheet. Preserve connected neighboring surfaces, including offset-phase neighbors. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "animated-height": "Visible elevation and support stay fixed while the surface moves; no camera/scale breathing.",
+    "spatial-seams": "Inspect 3x3 animated neighbors through all phases, including offset-phase neighbors; no cracks, gradient jumps, or visible grid seams.",
+    "temporal-loop": "Motion is readable and the last-to-first transition has no unwanted pop.",
+    "frame-consistency": "All 12 poses/surfaces are usable, with common identity/palette/light and complete alpha.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting.",
+    "motion-provenance": "Motion and appearance provenance are explicit: distinguish model-drawn phases from authored texture animation. Source art is retained unchanged and processing is reproducible."
+  },
+  "registration": {
+    "kind": "animation",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "heightAxis": [
+      0,
+      -1
+    ],
+    "elevationScale": 1,
+    "groundAnchorAlignment": "center",
+    "fps": 12,
+    "sprites": [
+      {
+        "id": "sprite-00",
+        "image": "processed/frames/frame-00.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 0,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-01",
+        "image": "processed/frames/frame-01.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 1,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-02",
+        "image": "processed/frames/frame-02.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 2,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-03",
+        "image": "processed/frames/frame-03.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 3,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-04",
+        "image": "processed/frames/frame-04.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 4,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-05",
+        "image": "processed/frames/frame-05.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 5,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-06",
+        "image": "processed/frames/frame-06.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 6,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-07",
+        "image": "processed/frames/frame-07.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 7,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-08",
+        "image": "processed/frames/frame-08.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 8,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-09",
+        "image": "processed/frames/frame-09.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 9,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-10",
+        "image": "processed/frames/frame-10.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 10,
+        "durationMs": 83.33333333333333
+      },
+      {
+        "id": "sprite-11",
+        "image": "processed/frames/frame-11.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 11,
+        "durationMs": 83.33333333333333
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "sprite-00",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 0,
+        "appliedXPixels": 0,
+        "appliedYPixels": 0
+      }
+    },
+    {
+      "sprite": "sprite-01",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 1,
+        "appliedXPixels": 104,
+        "appliedYPixels": 0
+      }
+    },
+    {
+      "sprite": "sprite-02",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 2,
+        "appliedXPixels": 209,
+        "appliedYPixels": 0
+      }
+    },
+    {
+      "sprite": "sprite-03",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 3,
+        "appliedXPixels": 314,
+        "appliedYPixels": 0
+      }
+    },
+    {
+      "sprite": "sprite-04",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 4,
+        "appliedXPixels": 418,
+        "appliedYPixels": 0
+      }
+    },
+    {
+      "sprite": "sprite-05",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 5,
+        "appliedXPixels": 522,
+        "appliedYPixels": 0
+      }
+    },
+    {
+      "sprite": "sprite-06",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 6,
+        "appliedXPixels": 627,
+        "appliedYPixels": 0
+      }
+    },
+    {
+      "sprite": "sprite-07",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 7,
+        "appliedXPixels": 732,
+        "appliedYPixels": 0
+      }
+    },
+    {
+      "sprite": "sprite-08",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 8,
+        "appliedXPixels": 836,
+        "appliedYPixels": 0
+      }
+    },
+    {
+      "sprite": "sprite-09",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 9,
+        "appliedXPixels": 940,
+        "appliedYPixels": 0
+      }
+    },
+    {
+      "sprite": "sprite-10",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 10,
+        "appliedXPixels": 1045,
+        "appliedYPixels": 0
+      }
+    },
+    {
+      "sprite": "sprite-11",
+      "registrationMethod": "authored-svg-faces",
+      "transform": {
+        "sourceRect": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "uvShift": {
+        "phase": 11,
+        "appliedXPixels": 1150,
+        "appliedYPixels": 0
+      }
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "appearance-material",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/source-01.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-00",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-00.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-01",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-01.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-02",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-02.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-03",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-03.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-04",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-04.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-05",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-05.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-06",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-06.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-07",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-07.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-08",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-08.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-09",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-09.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-10",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-10.png"
+    },
+    {
+      "role": "processed",
+      "id": "sprite-11",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/processed/frames/frame-11.png"
+    },
+    {
+      "role": "authored-geometry",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/authored-flowing-lava/template/template.png"
+    },
+    {
+      "role": "motion-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/playback.html"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-0-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-0.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-1-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-1-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-1.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-2-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-2-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-2.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-3-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-3-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-3.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-4-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-4-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-4.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-5-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-5-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-5.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-6-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-6-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-6.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-7-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-7-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-7.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-8-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-8-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-8.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-9-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-9-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-9.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-10-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-10-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-10.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-11-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/placement-11-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/review-packets/authored-flowing-lava/neighbors-11.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/skills/build-overlap-tiles/references/visual-review.md",
+  "animationOperations": {
+    "authorship": "authored-periodic-texture-translation",
+    "source": "one generated appearance material",
+    "parameters": {
+      "translationPerCycleNormalized": 1,
+      "periodFrames": 12,
+      "stationaryEdgeBlendPx": 16,
+      "strength": 0.7,
+      "boundaryReferencePhase": 0,
+      "durationMs": 83.33333333333333
+    },
+    "translationAxis": "x",
+    "processor": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-flow/skill-snapshot/scripts/material_flow.py",
+    "processorSHA256": "bf62204314e28571b394f531f5184bcb44b685e069e00d6379eb6db0358b46f5"
+  }
+}

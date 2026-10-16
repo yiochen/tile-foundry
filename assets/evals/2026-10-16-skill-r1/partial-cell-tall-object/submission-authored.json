@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "requestFile": "request.txt",
+  "request": "Generate a tall lantern post on a 128x128 calibration tile. Its centered base is 48x48px and its nominal height is 160px. Remove the calibration tile from the final sprite, preserving its ground position and size. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object.\n",
+  "skill": "frozen skill snapshot supplied by parent",
+  "generationAttempts": 1,
+  "generationTool": "image_gen.imagegen",
+  "generationRecords": [
+    "generation-01.json"
+  ],
+  "toolInputs": [
+    "tool-input-01.json"
+  ],
+  "sources": [
+    "source-01.png"
+  ],
+  "references": [
+    {
+      "image": "references/guide-4x.png",
+      "role": "submitted edit target; authored geometry guide",
+      "sha256": "c90242a816d6714c84b59acc563b90c4afe023777d982d09e0b81139b4425d63"
+    },
+    {
+      "image": "references/projection-reference.jpg",
+      "role": "inspected projection interpretation only; not submitted to generation",
+      "sha256": "9784bc8c25ce01fb25044f9d866e8487f4e520be4c89588f36046df0ed19e29c"
+    }
+  ],
+  "guide": {
+    "svg": "guide.svg",
+    "raster": "guide.png",
+    "raster4x": "guide-4x.png",
+    "layout": "guide.json"
+  },
+  "registration": "registration.json",
+  "result": "result.json",
+  "processorEvidence": "processor-evidence.json",
+  "measurements": "measurements.json",
+  "previews": [
+    "previews/light-dark.png",
+    "previews/placement.png",
+    "previews/guide-comparison.png"
+  ],
+  "status": "delivered-with-documented-geometry-deviation",
+  "diagnostic": "One generated source processed successfully into the requested fixed frame and anchor. The observed crown is 234px above the anchor rather than nominal 160px; the foot appears diamond-oriented. No corrective generation, clipping, axis fitting, or anchor fitting was performed.",
+  "review": "Independent review arranged by parent; no self-grade."
+}

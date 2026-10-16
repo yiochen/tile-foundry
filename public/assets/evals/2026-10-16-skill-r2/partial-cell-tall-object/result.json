@@ -1,0 +1,207 @@
+{
+  "kind": "object",
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "version": 2,
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "sprites": [
+    {
+      "id": "lantern",
+      "index": 0,
+      "image": "processed/frames/frame-00.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        41,
+        125,
+        220
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-00",
+        "image": "frames/frame-00.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            161,
+            929,
+            810,
+            1577
+          ],
+          "anchor": [
+            485.5,
+            1253.0
+          ],
+          "aspect": 1.001543209876543,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            971,
+            1619
+          ],
+          "sourceRect": [
+            161,
+            208,
+            810,
+            1577
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            485.5,
+            1253.0
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            -0.09934258582907773
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            42,
+            128,
+            270
+          ],
+          "scale": [
+            0.19722650231124808,
+            0.19722425127830534
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            123,
+            209,
+            75
+          ],
+          "keyHueDegrees": 98.51,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.12,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            181,
+            163,
+            315
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 14319,
+          "clearedPixels": 14301,
+          "removedAlphaMass": 3586638,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 0,
+        "sourceRect": [
+          0,
+          0,
+          971,
+          1619
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 10144,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "strict-guide-panels"
+      },
+      "baseSize": [
+        48,
+        48
+      ],
+      "supportCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "supportPolygon": [
+        [
+          -24,
+          -24
+        ],
+        [
+          24,
+          -24
+        ],
+        [
+          24,
+          24
+        ],
+        [
+          -24,
+          24
+        ]
+      ],
+      "registration": {
+        "method": "measured-calibration-floor",
+        "guide": "guide.json"
+      }
+    }
+  ],
+  "geometryDeclaration": "Footprints/elevation/roles are authored constraints; visual verification required"
+}

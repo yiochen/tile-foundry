@@ -1,0 +1,77 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {
+    "sprite-00": "73453f071e47f93fb0b6f61eb312ad264bf4b29842f6ef3574880b04c416a6b8",
+    "sprite-01": "ba52ac98354023e1c0c990b496ca11ff4db19b7636387f4b483264618b5b3575",
+    "sprite-02": "fc588d87552350beca55f843a0d22aa4158a7f9b53ffc2f5918e4ebb72e753f1",
+    "sprite-03": "6743b48f1ca947174f15a0edeaf158434327e41726f689cc3ff6e9630ea51d9f",
+    "sprite-04": "a423100278d131bf0978658310799e5757032a92c868657827e012099b88baa1",
+    "sprite-05": "ca000f4187a671ffe2581ac0fc0f5de9e08cf019077202544871e91d8429dc84",
+    "sprite-06": "0072842d00d1991bfa4a81522e79f92635975da759ddb65fcfb12d3d46468800",
+    "sprite-07": "2247b74cac2149e70e23c5cfbb26873bb452d3ecd79af8806ba930cce996c1ee",
+    "sprite-08": "ade2577b598d37639525c06b2c79321123e3782670c97ecb6516e241ea64012a",
+    "sprite-09": "3dff3c64f124667ebe27c20459afb030b55a0e93f20dd378a061538afc31c847",
+    "sprite-10": "7cca315305ae07c981c9fcac77457633134017695e409c9d42a9241978d6f375",
+    "sprite-11": "2a2d487c6294ec9ea5bffa4ca7daa6414edb6af9627042d8ae6e54f15e38d197"
+  },
+  "sourceSHA256": {
+    "source-01.png": "037453587a48439e695e3feea51691fad187fae87a8419f32ae2bcd6a7d3e068"
+  },
+  "resultSHA256": "04ca38fa08766f4b1f4962890a6599e36a0555328e0afbc69973a7c4379cb11b",
+  "guideSHA256": "58cc72a012c8e7bfd272c56c819b8493d3abe54f008e57183b687dd5792404a5",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "same-player": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "dancing-poses": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "design-height": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "contact-stability": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "cutout-quality": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "loop": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

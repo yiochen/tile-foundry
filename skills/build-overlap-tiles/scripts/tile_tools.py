@@ -257,7 +257,7 @@ def subtract_authored_floor(image, floor):
 
 
 def remove_floor_chroma(image, observation, key_rgb, hue_tolerance=28, hue_feather=8,
-                        min_saturation=.12, saturation_feather=.10, remove_corner_remnants=False):
+                        min_saturation=.50, saturation_feather=.10, remove_corner_remnants=False):
     """Explicit, approximate chroma key inside an already measured floor rectangle.
 
     The caller supplies the reserved key color; no background color is inferred.
@@ -275,6 +275,8 @@ def remove_floor_chroma(image, observation, key_rgb, hue_tolerance=28, hue_feath
         raise ValueError('Hue tolerance/feather must be positive degrees')
     if not 0 < saturation_feather <= min_saturation <= 1:
         raise ValueError('Require 0 < saturation feather <= minimum saturation <= 1')
+    if ks < min_saturation:
+        raise ValueError('Use a strongly saturated calibration key or explicitly configure its saturation matte')
     rect=observation['rect']
     left,top,right,bottom=rect
     if not (0 <= left < right <= image.width and 0 <= top < bottom <= image.height):
@@ -341,11 +343,14 @@ def prepare_floor_material(image, cell_size=128):
         'method':'Whole square material, uniform resampling; no crop or guessed-color removal'}
 
 
-def process_floor_object(image,key_rgb,frame=(192,320),anchor=(96,248),cell_size=128,min_alpha=32):
+def process_floor_object(image,key_rgb,frame=(192,320),anchor=(96,248),cell_size=128,min_alpha=32,
+                         registration='square-floor'):
     """Calibrate the intact floor, then key it without fitting the character's feet."""
     cleaned,cleanup=clean_alpha(image,min_alpha)
     floor=floor_anchor(cleaned)
-    if not .95<=floor['aspect']<=1.05:
+    if registration not in ('square-floor','floor-width'):
+        raise ValueError('Unknown floor registration basis')
+    if registration=='square-floor' and not .95<=floor['aspect']<=1.05:
         raise ValueError('Calibration floor is not square enough; regenerate instead of warping')
     scale=cell_size/(floor['rect'][2]-floor['rect'][0])
     intact,normalization=normalize(cleaned,frame=frame,anchor_out=anchor,
@@ -354,10 +359,13 @@ def process_floor_object(image,key_rgb,frame=(192,320),anchor=(96,248),cell_size
     cutout,chroma=remove_floor_chroma(intact,registered,key_rgb)
     return cutout,{'size':list(frame),'anchor':list(anchor),'footprint':[cell_size,cell_size],
         'floor':floor,'cleanup':cleanup,'normalization':normalization,'chroma':chroma,
+        'registrationBasis':registration,
+        'floorShapeAssumption':('Square aspect verified before width calibration' if registration=='square-floor' else
+            'Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.'),
         'anchorMode':'Measured calibration-floor center, independent of feet or cutout bounds'}
 
 
-def process_object_sheet(image,guide,min_alpha=32,allow_gutter_drift=False):
+def process_object_sheet(image,guide,min_alpha=32,allow_gutter_drift=False,registration='square-floor'):
     """Split only known isolated guide panels; reject opaque art in their gutters."""
     if guide.get('kind')!='object-sheet' or guide.get('version')!=1:
         raise ValueError('Expected version 1 object-sheet guide JSON')
@@ -402,7 +410,7 @@ def process_object_sheet(image,guide,min_alpha=32,allow_gutter_drift=False):
     frames=[]
     for i,rect in enumerate(rectangles):
         cutout,info=process_floor_object(cleaned.crop(rect),guide['keyRGB'],
-            tuple(guide['frame']),tuple(guide['anchor']),guide['cellSize'],min_alpha)
+            tuple(guide['frame']),tuple(guide['anchor']),guide['cellSize'],min_alpha,registration)
         info.update({'index':i,'sourceRect':list(rect),'sheetCleanup':cleanup,
             'panelIsolation':'transparent-separators' if allow_gutter_drift else 'strict-guide-panels'})
         frames.append((cutout,info))
@@ -649,7 +657,7 @@ def main():
     chroma.add_argument("--key-rgb",type=int,nargs=3,required=True)
     chroma.add_argument("--hue-tolerance",type=float,default=28)
     chroma.add_argument("--hue-feather",type=float,default=8)
-    chroma.add_argument("--min-saturation",type=float,default=.12)
+    chroma.add_argument("--min-saturation",type=float,default=.50)
     chroma.add_argument("--saturation-feather",type=float,default=.10)
     chroma.add_argument("--remove-corner-remnants",action="store_true")
     chroma.add_argument("--min-alpha",type=int,default=64)
@@ -662,6 +670,8 @@ def main():
     sheet.add_argument('--min-alpha',type=int,default=32)
     sheet.add_argument('--fps',type=float,default=12)
     sheet.add_argument('--allow-gutter-drift',action='store_true',help='Recover only across wholly transparent separators; preserves all cleaned source alpha')
+    sheet.add_argument('--registration',choices=('square-floor','floor-width'),default='square-floor',
+        help='Choose calibration basis: verify square first, or measure width/center without certifying floor shape')
     args = parser.parse_args()
     try:
         if args.command == "floor-anchor":
@@ -674,7 +684,7 @@ def main():
         elif args.command == 'process-on-floor':
             if args.fps<=0:raise ValueError('FPS must be positive')
             guide=json.loads(args.guide.read_text())
-            frames=process_object_sheet(load_rgba(args.input),guide,args.min_alpha,args.allow_gutter_drift)
+            frames=process_object_sheet(load_rgba(args.input),guide,args.min_alpha,args.allow_gutter_drift,args.registration)
             directory=args.output;directory.mkdir(parents=True,exist_ok=True)
             (directory/'frames').mkdir(exist_ok=True)
             columns=guide['columns'];rows=guide['rows'];fw,fh=guide['frame']

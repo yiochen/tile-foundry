@@ -1,0 +1,5 @@
+{
+  "kind": "animation",
+  "sprites": 12,
+  "output": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/result.json"
+}

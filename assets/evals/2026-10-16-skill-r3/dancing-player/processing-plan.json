@@ -1,0 +1,67 @@
+{
+  "chosenBeforeGeneration": true,
+  "generationCallsPlanned": 1,
+  "sourceContract": "transparent isolated whole-asset panels retaining opaque reserved-color calibration floors",
+  "referenceRoles": {
+    "references/guide.png": "layout edit target: 12 sparse poses with intact calibration squares"
+  },
+  "projection": {
+    "profile": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "heightAxis": [
+      0,
+      -1
+    ],
+    "elevationScale": 1
+  },
+  "frame": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "floorRect": [
+    32,
+    184,
+    160,
+    312
+  ],
+  "footprint": [
+    128,
+    128
+  ],
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "nominalStandingHeightPx": 160,
+  "processing": {
+    "processor": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/skill-snapshot/scripts/tile_tools.py",
+    "command": "process-on-floor source-01.png guide.json processed --min-alpha 32 --fps 12 --registration floor-width",
+    "minAlpha": 32,
+    "registration": "floor-width",
+    "keyRGB": [
+      123,
+      209,
+      75
+    ],
+    "keyRegion": "measured calibration floor only",
+    "uniformScaling": true,
+    "perFrameSilhouetteFit": false,
+    "clipArt": false,
+    "gutterRecovery": "Only after inspection establishes independent complete panels and fully transparent separators; record strict failure and recovered source cuts. No additional image calls."
+  },
+  "schedule": {
+    "frames": 12,
+    "columns": 4,
+    "rows": 3,
+    "order": "row-major",
+    "fps": 12,
+    "durationMs": 83.33333333333333
+  },
+  "failurePolicy": "Preserve unchanged source, exact tool inputs, logs and hashes; emit canonical result.json and submission.json even if deterministic extraction is unsupported. Never adjust anchors to conceal failure."
+}

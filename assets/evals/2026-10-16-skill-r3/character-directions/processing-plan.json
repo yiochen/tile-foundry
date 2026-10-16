@@ -1,0 +1,71 @@
+{
+  "status": "planned-before-generation",
+  "generationCalls": 1,
+  "correctionCalls": 0,
+  "sourceContract": "transparent isolated whole-asset panels; opaque reserved green calibration squares retained in source",
+  "sourceLayout": {
+    "columns": 4,
+    "rows": 2,
+    "frame": [
+      192,
+      320
+    ],
+    "gutter": 32,
+    "size": [
+      864,
+      672
+    ],
+    "order": [
+      "north",
+      "northeast",
+      "east",
+      "southeast",
+      "south",
+      "southwest",
+      "west",
+      "northwest"
+    ]
+  },
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "registrationBasis": "floor-width",
+  "normalization": "Measure intact floor width and center separately in each isolated panel. Uniformly scale 128/measuredWidth and translate floor center to (96,248); never scale from alpha bounds or fit foot positions. No axis stretching.",
+  "floorRemoval": {
+    "method": "bundled remove_floor_chroma after normalization",
+    "keyRGB": [
+      123,
+      209,
+      75
+    ],
+    "minAlpha": 32,
+    "hueToleranceDegrees": 28,
+    "hueFeatherDegrees": 8,
+    "saturationTransition": [
+      0.02,
+      0.12
+    ]
+  },
+  "panelExtraction": "Strict known guide panels first. If actual art only protrudes into planned gutters, inspect and allow bundled alpha-seam recovery only when whole transparent separator exists; retain original failure. Never clip touching art.",
+  "processingCommand": "python SKILL_DIR/scripts/tile_tools.py process-on-floor source-01.png guide.json processed --min-alpha 32 --registration floor-width",
+  "resultAssembly": "python SKILL_DIR/scripts/assemble_result.py --input-result processed/result.json --registration registration.json --output result.json",
+  "limitations": "AI geometry and nominal anatomy height are design targets, not certified geometry. Mixed chroma edges are approximate. Report any processing failure with sources intact.",
+  "references": {
+    "references/guide.png": {
+      "role": "layout edit target",
+      "sha256": "26fc0f909a25148e1c98d75e3d1fe4e3a7af950c72b448da04ab7093875f3222"
+    }
+  },
+  "inspectedNotSupplied": {
+    "provenance/projection-reference-inspected-not-supplied.jpg": {
+      "role": "projection interpretation only; not supplied to image generation",
+      "sha256": "9784bc8c25ce01fb25044f9d866e8487f4e520be4c89588f36046df0ed19e29c"
+    }
+  },
+  "guideSHA256": "cc60e55ebb3449c3d8cfff98c6b3ed978162a0e95ed377f187dafb7e7912cccf",
+  "registrationSHA256": "bb43a402df29feac8ffb3f08da6fec48eccc65b774d1f8ea9e8ff8d563a989b4"
+}

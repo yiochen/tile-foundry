@@ -1,0 +1,44 @@
+{
+  "authoredBeforeGeneration": true,
+  "caseId": "animated-waves",
+  "generationCallLimit": 1,
+  "route": "model-drawn phase atlas mapped onto authored full-cell raised faces",
+  "rationale": "The request explicitly asks for twelve source panels in a 4-column 3-row layout. The frozen material-animation workflow keeps their source contract opaque and flat while authored faces provide footprint, wall height and projection.",
+  "invariants": {
+    "frame": [
+      192,
+      320
+    ],
+    "groundCenterAnchor": [
+      96,
+      248
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "frontWallHeightPx": 32,
+    "count": 12,
+    "fps": 12,
+    "order": "row-major"
+  },
+  "guideSHA256": "21de85fd4c747ac6a20fd8dd1df493b32e1b20a6a5c2fa34745720bbe879a8cf",
+  "referenceSHA256": {
+    "references/material-atlas-guide.png": "63a325cd92f009c0c677d0e0079701fe3757d45f0a5a71cb42b42a1a6d1b83bf"
+  },
+  "referenceRoles": {
+    "references/material-atlas-guide.png": "layout edit target: twelve opaque square appearance-material samples"
+  },
+  "inspectedOnlyProvenance": {
+    "provenance/inspected-projection-reference.jpg": {
+      "role": "projection explanation; not sent to model",
+      "sha256": "9784bc8c25ce01fb25044f9d866e8487f4e520be4c89588f36046df0ed19e29c"
+    }
+  },
+  "templateGeometry": "template/geometry.json",
+  "plannedCommands": [
+    "python \"$SKILL_DIR/scripts/material_animation.py\" compose \"$OUTPUT_DIR/template\" \"$OUTPUT_DIR/source-01.png\" \"$OUTPUT_DIR/guide.json\" \"$OUTPUT_DIR/processed\" --strength .7",
+    "python \"$SKILL_DIR/scripts/assemble_result.py\" --input-result \"$OUTPUT_DIR/processed/result.json\" --registration \"$OUTPUT_DIR/registration.json\" --output \"$OUTPUT_DIR/result.json\""
+  ],
+  "failurePolicy": "Retain original and all evidence; no second image call, guide fitting, per-axis scale changes, clipping or post-generation anchor adjustment."
+}

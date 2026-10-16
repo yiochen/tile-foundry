@@ -41,6 +41,43 @@ layout; evals use them as a delivery contract.
 - `submission.json`: ties the request, source records and result together.
 - `previews/`: actual repeated placement, light/dark cutouts, layering and playback.
 
+For machine-readable delivery, use string paths in the canonical records below;
+keep any richer tool transcript alongside them. Only rasters actually sent to
+the model belong in `references`. An inspected projection reference that was
+not supplied is a separate provenance attachment.
+
+```json
+{
+  "prompt": "Exact text submitted to the image tool",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "sourceSHA256": "SHA-256 of source-01.png",
+  "references": ["references/guide.png"],
+  "referenceSHA256": {"references/guide.png": "SHA-256 of that input raster"},
+  "referenceRoles": {"references/guide.png": "layout edit target"}
+}
+```
+
+`submission.json` ties those files together. Keep the user's request verbatim
+without its file's final newline; this full request need not be the image prompt.
+
+```json
+{
+  "caseId": "caller-supplied-case-id",
+  "outputDirectory": "/absolute/requested/destination",
+  "userPrompt": "Exact user request",
+  "sources": [{"image": "source-01.png", "recipe": "generation-01.json"}],
+  "guide": "guide.json",
+  "guideSHA256": "SHA-256 of guide.json",
+  "result": "result.json"
+}
+```
+
+Use `role: "appearance-material"` on a source record for the preselected SVG
+material route; that source uses opaque generation. Ordinary assets need no
+case ID outside an eval integration. The eval protocol defines its case ID and
+destination; never infer or alter those from an output's appearance.
+
 Example result (one partial-base object):
 
 ```json
@@ -61,7 +98,10 @@ Example result (one partial-base object):
 
 For animation add `fps: 12`, and each sprite's `index` and
 `durationMs: 83.33333333333333` in row-major playback order. Directions add a
-`direction` per sprite, without animation timing. Distinct pose extents are valid;
+`direction` per sprite using compass codes `N`, `NE`, `E`, `SE`, `S`, `SW`, `W`,
+`NW` in requested order, without animation timing. Full direction names may be
+used in the image prompt; serialize these codes in the manifest.
+Distinct pose extents are valid;
 consistent anatomy scale must be reviewed independently. A GIF's time quantum
 cannot represent exact 12 fps; the PNG sheet/frame metadata is authoritative.
 Deliver a browser/APNG/WebP preview that can honor this schedule.
@@ -116,7 +156,9 @@ center anchor. Keep every referenced image inside the output asset bundle.
 
 Bundled `tile_tools.py` supports uniform normalization, explicit chroma removal,
 known isolated panels, atlas packing, coverage checks and generic validation.
-`process-on-floor` measures one visible square floor per panel. It does not
+`process-on-floor` measures one visible calibration floor per panel. Its
+`floor-width` basis uses width for uniform scale and center for the root;
+`square-floor` additionally requires near-square observed aspect. It does not
 infer disjoint support, remove an occluded stool, reconstruct hidden parts, or
 normalize arbitrary multi-cell floors. Author those registrations/masks/layers
 before generation, use an appropriate processor, or report an unsupported case.

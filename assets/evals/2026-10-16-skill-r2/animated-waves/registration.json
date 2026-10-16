@@ -1,0 +1,55 @@
+{
+  "kind": "animation",
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "elevationPx": 32,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "order": "row-major",
+  "sprites": [
+    {
+      "id": "wave-00"
+    },
+    {
+      "id": "wave-01"
+    },
+    {
+      "id": "wave-02"
+    },
+    {
+      "id": "wave-03"
+    },
+    {
+      "id": "wave-04"
+    },
+    {
+      "id": "wave-05"
+    },
+    {
+      "id": "wave-06"
+    },
+    {
+      "id": "wave-07"
+    },
+    {
+      "id": "wave-08"
+    },
+    {
+      "id": "wave-09"
+    },
+    {
+      "id": "wave-10"
+    },
+    {
+      "id": "wave-11"
+    }
+  ]
+}

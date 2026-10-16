@@ -1,0 +1,91 @@
+{
+  "python": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+  "commands": [
+    {
+      "tool": "frozen scripts/material_animation.py",
+      "args": [
+        "guide",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-waves/guide"
+      ],
+      "exitCode": 0
+    },
+    {
+      "tool": "frozen scripts/svg_tools.py",
+      "args": [
+        "template",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-waves/template",
+        "--height",
+        "32",
+        "--palette",
+        "ocean",
+        "--plain",
+        "--terrain"
+      ],
+      "exitCode": 0
+    },
+    {
+      "tool": "frozen scripts/material_animation.py",
+      "args": [
+        "compose",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-waves/template",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-waves/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-waves/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-waves/processed",
+        "--strength",
+        ".7"
+      ],
+      "exitCode": 0
+    },
+    {
+      "tool": "frozen scripts/assemble_result.py",
+      "args": [
+        "--input-result",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-waves/processed/result.json",
+        "--registration",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-waves/registration.json",
+        "--output",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-waves/result.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "tool": "tools/tilekit.py",
+      "args": [
+        "check-solid",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-waves/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/animated-waves/coverage.json",
+        "--anchor",
+        "96",
+        "312",
+        "--pitch",
+        "128",
+        "128",
+        "--body-rect",
+        "32",
+        "152",
+        "160",
+        "312",
+        "--preview"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "scriptSHA256": {
+    "material_animation.py": "b60cb45d1bf9c08d28b31839bb91996aa1cb15a4ebaa811c64b31e96fa711ea8",
+    "svg_tools.py": "5747a1d35a158f13624dacc9f2eef9cae7c0b986898958afa4c128299caa669f",
+    "assemble_result.py": "a32dfa1cb47afdc618554072fe3d16bcb7a9a2c37c482069260aa65a87e9d46a",
+    "tile_tools.py": "8b6453c0a6903c8b4de7e6a93f4c9e4491ad070e0431f5f7a1e514895123b172",
+    "review_playback.py": "aa010bc137dbc8ffd219778c863e3abbbe610a56d50878055943da84b42ab742"
+  },
+  "repoCompatibilityCheckerSHA256": "3b86bd6cbdb5855d95260b7dff017a4055792714baec72e5653fd683385b470c",
+  "customPreviewScripts": [
+    "provenance/scripts/waves_finalize.py",
+    "provenance/scripts/waves_preview_fix.py",
+    "capture-previews.mjs"
+  ],
+  "notes": [
+    "No corrective generation, per-frame registration fitting, alpha trimming or source rewriting.",
+    "Preview canvas was enlarged after initial rendering; earlier preview PNGs are retained.",
+    "Image appearance and continuity require independent visual review."
+  ]
+}

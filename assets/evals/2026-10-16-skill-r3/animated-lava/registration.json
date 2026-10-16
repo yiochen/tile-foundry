@@ -1,0 +1,75 @@
+{
+  "kind": "animation",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "elevationPx": 32,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "fps": 12,
+  "frameCount": 12,
+  "order": "row-major",
+  "sourceLayout": {
+    "columns": 4,
+    "rows": 3
+  },
+  "intendedFrameSize": [
+    192,
+    320
+  ],
+  "intendedGroundAnchor": [
+    96,
+    248
+  ],
+  "intendedFootprint": [
+    128,
+    128
+  ],
+  "authoredGeometry": {
+    "template": "template/geometry.json",
+    "topRect": [
+      32,
+      152,
+      160,
+      280
+    ],
+    "frontRect": [
+      32,
+      280,
+      160,
+      312
+    ],
+    "groundRect": [
+      32,
+      184,
+      160,
+      312
+    ],
+    "nearEdgeAnchor": [
+      96,
+      312
+    ],
+    "centerAnchor": [
+      96,
+      248
+    ],
+    "conversion": {
+      "offset": [
+        0,
+        -64
+      ],
+      "artMoved": false
+    }
+  },
+  "sourceContract": "opaque-appearance-material-phase-atlas",
+  "processingPlan": "Use frozen material_animation.py compose with strength 0.7 and authored terrain SVG face masks; sample only predeclared square material regions at one uniform atlas source scale; preserve complete 192x320 SVG alpha and image placement, then assemble_result.py. No whole-object extraction, keying, geometry correction, motion synthesis, or per-frame anchor fitting.",
+  "limitations": "Authored silhouette, footprint and elevation are deterministic. AI material motion, loop quality, periodicity and seam quality require independent visual review; uniform source registration does not certify generated layout."
+}

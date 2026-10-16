@@ -1,0 +1,60 @@
+{
+  "generationAttempts": 1,
+  "correctiveGenerationAttempts": 0,
+  "tool": "image_gen.imagegen",
+  "exactToolInputs": "tool-input-01.json",
+  "exactExpandedPrompt": "prompt-01.txt",
+  "generationRecipe": "generation-01.json",
+  "commands": [
+    {
+      "command": ".venv/bin/python assets/evals/2026-10-16-skill-r2/skill-snapshot/scripts/material_animation.py guide assets/evals/2026-10-16-skill-r2/animated-waves/guide",
+      "exitCode": 0,
+      "output": {
+        "size": [
+          1024,
+          1024
+        ],
+        "samples": 12,
+        "transparent_background": false
+      }
+    },
+    {
+      "command": ".venv/bin/python assets/evals/2026-10-16-skill-r2/skill-snapshot/scripts/svg_tools.py template assets/evals/2026-10-16-skill-r2/animated-waves/template --height 32 --palette ocean --plain",
+      "exitCode": 0,
+      "outputGeometry": "template/geometry.json"
+    },
+    {
+      "command": ".venv/bin/python assets/evals/2026-10-16-skill-r2/skill-snapshot/scripts/material_animation.py compose assets/evals/2026-10-16-skill-r2/animated-waves/template assets/evals/2026-10-16-skill-r2/animated-waves/source-01.png assets/evals/2026-10-16-skill-r2/animated-waves/guide.json assets/evals/2026-10-16-skill-r2/animated-waves/processed --strength .7",
+      "exitCode": 0,
+      "result": "processed/result.json"
+    },
+    {
+      "command": ".venv/bin/python assets/evals/2026-10-16-skill-r2/skill-snapshot/scripts/assemble_result.py --input-result assets/evals/2026-10-16-skill-r2/animated-waves/processed/result.json --registration assets/evals/2026-10-16-skill-r2/animated-waves/registration.json --output assets/evals/2026-10-16-skill-r2/animated-waves/result.json",
+      "exitCode": 0,
+      "sprites": 12
+    }
+  ],
+  "authoredRegistrationCreatedBeforeGeneration": "registration.json",
+  "fullFramePreserved": true,
+  "anchorConversion": {
+    "from": [
+      96,
+      312
+    ],
+    "to": [
+      96,
+      248
+    ],
+    "offset": [
+      0,
+      -64
+    ],
+    "artMoved": false
+  },
+  "sourceSampling": "Uniform square EXTENT using the guide regions; no source atlas resizing, axis fitting or object silhouette extraction",
+  "previewConstruction": "Bundled placement_preview generated per-frame light/dark and 3x3 copies; 2x previews use nearest-neighbor enlargement. Offset phase previews place complete frames at (24+column*128,24+row*128), phases (index+column+row*3)%12. Bundled write_playback embeds unchanged PNGs with performance.now()*12/1000 frame clock.",
+  "postAssemblyMetadataAddition": "Explicit authored-svg-faces registration and processor-result path; PNGs and geometry unchanged",
+  "previewIssue": "preview-workaround.json",
+  "checks": "integrity.json",
+  "independentReview": "Parent-arranged; executor did not grade visual quality"
+}

@@ -1,0 +1,64 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {},
+  "sourceSHA256": {
+    "source-01.png": "67eca338ea51c3a269b2b763d9b799941d99b70e860ee017c64b52c57e7fc1de"
+  },
+  "resultSHA256": "f6de6b7705934adac992b6463d9f116f46a3ba01bf2c510c9eff248487f71670",
+  "guideSHA256": "58cc72a012c8e7bfd272c56c819b8493d3abe54f008e57183b687dd5792404a5",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "same-player": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "dancing-poses": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "design-height": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "contact-stability": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "cutout-quality": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "loop": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

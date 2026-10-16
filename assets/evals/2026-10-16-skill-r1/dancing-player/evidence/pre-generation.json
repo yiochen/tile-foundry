@@ -1,0 +1,27 @@
+{
+  "guideCommand": [
+    ".venv/bin/python",
+    "assets/evals/2026-10-16-skill-r1/skill-snapshot/scripts/guide_tools.py",
+    "dance",
+    "assets/evals/2026-10-16-skill-r1/dancing-player/guide",
+    "--frames",
+    "12",
+    "--columns",
+    "4"
+  ],
+  "generationBudget": 1,
+  "plannedProcessor": "skill-snapshot/scripts/tile_tools.py process-on-floor --min-alpha 32 --fps 12",
+  "frameContract": {
+    "count": 12,
+    "frame": [
+      192,
+      320
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "cellSize": 128,
+    "fps": 12
+  }
+}

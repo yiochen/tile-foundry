@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "caseId": "dancing-player",
+  "authoredBeforeGeneration": true,
+  "route": "one transparent isolated-object panel sheet with visible calibration floors",
+  "generationCallsPlanned": 1,
+  "correctionCallsPlanned": 0,
+  "guide": {
+    "generator": "skill-snapshot/scripts/guide_tools.py dance",
+    "frames": 12,
+    "columns": 4,
+    "rows": 3,
+    "size": [
+      864,
+      1024
+    ],
+    "frame": [
+      192,
+      320
+    ],
+    "gutter": 32,
+    "keyRGB": [
+      255,
+      0,
+      255
+    ]
+  },
+  "registration": {
+    "method": "measured-calibration-floor",
+    "basis": "floor-width",
+    "targetAnchor": [
+      96,
+      248
+    ],
+    "cellSize": 128,
+    "nominalStandingHeight": 160,
+    "uniformScaleOnly": true
+  },
+  "processing": {
+    "processor": "skill-snapshot/scripts/tile_tools.py process-on-floor",
+    "minAlpha": 32,
+    "fps": 12,
+    "registration": "floor-width",
+    "strictFirst": true,
+    "allowGutterDriftRecovery": "Only if strict guide gutters contain protruding art; inspect actual transparent seams first. Preserve first failure and never change threshold, scale or anchor manually.",
+    "onFailure": "retain original and canonical blocked result if complete unclipped frames cannot be extracted"
+  },
+  "references": [
+    {
+      "path": "references/guide.png",
+      "role": "layout edit target",
+      "sentToModel": true
+    },
+    {
+      "path": "provenance/perspective-reference.jpg",
+      "role": "projection understanding only",
+      "sentToModel": false
+    }
+  ],
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1
+}

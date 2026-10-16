@@ -1,0 +1,404 @@
+{
+  "processor": "skill-snapshot/scripts/tile_tools.py",
+  "processorSHA256": "52700154f78dccf313b292913cf0f979eda32816ec5febefea690561c8f9c30e",
+  "command": [
+    ".venv/bin/python",
+    "assets/evals/2026-10-16-skill-r1/skill-snapshot/scripts/tile_tools.py",
+    "process-on-floor",
+    "assets/evals/2026-10-16-skill-r1/dancing-player/source-01.png",
+    "assets/evals/2026-10-16-skill-r1/dancing-player/guide.json",
+    "assets/evals/2026-10-16-skill-r1/dancing-player/processed",
+    "--min-alpha",
+    "32",
+    "--fps",
+    "12"
+  ],
+  "attemptCount": 1,
+  "status": "refused",
+  "message": "Error: Calibration floor is not square enough; regenerate instead of warping",
+  "sourceSHA256": "67eca338ea51c3a269b2b763d9b799941d99b70e860ee017c64b52c57e7fc1de",
+  "sourceSize": [
+    1152,
+    1366
+  ],
+  "guideSHA256": "58cc72a012c8e7bfd272c56c819b8493d3abe54f008e57183b687dd5792404a5",
+  "sourceToGuideScale": [
+    1.3333333333333333,
+    1.333984375
+  ],
+  "sourceAspectRoundingFraction": 0.00048804294777948787,
+  "minAlpha": 32,
+  "cleanup": {
+    "minAlpha": 32,
+    "removedPixels": 75823,
+    "warning": "Review at final size: intentionally faint details can also be removed."
+  },
+  "floorDetectorAlphaThreshold": 64,
+  "acceptedFloorAspectInterval": [
+    0.95,
+    1.05
+  ],
+  "panelObservations": [
+    {
+      "index": 0,
+      "sourceRect": [
+        0,
+        0,
+        256,
+        427
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          47,
+          249,
+          230,
+          416
+        ],
+        "anchor": [
+          138.5,
+          332.5
+        ],
+        "aspect": 1.095808383233533,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        183,
+        167
+      ]
+    },
+    {
+      "index": 1,
+      "sourceRect": [
+        299,
+        0,
+        555,
+        427
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          44,
+          248,
+          228,
+          416
+        ],
+        "anchor": [
+          136.0,
+          332.0
+        ],
+        "aspect": 1.0952380952380953,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        184,
+        168
+      ]
+    },
+    {
+      "index": 2,
+      "sourceRect": [
+        597,
+        0,
+        853,
+        427
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          28,
+          248,
+          213,
+          416
+        ],
+        "anchor": [
+          120.5,
+          332.0
+        ],
+        "aspect": 1.1011904761904763,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        185,
+        168
+      ]
+    },
+    {
+      "index": 3,
+      "sourceRect": [
+        896,
+        0,
+        1152,
+        427
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          26,
+          249,
+          210,
+          415
+        ],
+        "anchor": [
+          118.0,
+          332.0
+        ],
+        "aspect": 1.108433734939759,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        184,
+        166
+      ]
+    },
+    {
+      "index": 4,
+      "sourceRect": [
+        0,
+        470,
+        256,
+        896
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          47,
+          207,
+          230,
+          375
+        ],
+        "anchor": [
+          138.5,
+          291.0
+        ],
+        "aspect": 1.0892857142857142,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        183,
+        168
+      ]
+    },
+    {
+      "index": 5,
+      "sourceRect": [
+        299,
+        470,
+        555,
+        896
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          44,
+          207,
+          228,
+          375
+        ],
+        "anchor": [
+          136.0,
+          291.0
+        ],
+        "aspect": 1.0952380952380953,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        184,
+        168
+      ]
+    },
+    {
+      "index": 6,
+      "sourceRect": [
+        597,
+        470,
+        853,
+        896
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          28,
+          207,
+          213,
+          375
+        ],
+        "anchor": [
+          120.5,
+          291.0
+        ],
+        "aspect": 1.1011904761904763,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        185,
+        168
+      ]
+    },
+    {
+      "index": 7,
+      "sourceRect": [
+        896,
+        470,
+        1152,
+        896
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          26,
+          207,
+          210,
+          375
+        ],
+        "anchor": [
+          118.0,
+          291.0
+        ],
+        "aspect": 1.0952380952380953,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        184,
+        168
+      ]
+    },
+    {
+      "index": 8,
+      "sourceRect": [
+        0,
+        939,
+        256,
+        1366
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          47,
+          204,
+          230,
+          371
+        ],
+        "anchor": [
+          138.5,
+          287.5
+        ],
+        "aspect": 1.095808383233533,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        183,
+        167
+      ]
+    },
+    {
+      "index": 9,
+      "sourceRect": [
+        299,
+        939,
+        555,
+        1366
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          44,
+          204,
+          228,
+          371
+        ],
+        "anchor": [
+          136.0,
+          287.5
+        ],
+        "aspect": 1.1017964071856288,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        184,
+        167
+      ]
+    },
+    {
+      "index": 10,
+      "sourceRect": [
+        597,
+        939,
+        853,
+        1366
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          28,
+          204,
+          213,
+          371
+        ],
+        "anchor": [
+          120.5,
+          287.5
+        ],
+        "aspect": 1.1077844311377245,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        185,
+        167
+      ]
+    },
+    {
+      "index": 11,
+      "sourceRect": [
+        896,
+        939,
+        1152,
+        1366
+      ],
+      "floor": {
+        "mode": "solid",
+        "rect": [
+          26,
+          204,
+          210,
+          371
+        ],
+        "anchor": [
+          118.0,
+          287.5
+        ],
+        "aspect": 1.1017964071856288,
+        "alphaThreshold": 64,
+        "nominalSpan": 128,
+        "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+      },
+      "observedSpan": [
+        184,
+        167
+      ]
+    }
+  ],
+  "followup": "Observations only. No retry, normalization, floor removal, manual registration, or sprites were produced."
+}

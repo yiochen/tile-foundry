@@ -1,0 +1,113 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "partial-cell-tall-object",
+  "request": "Generate a tall lantern post on a 128x128 calibration tile. Its centered base is 48x48px and its nominal height is 160px. Remove the calibration tile from the final sprite, preserving its ground position and size. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/partial-cell-tall-object.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "partial-base": "The narrow 48x48 support occupies only the center of the cell; the surrounding floor remains empty after removal.",
+    "visible-height": "The same scale produces a tall complete post, extending above the floor upper edge.",
+    "cutout": "No calibration floor remains; no holes, color spill, or deleted object parts.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "object",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "heightAxis": [
+      0,
+      -1
+    ],
+    "elevationScale": 1,
+    "groundAnchorAlignment": "center",
+    "sprites": [
+      {
+        "id": "lantern",
+        "image": "processed/frames/frame-00.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 0
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "lantern",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          971,
+          1619
+        ],
+        "sourceRect": [
+          161,
+          208,
+          810,
+          1577
+        ],
+        "anchorSource": [
+          485.5,
+          1253.0
+        ],
+        "scale": [
+          0.19722650231124808,
+          0.19722425127830534
+        ],
+        "subpixelShift": [
+          0.0,
+          -0.09934258582907773
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/references/guide-4x.png"
+    },
+    {
+      "role": "processed",
+      "id": "lantern",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/processed/frames/frame-00.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/partial-cell-tall-object/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/partial-cell-tall-object/placement-0-dark.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/skills/build-overlap-tiles/references/visual-review.md"
+}

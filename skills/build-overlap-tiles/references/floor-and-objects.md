@@ -45,7 +45,27 @@ The bundled example is a sparse stick figure over a plain 128px square in a
 appearance should remain creative. For floating art, put the guide's ground root
 beneath the subject and specify its elevation/clearance independently.
 
-> Generate [subject] in square-grid top-down oblique projection. The plain square
+For a tall partial-base prop, a filled size envelope makes the crown limit more
+legible than a line that may be interpreted as only its shaft:
+
+```sh
+python "$SKILL_DIR/scripts/guide_tools.py" envelope "$OUTPUT_DIR/guide" --height 160 --base 48 48
+```
+
+The envelope is a placeholder, not a requested box-shaped subject. Its top bar
+marks the highest crown of the complete design at y=88, including finials/glass;
+the ground root stays y=248. Ask for all details to fit this design height. The
+48×48 base square stays screen-aligned; do not rotate it into a diamond. This
+constrains extent without drawing the final design's features.
+
+In the prompt also state the visible ratio: the entire crown-to-root height is
+1.25 floor widths, and the base width/depth is 3/8 of the floor width. Treat
+“tall” as the requested aspect within this scale; it does not authorize a
+streetlamp several cell widths high. Inspect both the full crown and the base.
+
+> Edit the supplied layout into [subject] in square-grid top-down oblique projection.
+> Replace the gray subject placeholder; copy the calibration square's shape,
+> placement, and flat color. The plain square
 > defines position and scale; the sparse guide defines [posture/base/height].
 > Invent the visual design. Preserve square size/location and its uniform reserved
 > RGB 123,209,75, without a rim or cast shadow. Keep the projected ground root at
@@ -57,17 +77,42 @@ beneath the subject and specify its elevation/clearance independently.
 
 Use `transparent_background: true`, then inspect source alpha and visible floor.
 
+Select the key before generation. The green example fits subjects that avoid
+green/olive/yellow-green in the floor region. For characters with an invented
+palette, use `--key-rgb 255 0 255` when creating the guide and use that recorded
+magenta value in the prompt instead of the green example. Reserve the whole
+key hue range, including its feather, in overlapping clothing. The processor
+reads `guide.keyRGB`; it never guesses another color. Inspect original versus
+processed clothing on light and dark backgrounds: clean floor removal can
+still erase trousers or boots. A damaged foreground must fail cutout review.
+
 ```sh
-python "$SKILL_DIR/scripts/tile_tools.py" process-on-floor "$OUTPUT_DIR/source.png" "$OUTPUT_DIR/guide.json" "$OUTPUT_DIR/processed" --min-alpha 32
+python "$SKILL_DIR/scripts/tile_tools.py" process-on-floor "$OUTPUT_DIR/source.png" "$OUTPUT_DIR/guide.json" "$OUTPUT_DIR/processed" --min-alpha 32 --registration floor-width
 ```
 
-The processor measures the last wide opaque band with median side edges, checks
-square aspect, uniformly normalizes its width to 128px and its center to `[96,248]`,
+Choose the registration basis before generation. For a disposable calibration
+floor, `floor-width` measures the last wide opaque band with median side edges,
+uniformly normalizes its width to 128px and its center to `[96,248]`,
 then keys the explicitly registered floor region. The default key uses ±28° hue,
-8° feather and saturation transition .02–.12. `--key-rgb` in guide creation records
+8° feather and saturation transition .40–.50. `--key-rgb` in guide creation records
 another reserved color. Cutout bounds never determine scale or root position.
 
-Mixed edges are approximate. A covered/warped floor, green object parts in the
+The saturation requirement protects neutral garments: hue is unstable near gray,
+so a slight key-colored tint must not erase an opaque trouser pixel. Use strongly
+saturated calibration colors. Hue plus saturation still cannot distinguish a
+foreground part painted in the reserved key color; choose the key/palette before
+generation and review source versus cutout. Do not lower saturation confidence
+to remove a pale floor at the expense of neutral foreground detail.
+
+Width/center calibration does not require the disposable floor's height to be
+exactly 128px after normalization. It never stretches axes or redraws the floor
+into a square. The measured rectangle and uniform transform remain in the
+sidecar. Inspect source edges and the registered subject: distortion, wrong scale
+or shifted physical contact can still fail visual review. When square aspect is
+itself a registration precondition, use the default `--registration square-floor`.
+This retains the stricter aspect check. Neither mode certifies the artwork.
+
+Mixed edges are approximate. A covered/unidentifiable floor, green object parts in the
 key region, or frame overflow can invalidate extraction. Reject/report the
 failure rather than fitting feet, guessing background colors, or clipping art.
 This command does not handle arbitrary multi-cell or hidden support layers.
@@ -84,8 +129,22 @@ authored for the request. The 12-frame evals require a 12-panel guide; do not
 silently reuse a six-panel guide for them.
 
 ```sh
-python "$SKILL_DIR/scripts/guide_tools.py" dance "$OUTPUT_DIR/guide"
+python "$SKILL_DIR/scripts/guide_tools.py" dance "$OUTPUT_DIR/guide" --key-rgb 255 0 255
 ```
+
+For twelve phases use `dance "$OUTPUT_DIR/guide" --frames 12 --columns 4 --key-rgb 255 0 255`.
+It includes transitions between the six key poses and back to the first, with
+equal panels and roots. Supply that actual raster; do not request a different
+canvas or panel layout in prose. Ask to replace the sticks and preserve the
+calibration squares as a layout edit. Specify total head-to-root design height
+and anatomical scale; a hair cap is part of the height budget. Do not include the
+eventual instruction to remove the floor in the generation prompt: that is the
+processor's job. The generated source must still contain it.
+
+The nominal standing design height is 1.25 calibration-cell widths including
+hair. State this relative size alongside the numeric target. If the model still
+enlarges the anatomy or redraws distorted floors, preserve the failed source;
+more emphatic wording is not evidence that registration succeeded.
 
 Use one composite raster for continuity when panels can remain independent.
 Add exact frame count, row-major poses/actions and camera/scale constraints to
@@ -95,7 +154,7 @@ Repeated holds are acceptable only when requested. Inspect identity, limbs,
 pose progression, complete silhouette and source panel separation.
 
 ```sh
-python "$SKILL_DIR/scripts/tile_tools.py" process-on-floor "$OUTPUT_DIR/source.png" "$OUTPUT_DIR/guide.json" "$OUTPUT_DIR/processed" --min-alpha 32 --fps 12
+python "$SKILL_DIR/scripts/tile_tools.py" process-on-floor "$OUTPUT_DIR/source.png" "$OUTPUT_DIR/guide.json" "$OUTPUT_DIR/processed" --min-alpha 32 --fps 12 --registration floor-width
 ```
 
 Cuts use the known guide layout, allowing at most 1% source-aspect rounding.
@@ -103,7 +162,7 @@ Alpha in planned gutters is refused. If independent art merely protrudes into a
 planned gutter, an inspected recovery can partition at actual transparent seams:
 
 ```sh
-python "$SKILL_DIR/scripts/tile_tools.py" process-on-floor "$OUTPUT_DIR/source.png" "$OUTPUT_DIR/guide.json" "$OUTPUT_DIR/recovered" --min-alpha 32 --fps 12 --allow-gutter-drift
+python "$SKILL_DIR/scripts/tile_tools.py" process-on-floor "$OUTPUT_DIR/source.png" "$OUTPUT_DIR/guide.json" "$OUTPUT_DIR/recovered" --min-alpha 32 --fps 12 --allow-gutter-drift --registration floor-width
 ```
 
 Recovery assigns every retained source-alpha pixel to one panel and records cuts.

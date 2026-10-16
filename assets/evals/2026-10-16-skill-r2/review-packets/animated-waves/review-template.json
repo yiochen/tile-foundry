@@ -1,0 +1,67 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {
+    "wave-00": "fcbf685d4b85ebac4db0095b8c0eb8e0e2fdfa2071abc310e5b52344b0c7d39c",
+    "wave-01": "967a3ef4647c38bc463f0a1704ecb1ff6ae61f2653954f9c5b744bf0755931a9",
+    "wave-02": "2abcdcb4edcb8ce3a23d0a027859dcbcfb497b8300ceb0f54da7737ebff6f9ed",
+    "wave-03": "2b055c5ce957117d9db4d674a7a2e2ee92311c0004af6d24b33811fa6cfc499a",
+    "wave-04": "a82f980235ed7e0fc51e88200e129d28790fc30d6d8e16f94a1134891302a460",
+    "wave-05": "3d011382998b77ec6bf485b955f9ce020f580ae9684f2d99da19fec7531dd349",
+    "wave-06": "4f00c4f8c00266359559db994aae5e32a6e022db2f358f4b867d1e5a2904935c",
+    "wave-07": "7d209a159e8499f13e8daae742f6ab0865f6cbee3812e09a5f42e6ba3937b335",
+    "wave-08": "473a5ca3abca85b93e74a7a3835c350a57d7ed20b9ebf95f342d326c92720892",
+    "wave-09": "4de2c4d218bd781be2e08db5132c9148e815cd719c88070497667760e9c63dd4",
+    "wave-10": "3d99fe4122d16c21ad7e2440adcb18d5aebf9fd57ef7cd5b16938e2dedc01cff",
+    "wave-11": "375f41d5bf6ba2f7811b17c71b15fbb2b6fb629172707daa40a38e5af6718604"
+  },
+  "sourceSHA256": {
+    "source-01.png": "e7b8c279c866a3987cca9423567c5b16c05555da81c8bfb8c3b612b9453dd5d8"
+  },
+  "resultSHA256": "62a4f114002d33b7ed7bf3b1688cfcb0411dadf5898445b0b422751ee2150d99",
+  "guideSHA256": "21de85fd4c747ac6a20fd8dd1df493b32e1b20a6a5c2fa34745720bbe879a8cf",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "animated-height": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "spatial-seams": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "temporal-loop": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "frame-consistency": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

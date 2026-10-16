@@ -3,6 +3,26 @@
 Expand only clauses relevant to the request; preserve the exact submitted text
 alongside source art. Use the available generation tool and inspect references.
 
+## Scope each image call
+
+Keep the user's full request in the delivery record. The submitted image prompt
+describes only the source being generated now. Do not paste downstream processing
+instructions into it. For a calibration source, say to retain the floor; floor
+removal happens later. For a material source, ask for flat opaque texture samples;
+the authored faces supply height and projection later. Never ask the same call
+for both transparent gutters and a fully opaque material canvas.
+
+Lead with the reference's role and required edits, then subject/action and a short
+list of placement constraints. Preserve visual registration; pixel coordinates
+alone do not guarantee model compliance. Inspect the result against the guide.
+
+Express size in the reference's visual units as well as pixels. For example,
+160px above the root on a 128px cell is **1.25 cell widths**, including the
+entire head/hair or lantern roof/finial. A 48px base is **3/8 of a cell width**.
+Use that ratio to communicate the design's scale rather than relying on the
+model to interpret a coordinate list. Describe the camera using the guide;
+the word “three-quarter” alone can rotate a square base into a diamond.
+
 ## Shared projection and placement
 
 Square-grid top-down oblique projection, front-facing three-quarter game view.

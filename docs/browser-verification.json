@@ -39,7 +39,7 @@
       "ok": true
     },
     {
-      "check": "13 cases: 12 fps player, mouse/touch progress scrubbing, pause and frame stepping, raw source playback without changing grades, SVG overlay, LLM assessments, history, exact prompts/sources, deep links and desktop/mobile",
+      "check": "14 cases: 12 fps player, mouse/touch scrubbing, runtime and preserved raw playback, SVG overlay, LLM assessments, history, exact prompts/sources, desktop/mobile",
       "ok": true
     },
     {

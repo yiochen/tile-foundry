@@ -61,7 +61,7 @@ class PortableSkillTests(unittest.TestCase):
         subprocess.run([sys.executable, str(bundle/'scripts/prepare_evals.py'), '--run-root', str(foreign/'eval-run')],
                        cwd=foreign, check=True, capture_output=True)
         run = json.loads((foreign/'eval-run/run.json').read_text())
-        self.assertEqual(len(run['trials']), 13)
+        self.assertEqual(len(run['trials']), len(self.cases))
         self.assertTrue(all(t['status']=='not-run' for t in run['trials']))
         for trial in run['trials']:
             request = (foreign/'eval-run'/trial['requestFile']).read_text()
@@ -75,6 +75,47 @@ class PortableSkillTests(unittest.TestCase):
         self.assertEqual(record['suiteSHA256'], hashlib.sha256((root/'suite.json').read_bytes()).hexdigest())
         with self.assertRaisesRegex(ValueError, 'empty'):
             prepare(root)
+
+    def test_twelve_pose_guide_preserves_floor_calibration_and_roots(self):
+        metadata=build('dance',self.directory/'twelve',columns=4,frames=12)
+        image=Image.open(self.directory/'twelve.png').convert('RGBA')
+        self.assertEqual((metadata['columns'],metadata['rows']),(4,3))
+        self.assertEqual(len(metadata['cells']),12)
+        for cell in metadata['cells']:
+            self.assertEqual(cell['anchor'],[96,248])
+            left,top,_,_=cell['rect']
+            self.assertEqual(image.getpixel((left+40,top+300)),(123,209,75,255))
+        # Equal registration can be processed without per-pose alpha-box fitting.
+        from tile_tools import process_object_sheet
+        frames=process_object_sheet(image,metadata)
+        self.assertEqual(len(frames),12)
+        self.assertTrue(all(info['anchor']==[96,248] for _,info in frames))
+
+    def test_envelope_marks_entire_height_independently_of_base_depth(self):
+        guide=build('envelope',self.directory/'envelope',height=160,base=(48,48))
+        image=Image.open(self.directory/'envelope.png').convert('RGBA')
+        self.assertEqual(guide['subjectRegistration']['height'],160)
+        self.assertEqual(guide['anchor'],[96,248])
+        self.assertEqual(image.getpixel((96,90)),(179,190,205,255))
+        self.assertEqual(image.getpixel((74,270)),(124,139,159,255))
+        self.assertEqual(image.getpixel((40,300)),(123,209,75,255))
+
+    def test_width_registration_preserves_art_scale_without_square_floor_certification(self):
+        from tile_tools import process_floor_object
+        image=Image.new('RGBA',(192,320));draw=ImageDraw.Draw(image)
+        draw.rectangle((32,190,159,305),fill=(123,209,75,255))
+        draw.rectangle((86,90,105,248),fill='#384c6b')
+        before=image.tobytes()
+        with self.assertRaisesRegex(ValueError,'not square'):
+            process_floor_object(image,(123,209,75))
+        output,info=process_floor_object(image,(123,209,75),registration='floor-width')
+        self.assertEqual(info['anchor'],[96,248])
+        self.assertEqual(info['normalization']['scale'],[1,1])
+        self.assertEqual(info['registrationBasis'],'floor-width')
+        self.assertEqual(image.tobytes(),before)
+        self.assertEqual(output.size,(192,320))
+        self.assertEqual(output.getpixel((90,100)),image.getpixel((90,100)))
+        self.assertEqual(output.getpixel((40,290))[3],0)
 
     def test_preparation_refuses_escaped_case_destination(self):
         case = dict(self.cases['lava-tile'], outputSubdir='../escape')

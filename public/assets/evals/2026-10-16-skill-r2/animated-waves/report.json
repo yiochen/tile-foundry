@@ -1,0 +1,966 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "animated-waves",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a 12-frame looping ocean wave tile animation at exactly 12 fps. Each frame has a full 128x128 base and 32px visible front-wall height, in the same top-down oblique projection. Preserve the anchor, base footprint, elevation, and connection to adjacent copies through the animation. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "appearance-material"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "e7b8c279c866a3987cca9423567c5b16c05555da81c8bfb8c3b612b9453dd5d8"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/material-layout.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "source-0-opaque-material",
+      "pass": true,
+      "detail": "Complete opaque square appearance material; registration comes from authored geometry"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "21de85fd4c747ac6a20fd8dd1df493b32e1b20a6a5c2fa34745720bbe879a8cf"
+    },
+    {
+      "check": "registered-guide",
+      "pass": false,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "animation",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "wave-00",
+        "wave-01",
+        "wave-02",
+        "wave-03",
+        "wave-04",
+        "wave-05",
+        "wave-06",
+        "wave-07",
+        "wave-08",
+        "wave-09",
+        "wave-10",
+        "wave-11"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "12-fps-schedule",
+      "pass": true,
+      "detail": "12 fps / 83.333333 ms"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "Every delivered frame has a screen-aligned square top face and a straight horizontal front-wall band, matching the authored geometry template. Both dimensions and apparent camera remain stable in the phase placements and native/2\u00d7 playback snapshots.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/references/material-layout.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-08.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-09.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-dark.png",
+        "http://127.0.0.1:8772/animated-waves/playback.html"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "All twelve frames contain the full rectangular surface and front strip with clear margins in the declared frame. Light and dark placements show no clipped crest, alpha hole, detached effects or extra shadow; the foam is contained within the tile faces.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-08.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-09.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-dark.png",
+        "http://127.0.0.1:8772/animated-waves/playback.html"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": true,
+      "detail": "The authored top/front rectangle retains the same position relative to the magenta ground-root marks in every phase. The elevated top and front band align consistently with the template and cell pitch in the placements and neighbor view; no phase shifts the support onto a different visible edge. This is qualitative alignment evidence.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/references/material-layout.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-4.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-6.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-8.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-9.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-11.png",
+        "http://127.0.0.1:8772/animated-waves/playback.html"
+      ]
+    },
+    {
+      "check": "animated-height",
+      "pass": true,
+      "detail": "The upper boundary, front-wall division, bottom support and root positions remain fixed while the wave crest changes from low ripples to foam and recedes. Native/2\u00d7 light/dark snapshots of active playback show texture changes without visible rectangle or support breathing.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-08.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-09.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-dark.png",
+        "http://127.0.0.1:8772/animated-waves/playback.html"
+      ]
+    },
+    {
+      "check": "spatial-seams",
+      "pass": false,
+      "detail": "All supplied 3\u00d73 phase views show repeated pale horizontal bands where one row meets the next, and foam/wave contours terminate and restart at vertical joins. In live native and 2\u00d7 offset-phase neighbors, adjacent crests and tones also disconnect conspicuously at cell boundaries. These are visible lighting/pattern discontinuities, beyond merely recurring motifs; no transparent cracks were observed.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-4.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-6.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-8.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-9.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/neighbors-11.png",
+        "http://127.0.0.1:8772/animated-waves/playback.html"
+      ]
+    },
+    {
+      "check": "temporal-loop",
+      "pass": null,
+      "detail": "Live playback was running and visibly advanced through different numbered phases at the displayed 12 fps setting. I also paused and inspected phase 12 followed by phase 1: both show lower-ripple states with fixed geometry. The tool supplies separated screenshots rather than a continuously visible motion recording, so readable smooth motion and the absence of an unwanted last-to-first pop cannot be established confidently.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-00.png",
+        "http://127.0.0.1:8772/animated-waves/playback.html"
+      ]
+    },
+    {
+      "check": "frame-consistency",
+      "pass": true,
+      "detail": "All twelve delivered surfaces use a common blue/cyan water palette and white foam style, with coherent crest growth and recession. Each retains the same complete top/front shape and alpha, and neither light nor dark backgrounds reveal a missing phase or incomplete edge. This does not imply seam or temporal-loop success.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/references/material-layout.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-08.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-09.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-dark.png",
+        "http://127.0.0.1:8772/animated-waves/playback.html"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The processed phases retain the recognizable ripple/crest/foam progression from the corresponding row-major material panels. Applying that appearance to the explicitly supplied authored top/front geometry is consistent with the declared authored-svg-faces operations; no unrelated replacement motif is visible. This comparison does not certify all transformation arithmetic.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/references/material-layout.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/template/template.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-03.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-05.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-07.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-08.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-09.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-10.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/animated-waves/processed/frames/frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-1-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-2-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-3-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-4-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-5-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-6-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-7-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-8-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-9-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-10-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r2/review-packets/animated-waves/placement-11-dark.png"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "wave-00-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-00-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-01-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-01-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-02-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-02-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-03-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-03-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-04-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-04-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-05-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-05-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-06-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-06-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-07-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-07-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-08-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-08-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-09-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-09-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-10-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-10-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-11-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "wave-11-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "/root/independent_review_r2",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

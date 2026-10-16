@@ -1,0 +1,25 @@
+{
+  "prompt": "Use case: stylized-concept\nAsset type: opaque ocean-wave appearance-material animation atlas.\nInput image 1 is a layout edit target only: retain its exact twelve square sample positions, square boundaries, gutters and margins. Replace the twelve gray squares with twelve successive phases of rolling ocean-water surface in row-major order: left to right across the top row, then the middle row, then the bottom row. The twelve phases form a one-second loop with a smooth last-to-first transition.\nEvery sample is a flat, fully opaque material texture, filled completely to its square edges. Keep all gutters and outer margins opaque neutral light gray. Fixed turquoise-blue ocean palette, fine painterly water ripples and small soft foam traces, uniform texture scale and diffuse lighting. Animate the flow and rolling ripple/foam patterns gently forward from phase to phase; preserve recognizable pattern continuity without camera motion. Continue surface patterns across opposite sample edges in every phase, including neighbors displaying different phases. Water fills every square; no shoreline or islands.\nThis call creates only flat appearance material: no raised objects, no tiles with volume, no front wall, no perspective, no scene, no text, no numerals, no borders, no transparent pixels, no cutout shapes, no global lighting gradient. Preserve the exact 4-column by 3-row sample layout on the square canvas.",
+  "references": [
+    "references/material-layout.png"
+  ],
+  "referenceSHA256": {
+    "references/material-layout.png": "63a325cd92f009c0c677d0e0079701fe3757d45f0a5a71cb42b42a1a6d1b83bf"
+  },
+  "referenceRoles": {
+    "references/material-layout.png": "layout edit target: authored opaque square atlas with twelve 4x3 square material samples"
+  },
+  "transparentBackground": false,
+  "tool": "image_gen.imagegen",
+  "toolInput": "tool-input-01.json",
+  "projection": "top-down-oblique-square-grid",
+  "projectionOwnership": "authored SVG geometry; image call creates flat material only",
+  "attempt": 1,
+  "sourceSHA256": "e7b8c279c866a3987cca9423567c5b16c05555da81c8bfb8c3b612b9453dd5d8",
+  "toolOutputOriginalPath": "/Users/yiouchen/.codex/generated_images/01a1439c-23c0-7100-b149-640bd5c8bba9/exec-0c6f48ac-c566-4711-9184-f76ff497d0b2.png",
+  "source": "source-01.png",
+  "inspectedButNotSuppliedReference": {
+    "pathInFrozenSkill": "assets/perspective-reference.jpg",
+    "role": "Projection interpretation only; not passed to image generation"
+  }
+}

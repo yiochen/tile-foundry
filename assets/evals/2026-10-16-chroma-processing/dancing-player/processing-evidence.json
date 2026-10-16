@@ -1,0 +1,192 @@
+{
+  "mode": "processing-only-source-reuse",
+  "imageGenerationCallsThisRun": 0,
+  "originalGenerationRecipePreserved": true,
+  "attempts": [
+    {
+      "id": "strict",
+      "command": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/skill-snapshot/scripts/tile_tools.py",
+        "process-on-floor",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/processed",
+        "--min-alpha",
+        "32",
+        "--fps",
+        "12",
+        "--registration",
+        "floor-width"
+      ],
+      "exitCode": 1,
+      "stdout": "processing-strict.stdout.txt",
+      "stderr": "processing-strict.stderr.txt"
+    },
+    {
+      "id": "transparent-separator-recovery",
+      "command": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/skill-snapshot/scripts/tile_tools.py",
+        "process-on-floor",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered",
+        "--min-alpha",
+        "32",
+        "--fps",
+        "12",
+        "--registration",
+        "floor-width",
+        "--allow-gutter-drift"
+      ],
+      "exitCode": 0,
+      "stdout": "processing-recovery.stdout.txt",
+      "stderr": "processing-recovery.stderr.txt"
+    }
+  ],
+  "assembly": {
+    "command": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/skill-snapshot/scripts/assemble_result.py",
+      "--input-result",
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/result.json",
+      "--registration",
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/registration.json",
+      "--output",
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/result.json"
+    ],
+    "exitCode": 0,
+    "stdout": "assembly.stdout.txt",
+    "stderr": "assembly.stderr.txt"
+  },
+  "selectedProcessorResult": "recovered/result.json",
+  "canonicalResult": "result.json",
+  "canonicalSubmission": "submission.json",
+  "processorSHA256": "836e1935bbd733cdca0aa4e82728ca3748ad820aec2da5ce86c6d19d75865490",
+  "assemblerSHA256": "a32dfa1cb47afdc618554072fe3d16bcb7a9a2c37c482069260aa65a87e9d46a",
+  "sourceSize": [
+    1152,
+    1366
+  ],
+  "retainedFrameCount": 12,
+  "frameSize": [
+    192,
+    320
+  ],
+  "storedAnchor": [
+    96,
+    248
+  ],
+  "fps": 12,
+  "durationMs": 83.33333333333333,
+  "frameOrder": "row-major",
+  "sheet": "recovered/sheet.png",
+  "partitionDiagnostics": {
+    "alphaCleanup": {
+      "minAlpha": 32,
+      "removedPixels": 135880,
+      "warning": "Review at final size: intentionally faint details can also be removed."
+    },
+    "cleanedNonzeroAlphaPixels": 518138,
+    "assignedCleanedNonzeroAlphaPixels": 518138,
+    "partitionLostCleanedAlphaPixels": 0,
+    "sourceRects": [
+      [
+        0,
+        0,
+        277,
+        448
+      ],
+      [
+        277,
+        0,
+        576,
+        448
+      ],
+      [
+        576,
+        0,
+        874,
+        448
+      ],
+      [
+        874,
+        0,
+        1152,
+        448
+      ],
+      [
+        0,
+        448,
+        277,
+        914
+      ],
+      [
+        277,
+        448,
+        576,
+        914
+      ],
+      [
+        576,
+        448,
+        874,
+        914
+      ],
+      [
+        874,
+        448,
+        1152,
+        914
+      ],
+      [
+        0,
+        914,
+        277,
+        1366
+      ],
+      [
+        277,
+        914,
+        576,
+        1366
+      ],
+      [
+        576,
+        914,
+        874,
+        1366
+      ],
+      [
+        874,
+        914,
+        1152,
+        1366
+      ]
+    ]
+  },
+  "spriteSHA256": {
+    "recovered/frames/frame-00.png": "fec6f39fc1aedf4cc3145e90d2b483615c06d159641a37ee5f8506341453b5a3",
+    "recovered/frames/frame-01.png": "6c96245cb802a2d50ba6b04e6580c2d1b778b16064a4ec528bb9c64c95304dd9",
+    "recovered/frames/frame-02.png": "fbf18464e3629a726c638e698e66732d8494e911d7f8318c835a69ab2d0d1d2e",
+    "recovered/frames/frame-03.png": "4e3889c1c7a777376b53a78b8062f3ade5c404a8fc39d8c7476c36d5b2fab275",
+    "recovered/frames/frame-04.png": "5e8e740b6bf68d1a84c2f74f0961a109e45c76be0d2593dce12f240677ac250a",
+    "recovered/frames/frame-05.png": "b2c4db378ed7b7abe2171b68ee7cd93ef38e3cb7049371cb424ac4cf8502af37",
+    "recovered/frames/frame-06.png": "ee54bb824b669e7597de6d91307e14bace1049c595fd5bef40612c0f82e518c1",
+    "recovered/frames/frame-07.png": "81eebb4936f202c09298303ab8e1b87db554b9fe4d1d73857c6b758f913c01c2",
+    "recovered/frames/frame-08.png": "0a82f3accca786554cf532d7762b3153efce7cc2f61b40f580c3a5bcfb91a3b3",
+    "recovered/frames/frame-09.png": "becc2083d072416e5ce00e85a82c34b3301401891383d977215c537c0b0540a7",
+    "recovered/frames/frame-10.png": "698525d08ad7dce0760738e9c995080827d974afadfa0896365f7129d1a936f1",
+    "recovered/frames/frame-11.png": "c605fd74b6938ac2d12779f6d59a343ae43a670b19b56ced50d307f3d8355a8a"
+  },
+  "resultSHA256": "b7975046961d5758448cd3a27a2669e80bb0273e67b1243cf13597244b937136",
+  "submissionSHA256": "c3c2a0b5f3be66a050ba8171e62f22c1bc962d3ddbf4136977ebd61addad1548",
+  "reuseProvenance": "reuse-provenance.json",
+  "previews": [
+    "previews/contact-light.png",
+    "previews/contact-dark.png",
+    "previews/playback.html"
+  ],
+  "selfGradingPerformed": false
+}

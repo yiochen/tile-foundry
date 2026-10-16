@@ -50,6 +50,15 @@ class EvalPreviewSequencesTests(unittest.TestCase):
         self.assertEqual(sequence['separatorAlphaMax'],1)
         self.assertEqual(path.read_bytes(),before)
 
+    def test_object_sheet_can_preview_without_claiming_floor_normalization(self):
+        guide={**self.guide,'kind':'object-sheet'}
+        sequence=source_sequence(self.root,self.submission,guide,self.publish)
+        self.assertEqual(len(sequence['frames']),2)
+        self.assertEqual(sequence['alignment'],'panel-origin')
+        self.assertFalse(sequence['isProcessedSprite'])
+        self.assertTrue(partition_is_complete([f['sourceRect'] for f in sequence['frames']],(64,32)))
+        self.assertEqual([f['anchor'] for f in sequence['frames']],[[0,0],[0,0]])
+
     def test_connected_visible_art_cannot_be_sliced_into_preview_frames(self):
         path=self.root/'source.png';image=Image.open(path).convert('RGBA')
         ImageDraw.Draw(image).line((20,16,44,16),fill='red',width=2);image.save(path)

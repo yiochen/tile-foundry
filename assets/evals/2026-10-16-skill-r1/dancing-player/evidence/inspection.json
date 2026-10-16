@@ -1,0 +1,12 @@
+{
+  "executorInspectionOnly": true,
+  "independentReviewPending": true,
+  "imagesInspected": [
+    "references/guide.png",
+    "references/perspective-reference.jpg",
+    "source-01.png",
+    "previews/source-light.png",
+    "previews/source-guide-overlay.png"
+  ],
+  "note": "Artifact inspection and processor evidence only. No self-grading or visual verdict was authored."
+}

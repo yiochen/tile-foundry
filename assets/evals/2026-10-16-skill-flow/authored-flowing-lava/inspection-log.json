@@ -1,0 +1,22 @@
+{
+  "reviewType": "executor artifact inspection, ungraded",
+  "imagesInspected": [
+    "source-01.png",
+    "guide.png",
+    "template/shaded.png",
+    "provenance/perspective-reference-inspected-not-supplied.jpg",
+    "previews/contact-sheet-light.png",
+    "previews/cutout-00-dark-2x.png",
+    "previews/repeat-same-00-light.png",
+    "previews/repeat-offset-00-light-2x.png",
+    "previews/repeat-offset-11-dark.png",
+    "previews/playback-desktop-offset.png",
+    "previews/playback-desktop-offset-2x.png",
+    "previews/playback-mobile-offset.png",
+    "previews/playback-mobile-offset-later.png"
+  ],
+  "playback": "previews/playback.html",
+  "captureRecord": "playback-capture.json",
+  "independentReviewPending": true,
+  "visualGradesAssigned": false
+}

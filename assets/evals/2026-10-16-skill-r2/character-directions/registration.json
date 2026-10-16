@@ -1,0 +1,55 @@
+{
+  "kind": "directions",
+  "projection": "top-down-oblique-square-grid",
+  "elevationPx": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "nominalStandingHeight": 160,
+  "registration": {
+    "method": "measured-calibration-floor",
+    "guide": "guide.json"
+  },
+  "sprites": [
+    {
+      "id": "player-north",
+      "direction": "north"
+    },
+    {
+      "id": "player-northeast",
+      "direction": "northeast"
+    },
+    {
+      "id": "player-east",
+      "direction": "east"
+    },
+    {
+      "id": "player-southeast",
+      "direction": "southeast"
+    },
+    {
+      "id": "player-south",
+      "direction": "south"
+    },
+    {
+      "id": "player-southwest",
+      "direction": "southwest"
+    },
+    {
+      "id": "player-west",
+      "direction": "west"
+    },
+    {
+      "id": "player-northwest",
+      "direction": "northwest"
+    }
+  ]
+}

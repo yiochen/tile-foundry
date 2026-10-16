@@ -1,0 +1,216 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "partial-cell-tall-object",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a tall lantern post on a 128x128 calibration tile. Its centered base is 48x48px and its nominal height is 160px. Remove the calibration tile from the final sprite, preserving its ground position and size. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "ff00542778d367350e75708c57b77975cfc2ae48a8be2b06bcd689a3b9c34c3d"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide-4x.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "dd8b1923f1f9cf990398f65a00bec1b1dd736d09e51093f924bd4342cb1538a9"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "object",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "lantern"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": false,
+      "detail": "The pedestal and lantern roof present a diamond with two diagonal front/side directions, whereas the supplied guide uses a screen-aligned square top and horizontal front edge. The rotated object projection is visible in the source and survives processing; it does not match the requested square-grid orientation.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/references/guide-4x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "The finial, roof corners, glowing glass housing, entire shaft, and full stone pedestal remain visible with clearance inside the output frame. At native scale and 2\u00d7 I see no clipped object part or detached cast shadow.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": null,
+      "detail": "The shaft and pedestal are horizontally centered around the preview root cross. However, that cross falls on the near upper bevel of the stone block, and the block occludes the rear ground-contact landmark. I cannot confidently identify the projected center of the ground footprint independently of the opaque pedestal, so the vertical ground registration remains open.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/references/guide-4x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/guide.json"
+      ]
+    },
+    {
+      "check": "partial-base",
+      "pass": true,
+      "detail": "The compact pedestal occupies only the central portion of the 128-cell preview; substantial empty floor surrounds it on every side. This is a narrow partial-cell support rather than a full-cell floor. Its exact 48\u00d748 geometry is not established by this qualitative review.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/references/guide-4x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/guide.json"
+      ]
+    },
+    {
+      "check": "visible-height",
+      "pass": false,
+      "detail": "The processed post is clearly tall and complete, but it rises substantially farther above the ground than the nominal-height column in the guide at the same cell scale. The long shaft and large lantern make the final apparent height noticeably exceed the requested 160px design target. This is a visible proportion mismatch, not a claim of an exact landmark measurement.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/references/guide-4x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png"
+      ]
+    },
+    {
+      "check": "cutout",
+      "pass": true,
+      "detail": "The green calibration square and its floor shading are absent in the final sprite. Light and dark placements at native/2\u00d7 show an intact shaft, glass, trim and base, without visible holes, green floor residue, or a deleted shoe-like contact edge.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The same finial, roof, paired light panes, shaft bands and pedestal chips are recognizable in the original and processed sprite. The output retains their relative proportions and silhouette while removing the green floor, consistent with the declared measured-floor registration and near-uniform reduction; no replacement object art is visible.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "lantern-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "/root/independent_review_r1",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

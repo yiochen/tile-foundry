@@ -41,21 +41,37 @@ profile with the result, and use it consistently across poses and frames.
 - **Partial-base or floating object / character:** use a plain, explicitly reserved
   calibration color and sparse height/pose guide. Measure the intact visible floor,
   normalize uniformly, remove the calibration substrate, and retain that frame
-  and anchor. Sparse guides leave appearance to the model.
+  and anchor. Sparse guides leave appearance to the model. Treat the raster as a
+  layout edit: replace the subject placeholder while preserving the calibration
+  square. A top limit must describe the entire subject, including head/hair/cap,
+  rather than just a post or torso. See the envelope example in the floor workflow.
 - **Directions or animation:** keep the camera, anatomy scale, floor registration,
   and root fixed. Turn or pose the subject. All animations use **12 fps**
   (`1000/12` ms per frame). A changing pose may change silhouette bounds; never
   resize each frame to force an equal bounding-box height.
+  Choose the source contract before writing the prompt: transparent isolated
+  object panels and an opaque appearance-material atlas are different routes.
+  For flowing terrain, prefer one opaque AI material with authored periodic
+  texture motion; model-drawn phase atlases remain an alternative. Read
+  [material animation](references/material-animation.md) before generation.
 - **Multi-cell, disjoint support, arch, or stacked layers:** declare footprint,
   occupied/support cells, overhead extent, support elevation, and layer/depth
   pieces before generation. Read [geometry and output contract](references/geometry.md).
   Preserve complete separate assets. Do not slice a flattened overlapping scene.
+  The floor processor only supports a visible single calibration floor per panel. For other
+  geometry, choose authored registration and a documented extractor before making
+  an image call; do not assume the single-cell detector will handle it later.
 
 Use a sole SVG raster reference by default, with style described in text. Supply
 an identity or support reference when continuity/attachment needs it and record
 its role. The bundled scene illustrates projection; it is not a default style
 reference to supply to every image call. A style image's object shape can bias
 geometry. Inspect each input raster before using it.
+
+Read the call-scoping rule in [prompt clauses](references/prompts.md): a generation
+prompt describes its intermediate source, while the full user request stays in
+provenance. In particular, retain temporary floors in image calls that need floor
+calibration, and leave projection/height to authored faces in material-only calls.
 
 ## Anchors and extraction
 
@@ -69,8 +85,18 @@ feet and alpha bounds. Shoe toes can extend below the anchor. Floating art keeps
 its ground projection; a seated layer retains its ground anchor plus separate
 support elevation. Do not apply an elevation twice during recomposition.
 
+For disposable calibration floors, choose width/center registration before
+generation (`--registration floor-width`). This preserves a single uniform scale
+without certifying or correcting a redrawn floor's aspect. The default strict
+square-floor mode remains available. Review physical contact, proportions and
+projection visually in either mode; a frame's stored root is not proof of contact.
+
 Use the explicitly recorded calibration color (default RGB 123,209,75), never
-background-color guessing. Reserve its hue in overlapping object parts.
+background-color guessing. Choose it before generation for the subject's palette:
+for unrestricted character clothing, prefer magenta RGB 255,0,255 with
+`--key-rgb 255 0 255`; olive/khaki trousers can be damaged by the green key.
+Reserve the complete key hue interval in overlapping object parts, not just its
+exact RGB value. For magenta subjects choose another explicit contrasting key.
 Normalize before keying; keep the resulting frame and anchor. Mixed edges have
 an approximate matte. A fully covered floor cannot be measured by the visible-
 floor detector: use authored geometry/registration or report unsupported input.
@@ -86,7 +112,7 @@ Never claim exact AI geometry, seamless terrain, or successful separation solely
 from metadata. Keep failures and report limits; do not conceal them with clipping,
 axis stretching, anchor fitting, or grading changes.
 
-The [13-case eval suite](evals/cases.json) is specified before fresh generation.
+The [eval suite](evals/cases.json) is specified before fresh generation.
 Use [the eval protocol](evals/protocol.md) to prepare isolated output destinations
 and independent LLM visual review. Use the [visual-review policy](references/visual-review.md)
 for perceptible seams, proportions, anchors and motion; pixel metrics are
@@ -95,3 +121,8 @@ geometry/timing. A prepared case is not a passed case. Freeze its rubric and thi
 skill snapshot before a run; do not tune the skill to make that run pass. Record
 an explicitly requested grading-policy change as a separate assessment of the
 unchanged images, preserving the original grades.
+
+When explicitly asked to improve this skill, use a new frozen run for each
+revision. Give fresh executors only the request and frozen skill, retain every
+attempt, and keep the rubric fixed. Check both deliverability and visual quality:
+fixing a processing error does not establish a good animation or correct perspective.

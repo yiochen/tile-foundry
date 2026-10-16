@@ -1,0 +1,23 @@
+{
+  "generationCalls": 1,
+  "correctionGenerationCalls": 0,
+  "tool": "image_gen.imagegen",
+  "processing": "strict guide panels rejected gutter alpha; preplanned transparent-separator recovery succeeded without changing min-alpha, anchor or scale basis",
+  "status": "awaiting-independent-visual-review",
+  "frames": 12,
+  "frameSize": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "fps": 12,
+  "result": "result.json",
+  "submission": "submission.json",
+  "playback": "previews/playback.html",
+  "lightContact": "previews/contact-light.png",
+  "darkContact": "previews/contact-dark.png",
+  "grade": null
+}

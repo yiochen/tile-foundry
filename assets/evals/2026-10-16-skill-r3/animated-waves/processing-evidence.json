@@ -1,0 +1,161 @@
+{
+  "generationCalls": 1,
+  "sourcePNG": {
+    "path": "source-01.png",
+    "sha256": "ed8d1c9e0472a200b60ed31dce1e5609fec5344e97cfe2749f41f95ae0b18618",
+    "size": [
+      1254,
+      1254
+    ],
+    "alphaExtrema": [
+      255,
+      255
+    ]
+  },
+  "processing": {
+    "processor": "frozen scripts/material_animation.py compose",
+    "exitCode": 0,
+    "strength": 0.7,
+    "frameCount": 12,
+    "uniformSourceScale": 1.224609375,
+    "sourceRects": [
+      [
+        19.59375,
+        176.34375,
+        293.90625,
+        450.65625
+      ],
+      [
+        333.09375,
+        176.34375,
+        607.40625,
+        450.65625
+      ],
+      [
+        646.59375,
+        176.34375,
+        920.90625,
+        450.65625
+      ],
+      [
+        960.09375,
+        176.34375,
+        1234.40625,
+        450.65625
+      ],
+      [
+        19.59375,
+        489.84375,
+        293.90625,
+        764.15625
+      ],
+      [
+        333.09375,
+        489.84375,
+        607.40625,
+        764.15625
+      ],
+      [
+        646.59375,
+        489.84375,
+        920.90625,
+        764.15625
+      ],
+      [
+        960.09375,
+        489.84375,
+        1234.40625,
+        764.15625
+      ],
+      [
+        19.59375,
+        803.34375,
+        293.90625,
+        1077.65625
+      ],
+      [
+        333.09375,
+        803.34375,
+        607.40625,
+        1077.65625
+      ],
+      [
+        646.59375,
+        803.34375,
+        920.90625,
+        1077.65625
+      ],
+      [
+        960.09375,
+        803.34375,
+        1234.40625,
+        1077.65625
+      ]
+    ],
+    "alphaPreserved": true,
+    "allFramesSize": [
+      192,
+      320
+    ],
+    "allFramesAnchor": [
+      96,
+      248
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "topRect": [
+      32,
+      152,
+      160,
+      280
+    ],
+    "frontRect": [
+      32,
+      280,
+      160,
+      312
+    ],
+    "anchorConversion": {
+      "from": "near-edge",
+      "to": "center",
+      "offset": [
+        0,
+        -64.0
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "centerAnchor": [
+        96,
+        248.0
+      ],
+      "artMoved": false
+    },
+    "fps": 12,
+    "durationMs": 83.33333333333333,
+    "motion": "Only the 12 supplied atlas phases; no synthesized motion or interpolation"
+  },
+  "validationScope": "Delivery integrity only; no self-grade or visual pass/fail assessment",
+  "previewPaths": [
+    "previews/playback.html",
+    "previews/cutouts-light.png",
+    "previews/cutouts-dark.png"
+  ],
+  "files": {
+    "processed/frames/frame-00.png": "c89a99ac02402733614683633608d87738178e68755e7cb42b8ad1e9b9243838",
+    "processed/frames/frame-01.png": "1e262fc5d2d7a3a7e03a638ad7983db2b6826d0ad1cdcce56f93fbe32b7a0342",
+    "processed/frames/frame-02.png": "f7febaf5a4a861fbc309df8442c6f91c8817e46bc260e4571acf4585730a4b15",
+    "processed/frames/frame-03.png": "79a006e1b119c3a7e3f023d33e284758dc1afefa1e9921ee0f88c8b3cb2939d9",
+    "processed/frames/frame-04.png": "d18264b5bbb7812b32dbe0faa111cb944a7a37104a1a44e7c6d487bf0069905b",
+    "processed/frames/frame-05.png": "a8b4a42fae37d16a58504c4a0ea476ad2081813f7d1abaeeb03f6ea40350408b",
+    "processed/frames/frame-06.png": "815da801998d99e79cfe4fb12e690917bf010c2d34b75ab05c4877ca6103561f",
+    "processed/frames/frame-07.png": "ea3041e62873e920b6eb4aaa085a63d9c410514567f663ea58ed69d3521811ad",
+    "processed/frames/frame-08.png": "085cad42d14506da8113376cf88300ac7129d2971e43a965a290415bdb23bac1",
+    "processed/frames/frame-09.png": "b78650cefb7db1c159529ca24c126c8edc1c24fa3e1403c241822a871e4e84de",
+    "processed/frames/frame-10.png": "57763355d3e3a9c24ae3df2907cc60d18839c235d6bf3355fd61582a5774db6c",
+    "processed/frames/frame-11.png": "584b4c83528789afb8072519079c575420636fcb0a3c999f2eaa16a5b15a54f9"
+  }
+}

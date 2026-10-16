@@ -1,0 +1,56 @@
+{
+  "version": 2,
+  "mode": "processing-only-comparison",
+  "suite": "suite.json",
+  "suiteSHA256": "a1513b13f5311fc0cc47862bb518d47a03697ac4dd10e22d9def3184bd01e337",
+  "skillSnapshot": "skill-snapshot/SKILL.md",
+  "skillFiles": {
+    "SKILL.md": "27050429d7de6b657712c91c8ef2f9957f1069550ea398ce640a576840fe4e6c",
+    "agents/openai.yaml": "3f9f1efb4a06d07b40042a8400419e6f6dc4325e51df991ca2a0f6405dc09bae",
+    "assets/perspective-reference.jpg": "9784bc8c25ce01fb25044f9d866e8487f4e520be4c89588f36046df0ed19e29c",
+    "assets/perspective-reference.json": "5a742adfc22baa172c515715b305f0cc53fcac9f628a2fac5eea4023005cd3ec",
+    "evals/cases.json": "a1513b13f5311fc0cc47862bb518d47a03697ac4dd10e22d9def3184bd01e337",
+    "evals/protocol.md": "bc3483d33d9c3e116b921f61e7f0d053f79f10eb0122f10522e688b1d01f28d4",
+    "references/floor-and-objects.md": "862a07af4707bac5e41f12b98aa955ccbde8e018f6a56bc5d9110959ea8d91a3",
+    "references/geometry.md": "977c209d531e6c78c716adbd1a89487e69163288cbc760443f4c5f729914a427",
+    "references/material-animation.md": "5f1f606079b00c17df4ed5c0a8382306b2d47b129e18e478386c26667092363b",
+    "references/projection.md": "51bffc3e8660c26b8a03ab461b1516cb5c3e502dfc61d2ce4125500bd8b3f085",
+    "references/prompts.md": "86355e14e230f408103887080e005ba5f47578bdc6726e729db1151b647986e4",
+    "references/svg-workflows.md": "fbe6379d9c82d11e988a725811cc67d49c57c751ab2177c480a81310d8e7fc71",
+    "references/visual-review.md": "69310eafca633acb1ba3a273992ca06453b8bceb853ca3f1eeb979ac1162223f",
+    "scripts/assemble_result.py": "a32dfa1cb47afdc618554072fe3d16bcb7a9a2c37c482069260aa65a87e9d46a",
+    "scripts/evaluate.py": "03ae054616db1b156eece83aad9070b9f438a1fba5470539e7fe7ae439b80ea6",
+    "scripts/guide_tools.py": "eb3aa02064d8a1647a2cb0593f6d16e58b0ecf3ee26d797479d2742226b7aec6",
+    "scripts/material_animation.py": "ca65821dc1cdb0205538235fb489e04a19af94d01f7e96015ebe0c9e06f79279",
+    "scripts/material_flow.py": "bf62204314e28571b394f531f5184bcb44b685e069e00d6379eb6db0358b46f5",
+    "scripts/prepare_evals.py": "66fec3dee10f2fb45c7e7d5864ec5446a0c9c6f616bc8a20642eb5604019c9c3",
+    "scripts/prepare_review.py": "d10567498fe24a7b6a565b2d6f666bfb54d0030e90ee31f59a12e5fdacf5cde0",
+    "scripts/requirements.txt": "f7d2bebf5af96c2b4ec2c9c9e3fff2aafe1dcd6db2b6e2ea690f91f8e8d65e1e",
+    "scripts/review_playback.py": "aa010bc137dbc8ffd219778c863e3abbbe610a56d50878055943da84b42ab742",
+    "scripts/svg_tools.py": "5747a1d35a158f13624dacc9f2eef9cae7c0b986898958afa4c128299caa669f",
+    "scripts/tile_tools.py": "836e1935bbd733cdca0aa4e82728ca3748ad820aec2da5ce86c6d19d75865490"
+  },
+  "trials": [
+    {
+      "caseId": "dancing-player",
+      "status": "failed",
+      "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player",
+      "requestFile": "dancing-player/request.txt",
+      "generationCalls": 0,
+      "reason": "Processing comparison of the unchanged r4 source; zero new image-generation calls.",
+      "expectedStatus": "failed",
+      "report": "dancing-player.json",
+      "review": "reviews/dancing-player.json"
+    }
+  ],
+  "id": "2026-10-16-chroma-processing",
+  "createdAt": "2026-10-16T08:13:00Z",
+  "actualGenerationCalls": 0,
+  "purpose": "Same preserved generated source, new deterministic processing; not a fresh image-generation trial.",
+  "sourceReuse": {
+    "run": "2026-10-16-skill-r4",
+    "caseId": "dancing-player",
+    "image": "source-01.png",
+    "sourceSHA256": "710953b449c7969bab66aca0fb0fb1a5eb731c95e6ee69021a7f56bde9c559ff"
+  }
+}

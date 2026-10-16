@@ -1,0 +1,759 @@
+{
+  "version": 1,
+  "kind": "animation",
+  "fps": 12,
+  "groundAnchorAlignment": "center",
+  "frames": [
+    {
+      "id": "frame-00",
+      "index": 0,
+      "image": "frames/frame-00.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        16,
+        144,
+        240,
+        368
+      ],
+      "sourceRect": [
+        19.59375,
+        176.34375,
+        293.90625,
+        450.65625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    },
+    {
+      "id": "frame-01",
+      "index": 1,
+      "image": "frames/frame-01.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        272,
+        144,
+        496,
+        368
+      ],
+      "sourceRect": [
+        333.09375,
+        176.34375,
+        607.40625,
+        450.65625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    },
+    {
+      "id": "frame-02",
+      "index": 2,
+      "image": "frames/frame-02.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        528,
+        144,
+        752,
+        368
+      ],
+      "sourceRect": [
+        646.59375,
+        176.34375,
+        920.90625,
+        450.65625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    },
+    {
+      "id": "frame-03",
+      "index": 3,
+      "image": "frames/frame-03.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        784,
+        144,
+        1008,
+        368
+      ],
+      "sourceRect": [
+        960.09375,
+        176.34375,
+        1234.40625,
+        450.65625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    },
+    {
+      "id": "frame-04",
+      "index": 4,
+      "image": "frames/frame-04.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        16,
+        400,
+        240,
+        624
+      ],
+      "sourceRect": [
+        19.59375,
+        489.84375,
+        293.90625,
+        764.15625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    },
+    {
+      "id": "frame-05",
+      "index": 5,
+      "image": "frames/frame-05.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        272,
+        400,
+        496,
+        624
+      ],
+      "sourceRect": [
+        333.09375,
+        489.84375,
+        607.40625,
+        764.15625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    },
+    {
+      "id": "frame-06",
+      "index": 6,
+      "image": "frames/frame-06.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        528,
+        400,
+        752,
+        624
+      ],
+      "sourceRect": [
+        646.59375,
+        489.84375,
+        920.90625,
+        764.15625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    },
+    {
+      "id": "frame-07",
+      "index": 7,
+      "image": "frames/frame-07.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        784,
+        400,
+        1008,
+        624
+      ],
+      "sourceRect": [
+        960.09375,
+        489.84375,
+        1234.40625,
+        764.15625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    },
+    {
+      "id": "frame-08",
+      "index": 8,
+      "image": "frames/frame-08.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        16,
+        656,
+        240,
+        880
+      ],
+      "sourceRect": [
+        19.59375,
+        803.34375,
+        293.90625,
+        1077.65625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    },
+    {
+      "id": "frame-09",
+      "index": 9,
+      "image": "frames/frame-09.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        272,
+        656,
+        496,
+        880
+      ],
+      "sourceRect": [
+        333.09375,
+        803.34375,
+        607.40625,
+        1077.65625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    },
+    {
+      "id": "frame-10",
+      "index": 10,
+      "image": "frames/frame-10.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        528,
+        656,
+        752,
+        880
+      ],
+      "sourceRect": [
+        646.59375,
+        803.34375,
+        920.90625,
+        1077.65625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    },
+    {
+      "id": "frame-11",
+      "index": 11,
+      "image": "frames/frame-11.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248.0
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "durationMs": 83.33333333333333,
+      "guideRect": [
+        784,
+        656,
+        1008,
+        880
+      ],
+      "sourceRect": [
+        960.09375,
+        803.34375,
+        1234.40625,
+        1077.65625
+      ],
+      "artRect": [
+        32,
+        152,
+        128,
+        160
+      ],
+      "templateNearEdgeAnchor": [
+        96,
+        312
+      ],
+      "alphaPreserved": true
+    }
+  ],
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "guideSize": [
+    1024,
+    1024
+  ],
+  "sourceRects": [
+    [
+      19.59375,
+      176.34375,
+      293.90625,
+      450.65625
+    ],
+    [
+      333.09375,
+      176.34375,
+      607.40625,
+      450.65625
+    ],
+    [
+      646.59375,
+      176.34375,
+      920.90625,
+      450.65625
+    ],
+    [
+      960.09375,
+      176.34375,
+      1234.40625,
+      450.65625
+    ],
+    [
+      19.59375,
+      489.84375,
+      293.90625,
+      764.15625
+    ],
+    [
+      333.09375,
+      489.84375,
+      607.40625,
+      764.15625
+    ],
+    [
+      646.59375,
+      489.84375,
+      920.90625,
+      764.15625
+    ],
+    [
+      960.09375,
+      489.84375,
+      1234.40625,
+      764.15625
+    ],
+    [
+      19.59375,
+      803.34375,
+      293.90625,
+      1077.65625
+    ],
+    [
+      333.09375,
+      803.34375,
+      607.40625,
+      1077.65625
+    ],
+    [
+      646.59375,
+      803.34375,
+      920.90625,
+      1077.65625
+    ],
+    [
+      960.09375,
+      803.34375,
+      1234.40625,
+      1077.65625
+    ]
+  ],
+  "guideRects": [
+    [
+      16,
+      144,
+      240,
+      368
+    ],
+    [
+      272,
+      144,
+      496,
+      368
+    ],
+    [
+      528,
+      144,
+      752,
+      368
+    ],
+    [
+      784,
+      144,
+      1008,
+      368
+    ],
+    [
+      16,
+      400,
+      240,
+      624
+    ],
+    [
+      272,
+      400,
+      496,
+      624
+    ],
+    [
+      528,
+      400,
+      752,
+      624
+    ],
+    [
+      784,
+      400,
+      1008,
+      624
+    ],
+    [
+      16,
+      656,
+      240,
+      880
+    ],
+    [
+      272,
+      656,
+      496,
+      880
+    ],
+    [
+      528,
+      656,
+      752,
+      880
+    ],
+    [
+      784,
+      656,
+      1008,
+      880
+    ]
+  ],
+  "uniformSourceScale": 1.224609375,
+  "order": "row-major",
+  "sampleRasterSize": [
+    274,
+    274
+  ],
+  "sampling": "uniform square EXTENT, BICUBIC",
+  "sheet": {
+    "image": "sheet.png",
+    "columns": 4,
+    "rows": 3,
+    "frame": [
+      192,
+      320
+    ],
+    "spacing": 0
+  },
+  "anchorConversion": {
+    "from": "near-edge",
+    "to": "center",
+    "offset": [
+      0,
+      -64.0
+    ],
+    "templateNearEdgeAnchor": [
+      96,
+      312
+    ],
+    "centerAnchor": [
+      96,
+      248.0
+    ],
+    "artMoved": false
+  },
+  "materialProcessing": {
+    "method": "svg_tools.materialize",
+    "strength": 0.7,
+    "colorBehavior": "Authored SVG palette and lighting; generated high-frequency RGB detail only",
+    "motion": "Only the 12 supplied atlas phases; no synthesized motion or interpolation",
+    "geometry": "Authored SVG full frame and alpha; source is appearance material only"
+  },
+  "provenance": {
+    "source": {
+      "path": "../source-01.png",
+      "sha256": "8f8364544221868e4e44ff15db71ccf98c0d1275c3bbc5389a33f92ec41fe159",
+      "size": [
+        1254,
+        1254
+      ],
+      "fullyOpaque": true,
+      "role": "appearance-material-phases"
+    },
+    "guide": {
+      "path": "../guide.json",
+      "sha256": "21de85fd4c747ac6a20fd8dd1df493b32e1b20a6a5c2fa34745720bbe879a8cf",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "templateGeometry": {
+      "path": "../template/geometry.json",
+      "sha256": "158fd350e096dd06622c2d2cb200b29118ee8c59bdb2e25dac704f8ca93bb84e"
+    },
+    "templateSVG": {
+      "path": "../template/shaded.svg",
+      "sha256": "d2a0c65123e01ac6f153b550c87f373b76fc8e5ed695e140221692971f6f3939"
+    },
+    "templateRaster": {
+      "path": "../template/shaded.png",
+      "sha256": "1b372e0e2a2718632f03961c8d46e18baeab405e513b9244a80a209022c1517b",
+      "size": [
+        192,
+        320
+      ]
+    },
+    "masks": {
+      "top": {
+        "path": "../template/mask-top.png",
+        "sha256": "1104166e2e409e514cbaabadae250354da4ad2f4947a7abf4b3ec5a13814dd9c",
+        "size": [
+          192,
+          320
+        ]
+      },
+      "front": {
+        "path": "../template/mask-front.png",
+        "sha256": "eb2d58afe5c027a7fa36c58012736b05c014ecbb7badf58651d5b4e72d101a22",
+        "size": [
+          192,
+          320
+        ]
+      },
+      "studs": {
+        "path": "../template/mask-studs.png",
+        "sha256": "1a29dbd242947a1c4f762d89bef61be4298f7ac45e8f5a741e45b25aedb33b2e",
+        "size": [
+          192,
+          320
+        ]
+      }
+    }
+  }
+}

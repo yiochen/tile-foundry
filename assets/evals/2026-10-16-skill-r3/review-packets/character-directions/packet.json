@@ -1,0 +1,612 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "character-directions",
+  "request": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "same-character": "One consistent identity, outfit, proportions and camera; turn the subject, not the camera.",
+    "direction-height": "Eight upright views have the same standing design height within 4px; no per-direction art-bounds fitting.",
+    "direction-contact": "Independent review of the floor registration and physical sole/support center confirms consistent contact; toe length may change the visible bottom.",
+    "cutout": "No calibration floor or pose-guide strokes remain.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "directions",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "heightAxis": [
+      0,
+      -1
+    ],
+    "elevationScale": 1,
+    "groundAnchorAlignment": "center",
+    "sprites": [
+      {
+        "id": "player-north",
+        "image": "processed/frames/frame-00.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 0,
+        "direction": "north"
+      },
+      {
+        "id": "player-northeast",
+        "image": "processed/frames/frame-01.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 1,
+        "direction": "northeast"
+      },
+      {
+        "id": "player-east",
+        "image": "processed/frames/frame-02.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 2,
+        "direction": "east"
+      },
+      {
+        "id": "player-southeast",
+        "image": "processed/frames/frame-03.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 3,
+        "direction": "southeast"
+      },
+      {
+        "id": "player-south",
+        "image": "processed/frames/frame-04.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 4,
+        "direction": "south"
+      },
+      {
+        "id": "player-southwest",
+        "image": "processed/frames/frame-05.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 5,
+        "direction": "southwest"
+      },
+      {
+        "id": "player-west",
+        "image": "processed/frames/frame-06.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 6,
+        "direction": "west"
+      },
+      {
+        "id": "player-northwest",
+        "image": "processed/frames/frame-07.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 7,
+        "direction": "northwest"
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "player-north",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          51,
+          111,
+          271,
+          517
+        ],
+        "anchorSource": [
+          161.0,
+          410.5
+        ],
+        "scale": [
+          0.5818181818181818,
+          0.5812807881773399
+        ],
+        "subpixelShift": [
+          0.0,
+          -0.09359605911328117
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "player-northeast",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          53,
+          111,
+          278,
+          517
+        ],
+        "anchorSource": [
+          165.0,
+          410.0
+        ],
+        "scale": [
+          0.5733333333333334,
+          0.5714285714285714
+        ],
+        "subpixelShift": [
+          -0.21333333333333826,
+          0.1428571428571388
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "player-east",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          48,
+          111,
+          270,
+          517
+        ],
+        "anchorSource": [
+          159.5,
+          410.0
+        ],
+        "scale": [
+          0.581081081081081,
+          0.5788177339901478
+        ],
+        "subpixelShift": [
+          0.20945945945946676,
+          -0.06650246305417795
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "player-southeast",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          44,
+          110,
+          270,
+          518
+        ],
+        "anchorSource": [
+          157.0,
+          410.5
+        ],
+        "scale": [
+          0.5707964601769911,
+          0.571078431372549
+        ],
+        "subpixelShift": [
+          -0.5,
+          0.39093137254903354
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "player-south",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          51,
+          72,
+          271,
+          476
+        ],
+        "anchorSource": [
+          161.0,
+          370.0
+        ],
+        "scale": [
+          0.5818181818181818,
+          0.5816831683168316
+        ],
+        "subpixelShift": [
+          0.0,
+          -0.34158415841582723
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "player-southwest",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          53,
+          72,
+          278,
+          476
+        ],
+        "anchorSource": [
+          165.5,
+          369.5
+        ],
+        "scale": [
+          0.5688888888888889,
+          0.5693069306930693
+        ],
+        "subpixelShift": [
+          0.0,
+          -0.36881188118809405
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "player-west",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          48,
+          69,
+          270,
+          476
+        ],
+        "anchorSource": [
+          159.5,
+          369.0
+        ],
+        "scale": [
+          0.581081081081081,
+          0.5798525798525799
+        ],
+        "subpixelShift": [
+          0.20945945945946676,
+          0.044226044226036265
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    },
+    {
+      "sprite": "player-northwest",
+      "registrationMethod": "measured-calibration-floor",
+      "transform": {
+        "sourceSize": [
+          316,
+          527
+        ],
+        "sourceRect": [
+          44,
+          73,
+          270,
+          476
+        ],
+        "anchorSource": [
+          157.0,
+          369.5
+        ],
+        "scale": [
+          0.5707964601769911,
+          0.5707196029776674
+        ],
+        "subpixelShift": [
+          -0.5,
+          -0.21836228287838821
+        ]
+      },
+      "keyRGB": [
+        123,
+        209,
+        75
+      ]
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/references/guide.png"
+    },
+    {
+      "role": "processed",
+      "id": "player-north",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-00.png"
+    },
+    {
+      "role": "processed",
+      "id": "player-northeast",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-01.png"
+    },
+    {
+      "role": "processed",
+      "id": "player-east",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-02.png"
+    },
+    {
+      "role": "processed",
+      "id": "player-southeast",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-03.png"
+    },
+    {
+      "role": "processed",
+      "id": "player-south",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-04.png"
+    },
+    {
+      "role": "processed",
+      "id": "player-southwest",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-05.png"
+    },
+    {
+      "role": "processed",
+      "id": "player-west",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-06.png"
+    },
+    {
+      "role": "processed",
+      "id": "player-northwest",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/character-directions/processed/frames/frame-07.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-0-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-1-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-1-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-2-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-2-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-3-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-3-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-4-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-4-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-5-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-5-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-6-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-6-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-7-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r3/review-packets/character-directions/placement-7-dark.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/skills/build-overlap-tiles/references/visual-review.md"
+}

@@ -91,7 +91,7 @@ subcommand for input options. Output paths are explicit; originals are not repla
 - Separate logical footprint, visible-art bounds, and drawing anchor in the inspector.
 - Workflows: five trials side by side, block versus sphere style references, measured joins, SVG outline, live material/height controls, and a mixed-height scene.
 - Characters: box, stick, SVG, raster, and jumping guides; floor-derived normalization, five green-key cutouts, two detached extractions, and exact-subtraction comparisons.
-- Evals: all 13 current cases with exact requests, expanded model prompts, supplied references, originals, processed sprites, recorded grades and review/processing diagnostics. Latest outcomes include failures. Open `?view=evals`, or link directly with `&case=CASE_ID`.
+- Evals: all current cases with exact requests, expanded model prompts, supplied references, originals, processed sprites, recorded grades and review/processing diagnostics. Latest outcomes include failures. Open `?view=evals`, or link directly with `&case=CASE_ID`.
 - Single-frame SVG guides can be overlaid on processed results at their recorded ground center and cell scale. Adjust opacity or open the original SVG; add `&overlay=svg` to share the comparison.
 - Every multi-sprite result has a looping 12 fps player, a draggable progress bar, previous/next frame controls and direct sprite selection. Scrubbing pauses playback. Directions and layers can be stepped through as sequences.
 - Failed runs can expose clearly labeled raw-source players: complete saved pose panels or material-sheet panels separated in transparent gutters, retaining the original pixels. These previews do not change eval grades or claim calibrated runtime registration.
@@ -190,8 +190,12 @@ scene, output contract and eval tooling travel together. It targets square-grid
 **top-down oblique projection**, with independent footprints, art bounds, ground
 anchors and height. All current animation output/preview schedules use **12 fps**.
 
-The new [13-case suite](skills/build-overlap-tiles/evals/cases.json) is specified
-and has a fresh 14-call run covering all 13 cases. It includes raised lava with a 32px front wall, seam-free flat
+See [the skill tuning findings](docs/skill-tuning-2026-10-16.md) for fresh-agent
+iterations and the distinction between image-model misses and workflow defects.
+
+The [suite](skills/build-overlap-tiles/evals/cases.json) contains the original 13 cases
+and a separately specified authored-flowing-lava case. The baseline has a fresh
+14-call run covering the original 13 cases. It includes raised lava with a 32px front wall, seam-free flat
 floors, full/partial bases, floating objects, eight directions, 2×2/3×2 footprints,
 a disjoint-support arch, moving waves/lava, separated stool/character layers,
 and a 12-frame dance. Each prepared request names an explicit output directory.
@@ -210,7 +214,7 @@ image inspection; pixel differences, coverage and bounds are diagnostics. File
 integrity, declared geometry, required frames/layers and 12 fps remain delivery checks.
 
 ```sh
-# Replay the latest recorded assessment of all 13 cases
+# Replay the latest recorded assessment of the original 13-case baseline
 npm run eval:skill
 
 # Reproduce the original grading without changing it

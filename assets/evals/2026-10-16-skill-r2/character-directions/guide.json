@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "kind": "object-sheet",
+  "size": [
+    1152,
+    768
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "cellSize": 128,
+  "anchor": [
+    96,
+    248
+  ],
+  "keyRGB": [
+    123,
+    209,
+    75
+  ],
+  "columns": 4,
+  "rows": 2,
+  "gutter": [
+    96,
+    64
+  ],
+  "outerMargins": [
+    48,
+    32
+  ],
+  "cells": [
+    {
+      "index": 0,
+      "direction": "north",
+      "rect": [
+        48,
+        32,
+        240,
+        352
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        32,
+        184,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 1,
+      "direction": "northeast",
+      "rect": [
+        336,
+        32,
+        528,
+        352
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        32,
+        184,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 2,
+      "direction": "east",
+      "rect": [
+        624,
+        32,
+        816,
+        352
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        32,
+        184,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 3,
+      "direction": "southeast",
+      "rect": [
+        912,
+        32,
+        1104,
+        352
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        32,
+        184,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 4,
+      "direction": "south",
+      "rect": [
+        48,
+        416,
+        240,
+        736
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        32,
+        184,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 5,
+      "direction": "southwest",
+      "rect": [
+        336,
+        416,
+        528,
+        736
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        32,
+        184,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 6,
+      "direction": "west",
+      "rect": [
+        624,
+        416,
+        816,
+        736
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        32,
+        184,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 7,
+      "direction": "northwest",
+      "rect": [
+        912,
+        416,
+        1104,
+        736
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        32,
+        184,
+        160,
+        312
+      ]
+    }
+  ],
+  "order": "row-major",
+  "nominalStandingHeight": 160,
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "projection": "top-down-oblique-square-grid",
+  "authoredBeforeGeneration": true,
+  "subjectRegistration": {
+    "nominalHeadCrownY": 88,
+    "groundRoot": [
+      96,
+      248
+    ],
+    "nominalStandingHeight": 160,
+    "rootIndependentOfToes": true
+  }
+}

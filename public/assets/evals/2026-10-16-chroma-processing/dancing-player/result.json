@@ -1,0 +1,2045 @@
+{
+  "kind": "animation",
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "nominalStandingHeight": 160,
+  "version": 2,
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "sprites": [
+    {
+      "id": "dance-01",
+      "index": 0,
+      "image": "recovered/frames/frame-00.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        38,
+        77,
+        109,
+        198
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-00",
+        "image": "frames/frame-00.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            47,
+            247,
+            228,
+            394
+          ],
+          "anchor": [
+            137.5,
+            320.5
+          ],
+          "aspect": 1.2312925170068028,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            277,
+            448
+          ],
+          "sourceRect": [
+            47,
+            79,
+            228,
+            394
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            137.5,
+            320.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.0,
+            0.03333333333333144
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            77,
+            128,
+            223
+          ],
+          "scale": [
+            0.7071823204419889,
+            0.707936507936508
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            193,
+            163,
+            303
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 10332,
+          "clearedPixels": 10233,
+          "removedAlphaMass": 2534666,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 0,
+        "sourceRect": [
+          0,
+          0,
+          277,
+          448
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "dance-02",
+      "index": 1,
+      "image": "recovered/frames/frame-01.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        31,
+        74,
+        130,
+        227
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-01",
+        "image": "frames/frame-01.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            63,
+            247,
+            244,
+            394
+          ],
+          "anchor": [
+            153.5,
+            320.5
+          ],
+          "aspect": 1.2312925170068028,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            299,
+            448
+          ],
+          "sourceRect": [
+            63,
+            75,
+            245,
+            394
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            153.5,
+            320.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            -0.1456043956043942,
+            0.07210031347960921
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            74,
+            129,
+            226
+          ],
+          "scale": [
+            0.7087912087912088,
+            0.7084639498432602
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            193,
+            163,
+            303
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 10047,
+          "clearedPixels": 9969,
+          "removedAlphaMass": 2429941,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 1,
+        "sourceRect": [
+          277,
+          0,
+          576,
+          448
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "dance-03",
+      "index": 2,
+      "image": "recovered/frames/frame-02.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        50,
+        65,
+        107,
+        212
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-02",
+        "image": "frames/frame-02.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            57,
+            247,
+            238,
+            394
+          ],
+          "anchor": [
+            147.5,
+            320.5
+          ],
+          "aspect": 1.2312925170068028,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            298,
+            448
+          ],
+          "sourceRect": [
+            56,
+            62,
+            238,
+            394
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            147.5,
+            320.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.1456043956043942,
+            0.025602409638537438
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            31,
+            65,
+            129,
+            235
+          ],
+          "scale": [
+            0.7087912087912088,
+            0.7078313253012049
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            193,
+            163,
+            303
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 10355,
+          "clearedPixels": 10269,
+          "removedAlphaMass": 2497636,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 2,
+        "sourceRect": [
+          576,
+          0,
+          874,
+          448
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "dance-04",
+      "index": 3,
+      "image": "recovered/frames/frame-03.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        18,
+        78,
+        155,
+        216
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-03",
+        "image": "frames/frame-03.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            51,
+            248,
+            232,
+            389
+          ],
+          "anchor": [
+            141.5,
+            318.5
+          ],
+          "aspect": 1.2836879432624113,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            278,
+            448
+          ],
+          "sourceRect": [
+            33,
+            79,
+            249,
+            394
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            141.5,
+            318.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.1458333333333286,
+            0.4492063492063494
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            19,
+            78,
+            153,
+            223
+          ],
+          "scale": [
+            0.7083333333333334,
+            0.707936507936508
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            195,
+            163,
+            304
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 10322,
+          "clearedPixels": 10245,
+          "removedAlphaMass": 2520144,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 3,
+        "sourceRect": [
+          874,
+          0,
+          1152,
+          448
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "dance-05",
+      "index": 4,
+      "image": "recovered/frames/frame-04.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        27,
+        47,
+        132,
+        246
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-04",
+        "image": "frames/frame-04.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            47,
+            253,
+            228,
+            400
+          ],
+          "anchor": [
+            137.5,
+            326.5
+          ],
+          "aspect": 1.2312925170068028,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            277,
+            466
+          ],
+          "sourceRect": [
+            41,
+            43,
+            228,
+            400
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            137.5,
+            326.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            -0.1176470588235361,
+            -0.1176470588235361
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            28,
+            48,
+            132,
+            252
+          ],
+          "scale": [
+            0.7058823529411765,
+            0.7058823529411765
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            193,
+            163,
+            303
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 10888,
+          "clearedPixels": 10816,
+          "removedAlphaMass": 2656681,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 4,
+        "sourceRect": [
+          0,
+          448,
+          277,
+          914
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "dance-06",
+      "index": 5,
+      "image": "recovered/frames/frame-05.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        41,
+        54,
+        116,
+        212
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-05",
+        "image": "frames/frame-05.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            63,
+            253,
+            244,
+            400
+          ],
+          "anchor": [
+            153.5,
+            326.5
+          ],
+          "aspect": 1.2312925170068028,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            299,
+            466
+          ],
+          "sourceRect": [
+            63,
+            53,
+            245,
+            400
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            153.5,
+            326.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            -0.1456043956043942,
+            -0.10518731988472041
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            55,
+            129,
+            245
+          ],
+          "scale": [
+            0.7087912087912088,
+            0.7060518731988472
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            193,
+            163,
+            303
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 11488,
+          "clearedPixels": 11418,
+          "removedAlphaMass": 2809554,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 5,
+        "sourceRect": [
+          277,
+          448,
+          576,
+          914
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "dance-07",
+      "index": 6,
+      "image": "recovered/frames/frame-06.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        36,
+        43,
+        121,
+        223
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-06",
+        "image": "frames/frame-06.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            57,
+            253,
+            238,
+            400
+          ],
+          "anchor": [
+            147.5,
+            326.5
+          ],
+          "aspect": 1.2312925170068028,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            298,
+            466
+          ],
+          "sourceRect": [
+            56,
+            38,
+            238,
+            400
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            147.5,
+            326.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.1456043956043942,
+            -0.022099447513795667
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            31,
+            44,
+            129,
+            256
+          ],
+          "scale": [
+            0.7087912087912088,
+            0.7071823204419889
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            193,
+            163,
+            303
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 11007,
+          "clearedPixels": 10949,
+          "removedAlphaMass": 2691247,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 6,
+        "sourceRect": [
+          576,
+          448,
+          874,
+          914
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "dance-08",
+      "index": 7,
+      "image": "recovered/frames/frame-07.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        32,
+        58,
+        147,
+        212
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-07",
+        "image": "frames/frame-07.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            51,
+            253,
+            232,
+            400
+          ],
+          "anchor": [
+            141.5,
+            326.5
+          ],
+          "aspect": 1.2312925170068028,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            278,
+            466
+          ],
+          "sourceRect": [
+            51,
+            58,
+            258,
+            400
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            141.5,
+            326.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.1690821256038646,
+            0.008771929824547442
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            58,
+            146,
+            242
+          ],
+          "scale": [
+            0.7053140096618358,
+            0.7076023391812866
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            193,
+            163,
+            303
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 11622,
+          "clearedPixels": 11581,
+          "removedAlphaMass": 2803797,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 7,
+        "sourceRect": [
+          874,
+          448,
+          1152,
+          914
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "dance-09",
+      "index": 8,
+      "image": "recovered/frames/frame-08.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        50,
+        48,
+        111,
+        253
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-08",
+        "image": "frames/frame-08.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            47,
+            227,
+            228,
+            374
+          ],
+          "anchor": [
+            137.5,
+            300.5
+          ],
+          "aspect": 1.2312925170068028,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            277,
+            452
+          ],
+          "sourceRect": [
+            47,
+            18,
+            229,
+            375
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            137.5,
+            300.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            -0.1456043956043942,
+            -0.41176470588237635
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            49,
+            129,
+            252
+          ],
+          "scale": [
+            0.7087912087912088,
+            0.7058823529411765
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            193,
+            163,
+            303
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 10990,
+          "clearedPixels": 10946,
+          "removedAlphaMass": 2674151,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 8,
+        "sourceRect": [
+          0,
+          914,
+          277,
+          1366
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "dance-10",
+      "index": 9,
+      "image": "recovered/frames/frame-09.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        27,
+        63,
+        142,
+        238
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-09",
+        "image": "frames/frame-09.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            63,
+            227,
+            244,
+            374
+          ],
+          "anchor": [
+            153.5,
+            300.5
+          ],
+          "aspect": 1.2312925170068028,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            299,
+            452
+          ],
+          "sourceRect": [
+            56,
+            40,
+            256,
+            375
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            153.5,
+            300.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.26250000000000284,
+            -0.29402985074625576
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            27,
+            64,
+            141,
+            237
+          ],
+          "scale": [
+            0.705,
+            0.7074626865671642
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            193,
+            163,
+            303
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 11314,
+          "clearedPixels": 11241,
+          "removedAlphaMass": 2719356,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 9,
+        "sourceRect": [
+          277,
+          914,
+          576,
+          1366
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "dance-11",
+      "index": 10,
+      "image": "recovered/frames/frame-10.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        43,
+        51,
+        127,
+        250
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-10",
+        "image": "frames/frame-10.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            57,
+            227,
+            238,
+            374
+          ],
+          "anchor": [
+            147.5,
+            300.5
+          ],
+          "aspect": 1.2312925170068028,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            298,
+            452
+          ],
+          "sourceRect": [
+            57,
+            23,
+            251,
+            375
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            147.5,
+            300.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            0.09020618556700555,
+            -0.2997159090909065
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            52,
+            137,
+            249
+          ],
+          "scale": [
+            0.7061855670103093,
+            0.7073863636363636
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            193,
+            163,
+            303
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 11077,
+          "clearedPixels": 10994,
+          "removedAlphaMass": 2682826,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 10,
+        "sourceRect": [
+          576,
+          914,
+          874,
+          1366
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    },
+    {
+      "id": "dance-12",
+      "index": 11,
+      "image": "recovered/frames/frame-11.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        33,
+        62,
+        127,
+        239
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "processing": {
+        "id": "frame-11",
+        "image": "frames/frame-11.png",
+        "durationMs": 83.33333333333333,
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "floor": {
+          "mode": "solid",
+          "rect": [
+            51,
+            227,
+            232,
+            374
+          ],
+          "anchor": [
+            141.5,
+            300.5
+          ],
+          "aspect": 1.2312925170068028,
+          "alphaThreshold": 64,
+          "nominalSpan": 128,
+          "detector": "Last wide contiguous alpha band with median side edges; inspect occlusion or perspective"
+        },
+        "cleanup": {
+          "minAlpha": 32,
+          "removedPixels": 0,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "normalization": {
+          "sourceSize": [
+            278,
+            452
+          ],
+          "sourceRect": [
+            51,
+            38,
+            233,
+            375
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "anchorSource": [
+            141.5,
+            300.5
+          ],
+          "size": [
+            192,
+            320
+          ],
+          "subpixelShift": [
+            -0.1456043956043942,
+            -0.38575667655786106
+          ],
+          "footprint": [
+            128,
+            128
+          ],
+          "artRect": [
+            32,
+            63,
+            129,
+            238
+          ],
+          "scale": [
+            0.7087912087912088,
+            0.7062314540059347
+          ],
+          "sourceAnchorMode": "explicit"
+        },
+        "chroma": {
+          "method": "Explicit floor-region chroma key with a soft hue/saturation matte",
+          "keyRGB": [
+            255,
+            0,
+            255
+          ],
+          "keyHueDegrees": 300.0,
+          "hueToleranceDegrees": 28,
+          "hueFeatherDegrees": 8,
+          "minSaturation": 0.5,
+          "saturationFeather": 0.1,
+          "region": [
+            29,
+            193,
+            164,
+            303
+          ],
+          "regionPaddingPixels": 3,
+          "keyedPixels": 11136,
+          "clearedPixels": 11057,
+          "removedAlphaMass": 2711677,
+          "removedCornerRemnants": [],
+          "size": [
+            192,
+            320
+          ],
+          "anchor": [
+            96,
+            248
+          ],
+          "exactCharacterMatte": false,
+          "limitation": "Reserve the key hue in the floor region; mixed shoe edges are approximate and green character parts there would also be keyed"
+        },
+        "registrationBasis": "floor-width",
+        "floorShapeAssumption": "Measured floor width defines scale; measured center defines root. Floor shape is not corrected or certified.",
+        "anchorMode": "Measured calibration-floor center, independent of feet or cutout bounds",
+        "index": 11,
+        "sourceRect": [
+          874,
+          914,
+          1152,
+          1366
+        ],
+        "sheetCleanup": {
+          "minAlpha": 32,
+          "removedPixels": 135880,
+          "warning": "Review at final size: intentionally faint details can also be removed."
+        },
+        "panelIsolation": "transparent-separators"
+      },
+      "role": "player",
+      "registration": {
+        "method": "measured-calibration-floor",
+        "basis": "floor-width",
+        "guide": "guide.json"
+      },
+      "durationMs": 83.33333333333333
+    }
+  ],
+  "geometryDeclaration": "Footprints/elevation/roles are authored constraints; visual verification required",
+  "fps": 12
+}

@@ -1,0 +1,36 @@
+{
+  "type": "execution-observation; ungraded",
+  "imagesInspected": [
+    "guide.png",
+    "template/shaded.png",
+    "source-01.png",
+    "processed/frames/frame-00.png",
+    "previews/frames-dark-native.png",
+    "previews/repeat-sync-00-native.png",
+    "previews/repeat-offset-00-2x.png"
+  ],
+  "browserPlayback": {
+    "path": "previews/playback.html",
+    "openedSuccessfully": true,
+    "observedFrameValues": [
+      0,
+      11,
+      1,
+      3,
+      10,
+      7
+    ],
+    "observedFPSLabel": 12,
+    "desktopScreenshotInspected": true,
+    "offsetPhasesInspected": true,
+    "scale2Inspected": true,
+    "mobileScreenshotInspected": true,
+    "mobileViewport": [
+      390,
+      844
+    ],
+    "viewportReset": true,
+    "screenshots": "Actual Chrome screenshots present in executor tool trace; static registered placement PNGs retained in previews/"
+  },
+  "grading": "None. Independent visual review remains for parent."
+}

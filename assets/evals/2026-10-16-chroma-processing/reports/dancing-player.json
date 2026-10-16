@@ -1,0 +1,509 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "dancing-player",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a 12-frame player dancing spritesheet on a 128x128 calibration tile at exactly 12 fps. Keep one player design with nominal 160px standing height, the same anatomy scale and floor-center foot/root anchor in every frame. Remove the calibration floor, retain complete limbs, and deliver a playable loop. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "710953b449c7969bab66aca0fb0fb1a5eb731c95e6ee69021a7f56bde9c559ff"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/guide.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "b3de3776075edaec4b912ff1064b06937927ae43b11be89102ec5a5bd8fd72e9"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "animation",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "dance-01",
+        "dance-02",
+        "dance-03",
+        "dance-04",
+        "dance-05",
+        "dance-06",
+        "dance-07",
+        "dance-08",
+        "dance-09",
+        "dance-10",
+        "dance-11",
+        "dance-12"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "12-fps-schedule",
+      "pass": true,
+      "detail": "12 fps / 83.333333 ms"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "The hair, faces, visible boot tops and frontal torsos keep a consistent slightly elevated frontal camera across the twelve poses. There is no visible perspective zoom or camera rotation. The registered preview uses parallel screen-aligned square edges. This is a qualitative camera/projection judgment, not proof of exact geometry.",
+      "evidence": [
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/source-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/references/guide.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-00.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-02.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-03.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-04.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-05.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-06.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-07.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-08.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-09.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-10.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-11.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/playback.html"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "Every delivered frame retains the full hair, hands, scarf tails, legs and both shoes with surrounding frame clearance. The lifted leg in frame 6 and the extended hands in frames 4 and 8 remain present. No large silhouette cutoff or undeclared cast shadow is visible. Small edge erosion and colored debris are assessed under cutout-quality.",
+      "evidence": [
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-00.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-02.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-03.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-04.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-05.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-06.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-07.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-08.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-09.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-10.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-11.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-1-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-1-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-2-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-2-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-3-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-3-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-4-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-4-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-5-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-5-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-6-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-6-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-7-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-7-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-8-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-8-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-9-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-9-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-10-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-10-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/playback.html"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "The same near-upright fists-up stance in frames 1 and 12 does not sit consistently against the stationary ground cross: the boot cuffs/ankle supports, belt and head all sit visibly lower in frame 1. The change involves the whole figure, not just toe-tip extent or a raised arm. The guide supplies a common floor-center root, but the delivered anatomy is not consistently placed around it.",
+      "evidence": [
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/references/guide.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/source-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-00.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-11.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/playback.html"
+      ]
+    },
+    {
+      "check": "same-player",
+      "pass": true,
+      "detail": "All twelve images read as the same brown-haired, brown-eyed player with the same blue scarf/cape, cream shirt, brown belt/pouch and boots, navy trousers and gloves. Face expression and scarf shape vary with the poses, while the outfit, palette and lighting remain coherent. No missing or substituted major limb is visible.",
+      "evidence": [
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/source-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-00.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-02.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-03.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-04.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-05.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-06.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-07.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-08.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-09.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-10.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-11.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-1-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-1-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-2-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-2-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-3-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-3-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-4-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-4-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-5-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-5-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-6-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-6-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-7-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-7-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-8-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-8-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-9-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-9-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-10-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-10-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/playback.html"
+      ]
+    },
+    {
+      "check": "dancing-poses",
+      "pass": true,
+      "detail": "The twelve ordered panels provide readable arm/leg dance keys: fists up, one-arm reaches, open arms, the one-leg lift in frame 6, both arms overhead in frame 7, and feet together in frame 8. Each delivered key preserves two arms and two legs; no fused or missing limb prevents pose reading. Several keys resemble one another. The loop-boundary placement defect is recorded separately; screenshots do not establish continuously perceived fluidity.",
+      "evidence": [
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/source-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/references/guide.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-00.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-02.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-03.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-04.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-05.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-06.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-07.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-08.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-09.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-10.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-11.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/playback.html"
+      ]
+    },
+    {
+      "check": "design-height",
+      "pass": null,
+      "detail": "The head, torso and limb proportions look broadly comparable, and raised arms/one bent knee legitimately change the silhouette. However, the visible whole-body vertical drift relative to the root makes the nominal 160px standing target ambiguous; the boot-covered ground landmarks and lack of a neutral calibrated anatomy reference prevent a confident anatomy-height judgment. I did not infer standing height from alpha bounds or resize poses to compare them.",
+      "evidence": [
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/references/guide.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/source-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-00.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-03.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-05.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-07.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-09.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-11.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/playback.html"
+      ]
+    },
+    {
+      "check": "contact-stability",
+      "pass": false,
+      "detail": "At the fixed cross, comparable planted stances shift vertically through the sequence. Frames 1 and 12 are the clearest comparison: ankle supports, cuffs, torso and head move together despite nearly matching fists-up poses. This produces a grounded-position jump rather than a plausible weight shift or toe-length change. The declared operations also use individual panel registrations; they do not establish visual contact stability.",
+      "evidence": [
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/source-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-00.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-03.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-06.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-09.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-11.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/playback.html"
+      ]
+    },
+    {
+      "check": "cutout-quality",
+      "pass": false,
+      "detail": "The large magenta calibration floors are removed, but the delivery is not a clean cutout. At native size and especially 2x on light backgrounds, trouser/cuff and scarf outlines show small background-colored pinholes, ragged bites and detached colored flecks; frames 1 and 12 are clear examples around the outer thighs and cuff transitions. Direct transparent-frame inspection also shows isolated magenta/blue specks away from the figure, including low in frames 9, 11 and 12. Dark-background inspection preserves readable shoes but does not eliminate the edge defects.",
+      "evidence": [
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/source-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-00.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-02.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-03.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-04.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-05.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-06.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-07.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-08.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-09.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-10.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-11.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-1-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-1-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-2-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-2-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-3-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-3-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-4-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-4-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-5-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-5-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-6-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-6-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-7-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-7-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-8-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-8-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-9-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-9-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-10-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-10-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/playback.html"
+      ]
+    },
+    {
+      "check": "loop",
+      "pass": false,
+      "detail": "Interactive 12 fps playback was started and observed through browser screenshots; sequential live screenshots included frames 12, 1, 2 and 3. I also paused and directly scrubbed 12 to 1 at 2x. The near-matching end/start fists-up pose jumps downward relative to the unchanged cross: head, belt, boot cuffs and feet all shift. It is an unintended placement pop even though character scale is broadly similar. Native-size playback was additionally inspected on the dark background. Screenshot sampling establishes this visible boundary defect, but cannot establish continuously perceived fluidity of the whole loop.",
+      "evidence": [
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-11.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-00.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/playback.html"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The processed sprites visibly correspond to the twelve row-major original panels: face/outfit details, hand poses, scarf contours and footwear match their source counterparts. Removal of the magenta floors/background and the declared panel transforms explain the delivered framing. I see no invented replacement character art or visual evidence of an additional undeclared pose-fitting transform. This appearance comparison does not independently prove the processing implementation or exact geometry.",
+      "evidence": [
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/source-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-00.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-01.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-02.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-03.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-04.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-05.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-06.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-07.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-08.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-09.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-10.png",
+        "assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-11.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-1-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-1-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-2-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-2-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-3-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-3-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-4-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-4-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-5-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-5-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-6-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-6-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-7-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-7-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-8-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-8-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-9-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-9-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-10-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-10-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-light.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-dark.png",
+        "assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/packet.json"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "dance-01-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "dance-02-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "dance-03-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "dance-04-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "dance-05-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "dance-06-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "dance-07-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "dance-08-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "dance-09-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "dance-10-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "dance-11-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "dance-12-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "Codex independent vision reviewer /root/independent_chroma_review; sanitized packet only; 2026-10-16",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

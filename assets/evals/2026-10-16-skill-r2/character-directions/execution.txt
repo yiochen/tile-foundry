@@ -1,0 +1,13 @@
+One built-in image_gen.imagegen call was made using imagegen-input-01.json.
+The original returned PNG is preserved unchanged as source-01.png.
+The exact model prompt is in prompt-01.txt and generation-01.json.
+The sole supplied image reference is references/guide.png; its role and hash are in generation-01.json.
+Registration and guides were authored before generation.
+The repository tools/tilekit.py wrapper was used for extraction after verifying its underlying tile_tools.py matches the frozen skill byte-for-byte.
+Extraction failed: Calibration floor is not square enough; regenerate instead of warping.
+No correction generation, gutter recovery, per-axis scaling, anchor fitting, clipping, or color guessing was performed.
+The canonical result records failure with an empty sprite list. No runtime placement preview is available.
+Source and guide previews are composited on light and dark backgrounds at native and 2x scale; the source registration overlay marks authored constraints only.
+Original/source PNG and preview inspection was performed by the executor only to verify artifacts, not to assign visual grades.
+Independent visual review is delegated by the parent session.
+No repository code, skill source, or Git state was changed.

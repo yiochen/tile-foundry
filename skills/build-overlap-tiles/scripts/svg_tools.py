@@ -15,11 +15,13 @@ PALETTES = {
     "coral": ("#f4593e", "#d63223", "#ff9270"),
     "amber": ("#e5a633", "#aa661e", "#ffe091"),
     "mint": ("#51ba93", "#238766", "#a6efc5"),
+    "ocean": ("#3c9ed1", "#23699e", "#85d7f1"),
+    "lava": ("#eb5b24", "#a42b18", "#ffb344"),
 }
 
 
 def block_svg(height=32, width=128, depth=128, frame=(192, 320), anchor=(96, 312),
-              palette="coral", shaded=False, layer=None):
+              palette="coral", shaded=False, layer=None, plain=False, terrain=False):
     """Front-on parallel projection: horizontal top face and vertical front face.
 
     Side edges cannot converge. The top face is exactly width × depth; height is
@@ -42,10 +44,10 @@ def block_svg(height=32, width=128, depth=128, frame=(192, 320), anchor=(96, 312
       <linearGradient id="front" x2="0" y2="1"><stop stop-color="{color}"/><stop offset=".13" stop-color="{dark}"/><stop offset="1" stop-color="{dark}"/></linearGradient>
       <radialGradient id="cap" cx=".32" cy=".25" r=".8"><stop stop-color="{light}"/><stop offset=".55" stop-color="{color}"/><stop offset="1" stop-color="{dark}"/></radialGradient>
     </defs>'''
-    top_rect = f'<rect x="{x}" y="{top}" width="{width}" height="{depth}" fill="{("url(#top)" if shaded else color) if not layer else "white"}"/>'
-    front_rect = f'<rect x="{x}" y="{front}" width="{width}" height="{height}" fill="{("url(#front)" if shaded else dark) if not layer else "white"}"/>'
+    top_rect = f'<rect x="{x}" y="{top}" width="{width}" height="{depth}" fill="{("url(#top)" if shaded and not terrain else color) if not layer else "white"}"/>'
+    front_rect = f'<rect x="{x}" y="{front}" width="{width}" height="{height}" fill="{("url(#front)" if shaded and not terrain else dark) if not layer else "white"}"/>'
     studs = []
-    for fx in (.25, .75):
+    for fx in (() if plain else (.25, .75)):
         for fy in (.25, .75):
             cx, cy, rx, ry, rise = x + fx * width, top + fy * depth, width * .16, depth * .095, depth * .055
             if shaded and not layer:
@@ -55,7 +57,7 @@ def block_svg(height=32, width=128, depth=128, frame=(192, 320), anchor=(96, 312
     content = {"silhouette": top_rect + front_rect, "top": top_rect, "front": front_rect,
                "studs": "".join(studs)}.get(layer, top_rect + front_rect + "".join(studs))
     # Decorations never determine body coverage. Everything stays within its faces.
-    if shaded and not layer:
+    if shaded and not layer and not terrain:
         content += f'<path d="M {x+1},{front-1} H {x+width-1}" stroke="{light}" stroke-width="2" opacity=".55"/>'
         content += f'<path d="M {x+1},{bottom-1} H {x+width-1}" stroke="{dark}" stroke-width="2"/>'
     return opening + defs + content + "</svg>"
@@ -148,6 +150,8 @@ def main():
     template.add_argument("--frame", type=int, nargs=2, default=(192,320))
     template.add_argument("--anchor", type=int, nargs=2, default=(96,312))
     template.add_argument("--palette", choices=PALETTES, default="coral")
+    template.add_argument("--plain", action="store_true", help="Undecorated raised surface; empty studs mask")
+    template.add_argument("--terrain", action="store_true", help="Continuous terrain: uniform face lighting, no tile-edge highlights")
     texture = sub.add_parser("material", help="Generated flat material details inside SVG faces; exact SVG alpha")
     texture.add_argument("directory", type=Path)
     texture.add_argument("texture", type=Path)

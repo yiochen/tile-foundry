@@ -1,0 +1,9 @@
+{
+  "scope": "File, hash, dimensional and timing integrity; no visual grade",
+  "assertionsCompleted": true,
+  "frameCount": 12,
+  "generationCalls": 1,
+  "durationMsPerFrame": 83.33333333333333,
+  "loopDurationMs": 1000,
+  "reviewStatus": "pending-independent-review"
+}

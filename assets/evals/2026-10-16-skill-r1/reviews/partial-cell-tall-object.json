@@ -1,0 +1,110 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/independent_review_r1",
+  "independent": true,
+  "spriteSHA256": {
+    "lantern": "e7e125c698184e37a3e54fd61adea39d702f8045c2cbcb3e50b8c11e72375832"
+  },
+  "sourceSHA256": {
+    "source-01.png": "ff00542778d367350e75708c57b77975cfc2ae48a8be2b06bcd689a3b9c34c3d"
+  },
+  "resultSHA256": "4d172a5efb8139271c9e9e9c274a9b58cea5eca35f34d0cc8ee5c2efded7bbd8",
+  "guideSHA256": "dd8b1923f1f9cf990398f65a00bec1b1dd736d09e51093f924bd4342cb1538a9",
+  "checks": {
+    "projection": {
+      "pass": false,
+      "note": "The pedestal and lantern roof present a diamond with two diagonal front/side directions, whereas the supplied guide uses a screen-aligned square top and horizontal front edge. The rotated object projection is visible in the source and survives processing; it does not match the requested square-grid orientation.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/references/guide-4x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The finial, roof corners, glowing glass housing, entire shaft, and full stone pedestal remain visible with clearance inside the output frame. At native scale and 2\u00d7 I see no clipped object part or detached cast shadow.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "The shaft and pedestal are horizontally centered around the preview root cross. However, that cross falls on the near upper bevel of the stone block, and the block occludes the rear ground-contact landmark. I cannot confidently identify the projected center of the ground footprint independently of the opaque pedestal, so the vertical ground registration remains open.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/references/guide-4x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/guide.json"
+      ]
+    },
+    "partial-base": {
+      "pass": true,
+      "note": "The compact pedestal occupies only the central portion of the 128-cell preview; substantial empty floor surrounds it on every side. This is a narrow partial-cell support rather than a full-cell floor. Its exact 48\u00d748 geometry is not established by this qualitative review.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/references/guide-4x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/guide.json"
+      ]
+    },
+    "visible-height": {
+      "pass": false,
+      "note": "The processed post is clearly tall and complete, but it rises substantially farther above the ground than the nominal-height column in the guide at the same cell scale. The long shaft and large lantern make the final apparent height noticeably exceed the requested 160px design target. This is a visible proportion mismatch, not a claim of an exact landmark measurement.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/references/guide-4x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-reference-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png"
+      ]
+    },
+    "cutout": {
+      "pass": true,
+      "note": "The green calibration square and its floor shading are absent in the final sprite. Light and dark placements at native/2\u00d7 show an intact shaft, glass, trim and base, without visible holes, green floor residue, or a deleted shoe-like contact edge.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The same finial, roof, paired light panes, shaft bands and pedestal chips are recognizable in the original and processed sprite. The output retains their relative proportions and silhouette while removing the green floor, consistent with the declared measured-floor registration and near-uniform reduction; no replacement object art is visible.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-source-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/partial-cell-tall-object/sprites/lantern.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-skill-r1/review-packets/partial-cell-tall-object/reviewer-native-2x.png"
+      ]
+    }
+  }
+}

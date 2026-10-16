@@ -1,0 +1,927 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "dancing-player",
+  "request": "Generate a 12-frame player dancing spritesheet on a 128x128 calibration tile at exactly 12 fps. Keep one player design with nominal 160px standing height, the same anatomy scale and floor-center foot/root anchor in every frame. Remove the calibration floor, retain complete limbs, and deliver a playable loop. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "same-player": "Face, outfit, palette, limb lengths, camera and lighting stay consistent.",
+    "dancing-poses": "Twelve distinct useful dance poses form a readable loop without fused/missing limbs.",
+    "design-height": "Nominal anatomy/standing height stays constant; crouches and raised arms legitimately change the silhouette bounds and must not be resized to a common bounding box.",
+    "contact-stability": "Projected ground root stays at the floor center; no per-frame anchor fitting or image rescaling.",
+    "cutout-quality": "Inspect light/dark backgrounds for floor residue, color spill, holes and clipped shoes.",
+    "loop": "Last-to-first transition has no unintended pop or scale jump.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "animation",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "heightAxis": [
+      0,
+      -1
+    ],
+    "elevationScale": 1,
+    "groundAnchorAlignment": "center",
+    "fps": 12,
+    "sprites": [
+      {
+        "id": "dance-01",
+        "image": "recovered/frames/frame-00.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 0,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      },
+      {
+        "id": "dance-02",
+        "image": "recovered/frames/frame-01.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 1,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      },
+      {
+        "id": "dance-03",
+        "image": "recovered/frames/frame-02.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 2,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      },
+      {
+        "id": "dance-04",
+        "image": "recovered/frames/frame-03.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 3,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      },
+      {
+        "id": "dance-05",
+        "image": "recovered/frames/frame-04.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 4,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      },
+      {
+        "id": "dance-06",
+        "image": "recovered/frames/frame-05.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 5,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      },
+      {
+        "id": "dance-07",
+        "image": "recovered/frames/frame-06.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 6,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      },
+      {
+        "id": "dance-08",
+        "image": "recovered/frames/frame-07.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 7,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      },
+      {
+        "id": "dance-09",
+        "image": "recovered/frames/frame-08.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 8,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      },
+      {
+        "id": "dance-10",
+        "image": "recovered/frames/frame-09.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 9,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      },
+      {
+        "id": "dance-11",
+        "image": "recovered/frames/frame-10.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 10,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      },
+      {
+        "id": "dance-12",
+        "image": "recovered/frames/frame-11.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 11,
+        "durationMs": 83.33333333333333,
+        "role": "player"
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "dance-01",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          277,
+          448
+        ],
+        "sourceRect": [
+          47,
+          79,
+          228,
+          394
+        ],
+        "anchorSource": [
+          137.5,
+          320.5
+        ],
+        "scale": [
+          0.7071823204419889,
+          0.707936507936508
+        ],
+        "subpixelShift": [
+          0.0,
+          0.03333333333333144
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "sprite": "dance-02",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          299,
+          448
+        ],
+        "sourceRect": [
+          63,
+          75,
+          245,
+          394
+        ],
+        "anchorSource": [
+          153.5,
+          320.5
+        ],
+        "scale": [
+          0.7087912087912088,
+          0.7084639498432602
+        ],
+        "subpixelShift": [
+          -0.1456043956043942,
+          0.07210031347960921
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "sprite": "dance-03",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          298,
+          448
+        ],
+        "sourceRect": [
+          56,
+          62,
+          238,
+          394
+        ],
+        "anchorSource": [
+          147.5,
+          320.5
+        ],
+        "scale": [
+          0.7087912087912088,
+          0.7078313253012049
+        ],
+        "subpixelShift": [
+          0.1456043956043942,
+          0.025602409638537438
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "sprite": "dance-04",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          278,
+          448
+        ],
+        "sourceRect": [
+          33,
+          79,
+          249,
+          394
+        ],
+        "anchorSource": [
+          141.5,
+          318.5
+        ],
+        "scale": [
+          0.7083333333333334,
+          0.707936507936508
+        ],
+        "subpixelShift": [
+          0.1458333333333286,
+          0.4492063492063494
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "sprite": "dance-05",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          277,
+          466
+        ],
+        "sourceRect": [
+          41,
+          43,
+          228,
+          400
+        ],
+        "anchorSource": [
+          137.5,
+          326.5
+        ],
+        "scale": [
+          0.7058823529411765,
+          0.7058823529411765
+        ],
+        "subpixelShift": [
+          -0.1176470588235361,
+          -0.1176470588235361
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "sprite": "dance-06",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          299,
+          466
+        ],
+        "sourceRect": [
+          63,
+          53,
+          245,
+          400
+        ],
+        "anchorSource": [
+          153.5,
+          326.5
+        ],
+        "scale": [
+          0.7087912087912088,
+          0.7060518731988472
+        ],
+        "subpixelShift": [
+          -0.1456043956043942,
+          -0.10518731988472041
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "sprite": "dance-07",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          298,
+          466
+        ],
+        "sourceRect": [
+          56,
+          38,
+          238,
+          400
+        ],
+        "anchorSource": [
+          147.5,
+          326.5
+        ],
+        "scale": [
+          0.7087912087912088,
+          0.7071823204419889
+        ],
+        "subpixelShift": [
+          0.1456043956043942,
+          -0.022099447513795667
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "sprite": "dance-08",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          278,
+          466
+        ],
+        "sourceRect": [
+          51,
+          58,
+          258,
+          400
+        ],
+        "anchorSource": [
+          141.5,
+          326.5
+        ],
+        "scale": [
+          0.7053140096618358,
+          0.7076023391812866
+        ],
+        "subpixelShift": [
+          0.1690821256038646,
+          0.008771929824547442
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "sprite": "dance-09",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          277,
+          452
+        ],
+        "sourceRect": [
+          47,
+          18,
+          229,
+          375
+        ],
+        "anchorSource": [
+          137.5,
+          300.5
+        ],
+        "scale": [
+          0.7087912087912088,
+          0.7058823529411765
+        ],
+        "subpixelShift": [
+          -0.1456043956043942,
+          -0.41176470588237635
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "sprite": "dance-10",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          299,
+          452
+        ],
+        "sourceRect": [
+          56,
+          40,
+          256,
+          375
+        ],
+        "anchorSource": [
+          153.5,
+          300.5
+        ],
+        "scale": [
+          0.705,
+          0.7074626865671642
+        ],
+        "subpixelShift": [
+          0.26250000000000284,
+          -0.29402985074625576
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "sprite": "dance-11",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          298,
+          452
+        ],
+        "sourceRect": [
+          57,
+          23,
+          251,
+          375
+        ],
+        "anchorSource": [
+          147.5,
+          300.5
+        ],
+        "scale": [
+          0.7061855670103093,
+          0.7073863636363636
+        ],
+        "subpixelShift": [
+          0.09020618556700555,
+          -0.2997159090909065
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    },
+    {
+      "sprite": "dance-12",
+      "registrationMethod": "measured-calibration-floor",
+      "registrationBasis": "floor-width",
+      "transform": {
+        "sourceSize": [
+          278,
+          452
+        ],
+        "sourceRect": [
+          51,
+          38,
+          233,
+          375
+        ],
+        "anchorSource": [
+          141.5,
+          300.5
+        ],
+        "scale": [
+          0.7087912087912088,
+          0.7062314540059347
+        ],
+        "subpixelShift": [
+          -0.1456043956043942,
+          -0.38575667655786106
+        ]
+      },
+      "keyRGB": [
+        255,
+        0,
+        255
+      ]
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/references/guide.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-01",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-00.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-02",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-01.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-03",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-02.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-04",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-03.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-05",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-04.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-06",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-05.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-07",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-06.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-08",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-07.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-09",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-08.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-10",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-09.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-11",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-10.png"
+    },
+    {
+      "role": "processed",
+      "id": "dance-12",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/dancing-player/recovered/frames/frame-11.png"
+    },
+    {
+      "role": "motion-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/playback.html"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-0-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-1-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-1-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-2-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-2-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-3-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-3-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-4-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-4-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-5-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-5-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-6-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-6-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-7-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-7-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-8-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-8-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-9-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-9-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-10-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-10-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-16-chroma-processing/review-packets/dancing-player/placement-11-dark.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/skills/build-overlap-tiles/references/visual-review.md"
+}

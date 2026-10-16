@@ -1,0 +1,15 @@
+{
+  "run": "2026-10-16-skill-flow",
+  "mode": "saved-artifact-replay",
+  "ok": true,
+  "trials": [
+    {
+      "trial": "authored-flowing-lava",
+      "caseId": "authored-flowing-lava",
+      "status": "needs-visual-review",
+      "expectedStatus": "needs-visual-review",
+      "matchesExpected": true
+    }
+  ],
+  "scope": "Replays preserved originals and independent reviews, including failures; no new image generation or corrected attempts."
+}

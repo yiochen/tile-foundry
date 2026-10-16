@@ -97,7 +97,7 @@ class CharacterAnchorTests(unittest.TestCase):
         self.assertEqual(len(info['removedCornerRemnants']),1)
 
     def test_soft_chroma_matte_is_explicitly_approximate_and_rejects_invalid_key(self):
-        image=Image.new('RGBA',(80,80),(192,200,180,255))
+        image=Image.new('RGBA',(80,80),(140,200,110,255))
         observation={'mode':'solid','rect':[0,0,80,80],'anchor':[40,40]}
         result,info=remove_floor_chroma(image,observation,(123,209,75))
         self.assertGreater(result.getpixel((40,40))[3],0)
@@ -106,6 +106,18 @@ class CharacterAnchorTests(unittest.TestCase):
         self.assertFalse(info['exactCharacterMatte'])
         with self.assertRaises(ValueError):remove_floor_chroma(image,observation,(255,255,255))
         with self.assertRaises(ValueError):remove_floor_chroma(image,observation,(123,209,75),hue_feather=0)
+
+    def test_saturated_floor_key_preserves_neutral_garments_with_matching_hue(self):
+        observation={'mode':'solid','rect':[0,0,40,40],'anchor':[20,20]}
+        for key,cloth in [((255,0,255),(120,108,120)),((123,209,75),(110,120,106))]:
+            image=Image.new('RGBA',(40,40),(*key,255))
+            ImageDraw.Draw(image).rectangle((10,5,29,30),fill=(*cloth,255))
+            before=image.tobytes()
+            result,info=remove_floor_chroma(image,observation,key)
+            self.assertEqual(result.getpixel((20,20)),(*cloth,255))
+            self.assertEqual(result.getpixel((2,2))[3],0)
+            self.assertEqual(info['minSaturation'],.5)
+            self.assertEqual(image.tobytes(),before)
 
     def test_tiled_cell_center_preserves_floating_ground_anchor(self):
         assets={'cellSize':128,'tiles':[{'id':'jump','image':'characters/jump.png','size':[192,320],'anchor':[96,248]}]}

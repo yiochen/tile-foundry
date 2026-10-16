@@ -1,0 +1,401 @@
+{
+  "generationCalls": 1,
+  "correctiveGenerationCalls": 0,
+  "deterministicProcessingAttempts": [
+    "processing-attempt-01.json"
+  ],
+  "processingCompleted": true,
+  "processorPanelIsolation": "strict-guide-panels",
+  "sourcePreserved": true,
+  "sourceSHA256": "037453587a48439e695e3feea51691fad187fae87a8419f32ae2bcd6a7d3e068",
+  "referenceSHA256": {
+    "references/guide.png": "8227f86d8573a979a06dd1bcd04e1c6f97e18607d0db754eca65e07fd525f5ac"
+  },
+  "resultSHA256": "04ca38fa08766f4b1f4962890a6599e36a0555328e0afbc69973a7c4379cb11b",
+  "guideSHA256": "58cc72a012c8e7bfd272c56c819b8493d3abe54f008e57183b687dd5792404a5",
+  "frameCount": 12,
+  "fps": 12,
+  "totalCycleDurationMs": 1000.0,
+  "frames": [
+    {
+      "id": "sprite-00",
+      "image": "processed/frames/frame-00.png",
+      "sha256": "73453f071e47f93fb0b6f61eb312ad264bf4b29842f6ef3574880b04c416a6b8",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        0,
+        0,
+        256,
+        427
+      ],
+      "floorRect": [
+        44,
+        241,
+        218,
+        406
+      ],
+      "uniformScaleBeforeRounding": 0.735632183908046,
+      "roundingScale": [
+        0.735632183908046,
+        0.734375
+      ]
+    },
+    {
+      "id": "sprite-01",
+      "image": "processed/frames/frame-01.png",
+      "sha256": "ba52ac98354023e1c0c990b496ca11ff4db19b7636387f4b483264618b5b3575",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        299,
+        0,
+        555,
+        427
+      ],
+      "floorRect": [
+        42,
+        241,
+        217,
+        406
+      ],
+      "uniformScaleBeforeRounding": 0.7314285714285714,
+      "roundingScale": [
+        0.7314285714285714,
+        0.7320872274143302
+      ]
+    },
+    {
+      "id": "sprite-02",
+      "image": "processed/frames/frame-02.png",
+      "sha256": "fc588d87552350beca55f843a0d22aa4158a7f9b53ffc2f5918e4ebb72e753f1",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        597,
+        0,
+        853,
+        427
+      ],
+      "floorRect": [
+        41,
+        241,
+        216,
+        406
+      ],
+      "uniformScaleBeforeRounding": 0.7314285714285714,
+      "roundingScale": [
+        0.7329545454545454,
+        0.7304075235109718
+      ]
+    },
+    {
+      "id": "sprite-03",
+      "image": "processed/frames/frame-03.png",
+      "sha256": "6743b48f1ca947174f15a0edeaf158434327e41726f689cc3ff6e9630ea51d9f",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        896,
+        0,
+        1152,
+        427
+      ],
+      "floorRect": [
+        39,
+        241,
+        213,
+        406
+      ],
+      "uniformScaleBeforeRounding": 0.735632183908046,
+      "roundingScale": [
+        0.7371428571428571,
+        0.734375
+      ]
+    },
+    {
+      "id": "sprite-04",
+      "image": "processed/frames/frame-04.png",
+      "sha256": "a423100278d131bf0978658310799e5757032a92c868657827e012099b88baa1",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        0,
+        470,
+        256,
+        896
+      ],
+      "floorRect": [
+        44,
+        222,
+        218,
+        387
+      ],
+      "uniformScaleBeforeRounding": 0.735632183908046,
+      "roundingScale": [
+        0.735632183908046,
+        0.7353846153846154
+      ]
+    },
+    {
+      "id": "sprite-05",
+      "image": "processed/frames/frame-05.png",
+      "sha256": "ca000f4187a671ffe2581ac0fc0f5de9e08cf019077202544871e91d8429dc84",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        299,
+        470,
+        555,
+        896
+      ],
+      "floorRect": [
+        42,
+        222,
+        217,
+        387
+      ],
+      "uniformScaleBeforeRounding": 0.7314285714285714,
+      "roundingScale": [
+        0.7314285714285714,
+        0.7300613496932515
+      ]
+    },
+    {
+      "id": "sprite-06",
+      "image": "processed/frames/frame-06.png",
+      "sha256": "0072842d00d1991bfa4a81522e79f92635975da759ddb65fcfb12d3d46468800",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        597,
+        470,
+        853,
+        896
+      ],
+      "floorRect": [
+        41,
+        222,
+        216,
+        387
+      ],
+      "uniformScaleBeforeRounding": 0.7314285714285714,
+      "roundingScale": [
+        0.7329545454545454,
+        0.7317784256559767
+      ]
+    },
+    {
+      "id": "sprite-07",
+      "image": "processed/frames/frame-07.png",
+      "sha256": "2247b74cac2149e70e23c5cfbb26873bb452d3ecd79af8806ba930cce996c1ee",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        896,
+        470,
+        1152,
+        896
+      ],
+      "floorRect": [
+        39,
+        222,
+        213,
+        387
+      ],
+      "uniformScaleBeforeRounding": 0.735632183908046,
+      "roundingScale": [
+        0.7329545454545454,
+        0.7347560975609756
+      ]
+    },
+    {
+      "id": "sprite-08",
+      "image": "processed/frames/frame-08.png",
+      "sha256": "ade2577b598d37639525c06b2c79321123e3782670c97ecb6516e241ea64012a",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        0,
+        939,
+        256,
+        1366
+      ],
+      "floorRect": [
+        44,
+        207,
+        218,
+        372
+      ],
+      "uniformScaleBeforeRounding": 0.735632183908046,
+      "roundingScale": [
+        0.735632183908046,
+        0.7363636363636363
+      ]
+    },
+    {
+      "id": "sprite-09",
+      "image": "processed/frames/frame-09.png",
+      "sha256": "3dff3c64f124667ebe27c20459afb030b55a0e93f20dd378a061538afc31c847",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        299,
+        939,
+        555,
+        1366
+      ],
+      "floorRect": [
+        42,
+        207,
+        217,
+        372
+      ],
+      "uniformScaleBeforeRounding": 0.7314285714285714,
+      "roundingScale": [
+        0.7314285714285714,
+        0.7308868501529052
+      ]
+    },
+    {
+      "id": "sprite-10",
+      "image": "processed/frames/frame-10.png",
+      "sha256": "7cca315305ae07c981c9fcac77457633134017695e409c9d42a9241978d6f375",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        597,
+        939,
+        853,
+        1366
+      ],
+      "floorRect": [
+        41,
+        207,
+        216,
+        372
+      ],
+      "uniformScaleBeforeRounding": 0.7314285714285714,
+      "roundingScale": [
+        0.7329545454545454,
+        0.7303030303030303
+      ]
+    },
+    {
+      "id": "sprite-11",
+      "image": "processed/frames/frame-11.png",
+      "sha256": "2a2d487c6294ec9ea5bffa4ca7daa6414edb6af9627042d8ae6e54f15e38d197",
+      "actualSize": [
+        192,
+        320
+      ],
+      "storedAnchor": [
+        96,
+        248
+      ],
+      "durationMs": 83.33333333333333,
+      "sourceRect": [
+        896,
+        939,
+        1152,
+        1366
+      ],
+      "floorRect": [
+        39,
+        207,
+        213,
+        372
+      ],
+      "uniformScaleBeforeRounding": 0.735632183908046,
+      "roundingScale": [
+        0.7371428571428571,
+        0.7353846153846154
+      ]
+    }
+  ],
+  "previews": {
+    "playback": "previews/playback.html",
+    "light": "previews/placement-grid-light.png",
+    "dark": "previews/placement-grid-dark.png",
+    "light2x": "previews/placement-grid-light-2x.png",
+    "dark2x": "previews/placement-grid-dark-2x.png"
+  },
+  "visualAssessment": "Independent review arranged by parent; no executor self-grade. Floor registration is measured, but not a claim of exact AI geometry."
+}

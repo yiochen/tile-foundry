@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "generationAttempts": 1,
+  "correctiveGenerations": 0,
+  "sourceImage": "source-01.png",
+  "sourceSHA256": "a5296387b967371a56fbaccc6a0189ab2dff5c8d39915b628fec3ae65e4344d9",
+  "registration": "registration.json",
+  "registrationSHA256": "17be08699fa2a3f0ec76a8eb3e743247acebb8dbc00336e22778c0ca1e57785b",
+  "guide": "guide.json",
+  "guideSHA256": "dd8b1923f1f9cf990398f65a00bec1b1dd736d09e51093f924bd4342cb1538a9",
+  "operations": [
+    {
+      "argv": [
+        ".venv/bin/python",
+        "assets/evals/2026-10-16-skill-r2/skill-snapshot/scripts/guide_tools.py",
+        "envelope",
+        "assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/guide",
+        "--height",
+        "160",
+        "--base",
+        "48",
+        "48"
+      ],
+      "exitCode": 0,
+      "stdout": "assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/guide.json\n"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "assets/evals/2026-10-16-skill-r2/skill-snapshot/scripts/tile_tools.py",
+        "process-on-floor",
+        "assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/source-01.png",
+        "assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/guide.json",
+        "assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/processed",
+        "--min-alpha",
+        "32"
+      ],
+      "exitCode": 0,
+      "stdout": "process-on-floor: complete\n"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "assets/evals/2026-10-16-skill-r2/skill-snapshot/scripts/assemble_result.py",
+        "--input-result",
+        "assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/processed/result.json",
+        "--registration",
+        "assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/registration.json",
+        "--output",
+        "assets/evals/2026-10-16-skill-r2/partial-cell-tall-object/result.json"
+      ],
+      "exitCode": 0,
+      "stdout": "assembled one object sprite"
+    }
+  ],
+  "workingDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry",
+  "processorCopies": {
+    "processing-tools/tile_tools.py": "52700154f78dccf313b292913cf0f979eda32816ec5febefea690561c8f9c30e",
+    "processing-tools/guide_tools.py": "eb3aa02064d8a1647a2cb0593f6d16e58b0ecf3ee26d797479d2742226b7aec6",
+    "processing-tools/svg_tools.py": "f6fec2f5c2a312639c9bb84d31a30d8a7032cfce436076d56d9ee0bf5e7f4af1",
+    "processing-tools/assemble_result.py": "a32dfa1cb47afdc618554072fe3d16bcb7a9a2c37c482069260aa65a87e9d46a",
+    "processing-tools/requirements.txt": "f7d2bebf5af96c2b4ec2c9c9e3fff2aafe1dcd6db2b6e2ea690f91f8e8d65e1e"
+  },
+  "parameters": {
+    "minAlpha": 32,
+    "keyRGB": [
+      123,
+      209,
+      75
+    ],
+    "floorMeasurement": "visible single square using alpha geometry",
+    "normalization": "uniform floor-derived scale with integer resize rounding and recorded subpixel anchor shift",
+    "outputFrame": [
+      192,
+      320
+    ],
+    "outputAnchor": [
+      96,
+      248
+    ]
+  },
+  "processorSidecar": "processed/result.json",
+  "inspectionEvidence": [
+    "source-01.png",
+    "processed/frames/frame-00.png",
+    "previews/light-native.png",
+    "previews/dark-2x.png",
+    "previews/placement-2x.png"
+  ],
+  "limits": [
+    "Whole-asset AI art was not geometrically corrected after generation.",
+    "Authored height/base constraints are declarations; visual assessment is independent.",
+    "Explicit reserved-color chroma key has an approximate mixed-edge matte."
+  ],
+  "previewSettings": "previews/preview-settings.json"
+}

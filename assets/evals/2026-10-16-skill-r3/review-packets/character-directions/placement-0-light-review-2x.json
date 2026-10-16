@@ -1,0 +1,43 @@
+{
+  "sourceSize": [
+    240,
+    368
+  ],
+  "sourceRect": [
+    0,
+    0,
+    240,
+    368
+  ],
+  "anchor": [
+    0.0,
+    0.0
+  ],
+  "anchorSource": [
+    0.0,
+    0.0
+  ],
+  "size": [
+    480,
+    736
+  ],
+  "subpixelShift": [
+    0.0,
+    0.0
+  ],
+  "footprint": [
+    128,
+    128
+  ],
+  "artRect": [
+    0,
+    0,
+    480,
+    736
+  ],
+  "scale": [
+    2.0,
+    2.0
+  ],
+  "sourceAnchorMode": "explicit"
+}

@@ -3,7 +3,8 @@ import {readFile} from 'node:fs/promises';
 
 export async function verifyEvalGallery(page,root,port){
   const gallery=JSON.parse(await readFile(root+'public/assets/eval-gallery.json','utf8'));
-  assert.equal(gallery.cases.length,13);
+  const suite=JSON.parse(await readFile(root+'skills/build-overlap-tiles/evals/cases.json','utf8'));
+  assert.equal(gallery.cases.length,suite.cases.length);
   assert.equal(gallery.archivedCases.length,0);
   assert.ok(gallery.cases.every(c=>c.latest&&c.latest.sources.length&&c.latest.report),'Every case needs actual source and grade artifacts');
   const url=`http://127.0.0.1:${port}`;
@@ -52,7 +53,7 @@ export async function verifyEvalGallery(page,root,port){
   await page.locator('.eval-sprite-preview[data-guide-overlay="false"]').waitFor();
   assert.equal(await page.locator('.eval-sprite-preview').evaluate(c=>c.toDataURL()),originalPreview.pixels);
   await page.setViewportSize({width:1440,height:1000});
-  assert.equal(await page.locator('[data-eval-case]').count(),13);
+  assert.equal(await page.locator('[data-eval-case]').count(),gallery.cases.length);
   for(const entry of gallery.cases){
     await page.locator(`[data-eval-case="${entry.id}"]`).click();
     await page.locator(`[data-eval-selected="${entry.id}"]`).waitFor();
@@ -75,6 +76,9 @@ export async function verifyEvalGallery(page,root,port){
     }
   }
   await page.locator('[data-eval-case="character-directions"]').click();
+  const directionsPlayer=gallery.cases.find(c=>c.id==='character-directions').trials.findLast(t=>t.sprites.length===8);
+  assert.ok(directionsPlayer,'Preserved direction player fixture');
+  await page.getByLabel('Eval attempt',{exact:true}).selectOption(directionsPlayer.id);
   await page.getByLabel('Ground anchor',{exact:true}).check();
   const progress=page.getByRole('slider',{name:'Sprite progress',exact:true});
   await progress.scrollIntoViewIfNeeded();
@@ -107,6 +111,9 @@ export async function verifyEvalGallery(page,root,port){
   await page.getByRole('slider',{name:'Sprite progress',exact:true}).press('End');
   await page.waitForFunction(()=>document.querySelector('.eval-sprite-preview')?.dataset.frame==='1');
   await page.locator('[data-eval-case="dancing-player"]').click();
+  const rawDance=gallery.cases.find(c=>c.id==='dancing-player').trials.findLast(t=>t.previewSequence?.frames.length===12);
+  assert.ok(rawDance,'Preserved raw dance fixture');
+  await page.getByLabel('Eval attempt',{exact:true}).selectOption(rawDance.id);
   await page.locator('.eval-player[data-player-source="raw"][data-frame-count="12"]').waitFor();
   assert.ok((await page.locator('.eval-player-note').innerText()).includes('not normalized runtime sprites'));
   await page.getByRole('slider',{name:'Sprite progress',exact:true}).press('End');
@@ -124,17 +131,20 @@ export async function verifyEvalGallery(page,root,port){
   }
   await page.getByRole('button',{name:'Animations',exact:true}).click();
   await page.locator('[data-evals-ready="true"]').waitFor();
-  assert.equal(await page.locator('[data-eval-case]').count(),3);
+  const animations=gallery.cases.filter(c=>c.kind==='animation');
+  assert.equal(await page.locator('[data-eval-case]').count(),animations.length);
   assert.equal(await page.locator('.eval-result').count(),1);
   assert.equal(await page.getByRole('button',{name:'Evals',exact:true}).count(),1);
-  for(const id of ['animated-waves','animated-lava','dancing-player']){
+  for(const {id} of animations){
     const entry=gallery.cases.find(c=>c.id===id);
-    assert.equal(entry.latest.sprites.length,0);
-    assert.equal(entry.latest.status,'failed');
-    assert.equal(entry.latest.previewSequence.isProcessedSprite,false);
-    assert.equal(entry.latest.previewSequence.frames.length,12);
+    const runtime=entry.latest.sprites.length>0;
+    if(runtime)assert.equal(entry.latest.sprites.length,12);
+    else{
+      assert.equal(entry.latest.previewSequence.isProcessedSprite,false);
+      assert.equal(entry.latest.previewSequence.frames.length,12);
+    }
     await page.locator(`[data-eval-case="${id}"]`).click();
-    await page.locator('.eval-player[data-player-source="raw"][data-frame-count="12"]').waitFor();
+    await page.locator(`.eval-player[data-player-source="${runtime?'runtime':'raw'}"][data-frame-count="12"]`).waitFor();
     await page.getByRole('slider',{name:'Sprite progress',exact:true}).press('End');
     await page.locator('.eval-sprite-preview[data-ready="true"][data-frame="11"]').waitFor();
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true,`Raw player overflow: ${id}`);
@@ -146,6 +156,7 @@ export async function verifyEvalGallery(page,root,port){
   try{
     const touch=await touchContext.newPage();
     await touch.goto(url+'/?view=evals&case=character-directions',{waitUntil:'networkidle'});
+    await touch.getByLabel('Eval attempt',{exact:true}).selectOption(directionsPlayer.id);
     const slider=touch.getByRole('slider',{name:'Sprite progress',exact:true});
     await slider.scrollIntoViewIfNeeded();
     const rect=await slider.boundingBox(),session=await touchContext.newCDPSession(touch);
@@ -157,5 +168,5 @@ export async function verifyEvalGallery(page,root,port){
     assert.equal(await touch.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
     await touch.locator('.eval-player').screenshot({path:root+'docs/preview-eval-player-mobile.png'});
   }finally{await touchContext.close();}
-  return {check:'13 cases: 12 fps player, mouse/touch progress scrubbing, pause and frame stepping, raw source playback without changing grades, SVG overlay, LLM assessments, history, exact prompts/sources, deep links and desktop/mobile',ok:true};
+  return {check:`${gallery.cases.length} cases: 12 fps player, mouse/touch scrubbing, runtime and preserved raw playback, SVG overlay, LLM assessments, history, exact prompts/sources, desktop/mobile`,ok:true};
 }

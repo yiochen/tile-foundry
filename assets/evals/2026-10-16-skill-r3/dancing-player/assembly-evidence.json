@@ -1,0 +1,8 @@
+{
+  "tool": "assemble_result.py",
+  "inputResult": "processed/result.json",
+  "registration": "registration.json",
+  "output": "result.json",
+  "exitCode": 0,
+  "spriteCount": 12
+}

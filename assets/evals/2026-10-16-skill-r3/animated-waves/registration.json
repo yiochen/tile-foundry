@@ -1,0 +1,119 @@
+{
+  "kind": "animation",
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "elevationPx": 32,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "supportCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "order": "row-major",
+  "sourceContract": "opaque-material-atlas-12-model-drawn-phases",
+  "intendedFrameSize": [
+    192,
+    320
+  ],
+  "intendedGroundAnchor": [
+    96,
+    248
+  ],
+  "intendedFootprint": [
+    128,
+    128
+  ],
+  "intendedTopRect": [
+    32,
+    152,
+    160,
+    280
+  ],
+  "intendedFrontRect": [
+    32,
+    280,
+    160,
+    312
+  ],
+  "authoredNearEdgeAnchor": [
+    96,
+    312
+  ],
+  "anchorConversion": {
+    "from": "near-edge",
+    "to": "center",
+    "offset": [
+      0,
+      -64
+    ],
+    "artMoved": false
+  },
+  "intendedTiming": {
+    "count": 12,
+    "fps": 12,
+    "durationMs": 83.33333333333333,
+    "totalDurationMs": 1000
+  },
+  "sourceLayout": {
+    "guide": "guide.json",
+    "columns": 4,
+    "rows": 3,
+    "order": "row-major"
+  },
+  "processingPlan": {
+    "geometry": "authored template SVG and masks preserve complete frame and alpha",
+    "materialSampling": "known authored square regions at one uniform source scale; no object clipping",
+    "processor": "frozen scripts/material_animation.py compose",
+    "strength": 0.7,
+    "palette": "authored ocean palette; only generated high-frequency RGB detail is transferred",
+    "motion": "12 supplied source phases; no synthesis or corrective generation"
+  },
+  "sprites": [
+    {
+      "id": "wave-00"
+    },
+    {
+      "id": "wave-01"
+    },
+    {
+      "id": "wave-02"
+    },
+    {
+      "id": "wave-03"
+    },
+    {
+      "id": "wave-04"
+    },
+    {
+      "id": "wave-05"
+    },
+    {
+      "id": "wave-06"
+    },
+    {
+      "id": "wave-07"
+    },
+    {
+      "id": "wave-08"
+    },
+    {
+      "id": "wave-09"
+    },
+    {
+      "id": "wave-10"
+    },
+    {
+      "id": "wave-11"
+    }
+  ]
+}

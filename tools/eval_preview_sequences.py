@@ -64,7 +64,7 @@ def source_sequence(directory, submission, guide, publish):
         note = ('Raw source panels at their recorded inferred floor centers; calibration floors remain. '
                 'These are not normalized runtime sprites.' if measured else
                 'Raw source panels at a fixed panel origin; no runtime registration is established.')
-    elif guide.get('kind') == 'authored-material-animation-sheet':
+    elif guide.get('kind') in ('authored-material-animation-sheet','object-sheet') and len(guide.get('cells',[]))>1:
         columns,rows = guide['columns'],guide['rows']
         cells = sorted(guide['cells'],key=lambda cell:cell['index'])
         if columns<1 or rows<1 or [c['index'] for c in cells] != list(range(columns*rows)):
@@ -88,8 +88,8 @@ def source_sequence(directory, submission, guide, publish):
         if not partition_is_complete(rectangles,source.size):
             raise ValueError('Source preview must retain every original pixel')
         alignment = 'panel-origin'
-        note = ('Raw material panels including their gutters and faint source noise, shown at a fixed panel origin. '
-                'No floor, height or runtime sprite registration has been produced.')
+        note = ('Raw source panels including their gutters and faint source noise, shown at a fixed panel origin. '
+                'Calibration floors remain when present; these are not normalized runtime sprites.')
     elif len(sources)>1:
         published = []
         for index,record in enumerate(sources):
@@ -104,6 +104,6 @@ def source_sequence(directory, submission, guide, publish):
     sequence = {'kind':'unprocessed-source-sequence','fps':12,'alignment':alignment,
                 'isProcessedSprite':False,'note':note,'frames':published,
                 'sourceSHA256':{s['image']:hashlib.sha256((directory/s['image']).read_bytes()).hexdigest() for s in sources}}
-    if guide.get('kind') == 'authored-material-animation-sheet':
+    if guide.get('kind') in ('authored-material-animation-sheet','object-sheet'):
         sequence['separatorAlphaMax'] = 1
     return sequence

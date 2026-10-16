@@ -1,0 +1,24 @@
+{
+  "images": [
+    "previews/guide-dark-2x.png",
+    "previews/guide-dark-native.png",
+    "previews/guide-light-2x.png",
+    "previews/guide-light-native.png",
+    "previews/source-authored-registration.png",
+    "previews/source-dark-2x.png",
+    "previews/source-dark-native.png",
+    "previews/source-light-2x.png",
+    "previews/source-light-native.png"
+  ],
+  "nativeSourceSize": [
+    1536,
+    1024
+  ],
+  "nativeGuideSize": [
+    1152,
+    768
+  ],
+  "twoXResampling": "nearest neighbor",
+  "runtimePlacementAvailable": false,
+  "reason": "Deterministic extraction failed; no generated sprite placement can be shown. Authored roots in the registration overlay are intended constraints, not fitted character contact points."
+}

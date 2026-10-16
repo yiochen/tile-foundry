@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "kind": "opaque-material-atlas",
+  "size": [
+    1024,
+    1024
+  ],
+  "columns": 4,
+  "rows": 3,
+  "count": 12,
+  "order": "row-major",
+  "sampleSize": [
+    224,
+    224
+  ],
+  "gutter": 32,
+  "margin": [
+    16,
+    144
+  ],
+  "background": "#dededb",
+  "cells": [
+    {
+      "index": 0,
+      "rect": [
+        16,
+        144,
+        240,
+        368
+      ]
+    },
+    {
+      "index": 1,
+      "rect": [
+        272,
+        144,
+        496,
+        368
+      ]
+    },
+    {
+      "index": 2,
+      "rect": [
+        528,
+        144,
+        752,
+        368
+      ]
+    },
+    {
+      "index": 3,
+      "rect": [
+        784,
+        144,
+        1008,
+        368
+      ]
+    },
+    {
+      "index": 4,
+      "rect": [
+        16,
+        400,
+        240,
+        624
+      ]
+    },
+    {
+      "index": 5,
+      "rect": [
+        272,
+        400,
+        496,
+        624
+      ]
+    },
+    {
+      "index": 6,
+      "rect": [
+        528,
+        400,
+        752,
+        624
+      ]
+    },
+    {
+      "index": 7,
+      "rect": [
+        784,
+        400,
+        1008,
+        624
+      ]
+    },
+    {
+      "index": 8,
+      "rect": [
+        16,
+        656,
+        240,
+        880
+      ]
+    },
+    {
+      "index": 9,
+      "rect": [
+        272,
+        656,
+        496,
+        880
+      ]
+    },
+    {
+      "index": 10,
+      "rect": [
+        528,
+        656,
+        752,
+        880
+      ]
+    },
+    {
+      "index": 11,
+      "rect": [
+        784,
+        656,
+        1008,
+        880
+      ]
+    }
+  ],
+  "rectConvention": "left-top-right-bottom pixel edges",
+  "generationRequirements": {
+    "transparent_background": false,
+    "sourceShape": "square",
+    "content": "12 supplied appearance-material phases; no objects, bevels, scenery or perspective",
+    "separators": "opaque neutral gutters and margins"
+  }
+}

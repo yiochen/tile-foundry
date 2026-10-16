@@ -1,0 +1,22 @@
+{
+  "prompt": "Use case: sketch-to-render\nAsset type: isolated tall lantern-post sprite for a square-grid game.\nInput image 1 is an authored layout and calibration guide, not a style reference. Replace the gray placeholder and its blue top marker with one complete lantern post. Copy the green calibration square's screen-aligned shape, exact placement and flat reserved color RGB 123,209,75. Retain that green square in this source image. It has no thickness, border, texture or cast shadow.\nSubject: one tasteful lantern post with a dark iron shaft, warm amber glass light, a modest roof/finial and a square stone plinth. Polished hand-painted game illustration with clean readable edges, restrained texture, and soft light from upper left.\nProjection: top-down oblique, square-grid, front-facing three-quarter game view. Ground axes remain horizontal and vertical on screen; show the tops and fronts of the lantern and plinth. Height projects straight upward. Parallel edges remain parallel with equal scale at near and far depths. No diamond-grid rotation, tilted floor, vanishing-point convergence or ground-plane perspective.\nScale and placement: the guide frame is 192x320 logical pixels. The calibration square is 128x128 at x=32..160, y=184..312. Its center is the fixed projected ground root (96,248). The centered plinth base is a screen-aligned 48x48 square, 3/8 of a calibration-cell width and depth, centered on that root. Keep the entire design's highest roof/finial at the guide's top limit y=88: total crown-to-root height is 160 logical pixels, exactly the intended visual ratio of 1.25 calibration-square widths. The top marker limits the WHOLE lantern, not just its shaft. Keep the lantern compact within this envelope; no extra topper above it. All crown, glass, cap and finial details fit within that total height. The green square remains plainly visible around the small base.\nBackground: true transparent alpha outside the lantern and green calibration square. Reserve the green calibration hue exclusively for the square; use no green on the lantern. Keep the complete subject comfortably inside the frame. Omit guide strokes, gray placeholder, blue marker, text, labels, scenery, checkerboard paint, external glow and cast shadows. Preserve the supplied layout and aspect.",
+  "references": [
+    "references/guide-4x.png"
+  ],
+  "referenceSHA256": {
+    "references/guide-4x.png": "c90242a816d6714c84b59acc563b90c4afe023777d982d09e0b81139b4425d63"
+  },
+  "referenceRoles": {
+    "references/guide-4x.png": "authored envelope geometry and calibration-floor layout edit target"
+  },
+  "transparentBackground": true,
+  "tool": "image_gen.imagegen",
+  "sourceSHA256": "a5296387b967371a56fbaccc6a0189ab2dff5c8d39915b628fec3ae65e4344d9",
+  "actualToolInputs": "tool-input-01.json",
+  "promptFile": "prompt-01.txt",
+  "attempt": 1,
+  "source": "source-01.png",
+  "returnedOutputPath": "/Users/yiouchen/.codex/generated_images/01a1439b-686d-7ca3-914a-9480dec12f8b/exec-7ab0b1db-9665-4578-9666-222b03d3641d.png",
+  "seed": null,
+  "seedNote": "Tool did not return a seed."
+}

@@ -1,0 +1,20 @@
+{
+  "prompt": "Use case: stylized-concept\nAsset type: opaque twelve-phase moving lava material atlas for a game.\nInput image 1 is a layout reference. Replace its twelve gray square samples with twelve successive phases of the SAME flowing molten lava surface in row-major order: left to right across the first row, then the second row, then the third. These twelve phases form one smooth one-second repeating cycle, with phase 12 leading naturally into phase 1.\nKeep the exact 4-column by 3-row sample layout and square boundaries of the reference. Each sample is a flat, fully opaque material texture filled to its edges. Keep the gutters and outer margins opaque neutral light gray too. No transparent pixels anywhere in the canvas.\nShow moving molten lava: glowing orange-red liquid with yellow-hot flowing veins between dark cooling crust islands, gently rolling and morphing through successive phases. Use one coherent evolving pattern, fixed palette, fixed texture scale and steady diffuse lighting. Keep major forms traceable between successive phases; avoid twelve unrelated random patterns. Continue surface patterns and lighting across opposite edges of every square, including neighbors displaying different phases. Maintain consistent average brightness through the loop.\nThis call is material only. No raised objects, perspective, bevels, front walls, camera view, scene, text, numbers, labels, borders, grids within the samples, transparent pixels, shadows outside the samples, or cutout shapes. Preserve the square canvas and supplied layout.",
+  "references": [
+    "references/guide.png"
+  ],
+  "referenceSHA256": {
+    "references/guide.png": "63a325cd92f009c0c677d0e0079701fe3757d45f0a5a71cb42b42a1a6d1b83bf"
+  },
+  "referenceRoles": {
+    "references/guide.png": "layout reference: exact opaque 4x3 square phase atlas layout; appearance material only"
+  },
+  "transparentBackground": false,
+  "tool": "image_gen.imagegen",
+  "sourceSHA256": "90072466d7219e04f7e254c1842f5126b11468ac15ee1532d3b22d7161f60626",
+  "toolInputs": "tool-input-01.json",
+  "originalToolOutputPath": "/Users/yiouchen/.codex/generated_images/01a14398-1fae-7242-8662-9711561025e7/exec-ee545279-f4a7-40f5-bb95-298ecf7796c8.png",
+  "generationAttempt": 1,
+  "generationCalls": 1,
+  "sourceRole": "appearance-material"
+}

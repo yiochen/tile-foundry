@@ -1,0 +1,19 @@
+{
+  "callCount": 1,
+  "tool": "image_gen.imagegen",
+  "generatedSourcePath": "/Users/yiouchen/.codex/generated_images/01a143a8-901b-7d01-bc94-c2ce4b307276/exec-6e0a99ba-dae1-4d60-a0fd-79c12c9d9864.png",
+  "copiedWithoutModification": true,
+  "sourceSHA256": "037453587a48439e695e3feea51691fad187fae87a8419f32ae2bcd6a7d3e068",
+  "originalSourceSHA256": "037453587a48439e695e3feea51691fad187fae87a8419f32ae2bcd6a7d3e068",
+  "sourceSize": [
+    1152,
+    1366
+  ],
+  "sourceMode": "RGBA",
+  "resultKeys": [
+    "image_url",
+    "output_hint"
+  ],
+  "toolWallTimeSeconds": 42.9,
+  "correctiveCalls": 0
+}

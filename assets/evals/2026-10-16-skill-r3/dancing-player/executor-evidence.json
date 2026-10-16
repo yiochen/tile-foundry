@@ -1,0 +1,30 @@
+{
+  "inspectionPerformed": [
+    "provenance/projection-reference-inspected-not-supplied.jpg",
+    "guide.png",
+    "source-01.png",
+    "previews/placement-grid-light.png",
+    "previews/placement-grid-dark.png"
+  ],
+  "independentVisualReview": "pending with parent; no executor visual scores",
+  "integrityChecks": {
+    "preGenerationPlanAndInputsUnchanged": true,
+    "requestVerbatim": true,
+    "unchangedSourceHashVerified": true,
+    "twelveRGBAFrames": true,
+    "frameSize": [
+      192,
+      320
+    ],
+    "storedAnchor": [
+      96,
+      248
+    ],
+    "fps": 12,
+    "durationMs": 83.33333333333333
+  },
+  "runtimePreview": "previews/playback.html",
+  "runtimePreviewExecutionByExecutor": false,
+  "correctiveCalls": 0,
+  "notes": "Measured floor width/center registration and approximate explicit floor-region chroma matte are retained in processing sidecars. Stored roots and authored height are not proof of geometric or visual compliance."
+}

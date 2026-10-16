@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "pythonExecutable": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+  "commands": [
+    {
+      "command": "guide_tools.py envelope OUTPUT_DIR/guide --height 160 --base 48 48",
+      "exitCode": 0,
+      "stdout": "OUTPUT_DIR/guide.json"
+    },
+    {
+      "command": "tile_tools.py process-on-floor OUTPUT_DIR/source-01.png OUTPUT_DIR/guide.json OUTPUT_DIR/processed --min-alpha 32",
+      "exitCode": 0,
+      "stdout": "process-on-floor: complete"
+    },
+    {
+      "command": "assemble_result.py --input-result OUTPUT_DIR/processed/result.json --registration OUTPUT_DIR/registration.json --output OUTPUT_DIR/result.json",
+      "exitCode": 0,
+      "stdout": {
+        "kind": "object",
+        "sprites": 1,
+        "output": "OUTPUT_DIR/result.json"
+      }
+    }
+  ],
+  "processorHashes": {
+    "guide_tools.py": "eb3aa02064d8a1647a2cb0593f6d16e58b0ecf3ee26d797479d2742226b7aec6",
+    "tile_tools.py": "52700154f78dccf313b292913cf0f979eda32816ec5febefea690561c8f9c30e",
+    "assemble_result.py": "a32dfa1cb47afdc618554072fe3d16bcb7a9a2c37c482069260aa65a87e9d46a"
+  },
+  "rawProcessorResult": "processed/result.json",
+  "canonicalImageCopy": {
+    "from": "processed/frames/frame-00.png",
+    "to": "sprites/lantern.png",
+    "byteIdentical": true
+  },
+  "preflightNotes": [
+    "An initial help lookup for process_generated.py found no such file; no image processing ran at that path. The documented tile_tools.py processor was used.",
+    "An initial image view used processed/frame-00.png; the actual sprite path is processed/frames/frame-00.png."
+  ],
+  "sourceHash": "ff00542778d367350e75708c57b77975cfc2ae48a8be2b06bcd689a3b9c34c3d",
+  "spriteHash": "e7e125c698184e37a3e54fd61adea39d702f8045c2cbcb3e50b8c11e72375832"
+}

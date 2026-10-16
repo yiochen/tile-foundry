@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "kind": "directions",
+  "status": "failed",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "sprites": [],
+  "source": "source-01.png",
+  "guide": "guide.json",
+  "registration": "registration.json",
+  "processingEvidence": "processing.json",
+  "diagnostics": [
+    {
+      "stage": "deterministic-extraction",
+      "message": "Error: Calibration floor is not square enough; regenerate instead of warping",
+      "consequence": "No runtime sprites delivered; cannot remove floor or normalize panels within the registered extraction contract.",
+      "attempts": 1
+    }
+  ],
+  "geometryDeclaration": "Authored registration constraints are not measured output geometry. No clipping, anchor fitting, guessed-color cleanup, or correction generation was used.",
+  "previews": [
+    "previews/guide-dark-2x.png",
+    "previews/guide-dark-native.png",
+    "previews/guide-light-2x.png",
+    "previews/guide-light-native.png",
+    "previews/source-authored-registration.png",
+    "previews/source-dark-2x.png",
+    "previews/source-dark-native.png",
+    "previews/source-light-2x.png",
+    "previews/source-light-native.png"
+  ],
+  "floorDiagnosticEvidence": "floor-diagnostics.json"
+}
