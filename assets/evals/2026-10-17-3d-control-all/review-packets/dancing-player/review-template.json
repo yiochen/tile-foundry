@@ -1,0 +1,77 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {
+    "frame-00": "d667026c013c4809fd1fd5f2101e2d53141ecbca4ca75928465f2bd66c66c3a6",
+    "frame-01": "1272bf7eed49049107b55fdc484aa511792f5eff7c3cf977ed6a092e7c8085c2",
+    "frame-02": "d1fa9da267919a5de8cfea0d316e63e59c4fb4a9f2c4d5670e970819ce6242c7",
+    "frame-03": "8e2e1f0b1cd6f184061b16083ce1cc47b7e9b8f9c2348b92bd80b9e91c2a471f",
+    "frame-04": "42a987ca376ab80d4a3967e07ccaf59f5108e90e2cd06aec223313c84219c727",
+    "frame-05": "fdfd2dc8714a33af83a9d639126a577580c348b560cc4ce29563e4df8d6219fb",
+    "frame-06": "c8091b184de2f77583fc1b4bc99178d980c61267bbca17b1534be145a7577bba",
+    "frame-07": "d39460983367d5838038abe77be1bb1f1b06044628b6f9d15958fab195eec5b3",
+    "frame-08": "e73f22359e27a1835e889315641d13d3f2921a316c146c1a873a3029fff91004",
+    "frame-09": "8bc7692aca3366ef823c1824ffcb9c3b9d6e37ed5b11f9a21fa5074dc011aea9",
+    "frame-10": "d4ff7d38c3ea27a2ae8a1eeb0a5a6ae427d659c7aa368f42fc9d483dab2a59f2",
+    "frame-11": "51fe6b267fc75c4c0194196983ebfad80e5773d78aa8b5b7ac5a57dc59a6836c"
+  },
+  "sourceSHA256": {
+    "source-01.png": "6b69cf88c1af7c7344fe6c3ea351d6d16753706bca9b86f9716be3df45b103d6"
+  },
+  "resultSHA256": "b2893c26c2c4b46b1ac096766f848d9364f476ac93a5507bb7cc196f44a7186d",
+  "guideSHA256": "9a65e8aebc0d9619f34ff59449744bec56f789d976a9d588e26476b0099a1531",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "same-player": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "dancing-poses": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "design-height": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "contact-stability": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "cutout-quality": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "loop": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

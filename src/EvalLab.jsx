@@ -170,6 +170,7 @@ function SpritePlayer({sprites, kind, showAnchors, guide, rawSequence}) {
 }
 
 function TrialResult({trial, entry, showAnchors}) {
+  const control=trial.runMode==='3d-render-control';
   return <div className="eval-result" data-eval-trial={trial.id}>
     <div className="eval-result-heading"><h4>Result</h4><span className={'eval-status status-'+trial.status}>{statusLabel(trial.status)}</span><span>{trial.runId}</span></div>
     <p className="lab-scope" data-eval-policy={trial.policy||'original'}>{trial.assessmentLabel}{trial.assessedAt&&` · ${trial.assessedAt}`}{trial.policy&&` · ${trial.policy}`}{trial.reviewer&&` · ${trial.reviewer}`}</p>
@@ -183,12 +184,12 @@ function TrialResult({trial, entry, showAnchors}) {
     <CheckList title="Delivery checks" checks={trial.automaticChecks}/><CheckList title={trial.policy?'LLM visual review':'Visual review'} checks={trial.visualChecks}/>
     <Diagnostics checks={trial.diagnostics}/>
     {!!trial.previews.length&&<div className="eval-artifacts">{trial.previews.map(p=><figure key={p.image}><a href={base+p.image} target="_blank" rel="noreferrer"><img src={base+p.image} alt={p.label.replaceAll('-',' ')} loading="lazy"/></a><figcaption>{p.label.replaceAll('-',' ')}</figcaption></figure>)}</div>}
-    <h4 className="eval-source-heading">Original generations and prompts</h4>
+    <h4 className="eval-source-heading">{control?'Original 3D renders and recipes':'Original generations and prompts'}</h4>
     <div className="eval-artifacts">{trial.sources.map((source,i)=><figure key={source.image}>
-      <a href={base+source.image} target="_blank" rel="noreferrer"><img src={base+source.image} alt={`Original generation ${i+1}`} loading="lazy"/></a>
-      <figcaption>Original generation {i+1} · {source.role}</figcaption>
-      <details className="eval-prompt"><summary>Generation prompt {i+1}</summary><pre>{source.prompt}</pre><a href={base+source.recipe} target="_blank" rel="noreferrer">Exact generation recipe ↗</a></details>
-      {!!source.references.length&&<details><summary>Supplied references · {source.references.length}</summary><div className="eval-reference-images">{source.references.map(r=><figure key={r.image}><a href={base+r.image} target="_blank" rel="noreferrer"><img src={base+r.image} alt={`${r.role} reference`} loading="lazy"/></a><figcaption>{r.role}</figcaption></figure>)}</div></details>}
+      <a href={base+source.image} target="_blank" rel="noreferrer"><img src={base+source.image} alt={`Original ${control?'3D render':'generation'} ${i+1}`} loading="lazy"/></a>
+      <figcaption>Original {control?'3D render':'generation'} {i+1} · {source.role}</figcaption>
+      <details className="eval-prompt"><summary>{control?'Render instructions':'Generation prompt'} {i+1}</summary><pre>{source.prompt}</pre><a href={base+source.recipe} target="_blank" rel="noreferrer">Exact {control?'render':'generation'} recipe ↗</a></details>
+      {!!source.references.length&&<details><summary>{control?'Renderer inputs':'Supplied references'} · {source.references.length}</summary><div className="eval-reference-images">{source.references.map(r=><figure key={r.image}><a href={base+r.image} target="_blank" rel="noreferrer">{r.mediaType==='file'?<span>{r.name} ↗</span>:<img src={base+r.image} alt={`${r.role} reference`} loading="lazy"/>}</a><figcaption>{r.role}</figcaption></figure>)}</div></details>}
     </figure>)}</div>
     {trial.scope&&<p className="lab-scope">{trial.scope}</p>}
   </div>;

@@ -1,0 +1,232 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/review_reskin_surface_paint",
+  "independent": true,
+  "spriteSHA256": {
+    "frame-00": "de2715f92f66391e7a7da3c85df26df73b42c3f2aba68e7a0ca9b6bb3c4022b3",
+    "frame-01": "b5c0e78f87fbd98309e437182ec8ca482ad1cc5b9be53d96a6f1dee3f7209497",
+    "frame-02": "d1f0dcde002fe3626b7c0548050836df07e416650392ccee2a31be84eedd98ac",
+    "frame-03": "c1d1ebabc55e0711c3fa335f3718135d87aa7dbc29f597fa6f41c5340e4de3f0",
+    "frame-04": "878b05804a9b60b8f59ffa4ba2e49aa07e281eb1345e6ba09686405f9c25b8b6",
+    "frame-05": "6c8aa77f1e7549bf5be1b3585bd33c8e35914f41144377693446547c624c50ea",
+    "frame-06": "2ac5cf60194131210375ea265c140e619cdecc06ea239430f4ffea57a7a11229",
+    "frame-07": "83d3b737b78ad6b1ec9c6a7c165e5abe879bbbd0caf0f6b499eb172d5e0991bf",
+    "frame-08": "7037af9797ed5fe96eff93ce4b973c257cc0ada1a658a86102444c308878b0f1",
+    "frame-09": "890059b25f20de89650e8a20dab667e916eb6a1eb7bc485ec889821848b1f0f3",
+    "frame-10": "228172c9a35060d421de71021d6645f035e8200290796449da1d37ebf006ccaf",
+    "frame-11": "f847f36c3b368afc351e7b8e7969226880dc00a801427b1d2a54ef328b7916d2"
+  },
+  "sourceSHA256": {
+    "source-01.png": "61905f92c52fd517d8ac0fd53099b6cc2c4c78550d6318c28b1c74bb875666b7"
+  },
+  "resultSHA256": "e6fe0a907d8ff65e30a36c323d0fb26aabafe1808f694e864aaebe3efe41fc7c",
+  "guideSHA256": "9a65e8aebc0d9619f34ff59449744bec56f789d976a9d588e26476b0099a1531",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The crown, upper shirt and boot tops remain visible from the same elevated front view in every frame. The screen-aligned floor registration and body depth remain coherent through the arm motion; I see no camera or perspective change.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/references/pose-sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/neutral.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-0-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-4-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-8-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-0-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-10-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-2-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-4-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-6-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-8-9.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-0.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "All twelve delivered panels contain the complete hair, raised hands, arms and both boots with clear margins. No limb ends at a frame edge, and no separate ground shadow or effect is stranded outside the figure.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-0-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-4-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-8-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-0-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-10-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-2-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-4-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-6-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-8-9.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "Compared with the neutral figure on the authored square, the pelvis and the midpoint between the ankle supports stay centered above the marked root. Forward boot toes extend below that point as expected; I did not use the toe tips as the anchor.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/references/pose-sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/neutral.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-0-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-4-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-8-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-0-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-10-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-2-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-4-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-6-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-8-9.png"
+      ]
+    },
+    "same-player": {
+      "pass": true,
+      "note": "Brown swept hair, large dark eyes, blue shirt and trousers, brown boots, brown belt and gold buckle stay recognizable. Head, torso and limb proportions and the direction of highlights remain consistent at native scale and 2x.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-0-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-4-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-8-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-0-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-10-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-2-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-4-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-6-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-8-9.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-0.png"
+      ]
+    },
+    "dancing-poses": {
+      "pass": true,
+      "note": "The twelve frames show successive distinct arm angles: one hand rises toward the head as the other opens, then the emphasis reverses. Both arms and both legs remain readable. Live 12 fps playback reads as a compact planted-foot arm dance, with no fused or disappearing limb.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/references/pose-sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-0-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-4-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-8-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-0-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-10-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-2-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-4-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-6-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-8-9.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-0.png"
+      ]
+    },
+    "design-height": {
+      "pass": true,
+      "note": "The torso, head mass and leg lengths stay visually stable throughout the sequence; the changing hand silhouette does not cause the body to grow or shrink. The reskinned hair has slightly more volume than the smooth neutral reference, but I see no noticeable anatomy-scale jump. This is a qualitative comparison, not a claim of exact 160px geometry.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/references/pose-sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/neutral.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-0-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-4-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-8-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-0-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-10-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-2-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-4-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-6-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-8-9.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-0.png"
+      ]
+    },
+    "contact-stability": {
+      "pass": true,
+      "note": "Both boots stay planted around the same authored floor center while the upper body makes small natural shifts. In running playback the ankle supports do not slide across the square or bounce independently, and the packet records one shared uniform transform rather than per-pose fitting.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/references/pose-sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/neutral.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/render/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-0-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-4-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-8-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-0-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-10-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-2-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-4-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-6-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-8-9.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/review-packets/dancing-player/packet.json"
+      ]
+    },
+    "cutout-quality": {
+      "pass": true,
+      "note": "All twelve cutouts were inspected on light and dark at native scale and 2x. The processed outlines have no visible calibration floor, guide strokes, bright color spill, detached specks, interior holes or shaved boot toes. The raw source has faint peripheral alpha noise, which is absent from the delivered placement views after the declared alpha cleanup.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-0-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-4-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-8-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-0-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-10-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-2-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-4-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-6-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-8-9.png"
+      ]
+    },
+    "loop": {
+      "pass": true,
+      "note": "I inspected actual running 12 fps playback at 1x light and 2x dark, including consecutive live captures of frame 12 and frame 1. The arm positions continue through the wrap while head, belt and boots retain their scale and placement. I see no unintended last-to-first pop.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-1x-frame-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/live-2x-frame-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-8-9.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-0-1.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The delivered sprites reproduce the corresponding generated poses, face, clothing and boot shapes in row-major order. Visible differences are the declared common uniform panel transfer and alpha cleanup; I see no replaced artwork, per-frame stretching or geometry fitted to the feet.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-0-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-4-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-1x-8-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-0-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-10-11.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-2-3.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-4-5.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-6-7.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/reviews/evidence/reskin-surface-paint/dancing-player-2x-8-9.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/review-packets/dancing-player/packet.json"
+      ]
+    }
+  }
+}

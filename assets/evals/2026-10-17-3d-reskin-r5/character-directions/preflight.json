@@ -1,0 +1,32 @@
+{
+  "workflow": "fresh-3d-capture-then-ai-surface-reskin",
+  "imageGenerationCallsPlanned": 1,
+  "sourceContract": "transparent authored fixed panels",
+  "minAlphaPreselected": 32,
+  "perPoseFitting": false,
+  "rootFitting": false,
+  "rendererMaskApplied": false,
+  "colorKeyApplied": false,
+  "manualArtifactRepair": false,
+  "referencesInspected": [
+    "render/sheet.png",
+    "render/guide.png"
+  ],
+  "projectionReferenceInspectedButNotSupplied": "../skill-snapshot/assets/perspective-reference.jpg",
+  "inputReferenceSHA256": {
+    "references/pose-sheet.png": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e"
+  },
+  "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+  "transparentBackground": true,
+  "renderCommand": [
+    "node",
+    "../skill-snapshot/scripts/render_3d.mjs",
+    "directions",
+    "render",
+    "--scale",
+    "2",
+    "--runtime-root",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry"
+  ],
+  "note": "Only the floor-free pose sheet is supplied to image generation. Separate calibration floors, alpha and depth captures remain untouched diagnostics."
+}

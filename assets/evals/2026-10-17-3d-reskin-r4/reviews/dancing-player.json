@@ -1,0 +1,162 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/review_reskin_material_finish",
+  "independent": true,
+  "spriteSHA256": {
+    "frame-00": "8f77be152b5b0f27c628c2bbfeaa20627417c30066eb7c50864896c78bd641a8",
+    "frame-01": "2a778ecdd170de968b4b4c0b81d12752e2719c874bc3d87f49e6944c14529115",
+    "frame-02": "1200e56a215d79810fadf4f548a4effef2c92b2b74b8fbe03c61300c43d20ec1",
+    "frame-03": "3c92e506a58834a3aae6afbf1ba04fb40b8cd67160fc9b92a01501eca921e52e",
+    "frame-04": "f192a60b6ca99267f4fc0db4a814f55507d710458dbd70b8b5a4101de1739799",
+    "frame-05": "ada63fb89bad7e49f1796b32d5ed81771f35e69cb0e444151be4aa6fa122795f",
+    "frame-06": "e0fd8a471963437dfeb80f6d2baf0cfa4d627a0624d5e5fcf9066367f17db49d",
+    "frame-07": "4222a4c9c8e5df12e1f0bdf2b1d81cea8778542960596e96c2511abad7c4a5aa",
+    "frame-08": "1cc709ba1fea02e76f864880ff04027634f30e0950e2b3489474eda5d2e8b0fe",
+    "frame-09": "66fb1c6144741762195155436b395718edfb2733828816fef4b14a50ea57bcfc",
+    "frame-10": "b5241b8f7ffc3167547203afdfb4e585356b272f74345844e23ac0be0c17859c",
+    "frame-11": "6c3373f0e8d88e6c11473629e9b4542f3ac511f32ce9a46ac58aef6edcc1e53e"
+  },
+  "sourceSHA256": {
+    "source-01.png": "47d99f394df93a68af97e1a7bedabe536991be85b323589625ede2c9069da922"
+  },
+  "resultSHA256": "de734c08db4a9b3227ed4140c3a45ec96339c2834bb6d208ec527c2d26d2fa2e",
+  "guideSHA256": "9a65e8aebc0d9619f34ff59449744bec56f789d976a9d588e26476b0099a1531",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The square floor remains screen aligned. Hair crowns, shoulders and boot tops expose the top surfaces while torso/front faces remain readable, matching the fixed oblique reference. The twelve views show no visible camera or depth-dependent scale drift.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-placements-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/render/sheet.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "All twelve delivered silhouettes fit comfortably inside the complete frames. Both arms, hands and both boots remain present; no limb or shoe is truncated and no separate cast shadow is visible.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-06.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "Against the floor cross, the paired boot support and body/root center remain at the same floor-center location as the neutral-on-floor reference. The toes extend below the cross; that visible toe edge is not treated as the root.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-placements-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-placements-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/render/neutral.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/render/guide.png"
+      ]
+    },
+    "same-player": {
+      "pass": true,
+      "note": "The brown hair, small face, blue shirt and trousers, brown belt/boots and gold buckle remain one recognizable player. Head, torso and leg anatomy scale and the lighting direction remain visually consistent as the arms move.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-06.png"
+      ]
+    },
+    "dancing-poses": {
+      "pass": true,
+      "note": "The twelve frames make a readable alternating arm-wave dance, with gradual changes of forearm angle and shoulder position. Motion is modest and the legs stay planted, but the poses are usable, distinct phases with no fused or missing limbs.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/live-light-strip.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/live-dark-strip.png"
+      ]
+    },
+    "design-height": {
+      "pass": true,
+      "note": "The crown, torso, belt, knees and boot supports retain the anatomy scale of the neutral standing reference. Raising and rotating the arms changes the pose without a visible whole-body resize; no noticeable nominal standing-height mismatch is apparent.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/render/neutral.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/render/sheet.png"
+      ]
+    },
+    "contact-stability": {
+      "pass": true,
+      "note": "In the floor placements and running preview the two boots remain planted around the same projected floor-center root. Upper-body sway does not produce a visible slide, foot lift, image-scale pulse or support-center drift.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-placements-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-placements-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/live-light-strip.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/live-dark-strip.png"
+      ]
+    },
+    "cutout-quality": {
+      "pass": true,
+      "note": "The processed frames have clean gaps between the legs and around the arms on both backgrounds. The colored fringe/noise visible outside the original source silhouette is absent at practical native and 2x display; no calibration floor, holes, spill or clipped shoes are apparent.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-06.png"
+      ]
+    },
+    "loop": {
+      "pass": true,
+      "note": "Live capture sequences include the last frame followed by the first. The return continues the arm-wave phase without a visible unexpected pose pop, root displacement or body-scale jump. This is a qualitative continuity judgment, not exact timing validation.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/live-light-strip.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/live-dark-strip.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/live-light-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/live-light-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/live-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/live-dark-01.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Each processed frame retains the matching original panel pose, facial/outfit details and textured colors. The visible change is isolation/edge cleanup and the declared common registration scale; I see no invented replacement limbs, rearranged poses or unreported per-frame geometry fitting. The original has external colored fringe which the delivery removes.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-1x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-light-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/dancing-player-2x-dark-06.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/review-packets/dancing-player/packet.json"
+      ]
+    }
+  },
+  "caseId": "dancing-player",
+  "reviewedAt": "2026-10-17T17:08:15.014578+00:00",
+  "inspection": {
+    "scope": "Sanitized packet and template, frozen llm-visual-v1 policy, linked original and processed PNGs, pose/neutral/floor references, and rebuilt placement previews. No earlier verdicts, reports, experiment documents, or other reviewer results were read.",
+    "display": "All delivered frames visually inspected at native game scale and 2x on light and dark backgrounds. Evidence contact sheets preserve the complete frames and use nearest-neighbor enlargement for 2x.",
+    "limits": "Qualitative image review does not prove pixel-exact geometry or a numerical height tolerance. Guide JSON was opened for registration and contained numeric bound fields; those fields were not used to decide visual checks. Height/contact judgments use the neutral pose, floor references, anatomical proportions and physical supports, not silhouette bounds alone.",
+    "playback": "Opened the supplied preview in a live browser while playing at its displayed 12 fps. Inspected native and 2x views, then captured consecutive live samples on light and dark, including the 12/12 to 1/12 transition. Capture strips and timestamp logs preserve the observation. Screenshot sampling is not a measurement of exact browser timing. Temporary browser and read-only HTTP server were closed."
+  }
+}

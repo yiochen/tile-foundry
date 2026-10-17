@@ -1,0 +1,7 @@
+{
+  "kind": "animation",
+  "sprites": 12,
+  "sourceSHA256": "96c195db92c8f9821358f0c0948cf3b77f02c268ff0a8355b27534cb877ce7d5",
+  "removedAlphaMass": 0,
+  "output": "/tmp/tile-foundry-motion-controls-dev/animated-waves/processed"
+}

@@ -1,0 +1,8 @@
+{
+  "originalFilename": "5610.jpg",
+  "source": "User-supplied reference scene",
+  "sha256": "9784bc8c25ce01fb25044f9d866e8487f4e520be4c89588f36046df0ed19e29c",
+  "purpose": "Projection interpretation only; not a default generation style reference",
+  "projectionProfile": "top-down-oblique-square-grid",
+  "cameraAngleMeasured": false
+}

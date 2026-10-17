@@ -1,0 +1,15 @@
+{
+  "caseId": "full-cell-raised-object",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/full-cell-raised-object",
+  "userPrompt": "Generate a square stone plinth with a full 128x128 base and 64px visible height. Preserve the square-grid top-down oblique projection and fixed ground anchor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/full-cell-raised-object.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json",
+      "role": "whole-asset"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "9cf682fde8116b2108fdb2514e504c549b88fc50b7a12e39e3647e045b607a46",
+  "result": "result.json"
+}

@@ -1,0 +1,329 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "character-directions",
+  "status": "passed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "ce993cf77bf97b06c35d2f52b565f2e6d2e62ff882da05b6b115a2294dc06ead"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/pose-sheet.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "directions",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "frame-00",
+        "frame-01",
+        "frame-02",
+        "frame-03",
+        "frame-04",
+        "frame-05",
+        "frame-06",
+        "frame-07"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "eight-directions",
+      "pass": true,
+      "detail": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ]
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "The square floor stays screen aligned and the views preserve the same oblique top/front balance. Boot top and side faces turn with the character, with no apparent camera tilt, perspective convergence or depth-dependent scale change.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-placements-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/render/sheet.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "All eight complete frames retain the head, hands and boot silhouettes with space to the frame edges. Side-view occlusion is coherent rather than clipped art; no undeclared cast shadow is apparent.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-1x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-04.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": true,
+      "detail": "The physical boot/support arrangement stays around the floor-center cross in all eight views, consistent with the corresponding floor references. The projected toe/heel extents rotate around that support; the lowest opaque pixel is not used as the anchor.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-placements-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-placements-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/render/guide.png"
+      ]
+    },
+    {
+      "check": "same-character",
+      "pass": true,
+      "detail": "The ordered panels read as N, NE, E, SE, S, SW, W and NW turns of one player: the face/buckle appear on the appropriate front-facing views, profiles and back views agree, and the blue/brown palette, head, limb and outfit proportions remain consistent. The subject turns under a stable camera.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-1x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/render/sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/references/pose-sheet.png"
+      ]
+    },
+    {
+      "check": "direction-height",
+      "pass": true,
+      "detail": "With all eight upright views aligned to the floor references, the crown-to-ground relationship and torso/leg anatomy scale appear consistent to the visual tolerance at native and 2x. The larger bottom outline in diagonal/front views follows the rotated long boots, not a taller body. No noticeable per-direction resizing is visible; this is not a pixel-exact 4px measurement.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-placements-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/render/neutral.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/render/sheet.png"
+      ]
+    },
+    {
+      "check": "direction-contact",
+      "pass": true,
+      "detail": "Comparing the floor cross to the physical boot soles and paired supports shows a coherent common support center through the turn. The lateral views overlap the far boot and the diagonals expose it, but there is no visible floating, sinking or support-center shift; toe length explains the changing visible bottom.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-placements-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-placements-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/render/sheet.png"
+      ]
+    },
+    {
+      "check": "cutout",
+      "pass": true,
+      "detail": "No magenta calibration floor or pose-guide strokes remain in any delivered view. Light/dark inspection at both scales shows intact shoes and clean interior gaps; the colored external fringe present in the original does not remain visibly in the delivery.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-1x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-04.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The processed eight sprites preserve the matching original panels, including direction-specific face visibility, outfit, proportions and texture. Isolation and the declared common registration scale account for the visible processing; no replacement artwork or observable per-direction fitting is introduced. The raw external colored fringe is removed.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-1x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-1x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-light-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/reviews/evidence/material-finish/character-directions-2x-dark-04.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/review-packets/character-directions/packet.json"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "frame-00-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-01-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-02-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-03-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-04-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-05-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-06-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-07-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "upright-bounds",
+      "detail": {
+        "alphaHeights": [
+          174,
+          186,
+          188,
+          193,
+          188,
+          197,
+          190,
+          190
+        ],
+        "note": "Pose and toe length change bounds; judge anatomy scale and support visually."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "/root/review_reskin_material_finish",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

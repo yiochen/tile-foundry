@@ -1,0 +1,16 @@
+{
+  "candidateSource": [
+    "source-raw-light.png",
+    "source-raw-dark.png"
+  ],
+  "placementGroups": [
+    "control",
+    "candidate"
+  ],
+  "nativeScale": 1,
+  "magnifiedScale": 2,
+  "placementMethod": "complete frames at authored ground root (96,248), no alpha fitting",
+  "candidateRuntimeAvailable": true,
+  "animationFps": null,
+  "note": "Control previews show fresh untouched 3D renders. Candidate previews show fixed extractor outputs only when extraction succeeded."
+}

@@ -1,0 +1,988 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "animated-waves",
+  "request": "Generate a 12-frame looping ocean wave tile animation at exactly 12 fps. Each frame has a full 128x128 base and 32px visible front-wall height, in the same top-down oblique projection. Preserve the anchor, base footprint, elevation, and connection to adjacent copies through the animation. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "animated-height": "Visible elevation and support stay fixed while the surface moves; no camera/scale breathing.",
+    "spatial-seams": "Inspect 3x3 animated neighbors through all phases, including offset-phase neighbors; no cracks, gradient jumps, or visible grid seams.",
+    "temporal-loop": "Motion is readable and the last-to-first transition has no unwanted pop.",
+    "frame-consistency": "All 12 poses/surfaces are usable, with common identity/palette/light and complete alpha.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "animation",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "groundAnchorAlignment": "center",
+    "fps": 12,
+    "sprites": [
+      {
+        "id": "frame-00",
+        "image": "frames/frame-00.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 0,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      },
+      {
+        "id": "frame-01",
+        "image": "frames/frame-01.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 1,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      },
+      {
+        "id": "frame-02",
+        "image": "frames/frame-02.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 2,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      },
+      {
+        "id": "frame-03",
+        "image": "frames/frame-03.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 3,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      },
+      {
+        "id": "frame-04",
+        "image": "frames/frame-04.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 4,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      },
+      {
+        "id": "frame-05",
+        "image": "frames/frame-05.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 5,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      },
+      {
+        "id": "frame-06",
+        "image": "frames/frame-06.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 6,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      },
+      {
+        "id": "frame-07",
+        "image": "frames/frame-07.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 7,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      },
+      {
+        "id": "frame-08",
+        "image": "frames/frame-08.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 8,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      },
+      {
+        "id": "frame-09",
+        "image": "frames/frame-09.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 9,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      },
+      {
+        "id": "frame-10",
+        "image": "frames/frame-10.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 10,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      },
+      {
+        "id": "frame-11",
+        "image": "frames/frame-11.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32,
+        "index": 11,
+        "durationMs": 83.33333333333333,
+        "role": "terrain"
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "frame-00",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        0.0,
+        0.0,
+        192.0,
+        320.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-01",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          224.0,
+          0.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        224.0,
+        0.0,
+        416.0,
+        320.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-02",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          448.0,
+          0.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        448.0,
+        0.0,
+        640.0,
+        320.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-03",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          672.0,
+          0.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        672.0,
+        0.0,
+        864.0,
+        320.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-04",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          0.0,
+          352.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        0.0,
+        352.0,
+        192.0,
+        672.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-05",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          224.0,
+          352.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        224.0,
+        352.0,
+        416.0,
+        672.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-06",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          448.0,
+          352.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        448.0,
+        352.0,
+        640.0,
+        672.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-07",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          672.0,
+          352.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        672.0,
+        352.0,
+        864.0,
+        672.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-08",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          0.0,
+          704.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        0.0,
+        704.0,
+        192.0,
+        1024.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-09",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          224.0,
+          704.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        224.0,
+        704.0,
+        416.0,
+        1024.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-10",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          448.0,
+          704.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        448.0,
+        704.0,
+        640.0,
+        1024.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-11",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "sourceOrigin": [
+          672.0,
+          704.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        672.0,
+        704.0,
+        864.0,
+        1024.0
+      ],
+      "cleanup": {
+        "minAlpha": 0,
+        "removedAlphaMass": 0,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/render/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/source-01.png"
+    },
+    {
+      "role": "rigged-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/render/sheet.png"
+    },
+    {
+      "role": "floor-registration",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/render/guide.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-00",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-00.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-01",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-01.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-02",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-02.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-03",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-03.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-04",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-04.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-05",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-05.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-06",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-06.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-07",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-07.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-08",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-08.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-09",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-09.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-10",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-10.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-11",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed/frames/frame-11.png"
+    },
+    {
+      "role": "motion-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/playback.html"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-0-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-0.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-1-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-1-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-1.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-2-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-2-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-2.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-3-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-3-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-3.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-4-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-4-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-4.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-5-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-5-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-5.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-6-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-6-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-6.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-7-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-7-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-7.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-8-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-8-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-8.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-9-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-9-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-9.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-10-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-10-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-10.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-11-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/placement-11-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/animated-waves/neighbors-11.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/skill-snapshot/references/visual-review.md"
+}

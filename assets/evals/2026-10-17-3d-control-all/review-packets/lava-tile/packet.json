@@ -1,0 +1,93 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "lava-tile",
+  "request": "Generate a raised lava tile with a full 128x128 square base and a visibly 32px-high front wall, in top-down oblique game projection. Its surface should connect with identical neighboring tiles. Keep the logical footprint fixed as the top extends above the cell upper boundary. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "visible-height": "The front wall reads as 32px elevation; the object is not a flat ground swatch.",
+    "full-base": "Opaque coverage spans the complete cell without corner gaps or taper.",
+    "lava-joins": "Repeated molten channels/crust meet without obvious seams or lighting jumps.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "object",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "groundAnchorAlignment": "center",
+    "sprites": [
+      {
+        "id": "lava-tile",
+        "image": "sprites/whole.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 32
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "lava-tile",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {},
+      "sourceRect": null,
+      "cleanup": {}
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/scene/render-options.json"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/scene/3d_controls_static_scene.js"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/scene/3d_controls_static_rig.js"
+    },
+    {
+      "role": "processed",
+      "id": "lava-tile",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/sprites/whole.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/lava-tile/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/lava-tile/placement-0-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/lava-tile/neighbors-0.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/skill-snapshot/references/visual-review.md"
+}

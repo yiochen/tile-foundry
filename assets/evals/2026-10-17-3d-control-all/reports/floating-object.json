@@ -1,0 +1,193 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "floating-object",
+  "status": "passed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a 64px-tall treasure orb floating 48px above the center of a 128x128 calibration tile. Keep the projected ground anchor beneath the orb and remove the calibration floor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "cb8d65263cb7b9c6b1711d08b5859e308fdf1bc47be6e2f2edfd664b816f8abc"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "scene/render-options.json",
+        "scene/3d_controls_static_scene.js",
+        "scene/3d_controls_static_rig.js"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "aaa310d9bc5f540f69500370c9b04e3b304fe0bc475564d944ae87cbbca0858a"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "object",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "floating-object"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "ground-support-cells",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "The modeled orb is shaded consistently with the shared oblique view and is placed over a screen-aligned calibration square. Its gold bands and highlights retain the same shape in the source and delivery; no perspective drift is visible.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/render/on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/previews/floating-object-light-2x.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "The complete orb, thin gold bands and jewel fit comfortably within the frame. The isolated light/dark images show intact edges without cropped effects.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/previews/floating-object-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/previews/floating-object-dark-2x.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": true,
+      "detail": "The ground cross remains centered beneath the floating orb rather than attached to its bottom. The on-floor render and grid placement agree on that horizontal registration.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/previews/floating-object-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/render/on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/guide.json"
+      ]
+    },
+    {
+      "check": "floating-placement",
+      "pass": true,
+      "detail": "In the stored-anchor grid view there is a clear gap between the lowest solid orb point and the ground cross, visually consistent with the requested roughly 48px clearance. The orb itself reads at roughly half-cell height and has not been snapped down onto the root.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/previews/floating-object-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/previews/floating-object-light-2x.png"
+      ]
+    },
+    {
+      "check": "cutout",
+      "pass": true,
+      "detail": "The sprite contains only the orb and its attached ornament. The calibration floor, cross, external shadow and support geometry are absent on both light and dark backgrounds.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/previews/floating-object-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/previews/floating-object-dark-2x.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "This is a direct modeled Three.js control, not an AI reskin. The retained 2x source and runtime sprite show the same complete geometry, materials and registration after the declared capture downsample. The linked renderer authors the geometry and captures separate floors/layers; no visible replacement, clipping or geometry fitting is introduced.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/scene/3d_controls_static_scene.js",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/scene/render-options.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/guide.json"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "floating-object-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "floating-clearance",
+      "detail": {
+        "observedPx": 48,
+        "requestedPx": 48
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "/root/review_full_3d_static_controls",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

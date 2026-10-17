@@ -1,0 +1,331 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "character-directions",
+  "status": "passed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/character-directions"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/character-directions."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "source-01.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "directions",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "frame-00",
+        "frame-01",
+        "frame-02",
+        "frame-03",
+        "frame-04",
+        "frame-05",
+        "frame-06",
+        "frame-07"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "eight-directions",
+      "pass": true,
+      "detail": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ]
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "The top of the hair, shoulder volumes, boot tops and forward-facing surfaces remain readable in all eight views. The calibration squares are screen-aligned and the subject rotates within one stable view.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-dark-2x.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "All eight silhouettes retain their hair, hands, complete boots and body, with ample transparent margins. No additional cast shadow or clipped extremity is visible at native scale or 2\u00d7.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/browser-mobile.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": true,
+      "detail": "Across the eight placement views, the physical support beneath the two legs remains centered around the marked ground root. Longer forward boot tips change the visible bottom while the support root stays aligned to the guide floor center.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/render/guide.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/render/guide.json",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-0-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-0-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-1-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-1-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-2-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-2-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-3-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-3-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-4-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-4-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-5-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-5-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-6-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-6-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-7-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-7-dark.png"
+      ]
+    },
+    {
+      "check": "same-character",
+      "pass": true,
+      "detail": "The same brown-haired, blue-shirted player, belt buckle, dark trousers and brown boots turn through the eight directions. Head and limb proportions, camera and light remain consistent; profile views correctly overlap the far limbs.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-dark-2x.png"
+      ]
+    },
+    {
+      "check": "direction-height",
+      "pass": true,
+      "detail": "All eight upright crowns stay on the same apparent height line relative to the common floor/root. Anatomy scale remains visually constant; the different boot-tip extents do not look like height fitting. This is a qualitative visual judgment, not a subpixel measurement.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/render/neutral.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/render/neutral-on-floor.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/render/guide.png"
+      ]
+    },
+    {
+      "check": "direction-contact",
+      "pass": true,
+      "detail": "The registered floor sheet and all eight marked placement views show the same sole/support arrangement rotating around the floor center. The N/S and diagonal toe extensions account for the different silhouette bottoms; no visible floating or sinking is introduced.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/render/guide.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/render/guide.json",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-0-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-0-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-1-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-1-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-2-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-2-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-3-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-3-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-4-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-4-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-5-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-5-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-6-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-6-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-7-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/placement-7-dark.png"
+      ]
+    },
+    {
+      "check": "cutout",
+      "pass": true,
+      "detail": "Light and dark views show clean isolated bodies and complete shoes. The magenta calibration tile appears only in the separate guide render; no magenta spill, retained floor square or guide strokes appear in the processed sprites.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/browser-mobile.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The retained source sheet and renderer sheet show the same eight poses and design as the processed views. The declared common 0.5 capture-to-runtime scale and isolated source rectangles explain the size change; no pose-specific fitting or replacement drawing is visible.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/source-01.png",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/render/sheet.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/character-directions/packet.json",
+        "assets/evals/2026-10-17-3d-control-all/character-directions/render/guide.json"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "frame-00-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-01-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-02-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-03-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-04-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-05-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-06-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-07-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "upright-bounds",
+      "detail": {
+        "alphaHeights": [
+          169,
+          184,
+          184,
+          192,
+          181,
+          192,
+          184,
+          184
+        ],
+        "note": "Pose and toe length change bounds; judge anatomy scale and support visually."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "/root/review_full_3d_motion_controls",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

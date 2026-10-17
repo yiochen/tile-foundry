@@ -1,0 +1,14 @@
+{
+  "caseId": "character-directions",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r5/character-directions",
+  "userPrompt": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r5/character-directions.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json"
+    }
+  ],
+  "guide": "render/guide.json",
+  "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+  "result": "result.json"
+}

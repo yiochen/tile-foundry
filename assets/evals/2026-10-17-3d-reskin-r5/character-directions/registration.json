@@ -1,0 +1,71 @@
+{
+  "kind": "directions",
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "elevationPx": 160,
+  "nominalStandingHeight": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "footprint": [
+    128,
+    128
+  ],
+  "sprites": [
+    {
+      "id": "player-n",
+      "direction": "N",
+      "role": "player"
+    },
+    {
+      "id": "player-ne",
+      "direction": "NE",
+      "role": "player"
+    },
+    {
+      "id": "player-e",
+      "direction": "E",
+      "role": "player"
+    },
+    {
+      "id": "player-se",
+      "direction": "SE",
+      "role": "player"
+    },
+    {
+      "id": "player-s",
+      "direction": "S",
+      "role": "player"
+    },
+    {
+      "id": "player-sw",
+      "direction": "SW",
+      "role": "player"
+    },
+    {
+      "id": "player-w",
+      "direction": "W",
+      "role": "player"
+    },
+    {
+      "id": "player-nw",
+      "direction": "NW",
+      "role": "player"
+    }
+  ]
+}

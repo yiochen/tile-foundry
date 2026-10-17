@@ -1,0 +1,51 @@
+{
+  "playback": "playback.html",
+  "allPhases": [
+    "frame-00-light-native.png",
+    "frame-01-light-native.png",
+    "frame-02-light-native.png",
+    "frame-03-light-native.png",
+    "frame-04-light-native.png",
+    "frame-05-light-native.png",
+    "frame-06-light-native.png",
+    "frame-07-light-native.png",
+    "frame-08-light-native.png",
+    "frame-09-light-native.png",
+    "frame-10-light-native.png",
+    "frame-11-light-native.png"
+  ],
+  "terrainNeighborEvidence": {
+    "synchronized": [
+      "neighbors-00-sync-native.png",
+      "neighbors-01-sync-native.png",
+      "neighbors-02-sync-native.png",
+      "neighbors-03-sync-native.png",
+      "neighbors-04-sync-native.png",
+      "neighbors-05-sync-native.png",
+      "neighbors-06-sync-native.png",
+      "neighbors-07-sync-native.png",
+      "neighbors-08-sync-native.png",
+      "neighbors-09-sync-native.png",
+      "neighbors-10-sync-native.png",
+      "neighbors-11-sync-native.png"
+    ],
+    "offset": [
+      "neighbors-00-offset-native.png",
+      "neighbors-01-offset-native.png",
+      "neighbors-02-offset-native.png",
+      "neighbors-03-offset-native.png",
+      "neighbors-04-offset-native.png",
+      "neighbors-05-offset-native.png",
+      "neighbors-06-offset-native.png",
+      "neighbors-07-offset-native.png",
+      "neighbors-08-offset-native.png",
+      "neighbors-09-offset-native.png",
+      "neighbors-10-offset-native.png",
+      "neighbors-11-offset-native.png"
+    ],
+    "nativeAnd2x": true
+  },
+  "animationSource": "../render/scene/poses.json",
+  "editableMaterials": "../render/scene/3d_controls_motion_scene.js",
+  "camera": "../render/scene/rig.json"
+}

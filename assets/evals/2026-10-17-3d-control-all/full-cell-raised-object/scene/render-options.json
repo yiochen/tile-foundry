@@ -1,0 +1,28 @@
+{
+  "caseId": "full-cell-raised-object",
+  "expected": {
+    "size": [
+      192,
+      320
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "elevationPx": 64,
+    "elevationTolerancePx": 2,
+    "fullBase": true,
+    "minimumAlpha": 250
+  },
+  "supersample": 2
+}

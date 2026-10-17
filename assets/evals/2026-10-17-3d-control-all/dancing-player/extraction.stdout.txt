@@ -1,0 +1,7 @@
+{
+  "kind": "animation",
+  "sprites": 12,
+  "sourceSHA256": "6b69cf88c1af7c7344fe6c3ea351d6d16753706bca9b86f9716be3df45b103d6",
+  "removedAlphaMass": 0,
+  "output": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/dancing-player/processed"
+}

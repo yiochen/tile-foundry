@@ -69,9 +69,11 @@ export async function verifyEvalGallery(page,root,port){
   await page.getByLabel('Eval attempt',{exact:true}).selectOption(floor.latest.id);
   await page.locator('[data-eval-policy="llm-visual-v1"]').waitFor();
   await page.locator('[data-eval-case="partial-cell-tall-object"]').click();
-  const lantern = gallery.cases.find(c=>c.id==='partial-cell-tall-object');
-  assert.equal(lantern.latest.guideOverlay.heightPx,160);
-  assert.deepEqual(lantern.latest.guideOverlay.anchor,[96,248]);
+  const lantern = gallery.cases.find(c=>c.id==='partial-cell-tall-object').trials.findLast(t=>t.guideOverlay);
+  assert.ok(lantern,'Preserved SVG overlay fixture');
+  await page.getByLabel('Eval attempt',{exact:true}).selectOption(lantern.id);
+  assert.equal(lantern.guideOverlay.heightPx,160);
+  assert.deepEqual(lantern.guideOverlay.anchor,[96,248]);
   await page.locator('.eval-sprite-preview[data-ready="true"]').waitFor();
   const originalPreview = await page.locator('.eval-sprite-preview').evaluate(c=>({
     pixels:c.toDataURL(),size:[c.width,c.height],anchor:c.dataset.anchor}));
@@ -83,11 +85,12 @@ export async function verifyEvalGallery(page,root,port){
   assert.deepEqual(overlaid.size,originalPreview.size);
   assert.equal(overlaid.anchor,originalPreview.anchor);
   assert.equal(overlaid.guideAnchor,'96,248');
-  assert.equal(await page.getByRole('link',{name:'Original SVG',exact:false}).getAttribute('href'),'/assets/'+lantern.latest.guideOverlay.image);
+  assert.equal(await page.getByRole('link',{name:'Original SVG',exact:false}).getAttribute('href'),'/assets/'+lantern.guideOverlay.image);
   await page.getByLabel('SVG overlay opacity',{exact:true}).press('ArrowLeft');
   await page.locator('.eval-sprite-preview[data-guide-opacity="60"]').waitFor();
   await page.locator('.eval-overlay-comparison').screenshot({path:root+'docs/preview-eval-lantern-overlay.png'});
   await page.reload({waitUntil:'networkidle'});
+  await page.getByLabel('Eval attempt',{exact:true}).selectOption(lantern.id);
   await page.locator('.eval-sprite-preview[data-guide-overlay="true"]').waitFor();
   await page.setViewportSize({width:390,height:844});
   await page.locator('.eval-overlay-comparison').scrollIntoViewIfNeeded();
@@ -105,19 +108,37 @@ export async function verifyEvalGallery(page,root,port){
     assert.equal(await page.locator('.eval-result').getAttribute('data-eval-trial'),entry.latest.id);
     assert.ok((await page.locator('.eval-result-heading').innerText()).includes(entry.latest.runId));
     assert.equal(await page.getByRole('link',{name:'Full eval report',exact:false}).getAttribute('href'),'/assets/'+entry.latest.report);
-    const original=page.getByAltText('Original generation 1',{exact:true});
+    const sourceLabel=entry.latest.runMode==='3d-render-control'?'Original 3D render 1':'Original generation 1';
+    const original=page.getByAltText(sourceLabel,{exact:true});
     await original.scrollIntoViewIfNeeded();
-    await page.waitForFunction(()=>document.querySelector('img[alt="Original generation 1"]')?.naturalWidth>0);
+    await page.waitForFunction(label=>document.querySelector(`img[alt="${label}"]`)?.naturalWidth>0,sourceLabel);
     await page.locator('.eval-prompt').first().locator('summary').click();
     assert.equal(await page.locator('.eval-prompt pre').first().innerText(),entry.latest.sources[0].prompt);
     const report=await page.request.get(url+'/assets/'+entry.latest.report);
     assert.ok(report.ok());assert.equal((await report.json()).status,entry.latest.status);
+    if(entry.latest.runMode==='3d-render-control'){
+      assert.equal(await page.getByRole('heading',{name:'Original 3D renders and recipes',exact:true}).count(),1);
+      for(const source of entry.latest.sources){
+        for(const reference of source.references.filter(r=>r.mediaType==='file')){
+          assert.equal(await page.locator(`img[src="/assets/${reference.image}"]`).count(),0);
+          assert.ok((await page.request.get(url+'/assets/'+reference.image)).ok());
+        }
+      }
+    }
     if(entry.latest.sprites.length){
       await page.locator('.eval-sprite-preview[data-ready="true"]').waitFor();
       assert.equal(await page.locator('.eval-sprite-preview').getAttribute('data-anchor'),entry.latest.sprites[0].anchor.join(','));
     }else{
       assert.ok((await page.locator('.eval-result').innerText()).includes('No processed sprites were delivered'));
     }
+  }
+  for(const id of ['character-directions','dancing-player']){
+    const control=gallery.cases.find(c=>c.id===id).trials.findLast(t=>t.runId==='2026-10-17-3d-control-all');
+    assert.ok(control,`Fresh full-suite 3D control: ${id}`);
+    await page.locator(`[data-eval-case="${id}"]`).click();
+    await page.getByLabel('Eval attempt',{exact:true}).selectOption(control.id);
+    await page.locator('.eval-sprite-preview[data-ready="true"][data-frame="0"]').waitFor();
+    assert.equal(await page.getByRole('heading',{name:'Original 3D renders and recipes',exact:true}).count(),1);
   }
   await page.locator('[data-eval-case="character-directions"]').click();
   const directionsPlayer=gallery.cases.find(c=>c.id==='character-directions').trials.findLast(t=>t.sprites.length===8);
@@ -151,6 +172,9 @@ export async function verifyEvalGallery(page,root,port){
   await page.locator('.eval-player').screenshot({path:root+'docs/preview-eval-player-desktop.png'});
   await page.screenshot({path:root+'docs/preview-evals-desktop.png',fullPage:true});
   await page.locator('[data-eval-case="seated-character-separated"]').click();
+  const rawSeated=gallery.cases.find(c=>c.id==='seated-character-separated').trials.findLast(t=>t.previewSequence?.frames.length===2);
+  assert.ok(rawSeated,'Preserved raw seated-layer fixture');
+  await page.getByLabel('Eval attempt',{exact:true}).selectOption(rawSeated.id);
   await page.locator('.eval-player[data-player-source="raw"][data-frame-count="2"]').waitFor();
   await page.getByRole('slider',{name:'Sprite progress',exact:true}).press('End');
   await page.waitForFunction(()=>document.querySelector('.eval-sprite-preview')?.dataset.frame==='1');
@@ -171,6 +195,9 @@ export async function verifyEvalGallery(page,root,port){
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Eval ${width}px overflow`);
     await page.locator('[data-eval-case="floating-object"]').click();
     await page.locator('.eval-sprite-preview[data-ready="true"]').waitFor();
+    const inputSummary=page.locator('.eval-artifacts details>summary').filter({hasText:/^Renderer inputs/}).first();
+    if(!await inputSummary.evaluate(summary=>summary.parentElement.open))await inputSummary.click();
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Renderer input links ${width}px overflow`);
     if(width===390)await page.screenshot({path:root+'docs/preview-evals-mobile.png',fullPage:true});
   }
   await page.getByRole('button',{name:'Animations',exact:true}).click();

@@ -1,0 +1,130 @@
+{
+  "version": 2,
+  "kind": "object",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "workflow": "fresh-direct-modeled-3d-control",
+  "sprites": [
+    {
+      "id": "disjoint-support-arch",
+      "image": "sprites/whole.png",
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "footprint": [
+        384,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "artRect": [
+        63,
+        87,
+        385,
+        289
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "guide.json",
+        "sourceImage": "source-01.png",
+        "sourceScale": 2,
+        "noPerObjectFit": true
+      }
+    }
+  ],
+  "supportCells": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "overheadCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "depthPieces": [
+    {
+      "id": "arch-rear",
+      "image": "render/arch-rear.png",
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "drawOrder": 0,
+      "worldZInterval": [
+        -0.5,
+        0
+      ],
+      "geometrySource": "scene/model.json",
+      "derivation": "Independently modeled and rendered world-depth half; no raster slicing"
+    },
+    {
+      "id": "arch-front",
+      "image": "render/arch-front.png",
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "drawOrder": 2,
+      "worldZInterval": [
+        0,
+        0.5
+      ],
+      "geometrySource": "scene/model.json",
+      "derivation": "Independently modeled and rendered world-depth half; no raster slicing"
+    }
+  ],
+  "processing": {
+    "operation": "supersampled render capture",
+    "wholeCanvasUniformScale": 0.5,
+    "perFrameFit": false,
+    "cameraFit": false,
+    "rootFit": false,
+    "crop": false,
+    "colorKey": false,
+    "silhouetteMask": false
+  },
+  "provenance": {
+    "imageGenerationCalls": 0,
+    "artwork": "Fresh authored Three.js geometry and procedural 3D materials",
+    "editableScene": "scene/model.json",
+    "runnableSource": "scene/3d_controls_static.mjs"
+  }
+}

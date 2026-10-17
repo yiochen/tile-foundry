@@ -1,0 +1,21 @@
+{
+  "mode": "fresh-direct-3d-control",
+  "imageGenerationCalls": 0,
+  "oldPNGReuse": false,
+  "freshCapture": true,
+  "alphaThreshold": 0,
+  "rendererMaskApplied": false,
+  "perFrameFitting": false,
+  "animationDesign": {
+    "authorship": "authored-skeletal-joint-curves",
+    "phaseSamples": 12,
+    "rootWorld": [
+      0,
+      0,
+      0
+    ]
+  },
+  "actualSourceSHA256": "6b69cf88c1af7c7344fe6c3ea351d6d16753706bca9b86f9716be3df45b103d6",
+  "capture": "render/capture.json",
+  "note": "Authored direct 3D output, not an AI reskin or twelve model-drawn phases."
+}

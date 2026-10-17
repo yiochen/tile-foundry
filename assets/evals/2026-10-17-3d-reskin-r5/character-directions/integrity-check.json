@@ -1,0 +1,17 @@
+{
+  "caseId": "character-directions",
+  "imageGenerationCalls": 1,
+  "retryOrCorrectionCalls": 0,
+  "sourceAndReferenceHashesVerified": true,
+  "requestPreservedVerbatim": true,
+  "exactPromptMatchesActualArguments": true,
+  "manifestVersion": 2,
+  "runtimeSpriteCount": 8,
+  "extractionStatus": "extracted-needs-independent-visual-review",
+  "browserScreenshotsInspected": [
+    "previews/browser-desktop.png",
+    "previews/browser-mobile-dark.png"
+  ],
+  "independentVisualReview": "Owned by parent; no visual pass asserted",
+  "sourceUnchangedAfterGeneration": true
+}

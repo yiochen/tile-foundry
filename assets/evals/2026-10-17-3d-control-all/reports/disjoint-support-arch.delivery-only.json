@@ -1,0 +1,135 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "disjoint-support-arch",
+  "status": "needs-visual-review",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a stone arch spanning three cells across one row. Its two pillars occupy only the left and right 128x128 cells; the center cell is walkable. The arch is 160px tall. Deliver transparent art with explicit disjoint support occupancy and a separate overhead span. Deliver each sprite in a 512x448px frame with local projected ground anchor (256,312). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "315e97d787b40c1d0bd0ceee89ae52a609f0dfc9e42331b051b125ec405fae42"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "scene/render-options.json",
+        "scene/3d_controls_static_scene.js",
+        "scene/3d_controls_static_rig.js"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "9e1486528dfffa57aa0ed5572101fed7c9d945929207b759a7780ae8eb6badf0"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "object",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "disjoint-support-arch"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "ground-support-cells",
+      "pass": true,
+      "detail": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "check": "authored-depth-pieces",
+      "pass": true,
+      "detail": "Registered independent depth pieces; passage correctness needs visual review"
+    }
+  ],
+  "visualChecks": [],
+  "diagnostics": [
+    {
+      "check": "disjoint-support-arch-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {
+    "depthPieceSHA256": {
+      "arch-rear": "ec6e49264ad7645312afd440a9115f55bc3af069e709f95e1f4cedee7e296dc6",
+      "arch-front": "7d706135d63351697d1a913ef601c8d3e5ccad1d067b2d000481f0758b3253fa"
+    }
+  },
+  "reviewer": null,
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

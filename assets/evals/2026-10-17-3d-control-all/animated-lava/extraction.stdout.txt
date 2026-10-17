@@ -1,0 +1,7 @@
+{
+  "kind": "animation",
+  "sprites": 12,
+  "sourceSHA256": "5951684c34368f85322b178a04c1c6098c93591e5aaf3bb1040af606f11c4162",
+  "removedAlphaMass": 0,
+  "output": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-lava/processed"
+}

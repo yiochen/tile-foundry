@@ -1,0 +1,38 @@
+{
+  "prompt": "Direct modeled Three.js control for large-object-3x2. Render the requested subject with fixed authored camera, no image generation. Case request: Generate a long greenhouse occupying exactly 3x2 cells of 128px each (384x256 footprint), with 128px visible height. Keep a central ground anchor, the shared grid scale, and the complete transparent silhouette. Deliver each sprite in a 512x576px frame with local projected ground anchor (256,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2.",
+  "tool": "Three.js WebGLRenderer via Playwright Chromium; authored procedural model",
+  "transparentBackground": true,
+  "sourceSHA256": "79103ab5cc32e542198a7dbf000387aae1983ef89d901b236bc5371c0649283c",
+  "references": [
+    "scene/render-options.json",
+    "scene/3d_controls_static_scene.js",
+    "scene/3d_controls_static_rig.js"
+  ],
+  "referenceSHA256": {
+    "scene/render-options.json": "965ecbbfb55412b69a851382ae9f42ee5bfb05a1e21cc842de23f98e84823dc9",
+    "scene/3d_controls_static_scene.js": "b8b8ec7c78563307503aad06e8da3281cf3dadd0981d066edb52ba60f41e1306",
+    "scene/3d_controls_static_rig.js": "d230aa3ef97b16be2edb9552e2ddf9993b2a565604af06770fafab8cd3e8154e"
+  },
+  "referenceRoles": {
+    "scene/render-options.json": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call",
+    "scene/3d_controls_static_scene.js": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call",
+    "scene/3d_controls_static_rig.js": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call"
+  },
+  "imageGenerationCalls": 0,
+  "generationCalls": 0,
+  "sourceRole": "Untouched supersampled direct render capture",
+  "caseRequest": "Generate a long greenhouse occupying exactly 3x2 cells of 128px each (384x256 footprint), with 128px visible height. Keep a central ground anchor, the shared grid scale, and the complete transparent silhouette. Deliver each sprite in a 512x576px frame with local projected ground anchor (256,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2.",
+  "renderParameters": {
+    "supersample": 2,
+    "cellSize": 128,
+    "frame": [
+      512,
+      576
+    ],
+    "anchor": [
+      256,
+      376
+    ]
+  },
+  "processing": "Uniform whole-canvas supersampling resolves native runtime PNG; no fitting, clipping, masks or chroma key"
+}

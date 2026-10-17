@@ -1,0 +1,5 @@
+{
+  "recipe": "Alpha-composite complete stool then character at their common stored ground anchor; no elevation transform is added.",
+  "sharedSceneDifferencePixelsAbove8": 24,
+  "note": "Two independently antialiased layers can differ from simultaneous rasterization at shared edges; complete captures and both recompositions retained."
+}

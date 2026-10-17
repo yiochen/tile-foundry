@@ -1,0 +1,27 @@
+{
+  "prompt": "Apply a hand-painted gouache material finish to this exact rendered atlas. Edit color, texture and lighting on the existing surfaces while keeping the character geometry unchanged. Preserve the smooth rounded brown hair cap, oval blue tunic and rounded sleeves, tan capsule forearms, navy trousers, long rectangular brown boots and small square gold buckle. Use fine brush texture, soft painted shading and restrained warm highlights within those shapes, retaining the blue, brown, navy and tan palette and the existing light direction. Retain all eight neutral standing views in row-major order: north, northeast, east, southeast, south, southwest, west, northwest; four columns and two rows on the complete 1728 by 1344 canvas. Keep the original face visibility: rear views remain rear views. The input is registered artwork: keep its outside contours, anatomy scale, head crowns, sole positions, joints, panel positions, margins, transparent gaps and fixed top-down oblique camera. Return the same atlas with only its surface finish changed, on genuine transparency, without extra parts, external shadows, floor, labels or rearrangement.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "references": [
+    "references/rendered-pose-sheet.png"
+  ],
+  "referenceSHA256": {
+    "references/rendered-pose-sheet.png": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e"
+  },
+  "referenceRoles": {
+    "references/rendered-pose-sheet.png": "fresh floor-free registered 3D atlas; exact surface-edit target"
+  },
+  "toolArguments": "tool-args-01.json",
+  "minAlphaPreselected": 32,
+  "generationCallsPlanned": 1,
+  "capture": "render/capture.json",
+  "guide": "render/guide.json",
+  "projection": "top-down-oblique-square-grid",
+  "sourceSHA256": "d0e982b0cc9799f8d76a127352b404760d2277ee298db24530059266ad7619a8",
+  "imageGenerationCalls": 1,
+  "originalToolOutputPath": "/Users/yiouchen/.codex/generated_images/01a14adb-fcb4-70d1-85d5-9d93ad2ea488/exec-c3366ee0-0979-46b2-ac88-8da68e09fcdc.png",
+  "sourceSize": [
+    1422,
+    1106
+  ]
+}

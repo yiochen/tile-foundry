@@ -1,0 +1,27 @@
+{
+  "tool": "Three.js WebGLRenderer + frozen extract_registered_sheet.py",
+  "isImageModelCall": false,
+  "imageGenerationCalls": 0,
+  "prompt": "Deterministic direct 3D render control; no image prompt was sent. Freshly execute the retained editable scene with one fixed square-grid orthographic camera and root. Capture the complete transparent fixed-layout sheet, then supply that unchanged raster to the frozen registered-sheet extractor at alpha threshold zero. Source appearance and motion are authored geometry, materials and animation; no old PNG is an input.",
+  "transparentBackground": true,
+  "sourceSHA256": "6b69cf88c1af7c7344fe6c3ea351d6d16753706bca9b86f9716be3df45b103d6",
+  "references": [
+    "source-01.png"
+  ],
+  "referenceSHA256": {
+    "source-01.png": "6b69cf88c1af7c7344fe6c3ea351d6d16753706bca9b86f9716be3df45b103d6"
+  },
+  "referenceRoles": {
+    "source-01.png": "Fresh authored 3D color capture actually supplied to deterministic fixed-sheet extraction; no image-model reference"
+  },
+  "deterministicInputs": {
+    "scene": "render/scene.json",
+    "sourceCode": "render/scene/3d_controls_motion_scene.js",
+    "characterSourceCode": "render/scene/character_scene.js",
+    "cameraAndRig": "render/scene/rig.json",
+    "animation": "render/scene/poses.json"
+  },
+  "processorSHA256": "3a5608f99967d58a4e71e1d2473a8651a5eb6c5f6bfccb539465677a1ea291a6",
+  "sourceCapture": "render/capture.json",
+  "commands": "commands.json"
+}

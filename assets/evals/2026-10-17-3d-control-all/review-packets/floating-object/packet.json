@@ -1,0 +1,89 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "floating-object",
+  "request": "Generate a 64px-tall treasure orb floating 48px above the center of a 128x128 calibration tile. Keep the projected ground anchor beneath the orb and remove the calibration floor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "floating-placement": "The lowest solid orb pixel is about 48px above the declared projected ground point; do not snap the orb bottom to the anchor.",
+    "cutout": "The floor, anchor marks, and external shadow are absent from the transparent final sprite.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "object",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "groundAnchorAlignment": "center",
+    "supportCells": [],
+    "sprites": [
+      {
+        "id": "floating-object",
+        "image": "sprites/whole.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 64
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "floating-object",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {},
+      "sourceRect": null,
+      "cleanup": {}
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/scene/render-options.json"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/scene/3d_controls_static_scene.js"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/scene/3d_controls_static_rig.js"
+    },
+    {
+      "role": "processed",
+      "id": "floating-object",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object/sprites/whole.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/floating-object/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/floating-object/placement-0-dark.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/skill-snapshot/references/visual-review.md"
+}

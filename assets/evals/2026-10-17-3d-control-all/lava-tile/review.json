@@ -1,0 +1,80 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/review_full_3d_static_controls",
+  "independent": true,
+  "spriteSHA256": {
+    "lava-tile": "82e488e24f547b341ee2016fef262e7cd47ca118f3a497ccf461d2afa3828365"
+  },
+  "sourceSHA256": {
+    "source-01.png": "ba52b7daf5f21d043a65dd1f59976d6d2d13a19a0d6dc7c1befbf842113e12cb"
+  },
+  "resultSHA256": "315698d4cd22b4dc4993f3cb3e0f748042de581faf7e054ca2c48d924be73a02",
+  "guideSHA256": "72f0128ec26c07aeb0cc0054491ff1270a1decf6fd88052da8062140a48d7661",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The top is a screen-aligned square above a distinct front face. Both side boundaries remain vertical and the top/front edges stay parallel, without taper or perspective convergence.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/previews/lava-tile-dark-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The whole raised tile and front face fit inside the frame, with clean transparency outside. No lava effects or shadows are cut at the frame edge.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/lava-tile/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/lava-tile/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/previews/lava-tile-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The placed tile meets the complete ground cell at its bottom and side boundaries while the top rises above its rear boundary. The stored ground cross remains at the cell center rather than the image center.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/previews/lava-tile-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/guide.json"
+      ]
+    },
+    "visible-height": {
+      "pass": true,
+      "note": "The lower textured band reads as a raised front wall of roughly the requested quarter-cell height. It is clearly separated from the square upper surface and is not a flat swatch.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/previews/lava-tile-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/previews/lava-tile-stored-anchor-grid.png"
+      ]
+    },
+    "full-base": {
+      "pass": true,
+      "note": "The straight left, right and bottom boundaries fill the declared cell, without rounded corners or perspective taper. The repeated placement contains no inter-tile holes.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/previews/lava-tile-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/lava-tile/neighbors-0.png"
+      ]
+    },
+    "lava-joins": {
+      "pass": true,
+      "note": "In native and 2x 3x3 placement the molten channels and crust continue across both horizontal and vertical tile joins. There are no obvious boundary lines or lighting jumps; the lower outer edge consistently retains the raised front wall.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/previews/repeat-3-placed.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/previews/repeat-3-placed-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/lava-tile/neighbors-0.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "This is a direct modeled Three.js control, not an AI reskin. The retained 2x source and runtime sprite show the same complete geometry, materials and registration after the declared capture downsample. The linked renderer authors the geometry and captures separate floors/layers; no visible replacement, clipping or geometry fitting is introduced.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/scene/3d_controls_static_scene.js",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/scene/render-options.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile/guide.json"
+      ]
+    }
+  }
+}

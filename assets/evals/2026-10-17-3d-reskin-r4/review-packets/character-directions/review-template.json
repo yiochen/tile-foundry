@@ -1,0 +1,63 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {
+    "frame-00": "c0a848fe45dfb2b99568ec731c545394e1d3090f04bb1d89997a47e8109bf379",
+    "frame-01": "1ecc08e885a9c888b7716b892b725a0df52a1287d543c11bf15d63d9a96f7256",
+    "frame-02": "f24c3479b46afe79a111d2150cf57ee01e15d57649858c742e211e9b2bd40365",
+    "frame-03": "cf905e1641426b923ae6b0380a6a447d6f7e66de3efa767b4613b2bd0919061e",
+    "frame-04": "3dd5497ce4cb3bee60297c3e46f1182e1ccda5fa38d83ae74de1fe1e3fc423e0",
+    "frame-05": "5449db714721d21237877f31b6423dfcd4863e5e4fe0473ee14d40cd42b41948",
+    "frame-06": "179f21bd806869b11d670efb774f270b66970df2d9c51ccd77ece5f2948e5c61",
+    "frame-07": "8d83f3f58c66cc2ffb68be99dfbd3459ef671bd41eedec951acd517d74d62484"
+  },
+  "sourceSHA256": {
+    "source-01.png": "ce993cf77bf97b06c35d2f52b565f2e6d2e62ff882da05b6b115a2294dc06ead"
+  },
+  "resultSHA256": "0147be3e104ab245fd5486b93f62a76af1e21b74933cdcc0483e0c89114cf496",
+  "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "same-character": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "direction-height": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "direction-contact": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "cutout": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

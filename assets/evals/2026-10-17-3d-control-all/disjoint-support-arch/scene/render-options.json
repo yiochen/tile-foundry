@@ -1,0 +1,55 @@
+{
+  "caseId": "disjoint-support-arch",
+  "expected": {
+    "size": [
+      512,
+      448
+    ],
+    "footprint": [
+      384,
+      128
+    ],
+    "anchor": [
+      256,
+      312
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "supportCells": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "overheadCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "elevationPx": 160,
+    "elevationTolerancePx": 3,
+    "depthPiecesRequired": true
+  },
+  "supersample": 2
+}

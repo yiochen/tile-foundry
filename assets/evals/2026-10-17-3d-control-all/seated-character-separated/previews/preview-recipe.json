@@ -1,0 +1,9 @@
+{
+  "tool": "3d_controls_static_previews.py using tilekit tile_tools primitives and Pillow",
+  "spritesFitted": false,
+  "nativePixelsPerCell": 128,
+  "twiceScale": "nearest neighbor for inspection only",
+  "changesToSources": false,
+  "groundPlacement": "worldGround minus stored local anchor",
+  "imageGenerationCalls": 0
+}

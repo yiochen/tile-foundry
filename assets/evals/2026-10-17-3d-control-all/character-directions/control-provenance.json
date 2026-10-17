@@ -1,0 +1,21 @@
+{
+  "mode": "fresh-direct-3d-control",
+  "imageGenerationCalls": 0,
+  "oldPNGReuse": false,
+  "freshCapture": true,
+  "alphaThreshold": 0,
+  "rendererMaskApplied": false,
+  "perFrameFitting": false,
+  "animationDesign": {
+    "authorship": "authored-neutral-turnaround",
+    "phaseSamples": 8,
+    "rootWorld": [
+      0,
+      0,
+      0
+    ]
+  },
+  "actualSourceSHA256": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e",
+  "capture": "render/capture.json",
+  "note": "Authored direct 3D output, not an AI reskin or twelve model-drawn phases."
+}

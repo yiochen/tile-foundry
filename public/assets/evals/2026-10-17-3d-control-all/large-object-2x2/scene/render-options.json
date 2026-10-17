@@ -1,0 +1,38 @@
+{
+  "caseId": "large-object-2x2",
+  "expected": {
+    "size": [
+      384,
+      576
+    ],
+    "footprint": [
+      256,
+      256
+    ],
+    "anchor": [
+      192,
+      376
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "elevationPx": 128,
+    "elevationTolerancePx": 3
+  },
+  "supersample": 2
+}

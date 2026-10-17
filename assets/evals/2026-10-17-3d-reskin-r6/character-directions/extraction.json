@@ -1,0 +1,21 @@
+{
+  "arguments": [
+    "./.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r6/skill-snapshot/scripts/extract_registered_sheet.py",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r6/character-directions/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r6/character-directions/render/guide.json",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r6/character-directions/processed",
+    "--kind",
+    "directions",
+    "--min-alpha",
+    "32"
+  ],
+  "exitCode": 0,
+  "stdout": "{\n  \"kind\": \"directions\",\n  \"sprites\": 8,\n  \"sourceSHA256\": \"d0e982b0cc9799f8d76a127352b404760d2277ee298db24530059266ad7619a8\",\n  \"removedAlphaMass\": 128970,\n  \"output\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r6/character-directions/processed\"\n}\n",
+  "stderr": "",
+  "minAlpha": 32,
+  "attempts": 1,
+  "perPoseFitting": false,
+  "rendererMaskApplied": false,
+  "repairs": false
+}

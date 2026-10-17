@@ -1,0 +1,109 @@
+{
+  "screenshots": [
+    "previews/browser-desktop.png",
+    "previews/playback-desktop.png",
+    "previews/browser-mobile.png",
+    "previews/playback-mobile.png"
+  ],
+  "browserErrors": [],
+  "playback": {
+    "changes": [
+      {
+        "elapsedMs": 11.100000095367434,
+        "index": 0
+      },
+      {
+        "elapsedMs": 77.80000009536744,
+        "index": 1
+      },
+      {
+        "elapsedMs": 161.00000009536743,
+        "index": 2
+      },
+      {
+        "elapsedMs": 244.40000009536743,
+        "index": 3
+      },
+      {
+        "elapsedMs": 327.8000000953674,
+        "index": 4
+      },
+      {
+        "elapsedMs": 411.1000000953674,
+        "index": 5
+      },
+      {
+        "elapsedMs": 494.40000009536743,
+        "index": 6
+      },
+      {
+        "elapsedMs": 577.7000000953674,
+        "index": 7
+      },
+      {
+        "elapsedMs": 661.0000000953675,
+        "index": 8
+      },
+      {
+        "elapsedMs": 744.4000000953674,
+        "index": 9
+      },
+      {
+        "elapsedMs": 827.7000000953674,
+        "index": 10
+      },
+      {
+        "elapsedMs": 911.0000000953675,
+        "index": 11
+      },
+      {
+        "elapsedMs": 994.4000000953674,
+        "index": 0
+      },
+      {
+        "elapsedMs": 1077.7000000953674,
+        "index": 1
+      },
+      {
+        "elapsedMs": 1161.1000000953675,
+        "index": 2
+      },
+      {
+        "elapsedMs": 1244.3000000953675,
+        "index": 3
+      },
+      {
+        "elapsedMs": 1327.7000000953674,
+        "index": 4
+      },
+      {
+        "elapsedMs": 1411.0000000953673,
+        "index": 5
+      },
+      {
+        "elapsedMs": 1494.3000000953675,
+        "index": 6
+      },
+      {
+        "elapsedMs": 1577.7000000953674,
+        "index": 7
+      }
+    ],
+    "observedIndices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "lastToFirstObserved": true,
+    "declaredFps": 12
+  }
+}

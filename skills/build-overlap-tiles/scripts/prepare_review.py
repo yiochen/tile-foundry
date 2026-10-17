@@ -10,9 +10,11 @@ from PIL import Image, ImageDraw
 from review_playback import write_playback
 
 
-def placement_preview(image, sprite, output, dark=False, repeats=1):
+def placement_preview(image, sprite, output, dark=False, repeats=1, footprint=None):
     """Show complete frames on a declared grid, with no past measurements/verdicts."""
-    px, py = sprite['footprint']
+    # Depth pieces share the object's registration but need not declare a logical
+    # footprint of their own. Use the case grid for display, not invented metadata.
+    px, py = sprite.get('footprint', footprint)
     ax, ay = sprite['anchor']
     margin = 24
     view = Image.new('RGBA',(image.width+(repeats-1)*px+2*margin,
@@ -132,11 +134,11 @@ def prepare_review(run_root, case_id, output):
         with Image.open(contained(result_path.parent,sprite['image'],base)) as image:
             for dark in (False,True):
                 path = output/f'placement-{index}-{"dark" if dark else "light"}.png'
-                placement_preview(image.convert('RGBA'),sprite,path,dark)
+                placement_preview(image.convert('RGBA'),sprite,path,dark,footprint=case['expected']['footprint'])
                 assets.append({'role':'placement-preview','path':str(path)})
             if case['expected'].get('fullBase'):
                 path = output/f'neighbors-{index}.png'
-                placement_preview(image.convert('RGBA'),sprite,path,repeats=3)
+                placement_preview(image.convert('RGBA'),sprite,path,repeats=3,footprint=case['expected']['footprint'])
                 assets.append({'role':'neighbor-preview','path':str(path)})
     if case['kind'] == 'floor' and sprites:
         with Image.open(contained(result_path.parent,sprites[0]['image'],base)) as image:

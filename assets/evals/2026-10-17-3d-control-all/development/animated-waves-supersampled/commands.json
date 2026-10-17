@@ -1,0 +1,31 @@
+{
+  "capture": [
+    "node",
+    "tools/3d_controls_motion.mjs",
+    "animated-waves",
+    "../../../../../../tmp/tile-foundry-motion-controls-dev/animated-waves",
+    "--skill-root",
+    "skills/build-overlap-tiles",
+    "--runtime-root",
+    ".",
+    "--python",
+    ".venv/bin/python"
+  ],
+  "extraction": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/skills/build-overlap-tiles/scripts/extract_registered_sheet.py",
+    "/tmp/tile-foundry-motion-controls-dev/animated-waves/source-01.png",
+    "/tmp/tile-foundry-motion-controls-dev/animated-waves/render/guide.json",
+    "/tmp/tile-foundry-motion-controls-dev/animated-waves/processed",
+    "--kind",
+    "animation",
+    "--min-alpha",
+    "0"
+  ],
+  "pack": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/tools/3d_controls_motion_pack.py",
+    "/tmp/tile-foundry-motion-controls-dev/animated-waves",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/skills/build-overlap-tiles"
+  ]
+}

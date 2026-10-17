@@ -1,0 +1,22 @@
+{
+  "run": "2026-10-17-3d-reskin-r5",
+  "mode": "saved-artifact-replay",
+  "ok": true,
+  "trials": [
+    {
+      "trial": "character-directions",
+      "caseId": "character-directions",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "dancing-player",
+      "caseId": "dancing-player",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    }
+  ],
+  "scope": "Replays preserved originals and independent reviews, including failures; no new image generation or corrected attempts."
+}

@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "kind": "animation",
+  "status": "failed-extraction",
+  "workflow": "3d-capture-ai-surface-reskin",
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "fps": 12,
+  "sprites": [],
+  "expectedFrameCount": 12,
+  "authoredFrame": [
+    192,
+    320
+  ],
+  "authoredAnchor": [
+    96,
+    248
+  ],
+  "nominalStandingHeight": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "elevationPx": 160,
+  "imageGenerationCalls": 1,
+  "failure": {
+    "stage": "fixed-panel-extraction",
+    "diagnostic": "ValueError: Panel 2 resampled art reaches the runtime frame boundary; clipping risk",
+    "record": "extraction-01.json",
+    "stderr": "extraction-01.stderr.txt",
+    "minAlphaPreselected": 32,
+    "retryOrCorrectionCalls": 0,
+    "recoveryApplied": false
+  },
+  "provenance": {
+    "source": {
+      "path": "source-01.png",
+      "sha256": "dd09700e0a74ab72ce0edd305c4538d4854f20b0beb283c7e87339d77428f37c"
+    },
+    "guide": {
+      "path": "guide.json",
+      "sha256": "9a65e8aebc0d9619f34ff59449744bec56f789d976a9d588e26476b0099a1531"
+    },
+    "generationRecipe": "generation-01.json",
+    "capture": "render/capture.json"
+  },
+  "limitations": [
+    "No runtime candidate sprites or playable candidate loop were delivered because the fixed extractor rejected the source.",
+    "The raw candidate source and authored 3D control remain intact for independent inspection."
+  ]
+}

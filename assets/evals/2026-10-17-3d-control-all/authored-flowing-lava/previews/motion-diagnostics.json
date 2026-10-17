@@ -1,0 +1,78 @@
+{
+  "gating": false,
+  "note": "Pixel deltas are diagnostics; review actual 12fps playback and final-to-first step.",
+  "transitions": [
+    {
+      "from": 0,
+      "to": 1,
+      "meanRGBDelta": 38.969889322916664,
+      "changedPixelsOver8": 9474
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "meanRGBDelta": 38.8714599609375,
+      "changedPixelsOver8": 9288
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "meanRGBDelta": 39.123758951822914,
+      "changedPixelsOver8": 9424
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "meanRGBDelta": 39.225870768229164,
+      "changedPixelsOver8": 9422
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "meanRGBDelta": 39.098103841145836,
+      "changedPixelsOver8": 9296
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "meanRGBDelta": 39.201090494791664,
+      "changedPixelsOver8": 9493
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "meanRGBDelta": 38.58367919921875,
+      "changedPixelsOver8": 9334
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "meanRGBDelta": 38.796162923177086,
+      "changedPixelsOver8": 9443
+    },
+    {
+      "from": 8,
+      "to": 9,
+      "meanRGBDelta": 39.124715169270836,
+      "changedPixelsOver8": 9348
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "meanRGBDelta": 38.999613444010414,
+      "changedPixelsOver8": 9314
+    },
+    {
+      "from": 10,
+      "to": 11,
+      "meanRGBDelta": 38.57586669921875,
+      "changedPixelsOver8": 9343
+    },
+    {
+      "from": 11,
+      "to": 0,
+      "meanRGBDelta": 38.47406005859375,
+      "changedPixelsOver8": 9239
+    }
+  ]
+}

@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "kind": "rendered-3d-sheet",
+  "assetKind": "directions",
+  "workflow": "rigged-3d-projection-reference",
+  "mode": "directions",
+  "size": [
+    1728,
+    1344
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "cellSize": 128,
+  "anchor": [
+    96,
+    248
+  ],
+  "columns": 4,
+  "rows": 2,
+  "gutter": 64,
+  "captureScale": 2,
+  "order": "row-major",
+  "cells": [
+    {
+      "index": 0,
+      "rect": [
+        0,
+        0,
+        384,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "direction": "N",
+      "alphaBounds": [
+        45,
+        88,
+        147,
+        258
+      ],
+      "projectedBounds": [
+        45.735499791895116,
+        87.99999237060531,
+        146.2645002081049,
+        257.279999694824
+      ]
+    },
+    {
+      "index": 1,
+      "rect": [
+        448,
+        0,
+        832,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "direction": "NE",
+      "alphaBounds": [
+        62,
+        88,
+        137,
+        272
+      ],
+      "projectedBounds": [
+        62.49420805814627,
+        87.99999097868282,
+        136.7465653036538,
+        271.62302330233825
+      ]
+    },
+    {
+      "index": 2,
+      "rect": [
+        896,
+        0,
+        1280,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "direction": "E",
+      "alphaBounds": [
+        78,
+        88,
+        118,
+        273
+      ],
+      "projectedBounds": [
+        78.07999992370605,
+        87.99999237060531,
+        117.63199996948242,
+        272.1280002212523
+      ]
+    },
+    {
+      "index": 3,
+      "rect": [
+        1344,
+        0,
+        1728,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "direction": "SE",
+      "alphaBounds": [
+        62,
+        88,
+        137,
+        280
+      ],
+      "projectedBounds": [
+        62.494208058146285,
+        87.99999097868282,
+        136.74656530365377,
+        279.76889307094547
+      ]
+    },
+    {
+      "index": 4,
+      "rect": [
+        0,
+        704,
+        384,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "direction": "S",
+      "alphaBounds": [
+        45,
+        88,
+        147,
+        269
+      ],
+      "projectedBounds": [
+        45.735499791895116,
+        87.99999237060531,
+        146.2645002081049,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 5,
+      "rect": [
+        448,
+        704,
+        832,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "direction": "SW",
+      "alphaBounds": [
+        55,
+        88,
+        130,
+        280
+      ],
+      "projectedBounds": [
+        55.25343469634623,
+        87.99999097868282,
+        129.50579194185372,
+        279.76889307094547
+      ]
+    },
+    {
+      "index": 6,
+      "rect": [
+        896,
+        704,
+        1280,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "direction": "W",
+      "alphaBounds": [
+        74,
+        88,
+        114,
+        273
+      ],
+      "projectedBounds": [
+        74.36800003051758,
+        87.99999237060531,
+        113.92000007629395,
+        272.1280002212523
+      ]
+    },
+    {
+      "index": 7,
+      "rect": [
+        1344,
+        704,
+        1728,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "direction": "NW",
+      "alphaBounds": [
+        55,
+        88,
+        130,
+        272
+      ],
+      "projectedBounds": [
+        55.25343469634621,
+        87.99999097868282,
+        129.50579194185372,
+        271.62302330233825
+      ]
+    }
+  ],
+  "runtimeSheetSize": [
+    864,
+    672
+  ],
+  "runtimeGutter": 32,
+  "runtimeFloorRect": [
+    32,
+    184,
+    160,
+    312
+  ],
+  "authoredRenders": [
+    {
+      "role": "neutral-standing",
+      "image": "neutral.png"
+    },
+    {
+      "role": "rigged-reference",
+      "image": "sheet.png"
+    },
+    {
+      "role": "floor-registration",
+      "image": "guide.png"
+    },
+    {
+      "role": "neutral-standing-on-floor",
+      "image": "neutral-on-floor.png"
+    }
+  ],
+  "nominalStandingHeight": 160,
+  "elevationPx": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "projection": "top-down-oblique-square-grid",
+  "projectionFormula": {
+    "screenX": "96 + 128*x",
+    "screenY": "248 + 128*z - 128*y"
+  },
+  "sourcePixelsPerRuntimePixel": 2,
+  "sourceSize": [
+    1728,
+    1344
+  ],
+  "sourceRole": "floor-free rendered 3D color; auxiliary floor reference is separate",
+  "geometryAuthority": "authored 3D camera/model/rig; reskin output requires independent verification",
+  "floorCorners": [
+    {
+      "world": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "screen": [
+        32,
+        183.9999999999998
+      ]
+    },
+    {
+      "world": [
+        0.5,
+        0,
+        -0.5
+      ],
+      "screen": [
+        160,
+        183.9999999999998
+      ]
+    },
+    {
+      "world": [
+        0.5,
+        0,
+        0.5
+      ],
+      "screen": [
+        160,
+        311.99999999999983
+      ]
+    },
+    {
+      "world": [
+        -0.5,
+        0,
+        0.5
+      ],
+      "screen": [
+        32,
+        311.99999999999983
+      ]
+    }
+  ],
+  "neutralProjectedBounds": [
+    50.431999206542976,
+    87.99999237060531,
+    141.56800079345703,
+    268.7999991989134
+  ],
+  "neutralProjectedCrownHeight": 160.0000076293947,
+  "depthPass": {
+    "format": "opaque normalized grayscale over object alpha",
+    "packing": "THREE.BasicDepthPacking",
+    "near": 6,
+    "far": 10
+  },
+  "maskPass": {
+    "format": "opaque grayscale; intensity equals object-color alpha; black is empty"
+  },
+  "fitting": {
+    "perFrame": false,
+    "perDirection": false,
+    "camera": "fixed",
+    "root": "fixed",
+    "modelScale": "fixed"
+  }
+}

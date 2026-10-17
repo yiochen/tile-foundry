@@ -1,0 +1,53 @@
+{
+  "id": "character-directions",
+  "prompt": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in {{OUTPUT_DIR}}.",
+  "outputSubdir": "character-directions",
+  "kind": "directions",
+  "expected": {
+    "size": [
+      192,
+      320
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "elevationPx": 160,
+    "elevationTolerancePx": 2,
+    "frames": 8,
+    "columns": 4,
+    "rows": 2,
+    "directions": [
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "heightSpreadMaxPx": 4,
+    "contactDriftMaxPx": 2
+  },
+  "visualChecks": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "same-character": "One consistent identity, outfit, proportions and camera; turn the subject, not the camera.",
+    "direction-height": "Eight upright views have the same standing design height within 4px; no per-direction art-bounds fitting.",
+    "direction-contact": "Independent review of the floor registration and physical sole/support center confirms consistent contact; toe length may change the visible bottom.",
+    "cutout": "No calibration floor or pose-guide strokes remain.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  }
+}

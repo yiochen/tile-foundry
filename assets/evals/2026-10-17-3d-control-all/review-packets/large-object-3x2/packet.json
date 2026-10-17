@@ -1,0 +1,108 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "large-object-3x2",
+  "request": "Generate a long greenhouse occupying exactly 3x2 cells of 128px each (384x256 footprint), with 128px visible height. Keep a central ground anchor, the shared grid scale, and the complete transparent silhouette. Deliver each sprite in a 512x576px frame with local projected ground anchor (256,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "rectangular-size": "The footprint remains a 3:2 rectangle at the same cell scale, without forcing a square or stretching axes.",
+    "multi-cell-overlap": "Inspect complete placement and tall-row overlap; report when independent depth pieces are needed.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "object",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "groundAnchorAlignment": "center",
+    "sprites": [
+      {
+        "id": "large-object-3x2",
+        "image": "sprites/whole.png",
+        "size": [
+          512,
+          576
+        ],
+        "anchor": [
+          256,
+          376
+        ],
+        "footprint": [
+          384,
+          256
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "elevationPx": 128
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "large-object-3x2",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {},
+      "sourceRect": null,
+      "cleanup": {}
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/scene/render-options.json"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/scene/3d_controls_static_scene.js"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/scene/3d_controls_static_rig.js"
+    },
+    {
+      "role": "processed",
+      "id": "large-object-3x2",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/sprites/whole.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/large-object-3x2/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/large-object-3x2/placement-0-dark.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/skill-snapshot/references/visual-review.md"
+}

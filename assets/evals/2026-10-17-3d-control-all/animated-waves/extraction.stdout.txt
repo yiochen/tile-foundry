@@ -1,0 +1,7 @@
+{
+  "kind": "animation",
+  "sprites": 12,
+  "sourceSHA256": "5642757dde6ec38017e82ed63ec80fd7d4cc8896913dfe67b9c37b2fea8c7d7a",
+  "removedAlphaMass": 0,
+  "output": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/animated-waves/processed"
+}

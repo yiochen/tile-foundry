@@ -1,0 +1,217 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "dancing-player",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r5/dancing-player"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a 12-frame player dancing spritesheet on a 128x128 calibration tile at exactly 12 fps. Keep one player design with nominal 160px standing height, the same anatomy scale and floor-center foot/root anchor in every frame. Remove the calibration floor, retain complete limbs, and deliver a playable loop. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r5/dancing-player."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "dd09700e0a74ab72ce0edd305c4538d4854f20b0beb283c7e87339d77428f37c"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/pose-sheet.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "9a65e8aebc0d9619f34ff59449744bec56f789d976a9d588e26476b0099a1531"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "animation",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": false,
+      "detail": 0
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "check": "declared-geometry",
+      "pass": false,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": false,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "12-fps-schedule",
+      "pass": true,
+      "detail": "12 fps / 83.333333 ms"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": null,
+      "detail": "The raw sheet shows a broadly consistent top/front camera and the authored reference has the intended square-grid projection. However the sanitized registration contains no delivered candidate frames or placement previews, so the actual runtime projection cannot receive a visual pass.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "dancing-player/render/guide.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": false,
+      "detail": "The generated source already truncates outer hands at sheet edges, notably the upper-right and lower-left source cells; the lower-left arm/hand runs into the left canvas boundary. No processed candidate frames are supplied to establish complete frame delivery. The attractive authored reference does not repair the clipped generated source.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": null,
+      "detail": "The authored floor guide establishes the intended floor-center root, but there are no registered processed candidate frames or placement previews to compare physically with it. The source alone does not establish the runtime ground anchor.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/render/guide.png",
+        "dancing-player/render/neutral-on-floor.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    {
+      "check": "same-player",
+      "pass": null,
+      "detail": "The twelve raw panels appear to share the same brown-haired blue-shirted character, belt, trousers and boots, with similar frontal lighting. With no delivered candidate frames or candidate playback, I cannot validate consistency of the runtime animation.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    {
+      "check": "dancing-poses",
+      "pass": null,
+      "detail": "The source visibly contains twelve arm-wave pose panels with two arms/legs generally readable, though some outer hands are clipped. There is no delivered frame sequence or actual candidate playback to validate twelve useful delivered dance poses forming a readable loop.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    {
+      "check": "design-height",
+      "pass": null,
+      "detail": "The raw panels look broadly similar in anatomy scale and the authored neutral/reference provides the nominal target, but there are no delivered candidate frames to compare against that target at runtime scale. I do not infer standing height from the source silhouette bounds or treat the authored rig as candidate evidence.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "dancing-player/render/neutral.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    {
+      "check": "contact-stability",
+      "pass": null,
+      "detail": "No processed candidate sequence or physical floor placements are supplied. The fixed roots shown by the authored guide describe the reference only; they cannot establish stable candidate support, absence of per-frame fitting, or absence of rescaling.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/render/guide.png",
+        "dancing-player/render/neutral-on-floor.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    {
+      "check": "cutout-quality",
+      "pass": false,
+      "detail": "The raw generated source has conspicuous red/yellow/gray/blue fringes and smears outside arms, shoulders, torso sides and the gap between boots. These are visible background/color contamination rather than character material. No delivered processed cutouts on light/dark backgrounds are supplied to show that this has been resolved.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    {
+      "check": "loop",
+      "pass": null,
+      "detail": "There are no delivered candidate frames and no candidate 12fps playback. I did not substitute a rigged-reference/control playback or infer the 12-to-1 transition from a contact sheet, so unintended pop and scale jump remain unvalidated.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": null,
+      "detail": "Only the generated source and authored references are supplied; the registration has no candidate sprites or processing operations. There is no delivered processed artwork to compare for source-faithful extraction or undeclared geometry fitting.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    }
+  ],
+  "diagnostics": [],
+  "reviewArtifacts": {},
+  "reviewer": "/root/review_clean_material_forward",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

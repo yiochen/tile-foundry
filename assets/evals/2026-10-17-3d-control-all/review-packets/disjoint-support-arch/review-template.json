@@ -1,0 +1,53 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {
+    "disjoint-support-arch": "afd8f275f29765d9f015d2954d0eb8ab33b941fcdf94dfbbbee3d13e99dd57df",
+    "arch-rear": "ec6e49264ad7645312afd440a9115f55bc3af069e709f95e1f4cedee7e296dc6",
+    "arch-front": "7d706135d63351697d1a913ef601c8d3e5ccad1d067b2d000481f0758b3253fa"
+  },
+  "sourceSHA256": {
+    "source-01.png": "315e97d787b40c1d0bd0ceee89ae52a609f0dfc9e42331b051b125ec405fae42"
+  },
+  "resultSHA256": "1aff23b4ce8f0969e60a4647bebf2184a817420af132274245e5cf08a08ed919",
+  "guideSHA256": "9e1486528dfffa57aa0ed5572101fed7c9d945929207b759a7780ae8eb6badf0",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "open-passage": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "arch-depth": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "support-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

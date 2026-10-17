@@ -1,0 +1,5 @@
+Apply a subtle hand-painted gouache material finish to this exact 1728x2048 rendered atlas. Edit the existing surfaces, keeping the existing character geometry completely unchanged. Preserve the original smooth hair-cap outline, rounded head and torso, existing face visibility, limb thickness, long rectangular boots, outfit and proportions. Brush color and shading inside those existing shapes only. Keep the same blue, brown and skin palette and the same light direction.
+
+The input is the final registered artwork: keep its exact outside contours, body height, head crowns, sole positions, joints, panel positions and transparent pixels. Keep every existing margin and gap at the same size. Do not redesign anatomy, hairstyle, clothing, shoes, face direction or any pose. In a back view the face remains hidden.
+
+Retain all 12 dance poses, four columns and three rows, in their current cyclic order. Preserve the entire canvas and empty gutters. Return this same atlas with the surface finish changed, on genuine transparency. No new outlines, added parts, external shadows, floor, labels or layout changes.

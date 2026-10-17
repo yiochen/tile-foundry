@@ -1,0 +1,120 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "seamless-square-floor",
+  "status": "needs-visual-review",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a seamless 128x128 mossy stone floor tile. Its opposite edges must connect in a repeated square grid, without visible seams or sudden color/lighting gradient jumps. Keep it flat, with no raised front wall. Deliver an opaque 128x128px tile with local ground-center anchor (64,64). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "96c4da44a8b590ee5205e2d796456b94e9087cd97ff5011b2fbc096d9fa9cb02"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "scene/render-options.json",
+        "scene/3d_controls_static_scene.js",
+        "scene/3d_controls_static_rig.js"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "0abf52e9a18a41f52387d28640baf46ade7c8c9350593105c999ed560d73ee8f"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "floor",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "seamless-square-floor"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "opaque-floor",
+      "pass": true,
+      "detail": "Complete opaque square"
+    }
+  ],
+  "visualChecks": [],
+  "diagnostics": [
+    {
+      "check": "opposite-edge-continuity",
+      "detail": {
+        "horizontal": 1.046875,
+        "vertical": 1.2239583333333333,
+        "note": "RGB deltas do not determine visible seams; inspect repeated neighbors."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {
+    "repeat-3": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/reports/seamless-square-floor.delivery-only-previews/repeat-3.png",
+    "repeat-5": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/reports/seamless-square-floor.delivery-only-previews/repeat-5.png"
+  },
+  "reviewer": null,
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

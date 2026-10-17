@@ -1,0 +1,849 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "authored-flowing-lava",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/authored-flowing-lava"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a looping raised lava tile with a visibly moving surface. Use a full 128x128 ground base, 32px visible front-wall height, twelve frames at exactly 12 fps, and the same fixed top-down oblique projection. Deliver transparent 192x320px frames with local projected ground anchor (96,248) and a 4-column by 3-row runtime spritesheet. Preserve connected neighboring surfaces, including offset-phase neighbors. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/authored-flowing-lava."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "3d73972a6b625e0cbbf55c07370ac4766ae5acdfa4835500e21d1219dc3fec42"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "source-01.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "ab0c777fe6cfa1904f8b7ede2acbe16039d944fd5d24cd56e4ec65bf0f8fdd9c"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "animation",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "frame-00",
+        "frame-01",
+        "frame-02",
+        "frame-03",
+        "frame-04",
+        "frame-05",
+        "frame-06",
+        "frame-07",
+        "frame-08",
+        "frame-09",
+        "frame-10",
+        "frame-11"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "12-fps-schedule",
+      "pass": true,
+      "detail": "12 fps / 83.333333 ms"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "The surface is a screen-aligned square with parallel opposite edges and a readable darker front wall. The same view persists across all twelve frames and the repeat previews show no perspective shrinkage or camera drift.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-dark-2x.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "Every frame contains a complete rectangular top surface and full front wall, with clean isolated margins. Light/dark sheets and placement views show no missing alpha, clipped effects or extra shadow.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/browser-mobile.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": true,
+      "detail": "All twelve marked placements register the same full base around the guide ground center. The top plane sits above that base and the front wall terminates at the same ground line; changing surface features do not move the anchor.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/render/guide.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/render/guide.json",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-0-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-0-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-1-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-1-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-2-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-2-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-3-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-3-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-4-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-4-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-5-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-5-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-6-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-6-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-7-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-7-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-8-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-8-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-9-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-9-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-10-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-10-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-11-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-11-dark.png"
+      ]
+    },
+    {
+      "check": "animated-height",
+      "pass": true,
+      "detail": "The square top outline, bottom ground line and front-wall thickness remain visibly fixed across all phases. Surface motion changes the pattern while the elevation and support remain stable, without scale breathing.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/render/guide.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/render/guide.json",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-0-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-0-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-1-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-1-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-2-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-2-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-3-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-3-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-4-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-4-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-5-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-5-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-6-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-6-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-7-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-7-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-8-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-8-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-9-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-9-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-10-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-10-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-11-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/placement-11-dark.png"
+      ]
+    },
+    {
+      "check": "spatial-seams",
+      "pass": false,
+      "detail": "The moving fissures merge into dim doubled channels along the tile borders, exposing both row and column boundaries in the 3\u00d73 field. Synchronized phases 2\u20134 and 9\u201311 and offset phases 0, 5 and 11 show the grid at native and 2\u00d7. The clean phase-zero synchronized surface does not carry through the moving phases; the visible boundary bands fail the seamless-neighbor requirement.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-00-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-00-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-00-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-00-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-01-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-01-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-01-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-01-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-02-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-02-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-02-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-02-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-03-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-03-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-03-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-03-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-04-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-04-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-04-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-04-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-05-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-05-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-05-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-05-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-06-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-06-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-06-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-06-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-07-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-07-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-07-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-07-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-08-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-08-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-08-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-08-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-09-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-09-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-09-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-09-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-10-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-10-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-10-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-10-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-11-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-11-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-11-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/neighbors-11-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/playback.html"
+      ]
+    },
+    {
+      "check": "temporal-loop",
+      "pass": true,
+      "detail": "The browser playback shows a readable flowing surface within the stationary outline. The explicit 11\u21920 wrap makes a comparable forward phase step without an additional position, palette or scale jump. Boundary-area doubling is visible throughout several phases and is recorded under spatial-seams.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/playback.html"
+      ]
+    },
+    {
+      "check": "frame-consistency",
+      "pass": true,
+      "detail": "All twelve isolated frames preserve the same complete surface silhouette, wall, palette and light level. The surface pattern changes while the underlying tile remains usable and visually consistent.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/browser-mobile.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The retained source and renderer sheets contain the same surface phases and wall artwork as the processed frames. The packet declares fixed 1:1 panel extraction with no per-pose fitting or cleanup, consistent with the visible result. This direct authored 3D control is assessed against those retained renderer outputs.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/source-01.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/render/sheet.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/packet.json",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/render/guide.json"
+      ]
+    },
+    {
+      "check": "motion-provenance",
+      "pass": true,
+      "detail": "The supplied guide identifies authored GLSL periodic surface motion and records its period, fixed boundary phase and translation, while the retained renderer/source sheet contains the actual twelve phases. The declared fixed 1:1 extraction preserves those phases. The evidence explicitly presents authored motion and does not claim model-drawn phases; reproducibility here is supported by the retained phases and fixed extraction contract, not by an AI-authorship assumption.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/source-01.png",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/render/sheet.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/authored-flowing-lava/packet.json",
+        "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/render/guide.json"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "frame-00-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-00-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-01-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-01-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-02-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-02-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-03-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-03-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-04-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-04-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-05-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-05-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-06-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-06-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-07-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-07-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-08-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-08-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-09-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-09-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-10-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-10-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-11-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-11-solid-coverage",
+      "detail": {
+        "coverage": {
+          "ok": true,
+          "coveredFraction": 1.0,
+          "uncoveredPixels": 0,
+          "testedPixels": 16384,
+          "emptyRows": [],
+          "pitch": [
+            128,
+            128
+          ],
+          "alphaThreshold": 250,
+          "requiredCoverage": 1.0,
+          "scope": "Repeated identical solid cells; not material/color continuity or mixed-height joins."
+        },
+        "sideSpans": {
+          "ok": true,
+          "farWidth": 128,
+          "nearWidth": 128,
+          "widthDelta": 0,
+          "sideShift": 0,
+          "tolerance": 1.0,
+          "bodyRect": [
+            32,
+            152,
+            160,
+            312
+          ],
+          "alphaThreshold": 250,
+          "scope": "Opaque silhouette bands only; inspect stud size, internal geometry, and shading visually."
+        }
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "/root/review_full_3d_motion_controls",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

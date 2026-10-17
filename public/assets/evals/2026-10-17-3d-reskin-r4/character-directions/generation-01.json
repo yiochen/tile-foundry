@@ -1,0 +1,18 @@
+{
+  "prompt": "Apply a subtle hand-painted gouache material finish to this exact 1728x1344 rendered atlas. Edit the existing surfaces, keeping the existing character geometry completely unchanged. Preserve the original smooth hair-cap outline, rounded head and torso, existing face visibility, limb thickness, long rectangular boots, outfit and proportions. Brush color and shading inside those existing shapes only. Keep the same blue, brown and skin palette and the same light direction.\n\nThe input is the final registered artwork: keep its exact outside contours, body height, head crowns, sole positions, joints, panel positions and transparent pixels. Keep every existing margin and gap at the same size. Do not redesign anatomy, hairstyle, clothing, shoes, face direction or any pose. In a back view the face remains hidden.\n\nRetain all 8 standing directions, four columns and two rows, N/NE/E/SE on the top row and S/SW/W/NW on the bottom row. Preserve the entire canvas and empty gutters. Return this same atlas with the surface finish changed, on genuine transparency. No new outlines, added parts, external shadows, floor, labels or layout changes.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "sourceSHA256": "ce993cf77bf97b06c35d2f52b565f2e6d2e62ff882da05b6b115a2294dc06ead",
+  "references": [
+    "references/pose-sheet.png"
+  ],
+  "referenceSHA256": {
+    "references/pose-sheet.png": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e"
+  },
+  "referenceRoles": {
+    "references/pose-sheet.png": "unchanged floor-free registered 3D sheet; material-and-lighting edit target"
+  },
+  "toolInput": "tool-input-01.json",
+  "untouchedOriginalToolOutput": "/Users/yiouchen/.codex/generated_images/01a129c0-ab3f-7cf2-9fa5-8f33f257f06c/exec-a6b988ef-5987-47ba-8c53-0113f8af6d58.png",
+  "generationCalls": 1
+}

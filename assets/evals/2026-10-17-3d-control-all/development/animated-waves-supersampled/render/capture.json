@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "workflow": "fresh-direct-3d-control",
+  "caseId": "animated-waves",
+  "createdAt": "2026-10-17T16:58:50.449Z",
+  "frame": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "cellSize": 128,
+  "supersample": 2,
+  "imageGenerationCalls": 0,
+  "isImageModelCall": false,
+  "oldPNGsRead": false,
+  "perFrameFit": false,
+  "rootFit": false,
+  "crop": false,
+  "backgroundRemoval": false,
+  "rendererMaskApplied": false,
+  "renderEngine": "Three.js WebGLRenderer via Playwright Chromium",
+  "threeVersion": "0.186.1",
+  "browserErrors": [],
+  "sourceFiles": {
+    "motionScene": {
+      "path": "scene/3d_controls_motion_scene.js",
+      "sha256": "870b7c9e5a2566251c86075aa051aa6bc62bc6aee77b2a68bda4443ff6ab638a"
+    },
+    "characterScene": {
+      "path": "scene/character_scene.js",
+      "sha256": "50415dfe2e3f25389e5f5cdd239b0f56bf5afb7f845699eb96ce403a1db6fc65"
+    },
+    "runner": {
+      "path": "scene/3d_controls_motion.mjs",
+      "sha256": "2c9c59bc5bd6fdfff8db0c1335cc69f5c63017e3540264d5aa2a457e9ace72d9"
+    }
+  },
+  "animationDesign": {
+    "authorship": "authored-GLSL-periodic-surface-motion",
+    "periodFrames": 12,
+    "fps": 12,
+    "endpointDuplicated": false,
+    "stationaryEdgeBlendPx": 16,
+    "boundaryReferencePhase": 0,
+    "translationPerCycle": [
+      0,
+      -1
+    ],
+    "note": "Analytic periodic materials; no generated texture or model-drawn phases. Phase-invariant boundaries trade edge motion for offset-neighbor continuity."
+  },
+  "limitations": [
+    "Direct renderer control with authored procedural materials; no image model drew appearance or motion.",
+    "Known mathematical registration does not itself establish visual quality or natural motion.",
+    "Raster antialiasing may vary across GPU/Chromium implementations."
+  ]
+}

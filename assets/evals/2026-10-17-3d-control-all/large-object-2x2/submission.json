@@ -1,0 +1,15 @@
+{
+  "caseId": "large-object-2x2",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-2x2",
+  "userPrompt": "Generate a stone fountain occupying exactly a 2x2 square of 128px cells (256x256 ground footprint), with 128px visible height. Deliver one complete transparent object, with a ground anchor at the center of the 2x2 footprint. Deliver each sprite in a 384x576px frame with local projected ground anchor (192,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-2x2.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json",
+      "role": "whole-asset"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "c034ef182a2fec1697597d81c1e54c956e0592682bbec751023eac686dea618c",
+  "result": "result.json"
+}

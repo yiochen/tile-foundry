@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "kind": "floor",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "workflow": "fresh-direct-modeled-3d-control",
+  "sprites": [
+    {
+      "id": "seamless-square-floor",
+      "image": "sprites/whole.png",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": [
+        64,
+        64
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0,
+      "artRect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "guide.json",
+        "sourceImage": "source-01.png",
+        "sourceScale": 2,
+        "noPerObjectFit": true
+      }
+    }
+  ],
+  "processing": {
+    "operation": "supersampled render capture",
+    "wholeCanvasUniformScale": 0.5,
+    "perFrameFit": false,
+    "cameraFit": false,
+    "rootFit": false,
+    "crop": false,
+    "colorKey": false,
+    "silhouetteMask": false
+  },
+  "provenance": {
+    "imageGenerationCalls": 0,
+    "artwork": "Fresh authored Three.js geometry and procedural 3D materials",
+    "editableScene": "scene/model.json",
+    "runnableSource": "scene/3d_controls_static.mjs"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "kind": "directions",
+  "sprites": 8,
+  "sourceSHA256": "465332b39b8896c522201986ee84658eb755b2d64ee56d98ffda3fc856b5914f",
+  "removedAlphaMass": 164959,
+  "output": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r5/character-directions/processed"
+}

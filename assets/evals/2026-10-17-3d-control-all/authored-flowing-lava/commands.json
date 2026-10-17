@@ -1,0 +1,31 @@
+{
+  "capture": [
+    "node",
+    "tools/3d_controls_motion.mjs",
+    "authored-flowing-lava",
+    "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava",
+    "--skill-root",
+    "assets/evals/2026-10-17-3d-control-all/skill-snapshot",
+    "--runtime-root",
+    ".",
+    "--python",
+    ".venv/bin/python"
+  ],
+  "extraction": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/skill-snapshot/scripts/extract_registered_sheet.py",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/render/guide.json",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/processed",
+    "--kind",
+    "animation",
+    "--min-alpha",
+    "0"
+  ],
+  "pack": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/tools/3d_controls_motion_pack.py",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/authored-flowing-lava",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/skill-snapshot"
+  ]
+}

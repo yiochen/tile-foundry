@@ -1,0 +1,378 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "dancing-player",
+  "status": "passed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/dancing-player"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a 12-frame player dancing spritesheet on a 128x128 calibration tile at exactly 12 fps. Keep one player design with nominal 160px standing height, the same anatomy scale and floor-center foot/root anchor in every frame. Remove the calibration floor, retain complete limbs, and deliver a playable loop. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/dancing-player."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "6b69cf88c1af7c7344fe6c3ea351d6d16753706bca9b86f9716be3df45b103d6"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "source-01.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "9a65e8aebc0d9619f34ff59449744bec56f789d976a9d588e26476b0099a1531"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "animation",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "frame-00",
+        "frame-01",
+        "frame-02",
+        "frame-03",
+        "frame-04",
+        "frame-05",
+        "frame-06",
+        "frame-07",
+        "frame-08",
+        "frame-09",
+        "frame-10",
+        "frame-11"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "12-fps-schedule",
+      "pass": true,
+      "detail": "12 fps / 83.333333 ms"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "The hair top, shoulders, torso volume and boot top/front surfaces preserve one fixed oblique view throughout all twelve poses. The floor guide squares and camera remain stable.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-dark-2x.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "All twelve frames retain both hands, arms, legs, hair and complete boots inside the frame. Native and 2\u00d7 light/dark inspection shows clear margins and no clipped effects or undeclared cast shadows.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/browser-mobile.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": true,
+      "detail": "All twelve placement views keep the standing support beneath the legs centered around the marked ground root. The torso and arms sway around that support rather than translating the entire sprite.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/render/guide.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/render/guide.json",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-0-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-0-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-1-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-1-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-2-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-2-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-3-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-3-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-4-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-4-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-5-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-5-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-6-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-6-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-7-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-7-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-8-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-8-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-9-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-9-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-10-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-10-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-11-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-11-dark.png"
+      ]
+    },
+    {
+      "check": "same-player",
+      "pass": true,
+      "detail": "The face, brown hair, blue shirt, belt/buckle, trouser shapes and brown boots remain one identity. Head and limb dimensions, light direction and camera remain consistent through the arm changes.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-dark-2x.png"
+      ]
+    },
+    {
+      "check": "dancing-poses",
+      "pass": true,
+      "detail": "Twelve distinct arm/forearm positions and alternating upper-body sway form a readable compact dance. The limbs remain complete and the repeated standing legs provide a stable support; no fused or missing limb is visible.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/playback.html"
+      ]
+    },
+    {
+      "check": "design-height",
+      "pass": true,
+      "detail": "The neutral-standing reference and all dance poses preserve the same apparent anatomy and crown/root relationship. Arm articulation and torso sway change the pose without an evident common-bounds rescale.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/render/neutral.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/render/neutral-on-floor.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/render/guide.png"
+      ]
+    },
+    {
+      "check": "contact-stability",
+      "pass": true,
+      "detail": "The marked placements and live playback keep both boots planted in the same support arrangement around the floor center. Upper-body movement does not drag the ground root or make the character breathe in scale.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/render/guide.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/render/guide.json",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-0-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-0-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-1-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-1-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-2-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-2-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-3-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-3-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-4-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-4-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-5-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-5-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-6-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-6-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-7-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-7-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-8-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-8-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-9-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-9-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-10-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-10-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-11-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/placement-11-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/playback.html"
+      ]
+    },
+    {
+      "check": "cutout-quality",
+      "pass": true,
+      "detail": "The source and processed light/dark sheets retain clean skin, sleeve and boot edges. There is no magenta floor residue, color spill, internal alpha hole or clipped shoe.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/browser-mobile.png"
+      ]
+    },
+    {
+      "check": "loop",
+      "pass": true,
+      "detail": "The running browser playback and explicit paused 11\u21920 wrap preserve planted feet, anatomy scale and the arm-sway rhythm. The wrap reads as another small pose step without an extra position or size pop.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/playback.html"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The retained renderer/source sheet contains the same twelve articulated poses seen in the runtime sheets. The packet declares one common 0.5 scale and fixed source-panel extraction; the visible processing preserves the authored pose art and does not add or refit geometry.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/source-01.png",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/render/sheet.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/dancing-player/packet.json",
+        "assets/evals/2026-10-17-3d-control-all/dancing-player/render/guide.json"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "frame-00-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-01-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-02-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-03-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-04-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-05-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-06-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-07-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-08-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-09-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-10-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-11-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "/root/review_full_3d_motion_controls",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

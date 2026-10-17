@@ -1,0 +1,38 @@
+{
+  "prompt": "Direct modeled Three.js control for lava-tile. Render the requested subject with fixed authored camera, no image generation. Case request: Generate a raised lava tile with a full 128x128 square base and a visibly 32px-high front wall, in top-down oblique game projection. Its surface should connect with identical neighboring tiles. Keep the logical footprint fixed as the top extends above the cell upper boundary. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile.",
+  "tool": "Three.js WebGLRenderer via Playwright Chromium; authored procedural model",
+  "transparentBackground": true,
+  "sourceSHA256": "ba52b7daf5f21d043a65dd1f59976d6d2d13a19a0d6dc7c1befbf842113e12cb",
+  "references": [
+    "scene/render-options.json",
+    "scene/3d_controls_static_scene.js",
+    "scene/3d_controls_static_rig.js"
+  ],
+  "referenceSHA256": {
+    "scene/render-options.json": "7f58445b4e1128a734b437d26c94aea63e69ae6f2a637fc6138be7bc1d35308a",
+    "scene/3d_controls_static_scene.js": "b8b8ec7c78563307503aad06e8da3281cf3dadd0981d066edb52ba60f41e1306",
+    "scene/3d_controls_static_rig.js": "d230aa3ef97b16be2edb9552e2ddf9993b2a565604af06770fafab8cd3e8154e"
+  },
+  "referenceRoles": {
+    "scene/render-options.json": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call",
+    "scene/3d_controls_static_scene.js": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call",
+    "scene/3d_controls_static_rig.js": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call"
+  },
+  "imageGenerationCalls": 0,
+  "generationCalls": 0,
+  "sourceRole": "Untouched supersampled direct render capture",
+  "caseRequest": "Generate a raised lava tile with a full 128x128 square base and a visibly 32px-high front wall, in top-down oblique game projection. Its surface should connect with identical neighboring tiles. Keep the logical footprint fixed as the top extends above the cell upper boundary. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/lava-tile.",
+  "renderParameters": {
+    "supersample": 2,
+    "cellSize": 128,
+    "frame": [
+      192,
+      320
+    ],
+    "anchor": [
+      96,
+      248
+    ]
+  },
+  "processing": "Uniform whole-canvas supersampling resolves native runtime PNG; no fitting, clipping, masks or chroma key"
+}

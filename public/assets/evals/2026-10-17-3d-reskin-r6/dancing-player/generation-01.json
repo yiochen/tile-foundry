@@ -1,0 +1,27 @@
+{
+  "prompt": "Apply a hand-painted gouache material finish to this exact rendered atlas. Edit color, texture and lighting on the existing surfaces while keeping the character geometry unchanged. Preserve the smooth rounded brown hair cap, oval blue tunic and rounded sleeves, tan capsule forearms, navy trousers, long rectangular brown boots and small square gold buckle. Use fine brush texture, soft painted shading and restrained warm highlights within those shapes, retaining the blue, brown, navy and tan palette and the existing light direction. Retain all twelve dancing poses in their current row-major order, four columns and three rows, on the complete 1728 by 2048 canvas. Keep the original face visibility: rear views remain rear views. The input is registered artwork: keep its outside contours, anatomy scale, head crowns, sole positions, joints, panel positions, margins, transparent gaps and fixed top-down oblique camera. Return the same atlas with only its surface finish changed, on genuine transparency, without extra parts, external shadows, floor, labels or rearrangement.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "references": [
+    "references/rendered-pose-sheet.png"
+  ],
+  "referenceSHA256": {
+    "references/rendered-pose-sheet.png": "6b69cf88c1af7c7344fe6c3ea351d6d16753706bca9b86f9716be3df45b103d6"
+  },
+  "referenceRoles": {
+    "references/rendered-pose-sheet.png": "fresh floor-free registered 3D atlas; exact surface-edit target"
+  },
+  "toolArguments": "tool-args-01.json",
+  "minAlphaPreselected": 32,
+  "generationCallsPlanned": 1,
+  "capture": "render/capture.json",
+  "guide": "render/guide.json",
+  "projection": "top-down-oblique-square-grid",
+  "sourceSHA256": "8b4786159eb42d14ebb3d701d3219e57df0acb538149fcdb81e2a8e454224b5e",
+  "imageGenerationCalls": 1,
+  "originalToolOutputPath": "/Users/yiouchen/.codex/generated_images/01a14adb-fcb4-70d1-85d5-9d93ad2ea488/exec-38cf44c0-8fc3-4740-b108-9d42765e8259.png",
+  "sourceSize": [
+    1152,
+    1366
+  ]
+}

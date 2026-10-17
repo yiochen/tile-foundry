@@ -70,6 +70,21 @@ class EvalGalleryTests(unittest.TestCase):
         self.assertEqual(trial['sprites'],[])
         self.assertTrue((self.root/'public'/trial['sources'][0]['image']).is_file())
 
+    def test_direct_render_inputs_publish_as_files_instead_of_broken_images(self):
+        self.run_record('2026-01-01',status='passed')
+        run=self.root/'runs/2026-01-01';directory=run/'floor'
+        record=json.loads((run/'run.json').read_text());record['mode']='3d-render-control'
+        (run/'run.json').write_text(json.dumps(record))
+        (directory/'camera.json').write_text('{"projection":"orthographic"}')
+        (directory/'generation.json').write_text(json.dumps({'prompt':'Direct render, zero AI calls',
+            'references':['camera.json','guide.png']}))
+        trial=self.build()['cases'][0]['latest']
+        self.assertEqual(trial['runMode'],'3d-render-control')
+        files,images=trial['sources'][0]['references']
+        self.assertEqual(files['mediaType'],'file')
+        self.assertEqual(images['mediaType'],'image')
+        self.assertEqual((self.root/'public'/files['image']).read_text(),(directory/'camera.json').read_text())
+
     def test_references_cannot_publish_files_outside_case_bundle(self):
         self.run_record('2026-01-01',status='failed')
         p=self.root/'runs/2026-01-01/floor/generation.json'

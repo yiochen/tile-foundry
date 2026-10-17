@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "cases": [
+    {
+      "id": "seamless-square-floor",
+      "prompt": "Generate a seamless 128x128 mossy stone floor tile. Its opposite edges must connect in a repeated square grid, without visible seams or sudden color/lighting gradient jumps. Keep it flat, with no raised front wall. Deliver an opaque 128x128px tile with local ground-center anchor (64,64). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in {{OUTPUT_DIR}}.",
+      "outputSubdir": "seamless-square-floor",
+      "kind": "floor",
+      "expected": {
+        "size": [
+          128,
+          128
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "anchor": [
+          64,
+          64
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 0,
+        "minimumAlpha": 250,
+        "seamMeanChannelDeltaMax": 8
+      },
+      "visualChecks": {
+        "projection": "Flat screen-aligned top-down ground square with no raised front wall, tilt, diamond-grid rotation, or perspective convergence.",
+        "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+        "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+        "seam-continuity": "Inspect 3x3 and 5x5 repeats at native and 2x scale: patterns connect across every horizontal/vertical join, with no grid lines or discontinuous gradients. Exact edge metrics alone do not establish seamlessness.",
+        "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+      },
+      "repeat": [
+        3,
+        5
+      ]
+    }
+  ]
+}

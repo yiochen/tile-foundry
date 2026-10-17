@@ -1,0 +1,82 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/review_full_3d_static_controls",
+  "independent": true,
+  "spriteSHA256": {
+    "partial-cell-tall-object": "d43b395d41bc9f58a94281b9a6e826a442dbcc79b43c9ce32ea99cbc99b2ad5f"
+  },
+  "sourceSHA256": {
+    "source-01.png": "05ce463ebd20827d800931f1e4bdf672f72a64d80c4d00b8e448ba37797676aa"
+  },
+  "resultSHA256": "0d430183b51782c9c180e625f7ed9f23ffb63d47298ca6b53133d1722be3cad7",
+  "guideSHA256": "b422e302e397528f4b4df9c03768d51636c58144cbc1a5decaa5b9685d82d03f",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The lantern base and cap show screen-aligned top surfaces and readable fronts. The vertical post and square support preserve parallel projection rather than converging with height or depth.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/previews/partial-cell-tall-object-light-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The entire roof, cage, post, collars and square support remain inside the frame. Both light and dark 2x views show intact edges and no clipped glow or shadow.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/previews/partial-cell-tall-object-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/previews/partial-cell-tall-object-dark-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/previews/partial-cell-tall-object-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The post and its narrow base are centered on the ground cross. The on-floor render places the support inside the separate calibration square without relocating the root to the base silhouette bottom.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/previews/partial-cell-tall-object-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/render/on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/guide.json"
+      ]
+    },
+    "partial-base": {
+      "pass": true,
+      "note": "The support occupies a small centered square, visually consistent with 48px inside the 128px cell. Clear empty floor remains on every side; it has not been expanded to fill the cell.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/previews/partial-cell-tall-object-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/render/on-floor.png"
+      ]
+    },
+    "visible-height": {
+      "pass": true,
+      "note": "The complete post reads as tall at the shared cell scale, with the roof well above the cell rear boundary. Its overall proportions are consistent with the nominal 160px design target; depth of the roof/base is not mistaken for an exact silhouette-height measurement.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/previews/partial-cell-tall-object-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/previews/partial-cell-tall-object-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/guide.json"
+      ]
+    },
+    "cutout": {
+      "pass": true,
+      "note": "The delivered alpha isolates the lantern and its authored stone support. Light and dark views show no pink registration floor, color spill, missing cage pieces or holes in the post.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/previews/partial-cell-tall-object-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/previews/partial-cell-tall-object-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/render/on-floor.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "This is a direct modeled Three.js control, not an AI reskin. The retained 2x source and runtime sprite show the same complete geometry, materials and registration after the declared capture downsample. The linked renderer authors the geometry and captures separate floors/layers; no visible replacement, clipping or geometry fitting is introduced.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/scene/3d_controls_static_scene.js",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/scene/render-options.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/partial-cell-tall-object/guide.json"
+      ]
+    }
+  }
+}

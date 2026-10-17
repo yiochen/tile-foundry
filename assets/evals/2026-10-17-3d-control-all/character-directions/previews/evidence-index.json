@@ -1,0 +1,17 @@
+{
+  "playback": "playback.html",
+  "allPhases": [
+    "frame-00-light-native.png",
+    "frame-01-light-native.png",
+    "frame-02-light-native.png",
+    "frame-03-light-native.png",
+    "frame-04-light-native.png",
+    "frame-05-light-native.png",
+    "frame-06-light-native.png",
+    "frame-07-light-native.png"
+  ],
+  "terrainNeighborEvidence": null,
+  "animationSource": "../render/scene/poses.json",
+  "editableMaterials": "../render/scene/3d_controls_motion_scene.js",
+  "camera": "../render/scene/rig.json"
+}

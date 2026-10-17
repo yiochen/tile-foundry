@@ -1,0 +1,18 @@
+{
+  "prompt": "Edit the supplied 1728\u00d71344 transparent rendered sheet. This is a surface-repaint task: paint the existing 3D surfaces in place with a hand-painted game-art finish. Add blue cloth shading, brown leather grain, painted hair strands, subtle skin color and small facial detail. Keep the same outfit and the same simple rounded anatomy.\n\nThe geometry and empty space in the input are final. Preserve each existing opaque silhouette, every transparent gap, the body proportions, crown, hands and boot soles at their current positions and sizes. Put paint and texture inside the existing forms; retain their original outside contour. Keep the original camera and lighting direction. Preserve the supplied eight upright views in row-major order: N, NE, E, SE, S, SW, W, NW.\n\nPreserve the entire canvas, all 8 panels, their exact arrangement and empty gutters. The current sprite size and margins are intentional: retain them. Return the repainted sheet on genuine transparency, with no floor, shadows outside the existing shapes, labels, extra poses or rearrangement.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "sourceSHA256": "d42545dd3a7469de42aa38413242fd18de977dd73884f25c5b1dff87a0046395",
+  "references": [
+    "references/pose-sheet.png"
+  ],
+  "referenceSHA256": {
+    "references/pose-sheet.png": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e"
+  },
+  "referenceRoles": {
+    "references/pose-sheet.png": "unchanged floor-free registered 3D sheet; surface-repaint edit target"
+  },
+  "toolInput": "tool-input-01.json",
+  "untouchedOriginalToolOutput": "/Users/yiouchen/.codex/generated_images/01a129c0-ab3f-7cf2-9fa5-8f33f257f06c/exec-189ee661-dc1b-440b-9c87-c3e8e213098d.png",
+  "generationCalls": 1
+}

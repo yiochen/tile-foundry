@@ -1,0 +1,28 @@
+{
+  "caseId": "lava-tile",
+  "expected": {
+    "size": [
+      192,
+      320
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "elevationPx": 32,
+    "elevationTolerancePx": 2,
+    "fullBase": true,
+    "minimumAlpha": 250
+  },
+  "supersample": 2
+}

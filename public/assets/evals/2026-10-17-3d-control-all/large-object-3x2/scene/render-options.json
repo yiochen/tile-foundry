@@ -1,0 +1,46 @@
+{
+  "caseId": "large-object-3x2",
+  "expected": {
+    "size": [
+      512,
+      576
+    ],
+    "footprint": [
+      384,
+      256
+    ],
+    "anchor": [
+      256,
+      376
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ],
+    "elevationPx": 128,
+    "elevationTolerancePx": 3
+  },
+  "supersample": 2
+}

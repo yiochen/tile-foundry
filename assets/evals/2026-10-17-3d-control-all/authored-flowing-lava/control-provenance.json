@@ -1,0 +1,25 @@
+{
+  "mode": "fresh-direct-3d-control",
+  "imageGenerationCalls": 0,
+  "oldPNGReuse": false,
+  "freshCapture": true,
+  "alphaThreshold": 0,
+  "rendererMaskApplied": false,
+  "perFrameFitting": false,
+  "animationDesign": {
+    "authorship": "authored-GLSL-periodic-surface-motion",
+    "periodFrames": 12,
+    "fps": 12,
+    "endpointDuplicated": false,
+    "stationaryEdgeBlendPx": 16,
+    "boundaryReferencePhase": 0,
+    "translationPerCycle": [
+      -1,
+      0
+    ],
+    "note": "Analytic periodic materials; no generated texture or model-drawn phases. Phase-invariant boundaries trade edge motion for offset-neighbor continuity."
+  },
+  "actualSourceSHA256": "3d73972a6b625e0cbbf55c07370ac4766ae5acdfa4835500e21d1219dc3fec42",
+  "capture": "render/capture.json",
+  "note": "Authored direct 3D output, not an AI reskin or twelve model-drawn phases."
+}

@@ -1,0 +1,489 @@
+{
+  "version": 1,
+  "kind": "rendered-3d-sheet",
+  "assetKind": "animation",
+  "workflow": "direct-3d-authored-shader-control",
+  "mode": "animated-waves",
+  "size": [
+    1728,
+    2048
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "cellSize": 128,
+  "anchor": [
+    96,
+    248
+  ],
+  "columns": 4,
+  "rows": 3,
+  "gutter": 64,
+  "captureScale": 2,
+  "order": "row-major",
+  "cells": [
+    {
+      "index": 0,
+      "rect": [
+        0,
+        0,
+        384,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 1,
+      "rect": [
+        448,
+        0,
+        832,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 2,
+      "rect": [
+        896,
+        0,
+        1280,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 3,
+      "rect": [
+        1344,
+        0,
+        1728,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 4,
+      "rect": [
+        0,
+        704,
+        384,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 5,
+      "rect": [
+        448,
+        704,
+        832,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 6,
+      "rect": [
+        896,
+        704,
+        1280,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 7,
+      "rect": [
+        1344,
+        704,
+        1728,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 8,
+      "rect": [
+        0,
+        1408,
+        384,
+        2048
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 9,
+      "rect": [
+        448,
+        1408,
+        832,
+        2048
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 10,
+      "rect": [
+        896,
+        1408,
+        1280,
+        2048
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    },
+    {
+      "index": 11,
+      "rect": [
+        1344,
+        1408,
+        1728,
+        2048
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        32,
+        152,
+        160,
+        312
+      ]
+    }
+  ],
+  "runtimeSheetSize": [
+    864,
+    1024
+  ],
+  "runtimeGutter": 32,
+  "runtimeFloorRect": [
+    32,
+    184,
+    160,
+    312
+  ],
+  "authoredRenders": [
+    {
+      "role": "rigged-reference",
+      "image": "sheet.png"
+    },
+    {
+      "role": "floor-registration",
+      "image": "guide.png"
+    }
+  ],
+  "elevationPx": 32,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "fps": 12,
+  "projection": "top-down-oblique-square-grid",
+  "projectionFormula": {
+    "screenX": "96 + 128*x",
+    "screenY": "248 + 128*z - 128*y"
+  },
+  "sourcePixelsPerRuntimePixel": 2,
+  "sourceSize": [
+    1728,
+    2048
+  ],
+  "fitting": {
+    "perFrame": false,
+    "camera": "fixed",
+    "root": "fixed",
+    "modelScale": "fixed"
+  },
+  "floorCorners": [
+    {
+      "world": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "screen": [
+        32,
+        183.9999999999998
+      ]
+    },
+    {
+      "world": [
+        0.5,
+        0,
+        -0.5
+      ],
+      "screen": [
+        160,
+        183.9999999999998
+      ]
+    },
+    {
+      "world": [
+        0.5,
+        0,
+        0.5
+      ],
+      "screen": [
+        160,
+        311.99999999999983
+      ]
+    },
+    {
+      "world": [
+        -0.5,
+        0,
+        0.5
+      ],
+      "screen": [
+        32,
+        311.99999999999983
+      ]
+    }
+  ],
+  "surfaceCorners": [
+    {
+      "world": [
+        -0.5,
+        0.25,
+        -0.5
+      ],
+      "screen": [
+        32,
+        151.99999999999983
+      ]
+    },
+    {
+      "world": [
+        0.5,
+        0.25,
+        -0.5
+      ],
+      "screen": [
+        160,
+        151.99999999999983
+      ]
+    },
+    {
+      "world": [
+        0.5,
+        0.25,
+        0.5
+      ],
+      "screen": [
+        160,
+        279.9999999999999
+      ]
+    },
+    {
+      "world": [
+        -0.5,
+        0.25,
+        0.5
+      ],
+      "screen": [
+        32,
+        279.9999999999999
+      ]
+    }
+  ],
+  "animationDesign": {
+    "authorship": "authored-GLSL-periodic-surface-motion",
+    "periodFrames": 12,
+    "fps": 12,
+    "endpointDuplicated": false,
+    "stationaryEdgeBlendPx": 16,
+    "boundaryReferencePhase": 0,
+    "translationPerCycle": [
+      0,
+      -1
+    ],
+    "note": "Analytic periodic materials; no generated texture or model-drawn phases. Phase-invariant boundaries trade edge motion for offset-neighbor continuity."
+  }
+}

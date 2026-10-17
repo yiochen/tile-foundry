@@ -1,0 +1,54 @@
+{
+  "gating": false,
+  "note": "Pixel deltas are diagnostics; review actual 12fps playback and final-to-first step.",
+  "transitions": [
+    {
+      "from": 0,
+      "to": 1,
+      "meanRGBDelta": 10.971354166666666,
+      "changedPixelsOver8": 8226
+    },
+    {
+      "from": 1,
+      "to": 2,
+      "meanRGBDelta": 9.143462456597224,
+      "changedPixelsOver8": 6711
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "meanRGBDelta": 9.569346788194444,
+      "changedPixelsOver8": 7251
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "meanRGBDelta": 11.75710720486111,
+      "changedPixelsOver8": 8743
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "meanRGBDelta": 11.901356336805556,
+      "changedPixelsOver8": 8888
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "meanRGBDelta": 9.786762152777778,
+      "changedPixelsOver8": 7098
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "meanRGBDelta": 8.823285590277777,
+      "changedPixelsOver8": 6853
+    },
+    {
+      "from": 7,
+      "to": 0,
+      "meanRGBDelta": 11.044666883680556,
+      "changedPixelsOver8": 8216
+    }
+  ]
+}

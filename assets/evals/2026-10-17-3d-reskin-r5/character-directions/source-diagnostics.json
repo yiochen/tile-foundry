@@ -1,0 +1,12 @@
+{
+  "sourceSize": [
+    1422,
+    1106
+  ],
+  "minAlphaPreselected": 32,
+  "sourceAlphaMass": 77746571,
+  "alphaMassAtOrBelowThreshold": 164959,
+  "pixelsWithAlphaAtOrBelowThreshold": 1258727,
+  "sourceUnchanged": true,
+  "note": "Diagnostics only. Failed extraction has not been recovered or partially exported."
+}

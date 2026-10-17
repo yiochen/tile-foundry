@@ -1,0 +1,5 @@
+{
+  "exitCode": 0,
+  "stdout": "{\n  \"kind\": \"animation\",\n  \"sprites\": 12,\n  \"sourceSHA256\": \"47d99f394df93a68af97e1a7bedabe536991be85b323589625ede2c9069da922\",\n  \"removedAlphaMass\": 294605,\n  \"output\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/dancing-player/processed\"\n}\n",
+  "stderr": ""
+}

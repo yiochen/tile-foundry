@@ -1,0 +1,42 @@
+{
+  "id": "partial-cell-tall-object",
+  "prompt": "Generate a tall lantern post on a 128x128 calibration tile. Its centered base is 48x48px and its nominal height is 160px. Remove the calibration tile from the final sprite, preserving its ground position and size. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in {{OUTPUT_DIR}}.",
+  "outputSubdir": "partial-cell-tall-object",
+  "kind": "object",
+  "expected": {
+    "size": [
+      192,
+      320
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "elevationPx": 160,
+    "elevationTolerancePx": 2,
+    "baseSize": [
+      48,
+      48
+    ],
+    "fullBase": false
+  },
+  "visualChecks": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "partial-base": "The narrow 48x48 support occupies only the center of the cell; the surrounding floor remains empty after removal.",
+    "visible-height": "The same scale produces a tall complete post, extending above the floor upper edge.",
+    "cutout": "No calibration floor remains; no holes, color spill, or deleted object parts.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  }
+}

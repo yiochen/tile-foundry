@@ -1,0 +1,63 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/review_full_3d_static_controls",
+  "independent": true,
+  "spriteSHA256": {
+    "seamless-square-floor": "77221e5f41f7582db4113801de519df8092d17d335ca1986c576b9faddf5f07d"
+  },
+  "sourceSHA256": {
+    "source-01.png": "96c4da44a8b590ee5205e2d796456b94e9087cd97ff5011b2fbc096d9fa9cb02"
+  },
+  "resultSHA256": "378115186d478e5727c4ab16f6cc7b0ce349dc701d9cdd7dbac81340d729c5ca",
+  "guideSHA256": "0abf52e9a18a41f52387d28640baf46ade7c8c9350593105c999ed560d73ee8f",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The tile reads as a flat screen-aligned square. Its paving has parallel horizontal/vertical joins, no sloped front face and no converging or diamond-grid edges.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/seamless-square-floor/placement-0-light.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The opaque paving occupies the complete square through all four edges. Light and dark placement views show neither missing corners nor stray external effects.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/seamless-square-floor/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/seamless-square-floor/placement-0-dark.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "In the stored-anchor grid view the tile covers one ground square around the marked center, at the same pitch as the surrounding grid.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/previews/seamless-square-floor-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/guide.json"
+      ]
+    },
+    "seam-continuity": {
+      "pass": true,
+      "note": "The 3x3 and 5x5 repeats were inspected at native and 2x. Moss and stone patterns continue across both axes without a boundary-specific gap, lighting jump or extra line. The regular paving and repeated motifs remain visible but do not expose the 128px tile boundary.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/previews/repeat-3-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/previews/repeat-5-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/previews/repeat-3-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/previews/repeat-5-2x.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "This is a direct modeled Three.js control, not an AI reskin. The retained 2x source and runtime sprite show the same complete geometry, materials and registration after the declared capture downsample. The linked renderer authors the geometry and captures separate floors/layers; no visible replacement, clipping or geometry fitting is introduced.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/scene/3d_controls_static_scene.js",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/scene/render-options.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor/guide.json"
+      ]
+    }
+  }
+}

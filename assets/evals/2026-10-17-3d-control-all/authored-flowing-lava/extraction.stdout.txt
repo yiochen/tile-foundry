@@ -1,0 +1,7 @@
+{
+  "kind": "animation",
+  "sprites": 12,
+  "sourceSHA256": "3d73972a6b625e0cbbf55c07370ac4766ae5acdfa4835500e21d1219dc3fec42",
+  "removedAlphaMass": 0,
+  "output": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/processed"
+}

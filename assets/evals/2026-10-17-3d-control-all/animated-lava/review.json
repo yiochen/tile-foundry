@@ -1,0 +1,209 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/review_full_3d_motion_controls",
+  "independent": true,
+  "spriteSHA256": {
+    "frame-00": "72345d13662112f30977c76605982269a8a5b4fdfaa495e3c8fb669d7680874c",
+    "frame-01": "a4745aecc94c0f4347755beb5c5ab7268b726fc7b1efcafc12b6f2b120c14207",
+    "frame-02": "28a9cafe60a7dadcc5ce7b9be813eba224d910c54d4bf76c61546f09f98edff7",
+    "frame-03": "d7e4ac110b57ce7524c36a6ffb57313c8d3eb32b32a5b715c8acf5494d8c255b",
+    "frame-04": "3c7392897456544b9bbad101447a4bd2c28fc64909751c84e395eeac291a2d2c",
+    "frame-05": "3c9c7094b1bd6c03c1643e6a77d066501f4daa3741d0b014eebbbf662b364309",
+    "frame-06": "01af8562ef3963d21aa0ecf1f7b6f6ccabab08c95e3d7bc56ca4907562e5c119",
+    "frame-07": "c422bb82a61ae499ef4e5c3f127075148d8793cf8395b71d8a85b8ff139f0fee",
+    "frame-08": "de929bdbbdb39db40bddb59759d4431f8f9db07bbcd167263e174fd3f29dede8",
+    "frame-09": "224af921411a62742aa46904062bc1c8f8ccdb34b4a914f4bc26ddb90957fed9",
+    "frame-10": "602dac028bceb75a477de694524fd87f4202045a4cf51d43bb1eed8fb6701b8c",
+    "frame-11": "46fd4a7c9ba6af47eac56d489d85edb305262d4af45734485edf71430366db18"
+  },
+  "sourceSHA256": {
+    "source-01.png": "5951684c34368f85322b178a04c1c6098c93591e5aaf3bb1040af606f11c4162"
+  },
+  "resultSHA256": "f61d4f9a8fc2cd6508dc8a4fbfbbf1ad071deb15b959461d621e64d07455d208",
+  "guideSHA256": "06a1e10afb93749aee30fefa8196e03735aa5381e88cf0527848fd4a31f8dd97",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The surface is a screen-aligned square with parallel opposite edges and a readable darker front wall. The same view persists across all twelve frames and the repeat previews show no perspective shrinkage or camera drift.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-dark-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Every frame contains a complete rectangular top surface and full front wall, with clean isolated margins. Light/dark sheets and placement views show no missing alpha, clipped effects or extra shadow.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/browser-mobile.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "All twelve marked placements register the same full base around the guide ground center. The top plane sits above that base and the front wall terminates at the same ground line; changing surface features do not move the anchor.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/render/guide.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/render/guide.json",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-0-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-0-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-1-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-1-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-2-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-2-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-3-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-3-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-4-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-4-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-5-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-5-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-6-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-6-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-7-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-7-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-8-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-8-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-9-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-9-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-10-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-10-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-11-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-11-dark.png"
+      ]
+    },
+    "animated-height": {
+      "pass": true,
+      "note": "The square top outline, bottom ground line and front-wall thickness remain visibly fixed across all phases. Surface motion changes the pattern while the elevation and support remain stable, without scale breathing.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/render/guide.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/render/guide.json",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-0-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-0-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-1-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-1-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-2-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-2-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-3-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-3-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-4-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-4-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-5-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-5-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-6-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-6-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-7-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-7-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-8-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-8-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-9-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-9-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-10-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-10-dark.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-11-light.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/placement-11-dark.png"
+      ]
+    },
+    "spatial-seams": {
+      "pass": false,
+      "note": "Moving phases reveal a regular grid of dark/smeared boundary channels and doubled or flattened hot fissures in the 3\u00d73 surface. Synchronized phases 1, 3, 6 and 11 and offset phases 0, 5 and 11 make the horizontal/vertical tile borders visible at native and 2\u00d7. Matching outer coverage prevents holes but does not hide those boundary bands.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-00-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-00-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-00-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-00-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-01-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-01-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-01-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-01-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-02-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-02-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-02-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-02-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-03-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-03-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-03-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-03-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-04-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-04-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-04-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-04-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-05-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-05-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-05-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-05-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-06-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-06-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-06-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-06-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-07-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-07-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-07-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-07-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-08-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-08-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-08-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-08-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-09-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-09-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-09-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-09-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-10-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-10-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-10-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-10-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-11-sync-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-11-sync-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-11-offset-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/neighbors-11-offset-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/playback.html"
+      ]
+    },
+    "temporal-loop": {
+      "pass": true,
+      "note": "Running 12 fps browser playback shows readable movement of the lava fissures. The explicit 11\u21920 wrap advances the pattern by a comparable step to the other phases without a tile-position, palette or scale reset. The visible boundary-channel artifacts persist during the cycle and are recorded separately as spatial-seams.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/playback.html"
+      ]
+    },
+    "frame-consistency": {
+      "pass": true,
+      "note": "All twelve isolated frames preserve the same complete surface silhouette, wall, palette and light level. The surface pattern changes while the underlying tile remains usable and visually consistent.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/browser-mobile.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The retained source and renderer sheets contain the same surface phases and wall artwork as the processed frames. The packet declares fixed 1:1 panel extraction with no per-pose fitting or cleanup, consistent with the visible result. This direct authored 3D control is assessed against those retained renderer outputs.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-light-native.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/previews/sheet-dark-2x.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/source-01.png",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/render/sheet.png",
+        "assets/evals/2026-10-17-3d-control-all/review-packets/animated-lava/packet.json",
+        "assets/evals/2026-10-17-3d-control-all/animated-lava/render/guide.json"
+      ]
+    }
+  },
+  "reviewedAt": "2026-10-17T17:10:58.427038+00:00",
+  "inspection": {
+    "basis": "Independent qualitative review of sanitized packet, frozen llm-visual-v1 policy, linked source/rendered/processed visual evidence and current previews only. No earlier grades or image-derived metrics were consulted.",
+    "nativeAnd2x": true,
+    "lightAndDark": true,
+    "allFrames": true,
+    "mobileScreenshotInspected": true,
+    "playback": "Current preview opened in a readonly localhost browser, sampled while running at its stated 12 fps, and paused/stepped explicitly across frame 11 to frame 0.",
+    "terrainRepeats": "All 12 synchronized and all 12 offset-phase 3\u00d73 repeats inspected at native and exact 2\u00d7 using original PNGs and temporary labeled montage crops that removed only preview margins."
+  }
+}

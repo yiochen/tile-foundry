@@ -1,0 +1,48 @@
+{
+  "id": "animated-waves",
+  "prompt": "Generate a 12-frame looping ocean wave tile animation at exactly 12 fps. Each frame has a full 128x128 base and 32px visible front-wall height, in the same top-down oblique projection. Preserve the anchor, base footprint, elevation, and connection to adjacent copies through the animation. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in {{OUTPUT_DIR}}.",
+  "outputSubdir": "animated-waves",
+  "kind": "animation",
+  "expected": {
+    "size": [
+      192,
+      320
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "elevationPx": 32,
+    "elevationTolerancePx": 2,
+    "frames": 12,
+    "columns": 4,
+    "rows": 3,
+    "fps": 12,
+    "durationMs": 83.33333333333333,
+    "fullBase": true,
+    "minimumAlpha": 250
+  },
+  "visualChecks": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "animated-height": "Visible elevation and support stay fixed while the surface moves; no camera/scale breathing.",
+    "spatial-seams": "Inspect 3x3 animated neighbors through all phases, including offset-phase neighbors; no cracks, gradient jumps, or visible grid seams.",
+    "temporal-loop": "Motion is readable and the last-to-first transition has no unwanted pop.",
+    "frame-consistency": "All 12 poses/surfaces are usable, with common identity/palette/light and complete alpha.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "repeat": [
+    3
+  ]
+}

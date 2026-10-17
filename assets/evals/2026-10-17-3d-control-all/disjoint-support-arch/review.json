@@ -1,0 +1,93 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/review_full_3d_static_controls",
+  "independent": true,
+  "spriteSHA256": {
+    "disjoint-support-arch": "afd8f275f29765d9f015d2954d0eb8ab33b941fcdf94dfbbbee3d13e99dd57df",
+    "arch-rear": "ec6e49264ad7645312afd440a9115f55bc3af069e709f95e1f4cedee7e296dc6",
+    "arch-front": "7d706135d63351697d1a913ef601c8d3e5ccad1d067b2d000481f0758b3253fa"
+  },
+  "sourceSHA256": {
+    "source-01.png": "315e97d787b40c1d0bd0ceee89ae52a609f0dfc9e42331b051b125ec405fae42"
+  },
+  "resultSHA256": "1aff23b4ce8f0969e60a4647bebf2184a817420af132274245e5cf08a08ed919",
+  "guideSHA256": "9e1486528dfffa57aa0ed5572101fed7c9d945929207b759a7780ae8eb6badf0",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "Both pillar bases and the long overhead top align to the square grid with parallel horizontal/vertical boundaries. The top and front arch faces are readable and retain constant width.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/disjoint-support-arch-light-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The two supports, full overhead span and curved passage silhouette fit in the frame. The whole source, separate depth pieces and light/dark recomposition show no cropped supports, clipped span or external shadow.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/render/arch-rear.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/render/arch-front.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/disjoint-support-arch-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/disjoint-support-arch-dark-native.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The stored root lies in the middle of the open center cell, between the supports. The two bases land symmetrically in the outer cells while the whole arch extends upward over the rear row.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/disjoint-support-arch-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/guide.json"
+      ]
+    },
+    "open-passage": {
+      "pass": true,
+      "note": "The central ground lane remains empty between the pillar bases. The transparent opening and shared-scene pink ground continue through that cell, with the span occupying overhead space rather than becoming a filled ground base.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/disjoint-support-arch-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/shared-scene-passage-center-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/shared-scene-passage-foreground-dark-2x.png"
+      ]
+    },
+    "arch-depth": {
+      "pass": true,
+      "note": "Separate complete front/rear modeled depth halves were inspected. At all three tested centerline passage positions their layered actor views match the shared 3D occlusion: the rear actor is hidden, the center actor is partly covered at the head by the span, and the foreground actor is fully visible. Native and 2x comparisons establish these displayed positions; this is not a claim about every possible lateral actor path.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/render/arch-rear.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/render/arch-front.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/depth-pieces-actor-behind-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/shared-scene-passage-behind-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/depth-pieces-actor-center-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/shared-scene-passage-center-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/depth-pieces-actor-foreground-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/shared-scene-passage-foreground-dark-2x.png"
+      ]
+    },
+    "support-placement": {
+      "pass": true,
+      "note": "The pillar bases fill only the left and right cells of the three-cell row. The middle cell shows open ground with no extra pedestal or support, and the bases terminate together at the same front grid boundary.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/disjoint-support-arch-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/shared-scene-passage-center-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/guide.json"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "This is a direct modeled Three.js control, not an AI reskin. The retained 2x source and runtime sprite show the same complete geometry, materials and registration after the declared capture downsample. The linked renderer authors the geometry and captures separate floors/layers; no visible replacement, clipping or geometry fitting is introduced.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/scene/3d_controls_static_scene.js",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/scene/render-options.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/render/arch-rear.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/render/arch-front.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/depth-pieces-recomposed-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/previews/depth-pieces-recomposed-dark-2x.png"
+      ]
+    }
+  }
+}

@@ -1,0 +1,605 @@
+{
+  "metadata": {
+    "version": 4.7,
+    "type": "Object",
+    "generator": "Object3D.toJSON"
+  },
+  "geometries": [
+    {
+      "uuid": "cd27c7e8-f120-4003-b857-9443e3dbd656",
+      "type": "BufferGeometry",
+      "name": "",
+      "data": {
+        "attributes": {
+          "position": {
+            "itemSize": 3,
+            "type": "Float32Array",
+            "array": [
+              -0.5,
+              0.25,
+              -0.5,
+              0.5,
+              0.25,
+              -0.5,
+              -0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.25,
+              0.5
+            ],
+            "normalized": false,
+            "name": "",
+            "usage": 35044,
+            "gpuType": 1015
+          },
+          "normal": {
+            "itemSize": 3,
+            "type": "Float32Array",
+            "array": [
+              0,
+              1,
+              6.123234262925839e-17,
+              0,
+              1,
+              6.123234262925839e-17,
+              0,
+              1,
+              6.123234262925839e-17,
+              0,
+              1,
+              6.123234262925839e-17
+            ],
+            "normalized": false,
+            "name": "",
+            "usage": 35044,
+            "gpuType": 1015
+          },
+          "uv": {
+            "itemSize": 2,
+            "type": "Float32Array",
+            "array": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "normalized": false,
+            "name": "",
+            "usage": 35044,
+            "gpuType": 1015
+          }
+        },
+        "index": {
+          "type": "Uint16Array",
+          "array": [
+            0,
+            2,
+            1,
+            2,
+            3,
+            1
+          ]
+        },
+        "boundingSphere": {
+          "radius": 0.7071067811865476,
+          "center": [
+            0,
+            0.25,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "uuid": "f3c65055-9b55-4790-b73a-4be1f87a1ca0",
+      "type": "BufferGeometry",
+      "name": "",
+      "data": {
+        "attributes": {
+          "position": {
+            "itemSize": 3,
+            "type": "Float32Array",
+            "array": [
+              -0.5,
+              0.25,
+              0.5,
+              0.5,
+              0.25,
+              0.5,
+              -0.5,
+              0,
+              0.5,
+              0.5,
+              0,
+              0.5
+            ],
+            "normalized": false,
+            "name": "",
+            "usage": 35044,
+            "gpuType": 1015
+          },
+          "normal": {
+            "itemSize": 3,
+            "type": "Float32Array",
+            "array": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              0,
+              1
+            ],
+            "normalized": false,
+            "name": "",
+            "usage": 35044,
+            "gpuType": 1015
+          },
+          "uv": {
+            "itemSize": 2,
+            "type": "Float32Array",
+            "array": [
+              0,
+              1,
+              1,
+              1,
+              0,
+              0,
+              1,
+              0
+            ],
+            "normalized": false,
+            "name": "",
+            "usage": 35044,
+            "gpuType": 1015
+          }
+        },
+        "index": {
+          "type": "Uint16Array",
+          "array": [
+            0,
+            2,
+            1,
+            2,
+            3,
+            1
+          ]
+        },
+        "boundingSphere": {
+          "radius": 0.5153882032022076,
+          "center": [
+            0,
+            0.125,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "uuid": "60fc66bb-bf40-49e1-a110-aef97312cf77",
+      "type": "PlaneGeometry",
+      "name": "",
+      "width": 1,
+      "height": 1,
+      "widthSegments": 1,
+      "heightSegments": 1
+    }
+  ],
+  "materials": [
+    {
+      "uuid": "11e46dd9-5dc2-413f-b227-845d52ce3134",
+      "type": "ShaderMaterial",
+      "blending": 1,
+      "side": 0,
+      "shadowSide": null,
+      "vertexColors": false,
+      "opacity": 1,
+      "transparent": false,
+      "blendSrc": 204,
+      "blendDst": 205,
+      "blendEquation": 100,
+      "blendSrcAlpha": null,
+      "blendDstAlpha": null,
+      "blendEquationAlpha": null,
+      "blendColor": 0,
+      "blendAlpha": 0,
+      "depthFunc": 3,
+      "depthTest": true,
+      "depthWrite": true,
+      "colorWrite": true,
+      "clipIntersection": false,
+      "clipShadows": false,
+      "stencilWriteMask": 255,
+      "stencilFunc": 519,
+      "stencilRef": 0,
+      "stencilFuncMask": 255,
+      "stencilFail": 7680,
+      "stencilZFail": 7680,
+      "stencilZPass": 7680,
+      "stencilWrite": false,
+      "polygonOffset": false,
+      "polygonOffsetFactor": 0,
+      "polygonOffsetUnits": 0,
+      "dithering": false,
+      "alphaTest": 0,
+      "alphaHash": false,
+      "alphaToCoverage": false,
+      "premultipliedAlpha": false,
+      "forceSinglePass": true,
+      "allowOverride": true,
+      "visible": true,
+      "toneMapped": true,
+      "name": "authored-periodic-surface",
+      "linewidth": 1,
+      "wireframe": false,
+      "wireframeLinewidth": 1,
+      "fog": false,
+      "glslVersion": null,
+      "uniforms": {
+        "phase": {
+          "value": 0
+        },
+        "water": {
+          "value": 0
+        },
+        "flowing": {
+          "value": 1
+        },
+        "front": {
+          "value": 0
+        }
+      },
+      "vertexShader": "\nvarying vec3 localPosition;\nvoid main() {\n  localPosition = position;\n  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n}",
+      "fragmentShader": "\nprecision highp float;\nuniform float phase;\nuniform float water;\nuniform float flowing;\nuniform float front;\nvarying vec3 localPosition;\nconst float TAU = 6.283185307179586;\nfloat field(vec2 p) {\n  return .48*sin(TAU*(2.*p.x+p.y)) + .26*cos(TAU*(p.x-3.*p.y))\n       + .17*sin(TAU*(5.*p.x+2.*p.y)) + .09*cos(TAU*(7.*p.y-p.x));\n}\nvec3 lava(vec2 p) {\n  float f=abs(field(p));\n  float crack=1.-smoothstep(.035,.16,f);\n  float rim=1.-smoothstep(.10,.30,f);\n  vec3 rock=mix(vec3(.10,.045,.065),vec3(.29,.075,.055),.5+.5*field(p+vec2(.3,.2)));\n  vec3 color=mix(rock,vec3(.95,.22,.025),rim*.85);\n  return mix(color,vec3(1.,.83,.19),crack);\n}\nvec3 ocean(vec2 p) {\n  float swell=sin(TAU*(3.*p.y+.18*sin(TAU*p.x)))\n             + .08*sin(TAU*(5.*p.x-2.*p.y));\n  float foam=smoothstep(.65,.94,swell);\n  float shimmer=.5+.5*field(p*vec2(1.,2.));\n  vec3 color=mix(vec3(.015,.20,.38),vec3(.025,.63,.74),.22+.58*shimmer);\n  return mix(color,vec3(.70,.96,.94),foam*.90);\n}\nvoid main() {\n  vec2 p=vec2(localPosition.x+.5,localPosition.z+.5);\n  if(front>.5) {\n    // This is the actual 32px front wall, with no bevel/rim or per-cell lighting gradient.\n    p=vec2(localPosition.x+.5,localPosition.y*4.);\n    float stripe=.5+.5*sin(TAU*(3.*p.x+.15*sin(TAU*p.y)));\n    vec3 color=water>.5?mix(vec3(.015,.12,.25),vec3(.02,.32,.44),stripe)\n                       :mix(vec3(.13,.035,.045),vec3(.46,.095,.03),pow(stripe,9.));\n    gl_FragColor=vec4(color,1.);return;\n  }\n  // A 16px, C1 edge transition makes the exact boundary independent of phase.\n  // It is an explicit authored design choice: strongest motion in the interior.\n  float edge=min(min(p.x,1.-p.x),min(p.y,1.-p.y));\n  float weight=smoothstep(0.,.125,edge);\n  vec2 displacement=water>.5?vec2(0.,-phase):vec2(-phase,flowing>.5?0.:-phase);\n  vec3 stationary=water>.5?ocean(p):lava(p);\n  vec3 moving=water>.5?ocean(p+displacement):lava(p+displacement);\n  gl_FragColor=vec4(mix(stationary,moving,weight),1.);\n}",
+      "lights": false,
+      "clipping": false
+    },
+    {
+      "uuid": "b366b4fc-e822-4eb1-b9e5-dbfe090055e2",
+      "type": "ShaderMaterial",
+      "blending": 1,
+      "side": 0,
+      "shadowSide": null,
+      "vertexColors": false,
+      "opacity": 1,
+      "transparent": false,
+      "blendSrc": 204,
+      "blendDst": 205,
+      "blendEquation": 100,
+      "blendSrcAlpha": null,
+      "blendDstAlpha": null,
+      "blendEquationAlpha": null,
+      "blendColor": 0,
+      "blendAlpha": 0,
+      "depthFunc": 3,
+      "depthTest": true,
+      "depthWrite": true,
+      "colorWrite": true,
+      "clipIntersection": false,
+      "clipShadows": false,
+      "stencilWriteMask": 255,
+      "stencilFunc": 519,
+      "stencilRef": 0,
+      "stencilFuncMask": 255,
+      "stencilFail": 7680,
+      "stencilZFail": 7680,
+      "stencilZPass": 7680,
+      "stencilWrite": false,
+      "polygonOffset": false,
+      "polygonOffsetFactor": 0,
+      "polygonOffsetUnits": 0,
+      "dithering": false,
+      "alphaTest": 0,
+      "alphaHash": false,
+      "alphaToCoverage": false,
+      "premultipliedAlpha": false,
+      "forceSinglePass": true,
+      "allowOverride": true,
+      "visible": true,
+      "toneMapped": true,
+      "name": "fixed-front-wall",
+      "linewidth": 1,
+      "wireframe": false,
+      "wireframeLinewidth": 1,
+      "fog": false,
+      "glslVersion": null,
+      "uniforms": {
+        "phase": {
+          "value": 0
+        },
+        "water": {
+          "value": 0
+        },
+        "flowing": {
+          "value": 1
+        },
+        "front": {
+          "value": 1
+        }
+      },
+      "vertexShader": "\nvarying vec3 localPosition;\nvoid main() {\n  localPosition = position;\n  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\n}",
+      "fragmentShader": "\nprecision highp float;\nuniform float phase;\nuniform float water;\nuniform float flowing;\nuniform float front;\nvarying vec3 localPosition;\nconst float TAU = 6.283185307179586;\nfloat field(vec2 p) {\n  return .48*sin(TAU*(2.*p.x+p.y)) + .26*cos(TAU*(p.x-3.*p.y))\n       + .17*sin(TAU*(5.*p.x+2.*p.y)) + .09*cos(TAU*(7.*p.y-p.x));\n}\nvec3 lava(vec2 p) {\n  float f=abs(field(p));\n  float crack=1.-smoothstep(.035,.16,f);\n  float rim=1.-smoothstep(.10,.30,f);\n  vec3 rock=mix(vec3(.10,.045,.065),vec3(.29,.075,.055),.5+.5*field(p+vec2(.3,.2)));\n  vec3 color=mix(rock,vec3(.95,.22,.025),rim*.85);\n  return mix(color,vec3(1.,.83,.19),crack);\n}\nvec3 ocean(vec2 p) {\n  float swell=sin(TAU*(3.*p.y+.18*sin(TAU*p.x)))\n             + .08*sin(TAU*(5.*p.x-2.*p.y));\n  float foam=smoothstep(.65,.94,swell);\n  float shimmer=.5+.5*field(p*vec2(1.,2.));\n  vec3 color=mix(vec3(.015,.20,.38),vec3(.025,.63,.74),.22+.58*shimmer);\n  return mix(color,vec3(.70,.96,.94),foam*.90);\n}\nvoid main() {\n  vec2 p=vec2(localPosition.x+.5,localPosition.z+.5);\n  if(front>.5) {\n    // This is the actual 32px front wall, with no bevel/rim or per-cell lighting gradient.\n    p=vec2(localPosition.x+.5,localPosition.y*4.);\n    float stripe=.5+.5*sin(TAU*(3.*p.x+.15*sin(TAU*p.y)));\n    vec3 color=water>.5?mix(vec3(.015,.12,.25),vec3(.02,.32,.44),stripe)\n                       :mix(vec3(.13,.035,.045),vec3(.46,.095,.03),pow(stripe,9.));\n    gl_FragColor=vec4(color,1.);return;\n  }\n  // A 16px, C1 edge transition makes the exact boundary independent of phase.\n  // It is an explicit authored design choice: strongest motion in the interior.\n  float edge=min(min(p.x,1.-p.x),min(p.y,1.-p.y));\n  float weight=smoothstep(0.,.125,edge);\n  vec2 displacement=water>.5?vec2(0.,-phase):vec2(-phase,flowing>.5?0.:-phase);\n  vec3 stationary=water>.5?ocean(p):lava(p);\n  vec3 moving=water>.5?ocean(p+displacement):lava(p+displacement);\n  gl_FragColor=vec4(mix(stationary,moving,weight),1.);\n}",
+      "lights": false,
+      "clipping": false
+    },
+    {
+      "uuid": "c133f34c-16d5-4d1f-a264-68afe1d9b504",
+      "type": "MeshBasicMaterial",
+      "blending": 1,
+      "side": 2,
+      "shadowSide": null,
+      "vertexColors": false,
+      "opacity": 1,
+      "transparent": false,
+      "blendSrc": 204,
+      "blendDst": 205,
+      "blendEquation": 100,
+      "blendSrcAlpha": null,
+      "blendDstAlpha": null,
+      "blendEquationAlpha": null,
+      "blendColor": 0,
+      "blendAlpha": 0,
+      "depthFunc": 3,
+      "depthTest": true,
+      "depthWrite": true,
+      "colorWrite": true,
+      "clipIntersection": false,
+      "clipShadows": false,
+      "stencilWriteMask": 255,
+      "stencilFunc": 519,
+      "stencilRef": 0,
+      "stencilFuncMask": 255,
+      "stencilFail": 7680,
+      "stencilZFail": 7680,
+      "stencilZPass": 7680,
+      "stencilWrite": false,
+      "polygonOffset": false,
+      "polygonOffsetFactor": 0,
+      "polygonOffsetUnits": 0,
+      "dithering": false,
+      "alphaTest": 0,
+      "alphaHash": false,
+      "alphaToCoverage": false,
+      "premultipliedAlpha": false,
+      "forceSinglePass": false,
+      "allowOverride": true,
+      "visible": true,
+      "toneMapped": true,
+      "name": "",
+      "color": 16711935,
+      "envMapRotation": [
+        0,
+        0,
+        0,
+        "XYZ"
+      ],
+      "reflectivity": 1,
+      "refractionRatio": 0.98,
+      "wireframe": false,
+      "wireframeLinewidth": 1,
+      "wireframeLinecap": "round",
+      "wireframeLinejoin": "round",
+      "fog": true
+    }
+  ],
+  "object": {
+    "uuid": "e8ce9fcd-15e3-4246-b9fd-ca066bcbab43",
+    "type": "Scene",
+    "name": "",
+    "castShadow": false,
+    "receiveShadow": false,
+    "visible": true,
+    "frustumCulled": true,
+    "renderOrder": 0,
+    "static": false,
+    "matrixAutoUpdate": true,
+    "layers": 1,
+    "matrix": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "up": [
+      0,
+      1,
+      0
+    ],
+    "children": [
+      {
+        "uuid": "c1d6712f-67e2-46c2-b7e2-d0f142f92de4",
+        "type": "OrthographicCamera",
+        "name": "fixed-square-grid-camera",
+        "castShadow": false,
+        "receiveShadow": false,
+        "visible": true,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "static": false,
+        "matrixAutoUpdate": true,
+        "layers": 1,
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0.7071067811865475,
+          -0.7071067811865477,
+          0,
+          0,
+          0.7071067811865477,
+          0.7071067811865475,
+          0,
+          0,
+          6,
+          6,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "zoom": 1,
+        "left": -0.75,
+        "right": 0.75,
+        "top": 1.3700193885489358,
+        "bottom": -0.397747564417433,
+        "near": 0.1,
+        "far": 20
+      },
+      {
+        "uuid": "9fd30887-1fea-463d-bc34-096708ffff38",
+        "type": "Mesh",
+        "name": "full-128px-square-surface",
+        "castShadow": false,
+        "receiveShadow": false,
+        "visible": true,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "static": false,
+        "matrixAutoUpdate": true,
+        "layers": 1,
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "geometry": "cd27c7e8-f120-4003-b857-9443e3dbd656",
+        "material": "11e46dd9-5dc2-413f-b227-845d52ce3134"
+      },
+      {
+        "uuid": "42ba3302-4cde-47e4-b484-87039f9cfc08",
+        "type": "Mesh",
+        "name": "32px-visible-front-wall",
+        "castShadow": false,
+        "receiveShadow": false,
+        "visible": true,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "static": false,
+        "matrixAutoUpdate": true,
+        "layers": 1,
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "geometry": "f3c65055-9b55-4790-b73a-4be1f87a1ca0",
+        "material": "b366b4fc-e822-4eb1-b9e5-dbfe090055e2"
+      },
+      {
+        "uuid": "c3b8228b-985a-4470-be79-ff82dd48ffbf",
+        "type": "Mesh",
+        "name": "registration-floor",
+        "castShadow": false,
+        "receiveShadow": false,
+        "visible": false,
+        "frustumCulled": true,
+        "renderOrder": 0,
+        "static": false,
+        "matrixAutoUpdate": true,
+        "layers": 1,
+        "matrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          2.220446049250313e-16,
+          -1,
+          0,
+          0,
+          1,
+          2.220446049250313e-16,
+          0,
+          0,
+          -0.0001,
+          0,
+          1
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "geometry": "60fc66bb-bf40-49e1-a110-aef97312cf77",
+        "material": "c133f34c-16d5-4d1f-a264-68afe1d9b504"
+      }
+    ],
+    "backgroundBlurriness": 0,
+    "backgroundIntensity": 1,
+    "backgroundRotation": [
+      0,
+      0,
+      0,
+      "XYZ"
+    ],
+    "environmentIntensity": 1,
+    "environmentRotation": [
+      0,
+      0,
+      0,
+      "XYZ"
+    ]
+  }
+}

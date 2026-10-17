@@ -1,5 +1,9 @@
 # Rigged 3D capture and image reskin experiment
 
+The [full-suite controls and prompt-tuning follow-up](3d-control-all-prompt-tuning-2026-10-17.md)
+records later runs and the revised material-finish workflow. The original
+experiment and its results remain below.
+
 ## Plan recorded before image generation
 
 Hypothesis: a skinned, posed 3D reference supplies more consistent geometry than

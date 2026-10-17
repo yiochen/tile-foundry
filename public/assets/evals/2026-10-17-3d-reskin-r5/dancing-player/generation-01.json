@@ -1,0 +1,30 @@
+{
+  "prompt": "Use case: style-transfer. The supplied PNG is the exact floor-free, registered 3D artwork atlas to edit. Apply a hand-painted gouache game-art MATERIAL AND LIGHTING FINISH to the existing surfaces. Keep the model geometry and placement unchanged. Paint visible, controlled brush texture and warm/cool shading inside the existing forms: matte blue cloth on the oval tunic and rounded short sleeves; dark navy cloth on the legs; warm brown leather on the long boxy boots and belt; a small gold buckle; softly painted warm skin; softly brushed dark brown hair. Preserve the smooth, single oval hair-cap contour, the head shape, small ears, simple dot eyes where currently visible, rounded capsule arms and hands, limb thickness, oval torso, boxy belt, and especially the long rectangular boots with their current squared ends. Keep the original outfit and proportions, including the original simple forms. No new hairstyle, accessories, anatomy, garment pieces, shoe profile, or external outlines.\n\nTreat the supplied silhouettes, crowns, soles, joints, facial visibility, and transparent negative space as the registration lock. Material color/texture and shading may change inside them; do not redraw their shapes, enlarge the head, thicken the limbs, shorten or round the boots, or shift the feet. Preserve the existing upper-left light direction and consistent palette throughout. Keep the same square-grid top-down oblique parallel game projection: height projects straight upward, ground axes remain screen-aligned, and camera and scale remain fixed. Nominal crown height is 160 runtime pixels above the ground root, or 1.25 cell widths on a 128-pixel ground cell; this is the existing anatomy scale, not an instruction to fit each pose to a box. The existing toe extensions below the root must remain.\n\nThis atlas contains twelve complete dancing poses of one player, four columns by three rows, in row-major frame order 0 through 11. Preserve each distinct arm bend, head tilt and body sway exactly as rendered, including the last-to-first transition; do not invent a new dance. The full input canvas is 1728 by 2048 pixels. Each authored panel is 384 by 640 pixels at 2x capture scale, with column left edges 0, 448, 896, 1344 and row top edges 0, 704, 1408. Every panel retains its full 192 by 320 runtime framing and projected ground root (96,248); at this source scale the local root is (192,496). Keep all panel positions, 64-pixel transparent gutters, margins, and the complete canvas. The head and face remain front-facing as supplied in every pose.\n\nReturn the SAME atlas with only its painted surface finish changed, on genuine alpha transparency. Preserve the full outside contour and every existing empty gap. No floor, tile, cast shadow, glow, backdrop, panel borders, labels, numbers, text, watermark, rearrangement, additional object, or merged character. The transparent regions are not black paint: they must remain transparent. Keep complete isolated art in every original panel and preserve the original space between art and panel boundaries.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "sourceSHA256": "dd09700e0a74ab72ce0edd305c4538d4854f20b0beb283c7e87339d77428f37c",
+  "references": [
+    "references/pose-sheet.png"
+  ],
+  "referenceSHA256": {
+    "references/pose-sheet.png": "6b69cf88c1af7c7344fe6c3ea351d6d16753706bca9b86f9716be3df45b103d6"
+  },
+  "referenceRoles": {
+    "references/pose-sheet.png": "floor-free registered 3D pose-sheet edit target"
+  },
+  "imageGenerationCalls": 1,
+  "actualToolArguments": "actual-tool-args-01.json",
+  "expandedPrompt": "prompt-01.txt",
+  "source": "source-01.png",
+  "toolOutputRecord": "tool-output-01.json",
+  "surfaceFinish": "hand-painted gouache materials and lighting on existing forms",
+  "capture": "render/capture.json",
+  "preselectedExtraction": {
+    "kind": "animation",
+    "minAlpha": 32,
+    "authoredGuide": "guide.json",
+    "perPoseFitting": false,
+    "rendererMaskApplied": false,
+    "manualArtifactRepair": false
+  }
+}

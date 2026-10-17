@@ -1,0 +1,38 @@
+{
+  "prompt": "Direct modeled Three.js control for seamless-square-floor. Render the requested subject with fixed authored camera, no image generation. Case request: Generate a seamless 128x128 mossy stone floor tile. Its opposite edges must connect in a repeated square grid, without visible seams or sudden color/lighting gradient jumps. Keep it flat, with no raised front wall. Deliver an opaque 128x128px tile with local ground-center anchor (64,64). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor.",
+  "tool": "Three.js WebGLRenderer via Playwright Chromium; authored procedural model",
+  "transparentBackground": false,
+  "sourceSHA256": "96c4da44a8b590ee5205e2d796456b94e9087cd97ff5011b2fbc096d9fa9cb02",
+  "references": [
+    "scene/render-options.json",
+    "scene/3d_controls_static_scene.js",
+    "scene/3d_controls_static_rig.js"
+  ],
+  "referenceSHA256": {
+    "scene/render-options.json": "eb05fd0cb525297ae186ac1d1af7b1e2529cb02ca83cf651bdc6d76a77390df0",
+    "scene/3d_controls_static_scene.js": "b8b8ec7c78563307503aad06e8da3281cf3dadd0981d066edb52ba60f41e1306",
+    "scene/3d_controls_static_rig.js": "d230aa3ef97b16be2edb9552e2ddf9993b2a565604af06770fafab8cd3e8154e"
+  },
+  "referenceRoles": {
+    "scene/render-options.json": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call",
+    "scene/3d_controls_static_scene.js": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call",
+    "scene/3d_controls_static_rig.js": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call"
+  },
+  "imageGenerationCalls": 0,
+  "generationCalls": 0,
+  "sourceRole": "Untouched supersampled direct render capture",
+  "caseRequest": "Generate a seamless 128x128 mossy stone floor tile. Its opposite edges must connect in a repeated square grid, without visible seams or sudden color/lighting gradient jumps. Keep it flat, with no raised front wall. Deliver an opaque 128x128px tile with local ground-center anchor (64,64). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seamless-square-floor.",
+  "renderParameters": {
+    "supersample": 2,
+    "cellSize": 128,
+    "frame": [
+      128,
+      128
+    ],
+    "anchor": [
+      64,
+      64
+    ]
+  },
+  "processing": "Uniform whole-canvas supersampling resolves native runtime PNG; no fitting, clipping, masks or chroma key"
+}

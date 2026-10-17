@@ -1,0 +1,104 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/review_full_3d_static_controls",
+  "independent": true,
+  "spriteSHA256": {
+    "stool": "debf3743c7e85a616ae29167d79dee128d7cadcd9864bedc3fb239069e58c938",
+    "character": "f8c04253507c3693a8a9aded5580b5629f8632b5596d8af8fd4899b24c5727fb"
+  },
+  "sourceSHA256": {
+    "source-01.png": "31774dcec1c611c0ac319e5005204d3d820d1953a0a02f25f04cfc507089f517",
+    "source-02.png": "9981d2168c37bc5101f0220d94051929ad09e6565d18fd7eb47606b878d68ede"
+  },
+  "resultSHA256": "c12a3382c9dd41e4b66406e7714f8ee86e0ecf98d8209de4523bb2bb1311068e",
+  "guideSHA256": "296a46f652152b25d029efdac2ae64b7bf450a4309a56e2af184f13175bcf38e",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The stool seat has parallel screen-aligned edges with a readable front thickness. The character, boots and bent leg pose share the same oblique view in the separate layers and shared-scene reference.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/shared-3d-scene-dark-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The complete head, hands, boots, stool seat and legs fit in their declared frames. Light/dark native and 2x isolated views show no clipped limbs or undeclared external shadow.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/stool-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/stool-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/character-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/character-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "Both stored-anchor grid images use the same ground cross beneath the stool. The character retains that shared support root while its knees and boots project forward; its visible feet were not used to relocate the root.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/stool-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/character-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/render/on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/guide.json"
+      ]
+    },
+    "layer-separation": {
+      "pass": true,
+      "note": "The character-only sprite contains the body, clothing and belt with empty alpha around the legs and hands; it has no stool seat, legs, floor or guide remnants. The stool-only image contains a complete wooden stool and no character.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/sprites/stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/sprites/character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/stool-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/character-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/character-dark-2x.png"
+      ]
+    },
+    "seated-contact": {
+      "pass": true,
+      "note": "Recomposition at the stored shared root seats the pelvis/thigh area against the wooden seat, with the bent legs and forward boots retaining their pose. Its native and 2x contact/occlusion agree visibly with the shared 3D render, without manual alignment or an added vertical shift.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/recomposed-layers-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/shared-3d-scene-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/recomposed-layers-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/shared-3d-scene-dark-2x.png"
+      ]
+    },
+    "complete-layers": {
+      "pass": true,
+      "note": "The independently supplied stool includes the full unoccluded seat, legs and braces, and the character is separately complete. The linked renderer captures the stool and posed character groups independently, rather than slicing or differencing their overlap.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/sprites/stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/sprites/character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/scene/3d_controls_static_scene.js"
+      ]
+    },
+    "support-height": {
+      "pass": true,
+      "note": "The 48px support elevation is separate from the common (96,248) ground anchor and is explicitly baked into the posed art. Overlaying the saved layers without a second elevation subtraction reproduces the shared 3D reference; the character is not raised twice.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/stool-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/character-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/recomposed-layers-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/previews/shared-3d-scene-dark-2x.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "This is a direct modeled Three.js control, not an AI reskin. The retained 2x source and runtime sprite show the same complete geometry, materials and registration after the declared capture downsample. The linked renderer authors the geometry and captures separate floors/layers; no visible replacement, clipping or geometry fitting is introduced.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/sprites/stool.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/scene/3d_controls_static_scene.js",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/scene/render-options.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/sprites/character.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/seated-character-separated/scene/3d_controls_static_rig.js"
+      ]
+    }
+  }
+}

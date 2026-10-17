@@ -1,0 +1,114 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/review_clean_material_forward",
+  "independent": true,
+  "spriteSHA256": {},
+  "sourceSHA256": {
+    "source-01.png": "dd09700e0a74ab72ce0edd305c4538d4854f20b0beb283c7e87339d77428f37c"
+  },
+  "resultSHA256": "33c4448990e80a2352602cc5f300ca7e782c2f140ed37b45dbf7b58dbe3d9eea",
+  "guideSHA256": "9a65e8aebc0d9619f34ff59449744bec56f789d976a9d588e26476b0099a1531",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "The raw sheet shows a broadly consistent top/front camera and the authored reference has the intended square-grid projection. However the sanitized registration contains no delivered candidate frames or placement previews, so the actual runtime projection cannot receive a visual pass.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "dancing-player/render/guide.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    "complete-art": {
+      "pass": false,
+      "note": "The generated source already truncates outer hands at sheet edges, notably the upper-right and lower-left source cells; the lower-left arm/hand runs into the left canvas boundary. No processed candidate frames are supplied to establish complete frame delivery. The attractive authored reference does not repair the clipped generated source.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "The authored floor guide establishes the intended floor-center root, but there are no registered processed candidate frames or placement previews to compare physically with it. The source alone does not establish the runtime ground anchor.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/render/guide.png",
+        "dancing-player/render/neutral-on-floor.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    "same-player": {
+      "pass": null,
+      "note": "The twelve raw panels appear to share the same brown-haired blue-shirted character, belt, trousers and boots, with similar frontal lighting. With no delivered candidate frames or candidate playback, I cannot validate consistency of the runtime animation.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    "dancing-poses": {
+      "pass": null,
+      "note": "The source visibly contains twelve arm-wave pose panels with two arms/legs generally readable, though some outer hands are clipped. There is no delivered frame sequence or actual candidate playback to validate twelve useful delivered dance poses forming a readable loop.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    "design-height": {
+      "pass": null,
+      "note": "The raw panels look broadly similar in anatomy scale and the authored neutral/reference provides the nominal target, but there are no delivered candidate frames to compare against that target at runtime scale. I do not infer standing height from the source silhouette bounds or treat the authored rig as candidate evidence.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "dancing-player/render/neutral.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    "contact-stability": {
+      "pass": null,
+      "note": "No processed candidate sequence or physical floor placements are supplied. The fixed roots shown by the authored guide describe the reference only; they cannot establish stable candidate support, absence of per-frame fitting, or absence of rescaling.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/render/guide.png",
+        "dancing-player/render/neutral-on-floor.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    "cutout-quality": {
+      "pass": false,
+      "note": "The raw generated source has conspicuous red/yellow/gray/blue fringes and smears outside arms, shoulders, torso sides and the gap between boots. These are visible background/color contamination rather than character material. No delivered processed cutouts on light/dark backgrounds are supplied to show that this has been resolved.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    "loop": {
+      "pass": null,
+      "note": "There are no delivered candidate frames and no candidate 12fps playback. I did not substitute a rigged-reference/control playback or infer the 12-to-1 transition from a contact sheet, so unintended pop and scale jump remain unvalidated.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "Only the generated source and authored references are supplied; the registration has no candidate sprites or processing operations. There is no delivered processed artwork to compare for source-faithful extraction or undeclared geometry fitting.",
+      "evidence": [
+        "dancing-player/source-01.png",
+        "dancing-player/references/pose-sheet.png",
+        "review-packets/dancing-player/packet.json"
+      ]
+    }
+  },
+  "inspectionNotes": {
+    "inspected": "The complete raw generated twelve-panel source; input pose reference; authored rigged sheet; neutral standing; floor guide; neutral standing on floor; guide registration metadata; sanitized packet/template.",
+    "candidateDelivery": "The authoritative sanitized packet has an empty registration.sprites list and supplies no processed candidate images or candidate placement/playback previews.",
+    "motion": "No actual candidate frames exist in the supplied packet, so candidate 12fps playback and the 12-to-1 transition were not inspected. No authored/control playback was substituted.",
+    "limits": "Source-specific clipping and colored-fringe defects are observable and marked false; criteria requiring missing delivered/temporal evidence remain null. No earlier verdicts, experiment reports, delivery reports, pixel metrics or other reviewer findings were consulted."
+  },
+  "reviewedAt": "2026-10-17"
+}

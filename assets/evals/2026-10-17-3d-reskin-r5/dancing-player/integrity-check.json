@@ -1,0 +1,16 @@
+{
+  "caseId": "dancing-player",
+  "imageGenerationCalls": 1,
+  "retryOrCorrectionCalls": 0,
+  "sourceAndReferenceHashesVerified": true,
+  "requestPreservedVerbatim": true,
+  "exactPromptMatchesActualArguments": true,
+  "manifestVersion": 2,
+  "runtimeSpriteCount": 0,
+  "extractionStatus": "failed-extraction",
+  "browserScreenshotsInspected": [
+    "previews/control-playback-mobile.png"
+  ],
+  "independentVisualReview": "Owned by parent; no visual pass asserted",
+  "sourceUnchangedAfterGeneration": true
+}

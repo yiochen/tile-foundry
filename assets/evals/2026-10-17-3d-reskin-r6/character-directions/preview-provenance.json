@@ -1,0 +1,7 @@
+{
+  "method": "frozen tile_tools.render_anchored_frames; complete frames placed at stored anchor; nearest 2x display enlargement",
+  "renderer": "Pillow",
+  "playback": "frozen review_playback.write_playback",
+  "fps": null,
+  "imageEdits": "No edits to source or delivered sprite pixels; previews composite full frames on review backgrounds"
+}

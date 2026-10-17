@@ -200,6 +200,12 @@ color, floor, alpha and depth passes. Full-sheet extraction transfers the author
 frames and roots without fitting generated feet or clipping art to a 3D mask.
 The direct 3D control and the AI reskin are evaluated separately.
 See [the 3D experiment and results](docs/3d-reskin-experiment-2026-10-17.md).
+The [full-suite control and prompt-tuning follow-up](docs/3d-control-all-prompt-tuning-2026-10-17.md)
+reruns all 14 cases with fresh Three.js controls and compares direct prompt
+revisions with clean-agent skill executions. Controls pass 11/14; animated
+terrain still exposes material boundary bands. The skill now scopes
+scale-sensitive reskinning to materials on existing shapes and retains every
+failed attempt alongside the accepted outputs.
 
 The [suite](skills/build-overlap-tiles/evals/cases.json) contains the original 13 cases
 and a separately specified authored-flowing-lava case. The baseline has a fresh
@@ -214,7 +220,8 @@ The earlier two-case generation run remains an archive with its original
 flat-lava and 8 fps expectations, sources and reviews. The first dance failed
 pose diversity; the retry passed after transparent-separator recovery.
 Those historical artifacts are removed from the playground. Current results
-come from fresh generation against the frozen v2 skill and rubric. The original
+include fresh generation and separately labeled direct 3D controls against
+frozen case definitions. The original v2 generation
 assessment recorded one pass and twelve failures; it remains available in each
 case's assessment selector. The latest [LLM visual assessment](docs/llm-visual-eval-findings.md)
 reviews those same images without regenerating art. Visual quality uses independent

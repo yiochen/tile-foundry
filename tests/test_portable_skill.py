@@ -326,6 +326,25 @@ class PortableSkillTests(unittest.TestCase):
         self.assertIn('requested-output-location',failed)
         self.assertIn('source-0-unchanged',failed)
 
+    def test_depth_piece_review_uses_case_grid_without_changing_piece_metadata(self):
+        case,path = self.fixture('disjoint-support-arch')
+        result_path = self.artifacts/'result.json'
+        result = json.loads(result_path.read_text())
+        piece = {'id':'rear','drawOrder':0,'image':'rear.png',
+                 'size':case['expected']['size'],'anchor':case['expected']['anchor']}
+        shutil.copy2(self.artifacts/'sprite.png',self.artifacts/'rear.png')
+        result['depthPieces']=[piece]
+        result_path.write_text(json.dumps(result))
+        before=result_path.read_bytes()
+        output=self.directory/'arch-review'
+        packet=prepare_review(self.run_root,case['id'],output)
+        self.assertEqual(result_path.read_bytes(),before)
+        self.assertNotIn('footprint',packet['registration']['depthPieces'][0])
+        with Image.open(output/'placement-1-light.png') as preview:
+            self.assertEqual(preview.size,tuple(v+48 for v in piece['size']))
+        template=json.loads((output/'review-template.json').read_text())
+        self.assertEqual(template['spriteSHA256']['rear'],self.digest('rear.png'))
+
     def test_references_outside_bundle_are_refused(self):
         case,path = self.fixture()
         recipe = json.loads((self.artifacts/'generation-01.json').read_text())

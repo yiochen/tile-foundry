@@ -1,0 +1,67 @@
+{
+  "kind": "animation",
+  "projection": "top-down-oblique-square-grid",
+  "elevationPx": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "nominalStandingHeight": 160,
+  "sprites": [
+    {
+      "id": "frame-00",
+      "role": "player"
+    },
+    {
+      "id": "frame-01",
+      "role": "player"
+    },
+    {
+      "id": "frame-02",
+      "role": "player"
+    },
+    {
+      "id": "frame-03",
+      "role": "player"
+    },
+    {
+      "id": "frame-04",
+      "role": "player"
+    },
+    {
+      "id": "frame-05",
+      "role": "player"
+    },
+    {
+      "id": "frame-06",
+      "role": "player"
+    },
+    {
+      "id": "frame-07",
+      "role": "player"
+    },
+    {
+      "id": "frame-08",
+      "role": "player"
+    },
+    {
+      "id": "frame-09",
+      "role": "player"
+    },
+    {
+      "id": "frame-10",
+      "role": "player"
+    },
+    {
+      "id": "frame-11",
+      "role": "player"
+    }
+  ]
+}

@@ -84,7 +84,8 @@ def build_gallery(runs_root, suite_path, public, reports_root, include_archived=
             labels={'processing-only-comparison':'Processing comparison (same source)',
                     '3d-render-control':'3D render control (no AI reskin)'}
             item = {'id':f'{run_id}:{relative}', 'runId':run_id, 'attempt':order+1,
-                    'assessmentLabel':labels.get(record.get('mode'),'Original grading'),
+                    'runMode':record.get('mode'),
+                    'assessmentLabel':record.get('label') or labels.get(record.get('mode'),'Original grading'),
                     'status':status, 'prompt':case['prompt'], 'sources':[], 'sprites':[],
                     'depthPieces':[], 'previews':[], 'automaticChecks':[], 'visualChecks':[]}
             if submission:
@@ -101,6 +102,8 @@ def build_gallery(runs_root, suite_path, public, reports_root, include_archived=
                         'recipe':publish(recipe_path),'prompt':recipe['prompt'],
                         'role':source.get('role','whole-asset'),
                         'references':[{'image':publish(recipe_path.parent/name),
+                                       'mediaType':'image' if Path(name).suffix.lower() in ('.png','.jpg','.jpeg','.webp','.gif','.svg') else 'file',
+                                       'name':Path(name).name,
                                        'role':recipe.get('referenceRoles',{}).get(name,'reference')}
                                       for name in recipe.get('references',[])]})
                 guide = within(directory/submission['guide'],directory)

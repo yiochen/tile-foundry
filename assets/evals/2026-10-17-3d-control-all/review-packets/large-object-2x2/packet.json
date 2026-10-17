@@ -1,0 +1,100 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "large-object-2x2",
+  "request": "Generate a stone fountain occupying exactly a 2x2 square of 128px cells (256x256 ground footprint), with 128px visible height. Deliver one complete transparent object, with a ground anchor at the center of the 2x2 footprint. Deliver each sprite in a 384x576px frame with local projected ground anchor (192,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-2x2.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "multi-cell-size": "The base is 256x256 at the shared 128px grid scale; it is not shrunk into a single cell.",
+    "multi-cell-overlap": "Place on a multi-row grid: the whole fountain extends upward, overlaps correctly, and is never cut into cell-sized raster fragments.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "object",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "groundAnchorAlignment": "center",
+    "sprites": [
+      {
+        "id": "large-object-2x2",
+        "image": "sprites/whole.png",
+        "size": [
+          384,
+          576
+        ],
+        "anchor": [
+          192,
+          376
+        ],
+        "footprint": [
+          256,
+          256
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "elevationPx": 128
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "large-object-2x2",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {},
+      "sourceRect": null,
+      "cleanup": {}
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-2x2/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-2x2/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-2x2/scene/render-options.json"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-2x2/scene/3d_controls_static_scene.js"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-2x2/scene/3d_controls_static_rig.js"
+    },
+    {
+      "role": "processed",
+      "id": "large-object-2x2",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-2x2/sprites/whole.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/large-object-2x2/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/review-packets/large-object-2x2/placement-0-dark.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/skill-snapshot/references/visual-review.md"
+}

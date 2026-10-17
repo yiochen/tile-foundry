@@ -1,0 +1,38 @@
+{
+  "prompt": "Direct modeled Three.js control for full-cell-raised-object. Render the requested subject with fixed authored camera, no image generation. Case request: Generate a square stone plinth with a full 128x128 base and 64px visible height. Preserve the square-grid top-down oblique projection and fixed ground anchor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/full-cell-raised-object.",
+  "tool": "Three.js WebGLRenderer via Playwright Chromium; authored procedural model",
+  "transparentBackground": true,
+  "sourceSHA256": "96d5e62e61d4b483fbc6b0a3893bcfd202101475cb941f99c209b3a011e0bc83",
+  "references": [
+    "scene/render-options.json",
+    "scene/3d_controls_static_scene.js",
+    "scene/3d_controls_static_rig.js"
+  ],
+  "referenceSHA256": {
+    "scene/render-options.json": "3f67b866f37a09aee55558b9fb51ce6fae020d69a478e052f35eb0b86a87b971",
+    "scene/3d_controls_static_scene.js": "b8b8ec7c78563307503aad06e8da3281cf3dadd0981d066edb52ba60f41e1306",
+    "scene/3d_controls_static_rig.js": "d230aa3ef97b16be2edb9552e2ddf9993b2a565604af06770fafab8cd3e8154e"
+  },
+  "referenceRoles": {
+    "scene/render-options.json": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call",
+    "scene/3d_controls_static_scene.js": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call",
+    "scene/3d_controls_static_rig.js": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call"
+  },
+  "imageGenerationCalls": 0,
+  "generationCalls": 0,
+  "sourceRole": "Untouched supersampled direct render capture",
+  "caseRequest": "Generate a square stone plinth with a full 128x128 base and 64px visible height. Preserve the square-grid top-down oblique projection and fixed ground anchor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/full-cell-raised-object.",
+  "renderParameters": {
+    "supersample": 2,
+    "cellSize": 128,
+    "frame": [
+      192,
+      320
+    ],
+    "anchor": [
+      96,
+      248
+    ]
+  },
+  "processing": "Uniform whole-canvas supersampling resolves native runtime PNG; no fitting, clipping, masks or chroma key"
+}

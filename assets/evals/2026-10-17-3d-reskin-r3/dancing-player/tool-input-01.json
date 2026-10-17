@@ -1,0 +1,7 @@
+{
+  "prompt": "Edit the supplied 1728\u00d72048 transparent rendered sheet. This is a surface-repaint task: paint the existing 3D surfaces in place with a hand-painted game-art finish. Add blue cloth shading, brown leather grain, painted hair strands, subtle skin color and small facial detail. Keep the same outfit and the same simple rounded anatomy.\n\nThe geometry and empty space in the input are final. Preserve each existing opaque silhouette, every transparent gap, the body proportions, crown, hands and boot soles at their current positions and sizes. Put paint and texture inside the existing forms; retain their original outside contour. Keep the original camera and lighting direction. Preserve the supplied twelve dance poses and their row-major cyclic order.\n\nPreserve the entire canvas, all 12 panels, their exact arrangement and empty gutters. The current sprite size and margins are intentional: retain them. Return the repainted sheet on genuine transparency, with no floor, shadows outside the existing shapes, labels, extra poses or rearrangement.",
+  "referenced_image_paths": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r3/dancing-player/references/pose-sheet.png"
+  ],
+  "transparent_background": true
+}

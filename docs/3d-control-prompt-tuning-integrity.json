@@ -1,0 +1,27 @@
+{
+  "2026-10-17-3d-control-all": {
+    "frozenSkillFilesVerified": 29,
+    "suiteUnchanged": true,
+    "generationCalls": 0
+  },
+  "2026-10-17-3d-reskin-r3": {
+    "frozenSkillFilesVerified": 29,
+    "suiteUnchanged": true,
+    "generationCalls": 2
+  },
+  "2026-10-17-3d-reskin-r4": {
+    "frozenSkillFilesVerified": 29,
+    "suiteUnchanged": true,
+    "generationCalls": 2
+  },
+  "2026-10-17-3d-reskin-r5": {
+    "frozenSkillFilesVerified": 29,
+    "suiteUnchanged": true,
+    "generationCalls": 2
+  },
+  "2026-10-17-3d-reskin-r6": {
+    "frozenSkillFilesVerified": 29,
+    "suiteUnchanged": true,
+    "generationCalls": 2
+  }
+}

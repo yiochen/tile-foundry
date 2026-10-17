@@ -1,0 +1,31 @@
+{
+  "caseId": "partial-cell-tall-object",
+  "expected": {
+    "size": [
+      192,
+      320
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "elevationPx": 160,
+    "elevationTolerancePx": 2,
+    "baseSize": [
+      48,
+      48
+    ],
+    "fullBase": false
+  },
+  "supersample": 2
+}

@@ -1,0 +1,5 @@
+Edit the supplied 1728×1344 transparent rendered sheet. This is a surface-repaint task: paint the existing 3D surfaces in place with a hand-painted game-art finish. Add blue cloth shading, brown leather grain, painted hair strands, subtle skin color and small facial detail. Keep the same outfit and the same simple rounded anatomy.
+
+The geometry and empty space in the input are final. Preserve each existing opaque silhouette, every transparent gap, the body proportions, crown, hands and boot soles at their current positions and sizes. Put paint and texture inside the existing forms; retain their original outside contour. Keep the original camera and lighting direction. Preserve the supplied eight upright views in row-major order: N, NE, E, SE, S, SW, W, NW.
+
+Preserve the entire canvas, all 8 panels, their exact arrangement and empty gutters. The current sprite size and margins are intentional: retain them. Return the repainted sheet on genuine transparency, with no floor, shadows outside the existing shapes, labels, extra poses or rearrangement.

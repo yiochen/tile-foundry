@@ -1,0 +1,7 @@
+{
+  "kind": "directions",
+  "sprites": 8,
+  "sourceSHA256": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e",
+  "removedAlphaMass": 0,
+  "output": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/character-directions/processed"
+}

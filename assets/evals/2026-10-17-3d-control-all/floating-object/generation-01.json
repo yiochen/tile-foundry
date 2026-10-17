@@ -1,0 +1,38 @@
+{
+  "prompt": "Direct modeled Three.js control for floating-object. Render the requested subject with fixed authored camera, no image generation. Case request: Generate a 64px-tall treasure orb floating 48px above the center of a 128x128 calibration tile. Keep the projected ground anchor beneath the orb and remove the calibration floor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object.",
+  "tool": "Three.js WebGLRenderer via Playwright Chromium; authored procedural model",
+  "transparentBackground": true,
+  "sourceSHA256": "cb8d65263cb7b9c6b1711d08b5859e308fdf1bc47be6e2f2edfd664b816f8abc",
+  "references": [
+    "scene/render-options.json",
+    "scene/3d_controls_static_scene.js",
+    "scene/3d_controls_static_rig.js"
+  ],
+  "referenceSHA256": {
+    "scene/render-options.json": "478e2a4c1ba033858b276150f9fc12722c1de6be742ec8d17441ee7903c4093b",
+    "scene/3d_controls_static_scene.js": "b8b8ec7c78563307503aad06e8da3281cf3dadd0981d066edb52ba60f41e1306",
+    "scene/3d_controls_static_rig.js": "d230aa3ef97b16be2edb9552e2ddf9993b2a565604af06770fafab8cd3e8154e"
+  },
+  "referenceRoles": {
+    "scene/render-options.json": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call",
+    "scene/3d_controls_static_scene.js": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call",
+    "scene/3d_controls_static_rig.js": "Actual authored renderer input: render parameters or editable geometry/camera/rig source; no image-model/style reference call"
+  },
+  "imageGenerationCalls": 0,
+  "generationCalls": 0,
+  "sourceRole": "Untouched supersampled direct render capture",
+  "caseRequest": "Generate a 64px-tall treasure orb floating 48px above the center of a 128x128 calibration tile. Keep the projected ground anchor beneath the orb and remove the calibration floor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/floating-object.",
+  "renderParameters": {
+    "supersample": 2,
+    "cellSize": 128,
+    "frame": [
+      192,
+      320
+    ],
+    "anchor": [
+      96,
+      248
+    ]
+  },
+  "processing": "Uniform whole-canvas supersampling resolves native runtime PNG; no fitting, clipping, masks or chroma key"
+}

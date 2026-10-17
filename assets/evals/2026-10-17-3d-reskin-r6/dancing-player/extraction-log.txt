@@ -1,0 +1,7 @@
+{
+  "kind": "animation",
+  "sprites": 12,
+  "sourceSHA256": "8b4786159eb42d14ebb3d701d3219e57df0acb538149fcdb81e2a8e454224b5e",
+  "removedAlphaMass": 245426,
+  "output": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r6/dancing-player/processed"
+}

@@ -1,0 +1,208 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/review_clean_material_forward",
+  "independent": true,
+  "spriteSHA256": {
+    "player-n": "b20bd13920c35b818ac3a942155d1eaa69c50cbfa67408be5d5464a9e3a8c5fb",
+    "player-ne": "337dd2c2a6ce6d88d83bfd92617a5aaa038d4a9a2a87a3f20cb071374c919f7a",
+    "player-e": "36f96663a5690f032ef42cf383c1ef09b1be27e6d3809e06333d895946c0b9dc",
+    "player-se": "ff94241b6d9705b4112796017519ce696f5120ca81b468391abe2e79288db0d5",
+    "player-s": "3d8c9033c7aa6b32f4302a14cd637afbb4497922db75cbf575c42abe96d426cd",
+    "player-sw": "1bf8d39927c138d448fdeec2c6fea60f4886ee8d8be65a51d8aba0621822d89f",
+    "player-w": "c2f031320844468ad1a585109e6138a60e8dd39cd67520f9894db7cd6cd7f8ee",
+    "player-nw": "5ce7778004fb4f3f45459246bb8b2ee69a9f46b439e6d0df0a3f4bd980337de5"
+  },
+  "sourceSHA256": {
+    "source-01.png": "465332b39b8896c522201986ee84658eb755b2d64ee56d98ffda3fc856b5914f"
+  },
+  "resultSHA256": "05da76bbf0826ff95f6fe0e38392820a3ec9ff397b49c61104e00777b634b6ea",
+  "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The fixed oblique view remains readable across all eight turns: head/boot tops and front/side faces are visible, with parallel boot and belt edges rather than a changing perspective camera. The screen-aligned calibration floor in the authored guide provides the comparison.",
+      "evidence": [
+        "character-directions/references/pose-sheet.png",
+        "character-directions/render/guide.png",
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "All eight delivered silhouettes fit their frames with complete heads, arms, hands and boots. I see no cut limbs, attached floor slab or undeclared cast shadow at native size or 2x.",
+      "evidence": [
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png",
+        "review-packets/character-directions/placement-0-light.png",
+        "review-packets/character-directions/placement-0-dark.png",
+        "review-packets/character-directions/placement-1-light.png",
+        "review-packets/character-directions/placement-1-dark.png",
+        "review-packets/character-directions/placement-2-light.png",
+        "review-packets/character-directions/placement-2-dark.png",
+        "review-packets/character-directions/placement-3-light.png",
+        "review-packets/character-directions/placement-3-dark.png",
+        "review-packets/character-directions/placement-4-light.png",
+        "review-packets/character-directions/placement-4-dark.png",
+        "review-packets/character-directions/placement-5-light.png",
+        "review-packets/character-directions/placement-5-dark.png",
+        "review-packets/character-directions/placement-6-light.png",
+        "review-packets/character-directions/placement-6-dark.png",
+        "review-packets/character-directions/placement-7-light.png",
+        "review-packets/character-directions/placement-7-dark.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": false,
+      "note": "The common floor cross does not lie at a consistent projected support center. In N and E it sits at or above the boot openings/ankle area while the shoe support lies visibly farther down the cell; in S and W it sits farther into the shoe region. Comparing boot openings, ankles and sole volumes with the authored floor reference shows a registration shift, not merely changing toe length.",
+      "evidence": [
+        "character-directions/render/guide.png",
+        "character-directions/render/neutral-on-floor.png",
+        "review-packets/character-directions/placement-0-light.png",
+        "review-packets/character-directions/placement-2-light.png",
+        "review-packets/character-directions/placement-4-light.png",
+        "review-packets/character-directions/placement-6-light.png"
+      ]
+    },
+    "same-character": {
+      "pass": true,
+      "note": "Brown hair, rounded face, blue shirt and sleeves, brown belt with a front gold buckle, dark trousers and blocky brown boots form one recognizable character. Body parts remain anatomically coherent through the turn and lighting/material treatment is consistent.",
+      "evidence": [
+        "character-directions/source-01.png",
+        "character-directions/references/pose-sheet.png",
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png"
+      ]
+    },
+    "direction-height": {
+      "pass": false,
+      "note": "The delivered standing anatomy is visibly bulkier/taller than the nominal-160 neutral reference when compared against the same 128px floor. Head, torso, thighs and boots all occupy more of the calibrated frame. The upright crowns/shoulders also sit noticeably higher in the bottom source row than the top row relative to the shared stored root. These design/registration differences do not meet a visually consistent 160px standing target within 4px. This is a qualitative comparison of anatomical landmarks and floor registration, not a measurement from alpha bounds or toe endpoints.",
+      "evidence": [
+        "character-directions/render/neutral.png",
+        "character-directions/render/neutral-on-floor.png",
+        "character-directions/references/pose-sheet.png",
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png",
+        "review-packets/character-directions/placement-0-light.png",
+        "review-packets/character-directions/placement-0-dark.png",
+        "review-packets/character-directions/placement-1-light.png",
+        "review-packets/character-directions/placement-1-dark.png",
+        "review-packets/character-directions/placement-2-light.png",
+        "review-packets/character-directions/placement-2-dark.png",
+        "review-packets/character-directions/placement-3-light.png",
+        "review-packets/character-directions/placement-3-dark.png",
+        "review-packets/character-directions/placement-4-light.png",
+        "review-packets/character-directions/placement-4-dark.png",
+        "review-packets/character-directions/placement-5-light.png",
+        "review-packets/character-directions/placement-5-dark.png",
+        "review-packets/character-directions/placement-6-light.png",
+        "review-packets/character-directions/placement-6-dark.png",
+        "review-packets/character-directions/placement-7-light.png",
+        "review-packets/character-directions/placement-7-dark.png"
+      ]
+    },
+    "direction-contact": {
+      "pass": false,
+      "note": "The floor registration and physical boot/ankle locations do not stay consistent. The N/NE/E/SE group is displaced downward relative to the shared floor cross compared with S/SW/W/NW; this is visible in the boot openings and lower-leg support as well as the sole volumes. Shoe orientation and toe length alone do not explain the displacement.",
+      "evidence": [
+        "character-directions/render/guide.png",
+        "character-directions/render/neutral-on-floor.png",
+        "review-packets/character-directions/placement-0-light.png",
+        "review-packets/character-directions/placement-0-dark.png",
+        "review-packets/character-directions/placement-1-light.png",
+        "review-packets/character-directions/placement-1-dark.png",
+        "review-packets/character-directions/placement-2-light.png",
+        "review-packets/character-directions/placement-2-dark.png",
+        "review-packets/character-directions/placement-3-light.png",
+        "review-packets/character-directions/placement-3-dark.png",
+        "review-packets/character-directions/placement-4-light.png",
+        "review-packets/character-directions/placement-4-dark.png",
+        "review-packets/character-directions/placement-5-light.png",
+        "review-packets/character-directions/placement-5-dark.png",
+        "review-packets/character-directions/placement-6-light.png",
+        "review-packets/character-directions/placement-6-dark.png",
+        "review-packets/character-directions/placement-7-light.png",
+        "review-packets/character-directions/placement-7-dark.png"
+      ]
+    },
+    "cutout": {
+      "pass": true,
+      "note": "The processed sprites have no magenta calibration floor or pose strokes. Light and dark placement views at native size and 2x show intact shoes/hands and no broad background residue. Thin noisy colored material visible around some raw-source edges has been removed in the delivered frames.",
+      "evidence": [
+        "character-directions/source-01.png",
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png",
+        "review-packets/character-directions/placement-0-light.png",
+        "review-packets/character-directions/placement-0-dark.png",
+        "review-packets/character-directions/placement-1-light.png",
+        "review-packets/character-directions/placement-1-dark.png",
+        "review-packets/character-directions/placement-2-light.png",
+        "review-packets/character-directions/placement-2-dark.png",
+        "review-packets/character-directions/placement-3-light.png",
+        "review-packets/character-directions/placement-3-dark.png",
+        "review-packets/character-directions/placement-4-light.png",
+        "review-packets/character-directions/placement-4-dark.png",
+        "review-packets/character-directions/placement-5-light.png",
+        "review-packets/character-directions/placement-5-dark.png",
+        "review-packets/character-directions/placement-6-light.png",
+        "review-packets/character-directions/placement-6-dark.png",
+        "review-packets/character-directions/placement-7-light.png",
+        "review-packets/character-directions/placement-7-dark.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Each delivered direction visibly matches its corresponding generated source panel: the painted head, shirt texture, belt, limb pose and boot shapes are retained. The declared panel extraction and alpha cleanup explain the changed framing and removed noisy edge pixels; I see no replacement artwork or visibly independent per-direction geometry fitting. This is visual consistency evidence, not proof of geometric exactness.",
+      "evidence": [
+        "character-directions/source-01.png",
+        "character-directions/references/pose-sheet.png",
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png"
+      ]
+    }
+  },
+  "inspectionNotes": {
+    "inspected": "All eight transparent delivered frames; all sixteen light/dark placement images at native resolution and at 2x; raw source, pose reference, authored sheet, neutral standing, floor guide, neutral standing on floor; guide registration metadata.",
+    "scalePresentation": "2x placement enlargements were generated only in /tmp/tile-review-clean-material-forward using tools/tilekit.py normalize with a uniform explicit 2x scale and an exactly doubled frame. Repo artwork was not edited.",
+    "motion": "This case is eight standing directions; no animation playback claim is made.",
+    "limits": "Qualitative vision review. No earlier verdicts, experiment reports, delivery reports, pixel metrics or other reviewer findings were consulted."
+  },
+  "reviewedAt": "2026-10-17"
+}

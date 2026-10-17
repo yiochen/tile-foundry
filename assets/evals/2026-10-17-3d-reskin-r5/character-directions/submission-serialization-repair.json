@@ -1,0 +1,42 @@
+{
+  "change": "serialization-only repair",
+  "preservedOriginal": "submission-authored.json",
+  "fieldChanged": "submission.guide",
+  "before": "guide.json",
+  "after": "render/guide.json",
+  "guideSHA256Unchanged": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+  "originalSubmissionSHA256": "dcc1325c364e18c48ea615644e5b4500a55729ded17701dc3ab0a0b52ed6b395",
+  "correctedSubmissionSHA256": "776c37a6e3f44d0773d4d91e489af4d45d40f7f1525c50c902976aaf16cb764e",
+  "authoredReferences": [
+    {
+      "role": "neutral-standing",
+      "image": "render/neutral.png",
+      "sha256": "fea2dfaceb196e00efc62f9226fb2d0d03e3b031d63f2f246870c4556b66a9e3",
+      "resolved": true
+    },
+    {
+      "role": "rigged-reference",
+      "image": "render/sheet.png",
+      "sha256": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e",
+      "resolved": true
+    },
+    {
+      "role": "floor-registration",
+      "image": "render/guide.png",
+      "sha256": "6a1abb996cb5ce2a417533e2f45b9769a89fea7f6f3a0bd5fc22c4e6e7048827",
+      "resolved": true
+    },
+    {
+      "role": "neutral-standing-on-floor",
+      "image": "render/neutral-on-floor.png",
+      "sha256": "1b6ef6e7a12c824b14f038f22a50b1e74797229d61c163b1d5140d70a09c5ddb",
+      "resolved": true
+    }
+  ],
+  "artChanged": false,
+  "guideContentsChanged": false,
+  "geometryChanged": false,
+  "promptsChanged": false,
+  "extractionChanged": false,
+  "note": "The authoredRenders entries in the unchanged guide are relative to the render directory. The submission now points there so review preparation can resolve those assets."
+}

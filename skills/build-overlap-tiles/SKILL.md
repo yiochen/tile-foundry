@@ -75,6 +75,12 @@ describe style in text. Capture the calibration floor separately, so it need not
 be removed from the reskin by color. Transfer the authored panel layout and root;
 do not infer new roots from generated feet. Reject merged or clipped panels and
 review whether the generated anatomy actually follows the render.
+When scale is the priority, request a material-and-lighting finish on the existing
+forms. Preserve specific features that a character redraw might reinterpret,
+including hair contour, shoe shape and whether the face is visible. Requests for
+new anatomy, hairstyle or costume detail can compete with the geometry lock;
+put those design decisions into the 3D model before capture. A restricted surface
+pass offers less redesign freedom and still needs visual validation.
 
 For SVG routes, use a sole SVG raster reference by default, with style described in text. Supply
 an identity or support reference when continuity/attachment needs it and record

@@ -1,0 +1,18 @@
+{
+  "desktopViewport": [
+    1280,
+    1000
+  ],
+  "mobileViewport": [
+    390,
+    844
+  ],
+  "browser": "Playwright Chromium",
+  "errors": [],
+  "canvasCount": 8,
+  "screenshots": [
+    "browser-desktop.png",
+    "browser-mobile.png",
+    "browser-mobile-dark.png"
+  ]
+}

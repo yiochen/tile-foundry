@@ -1,0 +1,781 @@
+{
+  "model": {
+    "name": "procedural-adventurer-v1",
+    "nominalStandingHeight": 160,
+    "palette": {
+      "skin": "#f2b77e",
+      "hair": "#362b2c",
+      "tunic": "#337dba",
+      "trim": "#a8d7ed",
+      "pants": "#354f69",
+      "boots": "#603d2c",
+      "belt": "#684934",
+      "buckle": "#e9be5d",
+      "eyes": "#202938"
+    },
+    "rig": "weighted segmented body; explicit bone hierarchy; static planted legs and periodic upper-body dance"
+  },
+  "rest": {
+    "ground-root": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "hips": {
+      "position": [
+        0,
+        0.54,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "spine": {
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "chest": {
+      "position": [
+        0,
+        0.26,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "neck": {
+      "position": [
+        0,
+        0.12,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "head": {
+      "position": [
+        0,
+        0.14,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "left-shoulder": {
+      "position": [
+        -0.2,
+        0.055,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "left-elbow": {
+      "position": [
+        -0.07,
+        -0.205,
+        0.015
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "left-wrist": {
+      "position": [
+        -0.035,
+        -0.19,
+        0.025
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "left-thigh": {
+      "position": [
+        -0.105,
+        -0.01,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "left-knee": {
+      "position": [
+        -0.015,
+        -0.245,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "left-ankle": {
+      "position": [
+        0,
+        -0.245,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "right-shoulder": {
+      "position": [
+        0.2,
+        0.055,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "right-elbow": {
+      "position": [
+        0.07,
+        -0.205,
+        0.015
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "right-wrist": {
+      "position": [
+        0.035,
+        -0.19,
+        0.025
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "right-thigh": {
+      "position": [
+        0.105,
+        -0.01,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "right-knee": {
+      "position": [
+        0.015,
+        -0.245,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "right-ankle": {
+      "position": [
+        0,
+        -0.245,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "tunic",
+      "material": "tunic",
+      "bone": "spine",
+      "position": [
+        0,
+        0.735,
+        0
+      ],
+      "scale": [
+        0.185,
+        0.235,
+        0.12
+      ],
+      "vertexCount": 1225
+    },
+    {
+      "name": "tunic-hem",
+      "material": "tunic",
+      "bone": "hips",
+      "position": [
+        0,
+        0.555,
+        0
+      ],
+      "scale": [
+        0.345,
+        0.09,
+        0.23
+      ],
+      "vertexCount": 54
+    },
+    {
+      "name": "belt",
+      "material": "belt",
+      "bone": "hips",
+      "position": [
+        0,
+        0.595,
+        0.005
+      ],
+      "scale": [
+        0.356,
+        0.045,
+        0.245
+      ],
+      "vertexCount": 54
+    },
+    {
+      "name": "belt-buckle",
+      "material": "buckle",
+      "bone": "hips",
+      "position": [
+        0,
+        0.595,
+        0.138
+      ],
+      "scale": [
+        0.052,
+        0.042,
+        0.025
+      ],
+      "vertexCount": 54
+    },
+    {
+      "name": "collar",
+      "material": "trim",
+      "bone": "neck",
+      "position": [
+        0,
+        0.925,
+        0
+      ],
+      "scale": [
+        0.093,
+        0.055,
+        0.095
+      ],
+      "vertexCount": 1225
+    },
+    {
+      "name": "neck-skin",
+      "material": "skin",
+      "bone": "neck",
+      "position": [
+        0,
+        0.957,
+        0
+      ],
+      "scale": [
+        0.064,
+        0.072,
+        0.063
+      ],
+      "vertexCount": 1225
+    },
+    {
+      "name": "head",
+      "material": "skin",
+      "bone": "head",
+      "position": [
+        0,
+        1.0256209290027618,
+        0
+      ],
+      "scale": [
+        0.132,
+        0.143,
+        0.132
+      ],
+      "vertexCount": 1225
+    },
+    {
+      "name": "hair-cap",
+      "material": "hair",
+      "bone": "head",
+      "position": [
+        0,
+        1.0656209290027618,
+        0
+      ],
+      "scale": [
+        0.14,
+        0.12,
+        0.14
+      ],
+      "vertexCount": 1225
+    },
+    {
+      "name": "left-ear",
+      "material": "skin",
+      "bone": "head",
+      "position": [
+        -0.132,
+        1.0256209290027618,
+        0.004
+      ],
+      "scale": [
+        0.031,
+        0.049,
+        0.035
+      ],
+      "vertexCount": 1225
+    },
+    {
+      "name": "left-eye",
+      "material": "eyes",
+      "bone": "head",
+      "position": [
+        -0.054,
+        1.0316209290027618,
+        0.131
+      ],
+      "scale": [
+        0.016,
+        0.021,
+        0.011
+      ],
+      "vertexCount": 1225
+    },
+    {
+      "name": "left-brow",
+      "material": "hair",
+      "bone": "head",
+      "position": [
+        -0.055,
+        1.0706209290027617,
+        0.129
+      ],
+      "scale": [
+        0.048,
+        0.012,
+        0.014
+      ],
+      "vertexCount": 54
+    },
+    {
+      "name": "left-sleeve",
+      "material": "tunic",
+      "bone": "left-shoulder",
+      "position": [
+        -0.23500000000000001,
+        0.7525,
+        0.0075
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "vertexCount": 182
+    },
+    {
+      "name": "left-forearm",
+      "material": "skin",
+      "bone": "left-elbow",
+      "position": [
+        -0.2875,
+        0.555,
+        0.0275
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "vertexCount": 182
+    },
+    {
+      "name": "left-hand",
+      "material": "skin",
+      "bone": "left-wrist",
+      "position": [
+        -0.305,
+        0.443,
+        0.04
+      ],
+      "scale": [
+        0.051,
+        0.062,
+        0.046
+      ],
+      "vertexCount": 1225
+    },
+    {
+      "name": "left-trousers-upper",
+      "material": "pants",
+      "bone": "left-thigh",
+      "position": [
+        -0.11249999999999999,
+        0.4075,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "vertexCount": 182
+    },
+    {
+      "name": "left-trousers-lower",
+      "material": "pants",
+      "bone": "left-knee",
+      "position": [
+        -0.12,
+        0.16249999999999998,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "vertexCount": 182
+    },
+    {
+      "name": "left-boot",
+      "material": "boots",
+      "bone": "left-ankle",
+      "position": [
+        -0.12,
+        0.055,
+        0.045
+      ],
+      "scale": [
+        0.137,
+        0.11,
+        0.235
+      ],
+      "vertexCount": 54
+    },
+    {
+      "name": "left-boot-cuff",
+      "material": "belt",
+      "bone": "left-ankle",
+      "position": [
+        -0.12,
+        0.135,
+        0.002
+      ],
+      "scale": [
+        0.138,
+        0.065,
+        0.132
+      ],
+      "vertexCount": 54
+    },
+    {
+      "name": "right-ear",
+      "material": "skin",
+      "bone": "head",
+      "position": [
+        0.132,
+        1.0256209290027618,
+        0.004
+      ],
+      "scale": [
+        0.031,
+        0.049,
+        0.035
+      ],
+      "vertexCount": 1225
+    },
+    {
+      "name": "right-eye",
+      "material": "eyes",
+      "bone": "head",
+      "position": [
+        0.054,
+        1.0316209290027618,
+        0.131
+      ],
+      "scale": [
+        0.016,
+        0.021,
+        0.011
+      ],
+      "vertexCount": 1225
+    },
+    {
+      "name": "right-brow",
+      "material": "hair",
+      "bone": "head",
+      "position": [
+        0.055,
+        1.0706209290027617,
+        0.129
+      ],
+      "scale": [
+        0.048,
+        0.012,
+        0.014
+      ],
+      "vertexCount": 54
+    },
+    {
+      "name": "right-sleeve",
+      "material": "tunic",
+      "bone": "right-shoulder",
+      "position": [
+        0.23500000000000001,
+        0.7525,
+        0.0075
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "vertexCount": 182
+    },
+    {
+      "name": "right-forearm",
+      "material": "skin",
+      "bone": "right-elbow",
+      "position": [
+        0.2875,
+        0.555,
+        0.0275
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "vertexCount": 182
+    },
+    {
+      "name": "right-hand",
+      "material": "skin",
+      "bone": "right-wrist",
+      "position": [
+        0.305,
+        0.443,
+        0.04
+      ],
+      "scale": [
+        0.051,
+        0.062,
+        0.046
+      ],
+      "vertexCount": 1225
+    },
+    {
+      "name": "right-trousers-upper",
+      "material": "pants",
+      "bone": "right-thigh",
+      "position": [
+        0.11249999999999999,
+        0.4075,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "vertexCount": 182
+    },
+    {
+      "name": "right-trousers-lower",
+      "material": "pants",
+      "bone": "right-knee",
+      "position": [
+        0.12,
+        0.16249999999999998,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "vertexCount": 182
+    },
+    {
+      "name": "right-boot",
+      "material": "boots",
+      "bone": "right-ankle",
+      "position": [
+        0.12,
+        0.055,
+        0.045
+      ],
+      "scale": [
+        0.137,
+        0.11,
+        0.235
+      ],
+      "vertexCount": 54
+    },
+    {
+      "name": "right-boot-cuff",
+      "material": "belt",
+      "bone": "right-ankle",
+      "position": [
+        0.12,
+        0.135,
+        0.002
+      ],
+      "scale": [
+        0.138,
+        0.065,
+        0.132
+      ],
+      "vertexCount": 54
+    },
+    {
+      "name": "nose",
+      "material": "skin",
+      "bone": "head",
+      "position": [
+        0,
+        1.002620929002762,
+        0.135
+      ],
+      "scale": [
+        0.024,
+        0.027,
+        0.034
+      ],
+      "vertexCount": 1225
+    }
+  ],
+  "boneCount": 18,
+  "skinVertexCount": 16642,
+  "camera": {
+    "type": "OrthographicCamera",
+    "matrixWorld": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0.7071067811865475,
+      -0.7071067811865477,
+      0,
+      0,
+      0.7071067811865477,
+      0.7071067811865475,
+      0,
+      0,
+      6,
+      6,
+      1
+    ],
+    "matrixWorldInverse": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0.7071067811865475,
+      0.7071067811865477,
+      0,
+      0,
+      -0.7071067811865477,
+      0.7071067811865475,
+      0,
+      0,
+      8.881784197001252e-16,
+      -8.485281374238571,
+      1
+    ],
+    "projectionMatrix": [
+      1.3333333333333333,
+      0,
+      0,
+      0,
+      0,
+      1.131370849898476,
+      0,
+      0,
+      0,
+      0,
+      -0.10050251256281408,
+      0,
+      0,
+      -0.5499999999999999,
+      -1.0100502512562815,
+      1
+    ],
+    "near": 0.1,
+    "far": 20
+  }
+}

@@ -43,6 +43,10 @@ records the full canvas, exact panel rectangles, runtime frames/anchors and
 capture scale. `neutral.png`, `scene.json`, `scene/rig.json`, `scene/poses.json`,
 `capture.json`, color frames, masks and depth passes preserve the original setup.
 Inspect these before generation, including facing order and the loop boundary.
+Paths in `guide.json` are relative to that file. Point submissions at
+`render/guide.json` when that is where the capture lives; copying only the guide
+to the output root leaves its authored-render references unresolved. Move a
+complete capture bundle, or rebase paths before freezing the run.
 
 Leave room for painted edges, hair and clothing detail inside every panel. The
 sample dance bends its elbows and leaves about 28px of horizontal clearance in
@@ -76,6 +80,12 @@ for the color pass. Never normalize individual poses to their alpha bounds.
 The direct render has authored geometry and known registration. Raster edge
 coverage can vary with render engine, antialiasing and hardware: preserve engine
 versions/settings rather than promising identical PNG bytes across platforms.
+For opaque full-cell terrain, inspect edge alpha after the actual capture and
+sampling path; supersampling can soften an otherwise exact base. Choose
+pixel-aligned capture settings before rendering rather than painting over gaps.
+Parallel geometry also does not make a material seamless. A stationary edge blend
+in an animated shader can become a visible grid band: inspect spatial repeats
+at every phase and with offset-phase neighbors, even for untouched 3D renders.
 
 ## Reskin the entire sheet
 
@@ -85,23 +95,54 @@ reference; identify it separately and explicitly exclude its floor from output.
 The bundled game scene is for understanding projection, not an automatic style
 reference. Use text for style unless the user requests a supplied style image.
 
-Keep the current image call scoped to its source, for example:
+For scale-sensitive work, scope the call to **materials and lighting on existing
+geometry**. A request for a polished new character can encourage larger hair,
+different boots or fuller clothing even when the same prompt says to preserve
+scale. A surface finish can be visibly painted while retaining the model's simple
+forms; it will not turn a rough blockout into a new detailed character design.
+Develop the intended anatomy/outfit in 3D first when that redesign is required.
 
-> Reskin this complete rendered pose sheet into polished hand-painted game
-> sprites: rich local color, soft painted highlights and clean readable forms.
-> Keep the same character design and outfit in every panel. Paint the existing
-> poses in place. Preserve the complete canvas, panel count/order, empty gutters,
-> camera, anatomy proportions, head/torso/hand/foot locations and planted contact.
-> Preserve each pose's size and position; do not independently center or enlarge
-> sprites. Keep the first-to-last sequence cyclic. Return isolated sprites on a
-> transparent canvas with no calibration floor, labels, external shadows or new
-> scene. The second reference, if supplied, shows ground registration only.
+Use this prompt shape, replacing the subject-specific examples with actual
+features visible in the supplied render:
+
+> Apply a hand-painted [desired medium] material finish to this exact rendered
+> atlas. Edit the existing surfaces, keeping the character geometry unchanged.
+> Preserve [specific hair contour, rounded/boxy body shapes, limb thickness,
+> shoe shape, outfit and proportions]. Paint color and shading inside those
+> existing shapes, with [desired palette/materials] and the same light direction.
+> Keep the original face visibility in every view; a back view stays a back view.
+>
+> The input is the registered artwork. Keep its outside contours, body height,
+> head crowns, sole positions, joints, panel positions and transparent space.
+> Preserve every existing margin and gap. Retain all [count/order of views or
+> poses], the complete canvas and empty gutters. Return the same atlas with
+> its surface finish changed, on genuine transparency, without added parts,
+> external shadows, floor, labels or rearrangement.
+
+Keep the distinction concrete. For a model with a smooth hair cap and long boxy
+boots, name those shapes rather than requesting a new hairstyle or realistic
+leather footwear. Adding facial detail everywhere can turn a rear view into a
+front view. A broad "same character" clause is less useful than naming which
+existing shapes and visibility must survive. Do not rely on numeric height
+instructions alone, or compensate by shrinking the 3D input to offset past AI
+enlargement. Keep the same reference while comparing prompt revisions.
 
 Add the actual canvas dimensions, rows/columns, direction order or frame count,
 subject and desired art style. Do not paste unrelated final export instructions
 into the image prompt. Request transparent generation. Save the untouched source
 PNG and exact expanded prompt, tool arguments and reference hashes, including
 failed output. One generation per frozen eval attempt; a revision is a new run.
+Keep a surface-edit prompt close to the compact example above (roughly 150–200
+words is a useful starting point). Name a few shape anchors instead of expanding
+every joint and material into a new design brief. Leave world-unit heights,
+runtime frame/anchor coordinates, capture-scale conversions and export commands
+in the retained 3D manifest. They describe how the input was rendered, not what
+the image tool should redraw. A shorter prompt is not a guarantee of fidelity;
+check the actual source rather than assuming more constraints ensure adherence.
+Once a candidate works, test the resulting skill with a fresh executor that has
+only the realistic request, skill and required inputs. Keep style strength and
+geometry fidelity visible as separate outcomes; a weak surface change should not
+be presented as evidence that unrestricted character redesign preserves scale.
 
 ## Extract without fitting
 
@@ -145,8 +186,14 @@ independent LLM review at native and 2× scales for projection, design height,
 identity, foot contact, complete art, clean alpha and loop continuity. Inspect
 all poses at 12 fps and compare the last-to-first transition. Compare the AI
 source with the delivered frames to verify that processing did not hide drift.
+Compare sheet rows at their stored roots too: within-row consistency can conceal
+a row-to-row change in standing height or placement.
 Masks/depth/landmarks from 3D are diagnostic references, not a mechanism for
 forcing a visual pass. A successful capture does not establish successful reskin.
+Direct-render recipes should name the renderer and actual model/material/camera
+inputs and record zero image-generation calls. These inputs are authored render
+provenance, not claimed images supplied to an AI model. Preserve fresh render
+outputs for each control rather than relabeling an older image as a new run.
 
 For exact geometry with no image-redraw risk, keep the final output as a 3D
 render and put the desired appearance on model materials/UV textures before

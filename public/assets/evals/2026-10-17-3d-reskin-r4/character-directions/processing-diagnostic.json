@@ -1,0 +1,5 @@
+{
+  "exitCode": 0,
+  "stdout": "{\n  \"kind\": \"directions\",\n  \"sprites\": 8,\n  \"sourceSHA256\": \"ce993cf77bf97b06c35d2f52b565f2e6d2e62ff882da05b6b115a2294dc06ead\",\n  \"removedAlphaMass\": 118600,\n  \"output\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r4/character-directions/processed\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,79 @@
+{
+  "kind": "animation",
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "elevationPx": 160,
+  "nominalStandingHeight": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "footprint": [
+    128,
+    128
+  ],
+  "sprites": [
+    {
+      "id": "dance-00",
+      "role": "player"
+    },
+    {
+      "id": "dance-01",
+      "role": "player"
+    },
+    {
+      "id": "dance-02",
+      "role": "player"
+    },
+    {
+      "id": "dance-03",
+      "role": "player"
+    },
+    {
+      "id": "dance-04",
+      "role": "player"
+    },
+    {
+      "id": "dance-05",
+      "role": "player"
+    },
+    {
+      "id": "dance-06",
+      "role": "player"
+    },
+    {
+      "id": "dance-07",
+      "role": "player"
+    },
+    {
+      "id": "dance-08",
+      "role": "player"
+    },
+    {
+      "id": "dance-09",
+      "role": "player"
+    },
+    {
+      "id": "dance-10",
+      "role": "player"
+    },
+    {
+      "id": "dance-11",
+      "role": "player"
+    }
+  ]
+}

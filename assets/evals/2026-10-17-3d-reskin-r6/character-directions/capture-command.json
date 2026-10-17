@@ -1,0 +1,13 @@
+{
+  "mode": "directions",
+  "runner": "../skill-snapshot/scripts/render_3d.mjs",
+  "args": [
+    "directions",
+    "render",
+    "--scale",
+    "2",
+    "--runtime-root",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry"
+  ],
+  "imageGenerationCalls": 0
+}
