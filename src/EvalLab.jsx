@@ -121,10 +121,12 @@ function SpritePlayer({sprites, kind, showAnchors, guide, rawSequence}) {
   };
   useEffect(() => {
     if(!playing||sprites.length<2)return;
-    const started=performance.now(),first=frame;
-    let animation;
+    const first=frame;
+    let animation,started;
     const tick=now=>{
-      const index=(first+Math.floor((now-started)*12/1000))%sprites.length;
+      // Use RAF's clock throughout; its first timestamp may precede effect setup.
+      started??=now;
+      const index=(first+Math.floor(Math.max(0,now-started)*12/1000))%sprites.length;
       setFrame(previous=>previous===index?previous:index);
       animation=requestAnimationFrame(tick);
     };

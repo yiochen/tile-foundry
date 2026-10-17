@@ -1,6 +1,45 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 
+export async function verifyPlaybackClock(page){
+  // A frame timestamp can precede the performance.now() call that schedules it.
+  // Drive RAF independently to cover that boundary and the complete 12 fps loop.
+  await page.getByRole('slider',{name:'Sprite progress',exact:true}).press('Home');
+  await page.evaluate(()=>{
+    const originalRequest=window.requestAnimationFrame,originalCancel=window.cancelAnimationFrame;
+    const clock={callbacks:new Map(),nextId:1,firstRequest:null};
+    window.requestAnimationFrame=callback=>{
+      clock.firstRequest??=performance.now();
+      const id=clock.nextId++;clock.callbacks.set(id,callback);return id;
+    };
+    window.cancelAnimationFrame=id=>clock.callbacks.delete(id);
+    clock.restore=()=>{
+      window.requestAnimationFrame=originalRequest;window.cancelAnimationFrame=originalCancel;
+      delete window.evalPlaybackClock;
+    };
+    window.evalPlaybackClock=clock;
+    document.querySelector('button[aria-label="Play sprite sequence"]').click();
+  });
+  try{
+    await page.waitForFunction(()=>window.evalPlaybackClock.callbacks.size>0,{},{polling:10});
+    for(const [elapsed,frame] of [[0,0],[84,1],[917,11],[1000,0]]){
+      await page.evaluate(elapsed=>{
+        const clock=window.evalPlaybackClock,callbacks=[...clock.callbacks.values()];
+        clock.callbacks.clear();
+        callbacks.forEach(callback=>callback(clock.firstRequest-16+elapsed));
+      },elapsed);
+      await page.waitForFunction(frame=>{
+        const canvas=document.querySelector('.eval-sprite-preview');
+        return canvas?.dataset.ready==='true'&&canvas.dataset.frame===String(frame);
+      },frame,{polling:10});
+      assert.equal(await page.getByRole('slider',{name:'Sprite progress',exact:true}).inputValue(),String(frame));
+    }
+    await page.evaluate(()=>document.querySelector('button[aria-label="Pause sprite sequence"]').click());
+    await page.waitForFunction(()=>window.evalPlaybackClock.callbacks.size===0,{},{polling:10});
+    assert.equal(await page.locator('.eval-player').getAttribute('data-playing'),'false');
+  }finally{await page.evaluate(()=>window.evalPlaybackClock.restore());}
+}
+
 export async function verifyEvalGallery(page,root,port){
   const gallery=JSON.parse(await readFile(root+'public/assets/eval-gallery.json','utf8'));
   const suite=JSON.parse(await readFile(root+'skills/build-overlap-tiles/evals/cases.json','utf8'));
@@ -11,6 +50,9 @@ export async function verifyEvalGallery(page,root,port){
   await page.setViewportSize({width:1440,height:1000});
   await page.goto(url+'/?view=evals',{waitUntil:'networkidle'});
   await page.locator('[data-evals-ready="true"]').waitFor();
+  await page.locator('[data-eval-case="authored-flowing-lava"]').click();
+  await page.locator('.eval-player[data-frame-count="12"]').waitFor();
+  await verifyPlaybackClock(page);
   const floor = gallery.cases.find(c=>c.id==='seamless-square-floor');
   assert.equal(floor.latest.policy,'llm-visual-v1');
   assert.ok(floor.trials.length>=2);
@@ -168,5 +210,5 @@ export async function verifyEvalGallery(page,root,port){
     assert.equal(await touch.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
     await touch.locator('.eval-player').screenshot({path:root+'docs/preview-eval-player-mobile.png'});
   }finally{await touchContext.close();}
-  return {check:`${gallery.cases.length} cases: 12 fps player, mouse/touch scrubbing, runtime and preserved raw playback, SVG overlay, LLM assessments, history, exact prompts/sources, desktop/mobile`,ok:true};
+  return {check:`${gallery.cases.length} cases: early RAF timestamp regression, 12 fps player, mouse/touch scrubbing, runtime and preserved raw playback, SVG overlay, LLM assessments, history, exact prompts/sources, desktop/mobile`,ok:true};
 }
