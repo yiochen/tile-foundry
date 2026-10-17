@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "workflow": "3d-capture-sheet-ai-reskin",
+  "caseId": "character-directions",
+  "calls": [
+    {
+      "tool": "exec_command",
+      "purpose": "capture",
+      "arguments": {
+        "cmd": "node assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/scripts/render_3d.mjs directions assets/evals/2026-10-17-3d-reskin-r1/character-directions/render --scale 2 --runtime-root /Users/yiouchen/.codex/worktrees/1834/tile-foundry"
+      },
+      "result": {
+        "chunk_id": "13a169",
+        "wall_time_seconds": 2.065194458,
+        "exit_code": 0,
+        "original_token_count": 152,
+        "output": "{\n  \"output\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/render\",\n  \"mode\": \"directions\",\n  \"frames\": 8,\n  \"frame\": [\n    192,\n    320\n  ],\n  \"anchor\": [\n    96,\n    248\n  ],\n  \"neutralProjectedCrownHeight\": 160.0000076293947,\n  \"source\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/render/sheet.png\",\n  \"floorSource\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/render/guide.png\",\n  \"browserErrors\": []\n}\n"
+      }
+    },
+    {
+      "tool": "exec_command",
+      "purpose": "direct 3D control extraction",
+      "arguments": {
+        "cmd": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/scripts/extract_registered_sheet.py assets/evals/2026-10-17-3d-reskin-r1/character-directions/render/sheet.png assets/evals/2026-10-17-3d-reskin-r1/character-directions/render/guide.json assets/evals/2026-10-17-3d-reskin-r1/character-directions/direct3d --kind directions --min-alpha 0"
+      },
+      "result": {
+        "chunk_id": "177a2d",
+        "wall_time_seconds": 0.006807083,
+        "exit_code": 0,
+        "original_token_count": 59,
+        "output": "{\n  \"kind\": \"directions\",\n  \"sprites\": 8,\n  \"sourceSHA256\": \"0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e\",\n  \"removedAlphaMass\": 0,\n  \"output\": \"assets/evals/2026-10-17-3d-reskin-r1/character-directions/direct3d\"\n}\n"
+      }
+    },
+    {
+      "tool": "exec_command",
+      "purpose": "AI reskin registered extraction",
+      "arguments": {
+        "cmd": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/scripts/extract_registered_sheet.py assets/evals/2026-10-17-3d-reskin-r1/character-directions/source-01.png assets/evals/2026-10-17-3d-reskin-r1/character-directions/render/guide.json assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed --kind directions --min-alpha 32"
+      },
+      "result": {
+        "chunk_id": "967fd1",
+        "wall_time_seconds": 6.5e-06,
+        "exit_code": 0,
+        "original_token_count": 61,
+        "output": "{\n  \"kind\": \"directions\",\n  \"sprites\": 8,\n  \"sourceSHA256\": \"1b8fed26c6b57c113a0229f8cba82c6d60c8e3c2ffc7a3c12265825f098b989d\",\n  \"removedAlphaMass\": 138559,\n  \"output\": \"assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed\"\n}\n"
+      }
+    },
+    {
+      "tool": "exec_command",
+      "purpose": "assemble portable delivery manifest",
+      "arguments": {
+        "cmd": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/scripts/assemble_result.py --input-result assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed/result.json --registration assets/evals/2026-10-17-3d-reskin-r1/character-directions/registration.json --output assets/evals/2026-10-17-3d-reskin-r1/character-directions/assembled-result.json"
+      },
+      "result": {
+        "chunk_id": "45b732",
+        "wall_time_seconds": 5.917e-06,
+        "exit_code": 0,
+        "original_token_count": 35,
+        "output": "{\n  \"kind\": \"directions\",\n  \"sprites\": 8,\n  \"output\": \"assets/evals/2026-10-17-3d-reskin-r1/character-directions/assembled-result.json\"\n}\n"
+      }
+    },
+    {
+      "tool": "exec_command",
+      "purpose": "create native and 2x registration and cutout previews",
+      "arguments": {
+        "cmd": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python assets/evals/2026-10-17-3d-reskin-r1/character-directions/make-previews.py"
+      },
+      "result": {
+        "chunk_id": "1e14b3",
+        "wall_time_seconds": 0.157154917,
+        "exit_code": 0,
+        "original_token_count": 37,
+        "output": "{\"previews\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/previews\", \"sprites\": 8}\n"
+      }
+    },
+    {
+      "tool": "exec_command",
+      "purpose": "validate portable result",
+      "arguments": {
+        "cmd": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/scripts/tile_tools.py validate assets/evals/2026-10-17-3d-reskin-r1/character-directions/result.json"
+      },
+      "result": {
+        "chunk_id": "e7a00e",
+        "wall_time_seconds": 5.541e-06,
+        "exit_code": 1,
+        "original_token_count": 4,
+        "output": "Error: 'tiles'\n"
+      }
+    },
+    {
+      "tool": "exec_command",
+      "purpose": "capture actual desktop and mobile review preview screenshots",
+      "arguments": {
+        "cmd": "node assets/evals/2026-10-17-3d-reskin-r1/character-directions/capture-previews.mjs"
+      },
+      "result": {
+        "chunk_id": "0fe58c",
+        "wall_time_seconds": 0.403399667,
+        "exit_code": 0,
+        "original_token_count": 108,
+        "output": "{\n  \"captures\": [\n    {\n      \"viewport\": \"desktop\",\n      \"size\": {\n        \"width\": 1280,\n        \"height\": 1000\n      },\n      \"imageCount\": 16,\n      \"horizontalOverflow\": false,\n      \"pageHeight\": 2092\n    },\n    {\n      \"viewport\": \"mobile\",\n      \"size\": {\n        \"width\": 390,\n        \"height\": 844\n      },\n      \"imageCount\": 16,\n      \"horizontalOverflow\": false,\n      \"pageHeight\": 7179\n    }\n  ],\n  \"errors\": []\n}\n"
+      }
+    },
+    {
+      "tool": "exec_command",
+      "purpose": "check v2 delivery paths, hashes, unchanged registration, complete RGBA frames and call count",
+      "arguments": {
+        "cmd": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python assets/evals/2026-10-17-3d-reskin-r1/character-directions/check-delivery.py"
+      },
+      "result": {
+        "chunk_id": "a9198a",
+        "wall_time_seconds": 5.292e-06,
+        "exit_code": 0,
+        "original_token_count": 35,
+        "output": "{\"status\": \"completed\", \"sprites\": 8, \"order\": [\"N\", \"NE\", \"E\", \"SE\", \"S\", \"SW\", \"W\", \"NW\"], \"minAlpha\": 32, \"removedAlphaMass\": 138559}\n"
+      }
+    }
+  ],
+  "authorizedFreshBuiltinImageCalls": 1,
+  "freshBuiltinImageCallsMade": 1,
+  "processingPredeclared": {
+    "aiReskinMinAlpha": 32,
+    "direct3DMinAlpha": 0,
+    "perPoseFitting": false,
+    "rootFitting": false,
+    "perAxisStretching": false,
+    "rendererMaskApplied": false,
+    "colorKeyApplied": false
+  },
+  "guideInspectedBeforeGeneration": true,
+  "suppliedReferences": [
+    {
+      "path": "references/pose-sheet.png",
+      "role": "floor-free 3D pose sheet; complete layout edit target",
+      "sha256": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e"
+    }
+  ],
+  "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+  "predeclaredToolInputSHA256": "611eae88cdd48ce3422b404e0507728b74ca7996e21edd99e74f9dbb302dc7d6",
+  "generationCall": {
+    "tool": "image_gen.imagegen",
+    "argumentsFile": "tool-input-01.json",
+    "status": "returned-image",
+    "mode": "builtin",
+    "freshCallOrdinal": 1,
+    "source": "source-01.png",
+    "sourceSHA256": "1b8fed26c6b57c113a0229f8cba82c6d60c8e3c2ffc7a3c12265825f098b989d",
+    "toolReturnMetadata": "generation-return-01.json",
+    "sourceSize": [
+      1422,
+      1106
+    ]
+  },
+  "processingOutcome": {
+    "status": "completed",
+    "direct3DResult": "direct3d/result.json",
+    "aiResult": "processed/result.json",
+    "runtimeSprites": 8,
+    "minAlpha": 32,
+    "result": "result.json",
+    "geometryGrade": null
+  },
+  "legacyValidatorLimitation": {
+    "commandExitCode": 1,
+    "diagnostic": "Error: 'tiles'",
+    "reason": "tile_tools validate expects the older tiles manifest shape; canonical v2 sprites records were retained."
+  },
+  "inspectedInputRasters": [
+    "render/sheet.png",
+    "render/guide.png"
+  ],
+  "inspectedOutputRasters": [
+    "source-01.png",
+    "previews/direct3d-dark-2x.png",
+    "previews/ai-reskin-light-native.png",
+    "previews/ai-reskin-dark-2x.png",
+    "previews/direct3d-light-native.png",
+    "previews/screenshot-desktop.png",
+    "previews/screenshot-mobile.png",
+    "previews/screenshot-mobile-ai-viewport.png"
+  ],
+  "previewEntry": "previews/index.html",
+  "sceneOrigin": {
+    "source": "Frozen skill bundled procedural original adventurer, authored from primitives and rigged by the capture helper",
+    "externalAssets": [],
+    "editableScene": "render/scene.json",
+    "rig": "render/scene/rig.json",
+    "poses": "render/scene/poses.json",
+    "capture": "render/capture.json",
+    "renderer": "render/scene/render_3d_scene.js"
+  },
+  "visualGradingPerformed": false,
+  "recordFinalizationDiagnostic": {
+    "firstAttempt": "Path.relative_to failed when given a relative inspected-preview path against an absolute output path. Resolved path before computing metadata; no art processing or extraction rerun."
+  },
+  "callRecordScope": "Asset production commands, exact builtin image-generation input, processing commands, validation and browser captures. Read-only file inspections and metadata writes are not repeated as command records.",
+  "finishedAtUTC": "2026-10-17T07:44:10.678378+00:00",
+  "resultSHA256": "ef721b726ab0f5c71d5557de0ac363edf49fa83690a359f007c9c437446006d3",
+  "submissionSHA256": "c52f705b187368b49158d36e043cef297e6cdfd28d122eac60d99be31774f00e",
+  "integrityCheck": "integrity-check.json",
+  "actualOutcome": {
+    "imageGeneration": "returned transparent PNG",
+    "registeredExtraction": "completed eight frames",
+    "visualAssessment": "not graded",
+    "legacyValidator": "failed because it expects a tiles field",
+    "v2DeliveryIntegrity": "completed"
+  },
+  "incidentalRuntimeArtifacts": "Frozen helper imports emitted Python bytecode caches in shared skill-snapshot/scripts; frozen source files were not altered. Parent notified for centralized cache cleanup. Preview reruns now disable bytecode writes."
+}

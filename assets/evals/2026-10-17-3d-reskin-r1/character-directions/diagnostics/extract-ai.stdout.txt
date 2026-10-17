@@ -1,0 +1,7 @@
+{
+  "kind": "directions",
+  "sprites": 8,
+  "sourceSHA256": "1b8fed26c6b57c113a0229f8cba82c6d60c8e3c2ffc7a3c12265825f098b989d",
+  "removedAlphaMass": 138559,
+  "output": "assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed"
+}

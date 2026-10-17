@@ -47,6 +47,7 @@ def prepare_review(run_root, case_id, output):
     result_path = contained(base, submission['result'])
     result = json.loads(result_path.read_text())
     guide = contained(base, submission['guide'])
+    guide_record = json.loads(guide.read_text())
     sprites = result.get('sprites', []) + result.get('depthPieces', [])
     assets = [{'role':'source', 'sourceRole':s.get('role','whole-asset'),
                'path':str(contained(base, s['image']))} for s in submission['sources']]
@@ -55,6 +56,14 @@ def prepare_review(run_root, case_id, output):
         recipe = json.loads(recipe_path.read_text())
         assets += [{'role':'input-reference',
                     'path':str(contained(recipe_path.parent,p,base))} for p in recipe.get('references',[])]
+    if guide_record.get('kind') == 'rendered-3d-sheet':
+        # These are authored capture views, not past result screenshots or grades.
+        for reference in guide_record.get('authoredRenders',[]):
+            if reference.get('role') in ('neutral-standing','rigged-reference','floor-registration',
+                                          'neutral-standing-on-floor'):
+                path=contained(guide.parent,reference['image'],base)
+                if path.suffix.lower() == '.png':
+                    assets.append({'role':reference['role'],'path':str(path)})
     assets += [{'role':'processed', 'id':s['id'], 'path':str(contained(result_path.parent,s['image'],base))} for s in sprites]
     operations = []
     for sprite in sprites:
@@ -66,15 +75,23 @@ def prepare_review(run_root, case_id, output):
             method = 'measured-calibration-floor'
         if processing.get('method') == 'Whole square material, uniform resampling; no crop or guessed-color removal':
             method = 'uniform-square-resampling'
-        if method not in ('authored-svg-faces','measured-calibration-floor','authored-source-canvas','uniform-square-resampling'):
+        if method not in ('authored-svg-faces','measured-calibration-floor','authored-source-canvas',
+                          'authored-3d-projection','uniform-square-resampling'):
             method = 'unspecified'
         if processing.get('alphaPreserved') and 'templateNearEdgeAnchor' in processing:
             method = 'authored-svg-faces'
-        normalization = processing.get('normalization',processing)
+        normalization = (sprite.get('normalization',{}) if method == 'authored-3d-projection'
+                         else processing.get('normalization',processing))
         operation = {'sprite':sprite['id'],'registrationMethod':method}
         if 'registrationBasis' in processing:
             operation['registrationBasis']=processing['registrationBasis']
         operation['transform'] = {k:normalization[k] for k in ('sourceSize','sourceRect','anchorSource','scale','subpixelShift') if k in normalization}
+        if method == 'authored-3d-projection':
+            operation['transform'].update({k:normalization[k] for k in
+                ('sourceOrigin','anchorIn','anchorOut','perPoseFitting') if k in normalization})
+            operation['sourceRect']=registration.get('sourceRect')
+            operation['cleanup']={k:result.get('cleanup',{})[k] for k in
+                ('minAlpha','removedAlphaMass','rendererMaskApplied','colorKeyApplied') if k in result.get('cleanup',{})}
         chroma = processing.get('chroma',{})
         if 'keyRGB' in chroma:operation['keyRGB'] = chroma['keyRGB']
         uv=processing.get('uvShift',{})

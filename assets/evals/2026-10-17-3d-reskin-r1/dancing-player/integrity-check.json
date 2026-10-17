@@ -1,0 +1,21 @@
+{
+  "ungraded": true,
+  "checks": {
+    "sourceHashMatchesGeneration": true,
+    "referenceHashMatchesGeneration": true,
+    "referenceIsDirectCapture": true,
+    "guideUnmodified": true,
+    "guideHashMatchesSubmission": true,
+    "fullRequestRetained": true,
+    "oneBuiltinCall": true,
+    "candidateProcessingFailed": true,
+    "directControlFrameCount": true,
+    "directControlFPS": true,
+    "directControlMinAlphaZero": true,
+    "editableScenePreserved": true,
+    "auxiliaryPassesPreserved": true,
+    "directControlFramesUseRequestedGeometry": true
+  },
+  "allChecksTrue": true,
+  "candidateDeliveryAvailable": false
+}

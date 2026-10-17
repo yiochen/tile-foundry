@@ -1,0 +1,56 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "dancing-player",
+  "request": "Generate a 12-frame player dancing spritesheet on a 128x128 calibration tile at exactly 12 fps. Keep one player design with nominal 160px standing height, the same anatomy scale and floor-center foot/root anchor in every frame. Remove the calibration floor, retain complete limbs, and deliver a playable loop. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "same-player": "Face, outfit, palette, limb lengths, camera and lighting stay consistent.",
+    "dancing-poses": "Twelve distinct useful dance poses form a readable loop without fused/missing limbs.",
+    "design-height": "Nominal anatomy/standing height stays constant; crouches and raised arms legitimately change the silhouette bounds and must not be resized to a common bounding box.",
+    "contact-stability": "Projected ground root stays at the floor center; no per-frame anchor fitting or image rescaling.",
+    "cutout-quality": "Inspect light/dark backgrounds for floor residue, color spill, holes and clipped shoes.",
+    "loop": "Last-to-first transition has no unintended pop or scale jump.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "animation",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "groundAnchorAlignment": "center",
+    "fps": 12,
+    "sprites": [],
+    "depthPieces": []
+  },
+  "operations": [],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/render/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/references/pose-sheet.png"
+    },
+    {
+      "role": "neutral-standing",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/render/neutral.png"
+    },
+    {
+      "role": "rigged-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/render/sheet.png"
+    },
+    {
+      "role": "floor-registration",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/render/guide.png"
+    },
+    {
+      "role": "neutral-standing-on-floor",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/render/neutral-on-floor.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/references/visual-review.md"
+}

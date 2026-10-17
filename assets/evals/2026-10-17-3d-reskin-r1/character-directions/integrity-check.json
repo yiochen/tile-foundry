@@ -1,0 +1,76 @@
+{
+  "type": "delivery-integrity",
+  "status": "completed",
+  "sprites": [
+    {
+      "image": "processed/frames/frame-00.png",
+      "sha256": "182cf418d7046eba422ee8bc668e218bf4c97913167e35be57eedf70ce1eeac0",
+      "direction": "N"
+    },
+    {
+      "image": "processed/frames/frame-01.png",
+      "sha256": "232e17888a2217709a1574db0ff52e038b1edeb6a57659e13d54e2ac2626c0c7",
+      "direction": "NE"
+    },
+    {
+      "image": "processed/frames/frame-02.png",
+      "sha256": "42250c5586e004afbc6a6cc425566099f5a983a3b74c6a3ddc5c3e3f6f15282b",
+      "direction": "E"
+    },
+    {
+      "image": "processed/frames/frame-03.png",
+      "sha256": "b58b5c21623f0bd71e9ded77a0e5526e982709958d7631b4fb3a95b2dec2e365",
+      "direction": "SE"
+    },
+    {
+      "image": "processed/frames/frame-04.png",
+      "sha256": "f932a7d047edaea7a1ce73106507d5075ed39b56cbbaeffe5885a0e89412f874",
+      "direction": "S"
+    },
+    {
+      "image": "processed/frames/frame-05.png",
+      "sha256": "91010ae758b68a708e89c429f3980b27f5583b7fa351d8359659e82a83c2fa8e",
+      "direction": "SW"
+    },
+    {
+      "image": "processed/frames/frame-06.png",
+      "sha256": "677f1cd18cc2b56fa9e2998d43580189f7453f70beb5c48fb3d9897edf84f475",
+      "direction": "W"
+    },
+    {
+      "image": "processed/frames/frame-07.png",
+      "sha256": "5952c555762a9d2a6e22d441f44394c5db9a68b005022b40adb4d86e96efaca1",
+      "direction": "NW"
+    }
+  ],
+  "sourceSHA256": "1b8fed26c6b57c113a0229f8cba82c6d60c8e3c2ffc7a3c12265825f098b989d",
+  "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+  "sourceSize": [
+    1422,
+    1106
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "directionOrder": [
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW"
+  ],
+  "minAlpha": 32,
+  "removedAlphaMass": 138559,
+  "direct3DRemovedAlphaMass": 0,
+  "exactBuiltinCalls": 1,
+  "visualGradingPerformed": false,
+  "geometryScope": "Authored registration transfer only; this integrity check does not assess AI geometry, proportions or contact."
+}

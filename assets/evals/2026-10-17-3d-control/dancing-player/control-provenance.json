@@ -1,0 +1,15 @@
+{
+  "mode": "3d-render-control",
+  "imageGenerationCalls": 0,
+  "sourceReuse": {
+    "run": "2026-10-17-3d-reskin-r1",
+    "caseId": "dancing-player",
+    "path": "render/sheet.png",
+    "captureSHA256": "c4166b20a8d25d54f37a49a0ad9e55232f90b74a69e29b6bbcb3de58b5aed12b"
+  },
+  "sourceBytesMatchCandidateRender": true,
+  "alphaThreshold": 0,
+  "rendererMaskApplied": false,
+  "perFrameFitting": false,
+  "note": "This is a direct 3D rendering/extraction control, not an AI reskin generation trial. Input raster in control-recipe is the authored sheet supplied to deterministic extraction."
+}

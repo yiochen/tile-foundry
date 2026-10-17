@@ -1,0 +1,30 @@
+{
+  "prompt": "Use case: style-transfer\nAsset type: transparent game-character dancing animation sprite sheet.\nInput image 1 is the complete floor-free rendered 3D pose sheet and is the layout edit target. Reskin the existing character in place into polished hand-painted game sprites, with rich local color, soft painted highlights, clean readable forms, and subtle material detail. Keep the same one recognizable player design in every panel: short dark brown hair, warm skin, blue short-sleeved top, brown waist belt with small gold buckle, dark blue trousers, and brown boots. Keep the reference's anatomy and outfit proportions.\nPreserve the full 1728×2048 transparent canvas and all twelve complete isolated poses, arranged in exactly 4 columns and 3 rows in row-major animation order. Each source panel is 384×640 pixels; horizontal and vertical gutters between panels are 64 pixels. Panel top-left coordinates are x=0,448,896,1344 and y=0,704,1408. Paint each existing pose at its present size and position. Do not independently enlarge, shrink, center, or shift any character. Preserve empty canvas headroom and transparent gutters.\nKeep the same fixed top-down oblique square-grid projection, front-facing three-quarter game view. Keep anatomy scale, head, torso, hands, knees and boot locations, planted foot contact and floor-center root from the reference. The nominal standing crown height is 1.25 calibration-cell widths above the floor root, 160 runtime pixels on a 128-pixel cell; this means 320 pixels at this source scale. The floor-center root is (192,496) locally in every source panel. These are fixed registrations, not instructions to resize each pose by its silhouette.\nThe twelve ordered frames form one cyclic one-second dancing loop at 12 fps: follow the supplied alternating arm-sway sequence with planted feet. Preserve all complete limbs, hair and boots, including the first-to-last transition. Return real transparent alpha with no floor, no calibration tile, no labels, no panel borders, no scenery, no external cast shadow and no new props. Keep every sprite inside its existing panel with transparent separation. Change surface rendering style only while preserving the reference composition and poses.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "sourceSHA256": "f02aa39b74fb756be4df252d49c0ec92ff1fffcf592f82d9601ad897be2bc3e6",
+  "references": [
+    "references/pose-sheet.png"
+  ],
+  "referenceSHA256": {
+    "references/pose-sheet.png": "367f30c33a988c4f71912731b13d208c73b2776c1ddb51c962a20ed027e4d455"
+  },
+  "referenceRoles": {
+    "references/pose-sheet.png": "floor-free rendered 3D pose sheet; layout edit target"
+  },
+  "toolInput": {
+    "prompt": "Use case: style-transfer\nAsset type: transparent game-character dancing animation sprite sheet.\nInput image 1 is the complete floor-free rendered 3D pose sheet and is the layout edit target. Reskin the existing character in place into polished hand-painted game sprites, with rich local color, soft painted highlights, clean readable forms, and subtle material detail. Keep the same one recognizable player design in every panel: short dark brown hair, warm skin, blue short-sleeved top, brown waist belt with small gold buckle, dark blue trousers, and brown boots. Keep the reference's anatomy and outfit proportions.\nPreserve the full 1728×2048 transparent canvas and all twelve complete isolated poses, arranged in exactly 4 columns and 3 rows in row-major animation order. Each source panel is 384×640 pixels; horizontal and vertical gutters between panels are 64 pixels. Panel top-left coordinates are x=0,448,896,1344 and y=0,704,1408. Paint each existing pose at its present size and position. Do not independently enlarge, shrink, center, or shift any character. Preserve empty canvas headroom and transparent gutters.\nKeep the same fixed top-down oblique square-grid projection, front-facing three-quarter game view. Keep anatomy scale, head, torso, hands, knees and boot locations, planted foot contact and floor-center root from the reference. The nominal standing crown height is 1.25 calibration-cell widths above the floor root, 160 runtime pixels on a 128-pixel cell; this means 320 pixels at this source scale. The floor-center root is (192,496) locally in every source panel. These are fixed registrations, not instructions to resize each pose by its silhouette.\nThe twelve ordered frames form one cyclic one-second dancing loop at 12 fps: follow the supplied alternating arm-sway sequence with planted feet. Preserve all complete limbs, hair and boots, including the first-to-last transition. Return real transparent alpha with no floor, no calibration tile, no labels, no panel borders, no scenery, no external cast shadow and no new props. Keep every sprite inside its existing panel with transparent separation. Change surface rendering style only while preserving the reference composition and poses.",
+    "referenced_image_paths": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/references/pose-sheet.png"
+    ],
+    "transparent_background": true
+  },
+  "status": "generated",
+  "processingPredeclaration": {
+    "minAlpha": 32,
+    "wholeCanvasUniformScaleOnly": true,
+    "perPoseFitting": false,
+    "rendererMaskApplied": false
+  },
+  "originalToolOutputPath": "/Users/yiouchen/.codex/generated_images/01a148cc-e100-7620-85fc-4745b285f42e/exec-57ff74cd-eebd-4b20-b052-944a704202d5.png"
+}

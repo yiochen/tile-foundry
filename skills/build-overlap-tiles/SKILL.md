@@ -1,6 +1,6 @@
 ---
 name: build-overlap-tiles
-description: Generate square-grid game floors, raised objects, characters, and animation sheets in top-down oblique projection, with reusable ground anchors, independent footprints, removable calibration guides, and 12 fps animation.
+description: Generate square-grid game floors, objects, characters, and animation sheets using projected 3D references or SVG geometry and AI artwork, with reusable ground anchors, independent footprints, and 12 fps animation.
 ---
 
 # Build overlap tiles
@@ -31,6 +31,14 @@ profile with the result, and use it consistently across poses and frames.
 
 ## Choose geometry and guidance
 
+- **Modeled objects, characters, directions or skeletal animation:** use a rigged
+  3D model and fixed parallel capture for controlled shape, scale and contact.
+  Model/materials, skeleton and poses are editable source assets; capture all
+  poses with one camera, pixel scale and ground root. An AI reskin is an optional
+  art pass that must be evaluated against the untouched render. Read
+  [3D capture and reskin](references/three-dimensional.md). If exact registration
+  must survive, keep final geometry in the renderer and stylize materials before
+  capture; a post-capture reskin may redraw geometry and is not pixel-exact.
 - **Flat floor:** generate an opaque square surface from a sparse SVG raster.
   Keep the complete square. Inspect repeated neighbors for color/pattern continuity,
   not just full alpha. Read [floor and object workflow](references/floor-and-objects.md).
@@ -62,7 +70,13 @@ profile with the result, and use it consistently across poses and frames.
   geometry, choose authored registration and a documented extractor before making
   an image call; do not assume the single-cell detector will handle it later.
 
-Use a sole SVG raster reference by default, with style described in text. Supply
+For the 3D route, use the captured floor-free pose sheet as the edit target and
+describe style in text. Capture the calibration floor separately, so it need not
+be removed from the reskin by color. Transfer the authored panel layout and root;
+do not infer new roots from generated feet. Reject merged or clipped panels and
+review whether the generated anatomy actually follows the render.
+
+For SVG routes, use a sole SVG raster reference by default, with style described in text. Supply
 an identity or support reference when continuity/attachment needs it and record
 its role. The bundled scene illustrates projection; it is not a default style
 reference to supply to every image call. A style image's object shape can bias

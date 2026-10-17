@@ -65,6 +65,15 @@ class EvalPreviewSequencesTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'No transparent gutter'):
             source_sequence(self.root,self.submission,self.guide,self.publish)
 
+    def test_failed_3d_reskin_retains_complete_raw_sheet_without_registered_claim(self):
+        guide={**self.guide,'kind':'rendered-3d-sheet'}
+        original=(self.root/'source.png').read_bytes()
+        sequence=source_sequence(self.root,self.submission,guide,self.publish)
+        self.assertFalse(sequence['isProcessedSprite'])
+        self.assertEqual(sequence['alignment'],'panel-origin')
+        self.assertTrue(partition_is_complete([f['sourceRect'] for f in sequence['frames']],(64,32)))
+        self.assertEqual((self.root/'source.png').read_bytes(),original)
+
     def test_saved_panels_are_verified_against_the_complete_original(self):
         source=Image.open(self.root/'source.png').convert('RGBA')
         (self.root/'previews').mkdir();frames=[]

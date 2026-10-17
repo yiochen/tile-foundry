@@ -28,7 +28,9 @@ def prepare(run_root, cases_path=SUITE, selected=None):
     run_root.mkdir(parents=True, exist_ok=True)
     (run_root / 'suite.json').write_text(json.dumps(suite, indent=2) + '\n')
     snapshot = run_root / 'skill-snapshot'
-    shutil.copytree(SKILL_DIR, snapshot, ignore=shutil.ignore_patterns('__pycache__', '*.pyc'))
+    # Runtime packages are installed separately; freezing their binaries would
+    # make a portable reference renderer's snapshot machine-specific and huge.
+    shutil.copytree(SKILL_DIR, snapshot, ignore=shutil.ignore_patterns('__pycache__', '*.pyc', 'node_modules'))
     trials = []
     for case in cases:
         directory = run_root / case['outputSubdir']

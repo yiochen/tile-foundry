@@ -1,0 +1,14 @@
+{
+  "status": "ungraded",
+  "candidateRawSource": "../source-01.png",
+  "candidateSpritesAvailable": false,
+  "directControl": "../control/result.json",
+  "playback": "control-playback.html",
+  "fps": 12,
+  "nativeReviewScale": {
+    "sourceWidth": 1152,
+    "displayWidth": 864,
+    "uniformDisplayScale": 0.75
+  },
+  "independentReviewPerformed": false
+}

@@ -76,6 +76,21 @@ class PortableSkillTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'empty'):
             prepare(root)
 
+    def test_preparation_excludes_installed_node_runtime_from_snapshot(self):
+        foreign_skill = self.directory/'skill-with-runtime'
+        shutil.copytree(SKILL,foreign_skill,ignore=shutil.ignore_patterns('__pycache__','*.pyc','node_modules'))
+        dependency = foreign_skill/'scripts/node_modules/fake-native-runtime/binary'
+        dependency.parent.mkdir(parents=True)
+        dependency.write_bytes(b'platform-specific installed dependency')
+        output=self.directory/'portable-run'
+        subprocess.run([sys.executable,str(foreign_skill/'scripts/prepare_evals.py'),
+                        '--run-root',str(output),'--case','dancing-player'],
+                       check=True,capture_output=True)
+        record=json.loads((output/'run.json').read_text())
+        self.assertFalse((output/'skill-snapshot/scripts/node_modules').exists())
+        self.assertFalse(any('node_modules' in name.split('/') for name in record['skillFiles']))
+        self.assertTrue((output/'skill-snapshot/scripts/requirements.txt').exists())
+
     def test_twelve_pose_guide_preserves_floor_calibration_and_roots(self):
         metadata=build('dance',self.directory/'twelve',columns=4,frames=12)
         image=Image.open(self.directory/'twelve.png').convert('RGBA')
@@ -166,6 +181,31 @@ class PortableSkillTests(unittest.TestCase):
         self.assertEqual(report['status'],'needs-visual-review')
         self.assertTrue(all(c['pass'] for c in report['automaticChecks']))
         self.assertEqual(len(report['reviewArtifacts']),2)
+
+    def test_3d_review_supplies_authored_views_and_only_declared_transforms(self):
+        case,path=self.fixture('partial-cell-tall-object')
+        shutil.copyfile(self.artifacts/'sprite.png',self.artifacts/'neutral.png')
+        guide=json.loads((self.artifacts/'guide.json').read_text())
+        guide.update(kind='rendered-3d-sheet',authoredRenders=[
+            {'role':'neutral-standing','image':'neutral.png'},
+            {'role':'previous-verdict','image':'sprite.png'}])
+        (self.artifacts/'guide.json').write_text(json.dumps(guide))
+        result=json.loads((self.artifacts/'result.json').read_text())
+        sprite=result['sprites'][0]
+        sprite['registration']={'method':'authored-3d-projection','sourceRect':[0,0,192,320]}
+        sprite['normalization']={'scale':[1,1],'sourceOrigin':[0,0],
+            'anchorOut':[96,248],'perPoseFitting':False,'pastGrade':'not evidence'}
+        result['cleanup']={'minAlpha':0,'removedAlphaMass':0,
+            'rendererMaskApplied':False,'colorKeyApplied':False,'pastGrade':'not evidence'}
+        (self.artifacts/'result.json').write_text(json.dumps(result))
+        packet=prepare_review(self.run_root,case['id'],self.directory/'3d-review')
+        self.assertTrue(any(a['role']=='neutral-standing' and a['path'].endswith('/neutral.png') for a in packet['assets']))
+        self.assertFalse(any(a['role']=='previous-verdict' for a in packet['assets']))
+        operation=packet['operations'][0]
+        self.assertEqual(operation['registrationMethod'],'authored-3d-projection')
+        self.assertEqual(operation['transform']['scale'],[1,1])
+        self.assertIs(operation['transform']['perPoseFitting'],False)
+        self.assertNotIn('pastGrade',str(operation))
 
     def review_fixture(self, case, changes=None):
         packet_dir = self.directory/'visual-packet'

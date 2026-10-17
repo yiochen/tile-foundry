@@ -1,0 +1,367 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "dancing-player",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r2/dancing-player"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a 12-frame player dancing spritesheet on a 128x128 calibration tile at exactly 12 fps. Keep one player design with nominal 160px standing height, the same anatomy scale and floor-center foot/root anchor in every frame. Remove the calibration floor, retain complete limbs, and deliver a playable loop. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 3 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r2/dancing-player."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "92e43acaf845d19f2ad781d733df8d1b6dc1f7b0b3cfdb3b9468954cc440d7b3"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/pose-sheet.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "9a65e8aebc0d9619f34ff59449744bec56f789d976a9d588e26476b0099a1531"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "animation",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 12
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "sprite-00",
+        "sprite-01",
+        "sprite-02",
+        "sprite-03",
+        "sprite-04",
+        "sprite-05",
+        "sprite-06",
+        "sprite-07",
+        "sprite-08",
+        "sprite-09",
+        "sprite-10",
+        "sprite-11"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "12-fps-schedule",
+      "pass": true,
+      "detail": "12 fps / 83.333333 ms"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "The delivered character keeps one top/front oblique view throughout: the top of the hair and boots and the front of the face/tunic remain readable. No visible camera rotation, perspective zoom, or depth-dependent size change occurs as the arms wave. The supplied floor reference remains a screen-aligned square. This is qualitative visual agreement, not proof of exact projection.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/guide.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/sheet.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "All twelve delivered silhouettes fit their frames with visible space around the hair, raised hands, elbows and complete boot soles. No limb is cut by a frame edge; there is no visible detached effect or cast shadow requiring an undeclared extent.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-2x.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "At the fixed root cross the delivered character is visibly too far toward the front of the calibration square. The cross sits between the upper boot shafts/cuffs, whereas the neutral on-floor reference places its support landmarks nearer the floor center. The delivered heels, shafts and soles are collectively displaced relative to that reference; this judgment uses visible foot anatomy and the floor comparison, not the lowest alpha pixel or toe tip alone.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-standing-comparison.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/neutral-on-floor.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/guide.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback-observations.json"
+      ]
+    },
+    {
+      "check": "same-player",
+      "pass": true,
+      "detail": "Brown swept hair, dark eyes, blue V-neck tunic with pale cuffs, brown belt with a gold rectangular buckle, gray trousers and cuffed brown boots remain one recognizable design. The face, limb thickness, palette and shading are consistent enough at native and 2x scale; slight pose-dependent contours do not read as a different player.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/source-01.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html"
+      ]
+    },
+    {
+      "check": "dancing-poses",
+      "pass": true,
+      "detail": "The twelve phases provide distinct, readable positions in an alternating raised-forearm wave: one hand approaches the temple while the other extends, then the emphasis crosses to the other side. The legs remain planted and the motion is modest, but it reads as a dance loop. Both arms, rounded hands, legs and boots stay identifiable without a fused or missing limb.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/sheet.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback-observations.json"
+      ]
+    },
+    {
+      "check": "design-height",
+      "pass": false,
+      "detail": "The delivered upright anatomy is noticeably larger than the nominal-standing neutral reference when shown at the same frame and floor size: the hair/head mass is broader and higher and the torso-to-boot span is larger. The comparison shows a larger body design, not simply a silhouette made taller by raised arms or a crouch being normalized. Anatomy scale is broadly consistent between delivered phases, but the requested neutral design-height target is not visually retained. No exact standing-height measurement is claimed.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-standing-comparison.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/neutral.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/neutral-on-floor.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/sheet.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png"
+      ]
+    },
+    {
+      "check": "contact-stability",
+      "pass": false,
+      "detail": "With the floor square and root cross fixed, the belt, knees, boot cuffs and complete soles move upward together at 4-to-5 and again at 8-to-9. The feet retain the same planted stance rather than making an airborne or stepping pose, so this reads as registration drift. The whole lower body drops back at 12-to-1. The reference sheet shows the intended planted support relation consistently; delivered contact does not remain stable.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-standing-comparison.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/sheet.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback-observations.json",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png"
+      ]
+    },
+    {
+      "check": "cutout-quality",
+      "pass": true,
+      "detail": "At native and 2x on both light and dark, the delivered hair, pale cuffs, hands and boots have clean, complete edges. I see no calibration-floor patch, large colored spill, internal transparency hole, or clipped shoe. The colored fringe visible when the original source is displayed over transparency is not a visible practical defect in the inspected delivered composites.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/source-01.png"
+      ]
+    },
+    {
+      "check": "loop",
+      "pass": false,
+      "detail": "Running 12 fps playback and paused last/first views show an unintended position pop at 12-to-1: the boots, knees, belt and head all jump downward together while the square/root stay fixed. The arm-wave phase itself closes plausibly and there is no comparably obvious size jump; the registration jump still breaks the loop.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback-observations.json",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-standing-comparison.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/processed/frames/frame-11.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/processed/frames/frame-00.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The original generated sheet contains the same twelve painted poses in the same row-major order, and their facial features, hair, cuffs, buckle, trousers and boots visibly match the processed frames. The delivered changes look consistent with the supplied fixed source rectangles and overall downsampling, with no visible replacement limb, invented pose, or per-frame geometry fitting. The source already contains the row-to-row position change. This is a visual provenance comparison; hidden operations cannot be proved absent from pixels alone.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/source-01.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-2x.png"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "sprite-00-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "sprite-01-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "sprite-02-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "sprite-03-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "sprite-04-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "sprite-05-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "sprite-06-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "sprite-07-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "sprite-08-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "sprite-09-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "sprite-10-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "sprite-11-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "Codex GPT-6 independent visual review session /root/review_3d_dance_r2",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

@@ -1,0 +1,33 @@
+{
+  "tool": "Three.js WebGLRenderer + extract_registered_sheet.py",
+  "isImageModelCall": false,
+  "imageGenerationCalls": 0,
+  "prompt": "Deterministic direct-render control. No image-model prompt was submitted. Use the retained rigged 3D color sheet as the fixed-layout extractor input with alpha threshold zero; command is saved in extractionCommand.",
+  "extractionCommand": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/skill-snapshot/scripts/extract_registered_sheet.py",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/character-directions/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/character-directions/render/guide.json",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/character-directions/processed",
+    "--min-alpha",
+    "0"
+  ],
+  "transparentBackground": true,
+  "sourceSHA256": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e",
+  "references": [
+    "source-01.png"
+  ],
+  "referenceSHA256": {
+    "source-01.png": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e"
+  },
+  "referenceRoles": {
+    "source-01.png": "Authored 3D color sheet actually supplied to the deterministic extractor; no AI image reference or AI generation"
+  },
+  "sourceCapture": {
+    "run": "2026-10-17-3d-reskin-r1",
+    "caseId": "character-directions",
+    "path": "render/sheet.png",
+    "captureSHA256": "cd117b905396bf393ab6106f6c0f341886a0f3856b997112bb5ff7f6d439c2ce"
+  },
+  "processorSHA256": "895474dce8a2c28a6b1acca5ab775d1d4f033f92deede6a4ec13fde9e28f6be7"
+}

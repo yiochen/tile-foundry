@@ -1,0 +1,10 @@
+{
+  "name": "portable-overlap-tile-3d-renderer",
+  "private": true,
+  "type": "module",
+  "description": "Optional portable 3D reference renderer for registered sprites",
+  "dependencies": {
+    "three": "0.186.1",
+    "playwright": "1.64.0"
+  }
+}

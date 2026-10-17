@@ -1,0 +1,662 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "character-directions",
+  "request": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "same-character": "One consistent identity, outfit, proportions and camera; turn the subject, not the camera.",
+    "direction-height": "Eight upright views have the same standing design height within 4px; no per-direction art-bounds fitting.",
+    "direction-contact": "Independent review of the floor registration and physical sole/support center confirms consistent contact; toe length may change the visible bottom.",
+    "cutout": "No calibration floor or pose-guide strokes remain.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "directions",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "heightAxis": [
+      0,
+      -1
+    ],
+    "elevationScale": 1,
+    "groundAnchorAlignment": "center",
+    "frameOrder": [
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "sprites": [
+      {
+        "id": "frame-00",
+        "image": "processed/frames/frame-00.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 0,
+        "direction": "N",
+        "role": "player"
+      },
+      {
+        "id": "frame-01",
+        "image": "processed/frames/frame-01.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 1,
+        "direction": "NE",
+        "role": "player"
+      },
+      {
+        "id": "frame-02",
+        "image": "processed/frames/frame-02.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 2,
+        "direction": "E",
+        "role": "player"
+      },
+      {
+        "id": "frame-03",
+        "image": "processed/frames/frame-03.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 3,
+        "direction": "SE",
+        "role": "player"
+      },
+      {
+        "id": "frame-04",
+        "image": "processed/frames/frame-04.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 4,
+        "direction": "S",
+        "role": "player"
+      },
+      {
+        "id": "frame-05",
+        "image": "processed/frames/frame-05.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 5,
+        "direction": "SW",
+        "role": "player"
+      },
+      {
+        "id": "frame-06",
+        "image": "processed/frames/frame-06.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 6,
+        "direction": "W",
+        "role": "player"
+      },
+      {
+        "id": "frame-07",
+        "image": "processed/frames/frame-07.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 7,
+        "direction": "NW",
+        "role": "player"
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "frame-00",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.6075949367088608,
+          0.6075949367088608
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          158.0,
+          408.16666666666663
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        0.0,
+        0.0,
+        316.0,
+        526.6666666666666
+      ],
+      "cleanup": {
+        "minAlpha": 32,
+        "removedAlphaMass": 138559,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-01",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.6075949367088608,
+          0.6075949367088608
+        ],
+        "sourceOrigin": [
+          368.66666666666663,
+          0.0
+        ],
+        "anchorIn": [
+          158.0,
+          408.16666666666663
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        368.66666666666663,
+        0.0,
+        684.6666666666666,
+        526.6666666666666
+      ],
+      "cleanup": {
+        "minAlpha": 32,
+        "removedAlphaMass": 138559,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-02",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.6075949367088608,
+          0.6075949367088608
+        ],
+        "sourceOrigin": [
+          737.3333333333333,
+          0.0
+        ],
+        "anchorIn": [
+          158.0,
+          408.16666666666663
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        737.3333333333333,
+        0.0,
+        1053.3333333333333,
+        526.6666666666666
+      ],
+      "cleanup": {
+        "minAlpha": 32,
+        "removedAlphaMass": 138559,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-03",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.6075949367088608,
+          0.6075949367088608
+        ],
+        "sourceOrigin": [
+          1106.0,
+          0.0
+        ],
+        "anchorIn": [
+          158.0,
+          408.16666666666663
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        1106.0,
+        0.0,
+        1422.0,
+        526.6666666666666
+      ],
+      "cleanup": {
+        "minAlpha": 32,
+        "removedAlphaMass": 138559,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-04",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.6075949367088608,
+          0.6075949367088608
+        ],
+        "sourceOrigin": [
+          0.0,
+          579.3333333333333
+        ],
+        "anchorIn": [
+          158.0,
+          408.16666666666663
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        0.0,
+        579.3333333333333,
+        316.0,
+        1106.0
+      ],
+      "cleanup": {
+        "minAlpha": 32,
+        "removedAlphaMass": 138559,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-05",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.6075949367088608,
+          0.6075949367088608
+        ],
+        "sourceOrigin": [
+          368.66666666666663,
+          579.3333333333333
+        ],
+        "anchorIn": [
+          158.0,
+          408.16666666666663
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        368.66666666666663,
+        579.3333333333333,
+        684.6666666666666,
+        1106.0
+      ],
+      "cleanup": {
+        "minAlpha": 32,
+        "removedAlphaMass": 138559,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-06",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.6075949367088608,
+          0.6075949367088608
+        ],
+        "sourceOrigin": [
+          737.3333333333333,
+          579.3333333333333
+        ],
+        "anchorIn": [
+          158.0,
+          408.16666666666663
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        737.3333333333333,
+        579.3333333333333,
+        1053.3333333333333,
+        1106.0
+      ],
+      "cleanup": {
+        "minAlpha": 32,
+        "removedAlphaMass": 138559,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    },
+    {
+      "sprite": "frame-07",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.6075949367088608,
+          0.6075949367088608
+        ],
+        "sourceOrigin": [
+          1106.0,
+          579.3333333333333
+        ],
+        "anchorIn": [
+          158.0,
+          408.16666666666663
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        1106.0,
+        579.3333333333333,
+        1422.0,
+        1106.0
+      ],
+      "cleanup": {
+        "minAlpha": 32,
+        "removedAlphaMass": 138559,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/render/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/references/pose-sheet.png"
+    },
+    {
+      "role": "neutral-standing",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/render/neutral.png"
+    },
+    {
+      "role": "rigged-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/render/sheet.png"
+    },
+    {
+      "role": "floor-registration",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/render/guide.png"
+    },
+    {
+      "role": "neutral-standing-on-floor",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/render/neutral-on-floor.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-00",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed/frames/frame-00.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-01",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed/frames/frame-01.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-02",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed/frames/frame-02.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-03",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed/frames/frame-03.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-04",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed/frames/frame-04.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-05",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed/frames/frame-05.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-06",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed/frames/frame-06.png"
+    },
+    {
+      "role": "processed",
+      "id": "frame-07",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions/processed/frames/frame-07.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-0-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-1-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-1-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-2-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-2-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-3-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-3-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-4-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-4-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-5-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-5-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-6-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-6-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-7-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/review-packets/character-directions/placement-7-dark.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/references/visual-review.md"
+}

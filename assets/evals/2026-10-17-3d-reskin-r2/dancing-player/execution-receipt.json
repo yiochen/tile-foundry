@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "caseId": "dancing-player",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r2/dancing-player",
+  "recordedAt": "2026-10-17T07:52:09.419483+00:00",
+  "workflow": "3D capture \u2192 floor-free sheet \u2192 one built-in AI reskin \u2192 frozen registered extraction",
+  "generationToolCalls": 1,
+  "cliOrAPIFallbackCalls": 0,
+  "generationRetries": 0,
+  "actualExecutionCalls": [
+    {
+      "step": "3d-capture",
+      "command": "node assets/evals/2026-10-17-3d-reskin-r2/skill-snapshot/scripts/render_3d.mjs dance assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render --scale 2 --runtime-root /Users/yiouchen/.codex/worktrees/1834/tile-foundry",
+      "exitCode": 0,
+      "frames": 12,
+      "browserErrors": []
+    },
+    {
+      "step": "image-generation",
+      "tool": "image_gen.imagegen",
+      "arguments": {
+        "prompt": "Use case: style-transfer\nAsset type: registered 12-frame player dancing spritesheet.\nInput image 1 is the complete floor-free 3D-rendered pose sheet and is the layout edit target. Reskin the existing player in place into polished hand-painted game sprites with rich local color, soft painted highlights, subtle cloth and leather texture, and clean readable forms. Keep the same brown-haired, blue-tunic adventurer, blue-gray trousers, belt and brown boots in every pose.\nPreserve the entire 1728x2048 transparent canvas, with exactly four columns and three rows in the existing row-major pose order, frames 0 through 11. Each authored panel is 384x640 pixels, with 64-pixel transparent gutters: panel left edges are 0,448,896,1344 and panel top edges are 0,704,1408. Paint the supplied poses at their existing size and location. Preserve all empty space and gutters. Keep the complete head, hair, hands, arms, legs and boots inside each existing panel with transparent boundary clearance.\nKeep the same fixed square-grid top-down oblique camera, front-facing three-quarter game view, parallel projection, anatomy proportions and body scale. Preserve each supplied pose's head, torso, hands and boots in place, including the planted foot contacts and stationary projected ground root. Each panel represents the same 192x320 runtime frame at 2x capture scale; its local ground root is (192,496) in the supplied panel. Nominal neutral standing height remains 320 supplied-image pixels, equivalent to 160 runtime pixels or 1.25 cell widths on the 128-pixel ground cell. Pose silhouettes may change naturally; do not independently resize or recenter any frame.\nRetain the shown periodic dance sequence, sampled evenly at twelve phases of a one-second loop: the last pose transitions back to the first at the same phase interval. Preserve the existing arm bends and upper-body sway. Keep outfit, face, hairstyle, lighting and feature scale consistent throughout.\nReturn twelve complete isolated sprites on genuine transparent RGBA. No floor, calibration tile, background, external cast shadow, labels, borders, extra poses or extra objects. Preserve the existing canvas proportions, panel layout, pose scale and ground registration.",
+        "referenced_image_paths": [
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r2/dancing-player/references/pose-sheet.png"
+        ],
+        "transparent_background": true
+      },
+      "calls": 1,
+      "inputRecord": "tool-input-01.json",
+      "outputRecord": "tool-output-01.json",
+      "source": "source-01.png",
+      "sourceSHA256": "92e43acaf845d19f2ad781d733df8d1b6dc1f7b0b3cfdb3b9468954cc440d7b3"
+    },
+    {
+      "step": "extract-reskin",
+      "command": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python assets/evals/2026-10-17-3d-reskin-r2/skill-snapshot/scripts/extract_registered_sheet.py assets/evals/2026-10-17-3d-reskin-r2/dancing-player/source-01.png assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/guide.json assets/evals/2026-10-17-3d-reskin-r2/dancing-player/processed --kind animation --min-alpha 32",
+      "exitCode": 0,
+      "sprites": 12,
+      "removedAlphaMass": 301977
+    },
+    {
+      "step": "assemble-result",
+      "command": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python assets/evals/2026-10-17-3d-reskin-r2/skill-snapshot/scripts/assemble_result.py --input-result assets/evals/2026-10-17-3d-reskin-r2/dancing-player/processed/result.json --registration assets/evals/2026-10-17-3d-reskin-r2/dancing-player/registration.json --output assets/evals/2026-10-17-3d-reskin-r2/dancing-player/result.json",
+      "exitCode": 0,
+      "followupMetadataOnly": "Rebased nested image/guide file paths, added explicit per-sprite registration, processing manifest, sheet and preview links; no geometry or pixels changed."
+    },
+    {
+      "step": "preview-construction",
+      "command": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python assets/evals/2026-10-17-3d-reskin-r2/dancing-player/build_previews.py",
+      "exitCode": 0
+    },
+    {
+      "step": "browser-playback-and-screenshots",
+      "command": "node assets/evals/2026-10-17-3d-reskin-r2/dancing-player/inspect_playback.mjs",
+      "exitCode": 0,
+      "observations": "playback-observations.json"
+    }
+  ],
+  "preGenerationPlan": "pre-generation-plan.json",
+  "direct3DControl": {
+    "result": "render/result.json",
+    "postCaptureProcessing": "none; original native render frames retained unchanged",
+    "source": "render/sheet.png"
+  },
+  "editableSource": {
+    "scene": "render/scene.json",
+    "rigAndBindPose": "render/scene/rig.json",
+    "poses": "render/scene/poses.json",
+    "sourceCode": "render/scene/render_3d_scene.js",
+    "runner": "render/scene/render_3d.mjs",
+    "cameraMaterialAndRuntime": "render/capture.json"
+  },
+  "auxiliaryPasses": [
+    "render/guide.png",
+    "render/floor-frames",
+    "render/masks",
+    "render/mask-sheet.png",
+    "render/depth",
+    "render/depth-sheet.png",
+    "render/neutral.png",
+    "render/neutral-on-floor.png"
+  ],
+  "inputInspectionBeforeGeneration": [
+    "render/sheet.png",
+    "render/neutral-on-floor.png",
+    "render/guide.png"
+  ],
+  "outputInspection": [
+    "source-01.png",
+    "processed/sheet.png",
+    "previews/reskin-light-native.png",
+    "previews/reskin-light-2x.png",
+    "previews/reskin-dark-native.png",
+    "previews/reskin-dark-2x.png",
+    "previews/direct3d-light-native.png",
+    "previews/direct3d-light-2x.png",
+    "previews/direct3d-dark-native.png",
+    "previews/direct3d-dark-2x.png",
+    "previews/reskin-mobile.png",
+    "previews/reskin-desktop-last-frame.png",
+    "previews/direct3d-mobile.png",
+    "previews/direct3d-desktop-last-frame.png"
+  ],
+  "playbackEvidence": "playback-observations.json",
+  "integrity": "integrity-report.json",
+  "processingOutcome": "twelve registered runtime frames extracted",
+  "visualAssessment": "not graded by executor; independent review required for generated anatomy, contact, scale and loop quality",
+  "noPostHocGeometryAdjustments": true,
+  "noGuideOrThresholdChanges": true,
+  "finalRecordSHA256": {
+    "result.json": "4fd4c275643ad0ae154d11ead5dca9b2f51ee1969e0bec0c4c03671600e64042",
+    "submission.json": "6ddc34357176e81e9210ec03f8d3c986b380ff778de20b7bf3ccb701d94fbb0a"
+  }
+}

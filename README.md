@@ -193,6 +193,14 @@ anchors and height. All current animation output/preview schedules use **12 fps*
 See [the skill tuning findings](docs/skill-tuning-2026-10-16.md) for fresh-agent
 iterations and the distinction between image-model misses and workflow defects.
 
+The skill also supports [rigged 3D capture followed by AI reskinning](skills/build-overlap-tiles/references/three-dimensional.md).
+Its portable Three.js helper captures a skinned character through a fixed
+square-grid projection, preserving editable model/rig/pose sources and separate
+color, floor, alpha and depth passes. Full-sheet extraction transfers the authored
+frames and roots without fitting generated feet or clipping art to a 3D mask.
+The direct 3D control and the AI reskin are evaluated separately.
+See [the 3D experiment and results](docs/3d-reskin-experiment-2026-10-17.md).
+
 The [suite](skills/build-overlap-tiles/evals/cases.json) contains the original 13 cases
 and a separately specified authored-flowing-lava case. The baseline has a fresh
 14-call run covering the original 13 cases. It includes raised lava with a 32px front wall, seam-free flat

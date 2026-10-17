@@ -1,0 +1,14 @@
+{
+  "mode": "processing-only-source-reuse",
+  "imageGenerationCallsThisRun": 0,
+  "originalGenerationCallsRecorded": 1,
+  "sourceSHA256": "f02aa39b74fb756be4df252d49c0ec92ff1fffcf592f82d9601ad897be2bc3e6",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json"
+    }
+  ],
+  "guide": "guide.json",
+  "note": "Only original source, recipe, actual supplied references and authored 3D captures are provided. No previous candidate output/review supplied."
+}

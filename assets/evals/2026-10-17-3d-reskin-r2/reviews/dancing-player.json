@@ -1,0 +1,160 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Codex GPT-6 independent visual review session /root/review_3d_dance_r2",
+  "independent": true,
+  "spriteSHA256": {
+    "sprite-00": "4c375fa0fa341ff29d5c0088ef97dc179478ac25ff27a96fa7b5a91ee9d90a42",
+    "sprite-01": "4eb6a7feb62a4f1bfede4a11b81f61d8db8520acad6b66b3111bfc8fe6c78edf",
+    "sprite-02": "4289b678de6cbd9b4d00103b0ddc1480c6e1c1c1e94e74e9ae41de438d1fc3a3",
+    "sprite-03": "490e4c457c3939cc71cba2c19d47ec6d3b5ae0443943d99277d37a42db1cb32c",
+    "sprite-04": "4331db57ea0efb6dc93b8a5926bea0d3f9fd322b8df8c5c08d0d3d18646d6e48",
+    "sprite-05": "caf49bdf2a37423f09208c78355c1f7015df707d5f80ab3863f134a2319f470f",
+    "sprite-06": "686f7706eac64aa9020c973adcee50e78f9178179a6f931af29fabca2a468661",
+    "sprite-07": "cb801bb6e3beab1548f89a40928b77bb8f3a2ce687688d313d4ed4c904b2e179",
+    "sprite-08": "765c36f3ce812b1967b6c691e3100244a111062afe1da7f87d0c9f8e5c09e7a2",
+    "sprite-09": "4cac05d111f26db9a22ea3928b22b93196146e7a5f8538e3cfe5236ffc40faaa",
+    "sprite-10": "87153d62bef75ce52f07d998504393873e4c340b8fb3137800ffc9958627dacf",
+    "sprite-11": "2527a12cb25d36d68d365cf6a0364cd6b7b5922e36b3ef2617e6e692edf6db90"
+  },
+  "sourceSHA256": {
+    "source-01.png": "92e43acaf845d19f2ad781d733df8d1b6dc1f7b0b3cfdb3b9468954cc440d7b3"
+  },
+  "resultSHA256": "4fd4c275643ad0ae154d11ead5dca9b2f51ee1969e0bec0c4c03671600e64042",
+  "guideSHA256": "9a65e8aebc0d9619f34ff59449744bec56f789d976a9d588e26476b0099a1531",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The delivered character keeps one top/front oblique view throughout: the top of the hair and boots and the front of the face/tunic remain readable. No visible camera rotation, perspective zoom, or depth-dependent size change occurs as the arms wave. The supplied floor reference remains a screen-aligned square. This is qualitative visual agreement, not proof of exact projection.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/guide.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/sheet.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "All twelve delivered silhouettes fit their frames with visible space around the hair, raised hands, elbows and complete boot soles. No limb is cut by a frame edge; there is no visible detached effect or cast shadow requiring an undeclared extent.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": false,
+      "note": "At the fixed root cross the delivered character is visibly too far toward the front of the calibration square. The cross sits between the upper boot shafts/cuffs, whereas the neutral on-floor reference places its support landmarks nearer the floor center. The delivered heels, shafts and soles are collectively displaced relative to that reference; this judgment uses visible foot anatomy and the floor comparison, not the lowest alpha pixel or toe tip alone.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-standing-comparison.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/neutral-on-floor.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/guide.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback-observations.json"
+      ]
+    },
+    "same-player": {
+      "pass": true,
+      "note": "Brown swept hair, dark eyes, blue V-neck tunic with pale cuffs, brown belt with a gold rectangular buckle, gray trousers and cuffed brown boots remain one recognizable design. The face, limb thickness, palette and shading are consistent enough at native and 2x scale; slight pose-dependent contours do not read as a different player.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/source-01.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html"
+      ]
+    },
+    "dancing-poses": {
+      "pass": true,
+      "note": "The twelve phases provide distinct, readable positions in an alternating raised-forearm wave: one hand approaches the temple while the other extends, then the emphasis crosses to the other side. The legs remain planted and the motion is modest, but it reads as a dance loop. Both arms, rounded hands, legs and boots stay identifiable without a fused or missing limb.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/sheet.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback-observations.json"
+      ]
+    },
+    "design-height": {
+      "pass": false,
+      "note": "The delivered upright anatomy is noticeably larger than the nominal-standing neutral reference when shown at the same frame and floor size: the hair/head mass is broader and higher and the torso-to-boot span is larger. The comparison shows a larger body design, not simply a silhouette made taller by raised arms or a crouch being normalized. Anatomy scale is broadly consistent between delivered phases, but the requested neutral design-height target is not visually retained. No exact standing-height measurement is claimed.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-standing-comparison.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/neutral.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/neutral-on-floor.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/sheet.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png"
+      ]
+    },
+    "contact-stability": {
+      "pass": false,
+      "note": "With the floor square and root cross fixed, the belt, knees, boot cuffs and complete soles move upward together at 4-to-5 and again at 8-to-9. The feet retain the same planted stance rather than making an airborne or stepping pose, so this reads as registration drift. The whole lower body drops back at 12-to-1. The reference sheet shows the intended planted support relation consistently; delivered contact does not remain stable.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-standing-comparison.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/render/sheet.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback-observations.json",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png"
+      ]
+    },
+    "cutout-quality": {
+      "pass": true,
+      "note": "At native and 2x on both light and dark, the delivered hair, pale cuffs, hands and boots have clean, complete edges. I see no calibration-floor patch, large colored spill, internal transparency hole, or clipped shoe. The colored fringe visible when the original source is displayed over transparency is not a visible practical defect in the inspected delivered composites.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/source-01.png"
+      ]
+    },
+    "loop": {
+      "pass": false,
+      "note": "Running 12 fps playback and paused last/first views show an unintended position pop at 12-to-1: the boots, knees, belt and head all jump downward together while the square/root stay fixed. The arm-wave phase itself closes plausibly and there is no comparably obvious size jump; the registration jump still breaks the loop.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback-observations.json",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-standing-comparison.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/processed/frames/frame-11.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/processed/frames/frame-00.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The original generated sheet contains the same twelve painted poses in the same row-major order, and their facial features, hair, cuffs, buckle, trousers and boots visibly match the processed frames. The delivered changes look consistent with the supplied fixed source rectangles and overall downsampling, with no visible replacement limb, invented pose, or per-frame geometry fitting. The source already contains the row-to-row position change. This is a visual provenance comparison; hidden operations cannot be proved absent from pixels alone.",
+      "evidence": [
+        "assets/evals/2026-10-17-3d-reskin-r2/dancing-player/source-01.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-light-1x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-1-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-2-dark-2x.png",
+        "assets/evals/2026-10-17-3d-reskin-r2/review-packets/dancing-player/observed-frames-3-dark-2x.png"
+      ]
+    }
+  }
+}

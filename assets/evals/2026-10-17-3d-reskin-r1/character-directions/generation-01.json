@@ -1,0 +1,19 @@
+{
+  "prompt": "Use case: style-transfer\nAsset type: transparent eight-direction player sprite source sheet.\nInput image 1 is the floor-free rendered 3D pose sheet and the layout edit target. Reskin this complete sheet in place into polished hand-painted RPG game sprites, with rich local color, soft painted highlights, clean readable forms and restrained painted detail. Preserve the existing original adventurer design: short dark brown hair, blue short-sleeved tunic, brown belt with small brass buckle, dark blue trousers, brown boots and warm skin tone. Keep the same identity, outfit, anatomy and material colors in all eight views.\n\nPreserve the complete 1728x1344 transparent canvas and its existing four-column, two-row panel layout. Keep all 64px transparent gutters empty. Each authored panel is 384x640 pixels, corresponding to the same 192x320 game frame at 2x. Panel left edges are x=0,448,896,1344; row top edges are y=0,704. Preserve all eight subjects at their existing positions and sizes. Do not independently center, enlarge, shrink, re-space or rearrange them.\n\nOrder from left to right, top then bottom: north (back), northeast (back-right), east (right profile), southeast (front-right), south (front), southwest (front-left), west (left profile), northwest (back-left). Each is the same neutral relaxed standing pose with arms resting down. Rotate only the subject as in the edit target; preserve the fixed top-down oblique square-grid camera, visible top surfaces, parallel projection and equal scale at every direction. Preserve the head, torso, hand and foot locations and planted foot contact from the input. Each panel's projected floor-center root is local (192,496) at this 2x capture, with a 256x256 calibration cell implied by the separate 3D capture and a nominal crown height of 320 pixels above the root (1.25 cell widths). The calibration floor is already absent from this edit target.\n\nKeep complete heads, hair, hands, clothes and boots inside their existing panels, with transparent empty space between all poses and along every panel boundary. Return only the eight isolated character sprites on a genuinely transparent canvas. No floor, background scene, calibration color, external cast shadow, labels, panel borders, extra objects or watermark. Preserve this whole sheet's aspect ratio and canvas dimensions.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "sourceSHA256": "1b8fed26c6b57c113a0229f8cba82c6d60c8e3c2ffc7a3c12265825f098b989d",
+  "references": [
+    "references/pose-sheet.png"
+  ],
+  "referenceSHA256": {
+    "references/pose-sheet.png": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e"
+  },
+  "referenceRoles": {
+    "references/pose-sheet.png": "floor-free 3D pose sheet; complete layout edit target"
+  },
+  "toolArguments": "tool-input-01.json",
+  "originalBuiltinOutputPath": "/Users/yiouchen/.codex/generated_images/01a148cc-f9b3-7163-b8d7-0909690dbbcb/exec-05f1e0a1-b9dc-46de-8307-721362272d18.png",
+  "toolReturnMetadata": "generation-return-01.json",
+  "freshCallOrdinal": 1
+}

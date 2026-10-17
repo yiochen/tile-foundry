@@ -1,0 +1,263 @@
+{
+  "status": "extraction-rejected",
+  "stage": "authored-panel-isolation",
+  "error": "Art crosses a sheet gutter/outside declared panels (alpha 250); regenerate isolated fixed-layout panels instead of clipping",
+  "source": "source-01.png",
+  "sourceSHA256": "f02aa39b74fb756be4df252d49c0ec92ff1fffcf592f82d9601ad897be2bc3e6",
+  "guide": "render/guide.json",
+  "guideSHA256": "278dc059e0009563fdb11cb6b0e143fc490c8611b6468703cc8de4b5a5596c63",
+  "sourceSize": [
+    1152,
+    1365
+  ],
+  "guideSize": [
+    1728,
+    2048
+  ],
+  "uniformWholeCanvasScaleFromFrozenExtractor": 0.6665715915573303,
+  "sourceEdgeResidualPx": [
+    0.1642897889332744,
+    -0.138619509412365
+  ],
+  "predeclaredMinAlpha": 32,
+  "sourceAlphaMass": 69779309,
+  "removedAlphaMassAtPredeclaredThreshold": 281537,
+  "maximumOutsideAlphaBeforeThreshold": 250,
+  "maximumOutsideAlphaAfterThreshold": 250,
+  "outsideAlphaMassBeforeThreshold": 20926,
+  "outsideAlphaMassAfterThreshold": 9310,
+  "outsideArtBoundsAfterThresholdLTRB": [
+    256,
+    179,
+    260,
+    198
+  ],
+  "outsideNonzeroPixelCountAfterThreshold": 47,
+  "authoredGuideRects": [
+    [
+      0,
+      0,
+      384,
+      640
+    ],
+    [
+      448,
+      0,
+      832,
+      640
+    ],
+    [
+      896,
+      0,
+      1280,
+      640
+    ],
+    [
+      1344,
+      0,
+      1728,
+      640
+    ],
+    [
+      0,
+      704,
+      384,
+      1344
+    ],
+    [
+      448,
+      704,
+      832,
+      1344
+    ],
+    [
+      896,
+      704,
+      1280,
+      1344
+    ],
+    [
+      1344,
+      704,
+      1728,
+      1344
+    ],
+    [
+      0,
+      1408,
+      384,
+      2048
+    ],
+    [
+      448,
+      1408,
+      832,
+      2048
+    ],
+    [
+      896,
+      1408,
+      1280,
+      2048
+    ],
+    [
+      1344,
+      1408,
+      1728,
+      2048
+    ]
+  ],
+  "uniformlyMappedSourceRects": [
+    [
+      0.0,
+      0.0,
+      255.96349115801482,
+      426.6058185966914
+    ],
+    [
+      298.62407301768394,
+      0.0,
+      554.5875641756987,
+      426.6058185966914
+    ],
+    [
+      597.2481460353679,
+      0.0,
+      853.2116371933828,
+      426.6058185966914
+    ],
+    [
+      895.8722190530518,
+      0.0,
+      1151.8357102110667,
+      426.6058185966914
+    ],
+    [
+      0.0,
+      469.2664004563605,
+      255.96349115801482,
+      895.8722190530518
+    ],
+    [
+      298.62407301768394,
+      469.2664004563605,
+      554.5875641756987,
+      895.8722190530518
+    ],
+    [
+      597.2481460353679,
+      469.2664004563605,
+      853.2116371933828,
+      895.8722190530518
+    ],
+    [
+      895.8722190530518,
+      469.2664004563605,
+      1151.8357102110667,
+      895.8722190530518
+    ],
+    [
+      0.0,
+      938.532800912721,
+      255.96349115801482,
+      1365.1386195094124
+    ],
+    [
+      298.62407301768394,
+      938.532800912721,
+      554.5875641756987,
+      1365.1386195094124
+    ],
+    [
+      597.2481460353679,
+      938.532800912721,
+      853.2116371933828,
+      1365.1386195094124
+    ],
+    [
+      895.8722190530518,
+      938.532800912721,
+      1151.8357102110667,
+      1365.1386195094124
+    ]
+  ],
+  "integerSourceEnvelopes": [
+    [
+      0,
+      0,
+      256,
+      427
+    ],
+    [
+      298,
+      0,
+      555,
+      427
+    ],
+    [
+      597,
+      0,
+      854,
+      427
+    ],
+    [
+      895,
+      0,
+      1152,
+      427
+    ],
+    [
+      0,
+      469,
+      256,
+      896
+    ],
+    [
+      298,
+      469,
+      555,
+      896
+    ],
+    [
+      597,
+      469,
+      854,
+      896
+    ],
+    [
+      895,
+      469,
+      1152,
+      896
+    ],
+    [
+      0,
+      938,
+      256,
+      1366
+    ],
+    [
+      298,
+      938,
+      555,
+      1366
+    ],
+    [
+      597,
+      938,
+      854,
+      1366
+    ],
+    [
+      895,
+      938,
+      1152,
+      1366
+    ]
+  ],
+  "deliveredSpriteCount": 0,
+  "adjustmentsApplied": [],
+  "rendererMaskApplied": false,
+  "colorKeyApplied": false,
+  "note": "Diagnostic only. No panel, anchor, scale, mask or alpha-threshold recovery was attempted. No runtime frames were written."
+}

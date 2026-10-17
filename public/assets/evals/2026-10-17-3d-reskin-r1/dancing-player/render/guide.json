@@ -1,0 +1,530 @@
+{
+  "version": 1,
+  "kind": "rendered-3d-sheet",
+  "assetKind": "animation",
+  "workflow": "rigged-3d-projection-reference",
+  "mode": "dance",
+  "size": [
+    1728,
+    2048
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "cellSize": 128,
+  "anchor": [
+    96,
+    248
+  ],
+  "columns": 4,
+  "rows": 3,
+  "gutter": 64,
+  "captureScale": 2,
+  "order": "row-major",
+  "cells": [
+    {
+      "index": 0,
+      "rect": [
+        0,
+        0,
+        384,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        13,
+        88,
+        184,
+        269
+      ],
+      "projectedBounds": [
+        13.429825201167834,
+        87.99999237060531,
+        183.46456253147207,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 1,
+      "rect": [
+        448,
+        0,
+        832,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        23,
+        88,
+        178,
+        269
+      ],
+      "projectedBounds": [
+        23.532783637300557,
+        88.09057545793951,
+        177.45259500333276,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 2,
+      "rect": [
+        896,
+        0,
+        1280,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        33,
+        88,
+        168,
+        269
+      ],
+      "projectedBounds": [
+        33.32436238119227,
+        88.28160252170449,
+        167.70778602142963,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 3,
+      "rect": [
+        1344,
+        0,
+        1728,
+        640
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        34,
+        88,
+        164,
+        269
+      ],
+      "projectedBounds": [
+        34.321211565451904,
+        88.36185215650431,
+        163.97285290625774,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 4,
+      "rect": [
+        0,
+        704,
+        384,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        25,
+        88,
+        170,
+        269
+      ],
+      "projectedBounds": [
+        25.68524784458556,
+        88.28160252170449,
+        169.56857840011725,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 5,
+      "rect": [
+        448,
+        704,
+        832,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        13,
+        88,
+        179,
+        269
+      ],
+      "projectedBounds": [
+        13.614547084382181,
+        88.09057545793951,
+        178.29164943741222,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 6,
+      "rect": [
+        896,
+        704,
+        1280,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        8,
+        88,
+        179,
+        269
+      ],
+      "projectedBounds": [
+        8.535437468527938,
+        87.99999237060531,
+        178.57017479883214,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 7,
+      "rect": [
+        1344,
+        704,
+        1728,
+        1344
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        14,
+        88,
+        169,
+        269
+      ],
+      "projectedBounds": [
+        14.547404996667211,
+        88.09057545793951,
+        168.46721636269942,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 8,
+      "rect": [
+        0,
+        1408,
+        384,
+        2048
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        24,
+        88,
+        159,
+        269
+      ],
+      "projectedBounds": [
+        24.292213978570366,
+        88.28160252170449,
+        158.67563761880774,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 9,
+      "rect": [
+        448,
+        1408,
+        832,
+        2048
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        28,
+        88,
+        158,
+        269
+      ],
+      "projectedBounds": [
+        28.02714709374225,
+        88.36185215650431,
+        157.6787884345481,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 10,
+      "rect": [
+        896,
+        1408,
+        1280,
+        2048
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        22,
+        88,
+        167,
+        269
+      ],
+      "projectedBounds": [
+        22.431421599882718,
+        88.28160252170449,
+        166.31475215541445,
+        268.7999991989134
+      ]
+    },
+    {
+      "index": 11,
+      "rect": [
+        1344,
+        1408,
+        1728,
+        2048
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "floorRect": [
+        64,
+        368,
+        320,
+        624
+      ],
+      "durationMs": 83.33333333333333,
+      "alphaBounds": [
+        13,
+        88,
+        179,
+        269
+      ],
+      "projectedBounds": [
+        13.708350562587789,
+        88.09057545793951,
+        178.3854529156178,
+        268.7999991989134
+      ]
+    }
+  ],
+  "runtimeSheetSize": [
+    864,
+    1024
+  ],
+  "runtimeGutter": 32,
+  "runtimeFloorRect": [
+    32,
+    184,
+    160,
+    312
+  ],
+  "authoredRenders": [
+    {
+      "role": "neutral-standing",
+      "image": "neutral.png"
+    },
+    {
+      "role": "rigged-reference",
+      "image": "sheet.png"
+    },
+    {
+      "role": "floor-registration",
+      "image": "guide.png"
+    },
+    {
+      "role": "neutral-standing-on-floor",
+      "image": "neutral-on-floor.png"
+    }
+  ],
+  "nominalStandingHeight": 160,
+  "elevationPx": 160,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "fps": 12,
+  "projection": "top-down-oblique-square-grid",
+  "projectionFormula": {
+    "screenX": "96 + 128*x",
+    "screenY": "248 + 128*z - 128*y"
+  },
+  "sourcePixelsPerRuntimePixel": 2,
+  "sourceSize": [
+    1728,
+    2048
+  ],
+  "sourceRole": "floor-free rendered 3D color; auxiliary floor reference is separate",
+  "geometryAuthority": "authored 3D camera/model/rig; reskin output requires independent verification",
+  "floorCorners": [
+    {
+      "world": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "screen": [
+        32,
+        183.9999999999998
+      ]
+    },
+    {
+      "world": [
+        0.5,
+        0,
+        -0.5
+      ],
+      "screen": [
+        160,
+        183.9999999999998
+      ]
+    },
+    {
+      "world": [
+        0.5,
+        0,
+        0.5
+      ],
+      "screen": [
+        160,
+        311.99999999999983
+      ]
+    },
+    {
+      "world": [
+        -0.5,
+        0,
+        0.5
+      ],
+      "screen": [
+        32,
+        311.99999999999983
+      ]
+    }
+  ],
+  "neutralProjectedBounds": [
+    50.431999206542976,
+    87.99999237060531,
+    141.56800079345703,
+    268.7999991989134
+  ],
+  "neutralProjectedCrownHeight": 160.0000076293947,
+  "depthPass": {
+    "format": "opaque normalized grayscale over object alpha",
+    "packing": "THREE.BasicDepthPacking",
+    "near": 6,
+    "far": 10
+  },
+  "maskPass": {
+    "format": "opaque grayscale; intensity equals object-color alpha; black is empty"
+  },
+  "fitting": {
+    "perFrame": false,
+    "perDirection": false,
+    "camera": "fixed",
+    "root": "fixed",
+    "modelScale": "fixed"
+  }
+}

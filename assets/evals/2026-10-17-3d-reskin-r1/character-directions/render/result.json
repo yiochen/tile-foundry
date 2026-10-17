@@ -1,0 +1,304 @@
+{
+  "version": 2,
+  "kind": "directions",
+  "workflow": "rigged-3d-reference-capture",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "sprites": [
+    {
+      "id": "directions-00",
+      "index": 0,
+      "image": "frames/frame-00.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "artRect": [
+        45,
+        88,
+        102,
+        170
+      ],
+      "registration": {
+        "method": "authored-3d-camera",
+        "guide": "guide.json",
+        "sourceFrame": 0
+      },
+      "direction": "N"
+    },
+    {
+      "id": "directions-01",
+      "index": 1,
+      "image": "frames/frame-01.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "artRect": [
+        62,
+        88,
+        75,
+        184
+      ],
+      "registration": {
+        "method": "authored-3d-camera",
+        "guide": "guide.json",
+        "sourceFrame": 1
+      },
+      "direction": "NE"
+    },
+    {
+      "id": "directions-02",
+      "index": 2,
+      "image": "frames/frame-02.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "artRect": [
+        78,
+        88,
+        40,
+        185
+      ],
+      "registration": {
+        "method": "authored-3d-camera",
+        "guide": "guide.json",
+        "sourceFrame": 2
+      },
+      "direction": "E"
+    },
+    {
+      "id": "directions-03",
+      "index": 3,
+      "image": "frames/frame-03.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "artRect": [
+        62,
+        88,
+        75,
+        192
+      ],
+      "registration": {
+        "method": "authored-3d-camera",
+        "guide": "guide.json",
+        "sourceFrame": 3
+      },
+      "direction": "SE"
+    },
+    {
+      "id": "directions-04",
+      "index": 4,
+      "image": "frames/frame-04.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "artRect": [
+        45,
+        88,
+        102,
+        181
+      ],
+      "registration": {
+        "method": "authored-3d-camera",
+        "guide": "guide.json",
+        "sourceFrame": 4
+      },
+      "direction": "S"
+    },
+    {
+      "id": "directions-05",
+      "index": 5,
+      "image": "frames/frame-05.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "artRect": [
+        55,
+        88,
+        75,
+        192
+      ],
+      "registration": {
+        "method": "authored-3d-camera",
+        "guide": "guide.json",
+        "sourceFrame": 5
+      },
+      "direction": "SW"
+    },
+    {
+      "id": "directions-06",
+      "index": 6,
+      "image": "frames/frame-06.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "artRect": [
+        74,
+        88,
+        40,
+        185
+      ],
+      "registration": {
+        "method": "authored-3d-camera",
+        "guide": "guide.json",
+        "sourceFrame": 6
+      },
+      "direction": "W"
+    },
+    {
+      "id": "directions-07",
+      "index": 7,
+      "image": "frames/frame-07.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "artRect": [
+        55,
+        88,
+        75,
+        184
+      ],
+      "registration": {
+        "method": "authored-3d-camera",
+        "guide": "guide.json",
+        "sourceFrame": 7
+      },
+      "direction": "NW"
+    }
+  ],
+  "provenance": {
+    "artwork": "procedural Three.js mesh, material and rig",
+    "imageGeneration": false
+  },
+  "noPostCaptureNormalization": true,
+  "visualReviewRequired": "Reskin geometry, identity, motion and style require independent review"
+}

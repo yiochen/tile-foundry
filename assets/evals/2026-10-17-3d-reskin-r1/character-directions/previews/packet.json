@@ -1,0 +1,32 @@
+{
+  "caseId": "character-directions",
+  "request": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions.",
+  "submission": "../submission.json",
+  "result": "../result.json",
+  "source": "../source-01.png",
+  "guide": "../render/guide.json",
+  "control": "../direct3d/result.json",
+  "native": [
+    "ai-reskin-light-native.png",
+    "ai-reskin-dark-native.png",
+    "direct3d-light-native.png",
+    "direct3d-dark-native.png"
+  ],
+  "twiceNative": [
+    "ai-reskin-light-2x.png",
+    "ai-reskin-dark-2x.png",
+    "direct3d-light-2x.png",
+    "direct3d-dark-2x.png"
+  ],
+  "spriteSHA256": {
+    "frame-00": "182cf418d7046eba422ee8bc668e218bf4c97913167e35be57eedf70ce1eeac0",
+    "frame-01": "232e17888a2217709a1574db0ff52e038b1edeb6a57659e13d54e2ac2626c0c7",
+    "frame-02": "42250c5586e004afbc6a6cc425566099f5a983a3b74c6a3ddc5c3e3f6f15282b",
+    "frame-03": "b58b5c21623f0bd71e9ded77a0e5526e982709958d7631b4fb3a95b2dec2e365",
+    "frame-04": "f932a7d047edaea7a1ce73106507d5075ed39b56cbbaeffe5885a0e89412f874",
+    "frame-05": "91010ae758b68a708e89c429f3980b27f5583b7fa351d8359659e82a83c2fa8e",
+    "frame-06": "677f1cd18cc2b56fa9e2998d43580189f7453f70beb5c48fb3d9897edf84f475",
+    "frame-07": "5952c555762a9d2a6e22d441f44394c5db9a68b005022b40adb4d86e96efaca1"
+  },
+  "gradingPerformed": false
+}

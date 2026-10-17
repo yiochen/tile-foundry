@@ -81,8 +81,10 @@ def build_gallery(runs_root, suite_path, public, reports_root, include_archived=
             if submission and status in (None,'not-run'):
                 status = 'ungraded'
             status = status or 'not-run'
+            labels={'processing-only-comparison':'Processing comparison (same source)',
+                    '3d-render-control':'3D render control (no AI reskin)'}
             item = {'id':f'{run_id}:{relative}', 'runId':run_id, 'attempt':order+1,
-                    'assessmentLabel':('Processing comparison (same source)' if record.get('mode')=='processing-only-comparison' else 'Original grading'),
+                    'assessmentLabel':labels.get(record.get('mode'),'Original grading'),
                     'status':status, 'prompt':case['prompt'], 'sources':[], 'sprites':[],
                     'depthPieces':[], 'previews':[], 'automaticChecks':[], 'visualChecks':[]}
             if submission:

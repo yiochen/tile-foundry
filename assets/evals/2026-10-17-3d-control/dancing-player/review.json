@@ -1,0 +1,185 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Codex GPT-6 independent vision review; task /root/review_3d_controls; session 2026-10-17",
+  "independent": true,
+  "spriteSHA256": {
+    "frame-00": "7df850fff140c61034ea36989dc75c90b546ff30e435628b0777866290ef8054",
+    "frame-01": "e6ffce2b0e614ae09b8d9f09a23974e2e563cb1ff915390cee943dcb93166027",
+    "frame-02": "99d6dd70b227d94ed0f4699e784abf79e404ac542b0aaf4d00b5b95cc002fd66",
+    "frame-03": "8e5f05f4bd5b91cd6c8c611b0b0c7a484d958efb578e0719afb90ba4bf4171c8",
+    "frame-04": "b8a2884d3ec929587a467052ef1bc9153e50b40e5ba67eb24ec58da0c27bd290",
+    "frame-05": "0215cda796876e49e769a5f04dd159a4ead650e604883bde720a90d224693c46",
+    "frame-06": "23514390346c85307efb49b8de3c5a802e2f866e6f8d283b497032cc2c83a637",
+    "frame-07": "cb0d498008a575b43759fe561a232762d046c25998e53346667402b509395ebf",
+    "frame-08": "43526451dc69657d890080827ee540e6984aa484d759fc3eb6160f6b74d686ef",
+    "frame-09": "4acb9c8f5b66e35b8faf57c7647f7dabdf39f44313c1ea117a6e480c4ae91240",
+    "frame-10": "fc97e171e2b6719acb98c8c8470cccc98203b1b835d676b90a83ab2b5bb5ccb6",
+    "frame-11": "8a6094f224a1dcf72e9b2657236c62683dd7910c9d210bd674fee4cbee9ca6f2"
+  },
+  "sourceSHA256": {
+    "source-01.png": "367f30c33a988c4f71912731b13d208c73b2776c1ddb51c962a20ed027e4d455"
+  },
+  "resultSHA256": "8039886380e8f6609d2d4c8e306dada59af77d0f38e537528b0928d1ccbc0a59",
+  "guideSHA256": "278dc059e0009563fdb11cb6b0e143fc490c8611b6468703cc8de4b5a5596c63",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "All twelve frames keep the same screen-aligned square floor reference, oblique view of the hair/torso/boot faces, and front-facing camera. Body and boot size remain stable as the arms sweep; no visible camera drift or perspective scale change occurs. This is a qualitative visual judgment, not exact camera verification.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-placement-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-placement-dark.png",
+        "http://127.0.0.1:8773/2026-10-17-3d-control/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/playback-observation.txt"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Every one of the twelve sprites contains the complete head, both sleeve/forearm/hand chains, legs and shoes. The widest horizontal arm extensions in frames 00 and 06 have visible side margin, and the lifted hands remain within the full transparent frame. No limb, shoe tip, effect or attached shadow is visibly cut off.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-2.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The floor reference and stored-root placements put the marker between the paired planted boots at the same place for all twelve frames. The hips, paired shin positions and boot support remain aligned around that center while the upper body moves slightly. Placement was judged from this support structure and the floor reference, not from alpha-box bottoms. This does not prove a hidden root to a pixel.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-placement-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-placement-dark.png",
+        "http://127.0.0.1:8773/2026-10-17-3d-control/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/playback-observation.txt"
+      ]
+    },
+    "same-player": {
+      "pass": true,
+      "note": "The dark hair, small tan face, blue shirt/sleeves, brown belt and gold buckle, dark trousers and brown boots remain consistent in all twelve poses. The face, head volume, torso scale, limb lengths and lighting do not visibly change identity or camera. Arm foreshortening changes with pose without a new limb design.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/neutral.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/sheet.png",
+        "http://127.0.0.1:8773/2026-10-17-3d-control/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/playback-observation.txt"
+      ]
+    },
+    "dancing-poses": {
+      "pass": true,
+      "note": "The twelve distinct snapshots form a readable alternating arm-wave dance: one bent hand rises as the other arm lowers, passes through the broad horizontal pose, and then reverses sides. Both arms, hands and legs remain identifiable throughout the segmented mannequin style; no limb disappears or fuses with another. The choreography is restrained and the legs remain planted, so this establishes a useful arm-wave loop rather than a broad range of footwork or crouching.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-2.png",
+        "http://127.0.0.1:8773/2026-10-17-3d-control/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/playback-observation.txt"
+      ]
+    },
+    "design-height": {
+      "pass": true,
+      "note": "Against the neutral standing reference, head size, torso length, belt level, shins and boots stay stable through all twelve arm poses. The crown remains near the neutral crown-to-root height of about 160px, with small pose/lean changes rather than whole-sprite fitting. Raised/lowered arms change the silhouette width and hand position while anatomy scale remains consistent. This sequence does not exercise deep crouches or airborne poses.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/neutral.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-placement-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-placement-dark.png",
+        "http://127.0.0.1:8773/2026-10-17-3d-control/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/playback-observation.txt"
+      ]
+    },
+    "contact-stability": {
+      "pass": true,
+      "note": "All twelve pairs of boot bases remain planted around the floor-center marker in the contact sheets and actual playback. The leg spacing, sole level and support area do not translate, lift or rescale during the arm wave. The raw floor-reference sequence shows the same support relationship, supporting stable root contact independently of toe-tip or alpha-box alignment; exact hidden sole coordinates are not claimed.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/neutral-on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-placement-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-placement-dark.png",
+        "http://127.0.0.1:8773/2026-10-17-3d-control/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/playback-observation.txt"
+      ]
+    },
+    "cutout-quality": {
+      "pass": true,
+      "note": "At native and 2x on light and dark backgrounds, every frame has clean empty space around the hands, hair, sleeve shapes, legs and complete shoes. No magenta floor residue, pose-guide line, broad color spill, missing shoe corner or new interior hole is visible. Small separations at the mannequin shoulder/joint pieces match the original authored source rather than showing cleanup loss.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/guide.png"
+      ]
+    },
+    "loop": {
+      "pass": true,
+      "note": "The supplied player was run at its displayed 12 fps at native scale on light and 2x on dark. I also selected and compared frame 12 and frame 1, then restarted near frame 11 and observed the live wrap. The raised-side hand returns toward the horizontal pose across 12->1 while the opposite arm continues its sweep; head, torso, belt and boots retain their placement and size. No unintended seam pop or scale jump is apparent. Evidence is short consecutive browser screenshot sequences plus boundary inspection, not a continuous video recording or frame-timing benchmark.",
+      "evidence": [
+        "http://127.0.0.1:8773/2026-10-17-3d-control/review-packets/dancing-player/playback.html",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/playback-observation.txt",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-2.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The original is a floor-free authored 3D color sheet, with a separate magenta-floor registration sheet; no image-model request or reskin is asserted. Each of the twelve processed frames visibly preserves the source pose, silhouette, palette, complete limbs and relative framing at the declared uniform half scale. I found no visible invented replacement detail, per-pose size fitting, or undeclared clipping. This assesses source-to-runtime faithfulness, not AI-reskin success.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/dancing-player/render/guide.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/packet.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-1x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-1.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-light-2x-row-2.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control/review-packets/dancing-player/reviewer-dark-2x-row-2.png"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "prompt": "Use case: style-transfer\nAsset type: registered 12-frame player dancing spritesheet.\nInput image 1 is the complete floor-free 3D-rendered pose sheet and is the layout edit target. Reskin the existing player in place into polished hand-painted game sprites with rich local color, soft painted highlights, subtle cloth and leather texture, and clean readable forms. Keep the same brown-haired, blue-tunic adventurer, blue-gray trousers, belt and brown boots in every pose.\nPreserve the entire 1728x2048 transparent canvas, with exactly four columns and three rows in the existing row-major pose order, frames 0 through 11. Each authored panel is 384x640 pixels, with 64-pixel transparent gutters: panel left edges are 0,448,896,1344 and panel top edges are 0,704,1408. Paint the supplied poses at their existing size and location. Preserve all empty space and gutters. Keep the complete head, hair, hands, arms, legs and boots inside each existing panel with transparent boundary clearance.\nKeep the same fixed square-grid top-down oblique camera, front-facing three-quarter game view, parallel projection, anatomy proportions and body scale. Preserve each supplied pose's head, torso, hands and boots in place, including the planted foot contacts and stationary projected ground root. Each panel represents the same 192x320 runtime frame at 2x capture scale; its local ground root is (192,496) in the supplied panel. Nominal neutral standing height remains 320 supplied-image pixels, equivalent to 160 runtime pixels or 1.25 cell widths on the 128-pixel ground cell. Pose silhouettes may change naturally; do not independently resize or recenter any frame.\nRetain the shown periodic dance sequence, sampled evenly at twelve phases of a one-second loop: the last pose transitions back to the first at the same phase interval. Preserve the existing arm bends and upper-body sway. Keep outfit, face, hairstyle, lighting and feature scale consistent throughout.\nReturn twelve complete isolated sprites on genuine transparent RGBA. No floor, calibration tile, background, external cast shadow, labels, borders, extra poses or extra objects. Preserve the existing canvas proportions, panel layout, pose scale and ground registration.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "sourceSHA256": "92e43acaf845d19f2ad781d733df8d1b6dc1f7b0b3cfdb3b9468954cc440d7b3",
+  "references": [
+    "references/pose-sheet.png"
+  ],
+  "referenceSHA256": {
+    "references/pose-sheet.png": "6b69cf88c1af7c7344fe6c3ea351d6d16753706bca9b86f9716be3df45b103d6"
+  },
+  "referenceRoles": {
+    "references/pose-sheet.png": "floor-free registered 3D pose sheet; layout edit target"
+  },
+  "toolInput": "tool-input-01.json",
+  "untouchedOriginalToolOutput": "/Users/yiouchen/.codex/generated_images/01a148d4-9f66-7cd3-95a3-545c5daa8b38/exec-0f148898-f190-4be5-8bec-4d03f45f2807.png",
+  "generationCalls": 1
+}

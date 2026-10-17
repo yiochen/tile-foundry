@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "recordedAt": "2026-10-17T07:48:26.011361+00:00",
+  "reskinCleanup": {
+    "minAlpha": 32,
+    "scope": "single global source alpha threshold before extraction"
+  },
+  "direct3DCleanup": {
+    "minAlpha": 0,
+    "untouched": true
+  },
+  "frozenGuide": "render/guide.json",
+  "guideSHA256": "9a65e8aebc0d9619f34ff59449744bec56f789d976a9d588e26476b0099a1531",
+  "forbiddenAdjustments": [
+    "panel or guide edits",
+    "root fitting",
+    "per-frame scale",
+    "3D alpha masking",
+    "threshold changes",
+    "post-hoc geometry repair"
+  ],
+  "generationCallsAuthorized": 1
+}

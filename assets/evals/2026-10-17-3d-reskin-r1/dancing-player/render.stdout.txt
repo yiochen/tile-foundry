@@ -1,0 +1,17 @@
+{
+  "output": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/render",
+  "mode": "dance",
+  "frames": 12,
+  "frame": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "neutralProjectedCrownHeight": 160.0000076293947,
+  "source": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/render/sheet.png",
+  "floorSource": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/render/guide.png",
+  "browserErrors": []
+}

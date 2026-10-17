@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "scope": "delivery integrity only; no visual grade",
+  "checks": {
+    "finalResultHashUnchanged": true,
+    "finalSubmissionHashUnchanged": true,
+    "sourceHashMatchesRecipe": true,
+    "referenceHashMatchesRecipe": true,
+    "suppliedReferenceIsCapture": true,
+    "guideHashUnchanged": true,
+    "frames": true,
+    "fps": true,
+    "cleanupPredeclared": true,
+    "noPerPoseFitting": true,
+    "no3DMaskApplied": true,
+    "noColorKeyApplied": true,
+    "oneActualReference": true,
+    "allFrameFilesMatchManifest": true,
+    "portableMainPaths": true
+  },
+  "sourceSize": [
+    1152,
+    1366
+  ],
+  "guideSize": [
+    1728,
+    2048
+  ],
+  "uniformSourceScale": 0.6668568168853394,
+  "sourceEdgeResidualPx": [
+    -0.3285795778665488,
+    0.2772390188249574
+  ],
+  "cleanup": {
+    "minAlpha": 32,
+    "scope": "Single global source-alpha threshold before panel extraction",
+    "removedAlphaMass": 301977,
+    "sourceAlphaMass": 86117965,
+    "sourceRGBChanged": false,
+    "rendererMaskApplied": false,
+    "colorKeyApplied": false
+  },
+  "panelIsolation": {
+    "method": "strict-authored-3d-panels",
+    "gutterGuidePx": 64,
+    "maximumOutsideAlphaBeforeThreshold": 2,
+    "outsideAlphaMassBeforeThreshold": 10147,
+    "maximumOutsideAlphaAfterThreshold": 0,
+    "panelBoundaryAlphaAfterThreshold": 0
+  }
+}

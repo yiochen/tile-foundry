@@ -1,0 +1,390 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "character-directions",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/character-directions."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "1b8fed26c6b57c113a0229f8cba82c6d60c8e3c2ffc7a3c12265825f098b989d"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/pose-sheet.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "directions",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "frame-00",
+        "frame-01",
+        "frame-02",
+        "frame-03",
+        "frame-04",
+        "frame-05",
+        "frame-06",
+        "frame-07"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "eight-directions",
+      "pass": true,
+      "detail": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ]
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "The actual sprites retain a readable overhead view of the hair, shoulders and boot tops, together with readable vertical sides. Cardinal views have screen-horizontal/vertical boot edges and the diagonal views rotate the boots with paired parallel edges. The eight views read as a turning subject under one oblique camera; no visible perspective convergence or depth-dependent shrinking is apparent. This is a qualitative projection judgment, not proof of an exact camera.",
+      "evidence": [
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png",
+        "review-packets/character-directions/neutral-light-1x.png",
+        "review-packets/character-directions/neutral-dark-1x.png",
+        "review-packets/character-directions/neutral-light-2x.png",
+        "review-packets/character-directions/neutral-dark-2x.png",
+        "character-directions/source-01.png",
+        "character-directions/references/pose-sheet.png",
+        "character-directions/render/sheet.png",
+        "character-directions/render/guide.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "All eight full hair silhouettes, hands, legs and boots are present with transparent margin inside the 192x320 delivery frames. The toes in the diagonal views and the wide hands in N/S end naturally rather than at a frame boundary. No detached effect or cast shadow is visible outside the character.",
+      "evidence": [
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png",
+        "review-packets/character-directions/neutral-light-1x.png",
+        "review-packets/character-directions/neutral-dark-1x.png",
+        "review-packets/character-directions/neutral-light-2x.png",
+        "review-packets/character-directions/neutral-dark-2x.png",
+        "character-directions/source-01.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "The registered physical support shifts relative to the fixed floor-center cross. In N, the pair of boot heel/sole regions is visibly below the cross and below the corresponding authored N support; E and SE also sit lower than their authored counterparts. In S, SW, W and NW the support regions move upward relative to the same cross, with S toes only just below it. The change involves the ankle/heel/sole arrangement as a whole, not merely a longer toe. The supplied floor image registers the 3D reference, while the generated source itself has no floor mark that could independently rescue the changed root.",
+      "evidence": [
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png",
+        "review-packets/character-directions/neutral-registered-comparison.png",
+        "review-packets/character-directions/neutral-registration-2x-0.png",
+        "review-packets/character-directions/neutral-registration-2x-1.png",
+        "review-packets/character-directions/neutral-registration-2x-2.png",
+        "review-packets/character-directions/neutral-registration-2x-3.png",
+        "character-directions/render/guide.png",
+        "character-directions/render/neutral-on-floor.png",
+        "character-directions/source-01.png"
+      ]
+    },
+    {
+      "check": "same-character",
+      "pass": true,
+      "detail": "Every actual frame shows the same brown-haired childlike adventurer, blue short-sleeve tunic, dark trousers, brown belt and cuffed brown boots. The gold buckle turns into view at E/SE/S/SW/W and disappears behind the back at N/NE/NW. N is a full back, NE a right rear three-quarter, E a right profile, SE a right front three-quarter, S a full front, SW a left front three-quarter, W a left profile and NW a left rear three-quarter. Hair volume, limb thickness and clothing design remain recognizably consistent despite small drawn variations. The observed root translation is assessed separately.",
+      "evidence": [
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png",
+        "review-packets/character-directions/neutral-light-1x.png",
+        "review-packets/character-directions/neutral-dark-1x.png",
+        "review-packets/character-directions/neutral-light-2x.png",
+        "review-packets/character-directions/neutral-dark-2x.png",
+        "character-directions/source-01.png",
+        "character-directions/references/pose-sheet.png"
+      ]
+    },
+    {
+      "check": "direction-height",
+      "pass": false,
+      "detail": "The requested nominal 160px standing design is visibly exceeded. In the registered comparisons, the delivered front/back and profile characters have a substantially larger head and greater crown-to-physical-support span than the supplied neutral standing model, even allowing the legitimate toe extension and the separately observed root translation. The actual crowns are above the reference crown line throughout, and the lower row is visibly farther above that line than the upper row. This does not establish an exact per-direction pixel discrepancy: the generated source has no independently marked physical root. It does establish a noticeable standing-height mismatch with the supplied 160px design target; a within-4px consistency claim is not supported by the imagery.",
+      "evidence": [
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png",
+        "review-packets/character-directions/neutral-registered-comparison.png",
+        "review-packets/character-directions/neutral-registration-2x-0.png",
+        "review-packets/character-directions/neutral-registration-2x-1.png",
+        "review-packets/character-directions/neutral-registration-2x-2.png",
+        "review-packets/character-directions/neutral-registration-2x-3.png",
+        "character-directions/render/neutral.png",
+        "character-directions/render/neutral-on-floor.png",
+        "character-directions/render/guide.png",
+        "character-directions/source-01.png"
+      ]
+    },
+    {
+      "check": "direction-contact",
+      "pass": false,
+      "detail": "The independent floor/reference comparison shows inconsistent support placement across directions. The N/E/SE boot soles sit lower in the floor square than their authored supports, while S/SW/W/NW move upward. In particular, E and W have comparable sideways boots but different vertical support placement relative to the fixed cross; N and S likewise change the ankle/sole position beyond the expected reversal of toe direction. These are standing poses with both feet supporting the body, so the visible shift cannot be explained by an airborne pose. The exact hidden underside contact center remains uncertain, but the directional displacement is visible without using the bottommost toe pixel as the root.",
+      "evidence": [
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png",
+        "review-packets/character-directions/neutral-registered-comparison.png",
+        "review-packets/character-directions/neutral-registration-2x-0.png",
+        "review-packets/character-directions/neutral-registration-2x-1.png",
+        "review-packets/character-directions/neutral-registration-2x-2.png",
+        "review-packets/character-directions/neutral-registration-2x-3.png",
+        "character-directions/render/guide.png",
+        "character-directions/render/neutral-on-floor.png",
+        "character-directions/render/sheet.png"
+      ]
+    },
+    {
+      "check": "cutout",
+      "pass": true,
+      "detail": "At native scale and 2x on light and dark backgrounds, no magenta calibration square, pose-guide strokes or floor patch remains in any delivered sprite. Fine partially transparent edge pixels are visible beside a few hands and boots on the light 2x view, but they do not form retained floor or guide artwork.",
+      "evidence": [
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png",
+        "review-packets/character-directions/neutral-light-1x.png",
+        "review-packets/character-directions/neutral-dark-1x.png",
+        "review-packets/character-directions/neutral-light-2x.png",
+        "review-packets/character-directions/neutral-dark-2x.png",
+        "review-packets/character-directions/neutral-lower-details-light-2x.png",
+        "review-packets/character-directions/neutral-lower-details-dark-2x.png",
+        "character-directions/render/guide.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The processed eight sprites visibly preserve the corresponding generated source poses and painting details: the same hair whorls, tunic highlights and folds, belt/buckle visibility, hands and boot facets appear in the same eight positions. The source already contains the standing orientations and the row-dependent placement; the delivery does not introduce replacement anatomy or a newly fitted silhouette. The packet declares one common uniform scale and translation per source panel plus low-alpha cleanup, consistent with the visual comparison. This is visual provenance evidence only, not a forensic proof of every operation.",
+      "evidence": [
+        "character-directions/source-01.png",
+        "character-directions/processed/frames/frame-00.png",
+        "character-directions/processed/frames/frame-01.png",
+        "character-directions/processed/frames/frame-02.png",
+        "character-directions/processed/frames/frame-03.png",
+        "character-directions/processed/frames/frame-04.png",
+        "character-directions/processed/frames/frame-05.png",
+        "character-directions/processed/frames/frame-06.png",
+        "character-directions/processed/frames/frame-07.png",
+        "review-packets/character-directions/neutral-light-1x.png",
+        "review-packets/character-directions/neutral-dark-1x.png",
+        "review-packets/character-directions/neutral-light-2x.png",
+        "review-packets/character-directions/neutral-dark-2x.png"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "frame-00-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-01-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-02-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-03-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-04-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-05-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-06-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-07-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "upright-bounds",
+      "detail": {
+        "alphaHeights": [
+          208,
+          224,
+          223,
+          229,
+          213,
+          227,
+          224,
+          225
+        ],
+        "note": "Pose and toe length change bounds; judge anatomy scale and support visually."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "Codex independent vision reviewer /root/review_3d_directions, 2026-10-17; inspected original PNGs and review-only native/2x composites",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

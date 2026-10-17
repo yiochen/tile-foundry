@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/scripts/extract_registered_sheet.py", line 274, in <module>
+    main()
+    ~~~~^^
+  File "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/scripts/extract_registered_sheet.py", line 266, in main
+    result = extract(args.source, args.guide, args.output, args.kind, args.min_alpha)
+  File "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/scripts/extract_registered_sheet.py", line 159, in extract
+    raise ValueError("Uniformly mapped guide panel exceeds source; no crop or offset recovery")
+ValueError: Uniformly mapped guide panel exceeds source; no crop or offset recovery

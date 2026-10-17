@@ -1,0 +1,26 @@
+{
+  "renderEngine": "Playwright Chromium",
+  "captures": [
+    {
+      "viewport": "desktop",
+      "size": {
+        "width": 1280,
+        "height": 1000
+      },
+      "imageCount": 16,
+      "horizontalOverflow": false,
+      "pageHeight": 2092
+    },
+    {
+      "viewport": "mobile",
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "imageCount": 16,
+      "horizontalOverflow": false,
+      "pageHeight": 7179
+    }
+  ],
+  "errors": []
+}

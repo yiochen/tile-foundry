@@ -1,0 +1,6 @@
+{
+  "output_hint": "Generated images are saved to /Users/yiouchen/.codex/generated_images/01a148d4-9f66-7cd3-95a3-545c5daa8b38 as /Users/yiouchen/.codex/generated_images/01a148d4-9f66-7cd3-95a3-545c5daa8b38/exec-0f148898-f190-4be5-8bec-4d03f45f2807.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "outputImagePreservedAs": "source-01.png",
+  "imagePayloadFormat": "data:image/png;base64",
+  "note": "The actual returned PNG bytes are preserved in source-01.png; base64 is not duplicated in this metadata file."
+}

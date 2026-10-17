@@ -1,0 +1,94 @@
+{
+  "purpose": "Pre-generation rig authoring comparison; no AI output fitting",
+  "originalRun": "2026-10-17-3d-reskin-r1",
+  "revisedRun": "2026-10-17-3d-reskin-r2",
+  "changes": "Periodic elbow-flexion curves only; same camera, anatomy, model scale, feet and root. No transformed AI outputs.",
+  "neutralRGBAUnchanged": true,
+  "minimumProjectedSideClearancePx": 28.243897079520735,
+  "frames": [
+    {
+      "frame": 0,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    },
+    {
+      "frame": 1,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    },
+    {
+      "frame": 2,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    },
+    {
+      "frame": 3,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    },
+    {
+      "frame": 4,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    },
+    {
+      "frame": 5,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    },
+    {
+      "frame": 6,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    },
+    {
+      "frame": 7,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    },
+    {
+      "frame": 8,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    },
+    {
+      "frame": 9,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    },
+    {
+      "frame": 10,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    },
+    {
+      "frame": 11,
+      "feetUnchanged": true,
+      "rootUnchanged": true,
+      "modelMatrixUnchanged": true,
+      "lowerBodyPixelsY200To320Unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "workflow": "rigged-3d-reference-capture",
+  "mode": "directions",
+  "frame": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "supersample": 2,
+  "fps": null,
+  "renderEngine": "Three.js WebGLRenderer via Playwright Chromium",
+  "threeRevision": "0.186.1",
+  "editableScene": "scene.json",
+  "rig": "scene/rig.json",
+  "poses": "scene/poses.json",
+  "sourceCode": "scene/render_3d_scene.js",
+  "sourceCodeSHA256": "6aac3d16d7bb629710ff903cbd0127ef4d61e97ca8a8db4ee676ba940039ec68",
+  "runnerSHA256": "05ed024aa043ad9a2ad0f46d81d7c94aa00307fbc9629150e6b14f49b24ba88b",
+  "sourceSheets": {
+    "floorFree": "sheet.png",
+    "floorRegistration": "guide.png"
+  },
+  "perFrameFit": false,
+  "rootFit": false,
+  "crop": false,
+  "backgroundRemoval": false,
+  "imageGenerationCalls": 0,
+  "limitations": [
+    "The 3D capture is registered by construction; an image-model reskin can alter its silhouette, root, pose or panel layout.",
+    "The procedural adventurer is a reference design, not an imported production character.",
+    "Depth grayscale uses near=6, far=10; the mask is exact color-pass alpha, not a guessed color key."
+  ]
+}

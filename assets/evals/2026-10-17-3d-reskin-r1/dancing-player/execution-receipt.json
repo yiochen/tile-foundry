@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "caseId": "dancing-player",
+  "route": "3d-capture-to-sheet-to-ai-reskin",
+  "imageGenerationLimit": 1,
+  "predeclaredProcessing": {
+    "candidateMinAlpha": 32,
+    "direct3DMinAlpha": 0,
+    "perPoseFitting": false,
+    "rootFitting": false,
+    "rendererMaskAppliedToAI": false
+  },
+  "calls": [
+    {
+      "type": "renderer",
+      "argv": [
+        "node",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/scripts/render_3d.mjs",
+        "dance",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/render",
+        "--scale",
+        "2",
+        "--runtime-root",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry"
+      ],
+      "startedAt": "2026-10-17T07:39:35.664890+00:00",
+      "returncode": 0,
+      "completedAt": "2026-10-17T07:39:38.499316+00:00",
+      "stdout": "render.stdout.txt",
+      "stderr": "render.stderr.txt"
+    },
+    {
+      "type": "image_generation",
+      "tool": "image_gen.imagegen",
+      "arguments": "imagegen-input-01.json",
+      "startedAt": "2026-10-17T07:40:09.649035+00:00",
+      "status": "completed",
+      "completedAt": "2026-10-17T07:41:12.687644+00:00",
+      "source": "source-01.png",
+      "sourceSHA256": "f02aa39b74fb756be4df252d49c0ec92ff1fffcf592f82d9601ad897be2bc3e6",
+      "originalToolOutputPath": "/Users/yiouchen/.codex/generated_images/01a148cc-e100-7620-85fc-4745b285f42e/exec-57ff74cd-eebd-4b20-b052-944a704202d5.png"
+    },
+    {
+      "type": "extraction",
+      "role": "ai-candidate",
+      "argv": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/scripts/extract_registered_sheet.py",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/processed",
+        "--kind",
+        "animation",
+        "--min-alpha",
+        "32"
+      ],
+      "startedAt": "2026-10-17T07:41:12.688862+00:00",
+      "returncode": 1,
+      "completedAt": "2026-10-17T07:41:12.766314+00:00",
+      "stdout": "processed.stdout.txt",
+      "stderr": "processed.stderr.txt"
+    },
+    {
+      "type": "extraction",
+      "role": "direct-3d-control",
+      "argv": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/skill-snapshot/scripts/extract_registered_sheet.py",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/render/sheet.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/guide.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-reskin-r1/dancing-player/control",
+        "--kind",
+        "animation",
+        "--min-alpha",
+        "0"
+      ],
+      "startedAt": "2026-10-17T07:41:12.766465+00:00",
+      "returncode": 0,
+      "completedAt": "2026-10-17T07:41:12.917457+00:00",
+      "stdout": "control.stdout.txt",
+      "stderr": "control.stderr.txt"
+    },
+    {
+      "type": "preview-builder",
+      "module": "frozen scripts/review_playback.py",
+      "output": "previews/control-playback.html",
+      "inputs": "control/result.json and its complete frame PNGs",
+      "completedAt": "2026-10-17T07:41:46.806704+00:00"
+    },
+    {
+      "type": "browser-preview-capture",
+      "argv": [
+        "node",
+        "capture-previews.mjs"
+      ],
+      "executions": 2,
+      "returncodes": [
+        0,
+        0
+      ],
+      "outputs": "previews/",
+      "browserReceipt": "previews/browser-receipt.json",
+      "reasonForSecondCapture": "Removed blank embedded iframe from the preview index; playback remains available through its direct link. No artwork or registration changed."
+    }
+  ],
+  "inputInspection": {
+    "images": [
+      "render/sheet.png",
+      "render/guide.png",
+      "render/neutral-on-floor.png"
+    ],
+    "tool": "view_image",
+    "performedBeforeGeneration": true,
+    "notes": "Inspected complete 4\u00d73 row-major floor-free arm-sway poses and separate floor registration. No capture, roots or panels adjusted."
+  },
+  "imageGenerationCalls": 1,
+  "outcome": {
+    "capture": "completed",
+    "imageGeneration": "completed",
+    "candidateExtraction": "failed",
+    "direct3DControlExtraction": "completed",
+    "candidateSpritesProduced": 0,
+    "controlSpritesProduced": 12,
+    "generationCalls": 1,
+    "independentReviewPerformed": false
+  },
+  "screenshotInspection": {
+    "tool": "view_image",
+    "images": [
+      "previews/source-dark-1x.png",
+      "previews/source-light-1x.png",
+      "previews/source-light-2x.png",
+      "previews/control-light-1x-frame-00.png",
+      "previews/control-dark-2x-frame-11.png",
+      "previews/mobile.png"
+    ],
+    "purpose": "Inspect actual ungraded source and control review previews including mobile"
+  },
+  "completedAt": "2026-10-17T07:43:01.705748+00:00",
+  "integrityChecks": "integrity-check.json",
+  "toolResponse": "imagegen-response-01.json"
+}

@@ -1,0 +1,13 @@
+Independent playback observation: Codex GPT-6, /root/review_3d_controls, 2026-10-17.
+Policy: llm-visual-v1. No earlier verdicts or other run results were inspected.
+URL: http://127.0.0.1:8773/2026-10-17-3d-control/review-packets/dancing-player/playback.html
+
+Inspected actual browser canvas playback with the visible 12 fps indicator:
+- Native (Scale 1), light background: running frames 7, 8, 9, 10 captured as a short consecutive screenshot sequence; additional running native frame 9 inspected initially.
+- Scale 2, dark background: running frames 3 through 8 captured in a short consecutive screenshot sequence.
+- Boundary: paused frame 12 (zero-based 11) and frame 1 (zero-based 0) inspected at Scale 2 on dark. Restarted from frame 11; live state reached 12/12 and the subsequent screenshots showed 1/12 through 6/12 after the wrap.
+- All twelve individual delivered PNGs separately inspected at native and 2x on both light and dark backgrounds, with full frames retained; source, floor registration and neutral standing references were also visually inspected.
+
+Observed a restrained alternating arm-wave loop with fixed, planted feet and a small upper-body lean. The body, belt, boots, head scale and root-relative support remain stable. Frame 12 to 1 continues toward the horizontal arm pose without an apparent placement or scale pop. The scope of movement is limited; these poses do not test footwork, jumping or deep crouching.
+
+Limitations: Browser screenshots sample actual playback rather than supplying a continuous video recording. Some repeated screenshot frames result from screenshot capture being faster than the 83.33ms animation step. This is a qualitative motion/loop assessment, not a frame-timing benchmark or proof of pixel-exact geometry. Joint-piece separations belong to the source mannequin construction. The control source is an authored 3D color render; no AI generation/reskin quality was assessed.

@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "visualGrade": null,
+  "observations": [
+    {
+      "label": "reskin",
+      "framesObservedDuringPlayback": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "11",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "uniqueFramesObserved": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "11"
+      ],
+      "browserErrors": [],
+      "storedFps": 12,
+      "screenshotScales": [
+        1,
+        2
+      ],
+      "mobileViewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "label": "direct3d",
+      "framesObservedDuringPlayback": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "0",
+        "1",
+        "2",
+        "3",
+        "5",
+        "6"
+      ],
+      "uniqueFramesObserved": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "browserErrors": [],
+      "storedFps": 12,
+      "screenshotScales": [
+        1,
+        2
+      ],
+      "mobileViewport": [
+        390,
+        844
+      ]
+    }
+  ]
+}

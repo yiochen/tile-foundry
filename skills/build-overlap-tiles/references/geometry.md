@@ -154,6 +154,14 @@ center anchor. Keep every referenced image inside the output asset bundle.
 
 ## Processing limits
 
+For rendered 3D references, `extract_registered_sheet.py` transfers the authored
+layout using one uniform whole-canvas scale. It keeps the recorded ground root
+and rejects opaque gutters or frame clipping; it never measures or fits feet.
+Each sprite records `registration.method: "authored-3d-projection"` with source
+and guide rectangles. Retain editable model/rig/pose/camera sources and separate
+floor/mask/depth captures. Read [3D capture and reskin](three-dimensional.md).
+This method registers frames; it does not certify an AI reskin's anatomy/contact.
+
 Bundled `tile_tools.py` supports uniform normalization, explicit chroma removal,
 known isolated panels, atlas packing, coverage checks and generic validation.
 `process-on-floor` measures one visible calibration floor per panel. Its

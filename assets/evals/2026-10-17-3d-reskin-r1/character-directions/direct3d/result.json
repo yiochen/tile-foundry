@@ -1,0 +1,1397 @@
+{
+  "version": 2,
+  "kind": "directions",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "sprites": [
+    {
+      "id": "frame-00",
+      "index": 0,
+      "image": "frames/frame-00.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        45,
+        88,
+        102,
+        170
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          0,
+          0,
+          384,
+          640
+        ],
+        "sourceRect": [
+          0.0,
+          0.0,
+          384.0,
+          640.0
+        ],
+        "sourceEnvelope": [
+          0,
+          0,
+          384,
+          640
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "N",
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160
+    },
+    {
+      "id": "frame-01",
+      "index": 1,
+      "image": "frames/frame-01.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        62,
+        88,
+        75,
+        184
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          448,
+          0,
+          832,
+          640
+        ],
+        "sourceRect": [
+          448.0,
+          0.0,
+          832.0,
+          640.0
+        ],
+        "sourceEnvelope": [
+          448,
+          0,
+          832,
+          640
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          448.0,
+          0.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "NE",
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160
+    },
+    {
+      "id": "frame-02",
+      "index": 2,
+      "image": "frames/frame-02.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        77,
+        88,
+        42,
+        185
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          896,
+          0,
+          1280,
+          640
+        ],
+        "sourceRect": [
+          896.0,
+          0.0,
+          1280.0,
+          640.0
+        ],
+        "sourceEnvelope": [
+          896,
+          0,
+          1280,
+          640
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          896.0,
+          0.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "E",
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160
+    },
+    {
+      "id": "frame-03",
+      "index": 3,
+      "image": "frames/frame-03.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        62,
+        88,
+        76,
+        193
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          1344,
+          0,
+          1728,
+          640
+        ],
+        "sourceRect": [
+          1344.0,
+          0.0,
+          1728.0,
+          640.0
+        ],
+        "sourceEnvelope": [
+          1344,
+          0,
+          1728,
+          640
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          1344.0,
+          0.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "SE",
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160
+    },
+    {
+      "id": "frame-04",
+      "index": 4,
+      "image": "frames/frame-04.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        45,
+        88,
+        102,
+        181
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          0,
+          704,
+          384,
+          1344
+        ],
+        "sourceRect": [
+          0.0,
+          704.0,
+          384.0,
+          1344.0
+        ],
+        "sourceEnvelope": [
+          0,
+          704,
+          384,
+          1344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          0.0,
+          704.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "S",
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160
+    },
+    {
+      "id": "frame-05",
+      "index": 5,
+      "image": "frames/frame-05.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        54,
+        88,
+        76,
+        193
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          448,
+          704,
+          832,
+          1344
+        ],
+        "sourceRect": [
+          448.0,
+          704.0,
+          832.0,
+          1344.0
+        ],
+        "sourceEnvelope": [
+          448,
+          704,
+          832,
+          1344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          448.0,
+          704.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "SW",
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160
+    },
+    {
+      "id": "frame-06",
+      "index": 6,
+      "image": "frames/frame-06.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        74,
+        88,
+        41,
+        185
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          896,
+          704,
+          1280,
+          1344
+        ],
+        "sourceRect": [
+          896.0,
+          704.0,
+          1280.0,
+          1344.0
+        ],
+        "sourceEnvelope": [
+          896,
+          704,
+          1280,
+          1344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          896.0,
+          704.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "W",
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160
+    },
+    {
+      "id": "frame-07",
+      "index": 7,
+      "image": "frames/frame-07.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        55,
+        88,
+        75,
+        184
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          1344,
+          704,
+          1728,
+          1344
+        ],
+        "sourceRect": [
+          1344.0,
+          704.0,
+          1728.0,
+          1344.0
+        ],
+        "sourceEnvelope": [
+          1344,
+          704,
+          1728,
+          1344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          1344.0,
+          704.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "NW",
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 160
+    }
+  ],
+  "frames": [
+    {
+      "id": "frame-00",
+      "index": 0,
+      "image": "frames/frame-00.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        45,
+        88,
+        102,
+        170
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          0,
+          0,
+          384,
+          640
+        ],
+        "sourceRect": [
+          0.0,
+          0.0,
+          384.0,
+          640.0
+        ],
+        "sourceEnvelope": [
+          0,
+          0,
+          384,
+          640
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "N"
+    },
+    {
+      "id": "frame-01",
+      "index": 1,
+      "image": "frames/frame-01.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        62,
+        88,
+        75,
+        184
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          448,
+          0,
+          832,
+          640
+        ],
+        "sourceRect": [
+          448.0,
+          0.0,
+          832.0,
+          640.0
+        ],
+        "sourceEnvelope": [
+          448,
+          0,
+          832,
+          640
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          448.0,
+          0.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "NE"
+    },
+    {
+      "id": "frame-02",
+      "index": 2,
+      "image": "frames/frame-02.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        77,
+        88,
+        42,
+        185
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          896,
+          0,
+          1280,
+          640
+        ],
+        "sourceRect": [
+          896.0,
+          0.0,
+          1280.0,
+          640.0
+        ],
+        "sourceEnvelope": [
+          896,
+          0,
+          1280,
+          640
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          896.0,
+          0.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "E"
+    },
+    {
+      "id": "frame-03",
+      "index": 3,
+      "image": "frames/frame-03.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        62,
+        88,
+        76,
+        193
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          1344,
+          0,
+          1728,
+          640
+        ],
+        "sourceRect": [
+          1344.0,
+          0.0,
+          1728.0,
+          640.0
+        ],
+        "sourceEnvelope": [
+          1344,
+          0,
+          1728,
+          640
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          1344.0,
+          0.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "SE"
+    },
+    {
+      "id": "frame-04",
+      "index": 4,
+      "image": "frames/frame-04.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        45,
+        88,
+        102,
+        181
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          0,
+          704,
+          384,
+          1344
+        ],
+        "sourceRect": [
+          0.0,
+          704.0,
+          384.0,
+          1344.0
+        ],
+        "sourceEnvelope": [
+          0,
+          704,
+          384,
+          1344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          0.0,
+          704.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "S"
+    },
+    {
+      "id": "frame-05",
+      "index": 5,
+      "image": "frames/frame-05.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        54,
+        88,
+        76,
+        193
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          448,
+          704,
+          832,
+          1344
+        ],
+        "sourceRect": [
+          448.0,
+          704.0,
+          832.0,
+          1344.0
+        ],
+        "sourceEnvelope": [
+          448,
+          704,
+          832,
+          1344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          448.0,
+          704.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "SW"
+    },
+    {
+      "id": "frame-06",
+      "index": 6,
+      "image": "frames/frame-06.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        74,
+        88,
+        41,
+        185
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          896,
+          704,
+          1280,
+          1344
+        ],
+        "sourceRect": [
+          896.0,
+          704.0,
+          1280.0,
+          1344.0
+        ],
+        "sourceEnvelope": [
+          896,
+          704,
+          1280,
+          1344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          896.0,
+          704.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "W"
+    },
+    {
+      "id": "frame-07",
+      "index": 7,
+      "image": "frames/frame-07.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        55,
+        88,
+        75,
+        184
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../render/guide.json",
+        "guideSHA256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          1344,
+          704,
+          1728,
+          1344
+        ],
+        "sourceRect": [
+          1344.0,
+          704.0,
+          1728.0,
+          1344.0
+        ],
+        "sourceEnvelope": [
+          1344,
+          704,
+          1728,
+          1344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.5,
+          0.5
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          1344.0,
+          704.0
+        ],
+        "anchorIn": [
+          192.0,
+          496.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "direction": "NW"
+    }
+  ],
+  "sourceSize": [
+    1728,
+    1344
+  ],
+  "guideSize": [
+    1728,
+    1344
+  ],
+  "uniformSourceScale": 1.0,
+  "captureScale": 2,
+  "sourceRects": [
+    [
+      0.0,
+      0.0,
+      384.0,
+      640.0
+    ],
+    [
+      448.0,
+      0.0,
+      832.0,
+      640.0
+    ],
+    [
+      896.0,
+      0.0,
+      1280.0,
+      640.0
+    ],
+    [
+      1344.0,
+      0.0,
+      1728.0,
+      640.0
+    ],
+    [
+      0.0,
+      704.0,
+      384.0,
+      1344.0
+    ],
+    [
+      448.0,
+      704.0,
+      832.0,
+      1344.0
+    ],
+    [
+      896.0,
+      704.0,
+      1280.0,
+      1344.0
+    ],
+    [
+      1344.0,
+      704.0,
+      1728.0,
+      1344.0
+    ]
+  ],
+  "guideRects": [
+    [
+      0,
+      0,
+      384,
+      640
+    ],
+    [
+      448,
+      0,
+      832,
+      640
+    ],
+    [
+      896,
+      0,
+      1280,
+      640
+    ],
+    [
+      1344,
+      0,
+      1728,
+      640
+    ],
+    [
+      0,
+      704,
+      384,
+      1344
+    ],
+    [
+      448,
+      704,
+      832,
+      1344
+    ],
+    [
+      896,
+      704,
+      1280,
+      1344
+    ],
+    [
+      1344,
+      704,
+      1728,
+      1344
+    ]
+  ],
+  "normalization": {
+    "wholeCanvasUniformScale": 1.0,
+    "wholeCanvasOffset": [
+      0,
+      0
+    ],
+    "integerRoundingTolerancePx": 1,
+    "sourceEdgeResidualPx": [
+      0.0,
+      0.0
+    ],
+    "equalAxisScale": true,
+    "perPoseFitting": false
+  },
+  "cleanup": {
+    "minAlpha": 0,
+    "scope": "Single global source-alpha threshold before panel extraction",
+    "removedAlphaMass": 0,
+    "sourceAlphaMass": 62366109,
+    "sourceRGBChanged": false,
+    "rendererMaskApplied": false,
+    "colorKeyApplied": false
+  },
+  "panelIsolation": {
+    "method": "strict-authored-3d-panels",
+    "gutterGuidePx": 64,
+    "maximumOutsideAlphaBeforeThreshold": 0,
+    "outsideAlphaMassBeforeThreshold": 0,
+    "maximumOutsideAlphaAfterThreshold": 0,
+    "panelBoundaryAlphaAfterThreshold": 0
+  },
+  "registration": {
+    "method": "authored-3d-projection",
+    "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review"
+  },
+  "geometryDeclaration": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+  "sheet": {
+    "image": "sheet.png",
+    "columns": 4,
+    "rows": 2,
+    "frame": [
+      192,
+      320
+    ],
+    "spacing": 0
+  },
+  "provenance": {
+    "source": {
+      "path": "../render/sheet.png",
+      "sha256": "0ff15e1569fefc8a7235a685c08aaddb334c1c79714d49d3b6dd83bde1587a2e"
+    },
+    "guide": {
+      "path": "../render/guide.json",
+      "sha256": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9"
+    },
+    "processor": {
+      "path": "extract_registered_sheet.py",
+      "sha256": "895474dce8a2c28a6b1acca5ab775d1d4f033f92deede6a4ec13fde9e28f6be7"
+    }
+  }
+}

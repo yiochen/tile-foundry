@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Overlap Tiles"
+  short_description: "Generate oblique game tiles and anchored 12 fps sprites"
+  default_prompt: "Use $build-overlap-tiles to generate square-grid top-down oblique game assets with fixed ground anchors. Save sources, prompts, references, geometry, and 12 fps animation artifacts in the requested output directory."

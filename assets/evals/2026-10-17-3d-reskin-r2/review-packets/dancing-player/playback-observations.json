@@ -1,0 +1,61 @@
+{
+  "reviewer": "Codex GPT-6 independent visual review session /root/review_3d_dance_r2",
+  "policy": "llm-visual-v1",
+  "url": "http://127.0.0.1:8773/2026-10-17-3d-reskin-r2/review-packets/dancing-player/playback.html",
+  "method": "Inspected the live browser canvas while the supplied page was running at its declared 12 fps, using successive actual screenshots, and separately paused frame 12 and frame 1 at native/light and 2x/dark. All twelve delivered PNGs were also inspected at native and 2x on both backgrounds in neutral grids.",
+  "nativeLightRunningFrameLabelsReadBeforeScreenshot": [
+    10,
+    11,
+    11,
+    12,
+    1,
+    1,
+    2,
+    2,
+    3,
+    4,
+    4,
+    5,
+    6,
+    7,
+    7
+  ],
+  "twoXDarkRunningFrameLabelsReadBeforeScreenshot": [
+    5,
+    5,
+    6,
+    6,
+    7,
+    8,
+    9,
+    9,
+    10,
+    11,
+    11,
+    12,
+    12,
+    1,
+    2,
+    2,
+    3,
+    4,
+    4,
+    5,
+    6,
+    7,
+    7,
+    8
+  ],
+  "observations": [
+    "Alternating arm wave is legible, with both feet visibly planted.",
+    "The whole lower body shifts upward at sheet-row boundaries 4-to-5 and 8-to-9.",
+    "At 12-to-1 the body drops back relative to the fixed square and magenta root.",
+    "Paused 12 and 1 confirm the lower-body and belt position change; the effect is not only a moving arm or toe contour.",
+    "No large visual scale jump or camera change was apparent in running playback."
+  ],
+  "limitations": [
+    "Frame-label reads preceded screenshot capture and a screenshot may show the next phase; the label sequence is an observation log, not a timing benchmark.",
+    "No exact pixel contact landmark or nominal anatomy height is claimed. The review is based on visible shoes, limb/torso landmarks, floor placement and neutral-reference comparison.",
+    "Browser screenshots were inspected in the review session; this record and the neutral PNG grids are saved evidence."
+  ]
+}
