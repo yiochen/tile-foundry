@@ -9,7 +9,7 @@
     "preview": "vite preview --host 0.0.0.0",
     "verify": "node tools/verify-playground.mjs",
     "eval:skill": "python tools/run_skill_evals.py",
-    "assets": "python tools/build_demo.py && python tools/build_experiments.py && python tools/build_character_experiments.py && python tools/build_skill_gallery.py",
+    "assets": "python tools/build_demo.py && python tools/build_experiments.py && python tools/build_character_experiments.py && python tools/build_skill_gallery.py && python tools/build_blender_gallery.py",
     "test": "python -m unittest discover -s tests"
   },
   "keywords": [],

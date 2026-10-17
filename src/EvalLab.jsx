@@ -108,7 +108,7 @@ function Diagnostics({checks=[]}) {
   </details>;
 }
 
-function SpritePlayer({sprites, kind, showAnchors, guide, rawSequence}) {
+export function SpritePlayer({sprites, kind, showAnchors, guide, rawSequence}) {
   const raw=Boolean(rawSequence);
   const [frame,setFrame] = useState(0), [playing,setPlaying] = useState(false), [compose,setCompose] = useState(kind==='layered'&&!raw);
   const [showGuide,setShowGuide] = useState(()=>new URLSearchParams(window.location.search).get('overlay')==='svg');

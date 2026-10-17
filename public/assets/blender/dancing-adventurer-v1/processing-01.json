@@ -1,0 +1,9 @@
+{
+  "status": "rejected",
+  "processor": "extract_registered_sheet.py",
+  "minAlpha": 32,
+  "error": "Art crosses a sheet gutter/outside declared panels (alpha 255); regenerate isolated fixed-layout panels instead of clipping",
+  "runtimeFramesExported": 0,
+  "sourcePreserved": true,
+  "visualObservation": "Characters enlarged and shifted relative to the authored panel layout; a painted appearance alone does not establish registration."
+}

@@ -23,6 +23,13 @@ poses. A generic engine export must apply each asset's stored frame/anchor and
 support cells. Simple one-root Y sorting cannot establish correct arch or
 interlocking multi-cell occlusion; author depth pieces and inspect passage views.
 
+The default projection remains `top-down-oblique-square-grid`. A separately
+authored character camera may use `character-orthographic` with finite 4×4
+`camera.worldMatrix` and `camera.projectionMatrix`, orthographic type, elevation,
+pixel aspect and world units per logical cell. Preserve the camera record in the
+processed result. Its ground anchor still places it on the logical grid; never
+relabel foreshortened character art as square-grid geometry.
+
 ## Output destination
 
 Resolve all generated files under the requested `OUTPUT_DIR`. Paths in a recipe,

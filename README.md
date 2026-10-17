@@ -5,7 +5,8 @@ square-grid game art in top-down oblique projection. Full sprites have different
 overlap rows behind them; their logical cells stay the same size.
 
 [Open the playground](https://tile-foundry-yiochen.netlify.app/) ·
-[View all eval results](https://tile-foundry-yiochen.netlify.app/?view=evals)
+[View all eval results](https://tile-foundry-yiochen.netlify.app/?view=evals) ·
+[Inspect the Blender character](https://tile-foundry-yiochen.netlify.app/?view=blender)
 
 ![Village lane preview](docs/preview-scene.png)
 
@@ -42,6 +43,8 @@ required to run or rebuild the demo.
 | `assets/source-config.json` | Reviewed cleanup, art-width, and optional source-anchor settings |
 | `assets/prompts/generation.json` | Actual prompts used for the initial four assets |
 | `skills/build-overlap-tiles/` | Agent skill with reusable prompts and acceptance checks |
+| `assets/blender/dancing-adventurer-v2/` | Editable rigged Blender character, 12 fps captures, style-only paint-over and MCP validation |
+| `tools/blender/` | Reproducible model authoring, rig checks, capture, GLB export and packaging |
 | `public/assets/village.tmj` | Editable Tiled village map with image-collection object tiles |
 | `public/assets/stress.tmj` | Dense overlap test map |
 | `public/assets/contact.tmj` | Fully packed solid blocks to expose gaps and taper |
@@ -85,6 +88,9 @@ subcommand for input options. Output paths are explicit; originals are not repla
 - Scene / Sprite cuts / Atlas views; village, dense overlap, and solid-contact presets.
 - In Scene, **All blocks** switches every coral block to any of the five experiments. SVG + AI material adds material/height controls; the selection follows preset changes and survives scene JSON export/import and Tiled export.
 - Grid, ground anchors, and authored collision overlays.
+- Blender character: 24-frame playback/scrubbing, interactive 3D inspection,
+  camera/style comparisons, native scene downloads and before/after MCP screenshots.
+  See [the experiment and reproduction commands](docs/blender-adventurer-2026-10-17.md).
 - Compare trimmed-atlas rendering with individual PNG rendering.
 - Inspect, place, and erase by logical cell; undo up to 30 edits.
 - Import/export scene JSON and export the actual preview PNG.

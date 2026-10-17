@@ -1,0 +1,110 @@
+{
+  "blender": "5.2.2 LTS",
+  "fps": 12,
+  "frames": 24,
+  "durationSeconds": 2,
+  "frameSize": [
+    192,
+    320
+  ],
+  "captureSize": [
+    768,
+    1280
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "actualProjectedRoot": [
+    96.0,
+    248.00012111663818
+  ],
+  "logicalFootprint": [
+    128,
+    128
+  ],
+  "projection": {
+    "type": "orthographic",
+    "elevationDegrees": 35,
+    "orthoScale": 5.050000190734863,
+    "shiftY": 0.2750000059604645,
+    "pixelAspect": [
+      1,
+      1
+    ]
+  },
+  "rig": {
+    "bones": 22,
+    "root": [
+      0,
+      0,
+      0
+    ],
+    "feet": "world-space leg IK and fixed sole transform constraints"
+  },
+  "camera": {
+    "type": "orthographic",
+    "elevationDegrees": 35,
+    "worldMatrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.5735762715339661,
+        -0.8191521763801575,
+        -8.191520690917969
+      ],
+      [
+        0.0,
+        0.8191521763801575,
+        0.5735762715339661,
+        5.735764503479004
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "projectionMatrix": [
+      [
+        0.6600660085678101,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.39603957533836365,
+        0.0,
+        -0.5499999523162842
+      ],
+      [
+        0.0,
+        0.0,
+        -0.0020001998636871576,
+        -1.0001999139785767
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "worldUnitsPerLogicalCell": 2.0200000762939454,
+    "pixelAspect": [
+      1,
+      1
+    ]
+  },
+  "meshes": 135,
+  "vertices": 31697,
+  "aiCalls": 0,
+  "status": "authored 3D prototype, not a scored eval or final AI reskin"
+}

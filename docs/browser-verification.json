@@ -43,6 +43,10 @@
       "ok": true
     },
     {
+      "check": "Blender prototype: 24-frame scrub and loop, fixed root, animated GLB, MCP evidence, desktop and mobile",
+      "ok": true
+    },
+    {
       "check": "390px mobile viewport",
       "ok": true
     },

@@ -53,6 +53,12 @@ point. Preserve layers and declared elevation without applying the offset twice.
 
 ## Identity, direction and motion
 
+For a finished 3D character, identify the input as the designed model and request
+an art-style/surface finish only. Preserve anatomy, hair silhouette, facial feature
+positions, clothing shape and boot size; do not fill empty panel space. Improve
+painted shading, texture and color separation. Revise weak shapes in the editable
+model first. Keep shape-redesign trials explicitly separate.
+
 One recognizable design with constant anatomy scale, proportions, palette,
 lighting and camera. Rotate/pose only the subject. Neutral standing directions
 retain the same nominal height and root; action silhouettes may change bounds.

@@ -1,0 +1,18 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Paint over this exact finished 3D character render with a polished hand-painted RPG sprite surface treatment. This is a precise material/style edit, not a character redesign or a new composition. Replace the smooth plastic shading with painted cloth, leather and hair shading, subtle brush texture, saturated royal-blue fabric, warm brown leather and chestnut hair, and restrained upper-left highlights. Keep his modeled face, layered hair, ivory tunic trim, belt, buckle, pouches, hands and boots.\n\nPreserve the original 768 x 1280 canvas and all the transparent space. Keep the character at exactly the supplied size and pixel position: crown around y=408, boot soles around y=1044, torso centered at x=384. Do not enlarge the character to fill the transparent headroom. Keep each existing contour, head/body/boot proportions, pose, facial feature position, camera, foot position and silhouette. Change only the painted surface appearance inside the existing silhouette; no reshaping, recentering, extra geometry or pose changes.\n\nReturn the complete original composition with genuine transparency. No floor, cast shadow, backdrop, border, text, effects or extra object. Keep all hands and boots complete.\n",
+  "transparentBackground": true,
+  "references": [
+    "hero.png"
+  ],
+  "referenceRoles": {
+    "hero.png": "finished corrected Blender pose; material/style edit target"
+  },
+  "referenceSHA256": {
+    "hero.png": "ff4185f4cd021029ea4472c475d3f979242799dee71ae314504622aeda08fd7e"
+  },
+  "sourceSHA256": "ffc12c6dbac13b2e2e2f8966a3b40758b99fb1c4eb4f157986d4dbd9095d129c",
+  "imagegenCall": 3,
+  "shapePolicy": "art-style/surface refinement only",
+  "scope": "One static proof of style refinement, not a generated animation or scored eval"
+}

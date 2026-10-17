@@ -3,6 +3,7 @@ import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {createServer} from 'vite';
 import {chromium} from 'playwright';
 import {verifyEvalGallery} from './verify-eval-gallery.mjs';
+import {verifyBlender} from './verify-blender.mjs';
 
 const root=new URL('../',import.meta.url).pathname;
 const server=await createServer({root,server:{host:'127.0.0.1',port:0},logLevel:'error'});
@@ -10,7 +11,7 @@ await server.listen();
 const port=server.httpServer.address().port;
 const browser=await chromium.launch({headless:true,
   ...(process.env.CHROMIUM_EXECUTABLE?{executablePath:process.env.CHROMIUM_EXECUTABLE}:{}),
-  args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu']});
+  args:['--no-sandbox','--disable-dev-shm-usage','--disable-gpu','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const errors=[], results=[];
 await mkdir(root+'docs',{recursive:true});
 try{
@@ -214,6 +215,7 @@ try{
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,'Character 320px overflow');
   results.push({check:'character lab at 390px and 320px',ok:true});
   results.push(await verifyEvalGallery(page,root,port));
+  results.push(await verifyBlender(page,root,port));
   await page.goto(`http://127.0.0.1:${port}`,{waitUntil:'networkidle'});
   await page.setViewportSize({width:390,height:844});
   await page.reload({waitUntil:'networkidle'});

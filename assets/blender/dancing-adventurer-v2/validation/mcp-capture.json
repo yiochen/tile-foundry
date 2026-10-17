@@ -1,0 +1,48 @@
+{
+  "server": "mcp-for-blender",
+  "serverVersion": "2.1.9",
+  "addonProtocol": 13,
+  "blender": "5.2.2 LTS",
+  "tool": "look",
+  "validation": "Actual MCP tool results, not final imagegen artwork",
+  "captures": [
+    {
+      "path": "mcp-after-angles.png",
+      "sha256": "20b7ad6a6fed1878fc0cc310fb81e07d2b7f4e01fe7799b9d1ea21b94fe37e25",
+      "arguments": {
+        "mode": "angles",
+        "target": [
+          "Adventurer \u2022 root fixed at ground center"
+        ],
+        "shading": "solid",
+        "max_size": 1536,
+        "views": [
+          "front",
+          "right",
+          "three_quarter"
+        ]
+      }
+    },
+    {
+      "path": "mcp-animation-frames.png",
+      "sha256": "3eceb97744477424c249e39460f0dc098b8614c9262114bb7db24c48e3c2bf2a",
+      "arguments": {
+        "mode": "frames",
+        "target": [
+          "Adventurer \u2022 root fixed at ground center"
+        ],
+        "shading": "solid",
+        "max_size": 1536,
+        "frames": [
+          1,
+          5,
+          9,
+          13,
+          17,
+          21
+        ],
+        "view": "front"
+      }
+    }
+  ]
+}

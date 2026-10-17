@@ -1,0 +1,2014 @@
+{
+  "bones": 22,
+  "model": "blender/dancing-adventurer-v2/dancing-adventurer.glb",
+  "comparisons": [
+    {
+      "title": "Previous AI design target",
+      "image": "blender/dancing-adventurer-v2/design-reference.png",
+      "note": "The blue-tunic adventurer that guided the design. Original 192 \u00d7 320 frame; its body is larger than the authored nominal scale."
+    },
+    {
+      "title": "Corrected Blender character",
+      "image": "blender/dancing-adventurer-v2/hero.png",
+      "note": "35\u00b0 ordinary orthographic camera. Outward elbows, aligned wrists, continuous weighted joints and fixed soles. No imagegen."
+    },
+    {
+      "title": "Style-only paint-over \u00b7 corrected pose",
+      "image": "blender/dancing-adventurer-v2/reskin-single/frames/frame-00.png",
+      "note": "A fresh single-frame imagegen surface edit of the corrected rig. Uniform complete-frame sampling; no silhouette fitting."
+    },
+    {
+      "title": "Square-grid camera comparison",
+      "image": "blender/dancing-adventurer-v2/grid-projection.png",
+      "note": "Same corrected model and world scale: 45\u00b0 orthographic camera with \u221a2 vertical projection stretch. Rounded forms elongate."
+    }
+  ],
+  "controlFrames": [
+    {
+      "id": "frame-00",
+      "index": 0,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-00.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        42,
+        99,
+        108,
+        164
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          24,
+          24,
+          216,
+          344
+        ],
+        "sourceRect": [
+          24.0,
+          24.0,
+          216.0,
+          344.0
+        ],
+        "sourceEnvelope": [
+          24,
+          24,
+          216,
+          344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          24.0,
+          24.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-01",
+      "index": 1,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-01.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        43,
+        99,
+        107,
+        164
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          240,
+          24,
+          432,
+          344
+        ],
+        "sourceRect": [
+          240.0,
+          24.0,
+          432.0,
+          344.0
+        ],
+        "sourceEnvelope": [
+          240,
+          24,
+          432,
+          344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          240.0,
+          24.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-02",
+      "index": 2,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-02.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        43,
+        100,
+        108,
+        163
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          456,
+          24,
+          648,
+          344
+        ],
+        "sourceRect": [
+          456.0,
+          24.0,
+          648.0,
+          344.0
+        ],
+        "sourceEnvelope": [
+          456,
+          24,
+          648,
+          344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          456.0,
+          24.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-03",
+      "index": 3,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-03.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        44,
+        101,
+        107,
+        162
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          672,
+          24,
+          864,
+          344
+        ],
+        "sourceRect": [
+          672.0,
+          24.0,
+          864.0,
+          344.0
+        ],
+        "sourceEnvelope": [
+          672,
+          24,
+          864,
+          344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          672.0,
+          24.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-04",
+      "index": 4,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-04.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        45,
+        101,
+        106,
+        162
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          888,
+          24,
+          1080,
+          344
+        ],
+        "sourceRect": [
+          888.0,
+          24.0,
+          1080.0,
+          344.0
+        ],
+        "sourceEnvelope": [
+          888,
+          24,
+          1080,
+          344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          888.0,
+          24.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-05",
+      "index": 5,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-05.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        45,
+        102,
+        106,
+        161
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          1104,
+          24,
+          1296,
+          344
+        ],
+        "sourceRect": [
+          1104.0,
+          24.0,
+          1296.0,
+          344.0
+        ],
+        "sourceEnvelope": [
+          1104,
+          24,
+          1296,
+          344
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          1104.0,
+          24.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-06",
+      "index": 6,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-06.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        45,
+        102,
+        106,
+        161
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          24,
+          368,
+          216,
+          688
+        ],
+        "sourceRect": [
+          24.0,
+          368.0,
+          216.0,
+          688.0
+        ],
+        "sourceEnvelope": [
+          24,
+          368,
+          216,
+          688
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          24.0,
+          368.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-07",
+      "index": 7,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-07.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        45,
+        102,
+        105,
+        161
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          240,
+          368,
+          432,
+          688
+        ],
+        "sourceRect": [
+          240.0,
+          368.0,
+          432.0,
+          688.0
+        ],
+        "sourceEnvelope": [
+          240,
+          368,
+          432,
+          688
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          240.0,
+          368.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-08",
+      "index": 8,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-08.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        45,
+        101,
+        105,
+        162
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          456,
+          368,
+          648,
+          688
+        ],
+        "sourceRect": [
+          456.0,
+          368.0,
+          648.0,
+          688.0
+        ],
+        "sourceEnvelope": [
+          456,
+          368,
+          648,
+          688
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          456.0,
+          368.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-09",
+      "index": 9,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-09.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        44,
+        100,
+        106,
+        163
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          672,
+          368,
+          864,
+          688
+        ],
+        "sourceRect": [
+          672.0,
+          368.0,
+          864.0,
+          688.0
+        ],
+        "sourceEnvelope": [
+          672,
+          368,
+          864,
+          688
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          672.0,
+          368.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-10",
+      "index": 10,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-10.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        44,
+        99,
+        106,
+        164
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          888,
+          368,
+          1080,
+          688
+        ],
+        "sourceRect": [
+          888.0,
+          368.0,
+          1080.0,
+          688.0
+        ],
+        "sourceEnvelope": [
+          888,
+          368,
+          1080,
+          688
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          888.0,
+          368.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-11",
+      "index": 11,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-11.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        43,
+        99,
+        107,
+        164
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          1104,
+          368,
+          1296,
+          688
+        ],
+        "sourceRect": [
+          1104.0,
+          368.0,
+          1296.0,
+          688.0
+        ],
+        "sourceEnvelope": [
+          1104,
+          368,
+          1296,
+          688
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          1104.0,
+          368.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-12",
+      "index": 12,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-12.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        43,
+        99,
+        106,
+        164
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          24,
+          712,
+          216,
+          1032
+        ],
+        "sourceRect": [
+          24.0,
+          712.0,
+          216.0,
+          1032.0
+        ],
+        "sourceEnvelope": [
+          24,
+          712,
+          216,
+          1032
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          24.0,
+          712.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-13",
+      "index": 13,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-13.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        42,
+        100,
+        107,
+        163
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          240,
+          712,
+          432,
+          1032
+        ],
+        "sourceRect": [
+          240.0,
+          712.0,
+          432.0,
+          1032.0
+        ],
+        "sourceEnvelope": [
+          240,
+          712,
+          432,
+          1032
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          240.0,
+          712.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-14",
+      "index": 14,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-14.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        42,
+        101,
+        106,
+        162
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          456,
+          712,
+          648,
+          1032
+        ],
+        "sourceRect": [
+          456.0,
+          712.0,
+          648.0,
+          1032.0
+        ],
+        "sourceEnvelope": [
+          456,
+          712,
+          648,
+          1032
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          456.0,
+          712.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-15",
+      "index": 15,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-15.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        42,
+        102,
+        106,
+        161
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          672,
+          712,
+          864,
+          1032
+        ],
+        "sourceRect": [
+          672.0,
+          712.0,
+          864.0,
+          1032.0
+        ],
+        "sourceEnvelope": [
+          672,
+          712,
+          864,
+          1032
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          672.0,
+          712.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-16",
+      "index": 16,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-16.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        42,
+        103,
+        105,
+        160
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          888,
+          712,
+          1080,
+          1032
+        ],
+        "sourceRect": [
+          888.0,
+          712.0,
+          1080.0,
+          1032.0
+        ],
+        "sourceEnvelope": [
+          888,
+          712,
+          1080,
+          1032
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          888.0,
+          712.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-17",
+      "index": 17,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-17.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        42,
+        103,
+        105,
+        160
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          1104,
+          712,
+          1296,
+          1032
+        ],
+        "sourceRect": [
+          1104.0,
+          712.0,
+          1296.0,
+          1032.0
+        ],
+        "sourceEnvelope": [
+          1104,
+          712,
+          1296,
+          1032
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          1104.0,
+          712.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-18",
+      "index": 18,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-18.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        41,
+        103,
+        106,
+        160
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          24,
+          1056,
+          216,
+          1376
+        ],
+        "sourceRect": [
+          24.0,
+          1056.0,
+          216.0,
+          1376.0
+        ],
+        "sourceEnvelope": [
+          24,
+          1056,
+          216,
+          1376
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          24.0,
+          1056.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-19",
+      "index": 19,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-19.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        41,
+        103,
+        106,
+        160
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          240,
+          1056,
+          432,
+          1376
+        ],
+        "sourceRect": [
+          240.0,
+          1056.0,
+          432.0,
+          1376.0
+        ],
+        "sourceEnvelope": [
+          240,
+          1056,
+          432,
+          1376
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          240.0,
+          1056.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-20",
+      "index": 20,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-20.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        41,
+        102,
+        106,
+        161
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          456,
+          1056,
+          648,
+          1376
+        ],
+        "sourceRect": [
+          456.0,
+          1056.0,
+          648.0,
+          1376.0
+        ],
+        "sourceEnvelope": [
+          456,
+          1056,
+          648,
+          1376
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          456.0,
+          1056.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-21",
+      "index": 21,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-21.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        41,
+        101,
+        107,
+        162
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          672,
+          1056,
+          864,
+          1376
+        ],
+        "sourceRect": [
+          672.0,
+          1056.0,
+          864.0,
+          1376.0
+        ],
+        "sourceEnvelope": [
+          672,
+          1056,
+          864,
+          1376
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          672.0,
+          1056.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-22",
+      "index": 22,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-22.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        41,
+        100,
+        108,
+        163
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          888,
+          1056,
+          1080,
+          1376
+        ],
+        "sourceRect": [
+          888.0,
+          1056.0,
+          1080.0,
+          1376.0
+        ],
+        "sourceEnvelope": [
+          888,
+          1056,
+          1080,
+          1376
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          888.0,
+          1056.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    },
+    {
+      "id": "frame-23",
+      "index": 23,
+      "image": "blender/dancing-adventurer-v2/control/frames/frame-23.png",
+      "size": [
+        192,
+        320
+      ],
+      "anchor": [
+        96,
+        248
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        42,
+        99,
+        107,
+        164
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guide.json",
+        "guideSHA256": "1cc128e85706e49d698c4170afb28f968865c3861ac91b790ef8df215e014b3a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          1104,
+          1056,
+          1296,
+          1376
+        ],
+        "sourceRect": [
+          1104.0,
+          1056.0,
+          1296.0,
+          1376.0
+        ],
+        "sourceEnvelope": [
+          1104,
+          1056,
+          1296,
+          1376
+        ]
+      },
+      "normalization": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          1104.0,
+          1056.0
+        ],
+        "anchorIn": [
+          96.0,
+          248.0
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Exact known integer panel; no resampling"
+      },
+      "durationMs": 83.33333333333333,
+      "role": "player",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0
+    }
+  ],
+  "reskinFrames": [],
+  "reskinSource": "blender/dancing-adventurer-v1/source-01.png",
+  "reskinNote": "The corrected pose\u2019s single-frame paint-over is compared above. An earlier 24-pose atlas trial, made before the arm repair, improved the painted appearance but enlarged characters and shifted rows. Opaque art crossed panel gutters, so its animation export was rejected. It is retained below as a failed layout experiment.",
+  "processingNote": "One uniform whole-canvas scale and a global alpha threshold of 32/255. No silhouette mask, color key, per-pose fitting or clipping. The earlier atlas was rejected for opaque art outside authored panels. Single-frame edits are sampled as whole registered frames; successful extraction does not certify geometry.",
+  "prompt": "Use case: style-transfer.\nEdit target: the supplied 1320 x 1400 transparent PNG, a 6-column x 4-row atlas containing 24 complete, individually registered dancing poses of ONE finished Blender adventurer. Playback order is row-major, left-to-right then top-to-bottom. This is already the designed character, not a crude blockout that needs redesign.\n\nApply an art-style and surface finish pass only: polished hand-painted three-quarter RPG game sprite, saturated royal-blue woven tunic with ivory collar/cuffs/hem, chestnut layered hair, warm peach skin, hazel eyes, brown leather belt/pouches/boots, small warm brass buckle. Replace the plastic render appearance with painted material shading, controlled brush texture, richer color separation, restrained upper-left highlights and clear small-scale readability. Keep one consistent finished paint treatment across every pose.\n\nPreserve the authored design and every pose exactly: same head size and facial feature placement, same layered hair silhouette, same body proportions, same hand shapes, same tailored clothing shape, same boot dimensions, same joint positions, same camera and facing. Do not reshape or enlarge the character or any body part. Do not fill empty panel space, recenter a pose or change its scale. Treat the supplied outlines and support positions as fixed. Improve the surface art, not the anatomy or silhouette.\n\nKeep the complete original 1320 x 1400 canvas and 6 x 4 layout. Every panel is 192 x 320 pixels, separated by 24 transparent pixels, with 24 transparent pixels around the outer sheet. Panel top-lefts are x=24,240,456,672,888,1104 and y=24,368,712,1056. Preserve these positions, transparent margins, and the original character placement within each panel. Both boot soles must stay in their exact supplied positions throughout the sequence; do not shift a row or progressively raise/lower poses. Preserve all 24 poses, including their small differences. Never merge or duplicate panels.\n\nReturn only the full edited transparent sprite atlas, with genuine alpha and fully transparent space between/around the characters. No floor tile, cast shadow, text, numbers, grid, frame borders, prop, backdrop or extra character. Keep all hair, hands and boots complete and inside their original panels.\n",
+  "singlePrompt": "Paint over this exact finished 3D character render with a polished hand-painted RPG sprite surface treatment. This is a precise material/style edit, not a character redesign or a new composition. Replace the smooth plastic shading with painted cloth, leather and hair shading, subtle brush texture, saturated royal-blue fabric, warm brown leather and chestnut hair, and restrained upper-left highlights. Keep his modeled face, layered hair, ivory tunic trim, belt, buckle, pouches, hands and boots.\n\nPreserve the original 768 x 1280 canvas and all the transparent space. Keep the character at exactly the supplied size and pixel position: crown around y=408, boot soles around y=1044, torso centered at x=384. Do not enlarge the character to fill the transparent headroom. Keep each existing contour, head/body/boot proportions, pose, facial feature position, camera, foot position and silhouette. Change only the painted surface appearance inside the existing silhouette; no reshaping, recentering, extra geometry or pose changes.\n\nReturn the complete original composition with genuine transparency. No floor, cast shadow, backdrop, border, text, effects or extra object. Keep all hands and boots complete.\n",
+  "validationImages": [
+    {
+      "image": "blender/dancing-adventurer-v1/validation/mcp-before-angles.png",
+      "label": "Before repair \u00b7 front, side and three-quarter"
+    },
+    {
+      "image": "blender/dancing-adventurer-v2/validation/mcp-after-angles.png",
+      "label": "After repair \u00b7 same three views"
+    },
+    {
+      "image": "blender/dancing-adventurer-v2/validation/mcp-animation-frames.png",
+      "label": "After repair \u00b7 animation frames 1, 5, 9, 13, 17, 21"
+    }
+  ],
+  "downloads": [
+    {
+      "path": "blender/dancing-adventurer-v2/dancing-adventurer.blend",
+      "label": "Editable corrected Blender scene"
+    },
+    {
+      "path": "blender/dancing-adventurer-v2/dancing-adventurer.glb",
+      "label": "Corrected animated GLB"
+    },
+    {
+      "path": "blender/dancing-adventurer-v2/control/sheet.png",
+      "label": "Corrected 3D spritesheet"
+    },
+    {
+      "path": "blender/dancing-adventurer-v2/control/result.json",
+      "label": "Frame and anchor metadata"
+    },
+    {
+      "path": "blender/dancing-adventurer-v2/validation/rig-checks.json",
+      "label": "Rig validation"
+    },
+    {
+      "path": "blender/dancing-adventurer-v2/checks.json",
+      "label": "3D registration checks"
+    },
+    {
+      "path": "blender/dancing-adventurer-v1/source-01.png",
+      "label": "Earlier AI atlas \u00b7 before arm fix"
+    },
+    {
+      "path": "blender/dancing-adventurer-v1/generation-01.json",
+      "label": "Earlier atlas recipe"
+    },
+    {
+      "path": "blender/dancing-adventurer-v1/source-02.png",
+      "label": "Earlier single-frame paint-over \u00b7 before arm fix"
+    },
+    {
+      "path": "blender/dancing-adventurer-v2/source-01.png",
+      "label": "Current unchanged AI paint-over"
+    },
+    {
+      "path": "blender/dancing-adventurer-v2/generation-01.json",
+      "label": "Current paint-over recipe"
+    }
+  ]
+}

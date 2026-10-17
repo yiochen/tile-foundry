@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "kind": "rendered-3d-sheet",
+  "assetKind": "object",
+  "size": [
+    768,
+    1280
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "cellSize": 128,
+  "anchor": [
+    96,
+    248
+  ],
+  "captureScale": 4,
+  "gutter": 0,
+  "columns": 1,
+  "rows": 1,
+  "cells": [
+    {
+      "index": 0,
+      "rect": [
+        0,
+        0,
+        768,
+        1280
+      ]
+    }
+  ],
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "elevationPx": 0,
+  "groundAnchorAlignment": "center",
+  "projection": "character-orthographic",
+  "camera": {
+    "type": "orthographic",
+    "elevationDegrees": 35,
+    "worldMatrix": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.5735762715339661,
+        -0.8191521763801575,
+        -8.191520690917969
+      ],
+      [
+        0.0,
+        0.8191521763801575,
+        0.5735762715339661,
+        5.735764503479004
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "projectionMatrix": [
+      [
+        0.6600660085678101,
+        0.0,
+        0.0,
+        -0.0
+      ],
+      [
+        0.0,
+        0.39603957533836365,
+        0.0,
+        -0.5499999523162842
+      ],
+      [
+        0.0,
+        0.0,
+        -0.0020001998636871576,
+        -1.0001999139785767
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "worldUnitsPerLogicalCell": 2.0200000762939454,
+    "pixelAspect": [
+      1,
+      1
+    ]
+  },
+  "captureProcessing": "Uniform whole-frame 4:1 LANCZOS from retained Cycles PNGs; no crop or pose fitting"
+}

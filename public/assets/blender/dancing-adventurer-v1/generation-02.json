@@ -1,0 +1,17 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Paint over this exact finished 3D character render with a polished hand-painted RPG sprite surface treatment. This is a precise material/style edit, not a character redesign or a new composition. Replace the smooth plastic shading with painted cloth, leather and hair shading, subtle brush texture, saturated royal-blue fabric, warm brown leather and chestnut hair, and restrained upper-left highlights. Keep his modeled face, layered hair, ivory tunic trim, belt, buckle, pouches, hands and boots.\n\nPreserve the original 768 x 1280 canvas and all the transparent space. Keep the character at exactly the supplied size and pixel position: crown around y=408, boot soles around y=1044, torso centered at x=384. Do not enlarge the character to fill the transparent headroom. Keep each existing contour, head/body/boot proportions, pose, facial feature position, camera, foot position and silhouette. Change only the painted surface appearance inside the existing silhouette; no reshaping, recentering, extra geometry or pose changes.\n\nReturn the complete original composition with genuine transparency. No floor, cast shadow, backdrop, border, text, effects or extra object. Keep all hands and boots complete.\n",
+  "transparentBackground": true,
+  "references": [
+    "hero.png"
+  ],
+  "referenceRoles": {
+    "hero.png": "single finished 3D pose, earlier rig before arm correction; edit target"
+  },
+  "referenceSHA256": {
+    "hero.png": "5e1f5357d6b03abbb7e275e11a8c169410da5a7fb35faa3e7855920de98961ec"
+  },
+  "sourceSHA256": "d8b8e8f8aa8dda998853bf8b5c65b87e93af816f039d57d8f4fea3b9c1d0f791",
+  "imagegenCall": 2,
+  "shapePolicy": "art-style/surface refinement only"
+}

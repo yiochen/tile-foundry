@@ -105,8 +105,19 @@ def _validate_guide(guide, kind):
     elevation = guide.get("elevationPx", 0)
     if not _finite(elevation) or elevation < 0:
         raise ValueError("elevationPx must be an authored nonnegative height")
-    if guide.get("projection", "top-down-oblique-square-grid") != "top-down-oblique-square-grid":
+    projection = guide.get("projection", "top-down-oblique-square-grid")
+    if projection not in ("top-down-oblique-square-grid", "character-orthographic"):
         raise ValueError("Unknown projection profile")
+    if projection == "character-orthographic":
+        camera = guide.get("camera", {})
+        if camera.get("type") != "orthographic":
+            raise ValueError("Character projection requires an authored orthographic camera")
+        for name in ("worldMatrix", "projectionMatrix"):
+            matrix = camera.get(name)
+            if (not isinstance(matrix, list) or len(matrix) != 4 or
+                    any(not isinstance(row, list) or len(row) != 4 or
+                        any(not _finite(v) for v in row) for row in matrix)):
+                raise ValueError("Character camera requires finite 4x4 worldMatrix and projectionMatrix")
     if guide.get("groundAnchorAlignment", "center") != "center":
         raise ValueError("The authored 3D guide must use a center ground anchor")
     return size, frame, cell_size, anchor, capture_scale, kind, rects, occupied, elevation
@@ -235,7 +246,7 @@ def extract(source_path, guide_path, output_directory, kind=None, min_alpha=0):
     cleanup = {"minAlpha": min_alpha, "scope": "Single global source-alpha threshold before panel extraction",
                "removedAlphaMass": removed, "sourceAlphaMass": original_mass,
                "sourceRGBChanged": False, "rendererMaskApplied": False, "colorKeyApplied": False}
-    result = {"version": 2, "kind": kind, "projection": "top-down-oblique-square-grid", "cellSize": cell_size,
+    result = {"version": 2, "kind": kind, "projection": guide.get("projection", "top-down-oblique-square-grid"), "cellSize": cell_size,
               "groundAnchorAlignment": "center", "sprites": sprites, "frames": frames,
               "sourceSize": list(source.size), "guideSize": size,
               "uniformSourceScale": scale, "captureScale": capture_scale,
@@ -257,6 +268,8 @@ def extract(source_path, guide_path, output_directory, kind=None, min_alpha=0):
                              "processor": {"path": Path(__file__).name, "sha256": _sha256(__file__)}}}
     if kind == "animation":
         result["fps"] = FPS
+    if guide.get("camera"):
+        result["camera"] = guide["camera"]
     output.mkdir(parents=True, exist_ok=True)
     (output / "frames").mkdir()
     for entry, image in zip(frames, images):

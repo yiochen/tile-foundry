@@ -1,0 +1,15 @@
+{
+  "frameCount": 24,
+  "fps": 12,
+  "footTransformMaxDelta": 0.0,
+  "rootPixelMaxDelta": 0.00012111663818359375,
+  "panelBoundaryAlpha": 0,
+  "sourceCaptureScale": 4,
+  "perPoseFitting": false,
+  "renderedAlphaPreserved": true,
+  "designReference": {
+    "path": "design-reference.png",
+    "role": "visual design target; not supplied to imagegen",
+    "sha256": "0ae441a4b42b154b6beec8a89ab604d84c9fb2782afd919b717b67156add010a"
+  }
+}

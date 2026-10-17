@@ -1,0 +1,11 @@
+{
+  "frames": 24,
+  "fps": 12,
+  "unweightedVertices": 0,
+  "badWeightSums": 0,
+  "minimumOutwardElbowDistance": 0.33640193939208984,
+  "maximumWristBendDegrees": 0,
+  "maximumHandGoalErrorWorld": 8.684957309003056e-05,
+  "footMatrixMaximumDelta": 0,
+  "closingKeyMatrixMaximumDelta": 1.714505527444786e-17
+}

@@ -1,6 +1,6 @@
 ---
 name: build-overlap-tiles
-description: Generate square-grid game floors, objects, characters, and animation sheets using projected 3D blockouts and subject-aware AI reskinning, with reusable ground anchors, independent footprints, and 12 fps animation.
+description: Generate square-grid game floors, objects, characters, and animation sheets using authored 3D models and AI art-style refinement, with reusable ground anchors, independent footprints, and 12 fps animation.
 ---
 
 # Build overlap tiles
@@ -31,32 +31,38 @@ profile with the result, and use it consistently across poses and frames.
 
 ## Capture geometry, then reskin every final asset
 
-Use **3D blockout → registered capture → imagegen reskin** for floors, objects,
+Use **authored 3D model → registered capture → imagegen style refinement** for floors, objects,
 characters, multi-cell structures, separated layers, directions and animations.
 The untouched render is a geometry reference/control; it is not the final artwork.
 Apply the image-generation pass to every delivered asset, including simple blocks
 and every separately authored layer or depth piece. Read
 [3D capture and reskin](references/three-dimensional.md).
 
-Choose the shape freedom by what the model already accomplishes:
+Build the shapes you intend to keep before capturing:
 
-- **Characters and difficult organic forms:** treat the crude mesh as pose, scale
-  and support guidance. Redesign its local silhouette, anatomy, face, hair, hands,
-  footwear and clothing into finished artwork. Replace primitive-looking shapes;
-  do not ask to preserve every contour or restrict the call to painting materials.
-  Keep nominal body scale, facing, joint action and support contacts consistent
-  across views. Hair and fabric can change edges within the authored frame.
+- **Characters and difficult organic forms:** model the actual anatomy, expressive
+  face, layered hair, hands, footwear and clothing. Retain editable meshes,
+  materials, skeleton and weights. Inspect close-ups and moving silhouettes;
+  a generic capsule rig is a motion study, not finished character geometry.
+  Refine the model when its shape is wrong instead of asking imagegen to solve
+  shape and registration together.
 - **Blocks, floors and simple modeled structures:** preserve their useful outer
   geometry, base extents, height and straight alignment. Improve materials,
   shading, bevels and small details without unnecessary shape redesign.
-- **Mixed subjects:** state these freedoms per part. For example, retain a stool's
-  modeled seat/support geometry while refining the seated character's silhouette.
+- **Reskin all subjects:** default to paint, material texture, shading and small
+  surface detail. Preserve the designed silhouette, facial feature positions,
+  head/body/boot scale, joint action and support contacts. A style-only prompt
+  remains an instruction to an image model, not a geometric guarantee.
+- **Explicit shape experiments:** when the user wants a crude blockout redesigned,
+  allow local shape changes as a named alternative and evaluate registration
+  separately. Do not silently switch to silhouette redesign after a weak style
+  finish. Keep support/attachment geometry fixed in mixed subjects.
 
-For both, keep the same camera, logical footprint, ground root, support elevation,
+Keep the same camera, logical footprint, ground root, support elevation,
 attachment points and complete panel layout. Shape freedom does not authorize a
 larger character, a moved foot anchor, a rotated ground base or a resized frame.
 Declare usable clearance before capture, rather than fitting or clipping the
-result later. Judge creative refinement and registration separately.
+result later. Judge art-style improvement and registration separately.
 
 Capture floor-free object/pose sheets as edit targets and calibration floors as
 auxiliary references. A flat visible floor is an opaque square plane and remains

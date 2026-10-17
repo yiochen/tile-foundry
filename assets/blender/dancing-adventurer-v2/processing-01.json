@@ -1,0 +1,11 @@
+{
+  "status": "extracted-static-proof",
+  "source": "source-01.png",
+  "minAlpha": 32,
+  "wholeCanvasUniformScale": 1.2647058823529411,
+  "perPoseFitting": false,
+  "removedAlphaMass": 48261,
+  "sourceRGBChanged": false,
+  "geometryCertified": false,
+  "visualObservation": "Single-frame painted finish stays close to source placement; minor contour changes remain. No reskinned animation has been established."
+}

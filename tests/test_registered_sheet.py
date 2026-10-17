@@ -106,6 +106,23 @@ class RegisteredSheetTests(unittest.TestCase):
         self.assertNotIn('direction',sprite)
         self.assertNotIn('durationMs',sprite)
 
+    def test_character_projection_retains_camera_without_relabeling_as_square_grid(self):
+        identity = [[int(i == j) for j in range(4)] for i in range(4)]
+        self.guide.update(projection='character-orthographic', camera={
+            'type':'orthographic', 'worldMatrix':identity, 'projectionMatrix':identity})
+        self.write_guide()
+        result = self.process()
+        self.assertEqual(result['projection'], 'character-orthographic')
+        self.assertEqual(result['camera'], self.guide['camera'])
+        self.assertEqual(result['sprites'][0]['anchor'], [6,12])
+
+    def test_character_projection_requires_its_actual_camera_matrices(self):
+        self.guide.update(projection='character-orthographic', camera={'type':'orthographic'})
+        self.write_guide()
+        with self.assertRaisesRegex(ValueError, 'camera requires finite 4x4'):
+            self.process()
+        self.assertFalse(self.output.exists())
+
     def test_output_sheet_is_exact_full_frame_concatenation(self):
         result = self.process()
         with Image.open(self.output / "sheet.png") as opened:

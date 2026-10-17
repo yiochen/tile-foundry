@@ -36,6 +36,18 @@ For a 128px full-base block, its ground rectangle is 128×128; moving its top
 up by 32px creates a 32px front wall and a 160px body. The top can extend above
 the cell's upper edge. Large art gets more canvas headroom, not a smaller scale.
 
+## Per-subject art cameras
+
+Characters and round collectibles may use an ordinary orthographic art camera,
+while sharing terrain's logical grid and projected root. Use
+`character-orthographic` with actual camera matrices. A 35° elevation is an
+example, not a recovered angle from the reference. This camera foreshortens floor
+depth and is unsuitable for seamless square terrain. Preserve rounded forms in
+the authored 3D design rather than stretching a completed character sprite.
+Attachments between differently projected assets need matching contact points.
+The supplied image suggests artistic per-subject adjustments; its actual source
+pipeline is unknown.
+
 ## Generation language
 
 > Square-grid top-down oblique game projection, front-facing three-quarter view.

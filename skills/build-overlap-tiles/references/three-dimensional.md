@@ -3,7 +3,7 @@
 Use this route for objects with defined shapes and especially for directional
 characters or skeletal animation. Build or import a model in Blender or Three.js,
 apply its skin/materials, rig it, author the motion, and capture a registered pose
-sheet. The image model turns the blockout into finished artwork, with shape freedom chosen by subject. A captured pose is a
+sheet. Author the intended finished shapes in 3D first; use the image model to refine their art style, materials and shading. A captured pose is a
 much richer reference than a stick guide, but image editing can still move feet,
 change proportions, reflow panels or invent details. Test the complete reskin.
 
@@ -24,7 +24,7 @@ panel and `assetKind: "object"` in the guide. The fixed-sheet extractor supports
 need a larger authored frame/cell footprint rather than a smaller model scale;
 record occupancy and elevation in the portable output contract.
 
-The bundled Three.js renderer supplies a skinned character, color/materials,
+The bundled Three.js renderer supplies a **motion-study** skinned character, color/materials,
 planted dancing poses or eight upright directions, plus separate color, alpha,
 depth, neutral-standing and floor-registration passes. Optional Node dependencies
 are declared in `scripts/package.json`; existing compatible project dependencies
@@ -87,6 +87,36 @@ Parallel geometry also does not make a material seamless. A stationary edge blen
 in an animated shader can become a visible grid band: inspect spatial repeats
 at every phase and with offset-phase neighbors, even for untouched 3D renders.
 
+## Finished Blender characters and their camera
+
+Retain the `.blend`, modeling script, native materials, armature, weights,
+constraints, keyframes and capture settings. For a planted dance, world-space
+leg IK plus fixed sole transforms keep feet stable under torso sway. Record
+evaluated foot matrices and projected root at every captured frame. Render real
+alpha with the floor hidden. Inspect runtime-size motion and close-ups. A GLB
+helps inspection, but native procedural materials may need baking for an
+equivalent browser appearance.
+
+Validate the actual deformed model before committing to an atlas. With Blender
+MCP, `look` supports `mode: "angles"` for front/side/three-quarter captures and
+`mode: "frames"` for sampled animation poses. Retain these screenshots. Otherwise
+render equivalent views. Correct IK targets alone do not prove a natural pose:
+inspect elbow bend direction, forearm/wrist alignment, shoulder continuity and
+knee deformation. Calibrate pole angles against evaluated bones for this rig;
+copying one angle can fold elbows inward. Check weight coverage, contact transforms
+and loop closure, then inspect full motion. Geometric anchor checks cannot catch
+anatomically wrong arms. Repeat the visual checks after a rig change.
+
+For rounded characters, an explicitly chosen ordinary orthographic camera avoids
+the square-grid profile's vertical elongation. Record
+`projection: "character-orthographic"` and a `camera` object containing
+`type: "orthographic"`, finite 4×4 `worldMatrix` and `projectionMatrix`, elevation,
+pixel aspect and world units per logical cell. The fixed-sheet extractor retains
+this profile and camera. Its physical floor is foreshortened: do not use it for
+connecting square terrain or claim it implements the affine ground-plane rule.
+Share the logical grid/root with terrain and author explicit matching attachment
+points for stacked assets. Keep one camera profile throughout a sequence.
+
 ## Reskin the entire sheet
 
 Copy the inspected pose sheet to `references/` and record its exact hash and role
@@ -95,26 +125,25 @@ reference; identify it separately and explicitly exclude its floor from output.
 The bundled game scene is for understanding projection, not an automatic style
 reference. Use text for style unless the user requests a supplied style image.
 
-Choose the shape-edit policy before the image call. For characters or hard-to-model
-organic subjects, the mesh is a scaffold for pose, nominal scale and contact, not
-a finished silhouette. Allow refined anatomy, hair, garments, hands and shoes;
-replace visible primitive forms. Preserve joint action, facing, body scale,
-ground/support positions and the available frame. Do not freeze crude hair caps,
-box boots or capsule anatomy merely because they registered well in an earlier
-material-only test. For simple blocks and structures, keep the modeled shape and
-base extent, improving surface art, bevels and detail. Mixed scenes need explicit
-per-part policies, especially a rigid support with an organic character.
+Choose the edit policy before the image call. Default to **art-style refinement
+only**, including characters: keep the authored shapes, facial feature positions,
+body/boot scale, joint poses, camera and support contacts. Ask for painted material
+shading, richer color separation, controlled texture and readable highlights.
+If the mesh still has crude hair caps, box boots or capsule anatomy, improve its
+geometry first. Imagegen silhouette redesign is an explicitly requested alternative
+with more registration risk. State per-part policies for mixed subjects and keep
+support/attachment geometry fixed.
 
 Example for a character sheet:
 
-> Turn this crude 3D pose atlas into a finished hand-painted game adventurer.
-> Refine the anatomy and silhouette: shaped hair, expressive face in front views,
-> natural hands and boots, and a tailored outfit with readable folds. Replace the
-> visible primitive forms. Keep one character design and the reference's nominal
-> body scale, facing and joint poses. Make these refinements inside the existing
-> head-to-foot scale and panel space; do not enlarge the head, body or shoes to
-> add detail. Keep the support/sole centers in place; shoe toes may project forward.
-> Rear views show the back of the same design.
+> This is the finished designed 3D character, not a scaffold for redesign.
+> Apply a polished hand-painted RPG art-style pass: painted cloth, hair and leather
+> shading, controlled texture, richer color separation and restrained highlights.
+> Preserve every designed shape and pose: the same anatomy, facial feature
+> positions, hair silhouette, clothing shape, head/body/boot size and joint
+> positions. Do not enlarge, reshape, recenter or fill empty panel space.
+> Keep both sole/support positions exactly where supplied. Rear views show the
+> back of the same designed character.
 >
 > Preserve this complete [canvas dimensions], [columns × rows] atlas and its
 > [frame count/order]. Keep the camera, panel positions and empty gutters. The
@@ -126,7 +155,8 @@ For a simple structure, replace the design clause with: "Keep the modeled block'
 outer shape, square base, wall height and straight edges. Add hand-painted
 [materials], bevel shading and small surface detail." An organic prop may need
 intermediate freedom: retain the base/support and overall height while refining
-its upper silhouette. Name those permissions rather than globally locking contours.
+its upper silhouette when explicitly requested. Name those permissions in that
+alternative experiment rather than mixing them into a style-only pass.
 
 Use the captured dimensions and actual subject in the expanded prompt. Leave
 world-unit/export bookkeeping in metadata. Numeric height alone cannot prevent
