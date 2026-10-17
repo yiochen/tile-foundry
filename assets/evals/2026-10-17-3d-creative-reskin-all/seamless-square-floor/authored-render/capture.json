@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "workflow": "fresh-direct-modeled-3d-control",
+  "caseId": "seamless-square-floor",
+  "renderEngine": "Three.js WebGLRenderer via Playwright Chromium",
+  "threeVersion": "0.186.1",
+  "playwrightVersion": "1.64.0",
+  "chromiumVersion": "156.0.8078.4",
+  "supersample": 2,
+  "frame": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    64
+  ],
+  "sourceFiles": [
+    {
+      "path": "scene/3d_controls_static.mjs",
+      "sha256": "aa1626fb33b56706df2ac41cb49184f15d3c1a2bad3a0100fbeee3c163ce5293"
+    },
+    {
+      "path": "scene/3d_controls_static_scene.js",
+      "sha256": "b8b8ec7c78563307503aad06e8da3281cf3dadd0981d066edb52ba60f41e1306"
+    },
+    {
+      "path": "scene/3d_controls_static_rig.js",
+      "sha256": "d230aa3ef97b16be2edb9552e2ddf9993b2a565604af06770fafab8cd3e8154e"
+    }
+  ],
+  "imageGenerationCalls": 0,
+  "noOldRasterReuse": true,
+  "renderRecipe": "node scene/3d_controls_static.mjs seamless-square-floor NEW_OUTPUT_DIR --suite scene/suite.json --runtime-root RUNTIME_ROOT --scale 2",
+  "limitations": [
+    "Raster edge coverage can vary with antialiasing and browser/driver.",
+    "Authored registration is deterministic geometry; independent visual review is still required.",
+    "Renderer references are model/camera inputs, not image-generation calls."
+  ],
+  "browserErrors": []
+}

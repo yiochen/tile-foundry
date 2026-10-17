@@ -1,0 +1,11 @@
+{
+  "reviewer": "Independent Codex vision review (motion/character creative reskin)",
+  "scope": "Separate qualitative style assessment; does not override fixed visual/delivery rubric.",
+  "shapePolicy": "Refine the crude rig into finished character shapes without enlarging anatomy or moving supports.",
+  "shapeRefinementObserved": true,
+  "observation": "Primitive limbs/head/boots are replaced by a polished adventurer with expressive face, hair and tailored clothing. The creative objective is visible; nominal scale and planted-contact consistency are not preserved.",
+  "evidence": [
+    "source-01.png",
+    "../review-packets/dancing-player/registered-reference-vs-ai.png"
+  ]
+}

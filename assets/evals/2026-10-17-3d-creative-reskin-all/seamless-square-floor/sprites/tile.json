@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "kind": "floor",
+  "size": [
+    128,
+    128
+  ],
+  "anchor": [
+    64.0,
+    64.0
+  ],
+  "footprint": [
+    128,
+    128
+  ],
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "scale": 0.10207336523125997,
+  "method": "Whole square material, uniform resampling; no crop or guessed-color removal",
+  "image": "tile.png"
+}

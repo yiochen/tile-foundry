@@ -1,0 +1,73 @@
+{
+  "caseId": "animated-lava",
+  "status": "source-only-extraction-rejected",
+  "imageGenerationCalls": 1,
+  "shapePolicy": "Retain the useful modeled block geometry, full square 128x128 base, 32px front wall, root and full panel layout; polish surface artwork and moving phase detail.",
+  "geometryInput": {
+    "kind": "supplied-existing-3d-capture",
+    "originalPath": "assets/evals/2026-10-17-3d-control-all/animated-lava/render",
+    "copiedTo": "render",
+    "newRenderPerformed": false
+  },
+  "processing": {
+    "processor": "../skill-snapshot/scripts/extract_registered_sheet.py",
+    "minAlpha": 32,
+    "wholeCanvasUniformScale": true,
+    "rectangles": "render/guide.json",
+    "perPoseFitting": false,
+    "clipping": false,
+    "rendererStencil": false,
+    "fallback3D": false,
+    "command": [
+      ".venv/bin/python",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/animated-lava/source-01.png",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/animated-lava/render/guide.json",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/animated-lava/processed",
+      "--kind",
+      "animation",
+      "--min-alpha",
+      "32"
+    ],
+    "exitCode": 1,
+    "result": "source-only-extraction-rejected",
+    "error": "ValueError: Art crosses a sheet gutter/outside declared panels (alpha 254); regenerate isolated fixed-layout panels instead of clipping"
+  },
+  "requestedArtifact": {
+    "kind": "animation",
+    "frame": [
+      192,
+      320
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "columns": 4,
+    "rows": 3,
+    "frameCount": 12,
+    "fps": 12
+  },
+  "sourceSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/animated-lava/source-01.png",
+  "workflow": "3d-imagegen-reskin",
+  "sourceSHA256": "c57f65656ccf4ebc0437bb506887d9fedb6cef63238bb74045c3a7c17bc5dd67",
+  "originalSavedPath": "/Users/yiouchen/.codex/generated_images/01a14b96-446a-7232-80d7-91d923e3f2bd/exec-f9eac9d0-5acc-49da-87b5-3dd75e8a6814.png",
+  "resultSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/animated-lava/result.json",
+  "submissionSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/animated-lava/submission.json",
+  "previewEvidence": {
+    "browserInspection": "previews/browser/inspection.json",
+    "mobileScreenshot": "previews/browser/mobile.png",
+    "desktopScreenshot": "previews/browser/desktop.png",
+    "inspectedScreenshots": [
+      "previews/browser/mobile.png"
+    ],
+    "sourceOnly": true,
+    "fps": 12,
+    "displayedFrameCount": 12,
+    "observedLoopWraps": 2
+  },
+  "deliveryIntegrityChecked": true,
+  "submittedResultSHA256": "2ad7c68da7c1b677eed1fe43f0d3a1c47c17648eff9e1c1be007750817424ce8",
+  "sourceUnchangedVerified": true,
+  "gradingPerformedByExecutor": false
+}

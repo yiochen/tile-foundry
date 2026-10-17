@@ -1,0 +1,40 @@
+{
+  "reviewer": "Root assistant, independent of fresh executor agents",
+  "independent": true,
+  "spriteSHA256": {
+    "greenhouse": "d8cb426795cd038839da28fdc146b3c99516b15da2ece21ecff96cf21bdc907f"
+  },
+  "resultSHA256": "972a47f5b4985368f6057b12777f1e17ad5b991c0a428b24d4424da30d722c23",
+  "guideSHA256": "21eefd91cc47dab97b9462e6438dfa631be10fe059d46fb699816cdff47cd6e6",
+  "checks": {
+    "projection": {
+      "pass": false,
+      "note": "Greenhouse is drawn with compressed ground depth; its base does not follow the screen-aligned 3x2 rectangle."
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "anchor-placement": {
+      "pass": false,
+      "note": "Foundation is above the declared near ground edge in the registration preview; root metadata remains fixed without proving correct base placement."
+    },
+    "rectangular-size": {
+      "pass": false,
+      "note": "Visible width exceeds the 384px footprint and depth is compressed relative to the 256px target; complete frame resampling preserved this drift."
+    },
+    "multi-cell-overlap": {
+      "pass": false,
+      "note": "No source clipping was used, but shared-cell overlap is invalidated by the mismatched base and ground placement."
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  },
+  "limitations": [
+    "One fresh attempt per case does not estimate reliability.",
+    "Landmark/perspective judgments are approximate; no AI geometric exactness is claimed."
+  ],
+  "inspection": "Original generated art, actual light/dark cutouts, registration placement and repeated terrain images inspected."
+}

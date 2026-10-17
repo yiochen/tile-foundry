@@ -1,0 +1,162 @@
+{
+  "version": 2,
+  "cellSize": 128,
+  "anchor": [
+    96,
+    248
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "captureScale": 2,
+  "sourceSize": [
+    384,
+    640
+  ],
+  "sourcePixelsPerRuntimePixel": 2,
+  "kind": "modeled-3d-static-control",
+  "assetKind": "object",
+  "caseId": "partial-cell-tall-object",
+  "projectionFormula": {
+    "screenX": "96 + 128*x",
+    "screenY": "248 + 128*z - 128*y"
+  },
+  "floorCorners": [
+    {
+      "world": [
+        -0.5,
+        0,
+        -0.5
+      ],
+      "screen": [
+        32,
+        183.99999999999983
+      ]
+    },
+    {
+      "world": [
+        0.5,
+        0,
+        -0.5
+      ],
+      "screen": [
+        160,
+        183.99999999999983
+      ]
+    },
+    {
+      "world": [
+        0.5,
+        0,
+        0.5
+      ],
+      "screen": [
+        160,
+        311.99999999999983
+      ]
+    },
+    {
+      "world": [
+        -0.5,
+        0,
+        0.5
+      ],
+      "screen": [
+        32,
+        311.99999999999983
+      ]
+    }
+  ],
+  "camera": {
+    "type": "OrthographicCamera",
+    "matrixWorld": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0.7071067811865475,
+      -0.7071067811865476,
+      0,
+      0,
+      0.7071067811865476,
+      0.7071067811865475,
+      0,
+      0,
+      8,
+      8,
+      1
+    ],
+    "matrixWorldInverse": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0.7071067811865475,
+      0.7071067811865476,
+      0,
+      0,
+      -0.7071067811865476,
+      0.7071067811865475,
+      0,
+      0,
+      8.881784197001252e-16,
+      -11.31370849898476,
+      1
+    ],
+    "projectionMatrix": [
+      1.3333333333333333,
+      0,
+      0,
+      0,
+      0,
+      1.131370849898476,
+      0,
+      0,
+      0,
+      0,
+      -0.06688963210702341,
+      0,
+      0,
+      -0.5499999999999999,
+      -1.0066889632107023,
+      1
+    ],
+    "near": 0.1,
+    "far": 30
+  },
+  "noFitting": true,
+  "nominalHeightPx": 160,
+  "footprint": [
+    128,
+    128
+  ],
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "elevationPx": 160,
+  "baseSize": [
+    48,
+    48
+  ],
+  "controls": {
+    "cameraFit": false,
+    "rootFit": false,
+    "silhouetteMask": false,
+    "clipping": false,
+    "backgroundRemoval": false,
+    "imageGenerationCalls": 0
+  },
+  "sourceAuthority": "Fresh authored Three.js modeled geometry; no AI artwork or old source raster reuse"
+}

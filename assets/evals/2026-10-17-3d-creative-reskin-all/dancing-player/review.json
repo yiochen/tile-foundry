@@ -1,0 +1,111 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (motion/character creative reskin)",
+  "independent": true,
+  "spriteSHA256": {
+    "frame-00": "0ae441a4b42b154b6beec8a89ab604d84c9fb2782afd919b717b67156add010a",
+    "frame-01": "72c4fe81aa671d631317a40c55d213c9b92f216fe1e77d1d75c886f3a7d27cd2",
+    "frame-02": "1898739ad426a9fe1d4a2a7ed742257ba64ecf3367500dc7239e1f61891f4e41",
+    "frame-03": "33f88714553a07d398698e6393657d9f28f9408eb4f62c8da983e3e6fa7704cb",
+    "frame-04": "4105cbdeb6e7ff8e5248d51917344352c8e44771fa0890a886f450408293ce82",
+    "frame-05": "30247b275195fe968393652bc2da19936ce84af4a5af0c9ae68910d4f8b54a46",
+    "frame-06": "c49648b2cce914a8a9a0f29af926ea5e4cfac729dbaeb8bfff9f13fb92552ae7",
+    "frame-07": "ea216dd5cd6b1f62600d0349ef0eac918ca8d5319412d43a48e42390fd14a6ed",
+    "frame-08": "de261678733c818ec220e3cc9ded25d9e719e116b34665f70f6aa02ba2f03d07",
+    "frame-09": "b266507eed0448f87b5840fe9110e22fba176978a117ae12f184cdfbc3365476",
+    "frame-10": "8bcf2d78892a39cb06664d627c0e3d637bac343cbb490a91f4c02f6fc124e83e",
+    "frame-11": "192a44d4a672a7196c473891338846e2d41d1512bdfcd7e2003f355a55b4bed0"
+  },
+  "sourceSHA256": {
+    "source-01.png": "6fe9470cded0c55b737185b1b60f95d3300a5efb562434e9ff30950bf148ae4c"
+  },
+  "resultSHA256": "9b52fab65c5dec597f8e71f6914d25220b220c1370c2a58fcab5bd5cb3ccdd4a",
+  "guideSHA256": "9a65e8aebc0d9619f34ff59449744bec56f789d976a9d588e26476b0099a1531",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "All twelve poses retain a coherent elevated front view, with top-facing hair/shoulders and consistent light.",
+      "evidence": [
+        "source-01.png",
+        "../review-packets/dancing-player/registered-reference-vs-ai.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "All limbs and hair remain complete inside the frames; no subject is clipped or replaced by the 3D control.",
+      "evidence": [
+        "source-01.png",
+        "../review-packets/dancing-player/registered-reference-vs-ai.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": false,
+      "note": "The new boot/heel region falls below the original support center at the same root. The reference/candidate pairs show leg-length/support displacement rather than merely added toe length.",
+      "evidence": [
+        "../review-packets/dancing-player/registered-reference-vs-ai.png",
+        "../review-packets/dancing-player/placement-5-light-2x.png"
+      ]
+    },
+    "same-player": {
+      "pass": true,
+      "note": "The same brown-haired adventurer, blue tunic, belt and brown boots persists; facial expression and arm gestures change consistently.",
+      "evidence": [
+        "source-01.png",
+        "../review-packets/dancing-player/registered-reference-vs-ai.png"
+      ]
+    },
+    "dancing-poses": {
+      "pass": true,
+      "note": "Twelve complete upper-body dance gestures with distinct elbow/fist and head positions are readable, with no missing/fused limbs.",
+      "evidence": [
+        "source-01.png",
+        "../review-packets/dancing-player/registered-reference-vs-ai.png",
+        "../review-packets/dancing-player/browser/inspection.json"
+      ]
+    },
+    "design-height": {
+      "pass": false,
+      "note": "Compared at unchanged roots, the refined legs and boots lengthen the standing body. This is a nominal anatomy-scale change, not a raised-arm silhouette or a crouch.",
+      "evidence": [
+        "../review-packets/dancing-player/registered-reference-vs-ai.png",
+        "../review-packets/dancing-player/placement-5-light-2x.png"
+      ]
+    },
+    "contact-stability": {
+      "pass": false,
+      "note": "Soles/support move upward between sheet rows and through the final-to-first transition. The native frame00/frame11 pair shows an unintended vertical foot shift while metadata roots remain fixed.",
+      "evidence": [
+        "../review-packets/dancing-player/browser/native-00.png",
+        "../review-packets/dancing-player/browser/native-11.png",
+        "../review-packets/dancing-player/registered-reference-vs-ai.png"
+      ]
+    },
+    "cutout-quality": {
+      "pass": true,
+      "note": "Clean light/dark edges retain complete shoes, with no colored floor residue or holes in the usable sprites.",
+      "evidence": [
+        "../review-packets/dancing-player/placement-11-dark.png",
+        "../review-packets/dancing-player/placement-5-light-2x.png"
+      ]
+    },
+    "loop": {
+      "pass": false,
+      "note": "Actual 12fps playback visits all12 frames and wraps, but the final pose returns to frame1 with an unintended support/vertical-placement step. Playback validity does not make that transition seamless.",
+      "evidence": [
+        "../review-packets/dancing-player/browser/inspection.json",
+        "../review-packets/dancing-player/browser/native-00.png",
+        "../review-packets/dancing-player/browser/native-11.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Fixed-panel extraction preserves the original reskin, including the expanded legs and row-dependent placement. No per-frame fitting, floor key or renderer-alpha stencil is used.",
+      "evidence": [
+        "source-01.png",
+        "processed/result.json",
+        "../review-packets/dancing-player/registered-reference-vs-ai.png"
+      ]
+    }
+  }
+}

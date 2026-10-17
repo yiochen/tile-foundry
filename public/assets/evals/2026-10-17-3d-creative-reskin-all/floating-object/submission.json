@@ -1,0 +1,14 @@
+{
+  "caseId": "floating-object",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object",
+  "userPrompt": "Generate a 64px-tall treasure orb floating 48px above the center of a 128x128 calibration tile. Keep the projected ground anchor beneath the orb and remove the calibration floor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "e1c383042116ec69f640ecc0cfadf75edd404a5f7b48e0634faa0d56cd989e41",
+  "result": "result.json"
+}

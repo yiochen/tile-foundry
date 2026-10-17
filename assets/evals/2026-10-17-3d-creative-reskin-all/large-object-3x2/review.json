@@ -1,0 +1,72 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "independent": true,
+  "spriteSHA256": {
+    "large-object-3x2": "37045875ac21b8e188a1bca6b81e4e39a506fb43d62588237e278c6da1ba18cb"
+  },
+  "sourceSHA256": {
+    "source-01.png": "a55cc5f15f9790f8564cd39b9df02057017bffe4a5bc4a1fc0f625e14967a8bf"
+  },
+  "resultSHA256": "f4bccb65513a5c181c7cb75fc59cc737efab93d48b83b4c719fa161e1ab19376",
+  "guideSHA256": "9d00a9993e9268dbe4d1e9df3dc3198e3a33a98c840065b0557a9b1ec9a5ba24",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The greenhouse retains the reference screen-aligned long rectangle, parallel frame rails, and top/front organization. Plant and glass treatment do not add a converging camera.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/previews/large-object-3x2-light-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Roof rails, side frame, front door, planting beds, and glazing are complete within the frame. Light and dark 2x views show no clipped structure or detached external shadow.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/previews/large-object-3x2-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/previews/large-object-3x2-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The ground center stays beneath the central interior aisle, consistent with the supplied 3D placement and stored cross. Front door and outer corners remain coherently aligned to the guide.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/large-object-3x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/previews/large-object-3x2-stored-anchor-grid.png"
+      ]
+    },
+    "rectangular-size": {
+      "pass": true,
+      "note": "The delivered structure preserves the broad 3:2 ground rectangle at the shared cell scale. It remains three cells across, with the expected depth and upward height extension, without being forced square or visibly stretched on one axis.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/large-object-3x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/previews/large-object-3x2-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/previews/large-object-3x2-light-2x.png"
+      ]
+    },
+    "multi-cell-overlap": {
+      "pass": true,
+      "note": "The entire greenhouse overlaps the upper row as one complete sprite and remains uncut across the grid. If actors are later allowed inside its glazed interior, separate roof/front depth pieces would be needed; that interior interaction is not shown or required by this case.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/large-object-3x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/previews/large-object-3x2-stored-anchor-grid.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The final preserves the original frame, door, reflected glazing, planting beds, and leaf arrangements under the declared fixed uniform extraction and alpha cleanup. No selective geometry fitting or replacement is apparent.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/previews/large-object-3x2-light-2x.png"
+      ]
+    }
+  }
+}

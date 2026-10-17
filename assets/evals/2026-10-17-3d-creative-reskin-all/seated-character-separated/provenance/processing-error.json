@@ -1,0 +1,14 @@
+{
+  "source": "../source-02.png",
+  "processor": {
+    "name": "extract_registered_sheet.py",
+    "sha256": "3a5608f99967d58a4e71e1d2473a8651a5eb6c5f6bfccb539465677a1ea291a6",
+    "frozenRun": "2026-10-17-3d-creative-reskin-all"
+  },
+  "kind": "object",
+  "minAlpha": 32,
+  "exitCode": 1,
+  "error": "Generated whole-sheet aspect differs from guide beyond one source pixel; no axis stretching",
+  "retry": false,
+  "recovery": false
+}

@@ -1,0 +1,94 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "independent": true,
+  "spriteSHA256": {},
+  "sourceSHA256": {
+    "source-01.png": "e92c56a6847efc12dff3ba3984f65d68405416262a3cdb7f6f222beb9d56f8af",
+    "source-02.png": "771b7c85e146febd0b7fcf5d039b2da65d642c51b056e63beeaa5fad4dcdb28c"
+  },
+  "resultSHA256": "18768637e06debe6391e32275002a519ef44e27fa7a9f159e6bb8c6caaffb474",
+  "guideSHA256": "bab6e12e42fd1515e8dec46d2b4071666153cd758d929ea9d2b8bb54786a512b",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "The raw stool and character use compatible centered oblique views, but no registered delivered layers exist. The raw overlay is explicitly source-only and cannot certify runtime projection.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/references/stool-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/references/character-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/raw-source-overlay-light-source-native.png"
+      ]
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "Both raw sources show complete silhouettes, including stool legs, hair, hands, and boots, but no final frame exists to inspect for extraction clipping.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/stool-original-light-source-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/character-original-light-source-native.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "No processed layers or stored transforms are supplied. The source-coordinate overlay does not establish the projected ground anchor beneath the support.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/raw-source-overlay-light-source-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/raw-source-overlay-dark-source-native.png"
+      ]
+    },
+    "layer-separation": {
+      "pass": null,
+      "note": "The raw character visibly has no stool or floor and the raw stool has no character. This supports source-level separation, but there are no delivered layer alpha images to grade under the frozen policy.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/stool-original-light-source-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/character-original-light-source-native.png"
+      ]
+    },
+    "seated-contact": {
+      "pass": null,
+      "note": "The unregistered raw overlay looks plausibly seated, with the thighs overlapping the stool and boots hanging forward. It is not a composition of delivered layers at stored runtime transforms, so contact correctness remains unestablished.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/raw-source-overlay-light-source-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/raw-source-overlay-dark-source-native.png"
+      ]
+    },
+    "complete-layers": {
+      "pass": null,
+      "note": "A complete standalone stool source is available under the independently saved character source; this is not evidence of a sliced overlap. Final complete registered layers are nevertheless absent.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/references/stool-finished.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/stool-original-light-source-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/raw-source-overlay-light-source-native.png"
+      ]
+    },
+    "support-height": {
+      "pass": null,
+      "note": "The raw composition does not establish that a 48px support elevation is stored separately and applied exactly once; no delivered registration is present.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/references/stool-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/references/character-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/raw-source-overlay-light-source-native.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "Both originals can be inspected, but no processed layers or transforms are provided for a source-to-delivery comparison.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/stool-original-light-source-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/character-original-light-source-native.png"
+      ]
+    }
+  }
+}

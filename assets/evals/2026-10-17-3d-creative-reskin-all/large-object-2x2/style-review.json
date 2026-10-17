@@ -1,0 +1,27 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "independent": true,
+  "spriteSHA256": {
+    "large-object-2x2": "e861a566dba1e7c76c11420f779d469563cb83e99b3d88d9a2eee81082cc59b0"
+  },
+  "sourceSHA256": {
+    "source-01.png": "2e84ee88eb0dc1b878378ae3c46a2d88179cc22007342d1b29f3ab7da2153c1e"
+  },
+  "resultSHA256": "80c582a14967ef70ce856f3ed5daa85c793569d8261bdf2cef7030034be760a7",
+  "guideSHA256": "114512b16e19aecf7c1144c4c8606c4b09d880382b37b24b3a641f4cdb8c1610",
+  "assessment": "Qualitative requested shape policy; separate from geometric visual grading",
+  "shapePolicy": "Blocks retain useful form with visual improvement; organic props refine local forms; characters replace primitive appearance.",
+  "realized": "partial",
+  "note": "The fountain receives convincing carved stone, an articulated bowl and pedestal, and detailed water. Local forms are improved, but the base form is only partly retained because its square grid structure becomes a perspective trapezoid. This style observation is separate from the geometric failures.",
+  "evidence": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/references/edit-target.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/processed/frames/frame-00.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/large-object-2x2/placement-0-light.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-light-2x.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-dark-2x.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-stored-anchor-grid.png"
+  ]
+}

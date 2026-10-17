@@ -1,0 +1,34 @@
+{
+  "prompt": "Reskin image 1, the authored 3D plane material capture, into a finished hand-painted mossy stone game floor. Keep its full opaque square and flat overhead ground-plane projection. Refine the gray stone into tactile irregular surface chips, subtle cracks and soft moss in joints, with restrained painted detail and clean readable stone forms. Maintain screen-aligned square ground geometry and useful repeating stone layout. This is one seamless texture tile: patterns and color must continue across left/right and top/bottom edges without visible seams, border bands or sudden lighting/color-gradient jumps. Use evenly distributed diffuse lighting, with no directional global gradient. Fill the entire 256x256 reference square edge to edge; preserve its square aspect and complete canvas. No margins, transparency, raised front wall, border, props, cast shadow, text or grid overlay. Return only the complete opaque square floor texture.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": false,
+  "references": [
+    "references/edit-target.png"
+  ],
+  "referenceSHA256": {
+    "references/edit-target.png": "96c4da44a8b590ee5205e2d796456b94e9087cd97ff5011b2fbc096d9fa9cb02"
+  },
+  "referenceRoles": {
+    "references/edit-target.png": "floor plane geometry edit target"
+  },
+  "toolArguments": {
+    "prompt": "Reskin image 1, the authored 3D plane material capture, into a finished hand-painted mossy stone game floor. Keep its full opaque square and flat overhead ground-plane projection. Refine the gray stone into tactile irregular surface chips, subtle cracks and soft moss in joints, with restrained painted detail and clean readable stone forms. Maintain screen-aligned square ground geometry and useful repeating stone layout. This is one seamless texture tile: patterns and color must continue across left/right and top/bottom edges without visible seams, border bands or sudden lighting/color-gradient jumps. Use evenly distributed diffuse lighting, with no directional global gradient. Fill the entire 256x256 reference square edge to edge; preserve its square aspect and complete canvas. No margins, transparency, raised front wall, border, props, cast shadow, text or grid overlay. Return only the complete opaque square floor texture.",
+    "referenced_image_paths": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seamless-square-floor/references/edit-target.png"
+    ],
+    "transparent_background": false
+  },
+  "shapeEditPolicy": "Preserve useful flat square outer geometry; refine material texture and local stone detail.",
+  "workflow": "3d-imagegen-reskin",
+  "status": "generated",
+  "attempt": 1,
+  "attemptBudget": 1,
+  "imageGenerationCalls": 1,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "geometryReferenceBundle": "authored-render",
+  "predeclaredProcessing": {
+    "floor-material": "whole opaque square; no crop"
+  },
+  "sourceSHA256": "e2be394f67d101a761e19861f2aa121ecc17c7100ecef14c53a6381b0ee2b84f",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-abdb29ef-a4c2-49ea-bede-b564f10384e6.png"
+}

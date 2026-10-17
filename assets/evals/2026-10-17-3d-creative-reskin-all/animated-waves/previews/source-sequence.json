@@ -1,0 +1,241 @@
+{
+  "kind": "unprocessed-source-sequence",
+  "fps": 12,
+  "alignment": "panel-origin",
+  "isProcessedSprite": false,
+  "note": "Raw source panels including their gutters and faint source noise, shown at a fixed panel origin. Calibration floors remain when present; these are not normalized runtime sprites.",
+  "frames": [
+    {
+      "id": "source-0",
+      "index": 0,
+      "image": "../source-01.png",
+      "sourceRect": [
+        0,
+        0,
+        278,
+        468
+      ],
+      "size": [
+        278,
+        468
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "source-1",
+      "index": 1,
+      "image": "../source-01.png",
+      "sourceRect": [
+        278,
+        0,
+        578,
+        468
+      ],
+      "size": [
+        300,
+        468
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "source-2",
+      "index": 2,
+      "image": "../source-01.png",
+      "sourceRect": [
+        578,
+        0,
+        874,
+        468
+      ],
+      "size": [
+        296,
+        468
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "source-3",
+      "index": 3,
+      "image": "../source-01.png",
+      "sourceRect": [
+        874,
+        0,
+        1152,
+        468
+      ],
+      "size": [
+        278,
+        468
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "source-4",
+      "index": 4,
+      "image": "../source-01.png",
+      "sourceRect": [
+        0,
+        468,
+        278,
+        917
+      ],
+      "size": [
+        278,
+        449
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "source-5",
+      "index": 5,
+      "image": "../source-01.png",
+      "sourceRect": [
+        278,
+        468,
+        578,
+        917
+      ],
+      "size": [
+        300,
+        449
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "source-6",
+      "index": 6,
+      "image": "../source-01.png",
+      "sourceRect": [
+        578,
+        468,
+        874,
+        917
+      ],
+      "size": [
+        296,
+        449
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "source-7",
+      "index": 7,
+      "image": "../source-01.png",
+      "sourceRect": [
+        874,
+        468,
+        1152,
+        917
+      ],
+      "size": [
+        278,
+        449
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "source-8",
+      "index": 8,
+      "image": "../source-01.png",
+      "sourceRect": [
+        0,
+        917,
+        278,
+        1366
+      ],
+      "size": [
+        278,
+        449
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "source-9",
+      "index": 9,
+      "image": "../source-01.png",
+      "sourceRect": [
+        278,
+        917,
+        578,
+        1366
+      ],
+      "size": [
+        300,
+        449
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "source-10",
+      "index": 10,
+      "image": "../source-01.png",
+      "sourceRect": [
+        578,
+        917,
+        874,
+        1366
+      ],
+      "size": [
+        296,
+        449
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "source-11",
+      "index": 11,
+      "image": "../source-01.png",
+      "sourceRect": [
+        874,
+        917,
+        1152,
+        1366
+      ],
+      "size": [
+        278,
+        449
+      ],
+      "anchor": [
+        0,
+        0
+      ]
+    }
+  ],
+  "sourceSHA256": {
+    "source-01.png": "ffb3944026a61ec6c35cb1cf16f7f698998782368504f4ab1864f789b3132f77"
+  },
+  "separatorAlphaMax": 1
+}

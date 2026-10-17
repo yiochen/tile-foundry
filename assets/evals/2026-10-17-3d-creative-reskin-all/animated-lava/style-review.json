@@ -1,0 +1,11 @@
+{
+  "reviewer": "Independent Codex vision review (motion/character creative reskin)",
+  "scope": "Separate qualitative style assessment; does not override fixed visual/delivery rubric.",
+  "shapePolicy": "Retain modeled full square base/front wall; improve surface appearance.",
+  "shapeRefinementObserved": true,
+  "observation": "Raw sheet shows finished water/foam or glowing rocky lava, but missing isolated registered runtime sprites prevents validating stable support, seams or loop quality. No control render was substituted.",
+  "evidence": [
+    "source-01.png",
+    "result.json"
+  ]
+}

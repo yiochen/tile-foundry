@@ -1,0 +1,103 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (motion/character creative reskin)",
+  "independent": true,
+  "spriteSHA256": {
+    "frame-00": "04d258dac1d03de5eab31a22ad1efdfd284d2b54abbb98c49476c8cd7fddf4ac",
+    "frame-01": "a0da386380a2579c38b212029bc7096e78a79fe0f8b49abc41c0258214a49aa1",
+    "frame-02": "f4989a1e8b8b222124333c2e332fc7d235af4bf239aeb7852a7d0f4cfd2a4883",
+    "frame-03": "ea0dc900bca5a9581f9c8acd358a8fbf2a2101c213ae7401d2e19fce39f1a6a0",
+    "frame-04": "4e52f7477019f899e0cfc4e5a786b75ea5e26b97d565752f34d37cc3c63f468f",
+    "frame-05": "b2fc57a0c9b0fbcb5f182538990dbc5870f4a685d1976630b41a830b8bf9dd34",
+    "frame-06": "8bc5e61f423a6cc28d1648faead52708a6c9cf89eea51b4480f407f4bdc7145d",
+    "frame-07": "ecd46d51cab441a8061bbdeaad9c30536bb0906e5e30bb95c83a14864ba24eea",
+    "frame-08": "603799bd038d51ebada198fd621a091f74223b2100ba3487fa541b61ca853a9e",
+    "frame-09": "e8ff962b300987395e34a9f846389950143eca30c197b5247bf043ae3f11b97f",
+    "frame-10": "f8ccd7288a15987778ca4388fbd368639f3ff9c5af27f3ff4e170babe423b1e0",
+    "frame-11": "8bd78644d001d6be4b6683960c4d87ec8241aceb9b3d3ac1f1972c45ae786756"
+  },
+  "sourceSHA256": {
+    "source-01.png": "bc49f7530db50308adc91ea6eff52e543579244f1b18ea2dbb04f9f3807e8db2"
+  },
+  "resultSHA256": "12a892dd208491133e7e2414dfcc4694816981aacef64df175094c957bd8f965",
+  "guideSHA256": "ab0c777fe6cfa1904f8b7ede2acbe16039d944fd5d24cd56e4ec65bf0f8fdd9c",
+  "checks": {
+    "projection": {
+      "pass": false,
+      "note": "The edited blocks have changing/slanted side contours and phase-dependent placement rather than one stable square-grid raised surface.",
+      "evidence": [
+        "../review-packets/authored-flowing-lava/registered-reference-vs-ai.png",
+        "../review-packets/authored-flowing-lava/browser/offset-05.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Every individual block and front wall is complete within its fixed panel. No extraction crop is used to conceal the later registration defects.",
+      "evidence": [
+        "source-01.png",
+        "../review-packets/authored-flowing-lava/registered-reference-vs-ai.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": false,
+      "note": "The later sheet rows are visibly lifted away from their ground roots; the final row leaves clear ground below the blocks. The reference pairs expose this directly.",
+      "evidence": [
+        "../review-packets/authored-flowing-lava/registered-reference-vs-ai.png",
+        "../review-packets/authored-flowing-lava/browser/offset-05.png"
+      ]
+    },
+    "animated-height": {
+      "pass": false,
+      "note": "The top/base extent and placement change through phases; the fixed-frame sequence breathes and lifts instead of keeping constant support and elevation.",
+      "evidence": [
+        "../review-packets/authored-flowing-lava/registered-reference-vs-ai.png",
+        "../review-packets/authored-flowing-lava/browser/inspection.json"
+      ]
+    },
+    "spatial-seams": {
+      "pass": false,
+      "note": "Phase-offset neighbors show obvious holes, stepped surface edges and disconnected lava features. These are readily visible at native scale, not a pixel-difference threshold.",
+      "evidence": [
+        "../review-packets/authored-flowing-lava/browser/offset-05.png",
+        "../review-packets/authored-flowing-lava/browser/dark-2x.png"
+      ]
+    },
+    "temporal-loop": {
+      "pass": false,
+      "note": "The last-to-first transition returns from a lifted final-row block to the initial lower registration, creating a visible jump despite valid12fps scheduling.",
+      "evidence": [
+        "../review-packets/authored-flowing-lava/registered-reference-vs-ai.png",
+        "../review-packets/authored-flowing-lava/browser/inspection.json",
+        "../review-packets/authored-flowing-lava/browser/native-00.png",
+        "../review-packets/authored-flowing-lava/browser/native-11.png"
+      ]
+    },
+    "frame-consistency": {
+      "pass": false,
+      "note": "The palette/material is recognizable throughout, but row/phase-dependent scale and placement leave the twelve frames unusable as a registered connected surface.",
+      "evidence": [
+        "../review-packets/authored-flowing-lava/registered-reference-vs-ai.png",
+        "../review-packets/authored-flowing-lava/browser/dark-2x.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The processed atlas preserves the AI-drawn phase art and all visible drift under one whole-canvas mapping; no individual block fitting or geometry mask is applied.",
+      "evidence": [
+        "source-01.png",
+        "processed/result.json",
+        "../review-packets/authored-flowing-lava/registered-reference-vs-ai.png"
+      ]
+    },
+    "motion-provenance": {
+      "pass": true,
+      "note": "The retained3D capture contains authored shader phases; imagegen edits that complete atlas into new phase artwork. Fixed extraction only samples panels: final phase art is AI-redrawn, not newly authored post-reskin texture motion.",
+      "evidence": [
+        "generation-01.json",
+        "render/scene.json",
+        "result.json"
+      ]
+    }
+  }
+}

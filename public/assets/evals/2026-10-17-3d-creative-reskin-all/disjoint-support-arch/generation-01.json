@@ -1,0 +1,37 @@
+{
+  "tool": "image_gen.imagegen",
+  "toolArguments": {
+    "prompt": "Use case: style-transfer. Asset: one complete independent rear depth-piece sprite of a stone game arch.\nImage 1 is the EDIT TARGET: the rear world-depth half of an arch, rendered alone with all of its own pillars and overhead masonry intact. Image 2 is GEOMETRY CONTEXT ONLY: the whole assembled arch; do not output that whole object and do not add its front depth half.\nReskin image 1 into finished hand-painted game stonework: weathered pale gray limestone blocks, readable mortar seams, subtly chipped bevels, granular stone faces and painted light/shade. Keep the useful modeled outer geometry, straight square bases, arch curve, full height and support positions. Add appealing surface craft without changing the broad shape or closing the opening.\nPreserve image 1's complete 1024x896 canvas, exact placement, scale and transparent margins. Its runtime frame is 512x448 and the projected ground root remains (256,312), represented at double resolution in this image. Do not center or enlarge the art within the canvas. Preserve this rear half's existing visible top depth and its two pillar bases. This is the rear piece only, with world depth -0.5 through 0; never invent the missing front half.\nSquare-grid top-down oblique projection, front-facing three-quarter RPG view. Ground cells stay screen-aligned; top and front surfaces visible; all parallel edges retain direction. The whole structure spans three cells, its left and right support cells are separate and the center passage is open; nominal visual height is 160 runtime pixels, 1.25 cell widths, with 128px cell pitch.\nReturn only the complete isolated rear arch piece on genuine transparency. Keep empty center passage and all margins transparent, no floor, no ground shadow, no guides, no labels, no checkerboard paint, no scene or other objects.",
+    "referenced_image_paths": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/arch-rear-3d.png",
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/whole-3d.png"
+    ],
+    "transparent_background": true
+  },
+  "prompt": "Use case: style-transfer. Asset: one complete independent rear depth-piece sprite of a stone game arch.\nImage 1 is the EDIT TARGET: the rear world-depth half of an arch, rendered alone with all of its own pillars and overhead masonry intact. Image 2 is GEOMETRY CONTEXT ONLY: the whole assembled arch; do not output that whole object and do not add its front depth half.\nReskin image 1 into finished hand-painted game stonework: weathered pale gray limestone blocks, readable mortar seams, subtly chipped bevels, granular stone faces and painted light/shade. Keep the useful modeled outer geometry, straight square bases, arch curve, full height and support positions. Add appealing surface craft without changing the broad shape or closing the opening.\nPreserve image 1's complete 1024x896 canvas, exact placement, scale and transparent margins. Its runtime frame is 512x448 and the projected ground root remains (256,312), represented at double resolution in this image. Do not center or enlarge the art within the canvas. Preserve this rear half's existing visible top depth and its two pillar bases. This is the rear piece only, with world depth -0.5 through 0; never invent the missing front half.\nSquare-grid top-down oblique projection, front-facing three-quarter RPG view. Ground cells stay screen-aligned; top and front surfaces visible; all parallel edges retain direction. The whole structure spans three cells, its left and right support cells are separate and the center passage is open; nominal visual height is 160 runtime pixels, 1.25 cell widths, with 128px cell pitch.\nReturn only the complete isolated rear arch piece on genuine transparency. Keep empty center passage and all margins transparent, no floor, no ground shadow, no guides, no labels, no checkerboard paint, no scene or other objects.",
+  "transparentBackground": true,
+  "references": [
+    "references/arch-rear-3d.png",
+    "references/whole-3d.png"
+  ],
+  "referenceRoles": {
+    "references/arch-rear-3d.png": "Complete independent rear depth-piece 3D edit target",
+    "references/whole-3d.png": "Whole-arch geometry context only; not output target"
+  },
+  "sourceRole": "AI reskin of independent rear depth piece",
+  "generationCalls": 1,
+  "imageGenerationCalls": 1,
+  "sourceSHA256": "84116ab4b596394c6f07eb1fa318716ec39aba88c8407c95ce3ea1c5a7b850ff",
+  "referenceSHA256": {
+    "references/arch-rear-3d.png": "daf9ccee655949bd6c86de3ffa3d347bfab11099bae2fcae4999d81839b8bb26",
+    "references/whole-3d.png": "315e97d787b40c1d0bd0ceee89ae52a609f0dfc9e42331b051b125ec405fae42"
+  },
+  "processing": {
+    "guide": "guides/arch-rear.json",
+    "command": ".venv/bin/python assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/source-01.png assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/guides/arch-rear.json assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/processed-01 --kind object --min-alpha 32",
+    "result": "processed-01/result.json"
+  },
+  "originalToolOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-87a3-7573-8abc-a5b9a86402dd/exec-c2a37570-ff37-46bf-8fa5-1a430480d9d7.png",
+  "untouchedSourceCopy": "source-01.png",
+  "allInputRastersInspectedBeforeCall": true
+}

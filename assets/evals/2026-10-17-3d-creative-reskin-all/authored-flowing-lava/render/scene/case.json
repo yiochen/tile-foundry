@@ -1,0 +1,49 @@
+{
+  "id": "authored-flowing-lava",
+  "prompt": "Generate a looping raised lava tile with a visibly moving surface. Use a full 128x128 ground base, 32px visible front-wall height, twelve frames at exactly 12 fps, and the same fixed top-down oblique projection. Deliver transparent 192x320px frames with local projected ground anchor (96,248) and a 4-column by 3-row runtime spritesheet. Preserve connected neighboring surfaces, including offset-phase neighbors. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in {{OUTPUT_DIR}}.",
+  "outputSubdir": "authored-flowing-lava",
+  "kind": "animation",
+  "expected": {
+    "size": [
+      192,
+      320
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "elevationPx": 32,
+    "elevationTolerancePx": 2,
+    "frames": 12,
+    "columns": 4,
+    "rows": 3,
+    "fps": 12,
+    "durationMs": 83.33333333333333,
+    "fullBase": true,
+    "minimumAlpha": 250
+  },
+  "visualChecks": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "animated-height": "Visible elevation and support stay fixed while the surface moves; no camera/scale breathing.",
+    "spatial-seams": "Inspect 3x3 animated neighbors through all phases, including offset-phase neighbors; no cracks, gradient jumps, or visible grid seams.",
+    "temporal-loop": "Motion is readable and the last-to-first transition has no unwanted pop.",
+    "frame-consistency": "All 12 poses/surfaces are usable, with common identity/palette/light and complete alpha.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting.",
+    "motion-provenance": "Motion and appearance provenance are explicit: distinguish model-drawn phases from authored texture animation. Source art is retained unchanged and processing is reproducible."
+  },
+  "repeat": [
+    3
+  ]
+}

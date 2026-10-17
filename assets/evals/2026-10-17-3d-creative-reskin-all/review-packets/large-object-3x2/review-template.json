@@ -1,0 +1,46 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {
+    "large-object-3x2": "37045875ac21b8e188a1bca6b81e4e39a506fb43d62588237e278c6da1ba18cb"
+  },
+  "sourceSHA256": {
+    "source-01.png": "a55cc5f15f9790f8564cd39b9df02057017bffe4a5bc4a1fc0f625e14967a8bf"
+  },
+  "resultSHA256": "f4bccb65513a5c181c7cb75fc59cc737efab93d48b83b4c719fa161e1ab19376",
+  "guideSHA256": "9d00a9993e9268dbe4d1e9df3dc3198e3a33a98c840065b0557a9b1ec9a5ba24",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "rectangular-size": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "multi-cell-overlap": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

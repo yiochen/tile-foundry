@@ -1,0 +1,5 @@
+{
+  "kind": "directions",
+  "sprites": 8,
+  "output": "assets/evals/2026-10-17-3d-creative-reskin-all/character-directions/result.json"
+}

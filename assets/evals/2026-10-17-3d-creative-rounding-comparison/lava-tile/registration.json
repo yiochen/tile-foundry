@@ -1,0 +1,151 @@
+{
+  "kind": "object",
+  "projection": "top-down-oblique-square-grid",
+  "elevationPx": 32,
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "workflow": "3d-imagegen-reskin",
+  "provenance": {
+    "reskinSources": [
+      "source-01.png"
+    ],
+    "geometryReferenceRun": "2026-10-17-3d-control-all",
+    "stage": "3d-capture-then-imagegen",
+    "geometryReferenceBundle": "authored-render",
+    "generationRecipe": "generation-01.json",
+    "sourceSHA256": "3a235f37124934eee65af84cee0e4023ef58a2b244acf2f40a62a4f6d4828617",
+    "reusedSourceRun": "2026-10-17-3d-creative-reskin-all",
+    "originalImageGenerationCalls": 1,
+    "thisProcessingRunImageGenerationCalls": 0,
+    "originalReskinSources": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/source-01.png"
+    ],
+    "processingRun": "2026-10-17-3d-creative-rounding-comparison",
+    "originalGenerationMetadata": "provenance/original-case-metadata",
+    "reuseRecord": "provenance/reused-source.json"
+  },
+  "independentReviewPending": true,
+  "declaredGeometry": {
+    "frame": [
+      192,
+      320
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "elevationPx": 32,
+    "nominalHeightPx": 32
+  },
+  "cleanup": {
+    "minAlpha": 32,
+    "scope": "Single global source-alpha threshold before panel extraction",
+    "removedAlphaMass": 46739,
+    "sourceAlphaMass": 137297785,
+    "sourceRGBChanged": false,
+    "rendererMaskApplied": false,
+    "colorKeyApplied": false
+  },
+  "panelIsolation": {
+    "method": "strict-authored-3d-panels",
+    "gutterGuidePx": 0,
+    "maximumOutsideAlphaBeforeThreshold": 0,
+    "outsideAlphaMassBeforeThreshold": 0,
+    "maximumOutsideAlphaAfterThreshold": 0,
+    "panelBoundaryAlphaAfterThreshold": 0
+  },
+  "sprites": [
+    {
+      "id": "lava-tile",
+      "role": "object",
+      "sourceImage": "source-01.png",
+      "sourceSHA256": "3a235f37124934eee65af84cee0e4023ef58a2b244acf2f40a62a4f6d4828617",
+      "generationRecipe": "generation-01.json",
+      "reusedSourceRun": "2026-10-17-3d-creative-reskin-all",
+      "elevationPx": 32,
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "guide.json",
+        "guideSHA256": "02384563d3b655541e39e3d2be28e3bec18c84be94bc30df505a31b5caf2fd4a",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          0,
+          0,
+          384,
+          640
+        ],
+        "sourceRect": [
+          0.0,
+          0.0,
+          971.7352941176471,
+          1619.558823529412
+        ],
+        "sourceEnvelope": [
+          0,
+          0,
+          972,
+          1620
+        ],
+        "sourceImage": "source-01.png",
+        "sourceSHA256": "3a235f37124934eee65af84cee0e4023ef58a2b244acf2f40a62a4f6d4828617",
+        "reusedSourceRun": "2026-10-17-3d-creative-reskin-all"
+      },
+      "normalization": {
+        "scale": [
+          0.19758467265958413,
+          0.19758467265958413
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          485.86764705882354,
+          1255.1580882352941
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "cleanup": {
+        "minAlpha": 32,
+        "scope": "Single global source-alpha threshold before panel extraction",
+        "removedAlphaMass": 46739,
+        "sourceAlphaMass": 137297785,
+        "sourceRGBChanged": false,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      },
+      "panelIsolation": {
+        "method": "strict-authored-3d-panels",
+        "gutterGuidePx": 0,
+        "maximumOutsideAlphaBeforeThreshold": 0,
+        "outsideAlphaMassBeforeThreshold": 0,
+        "maximumOutsideAlphaAfterThreshold": 0,
+        "panelBoundaryAlphaAfterThreshold": 0
+      },
+      "sourceProcessing": "processed/result.json"
+    }
+  ]
+}

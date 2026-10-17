@@ -1,0 +1,35 @@
+{
+  "workflow": "3d-imagegen-reskin",
+  "status": "complete-source-only-processing-failure",
+  "plannedImageGenerationCalls": 2,
+  "imageGenerationCalls": 2,
+  "completedImageGenerationCalls": 2,
+  "attemptPolicy": "one stool and one character-only attempt; no retries/fallback",
+  "minAlpha": 32,
+  "guideAuthoredBeforeGeneration": true,
+  "extractions": [
+    {
+      "source": "source-01.png",
+      "status": "success",
+      "result": "processed-01/result.json"
+    },
+    {
+      "source": "source-02.png",
+      "status": "rejected",
+      "error": "Generated whole-sheet aspect differs from guide beyond one source pixel; no axis stretching"
+    }
+  ],
+  "sourceOnlyFailure": true,
+  "independentReviewPending": true,
+  "integrityChecks": {
+    "originalOutputCopiesByteIdentical": true,
+    "sourceAndReferenceHashesVerified": true,
+    "guideHashesVerified": true,
+    "noSharedRunOrSkillFilesModifiedByExecutor": true
+  },
+  "previewInspection": {
+    "method": "view_image of actual produced PNGs",
+    "qualityGrade": "not assigned; independent reviewer only",
+    "browserGalleryHandledByParent": true
+  }
+}

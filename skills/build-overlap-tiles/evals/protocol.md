@@ -32,9 +32,13 @@ The output path in the request is a storage instruction, not text to paint.
 
 ## Execute once, retain failures
 
-Use one fresh generation attempt per case, except the seated-layer case's two
-planned calls (stool, then character). Record actual calls, references and any
-unsupported step. Do not automatically retry, edit the rubric after seeing an
+Use one fresh imagegen reskin attempt per planned output. Plan output roles and
+call counts before generation: ordinarily one whole asset/sheet; two calls for
+the seated case (stool, then character); separately reskinned complete depth
+pieces for an arch, with a composited whole-object preview. Every case, including
+floors and simple blocks, needs an actual imagegen pass after its 3D capture.
+Existing retained 3D controls may be reused as explicitly labeled references,
+never as new AI results. Record actual calls, references and any unsupported step. Do not automatically retry, edit the rubric after seeing an
 output, tune the skill to pass, recycle old assets, or make manual anchor/scale
 adjustments that hide a failure. A later revision requires a new frozen run.
 
@@ -158,3 +162,13 @@ a grading-policy change, freeze that policy and grader in a new assessment
 directory, independently review the unchanged images, and save new reviews and
 reports there. Preserve the original skill snapshot, suite, images and grades;
 label the new assessment separately from a fresh generation run.
+
+## Shape freedom and coverage audit
+
+Keep the visual rubric unchanged across prompt revisions. In addition to the
+rubric, record whether each delivered layer/depth piece has a fresh imagegen
+source and an inspected 3D reference, and whether the intended visual change
+occurred. For characters, inspect replacement of primitive anatomy/hair/clothing
+with finished shapes; for blocks, inspect useful form preservation plus improved
+appearance. This separate style audit does not override a geometry failure.
+Direct renders are controls, not successful reskins.

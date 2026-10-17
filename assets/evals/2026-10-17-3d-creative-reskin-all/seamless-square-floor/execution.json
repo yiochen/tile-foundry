@@ -1,0 +1,54 @@
+{
+  "caseId": "seamless-square-floor",
+  "workflow": "3d-imagegen-reskin",
+  "callCount": 1,
+  "imageGenerationCalls": 1,
+  "attemptBudget": 1,
+  "shapeEditPolicy": "Preserve useful flat square outer geometry; refine material texture and local stone detail.",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-abdb29ef-a4c2-49ea-bede-b564f10384e6.png",
+  "sourceSHA256": "e2be394f67d101a761e19861f2aa121ecc17c7100ecef14c53a6381b0ee2b84f",
+  "processingStatus": "processed",
+  "guidePreparedBeforeGeneration": true,
+  "referencesInspectedBeforeGeneration": true,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "freshRender": false,
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "processingCommand": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/tile_tools.py",
+    "floor-material",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seamless-square-floor/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seamless-square-floor/sprites/tile.png"
+  ],
+  "processingExitCode": 0,
+  "processingStdout": "floor-material: complete\n",
+  "processingStderr": "",
+  "processingInfo": {
+    "processor": "processing-tools/tile_tools.py",
+    "sha256": "836e1935bbd733cdca0aa4e82728ca3748ad820aec2da5ce86c6d19d75865490",
+    "predeclaredMinAlpha": 0,
+    "fitting": false,
+    "clipping": false,
+    "rendererSilhouetteApplied": false,
+    "colorKeyApplied": false
+  },
+  "processingResult": "result.json",
+  "resultSHA256": "e39544325ca987f8bcba64d92e08e812e3068e59c58d7a763d886b8ade50f1c3",
+  "submissionSHA256": "b288fee96ab5e32139637bbd83fca8b7db75a0a0218ab8fc5cd46198bd48a808",
+  "reviewPreviews": [
+    "previews/repeat-3-2x.png",
+    "previews/repeat-3-native.png",
+    "previews/repeat-5-2x.png",
+    "previews/repeat-5-native.png",
+    "previews/seamless-square-floor-dark-2x.png",
+    "previews/seamless-square-floor-dark-native.png",
+    "previews/seamless-square-floor-light-2x.png",
+    "previews/seamless-square-floor-light-native.png",
+    "previews/seamless-square-floor-stored-anchor-grid.png"
+  ],
+  "deliveryIntegrityChecked": true,
+  "savedPreviewsInspected": true
+}

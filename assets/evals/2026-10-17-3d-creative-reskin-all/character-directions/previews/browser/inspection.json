@@ -1,0 +1,7 @@
+{
+  "kind": "runtime-artifact-browser-inspection",
+  "sourceOnly": false,
+  "input": "directions.html",
+  "browserErrors": [],
+  "displayedDirections": 8
+}

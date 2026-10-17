@@ -1,0 +1,41 @@
+{
+  "script": "../art/assemble_and_preview.py",
+  "candidateArt": [
+    "../sprites/arch-rear.png",
+    "../sprites/arch-front.png"
+  ],
+  "placement": "All complete 512x448 frames composite at origin, common stored ground root (256,312)",
+  "fitting": false,
+  "diagnosticActors": [
+    {
+      "position": "behind",
+      "worldZ": -0.8,
+      "reference": "../geometry-reference/render/actor-behind.png",
+      "role": "Reused separate 3D diagnostic actor only; arch pieces are new AI artwork",
+      "offsetPx": [
+        0,
+        0
+      ]
+    },
+    {
+      "position": "center",
+      "worldZ": 0,
+      "reference": "../geometry-reference/render/actor-center.png",
+      "role": "Reused separate 3D diagnostic actor only; arch pieces are new AI artwork",
+      "offsetPx": [
+        0,
+        0
+      ]
+    },
+    {
+      "position": "foreground",
+      "worldZ": 0.8,
+      "reference": "../geometry-reference/render/actor-foreground.png",
+      "role": "Reused separate 3D diagnostic actor only; arch pieces are new AI artwork",
+      "offsetPx": [
+        0,
+        0
+      ]
+    }
+  ]
+}

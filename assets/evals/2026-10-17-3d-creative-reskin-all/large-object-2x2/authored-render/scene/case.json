@@ -1,0 +1,48 @@
+{
+  "id": "large-object-2x2",
+  "prompt": "Generate a stone fountain occupying exactly a 2x2 square of 128px cells (256x256 ground footprint), with 128px visible height. Deliver one complete transparent object, with a ground anchor at the center of the 2x2 footprint. Deliver each sprite in a 384x576px frame with local projected ground anchor (192,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in {{OUTPUT_DIR}}.",
+  "outputSubdir": "large-object-2x2",
+  "kind": "object",
+  "expected": {
+    "size": [
+      384,
+      576
+    ],
+    "footprint": [
+      256,
+      256
+    ],
+    "anchor": [
+      192,
+      376
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "elevationPx": 128,
+    "elevationTolerancePx": 3
+  },
+  "visualChecks": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "multi-cell-size": "The base is 256x256 at the shared 128px grid scale; it is not shrunk into a single cell.",
+    "multi-cell-overlap": "Place on a multi-row grid: the whole fountain extends upward, overlaps correctly, and is never cut into cell-sized raster fragments.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  }
+}

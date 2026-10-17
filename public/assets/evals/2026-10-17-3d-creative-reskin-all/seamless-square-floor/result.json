@@ -1,0 +1,80 @@
+{
+  "version": 2,
+  "kind": "floor",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "workflow": "3d-imagegen-reskin",
+  "sprites": [
+    {
+      "id": "seamless-square-floor",
+      "image": "sprites/tile.png",
+      "size": [
+        128,
+        128
+      ],
+      "anchor": [
+        64,
+        64
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ]
+      ],
+      "elevationPx": 0,
+      "artRect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "processing": {
+        "version": 1,
+        "kind": "floor",
+        "size": [
+          128,
+          128
+        ],
+        "anchor": [
+          64.0,
+          64.0
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "sourceSize": [
+          1254,
+          1254
+        ],
+        "scale": 0.10207336523125997,
+        "method": "Whole square material, uniform resampling; no crop or guessed-color removal",
+        "image": "tile.png"
+      }
+    }
+  ],
+  "processing": {
+    "method": "uniform-square-resampling",
+    "processor": "processing-tools/tile_tools.py",
+    "sidecar": "sprites/tile.json",
+    "wholeOpaqueSquare": true,
+    "crop": false
+  },
+  "provenance": {
+    "imageGenerationCalls": 1,
+    "reskinSources": [
+      "source-01.png"
+    ],
+    "geometryReferenceRun": "2026-10-17-3d-control-all",
+    "stage": "3d-capture-then-imagegen",
+    "geometryReferenceBundle": "authored-render",
+    "generationRecipe": "generation-01.json",
+    "sourceSHA256": "e2be394f67d101a761e19861f2aa121ecc17c7100ecef14c53a6381b0ee2b84f"
+  }
+}

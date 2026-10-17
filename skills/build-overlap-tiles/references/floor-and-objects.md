@@ -1,8 +1,14 @@
 # Floors, calibration objects and animation
 
+The default final-art workflow is [3D capture followed by imagegen reskin](three-dimensional.md).
+The SVG/material methods below are optional authoring helpers or explicitly requested
+alternatives. When used to author geometry/motion, capture that result and apply
+the final reskin too; do not substitute a material-only/direct render for it.
+
 Commands use `SKILL_DIR` (this copied skill's directory) and the requested
 `OUTPUT_DIR`, from any working directory. Install bundled Python dependencies.
-Use an inspected local SVG raster as the image reference; retain SVG/layout too.
+Use an inspected 3D plane capture as the default floor reference. The optional
+SVG guides below are an alternate authoring source; retain their layout too.
 Follow the [projection profile](projection.md) and [output contract](geometry.md).
 
 ## Flat visible floor

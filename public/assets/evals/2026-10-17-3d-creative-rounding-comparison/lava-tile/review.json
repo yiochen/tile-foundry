@@ -1,0 +1,88 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (rounding comparison)",
+  "independent": true,
+  "spriteSHA256": {
+    "lava-tile": "deacede5050708ff0fa10b459535c9790993e34a6235d7c0cc0d16c8362f79a8"
+  },
+  "sourceSHA256": {
+    "source-01.png": "3a235f37124934eee65af84cee0e4023ef58a2b244acf2f40a62a4f6d4828617"
+  },
+  "resultSHA256": "177d4160a15fc38e9757f70d45a09a15cbf784ebe5efc6776ac6a8a5c14bbfea",
+  "guideSHA256": "02384563d3b655541e39e3d2be28e3bec18c84be94bc30df505a31b5caf2fd4a",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The broad top remains a screen-aligned square and a distinct front wall projects down from its front edge. Parallel outer edges and the fixed repeated placement retain the supplied oblique convention; the material relief does not introduce a receding camera or a diamond base.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/previews/lava-tile-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/previews/lava-tile-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/reviewer-neighbors-3-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The complete slab and small edge glow fit inside the delivered frame, with clearance at the sides and bottom. Light and dark native/2x cutouts show no abruptly cut rock, wall, or effect and no undeclared floor or cast shadow.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/previews/lava-tile-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/previews/lava-tile-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The same-frame comparison retains the centered slab footprint and the top/front-wall placement of the authored reference. The placement and complete-frame repeats remain centered at the stored ground registration, with only small irregular illustrated edges rather than a material root displacement. This is a qualitative registration judgment, not certification of exact AI geometry.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/reviewer-neighbors-3-native.png"
+      ]
+    },
+    "visible-height": {
+      "pass": true,
+      "note": "A substantial compressed-texture front face is visible below the square top, with a readable front crease. Its apparent thickness is close to the supplied 32px wall reference at native and 2x scale; the delivery reads as raised terrain rather than a flat swatch.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/previews/lava-tile-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/previews/lava-tile-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/previews/lava-tile-dark-2x.png"
+      ]
+    },
+    "full-base": {
+      "pass": true,
+      "note": "The rectangular opaque body spans the complete square cell in the stored placement. The 3x3 and 5x5 complete-frame repeats show no exposed background holes, corner gaps, or narrowing between neighboring bases. This visual pass does not imply pixel-exact source geometry.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/placement-0-dark.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/reviewer-neighbors-3-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/reviewer-neighbors-5-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/reviewer-neighbors-5-2x.png"
+      ]
+    },
+    "lava-joins": {
+      "pass": false,
+      "note": "Repeated surfaces reveal a regular grid of thin straight boundaries. Bright molten channels terminate or jump into different crust/channel shapes at vertical boundaries, and horizontal row boundaries cut straight across the organic material. These are visible discontinuities at native scale and clearer at 2x, beyond the mere recurrence of the same motif.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/neighbors-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/reviewer-neighbors-3-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/reviewer-neighbors-3-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/reviewer-neighbors-5-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/reviewer-neighbors-5-2x.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The delivered slab preserves the generated source's rock islands, bright channel layout, square top, and compressed front-wall material after the declared common uniform resampling/alpha cleanup. I see no substituted artwork, sliced overlap, or later shape fitting. The observed repeat failure is already a material continuity issue in the source design.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/lava-tile/previews/lava-tile-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/lava-tile/reviewer-neighbors-3-2x.png"
+      ]
+    }
+  }
+}

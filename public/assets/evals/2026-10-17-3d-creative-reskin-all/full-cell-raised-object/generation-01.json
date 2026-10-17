@@ -1,0 +1,37 @@
+{
+  "prompt": "Reskin image 1, an authored 3D stone plinth capture, into a finished hand-painted stone game prop. Keep the modeled outer rectangular form, square ground base, exact top/front alignment and visible wall height. Improve the bland stone with softly weathered pale gray masonry, subtle mineral variation, fine hairline cracks, restrained edge chips and shallow bevel shading. Keep small details within the useful modeled exterior rather than changing its shape. Preserve square-grid top-down oblique projection, front-facing three-quarter game view, screen-aligned ground edges, parallel side edges, fixed reference camera and unchanged feature scale. The runtime full base is 128x128 and its visible height/front wall is 64px (half a base width). Preserve the complete 384x640 reference canvas and 3:5 aspect, all transparent margins and original subject position. It corresponds to a 192x320 frame with ground root (96,248); do not fit or recenter the visible stone. Return the complete isolated plinth on genuine transparency. No floor, cast shadow, external outline/glow, props, text or labels.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "references": [
+    "references/edit-target.png"
+  ],
+  "referenceSHA256": {
+    "references/edit-target.png": "96d5e62e61d4b483fbc6b0a3893bcfd202101475cb941f99c209b3a011e0bc83"
+  },
+  "referenceRoles": {
+    "references/edit-target.png": "floor-free modeled 3D geometry edit target"
+  },
+  "toolArguments": {
+    "prompt": "Reskin image 1, an authored 3D stone plinth capture, into a finished hand-painted stone game prop. Keep the modeled outer rectangular form, square ground base, exact top/front alignment and visible wall height. Improve the bland stone with softly weathered pale gray masonry, subtle mineral variation, fine hairline cracks, restrained edge chips and shallow bevel shading. Keep small details within the useful modeled exterior rather than changing its shape. Preserve square-grid top-down oblique projection, front-facing three-quarter game view, screen-aligned ground edges, parallel side edges, fixed reference camera and unchanged feature scale. The runtime full base is 128x128 and its visible height/front wall is 64px (half a base width). Preserve the complete 384x640 reference canvas and 3:5 aspect, all transparent margins and original subject position. It corresponds to a 192x320 frame with ground root (96,248); do not fit or recenter the visible stone. Return the complete isolated plinth on genuine transparency. No floor, cast shadow, external outline/glow, props, text or labels.",
+    "referenced_image_paths": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/references/edit-target.png"
+    ],
+    "transparent_background": true
+  },
+  "shapeEditPolicy": "Preserve modeled rigid outer geometry, square base and 64px wall height; refine stone materials, bevel shading and detail.",
+  "workflow": "3d-imagegen-reskin",
+  "status": "generated",
+  "attempt": 1,
+  "attemptBudget": 1,
+  "imageGenerationCalls": 1,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "geometryReferenceBundle": "authored-render",
+  "predeclaredProcessing": {
+    "kind": "object",
+    "minAlpha": 32,
+    "guide": "guide.json",
+    "perPoseFitting": false
+  },
+  "sourceSHA256": "632d736dc3839a33bebd7b86cec3973a4f37fe475620321191fee308eb64ba4a",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-2df94f15-746c-4a9f-aacd-a2ee57c665c1.png"
+}

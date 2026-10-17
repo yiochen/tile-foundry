@@ -1,0 +1,114 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "full-cell-raised-object",
+  "request": "Generate a square stone plinth with a full 128x128 base and 64px visible height. Preserve the square-grid top-down oblique projection and fixed ground anchor. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "full-base": "All four footprint edges fill the cell; no rounded corner gaps or perspective taper.",
+    "visible-height": "Top/front division shows 64px elevation with upward extension beyond the logical cell.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "object",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "groundAnchorAlignment": "center",
+    "sprites": [
+      {
+        "id": "full-cell-raised-object",
+        "image": "processed/frames/frame-00.png",
+        "size": [
+          192,
+          320
+        ],
+        "anchor": [
+          96,
+          248
+        ],
+        "footprint": [
+          128,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ]
+        ],
+        "elevationPx": 64,
+        "index": 0,
+        "role": "object"
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "full-cell-raised-object",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.19767441860465118,
+          0.19767441860465118
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          485.6470588235294,
+          1254.5882352941176
+        ],
+        "anchorOut": [
+          96,
+          248
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        0.0,
+        0.0,
+        971.2941176470588,
+        1618.8235294117646
+      ],
+      "cleanup": {
+        "minAlpha": 32,
+        "removedAlphaMass": 63231,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/references/edit-target.png"
+    },
+    {
+      "role": "processed",
+      "id": "full-cell-raised-object",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/processed/frames/frame-00.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/full-cell-raised-object/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/full-cell-raised-object/placement-0-dark.png"
+    },
+    {
+      "role": "neighbor-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/full-cell-raised-object/neighbors-0.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/references/visual-review.md"
+}

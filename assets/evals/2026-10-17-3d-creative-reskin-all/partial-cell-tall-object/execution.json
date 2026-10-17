@@ -1,0 +1,54 @@
+{
+  "caseId": "partial-cell-tall-object",
+  "workflow": "3d-imagegen-reskin",
+  "callCount": 1,
+  "imageGenerationCalls": 1,
+  "attemptBudget": 1,
+  "shapeEditPolicy": "Preserve rigid lantern modeled base/shaft/crown geometry, nominal height and support; refine materials, glass, bevels and small decorative detail.",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-1f91b3be-5ce8-4b10-b47d-51582bad997e.png",
+  "sourceSHA256": "325d5c533845b3cea48cbd0f86e20fbc8cc078bbec1c6fe3fd5a36a9465de705",
+  "processingStatus": "processed",
+  "guidePreparedBeforeGeneration": true,
+  "referencesInspectedBeforeGeneration": true,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "freshRender": false,
+  "sourceSize": [
+    971,
+    1619
+  ],
+  "processingCommand": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/guide.json",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/processed",
+    "--kind",
+    "object",
+    "--min-alpha",
+    "32"
+  ],
+  "processingExitCode": 0,
+  "processingStdout": "{\n  \"kind\": \"object\",\n  \"sprites\": 1,\n  \"sourceSHA256\": \"325d5c533845b3cea48cbd0f86e20fbc8cc078bbec1c6fe3fd5a36a9465de705\",\n  \"removedAlphaMass\": 37607,\n  \"output\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/processed\"\n}\n",
+  "processingStderr": "",
+  "processingInfo": {
+    "processor": "processing-tools/extract_registered_sheet.py",
+    "sha256": "3a5608f99967d58a4e71e1d2473a8651a5eb6c5f6bfccb539465677a1ea291a6",
+    "predeclaredMinAlpha": 32,
+    "fitting": false,
+    "clipping": false,
+    "rendererSilhouetteApplied": false,
+    "colorKeyApplied": false
+  },
+  "processingResult": "result.json",
+  "resultSHA256": "694194b610fb51e428e5ee453aac008700dcd021904817885b1b3e3eb02dbded",
+  "submissionSHA256": "dc1f22832bb729ce63be4fec2ff5a8f46dd457b6086ed500132077a6f4ca19fc",
+  "reviewPreviews": [
+    "previews/partial-cell-tall-object-dark-2x.png",
+    "previews/partial-cell-tall-object-dark-native.png",
+    "previews/partial-cell-tall-object-light-2x.png",
+    "previews/partial-cell-tall-object-light-native.png",
+    "previews/partial-cell-tall-object-stored-anchor-grid.png"
+  ],
+  "deliveryIntegrityChecked": true,
+  "savedPreviewsInspected": true
+}

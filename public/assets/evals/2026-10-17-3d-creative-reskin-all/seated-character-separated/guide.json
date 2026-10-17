@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "kind": "independent-rendered-3d-pieces",
+  "projection": "top-down-oblique-square-grid",
+  "frame": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "cellSize": 128,
+  "guides": [
+    "guides/stool.json",
+    "guides/character.json"
+  ],
+  "authoredBeforeGeneration": true,
+  "minAlpha": 32,
+  "plan": "stool then character only with completed stool support reference"
+}

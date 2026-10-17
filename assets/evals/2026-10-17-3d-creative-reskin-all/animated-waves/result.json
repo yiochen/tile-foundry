@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "kind": "animation",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "workflow": "3d-imagegen-reskin",
+  "sprites": [],
+  "frames": [],
+  "processingFailure": {
+    "reason": "ValueError: Art crosses a sheet gutter/outside declared panels (alpha 253); regenerate isolated fixed-layout panels instead of clipping",
+    "processor": "assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py",
+    "minAlpha": 32,
+    "stdout": "extraction.stdout.txt",
+    "stderr": "extraction.stderr.txt",
+    "noRecoveryAttempted": true
+  },
+  "provenance": {
+    "imageGenerationCalls": 1,
+    "reskinSources": [
+      "source-01.png"
+    ],
+    "geometryReferenceRun": "2026-10-17-3d-control-all",
+    "stage": "3d-capture-then-imagegen",
+    "sourceSHA256": "ffb3944026a61ec6c35cb1cf16f7f698998782368504f4ab1864f789b3132f77",
+    "suppliedExistingCapture": true,
+    "newRenderPerformed": false
+  },
+  "sourceOnly": true,
+  "fps": 12
+}

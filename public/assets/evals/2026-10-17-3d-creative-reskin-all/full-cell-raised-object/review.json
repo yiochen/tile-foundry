@@ -1,0 +1,73 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "independent": true,
+  "spriteSHA256": {
+    "full-cell-raised-object": "bfb85dea840eff23e51029d4481a1b2d5630bc08744f44e88ee1dee623892a38"
+  },
+  "sourceSHA256": {
+    "source-01.png": "632d736dc3839a33bebd7b86cec3973a4f37fe475620321191fee308eb64ba4a"
+  },
+  "resultSHA256": "693f67dd529de9bf19e97a2b89ba0e87a76c5ca07d755e9ff71c86d96d184a74",
+  "guideSHA256": "2590f707129d5b4c2b1aa0af90e9334176d3a746d508f4d1df06c4d02760110b",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The broad light stone bands read as the screen-aligned top paving, with the darker lower band forming the front wall. Top/front division and parallel grid orientation remain consistent with the 3D reference.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/previews/full-cell-raised-object-light-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The complete plinth including the lower bevel fits the frame. Light and dark 2x views show no clipped feature or detached external shadow.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/previews/full-cell-raised-object-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/previews/full-cell-raised-object-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The placement cross stays at the ground-square center beneath the elevated top. The front support edge and broad top depth agree perceptually with the reference; no bottom-of-art snapping is evident.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/full-cell-raised-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/full-cell-raised-object/neighbors-0.png"
+      ]
+    },
+    "full-base": {
+      "pass": true,
+      "note": "The square block spans the cell and neighboring copies meet across the full width. Small chips and bevel variations read as stone finish rather than a missing corner or a tapered footprint.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/full-cell-raised-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/full-cell-raised-object/neighbors-0.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/previews/full-cell-raised-object-light-2x.png"
+      ]
+    },
+    "visible-height": {
+      "pass": true,
+      "note": "The darker lower front band reads as roughly the requested 64px wall below the broad top surface; the top extends above the logical cell. The light top paving bands should not be counted as extra vertical wall courses.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/previews/full-cell-raised-object-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/full-cell-raised-object/placement-0-light.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Stone courses, cracks, and lower bevel are preserved from the original in the processed sprite. The declared fixed uniform registration and alpha cleanup explain the delivered appearance without invented geometry.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/previews/full-cell-raised-object-light-2x.png"
+      ]
+    }
+  }
+}

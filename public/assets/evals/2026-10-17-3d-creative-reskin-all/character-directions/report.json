@@ -1,0 +1,288 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "character-directions",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/character-directions"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate one original player in eight neutral standing directions: north, northeast, east, southeast, south, southwest, west, northwest. Use the same 128x128 calibration tile in each isolated panel, nominal 160px standing height, and a consistent floor-center foot/root anchor. Deliver separate transparent sprites after floor removal. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Arrange the isolated source panels in 4 columns and 2 rows, in the stated frame order. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/character-directions."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "dec24f98d2b99318a710760d0116dd0fe0e28f51a133b949c68c44d7d741e83b"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/pose-sheet.png",
+        "references/calibration-sheet.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "e72edb9e0a6f1c17627d391cedaead7701544c108be798cef16a3aa75447c6e9"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "directions",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 8
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "frame-00",
+        "frame-01",
+        "frame-02",
+        "frame-03",
+        "frame-04",
+        "frame-05",
+        "frame-06",
+        "frame-07"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "frame-order",
+      "pass": true,
+      "detail": "Explicit frame order"
+    },
+    {
+      "check": "eight-directions",
+      "pass": true,
+      "detail": [
+        "N",
+        "NE",
+        "E",
+        "SE",
+        "S",
+        "SW",
+        "W",
+        "NW"
+      ]
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "All eight views retain the same elevated front/top reading and coherent turning; no isometric diamond base or changed camera is introduced.",
+      "evidence": [
+        "source-01.png",
+        "../review-packets/character-directions/registered-reference-vs-ai.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "Hair, hands, boots and every complete silhouette fit the fixed frames; light/dark placements reveal no clipped extremities.",
+      "evidence": [
+        "../review-packets/character-directions/registered-reference-vs-ai.png",
+        "../review-packets/character-directions/placement-6-dark.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "The rear-view heels and entire boot/support region sit visibly lower than the authored ground reference. This is more than forward toe extension: the stored cross meets the boot shafts rather than the original support center.",
+      "evidence": [
+        "../review-packets/character-directions/registered-reference-vs-ai.png",
+        "../review-packets/character-directions/placement-0-light-2x.png"
+      ]
+    },
+    {
+      "check": "same-character",
+      "pass": true,
+      "detail": "The eight turns preserve brown shaped hair, blue tunic, dark trousers, bracers and brown cuffed boots. Back views show the back rather than a second front-facing character.",
+      "evidence": [
+        "source-01.png",
+        "../review-packets/character-directions/registered-reference-vs-ai.png"
+      ]
+    },
+    {
+      "check": "direction-height",
+      "pass": false,
+      "detail": "The standing design has visibly expanded relative to the supplied nominal-height rig: the crown rises and the legs/boots extend downward. The side/front comparisons do not establish the requested common nominal standing scale.",
+      "evidence": [
+        "../review-packets/character-directions/registered-reference-vs-ai.png",
+        "../review-packets/character-directions/placement-4-light-2x.png"
+      ]
+    },
+    {
+      "check": "direction-contact",
+      "pass": false,
+      "detail": "Heel/support positions are displaced below the common ground location, also visible from behind where shoe toes cannot explain the shift. A fixed metadata root does not repair this contact.",
+      "evidence": [
+        "../review-packets/character-directions/registered-reference-vs-ai.png",
+        "../review-packets/character-directions/placement-0-light-2x.png"
+      ]
+    },
+    {
+      "check": "cutout",
+      "pass": true,
+      "detail": "Processed light/dark views have clean transparent surroundings and no calibration tile or guide strokes.",
+      "evidence": [
+        "../review-packets/character-directions/placement-0-light-2x.png",
+        "../review-packets/character-directions/placement-6-dark.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The delivered frames retain the source redesign and its scale/contact defects. Declared fixed rectangles, common sampling scale and global alpha32 cleanup do not fit individual subjects or stencil their silhouettes.",
+      "evidence": [
+        "source-01.png",
+        "processed/result.json",
+        "../review-packets/character-directions/registered-reference-vs-ai.png"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "frame-00-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-01-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-02-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-03-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-04-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-05-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-06-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "frame-07-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "upright-bounds",
+      "detail": {
+        "alphaHeights": [
+          217,
+          220,
+          227,
+          221,
+          218,
+          215,
+          222,
+          217
+        ],
+        "note": "Pose and toe length change bounds; judge anatomy scale and support visually."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "Independent Codex vision review (motion/character creative reskin)",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

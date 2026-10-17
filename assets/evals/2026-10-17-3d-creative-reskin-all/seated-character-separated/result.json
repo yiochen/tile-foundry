@@ -1,0 +1,70 @@
+{
+  "version": 2,
+  "kind": "layered",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "workflow": "3d-imagegen-reskin",
+  "sprites": [],
+  "processingFailure": {
+    "source": "source-02.png",
+    "guide": "guides/character.json",
+    "reason": "Generated whole-sheet aspect differs from guide beyond one source pixel; no axis stretching",
+    "sourceSize": [
+      971,
+      1620
+    ],
+    "guideSize": [
+      384,
+      640
+    ],
+    "requiredTolerancePx": 1,
+    "delivery": "source-only; no normalized character or recomposed runtime candidate"
+  },
+  "declaredGeometry": {
+    "frame": [
+      192,
+      320
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "nominalStandingHeightPx": 160,
+    "supportElevationPx": 48,
+    "supportElevationBakedIntoArt": true,
+    "attachmentPoint": [
+      96,
+      220.48
+    ],
+    "elevationOffsetAppliedDuringRecompositionPx": 0
+  },
+  "availableIndependentProcessing": {
+    "stool": {
+      "source": "source-01.png",
+      "result": "processed-01/result.json",
+      "role": "retained successful individual extraction; incomplete case delivery"
+    }
+  },
+  "provenance": {
+    "imageGenerationCalls": 2,
+    "reskinSources": [
+      "source-01.png",
+      "source-02.png"
+    ],
+    "geometryReferenceRun": "2026-10-17-3d-control-all",
+    "stage": "3d-capture-then-imagegen",
+    "geometryReference": "provenance/reused-geometry.json"
+  },
+  "independentReviewPending": true
+}

@@ -1,0 +1,108 @@
+{
+  "run": "2026-10-17-3d-creative-reskin-all",
+  "kind": "imagegen-coverage-audit",
+  "scope": "Source/provenance coverage only; visual quality and delivery grades are separate.",
+  "cases": [
+    {
+      "caseId": "seamless-square-floor",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 1,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "lava-tile",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 0,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "full-cell-raised-object",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 1,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "partial-cell-tall-object",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 1,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "floating-object",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 1,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "character-directions",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 8,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "large-object-2x2",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 1,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "large-object-3x2",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 1,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "disjoint-support-arch",
+      "imagegenSources": 2,
+      "deliveredSpritesAndPieces": 3,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "animated-waves",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 0,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "animated-lava",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 0,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "seated-character-separated",
+      "imagegenSources": 2,
+      "deliveredSpritesAndPieces": 0,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "dancing-player",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 12,
+      "freshReskinCoverage": true,
+      "errors": []
+    },
+    {
+      "caseId": "authored-flowing-lava",
+      "imagegenSources": 1,
+      "deliveredSpritesAndPieces": 12,
+      "freshReskinCoverage": true,
+      "errors": []
+    }
+  ],
+  "actualImagegenSources": 16,
+  "plannedImagegenCalls": 16,
+  "ok": true
+}

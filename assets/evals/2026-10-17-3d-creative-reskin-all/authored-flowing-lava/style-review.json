@@ -1,0 +1,12 @@
+{
+  "reviewer": "Independent Codex vision review (motion/character creative reskin)",
+  "scope": "Separate qualitative style assessment; does not override fixed visual/delivery rubric.",
+  "shapePolicy": "Retain simple raised block geometry and improve material/detail across authored motion phases.",
+  "shapeRefinementObserved": true,
+  "observation": "Richer molten channels and rocky crust replace the procedural surface. Useful block geometry/support is nevertheless changed; later rows lift and repetitions disconnect.",
+  "evidence": [
+    "source-01.png",
+    "../review-packets/authored-flowing-lava/registered-reference-vs-ai.png",
+    "../review-packets/authored-flowing-lava/browser/offset-05.png"
+  ]
+}

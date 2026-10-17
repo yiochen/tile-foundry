@@ -1,0 +1,73 @@
+{
+  "caseId": "authored-flowing-lava",
+  "status": "processed",
+  "imageGenerationCalls": 1,
+  "shapePolicy": "Retain the useful modeled block geometry, full square 128x128 base, 32px front wall, root and full panel layout; polish surface artwork and moving phase detail.",
+  "geometryInput": {
+    "kind": "supplied-existing-3d-capture",
+    "originalPath": "assets/evals/2026-10-17-3d-control-all/authored-flowing-lava/render",
+    "copiedTo": "render",
+    "newRenderPerformed": false
+  },
+  "processing": {
+    "processor": "../skill-snapshot/scripts/extract_registered_sheet.py",
+    "minAlpha": 32,
+    "wholeCanvasUniformScale": true,
+    "rectangles": "render/guide.json",
+    "perPoseFitting": false,
+    "clipping": false,
+    "rendererStencil": false,
+    "fallback3D": false,
+    "command": [
+      ".venv/bin/python",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/authored-flowing-lava/source-01.png",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/authored-flowing-lava/render/guide.json",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/authored-flowing-lava/processed",
+      "--kind",
+      "animation",
+      "--min-alpha",
+      "32"
+    ],
+    "exitCode": 0,
+    "result": "processed",
+    "error": null
+  },
+  "requestedArtifact": {
+    "kind": "animation",
+    "frame": [
+      192,
+      320
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "columns": 4,
+    "rows": 3,
+    "frameCount": 12,
+    "fps": 12
+  },
+  "sourceSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/authored-flowing-lava/source-01.png",
+  "workflow": "3d-imagegen-reskin",
+  "sourceSHA256": "bc49f7530db50308adc91ea6eff52e543579244f1b18ea2dbb04f9f3807e8db2",
+  "originalSavedPath": "/Users/yiouchen/.codex/generated_images/01a14b96-446a-7232-80d7-91d923e3f2bd/exec-52ab927d-f317-4822-8988-6eeabe33810d.png",
+  "resultSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/authored-flowing-lava/result.json",
+  "submissionSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/authored-flowing-lava/submission.json",
+  "previewEvidence": {
+    "browserInspection": "previews/browser/inspection.json",
+    "mobileScreenshot": "previews/browser/mobile.png",
+    "desktopScreenshot": "previews/browser/desktop.png",
+    "inspectedScreenshots": [
+      "previews/browser/mobile.png"
+    ],
+    "sourceOnly": false,
+    "fps": 12,
+    "displayedFrameCount": 12,
+    "observedLoopWraps": 2
+  },
+  "deliveryIntegrityChecked": true,
+  "submittedResultSHA256": "12a892dd208491133e7e2414dfcc4694816981aacef64df175094c957bd8f965",
+  "sourceUnchangedVerified": true,
+  "gradingPerformedByExecutor": false
+}

@@ -1,0 +1,84 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "independent": true,
+  "spriteSHA256": {
+    "partial-cell-tall-object": "3672b73fe209a49eafcb24ca5e6064d40c8b296374871d2ddfc10faf75d0be86"
+  },
+  "sourceSHA256": {
+    "source-01.png": "325d5c533845b3cea48cbd0f86e20fbc8cc078bbec1c6fe3fd5a36a9465de705"
+  },
+  "resultSHA256": "694194b610fb51e428e5ee453aac008700dcd021904817885b1b3e3eb02dbded",
+  "guideSHA256": "30e339fbdeefd2bb91cab36320fe25188f4c79d82d1c07e1142b0b78ef0a06cb",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The post is upright over a screen-aligned small stone support. Roof and support top/front cues retain the supplied oblique orientation without camera convergence.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-light-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Finial, roof, lit housing, post, collar, and support are complete within the frame at native and 2x. No limb-like truncation or detached effect is present.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The narrow support remains centered on the stored ground cross, and its top and front faces occupy the expected central region rather than aligning the post tip or alpha bottom to the anchor.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/references/ground-registration.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-stored-anchor-grid.png"
+      ]
+    },
+    "partial-base": {
+      "pass": true,
+      "note": "A compact approximately 48px support remains at the center of the 128px cell, with clear empty floor around it. Its slight decorative bevel variation does not turn it into a full-cell base.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-light-2x.png"
+      ]
+    },
+    "visible-height": {
+      "pass": true,
+      "note": "The full post reads tall at the shared scale and extends well above the floor upper edge. The added pointed finial makes the silhouette somewhat taller than the primitive roof, but the post body scale remains consistent.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/partial-cell-tall-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-light-2x.png"
+      ]
+    },
+    "cutout": {
+      "pass": true,
+      "note": "The calibration floor and marks are absent. Light and dark views retain the post and base without visible interior holes, background spill, or deleted structural pieces.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/references/ground-registration.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-dark-2x.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The original lantern design, golden trim, illuminated glass, and stone support survive the declared fixed uniform extraction and alpha cleanup without visible reshaping or replacement.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-light-2x.png"
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "reviewer": "Root assistant, independent of fresh executor agents",
+  "independent": true,
+  "spriteSHA256": {},
+  "resultSHA256": "4d2ae28bec095808a170d917539668cde8794d95dbf03c84108fab603537e072",
+  "guideSHA256": "543d17d20da7cf81af7055c9a0944018dccf8db6596d579dc81e2d0997abf777",
+  "checks": {
+    "projection": {
+      "pass": false,
+      "note": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    "complete-art": {
+      "pass": false,
+      "note": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    "anchor-placement": {
+      "pass": false,
+      "note": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    "animated-height": {
+      "pass": false,
+      "note": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    "spatial-seams": {
+      "pass": false,
+      "note": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    "temporal-loop": {
+      "pass": false,
+      "note": "Material opacity/layout drift; no raised runtime frames delivered. No complete registered runtime result exists to establish this criterion."
+    },
+    "frame-consistency": {
+      "pass": false,
+      "note": "The source contains twelve lava material samples, but all were refused by the opaque material processor. No valid raised 12fps animation exists to review."
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Fresh 12-panel source and failed sample diagnostics retained; alpha/layout defects were not repaired to satisfy coverage."
+    }
+  },
+  "limitations": [
+    "One fresh attempt per case does not estimate reliability.",
+    "Landmark/perspective judgments are approximate; no AI geometric exactness is claimed."
+  ],
+  "inspection": "Original generated art, actual light/dark cutouts, registration placement and repeated terrain images inspected."
+}

@@ -1,0 +1,36 @@
+{
+  "reviewer": "Root assistant, independent of fresh executor agents",
+  "independent": true,
+  "spriteSHA256": {
+    "mossy-stone-floor": "8faf5d33be94c4ea3183d03769a05e716ff32a6ae667edbc843364040b396c88"
+  },
+  "resultSHA256": "b792b4eab9012fcd12a72f95e153d082ea889cb69a0ad214be5d134e3e549b99",
+  "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "seam-continuity": {
+      "pass": false,
+      "note": "Native and 2x 3x3 repeats visibly cut moss/stone contours at cell boundaries; opposite-edge RGB means are 10.99 and 9.94, above the frozen limit 8."
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  },
+  "limitations": [
+    "One fresh attempt per case does not estimate reliability.",
+    "Landmark/perspective judgments are approximate; no AI geometric exactness is claimed."
+  ],
+  "inspection": "Original generated art, actual light/dark cutouts, registration placement and repeated terrain images inspected."
+}

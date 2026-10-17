@@ -1,0 +1,23 @@
+{
+  "caseId": "seated-character-separated",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated",
+  "userPrompt": "First generate an isolated wooden stool centered on a 128x128 tile with a 48px-high seat. Then use the stool as a support reference to generate a 160px nominal-height player sitting on it. Deliver the stool and the sitting character as separate transparent layers. The character-only sprite must contain no stool or floor and retain its projected ground anchor plus a 48px support elevation so it aligns when recomposed. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json",
+      "role": "whole-asset",
+      "subjectRole": "stool"
+    },
+    {
+      "image": "source-02.png",
+      "recipe": "generation-02.json",
+      "role": "whole-asset",
+      "subjectRole": "character-only"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "bab6e12e42fd1515e8dec46d2b4071666153cd758d929ea9d2b8bb54786a512b",
+  "result": "result.json",
+  "deliveryStatus": "source-only-processing-failure"
+}

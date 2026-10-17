@@ -1,0 +1,28 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "independent": true,
+  "spriteSHA256": {},
+  "sourceSHA256": {
+    "source-01.png": "e92c56a6847efc12dff3ba3984f65d68405416262a3cdb7f6f222beb9d56f8af",
+    "source-02.png": "771b7c85e146febd0b7fcf5d039b2da65d642c51b056e63beeaa5fad4dcdb28c"
+  },
+  "resultSHA256": "18768637e06debe6391e32275002a519ef44e27fa7a9f159e6bb8c6caaffb474",
+  "guideSHA256": "bab6e12e42fd1515e8dec46d2b4071666153cd758d929ea9d2b8bb54786a512b",
+  "assessment": "Qualitative requested shape policy; separate from geometric visual grading",
+  "shapePolicy": "Blocks retain useful form with visual improvement; organic props refine local forms; characters replace primitive appearance.",
+  "realized": "yes-source-only",
+  "note": "The character source replaces the primitive with expressive human anatomy, face, hair, clothing folds, hands, and boots. The stool receives shaped planks, wood grain, pegs, and bevels. The requested creative replacement is evident in the sources; delivery and registered contact remain unestablished.",
+  "evidence": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/references/stool-3d.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/references/character-3d.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-02.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/raw-source-overlay-light-source-native.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/stool-original-light-source-native.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/character-original-light-source-native.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/previews/raw-source-overlay-dark-source-native.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/references/stool-finished.png"
+  ]
+}

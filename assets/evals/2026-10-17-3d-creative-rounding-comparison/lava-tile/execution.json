@@ -1,0 +1,26 @@
+{
+  "caseId": "lava-tile",
+  "workflow": "3d-imagegen-reskin",
+  "processingMode": "processing-only-comparison",
+  "status": "processed-awaiting-independent-review",
+  "reusedSourceRun": "2026-10-17-3d-creative-reskin-all",
+  "originalImageGenerationCalls": 1,
+  "thisProcessingRunImageGenerationCalls": 0,
+  "actualGenerationCalls": 0,
+  "processor": {
+    "path": "../skill-snapshot/scripts/extract_registered_sheet.py",
+    "sha256": "56a7ecabaac83bacf4d0c7caa0bc0213e035aaefab90b401bf78d86c463ec295",
+    "minAlpha": 32
+  },
+  "processingLogs": "processing-logs",
+  "resultSHA256": "177d4160a15fc38e9757f70d45a09a15cbf784ebe5efc6776ac6a8a5c14bbfea",
+  "submissionSHA256": "5232e45b56bf2d28829b146a0b04137735ef9e930ef72c6ecc861b3c743fc2ae",
+  "reviewPreviews": [
+    "previews/lava-tile-light-native.png",
+    "previews/lava-tile-light-2x.png",
+    "previews/lava-tile-dark-native.png",
+    "previews/lava-tile-dark-2x.png"
+  ],
+  "independentReviewPending": true,
+  "geometryDeclaration": "Authored roots/footprints remain declared constraints; corrected canvas rounding does not repair visual drift"
+}

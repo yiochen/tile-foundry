@@ -1,0 +1,19 @@
+{
+  "caseId": "authored-flowing-lava",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/authored-flowing-lava",
+  "userPrompt": "Generate a looping raised lava tile with a visibly moving surface. Use a full 128x128 ground base, 32px visible front-wall height, twelve frames at exactly 12 fps, and the same fixed top-down oblique projection. Deliver transparent 192x320px frames with local projected ground anchor (96,248) and a 4-column by 3-row runtime spritesheet. Preserve connected neighboring surfaces, including offset-phase neighbors. Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/authored-flowing-lava.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json"
+    }
+  ],
+  "guide": "render/guide.json",
+  "guideSHA256": "ab0c777fe6cfa1904f8b7ede2acbe16039d944fd5d24cd56e4ec65bf0f8fdd9c",
+  "result": "result.json",
+  "workflow": "3d-imagegen-reskin",
+  "deliveryStatus": "processed",
+  "previews": [
+    "previews/registered-3d-vs-ai.png"
+  ]
+}

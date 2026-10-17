@@ -93,6 +93,9 @@ def build_gallery(runs_root, suite_path, public, reports_root, include_archived=
                     raise ValueError('Submission is registered to a different eval case')
                 item['prompt'] = submission['userPrompt']
                 item['submission'] = publish(submission_path)
+                for key,filename in (('review','review.json'),('styleReview','style-review.json')):
+                    if (directory/filename).is_file():
+                        item[key] = publish(directory/filename)
                 sources = submission.get('sources') or [{'image':submission['source'],
                                                          'recipe':submission['generationRecipe']}]
                 for source in sources:
@@ -150,7 +153,7 @@ def build_gallery(runs_root, suite_path, public, reports_root, include_archived=
                     item['sheet'] = publish(result_path.parent/(sheet['image'] if isinstance(sheet,dict) else sheet))
                 for piece in result.get('depthPieces',[]):
                     item['depthPieces'].append({**piece,'image':publish(result_path.parent/piece['image'])})
-                if not item['sprites'] and (case['kind']=='animation' or len(sources)>1):
+                if not item['sprites'] and (case['kind'] in ('animation','directions') or len(sources)>1):
                     try:
                         item['previewSequence'] = source_sequence(directory,submission,layout,publish)
                     except ValueError as exc:

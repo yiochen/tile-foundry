@@ -1,0 +1,35 @@
+{
+  "workflow": "3d-imagegen-reskin",
+  "status": "complete-pending-independent-review",
+  "plannedImageGenerationCalls": 2,
+  "imageGenerationCalls": 2,
+  "completedImageGenerationCalls": 2,
+  "attemptPolicy": "one attempt per planned piece; no retries or fallback",
+  "minAlpha": 32,
+  "guideAuthoredBeforeGeneration": true,
+  "extractions": [
+    {
+      "source": "source-01.png",
+      "status": "success",
+      "result": "processed-01/result.json"
+    },
+    {
+      "source": "source-02.png",
+      "status": "success",
+      "result": "processed-02/result.json"
+    }
+  ],
+  "processingClaims": "Fixed registration only; AI geometry and art quality not self-graded",
+  "independentReviewPending": true,
+  "integrityChecks": {
+    "originalOutputCopiesByteIdentical": true,
+    "sourceAndReferenceHashesVerified": true,
+    "guideHashesVerified": true,
+    "noSharedRunOrSkillFilesModifiedByExecutor": true
+  },
+  "previewInspection": {
+    "method": "view_image of actual produced PNGs",
+    "qualityGrade": "not assigned; independent reviewer only",
+    "browserGalleryHandledByParent": true
+  }
+}

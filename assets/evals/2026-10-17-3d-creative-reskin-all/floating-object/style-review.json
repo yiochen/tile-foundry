@@ -1,0 +1,28 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "independent": true,
+  "spriteSHA256": {
+    "floating-object": "a997e7b10a8f03f1d9a6e4b7a6fe0040e00bf6662d735cf1c4edad826185f31c"
+  },
+  "sourceSHA256": {
+    "source-01.png": "edcda3268d25100b79a08c98d61b1ddbc87678ccd041c82113b49468a025b104"
+  },
+  "resultSHA256": "649bebdfc2f57fae1fe518fbe07a0c378c8657ee0bfbb90144564a875cb3eeab",
+  "guideSHA256": "e1c383042116ec69f640ecc0cfadf75edd404a5f7b48e0634faa0d56cd989e41",
+  "assessment": "Qualitative requested shape policy; separate from geometric visual grading",
+  "shapePolicy": "Blocks retain useful form with visual improvement; organic props refine local forms; characters replace primitive appearance.",
+  "realized": "yes",
+  "note": "The simple egg-like primitive becomes a polished faceted treasure with a three-dimensional gold cage and inset gems. Local forms are substantially refined while retaining the intended floating prop identity.",
+  "evidence": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/references/edit-target.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/processed/frames/frame-00.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-light-2x.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-dark-2x.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/references/ground-registration.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/floating-object/placement-0-light.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-stored-anchor-grid.png"
+  ]
+}

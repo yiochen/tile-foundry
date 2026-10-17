@@ -1,0 +1,9 @@
+{
+  "sourceChanges": false,
+  "spritesFitted": false,
+  "runtimeRegistrationEstablished": true,
+  "fps": 12,
+  "nativeCellSize": 128,
+  "playback": "playback.html",
+  "placement": "world ground minus unchanged stored local anchor"
+}

@@ -1,0 +1,268 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "disjoint-support-arch",
+  "status": "failed",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "Generate a stone arch spanning three cells across one row. Its two pillars occupy only the left and right 128x128 cells; the center cell is walkable. The arch is 160px tall. Deliver transparent art with explicit disjoint support occupancy and a separate overhead span. Deliver each sprite in a 512x448px frame with local projected ground anchor (256,312). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "84116ab4b596394c6f07eb1fa318716ec39aba88c8407c95ce3ea1c5a7b850ff"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/arch-rear-3d.png",
+        "references/whole-3d.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "source-1-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-1-unchanged",
+      "pass": true,
+      "detail": "678378f5d16ace4f172d940d90a3b94b4390691eb60614d96d76ff01a622d64a"
+    },
+    {
+      "check": "source-1-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-1-references",
+      "pass": true,
+      "detail": [
+        "references/arch-front-3d.png",
+        "references/rear-finished.png",
+        "references/whole-3d.png"
+      ]
+    },
+    {
+      "check": "source-1-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-1-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-1-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "1e2cc3bcbb25e9494ed06b5ac89001ceeecf2d3dba4ca31cbc41e9080639c2cd"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "object",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "disjoint-support-arch"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "ground-support-cells",
+      "pass": true,
+      "detail": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    {
+      "check": "authored-depth-pieces",
+      "pass": true,
+      "detail": "Registered independent depth pieces; passage correctness needs visual review"
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": false,
+      "detail": "The AI depth pieces show shallow cap top planes over substantially tall stone faces. Recomposition produces two stepped cap bands instead of the reference broad continuous depth plane; the whole arch reads much shallower in ground depth and taller in frontal mass.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/whole-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/arch-rear-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/arch-front-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-recomposed-light-2x.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "Both independently supplied depth pieces and their recomposition fit the frame. Small side protrusions and doubled cap contours are visible, but no arch or pillar is clipped and no detached shadow is visible on light/dark 2x.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/arch-rear.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/arch-front.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-recomposed-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-recomposed-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-recomposed-dark-2x.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": false,
+      "detail": "The passage remains horizontally centered, but the implied base depth is compressed and the paired pillar support is visibly biased toward the front/below the declared ground region. A shared numeric anchor does not restore the reference support geometry.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/whole-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/arch-rear-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/arch-front-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/disjoint-support-arch/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-recomposed-light-2x.png"
+      ]
+    },
+    {
+      "check": "open-passage",
+      "pass": true,
+      "detail": "The center stays transparent from the arch opening to ground level. No floor slab or central pillar fills the walkable cell, and the actor is visible in the opening.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/disjoint-support-arch/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-actor-center-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-actor-center-light-2x.png"
+      ]
+    },
+    {
+      "check": "arch-depth",
+      "pass": true,
+      "detail": "The new previews show distinct rear and front pieces: a behind actor is occluded, the center actor is visible through the opening, and the foreground actor appears in front. This is plausible passage ordering with separately saved source pieces, despite the cap mismatch and support geometry defects recorded elsewhere.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/arch-rear.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/arch-front.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-actor-behind-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-actor-behind-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-actor-center-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-actor-center-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-actor-foreground-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-actor-foreground-light-2x.png"
+      ]
+    },
+    {
+      "check": "support-placement",
+      "pass": false,
+      "detail": "Two side supports are preserved and the center has no support, but their front/rear separation is visibly shallower than the 128px guide row and their bases do not land like the supplied reference on the declared side cells. The placement rectangle alone cannot certify the supports.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/whole-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/arch-rear-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/arch-front-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/disjoint-support-arch/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-recomposed-light-2x.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "The rear and front processed sprites preserve their respective independently supplied AI originals with a common fixed uniform transform. Their stepped recomposition and edge mismatches originate in those separate sources; no flattened-scene slicing or invented replacement is apparent.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/arch-rear.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/arch-front.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/previews/depth-pieces-recomposed-light-2x.png"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "disjoint-support-arch-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {
+    "depthPieceSHA256": {
+      "arch-rear": "761c49309af70438f35eb66df663fc9841611f1232847ce5f5a769eca1884521",
+      "arch-front": "9ac990c940cbe50cca4502cc8c11a8916e025984c19b42b6d2db9771fb04e2f0"
+    }
+  },
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

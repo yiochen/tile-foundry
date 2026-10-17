@@ -1,0 +1,7 @@
+{
+  "kind": "animation",
+  "sprites": 12,
+  "sourceSHA256": "bc49f7530db50308adc91ea6eff52e543579244f1b18ea2dbb04f9f3807e8db2",
+  "removedAlphaMass": 229187,
+  "output": "assets/evals/2026-10-17-3d-creative-reskin-all/authored-flowing-lava/processed"
+}

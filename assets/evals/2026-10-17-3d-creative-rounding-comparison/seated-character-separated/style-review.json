@@ -1,0 +1,63 @@
+{
+  "assessment": "per-part-creative-shape-review",
+  "reviewer": "Independent Codex vision review (rounding comparison)",
+  "independent": true,
+  "geometryPolicy": "llm-visual-v1",
+  "geometryReview": "review.json",
+  "doesNotOverrideGeometryGrade": true,
+  "spriteSHA256": {
+    "stool": "3b89502d05bd6f12f8bed042601c81bec2c21f356468c4b43b6a0e1976bb1a90",
+    "character": "965f9cc805cb178341d9e57e4946ad9e82eb2a5a4b32443f4f9a7ca571868af3"
+  },
+  "sourceSHA256": {
+    "source-01.png": "e92c56a6847efc12dff3ba3984f65d68405416262a3cdb7f6f222beb9d56f8af",
+    "source-02.png": "771b7c85e146febd0b7fcf5d039b2da65d642c51b056e63beeaa5fad4dcdb28c"
+  },
+  "parts": [
+    {
+      "part": "stool",
+      "shapePolicy": "Preserve the simple modeled seat/support geometry and improve finished wood art.",
+      "creativeRefinement": {
+        "pass": true,
+        "note": "The simple colored planes become finished planks with grain, bevels, joinery and readable thickness. The art improves the simple support without unnecessary redesign.",
+        "evidence": [
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/stool-3d.png",
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-01.png",
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-2x.png"
+        ]
+      },
+      "shapeAndRegistrationPreservation": {
+        "pass": true,
+        "note": "The rectangular seat, front rail, two visible supports and crossbar retain the blockout's useful layout and scale. The full independent stool is available below the character.",
+        "evidence": [
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/stool-3d.png",
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-2x.png",
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-2x.png"
+        ]
+      }
+    },
+    {
+      "part": "character",
+      "shapePolicy": "Replace crude primitive anatomy and silhouette with finished character art while preserving nominal body scale, pose/support registration, and contacts.",
+      "creativeRefinement": {
+        "pass": true,
+        "note": "The face, hair, hands, boots, anatomy and folded clothing are fully redesigned into finished character art. The result appropriately replaces the primitive silhouette and is visually coherent in the seated pose.",
+        "evidence": [
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/character-3d.png",
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-02.png",
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/character-light-2x.png"
+        ]
+      },
+      "shapeAndRegistrationPreservation": {
+        "pass": null,
+        "note": "The finished character appropriately replaces the primitive silhouette. In the equal-frame comparison its torso and limb relationships differ visibly from the crude pose, but actual stool contact is plausible. The opaque pelvis attachment and absence of a finished neutral standing view prevent a confident nominal standing-scale/root judgment; primitive outlines, hair height and toe bounds alone cannot settle it. Keep this observation separate from the successful creative refinement and from the frozen geometry rubric.",
+        "evidence": [
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/character-3d.png",
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-2x.png",
+          "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/seated-character-separated/reviewer-same-frame-support-comparison-2x.png"
+        ]
+      }
+    }
+  ],
+  "note": "Separate creative assessment of the unchanged delivered images. Geometry verdicts remain in the hash-bound llm-visual-v1 review."
+}

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/skill-snapshot/scripts/assemble_result.py",
+    "--input-result",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-01/result.json",
+    "--input-result",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-02/result.json",
+    "--registration",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/registration.json",
+    "--output",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/result.json"
+  ],
+  "cwd": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry",
+  "exitCode": 0,
+  "stdout": "{\n  \"kind\": \"layered\",\n  \"sprites\": 2,\n  \"output\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/result.json\"\n}\n",
+  "stderr": ""
+}

@@ -1,0 +1,11 @@
+{
+  "sourceChanges": false,
+  "spritesFitted": false,
+  "runtimeRegistrationEstablished": false,
+  "fps": 12,
+  "nativeCellSize": 128,
+  "playback": "source-playback.html",
+  "sourceSequence": "source-sequence.json",
+  "sourceOnly": true,
+  "normalizationApplied": false
+}

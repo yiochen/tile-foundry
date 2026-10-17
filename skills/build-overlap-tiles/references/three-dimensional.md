@@ -3,7 +3,7 @@
 Use this route for objects with defined shapes and especially for directional
 characters or skeletal animation. Build or import a model in Blender or Three.js,
 apply its skin/materials, rig it, author the motion, and capture a registered pose
-sheet. The image model then changes the surface art style. A captured pose is a
+sheet. The image model turns the blockout into finished artwork, with shape freedom chosen by subject. A captured pose is a
 much richer reference than a stick guide, but image editing can still move feet,
 change proportions, reflow panels or invent details. Test the complete reskin.
 
@@ -95,60 +95,63 @@ reference; identify it separately and explicitly exclude its floor from output.
 The bundled game scene is for understanding projection, not an automatic style
 reference. Use text for style unless the user requests a supplied style image.
 
-For scale-sensitive work, scope the call to **materials and lighting on existing
-geometry**. A request for a polished new character can encourage larger hair,
-different boots or fuller clothing even when the same prompt says to preserve
-scale. A surface finish can be visibly painted while retaining the model's simple
-forms; it will not turn a rough blockout into a new detailed character design.
-Develop the intended anatomy/outfit in 3D first when that redesign is required.
+Choose the shape-edit policy before the image call. For characters or hard-to-model
+organic subjects, the mesh is a scaffold for pose, nominal scale and contact, not
+a finished silhouette. Allow refined anatomy, hair, garments, hands and shoes;
+replace visible primitive forms. Preserve joint action, facing, body scale,
+ground/support positions and the available frame. Do not freeze crude hair caps,
+box boots or capsule anatomy merely because they registered well in an earlier
+material-only test. For simple blocks and structures, keep the modeled shape and
+base extent, improving surface art, bevels and detail. Mixed scenes need explicit
+per-part policies, especially a rigid support with an organic character.
 
-Use this prompt shape, replacing the subject-specific examples with actual
-features visible in the supplied render:
+Example for a character sheet:
 
-> Apply a hand-painted [desired medium] material finish to this exact rendered
-> atlas. Edit the existing surfaces, keeping the character geometry unchanged.
-> Preserve [specific hair contour, rounded/boxy body shapes, limb thickness,
-> shoe shape, outfit and proportions]. Paint color and shading inside those
-> existing shapes, with [desired palette/materials] and the same light direction.
-> Keep the original face visibility in every view; a back view stays a back view.
+> Turn this crude 3D pose atlas into a finished hand-painted game adventurer.
+> Refine the anatomy and silhouette: shaped hair, expressive face in front views,
+> natural hands and boots, and a tailored outfit with readable folds. Replace the
+> visible primitive forms. Keep one character design and the reference's nominal
+> body scale, facing and joint poses. Make these refinements inside the existing
+> head-to-foot scale and panel space; do not enlarge the head, body or shoes to
+> add detail. Keep the support/sole centers in place; shoe toes may project forward.
+> Rear views show the back of the same design.
 >
-> The input is the registered artwork. Keep its outside contours, body height,
-> head crowns, sole positions, joints, panel positions and transparent space.
-> Preserve every existing margin and gap. Retain all [count/order of views or
-> poses], the complete canvas and empty gutters. Return the same atlas with
-> its surface finish changed, on genuine transparency, without added parts,
-> external shadows, floor, labels or rearrangement.
+> Preserve this complete [canvas dimensions], [columns × rows] atlas and its
+> [frame count/order]. Keep the camera, panel positions and empty gutters. The
+> calibration-floor reference only establishes placement and must not appear in
+> the output. Return complete isolated sprites on genuine transparency, without
+> labels, ground, cast shadows or rearranged panels.
 
-Keep the distinction concrete. For a model with a smooth hair cap and long boxy
-boots, name those shapes rather than requesting a new hairstyle or realistic
-leather footwear. Adding facial detail everywhere can turn a rear view into a
-front view. A broad "same character" clause is less useful than naming which
-existing shapes and visibility must survive. Do not rely on numeric height
-instructions alone, or compensate by shrinking the 3D input to offset past AI
-enlargement. Keep the same reference while comparing prompt revisions.
+For a simple structure, replace the design clause with: "Keep the modeled block's
+outer shape, square base, wall height and straight edges. Add hand-painted
+[materials], bevel shading and small surface detail." An organic prop may need
+intermediate freedom: retain the base/support and overall height while refining
+its upper silhouette. Name those permissions rather than globally locking contours.
 
-Add the actual canvas dimensions, rows/columns, direction order or frame count,
-subject and desired art style. Do not paste unrelated final export instructions
-into the image prompt. Request transparent generation. Save the untouched source
-PNG and exact expanded prompt, tool arguments and reference hashes, including
-failed output. One generation per frozen eval attempt; a revision is a new run.
-Keep a surface-edit prompt close to the compact example above (roughly 150–200
-words is a useful starting point). Name a few shape anchors instead of expanding
-every joint and material into a new design brief. Leave world-unit heights,
-runtime frame/anchor coordinates, capture-scale conversions and export commands
-in the retained 3D manifest. They describe how the input was rendered, not what
-the image tool should redraw. A shorter prompt is not a guarantee of fidelity;
-check the actual source rather than assuming more constraints ensure adherence.
-Once a candidate works, test the resulting skill with a fresh executor that has
-only the realistic request, skill and required inputs. Keep style strength and
-geometry fidelity visible as separate outcomes; a weak surface change should not
-be presented as evidence that unrestricted character redesign preserves scale.
+Use the captured dimensions and actual subject in the expanded prompt. Leave
+world-unit/export bookkeeping in metadata. Numeric height alone cannot prevent
+redrawing at a larger scale. Do not shrink the input or fit the output to
+compensate for observed AI enlargement. Compare all candidates at unchanged roots.
+
+Request transparent generation for isolated assets and opaque generation for a
+flat floor. Save every untouched source PNG, exact prompt, tool arguments and
+reference hashes, including failures. One attempt per planned output; revisions
+need a new frozen run. Separate layers/depth pieces require separate planned calls
+or a predeclared independently isolated atlas, never flattened-scene subtraction.
+For a floor, uniformly downsample the whole opaque square with `floor-material`.
+For a static transparent object, author a version-1 `rendered-3d-sheet` guide with
+one panel covering the complete capture and `assetKind: "object"` before the call;
+use the fixed extractor below. Keep multi-cell footprint and support metadata
+from the authored scene when assembling the v2 result.
 
 ## Extract without fitting
 
 Use authored rectangles from `guide.json`. Only a uniform scale of the *whole*
-source canvas is allowed for tool output resolution; integer dimensions can have
-at most one pixel of whole-canvas rounding. Fractional outer edges may use at most
+source canvas is allowed for tool output resolution. Compute one least-squares
+scalar from the guide and source width/height; each actual source dimension must
+be within one source pixel of its guide dimension times that same scalar. This
+bound is checked on those two residuals, without extrapolating either rounded
+axis ratio onto the other axis. Fractional outer edges may use at most
 one pixel of recorded transparent virtual padding; source pixels are never cropped
 and the original canvas boundary must still be transparent. Never detect/move individual panels,
 fit feet, change per-pose scale, stretch axes, apply the 3D alpha silhouette to
@@ -195,9 +198,12 @@ inputs and record zero image-generation calls. These inputs are authored render
 provenance, not claimed images supplied to an AI model. Preserve fresh render
 outputs for each control rather than relabeling an older image as a new run.
 
-For exact geometry with no image-redraw risk, keep the final output as a 3D
-render and put the desired appearance on model materials/UV textures before
-capture. This is a separate route; label it accurately when evaluating it.
+Every final asset in this workflow must include the imagegen reskin. A failed
+reskin stays failed; do not quietly substitute the untouched 3D render. Keep the
+render selectable as a separately labeled control. For every delivered independent
+layer/piece, record the AI source and the 3D reference it came from. Review both
+registration and actual design refinement: a character that merely copies a crude
+mesh can preserve geometry while failing the intended visual transformation.
 
 Three.js references: [OrthographicCamera](https://threejs.org/docs/pages/OrthographicCamera.html)
 and [SkinnedMesh](https://threejs.org/docs/pages/SkinnedMesh.html).

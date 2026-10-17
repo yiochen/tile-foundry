@@ -1,0 +1,176 @@
+{
+  "reusedSourceRun": "2026-10-17-3d-creative-reskin-all",
+  "reusedSourceCase": "lava-tile",
+  "thisProcessingRunImageGenerationCalls": 0,
+  "originalImageGenerationCalls": 1,
+  "generationRecipes": "Exact original bytes, including prompts and actual original tool-call reference paths; their processing fields describe the historical run only",
+  "preservedFiles": [
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/capture.json",
+      "copy": "authored-render/capture.json",
+      "sha256": "b415b4f7b014069b83dce79ac08bb3c0be2efb67fe06035f3f19d499faac98c2"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/geometry-result.json",
+      "copy": "authored-render/geometry-result.json",
+      "sha256": "315698d4cd22b4dc4993f3cb3e0f748042de581faf7e054ca2c48d924be73a02"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/guide.json",
+      "copy": "authored-render/guide.json",
+      "sha256": "72f0128ec26c07aeb0cc0054491ff1270a1decf6fd88052da8062140a48d7661"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/render/depth.png",
+      "copy": "authored-render/render/depth.png",
+      "sha256": "3a65c700e2f3da918e80cf401c9352a35305af1fa35599452c10db42f8ecb84d"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/render/floor-registration.png",
+      "copy": "authored-render/render/floor-registration.png",
+      "sha256": "b8e1d0fd717eb12a04eca9b3dfed7776d1f619c9ca73a8cf7c158cc5c7011dca"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/render/highres/depth.png",
+      "copy": "authored-render/render/highres/depth.png",
+      "sha256": "f946fb826050ec8e860f50f63930b126a820e996ee300d1ebeb9bb4804be0ed9"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/render/highres/floor-registration.png",
+      "copy": "authored-render/render/highres/floor-registration.png",
+      "sha256": "0eed985d270cd165cc76c2d7e95405f4c8958835443d83a33bc88560af3add72"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/render/highres/on-floor.png",
+      "copy": "authored-render/render/highres/on-floor.png",
+      "sha256": "ba52b7daf5f21d043a65dd1f59976d6d2d13a19a0d6dc7c1befbf842113e12cb"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/render/highres/whole.png",
+      "copy": "authored-render/render/highres/whole.png",
+      "sha256": "ba52b7daf5f21d043a65dd1f59976d6d2d13a19a0d6dc7c1befbf842113e12cb"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/render/on-floor.png",
+      "copy": "authored-render/render/on-floor.png",
+      "sha256": "82e488e24f547b341ee2016fef262e7cd47ca118f3a497ccf461d2afa3828365"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/render/whole.png",
+      "copy": "authored-render/render/whole.png",
+      "sha256": "82e488e24f547b341ee2016fef262e7cd47ca118f3a497ccf461d2afa3828365"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/scene/3d_controls_static.mjs",
+      "copy": "authored-render/scene/3d_controls_static.mjs",
+      "sha256": "aa1626fb33b56706df2ac41cb49184f15d3c1a2bad3a0100fbeee3c163ce5293"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/scene/3d_controls_static_previews.py",
+      "copy": "authored-render/scene/3d_controls_static_previews.py",
+      "sha256": "34bbe6cb84d92fd7fac21e6f2af732858225bca87df83a8fa138d6af8682a66b"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/scene/3d_controls_static_rig.js",
+      "copy": "authored-render/scene/3d_controls_static_rig.js",
+      "sha256": "d230aa3ef97b16be2edb9552e2ddf9993b2a565604af06770fafab8cd3e8154e"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/scene/3d_controls_static_scene.js",
+      "copy": "authored-render/scene/3d_controls_static_scene.js",
+      "sha256": "b8b8ec7c78563307503aad06e8da3281cf3dadd0981d066edb52ba60f41e1306"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/scene/README.md",
+      "copy": "authored-render/scene/README.md",
+      "sha256": "dc98dd4fc5c724264c3d78093631120a55070915ab6d24b750494e34fe40f379"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/scene/case.json",
+      "copy": "authored-render/scene/case.json",
+      "sha256": "463a7c432b3a4229a468e5791eedb41f9bb1a81d373d3358417fd7a2e7eba3c4"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/scene/model.json",
+      "copy": "authored-render/scene/model.json",
+      "sha256": "9349813f3efd0a0280cd4e2add8be68bd5b51fb8e5fe8fba78f669c843f257dd"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/scene/package.json",
+      "copy": "authored-render/scene/package.json",
+      "sha256": "0469ee05f264fb7393594715f8f8ee173a87835d6806c17310de40cb4e07c762"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/scene/render-options.json",
+      "copy": "authored-render/scene/render-options.json",
+      "sha256": "7f58445b4e1128a734b437d26c94aea63e69ae6f2a637fc6138be7bc1d35308a"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/scene/suite.json",
+      "copy": "authored-render/scene/suite.json",
+      "sha256": "56745b248c73e19de4d72a14d4d7df3c4885a6fef0dc69ec4018d022d0317d58"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/scene/tile_tools.py",
+      "copy": "authored-render/scene/tile_tools.py",
+      "sha256": "836e1935bbd733cdca0aa4e82728ca3748ad820aec2da5ce86c6d19d75865490"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/authored-render/source-01.png",
+      "copy": "authored-render/source-01.png",
+      "sha256": "ba52b7daf5f21d043a65dd1f59976d6d2d13a19a0d6dc7c1befbf842113e12cb"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/execution.json",
+      "copy": "provenance/original-case-metadata/execution.json",
+      "sha256": "61f18cd1671beca031abcef858eda85d18fd36d79c6ee31396235dac35d97a7b"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/generation-01.json",
+      "copy": "generation-01.json",
+      "sha256": "886384c1e10b7493f2aee503d86ed88f3c72a252ce3dff0e66195680133de46e"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/guide.json",
+      "copy": "guide.json",
+      "sha256": "02384563d3b655541e39e3d2be28e3bec18c84be94bc30df505a31b5caf2fd4a"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/processing-error.txt",
+      "copy": "provenance/original-case-metadata/processing-error.txt",
+      "sha256": "11dc0b6909ee0b9eee1bb1211c5636d20a30cd7618e30b53f507ca1937768265"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/processing-tools/extract_registered_sheet.py",
+      "copy": "provenance/original-case-metadata/processing-tools/extract_registered_sheet.py",
+      "sha256": "3a5608f99967d58a4e71e1d2473a8651a5eb6c5f6bfccb539465677a1ea291a6"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/references/edit-target.png",
+      "copy": "references/edit-target.png",
+      "sha256": "ba52b7daf5f21d043a65dd1f59976d6d2d13a19a0d6dc7c1befbf842113e12cb"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/request.txt",
+      "copy": "provenance/original-case-metadata/request.txt",
+      "sha256": "4988a88d20fbbbaec5fffc4ab0b3629995a31cc8e41bd8c559142ea8183caf91"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/result.json",
+      "copy": "provenance/original-case-metadata/result.json",
+      "sha256": "beac40f7cc0ed498c77af4eb1d6e809f5d5d1eb448547a8d967de12f9761dc4e"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/source-01.png",
+      "copy": "source-01.png",
+      "sha256": "3a235f37124934eee65af84cee0e4023ef58a2b244acf2f40a62a4f6d4828617"
+    },
+    {
+      "original": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/submission.json",
+      "copy": "provenance/original-case-metadata/submission.json",
+      "sha256": "4ab620fa81b9a4f17001077b44422cff05254963d2bdfaf6cf0d1e01d3080314"
+    }
+  ],
+  "previousProcessedPNGsCopied": false,
+  "previousPreviewsOrReviewsCopied": false
+}

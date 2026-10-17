@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "workflow": "fresh-direct-3d-control",
+  "caseId": "character-directions",
+  "createdAt": "2026-10-17T17:02:06.266Z",
+  "frame": [
+    192,
+    320
+  ],
+  "anchor": [
+    96,
+    248
+  ],
+  "cellSize": 128,
+  "supersample": 2,
+  "antialias": true,
+  "imageGenerationCalls": 0,
+  "isImageModelCall": false,
+  "oldPNGsRead": false,
+  "perFrameFit": false,
+  "rootFit": false,
+  "crop": false,
+  "backgroundRemoval": false,
+  "rendererMaskApplied": false,
+  "renderEngine": "Three.js WebGLRenderer via Playwright Chromium",
+  "threeVersion": "0.186.1",
+  "browserErrors": [],
+  "sourceFiles": {
+    "motionScene": {
+      "path": "scene/3d_controls_motion_scene.js",
+      "sha256": "bc67c575483181bd4555cf793926ca7083b17f1da444c648b733a5ab9cf6eac7"
+    },
+    "characterScene": {
+      "path": "scene/character_scene.js",
+      "sha256": "50415dfe2e3f25389e5f5cdd239b0f56bf5afb7f845699eb96ce403a1db6fc65"
+    },
+    "runner": {
+      "path": "scene/3d_controls_motion.mjs",
+      "sha256": "19fb98cde5db30365924bcb43e96de2c54799aac4103a72063109e2c99cd443f"
+    }
+  },
+  "animationDesign": {
+    "authorship": "authored-neutral-turnaround",
+    "phaseSamples": 8,
+    "rootWorld": [
+      0,
+      0,
+      0
+    ]
+  },
+  "limitations": [
+    "Direct renderer control with authored procedural materials; no image model drew appearance or motion.",
+    "Known mathematical registration does not itself establish visual quality or natural motion.",
+    "Raster antialiasing may vary across GPU/Chromium implementations."
+  ]
+}

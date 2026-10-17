@@ -156,6 +156,46 @@ class RegisteredSheetTests(unittest.TestCase):
             self.process()
         self.assertFalse(self.output.exists())
 
+    def test_portrait_canvas_rounding_uses_common_scale_before_testing_residuals(self):
+        self.guide.update(assetKind="object", size=[384, 640], frame=[192, 320],
+                          anchor=[96, 248], captureScale=2, gutter=0, columns=1,
+                          cells=[{"index": 0, "rect": [0, 0, 384, 640]}])
+        self.write_guide()
+        source = Image.new("RGBA", (971, 1620))
+        ImageDraw.Draw(source).rectangle((300, 700, 670, 1200), fill="orange")
+        source.save(self.source)
+        original_bytes = self.source.read_bytes()
+        # Extrapolating the rounded width ratio gives a misleading 1.667px
+        # height error. Both dimensions are <1px from the one common scalar.
+        self.assertGreater(abs(1620 - 640 * (971 / 384)), 1)
+        expected_scale = (971 * 384 + 1620 * 640) / (384 ** 2 + 640 ** 2)
+        result = self.process()
+        self.assertEqual(result["uniformSourceScale"], expected_scale)
+        self.assertEqual(result["normalization"]["sourceEdgeResidualPx"],
+                         [971 - 384 * expected_scale, 1620 - 640 * expected_scale])
+        self.assertTrue(all(abs(value) < 1 for value in result["normalization"]["sourceEdgeResidualPx"]))
+        self.assertEqual(result["normalization"]["wholeCanvasOffset"], [0, 0])
+        sprite = result["sprites"][0]
+        self.assertEqual(sprite["normalization"]["scale"], [1 / (2 * expected_scale)] * 2)
+        self.assertFalse(sprite["normalization"]["perPoseFitting"])
+        expected = source.transform((192, 320), Image.Transform.EXTENT,
+                                    sprite["registration"]["sourceRect"], Image.Resampling.BICUBIC)
+        with Image.open(self.output / sprite["image"]) as opened:
+            self.assertEqual(opened.convert("RGBA").tobytes(), expected.tobytes())
+        self.assertEqual(self.source.read_bytes(), original_bytes)
+
+    def test_portrait_excessive_or_asymmetric_drift_still_rejects(self):
+        self.guide.update(assetKind="object", size=[384, 640], frame=[192, 320],
+                          anchor=[96, 248], captureScale=2, gutter=0, columns=1,
+                          cells=[{"index": 0, "rect": [0, 0, 384, 640]}])
+        self.write_guide()
+        for dimensions in ((970, 1620), (971, 1624), (975, 1620)):
+            with self.subTest(dimensions=dimensions):
+                Image.new("RGBA", dimensions).save(self.source)
+                with self.assertRaisesRegex(ValueError, "whole-sheet aspect"):
+                    self.process()
+                self.assertFalse(self.output.exists())
+
     def test_fractional_outer_panel_rounding_adds_only_declared_transparent_padding(self):
         self.guide.update(size=[24,32],frame=[24,32],captureScale=1,gutter=0,columns=1,
                           cells=[{'index':0,'rect':[0,0,24,32],'durationMs':1000/12}])

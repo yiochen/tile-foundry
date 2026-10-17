@@ -1,0 +1,37 @@
+{
+  "prompt": "Reskin image 1, an authored 3D fountain capture, into a finished hand-painted stone fountain game prop. Keep the modeled complete square ground basin, base extent, upper round bowl, center column, relative assembly, water-jet attachments and overall height. Refine the stone with pale carved weathered masonry, subtle edge bevel shading and small ornamental carving. Make the water clear turquoise with painted ripples, restrained reflected light and flowing slender water streams; the fluid may refine its local shape within the existing structure and envelope. Keep the square basin aligned with the screen axes, with its complete front wall and useful outer geometry preserved. Preserve square-grid top-down oblique projection, front-facing three-quarter camera, parallel edges and reference model scale. The full ground footprint is exactly two by two 128px cells, 256x256 runtime pixels, and nominal visible height is 128px (one cell width). Preserve the complete 768x1152 reference canvas, 2:3 aspect and original position with all transparent margins. Runtime frame is 384x576 with ground-center anchor (192,376), at the center of the entire 2x2 footprint, independent of the upper bowl. Do not shrink the object to one cell or recenter its silhouette. Return the complete single transparent fountain object, without floor, cast shadow, external glow, labels or extra objects.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "references": [
+    "references/edit-target.png"
+  ],
+  "referenceSHA256": {
+    "references/edit-target.png": "2b22053138e3bae7535a59300732873702e39dd6e4a8f7074fd012a66282a919"
+  },
+  "referenceRoles": {
+    "references/edit-target.png": "floor-free modeled 3D geometry edit target"
+  },
+  "toolArguments": {
+    "prompt": "Reskin image 1, an authored 3D fountain capture, into a finished hand-painted stone fountain game prop. Keep the modeled complete square ground basin, base extent, upper round bowl, center column, relative assembly, water-jet attachments and overall height. Refine the stone with pale carved weathered masonry, subtle edge bevel shading and small ornamental carving. Make the water clear turquoise with painted ripples, restrained reflected light and flowing slender water streams; the fluid may refine its local shape within the existing structure and envelope. Keep the square basin aligned with the screen axes, with its complete front wall and useful outer geometry preserved. Preserve square-grid top-down oblique projection, front-facing three-quarter camera, parallel edges and reference model scale. The full ground footprint is exactly two by two 128px cells, 256x256 runtime pixels, and nominal visible height is 128px (one cell width). Preserve the complete 768x1152 reference canvas, 2:3 aspect and original position with all transparent margins. Runtime frame is 384x576 with ground-center anchor (192,376), at the center of the entire 2x2 footprint, independent of the upper bowl. Do not shrink the object to one cell or recenter its silhouette. Return the complete single transparent fountain object, without floor, cast shadow, external glow, labels or extra objects.",
+    "referenced_image_paths": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/references/edit-target.png"
+    ],
+    "transparent_background": true
+  },
+  "shapeEditPolicy": "Mixed prop: preserve rigid full square base, basins/columns and 128px structure height; refine stone/water materials and local fluid shape within authored envelope.",
+  "workflow": "3d-imagegen-reskin",
+  "status": "generated",
+  "attempt": 1,
+  "attemptBudget": 1,
+  "imageGenerationCalls": 1,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "geometryReferenceBundle": "authored-render",
+  "predeclaredProcessing": {
+    "kind": "object",
+    "minAlpha": 32,
+    "guide": "guide.json",
+    "perPoseFitting": false
+  },
+  "sourceSHA256": "2e84ee88eb0dc1b878378ae3c46a2d88179cc22007342d1b29f3ab7da2153c1e",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-6bd49082-92e6-45a0-b9cf-0c7df2796e10.png"
+}

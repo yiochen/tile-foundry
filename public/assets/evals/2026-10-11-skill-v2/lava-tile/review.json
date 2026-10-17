@@ -1,0 +1,44 @@
+{
+  "reviewer": "Root assistant, independent of fresh executor agents",
+  "independent": true,
+  "spriteSHA256": {
+    "lava-tile": "f2f92bf03e4ed29c286885dfb87617ceb2b149a9a4d6b30fcdad8a836a9844b7"
+  },
+  "resultSHA256": "8e0482b6a984bd5353f0caa7a56416509ed6212404da1a190444e5fbea369be1",
+  "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "visible-height": {
+      "pass": true,
+      "note": "Authored 128x128 top and 32px front wall are visible in the cutout and front row; generated material was mapped inside retained SVG faces."
+    },
+    "full-base": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "lava-joins": {
+      "pass": false,
+      "note": "3x3 and 5x5 placement preserves opaque cells but repeats discontinuous molten channels at column/row joins; authored alpha is not continuous texture."
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  },
+  "limitations": [
+    "One fresh attempt per case does not estimate reliability.",
+    "Landmark/perspective judgments are approximate; no AI geometric exactness is claimed."
+  ],
+  "inspection": "Original generated art, actual light/dark cutouts, registration placement and repeated terrain images inspected."
+}

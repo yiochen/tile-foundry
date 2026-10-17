@@ -1,0 +1,34 @@
+{
+  "caseId": "seated-character-separated",
+  "workflow": "3d-imagegen-reskin",
+  "processingMode": "processing-only-comparison",
+  "status": "processed-awaiting-independent-review",
+  "reusedSourceRun": "2026-10-17-3d-creative-reskin-all",
+  "originalImageGenerationCalls": 2,
+  "thisProcessingRunImageGenerationCalls": 0,
+  "actualGenerationCalls": 0,
+  "processor": {
+    "path": "../skill-snapshot/scripts/extract_registered_sheet.py",
+    "sha256": "56a7ecabaac83bacf4d0c7caa0bc0213e035aaefab90b401bf78d86c463ec295",
+    "minAlpha": 32
+  },
+  "processingLogs": "processing-logs",
+  "resultSHA256": "132f76ccc848a2ceb12653a4446c74da4726f31fd217575cf4bad9d8efdb663f",
+  "submissionSHA256": "f5c2b085d470996b9289c071c1de68edabcfce5997aa09c504c35392d67e90ad",
+  "reviewPreviews": [
+    "previews/stool-light-native.png",
+    "previews/stool-light-2x.png",
+    "previews/stool-dark-native.png",
+    "previews/stool-dark-2x.png",
+    "previews/character-light-native.png",
+    "previews/character-light-2x.png",
+    "previews/character-dark-native.png",
+    "previews/character-dark-2x.png",
+    "previews/recomposed-light-native.png",
+    "previews/recomposed-light-2x.png",
+    "previews/recomposed-dark-native.png",
+    "previews/recomposed-dark-2x.png"
+  ],
+  "independentReviewPending": true,
+  "geometryDeclaration": "Authored roots/footprints remain declared constraints; corrected canvas rounding does not repair visual drift"
+}

@@ -1,0 +1,37 @@
+{
+  "script": "../../reprocess.py",
+  "runtimeFrame": [
+    192,
+    320
+  ],
+  "source": [
+    "processed/frames/frame-00.png"
+  ],
+  "placement": "worldGround - stored localAnchor",
+  "commonGroundAnchor": [
+    96,
+    248
+  ],
+  "layerOffsetsPx": [
+    [
+      0,
+      0
+    ]
+  ],
+  "supportElevationBakedIntoArt": false,
+  "elevationOffsetAppliedPx": 0,
+  "perArtFitting": false,
+  "flattenedSceneSliced": false,
+  "displayScales": {
+    "native": 1,
+    "2x": 2
+  },
+  "displayResampling": "NEAREST",
+  "files": [
+    "previews/lava-tile-light-native.png",
+    "previews/lava-tile-light-2x.png",
+    "previews/lava-tile-dark-native.png",
+    "previews/lava-tile-dark-2x.png"
+  ],
+  "visualQualityCertified": false
+}

@@ -1,0 +1,72 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "/root/review_full_3d_static_controls",
+  "independent": true,
+  "spriteSHA256": {
+    "large-object-3x2": "7973bbacaa7ad6fbf953aeb0035f67f89c2d69f9b9cf225fb127935560690878"
+  },
+  "sourceSHA256": {
+    "source-01.png": "79103ab5cc32e542198a7dbf000387aae1983ef89d901b236bc5371c0649283c"
+  },
+  "resultSHA256": "4b1847b2727b6037128145720ac46dfae166e0acbc0cc5435075d7254e27dd96",
+  "guideSHA256": "3aff78d2e5f3d509e292c6a323c38d82545cc3d985f822cc62742ae777a2eb61",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The foundation, glass-wall framing and pitched roof preserve parallel screen-aligned horizontal/vertical directions. Top/roof and front structure are readable, without perspective taper.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/previews/large-object-3x2-light-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The greenhouse foundation, roof ridge and rafters, front door and both plant beds fit inside the frame. Light/dark 2x views show complete fine frame edges and no clipped roof ends or external effects.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/previews/large-object-3x2-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/previews/large-object-3x2-dark-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/previews/large-object-3x2-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The common root is centered in the rectangular ground footprint. The foundation aligns with its three-column, two-row area and the elevated roof extends above it in the grid placement.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/previews/large-object-3x2-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/render/on-floor.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/guide.json"
+      ]
+    },
+    "rectangular-size": {
+      "pass": true,
+      "note": "The foundation reads as a 3:2 ground rectangle at the shared grid pitch, spanning three columns and two rows. Neither the full silhouette nor the ground rectangle has been forced into a square.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/previews/large-object-3x2-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/guide.json"
+      ]
+    },
+    "multi-cell-overlap": {
+      "pass": true,
+      "note": "The greenhouse remains one complete multi-row object with its roof overlapping upward behind the footprint. The supplied scenario treats the six-cell foundation as occupied; no actor-through-greenhouse use is demonstrated. Such an interior traversal would require additional occlusion pieces, but it is not required for the displayed solid-footprint placement.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/previews/large-object-3x2-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/previews/large-object-3x2-light-2x.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "This is a direct modeled Three.js control, not an AI reskin. The retained 2x source and runtime sprite show the same complete geometry, materials and registration after the declared capture downsample. The linked renderer authors the geometry and captures separate floors/layers; no visible replacement, clipping or geometry fitting is introduced.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/sprites/whole.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/scene/3d_controls_static_scene.js",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/scene/render-options.json",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/large-object-3x2/guide.json"
+      ]
+    }
+  }
+}

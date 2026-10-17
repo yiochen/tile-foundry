@@ -1,0 +1,536 @@
+{
+  "kind": "candidate-browser-playback",
+  "input": "../playback.html",
+  "fps": 12,
+  "visitedFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "wraps": 2,
+  "samples": [
+    {
+      "elapsedMs": -0.10000000000000142,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 16.5,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 33.099999999999994,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 49.900000000000006,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 66.5,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 83.2,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 99.80000000000001,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 116.5,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 133.2,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 149.9,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 166.5,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 183.1,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 199.8,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 216.4,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 233.10000000000002,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 249.8,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 266.5,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 283.1,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 299.8,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 316.5,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 333.1,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 349.8,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 366.4,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 383.1,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 399.8,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 416.5,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 433.1,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 449.8,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 466.5,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 483.20000000000005,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 499.79999999999995,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 516.4,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 533.1,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 549.7,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 566.4,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 583.2,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 599.8,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 616.5,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 633.1,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 649.8,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 666.4,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 683.2,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 699.7,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 716.5,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 733.2,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 749.8,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 766.5,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 783.1,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 799.8,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 816.4,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 833.1,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 849.8,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 866.5,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 883.1,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 899.8,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 916.5,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 933.1,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 949.8,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 966.5,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 983.1,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 999.7,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 1016.4000000000001,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 1033.1,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 1049.8,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 1066.5,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 1083.1,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 1099.8,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 1116.5,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 1133.1,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 1149.8,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 1166.4,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 1183.1,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 1199.7,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 1216.4,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 1233.1,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 1249.8,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 1266.4,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 1283.1,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 1299.8,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 1316.4,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 1333.1,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 1349.7,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 1366.5,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 1383.1,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 1399.8,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 1416.4,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 1433.1,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 1449.7,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 1466.4,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 1483.1,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 1499.7,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 1516.4,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 1533,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 1549.8,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 1566.4,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 1583.1,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 1599.8,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 1616.4,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 1633.1,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 1649.7,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 1666.4,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 1683.1,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 1699.8,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 1716.4,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 1733,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 1749.8,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 1766.4,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 1783.1,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 1799.7,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 1816.5,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 1833.1,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 1849.8,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 1866.4,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 1883,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 1899.7,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 1916.4,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 1933.1,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 1949.7,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 1966.4,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 1983.1,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 1999.8,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 2016.4,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 2033.1,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 2049.7,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 2066.4,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 2083.1,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 2099.8,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 2116.4,
+      "frame": 1
+    }
+  ],
+  "browserErrors": [],
+  "note": "Actual candidate sprites at stored roots. No control/reference animation substituted. Screenshots include all 12 phases and phase-offset neighbors."
+}

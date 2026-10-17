@@ -1,0 +1,38 @@
+{
+  "tool": "image_gen.imagegen",
+  "toolArguments": {
+    "prompt": "Use case: style-transfer. Asset: one complete wooden stool sprite for a square-grid RPG.\nThe supplied image is the 3D EDIT TARGET: an isolated complete stool, with a four-plank rectangular seat, four legs and low braces. Reskin it into finished hand-painted game artwork: warm medium-brown wood grain, worn but clean edges, carved small bevels, visible plank joints and understated joinery, with soft painted top-light and darker front faces. Retain the useful modeled geometry, full seat dimensions, leg supports, seat elevation and parallel straight edges. Refine surface art and small construction detail without redesigning, widening or rotating the stool.\nKeep the entire 384x640 source canvas, exact subject position/size and transparent margins. Do not center or enlarge the small stool within that canvas. The underlying runtime frame is 192x320 with ground root (96,248) at double resolution. The 128px ground-cell pitch stays fixed, and the seat is 48px high, 3/8 of one cell width, already captured in its vertical placement. All four supports remain at the authored ground points.\nUse the supplied fixed square-grid top-down oblique projection, front-facing three-quarter game view: broad visible seat top and front apron, screen-aligned ground, parallel edges, no diamond-grid rotation or perspective convergence.\nReturn only this complete isolated wooden stool with genuine transparent background, including the complete seat and all legs/braces. No person, floor, ground shadow, guides, labels, checkerboard paint or scene.",
+    "referenced_image_paths": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/references/stool-3d.png"
+    ],
+    "transparent_background": true
+  },
+  "prompt": "Use case: style-transfer. Asset: one complete wooden stool sprite for a square-grid RPG.\nThe supplied image is the 3D EDIT TARGET: an isolated complete stool, with a four-plank rectangular seat, four legs and low braces. Reskin it into finished hand-painted game artwork: warm medium-brown wood grain, worn but clean edges, carved small bevels, visible plank joints and understated joinery, with soft painted top-light and darker front faces. Retain the useful modeled geometry, full seat dimensions, leg supports, seat elevation and parallel straight edges. Refine surface art and small construction detail without redesigning, widening or rotating the stool.\nKeep the entire 384x640 source canvas, exact subject position/size and transparent margins. Do not center or enlarge the small stool within that canvas. The underlying runtime frame is 192x320 with ground root (96,248) at double resolution. The 128px ground-cell pitch stays fixed, and the seat is 48px high, 3/8 of one cell width, already captured in its vertical placement. All four supports remain at the authored ground points.\nUse the supplied fixed square-grid top-down oblique projection, front-facing three-quarter game view: broad visible seat top and front apron, screen-aligned ground, parallel edges, no diamond-grid rotation or perspective convergence.\nReturn only this complete isolated wooden stool with genuine transparent background, including the complete seat and all legs/braces. No person, floor, ground shadow, guides, labels, checkerboard paint or scene.",
+  "transparentBackground": true,
+  "references": [
+    "references/stool-3d.png"
+  ],
+  "referenceRoles": {
+    "references/stool-3d.png": "Complete independently rendered stool 3D edit target"
+  },
+  "sourceRole": "AI reskin of complete stool layer",
+  "generationCalls": 1,
+  "imageGenerationCalls": 1,
+  "sourceSHA256": "e92c56a6847efc12dff3ba3984f65d68405416262a3cdb7f6f222beb9d56f8af",
+  "referenceSHA256": {
+    "references/stool-3d.png": "31774dcec1c611c0ac319e5005204d3d820d1953a0a02f25f04cfc507089f517"
+  },
+  "sourceSize": [
+    971,
+    1619
+  ],
+  "processing": {
+    "guide": "guides/stool.json",
+    "command": ".venv/bin/python assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/source-01.png assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/guides/stool.json assets/evals/2026-10-17-3d-creative-reskin-all/seated-character-separated/processed-01 --kind object --min-alpha 32",
+    "status": "success",
+    "result": "processed-01/result.json"
+  },
+  "originalToolOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-87a3-7573-8abc-a5b9a86402dd/exec-588873a2-2f4b-404b-aee5-e7bed3b5c31e.png",
+  "untouchedSourceCopy": "source-01.png",
+  "allInputRastersInspectedBeforeCall": true
+}

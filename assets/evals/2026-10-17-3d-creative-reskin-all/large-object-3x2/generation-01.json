@@ -1,0 +1,37 @@
+{
+  "prompt": "Reskin image 1, an authored 3D long greenhouse capture, into a finished hand-painted greenhouse game prop. Retain the modeled complete outer rectangular greenhouse, full base extent, long glass roof, upright front wall, framing grid, door location and wall/roof height. Refine its pale frame into softly weathered painted metal with narrow bevel highlights, transparent cool glass with subtle restrained reflections, a readable door handle and earthy beds. Refine the crude seedlings into varied natural small leafy plants with local silhouette freedom within the existing beds and structure; retain overall plant scale and supports. Keep the rigid greenhouse outer geometry and square-grid alignment; no peaked redesign, rotated base or extra structures. Preserve the reference top-down oblique, front-facing three-quarter parallel camera and uniform feature scale. The complete ground footprint is three by two cells of 128px, 384x256 at runtime, with nominal 128px visible structure height. Preserve the complete 1024x1152 reference canvas and 8:9 aspect, exact original placement and transparent margins. Runtime frame is 512x576 with central ground anchor (256,376) of the whole 3x2 footprint; do not fit or recenter the visible roof. Return the complete single greenhouse object on genuine transparency, no external ground, cast shadow, decorative outline/glow, labels or other objects.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "references": [
+    "references/edit-target.png"
+  ],
+  "referenceSHA256": {
+    "references/edit-target.png": "79103ab5cc32e542198a7dbf000387aae1983ef89d901b236bc5371c0649283c"
+  },
+  "referenceRoles": {
+    "references/edit-target.png": "floor-free modeled 3D geometry edit target"
+  },
+  "toolArguments": {
+    "prompt": "Reskin image 1, an authored 3D long greenhouse capture, into a finished hand-painted greenhouse game prop. Retain the modeled complete outer rectangular greenhouse, full base extent, long glass roof, upright front wall, framing grid, door location and wall/roof height. Refine its pale frame into softly weathered painted metal with narrow bevel highlights, transparent cool glass with subtle restrained reflections, a readable door handle and earthy beds. Refine the crude seedlings into varied natural small leafy plants with local silhouette freedom within the existing beds and structure; retain overall plant scale and supports. Keep the rigid greenhouse outer geometry and square-grid alignment; no peaked redesign, rotated base or extra structures. Preserve the reference top-down oblique, front-facing three-quarter parallel camera and uniform feature scale. The complete ground footprint is three by two cells of 128px, 384x256 at runtime, with nominal 128px visible structure height. Preserve the complete 1024x1152 reference canvas and 8:9 aspect, exact original placement and transparent margins. Runtime frame is 512x576 with central ground anchor (256,376) of the whole 3x2 footprint; do not fit or recenter the visible roof. Return the complete single greenhouse object on genuine transparency, no external ground, cast shadow, decorative outline/glow, labels or other objects.",
+    "referenced_image_paths": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/references/edit-target.png"
+    ],
+    "transparent_background": true
+  },
+  "shapeEditPolicy": "Mixed subject: preserve rigid greenhouse outer rectangular base, roof/walls/frames and height; refine glass/materials, plus organic plant silhouettes inside unchanged structure.",
+  "workflow": "3d-imagegen-reskin",
+  "status": "generated",
+  "attempt": 1,
+  "attemptBudget": 1,
+  "imageGenerationCalls": 1,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "geometryReferenceBundle": "authored-render",
+  "predeclaredProcessing": {
+    "kind": "object",
+    "minAlpha": 32,
+    "guide": "guide.json",
+    "perPoseFitting": false
+  },
+  "sourceSHA256": "a55cc5f15f9790f8564cd39b9df02057017bffe4a5bc4a1fc0f625e14967a8bf",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-2f574ddb-7ff5-4dd3-8139-bb587e65fa84.png"
+}

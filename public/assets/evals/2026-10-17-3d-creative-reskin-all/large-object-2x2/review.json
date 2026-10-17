@@ -1,0 +1,75 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "independent": true,
+  "spriteSHA256": {
+    "large-object-2x2": "e861a566dba1e7c76c11420f779d469563cb83e99b3d88d9a2eee81082cc59b0"
+  },
+  "sourceSHA256": {
+    "source-01.png": "2e84ee88eb0dc1b878378ae3c46a2d88179cc22007342d1b29f3ab7da2153c1e"
+  },
+  "resultSHA256": "80c582a14967ef70ce856f3ed5daa85c793569d8261bdf2cef7030034be760a7",
+  "guideSHA256": "114512b16e19aecf7c1144c4c8606c4b09d880382b37b24b3a641f4cdb8c1610",
+  "checks": {
+    "projection": {
+      "pass": false,
+      "note": "The fountain base changes from the reference square with parallel sides into a visible trapezoid: the front is wider, side edges converge toward the rear, and ground depth is compressed. This is a perceptual camera/footprint change rather than surface detail.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/large-object-2x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-light-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The complete bowl, water arcs, pedestal, basin, and foundation fit the delivered frame. The broad pale external halo in the raw source is absent from the cleaned final light/dark views; no feature is visibly clipped.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The base and central pedestal remain centered around the stored ground cross. The footprint distortion is separately recorded; there is no obvious lateral or whole-object anchor shift.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/large-object-2x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-stored-anchor-grid.png"
+      ]
+    },
+    "multi-cell-size": {
+      "pass": false,
+      "note": "The fountain remains a large multi-cell asset, but its tapered base is visibly shallower and somewhat wider than the declared 2x2 square on the guide. The delivered artwork does not read as the requested square ground footprint at the common scale.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/large-object-2x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-light-2x.png"
+      ]
+    },
+    "multi-cell-overlap": {
+      "pass": true,
+      "note": "The complete fountain is placed as one coherent object on the multi-row grid, with the upper bowl extending above the basin and no cell-sized raster cuts. Its base projection defect is recorded under projection and multi-cell-size.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/large-object-2x2/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-stored-anchor-grid.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The processed sprite preserves the same carved stone, water jets, bowl, and tapered basin from the raw AI source. The declared fixed uniform registration and alpha cleanup are consistent with the visual change in presentation; no new art is substituted.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/previews/large-object-2x2-dark-2x.png"
+      ]
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "large-object-3x2",
+  "request": "Generate a long greenhouse occupying exactly 3x2 cells of 128px each (384x256 footprint), with 128px visible height. Keep a central ground anchor, the shared grid scale, and the complete transparent silhouette. Deliver each sprite in a 512x576px frame with local projected ground anchor (256,376). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "rectangular-size": "The footprint remains a 3:2 rectangle at the same cell scale, without forcing a square or stretching axes.",
+    "multi-cell-overlap": "Inspect complete placement and tall-row overlap; report when independent depth pieces are needed.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "object",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "groundAnchorAlignment": "center",
+    "sprites": [
+      {
+        "id": "large-object-3x2",
+        "image": "processed/frames/frame-00.png",
+        "size": [
+          512,
+          576
+        ],
+        "anchor": [
+          256,
+          376
+        ],
+        "footprint": [
+          384,
+          256
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "elevationPx": 128,
+        "index": 0,
+        "role": "object"
+      }
+    ],
+    "depthPieces": []
+  },
+  "operations": [
+    {
+      "sprite": "large-object-3x2",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.4331186409035751,
+          0.4331186409035751
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          591.0620689655173,
+          868.1224137931034
+        ],
+        "anchorOut": [
+          256,
+          376
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        0.0,
+        0.0,
+        1182.1241379310345,
+        1329.8896551724138
+      ],
+      "cleanup": {
+        "minAlpha": 32,
+        "removedAlphaMass": 57774,
+        "rendererMaskApplied": false,
+        "colorKeyApplied": false
+      }
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "whole-asset",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/source-01.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/references/edit-target.png"
+    },
+    {
+      "role": "processed",
+      "id": "large-object-3x2",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/processed/frames/frame-00.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/large-object-3x2/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/large-object-3x2/placement-0-dark.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/references/visual-review.md"
+}

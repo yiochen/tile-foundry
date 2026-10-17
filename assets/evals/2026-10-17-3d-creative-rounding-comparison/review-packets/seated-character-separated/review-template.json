@@ -1,0 +1,58 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "",
+  "independent": true,
+  "spriteSHA256": {
+    "stool": "3b89502d05bd6f12f8bed042601c81bec2c21f356468c4b43b6a0e1976bb1a90",
+    "character": "965f9cc805cb178341d9e57e4946ad9e82eb2a5a4b32443f4f9a7ca571868af3"
+  },
+  "sourceSHA256": {
+    "source-01.png": "e92c56a6847efc12dff3ba3984f65d68405416262a3cdb7f6f222beb9d56f8af",
+    "source-02.png": "771b7c85e146febd0b7fcf5d039b2da65d642c51b056e63beeaa5fad4dcdb28c"
+  },
+  "resultSHA256": "132f76ccc848a2ceb12653a4446c74da4726f31fd217575cf4bad9d8efdb663f",
+  "guideSHA256": "bab6e12e42fd1515e8dec46d2b4071666153cd758d929ea9d2b8bb54786a512b",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "layer-separation": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "seated-contact": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "complete-layers": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "support-height": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "",
+      "evidence": []
+    }
+  }
+}

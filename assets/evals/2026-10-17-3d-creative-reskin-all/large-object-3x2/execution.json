@@ -1,0 +1,54 @@
+{
+  "caseId": "large-object-3x2",
+  "workflow": "3d-imagegen-reskin",
+  "callCount": 1,
+  "imageGenerationCalls": 1,
+  "attemptBudget": 1,
+  "shapeEditPolicy": "Mixed subject: preserve rigid greenhouse outer rectangular base, roof/walls/frames and height; refine glass/materials, plus organic plant silhouettes inside unchanged structure.",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-2f574ddb-7ff5-4dd3-8139-bb587e65fa84.png",
+  "sourceSHA256": "a55cc5f15f9790f8564cd39b9df02057017bffe4a5bc4a1fc0f625e14967a8bf",
+  "processingStatus": "processed",
+  "guidePreparedBeforeGeneration": true,
+  "referencesInspectedBeforeGeneration": true,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "freshRender": false,
+  "sourceSize": [
+    1182,
+    1330
+  ],
+  "processingCommand": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/guide.json",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/processed",
+    "--kind",
+    "object",
+    "--min-alpha",
+    "32"
+  ],
+  "processingExitCode": 0,
+  "processingStdout": "{\n  \"kind\": \"object\",\n  \"sprites\": 1,\n  \"sourceSHA256\": \"a55cc5f15f9790f8564cd39b9df02057017bffe4a5bc4a1fc0f625e14967a8bf\",\n  \"removedAlphaMass\": 57774,\n  \"output\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/processed\"\n}\n",
+  "processingStderr": "",
+  "processingInfo": {
+    "processor": "processing-tools/extract_registered_sheet.py",
+    "sha256": "3a5608f99967d58a4e71e1d2473a8651a5eb6c5f6bfccb539465677a1ea291a6",
+    "predeclaredMinAlpha": 32,
+    "fitting": false,
+    "clipping": false,
+    "rendererSilhouetteApplied": false,
+    "colorKeyApplied": false
+  },
+  "processingResult": "result.json",
+  "resultSHA256": "f4bccb65513a5c181c7cb75fc59cc737efab93d48b83b4c719fa161e1ab19376",
+  "submissionSHA256": "4c380ccea4c155c08d2c3d28a82636e3bcfa11db6701027494c78b55b98e57af",
+  "reviewPreviews": [
+    "previews/large-object-3x2-dark-2x.png",
+    "previews/large-object-3x2-dark-native.png",
+    "previews/large-object-3x2-light-2x.png",
+    "previews/large-object-3x2-light-native.png",
+    "previews/large-object-3x2-stored-anchor-grid.png"
+  ],
+  "deliveryIntegrityChecked": true,
+  "savedPreviewsInspected": true
+}

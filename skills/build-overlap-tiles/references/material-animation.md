@@ -1,7 +1,12 @@
 # Raised terrain animation
 
-Choose the animation source before generation. For flowing surfaces, prefer one
-AI material with authored periodic texture motion. Use a phase atlas when the
+The default final-art workflow is [3D capture followed by imagegen reskin](three-dimensional.md).
+The SVG/material methods below are optional authoring helpers or explicitly requested
+alternatives. When used to author geometry/motion, capture that result and apply
+the final reskin too; do not substitute a material-only/direct render for it.
+
+Choose the animation source before generation. For authoring flowing-surface controls, one
+AI material with periodic texture motion is an option. Use a phase atlas when the
 request specifically needs model-drawn evolving features. Both preserve authored
 geometry; neither establishes good seams or motion without visual inspection.
 

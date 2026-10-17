@@ -193,19 +193,19 @@ anchors and height. All current animation output/preview schedules use **12 fps*
 See [the skill tuning findings](docs/skill-tuning-2026-10-16.md) for fresh-agent
 iterations and the distinction between image-model misses and workflow defects.
 
-The skill also supports [rigged 3D capture followed by AI reskinning](skills/build-overlap-tiles/references/three-dimensional.md).
-Its portable Three.js helper captures a skinned character through a fixed
-square-grid projection, preserving editable model/rig/pose sources and separate
-color, floor, alpha and depth passes. Full-sheet extraction transfers the authored
-frames and roots without fitting generated feet or clipping art to a 3D mask.
-The direct 3D control and the AI reskin are evaluated separately.
-See [the 3D experiment and results](docs/3d-reskin-experiment-2026-10-17.md).
-The [full-suite control and prompt-tuning follow-up](docs/3d-control-all-prompt-tuning-2026-10-17.md)
-reruns all 14 cases with fresh Three.js controls and compares direct prompt
-revisions with clean-agent skill executions. Controls pass 11/14; animated
-terrain still exposes material boundary bands. The skill now scopes
-scale-sensitive reskinning to materials on existing shapes and retains every
-failed attempt alongside the accepted outputs.
+The default skill workflow is now **3D blockout → registered capture → imagegen
+reskin for every final asset**, including floors, simple blocks, motion sheets,
+and separate support/depth layers. [The capture guide](skills/build-overlap-tiles/references/three-dimensional.md)
+records the square-grid camera and fixed extraction. Characters can replace crude
+anatomy, hair, clothes and shoe shapes while retaining nominal scale, pose and
+support contacts. Simple blocks keep their useful modeled geometry and receive
+surface/detail refinement. Untouched renders remain separately labeled controls.
+
+See the [subject-aware reskin run](docs/3d-creative-reskin-all-2026-10-17.md)
+for all 14 fresh AI attempts, exact prompts and unchanged independent grading.
+The earlier [control and material-finish experiments](docs/3d-control-all-prompt-tuning-2026-10-17.md)
+are preserved as historical comparisons; material-only character painting is no
+longer the default.
 
 The [suite](skills/build-overlap-tiles/evals/cases.json) contains the original 13 cases
 and a separately specified authored-flowing-lava case. The baseline has a fresh

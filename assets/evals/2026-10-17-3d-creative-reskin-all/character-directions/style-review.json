@@ -1,0 +1,11 @@
+{
+  "reviewer": "Independent Codex vision review (motion/character creative reskin)",
+  "scope": "Separate qualitative style assessment; does not override fixed visual/delivery rubric.",
+  "shapePolicy": "Refine primitive character shapes while keeping nominal scale, pose, facing and supports.",
+  "shapeRefinementObserved": true,
+  "observation": "Finished hair clumps, face, tailored cloth, natural hands and cuffed boots replace crude cap/capsule/box forms. This strongly realizes the visual redesign, but the enlarged body and shifted support fail registration.",
+  "evidence": [
+    "source-01.png",
+    "../review-packets/character-directions/registered-reference-vs-ai.png"
+  ]
+}

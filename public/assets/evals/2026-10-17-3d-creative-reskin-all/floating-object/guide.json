@@ -1,0 +1,63 @@
+{
+  "cellSize": 128,
+  "anchor": [
+    96,
+    248
+  ],
+  "frame": [
+    192,
+    320
+  ],
+  "projection": "top-down-oblique-square-grid",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "captureScale": 2,
+  "nominalHeightPx": 64,
+  "footprint": [
+    128,
+    128
+  ],
+  "occupiedCells": [
+    [
+      0,
+      0
+    ]
+  ],
+  "elevationPx": 64,
+  "version": 1,
+  "kind": "rendered-3d-sheet",
+  "assetKind": "object",
+  "size": [
+    384,
+    640
+  ],
+  "gutter": 0,
+  "columns": 1,
+  "cells": [
+    {
+      "index": 0,
+      "rect": [
+        0,
+        0,
+        384,
+        640
+      ]
+    }
+  ],
+  "groundAnchorAlignment": "center",
+  "authoredRender": {
+    "bundle": "authored-render",
+    "capture": "authored-render/capture.json",
+    "originalGuide": "authored-render/guide.json"
+  },
+  "sourceAuthority": "Supplied existing authored 3D capture geometry input; not a new render",
+  "predeclaredExtraction": {
+    "kind": "object",
+    "minAlpha": 32
+  },
+  "supportCells": [],
+  "groundClearancePx": 48
+}

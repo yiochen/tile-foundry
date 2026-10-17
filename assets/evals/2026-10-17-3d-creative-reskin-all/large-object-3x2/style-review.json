@@ -1,0 +1,27 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "independent": true,
+  "spriteSHA256": {
+    "large-object-3x2": "37045875ac21b8e188a1bca6b81e4e39a506fb43d62588237e278c6da1ba18cb"
+  },
+  "sourceSHA256": {
+    "source-01.png": "a55cc5f15f9790f8564cd39b9df02057017bffe4a5bc4a1fc0f625e14967a8bf"
+  },
+  "resultSHA256": "f4bccb65513a5c181c7cb75fc59cc737efab93d48b83b4c719fa161e1ab19376",
+  "guideSHA256": "9d00a9993e9268dbe4d1e9df3dc3198e3a33a98c840065b0557a9b1ec9a5ba24",
+  "assessment": "Qualitative requested shape policy; separate from geometric visual grading",
+  "shapePolicy": "Blocks retain useful form with visual improvement; organic props refine local forms; characters replace primitive appearance.",
+  "realized": "yes",
+  "note": "The useful structural rectangle and frame are retained, with substantial material improvements to glass and metal and locally refined plants and soil. It follows the requested combination of stable block structure and richer organic contents.",
+  "evidence": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/references/edit-target.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/processed/frames/frame-00.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/previews/large-object-3x2-light-2x.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/previews/large-object-3x2-dark-2x.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/large-object-3x2/placement-0-light.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-3x2/previews/large-object-3x2-stored-anchor-grid.png"
+  ]
+}

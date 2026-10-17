@@ -1,0 +1,22 @@
+{
+  "run": "2026-10-17-3d-creative-rounding-comparison",
+  "mode": "saved-artifact-replay",
+  "ok": true,
+  "trials": [
+    {
+      "trial": "lava-tile",
+      "caseId": "lava-tile",
+      "status": "failed",
+      "expectedStatus": "failed",
+      "matchesExpected": true
+    },
+    {
+      "trial": "seated-character-separated",
+      "caseId": "seated-character-separated",
+      "status": "needs-visual-review",
+      "expectedStatus": "needs-visual-review",
+      "matchesExpected": true
+    }
+  ],
+  "scope": "Replays preserved originals and independent reviews, including failures; no new image generation or corrected attempts."
+}

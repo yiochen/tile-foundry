@@ -1,0 +1,73 @@
+{
+  "caseId": "dancing-player",
+  "status": "processed",
+  "imageGenerationCalls": 1,
+  "shapePolicy": "Refine local character anatomy, silhouette, face, hair, hands, clothing and boots; retain nominal body scale, pose/facing, root/support contacts and full panel layout.",
+  "geometryInput": {
+    "kind": "supplied-existing-3d-capture",
+    "originalPath": "assets/evals/2026-10-17-3d-control-all/dancing-player/render",
+    "copiedTo": "render",
+    "newRenderPerformed": false
+  },
+  "processing": {
+    "processor": "../skill-snapshot/scripts/extract_registered_sheet.py",
+    "minAlpha": 32,
+    "wholeCanvasUniformScale": true,
+    "rectangles": "render/guide.json",
+    "perPoseFitting": false,
+    "clipping": false,
+    "rendererStencil": false,
+    "fallback3D": false,
+    "command": [
+      ".venv/bin/python",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/dancing-player/source-01.png",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/dancing-player/render/guide.json",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/dancing-player/processed",
+      "--kind",
+      "animation",
+      "--min-alpha",
+      "32"
+    ],
+    "exitCode": 0,
+    "result": "processed",
+    "error": null
+  },
+  "requestedArtifact": {
+    "kind": "animation",
+    "frame": [
+      192,
+      320
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "columns": 4,
+    "rows": 3,
+    "frameCount": 12,
+    "fps": 12
+  },
+  "sourceSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/dancing-player/source-01.png",
+  "workflow": "3d-imagegen-reskin",
+  "sourceSHA256": "6fe9470cded0c55b737185b1b60f95d3300a5efb562434e9ff30950bf148ae4c",
+  "originalSavedPath": "/Users/yiouchen/.codex/generated_images/01a14b96-446a-7232-80d7-91d923e3f2bd/exec-fae17441-9bd4-48bf-8d24-0d0e310f25cf.png",
+  "resultSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/dancing-player/result.json",
+  "submissionSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/dancing-player/submission.json",
+  "previewEvidence": {
+    "browserInspection": "previews/browser/inspection.json",
+    "mobileScreenshot": "previews/browser/mobile.png",
+    "desktopScreenshot": "previews/browser/desktop.png",
+    "inspectedScreenshots": [
+      "previews/browser/mobile.png"
+    ],
+    "sourceOnly": false,
+    "fps": 12,
+    "displayedFrameCount": 12,
+    "observedLoopWraps": 2
+  },
+  "deliveryIntegrityChecked": true,
+  "submittedResultSHA256": "9b52fab65c5dec597f8e71f6914d25220b220c1370c2a58fcab5bd5cb3ccdd4a",
+  "sourceUnchangedVerified": true,
+  "gradingPerformedByExecutor": false
+}

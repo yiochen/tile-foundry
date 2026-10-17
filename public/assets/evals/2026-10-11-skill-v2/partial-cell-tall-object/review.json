@@ -1,0 +1,44 @@
+{
+  "reviewer": "Root assistant, independent of fresh executor agents",
+  "independent": true,
+  "spriteSHA256": {
+    "lantern-post": "63dd65b5aadcc7f4919c946595e7e26faa97ab1276db63630b868959d8930ac7"
+  },
+  "resultSHA256": "7b2e805577f986722bfc6b867073a19eb680d58ba3fa1965ba6bc8815194fdb3",
+  "guideSHA256": "dd8b1923f1f9cf990398f65a00bec1b1dd736d09e51093f924bd4342cb1538a9",
+  "checks": {
+    "projection": {
+      "pass": false,
+      "note": "The lamp base uses angled/isometric-looking faces rather than the registered screen-aligned 48px ground square."
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "partial-base": {
+      "pass": false,
+      "note": "The base is partial-cell, but the processed silhouette is about 62px wide and has angled pedestal faces instead of the requested 48x48 screen-aligned base."
+    },
+    "visible-height": {
+      "pass": false,
+      "note": "Head/top at local y16 against ground root y248 gives about 232px above the root, far above the requested 160px. No height fitting was applied."
+    },
+    "cutout": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  },
+  "limitations": [
+    "One fresh attempt per case does not estimate reliability.",
+    "Landmark/perspective judgments are approximate; no AI geometric exactness is claimed."
+  ],
+  "inspection": "Original generated art, actual light/dark cutouts, registration placement and repeated terrain images inspected."
+}

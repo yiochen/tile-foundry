@@ -1,0 +1,37 @@
+{
+  "prompt": "Reskin image 1, an authored 3D raised lava tile capture, into finished hand-painted game artwork. Retain this modeled tile's straight screen-aligned square base, complete outer form, full base extent and short front wall. Replace the crude striped brown material with dark crusted volcanic rock islands, rich charred porous stone and bright yellow-orange molten lava flowing through connected fissures. Add detailed material shading and restrained small bevels within the existing outer edges. Keep the top lava pattern able to continue across identical neighboring top surfaces, with no border or lighting gradient at seams. Preserve square-grid top-down oblique projection, front-facing three-quarter game view, parallel edges and the exact reference camera. At runtime the base is 128x128 and the visible front wall is 32px (one quarter of the base width); the entire top projects upward as in the reference. Do not rotate, enlarge, reduce or reposition the body to make it fit a cell. Preserve the complete 384x640 reference canvas and 3:5 aspect, transparent margins and subject placement; this corresponds to a 192x320 frame with ground root (96,248), not the visible top center. Output the complete single isolated raised lava tile on genuine transparency, with no floor, shadows, external glow, labels or other objects.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "references": [
+    "references/edit-target.png"
+  ],
+  "referenceSHA256": {
+    "references/edit-target.png": "ba52b7daf5f21d043a65dd1f59976d6d2d13a19a0d6dc7c1befbf842113e12cb"
+  },
+  "referenceRoles": {
+    "references/edit-target.png": "floor-free modeled 3D geometry edit target"
+  },
+  "toolArguments": {
+    "prompt": "Reskin image 1, an authored 3D raised lava tile capture, into finished hand-painted game artwork. Retain this modeled tile's straight screen-aligned square base, complete outer form, full base extent and short front wall. Replace the crude striped brown material with dark crusted volcanic rock islands, rich charred porous stone and bright yellow-orange molten lava flowing through connected fissures. Add detailed material shading and restrained small bevels within the existing outer edges. Keep the top lava pattern able to continue across identical neighboring top surfaces, with no border or lighting gradient at seams. Preserve square-grid top-down oblique projection, front-facing three-quarter game view, parallel edges and the exact reference camera. At runtime the base is 128x128 and the visible front wall is 32px (one quarter of the base width); the entire top projects upward as in the reference. Do not rotate, enlarge, reduce or reposition the body to make it fit a cell. Preserve the complete 384x640 reference canvas and 3:5 aspect, transparent margins and subject placement; this corresponds to a 192x320 frame with ground root (96,248), not the visible top center. Output the complete single isolated raised lava tile on genuine transparency, with no floor, shadows, external glow, labels or other objects.",
+    "referenced_image_paths": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/lava-tile/references/edit-target.png"
+    ],
+    "transparent_background": true
+  },
+  "shapeEditPolicy": "Preserve modeled rigid outer geometry, full base and front-wall height; refine lava materials, shading, bevels and detail.",
+  "workflow": "3d-imagegen-reskin",
+  "status": "generated",
+  "attempt": 1,
+  "attemptBudget": 1,
+  "imageGenerationCalls": 1,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "geometryReferenceBundle": "authored-render",
+  "predeclaredProcessing": {
+    "kind": "object",
+    "minAlpha": 32,
+    "guide": "guide.json",
+    "perPoseFitting": false
+  },
+  "sourceSHA256": "3a235f37124934eee65af84cee0e4023ef58a2b244acf2f40a62a4f6d4828617",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-ef3be25b-61ad-425e-b1dd-2922757ab39b.png"
+}

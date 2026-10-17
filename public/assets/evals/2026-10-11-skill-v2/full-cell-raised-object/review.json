@@ -1,0 +1,40 @@
+{
+  "reviewer": "Root assistant, independent of fresh executor agents",
+  "independent": true,
+  "spriteSHA256": {
+    "full-cell-raised-object": "6ca2f31b576203dc21d85810d6e2cdd05c7da11771ed2e96cd40de6ce758deb6"
+  },
+  "resultSHA256": "2ede26b17b87c881e83c1359b689e88f98c19aeb6c932b3b8484b8d7e4de1e4a",
+  "guideSHA256": "b423b3467ecb2d87ac32235e34165f92c0dbbe944c8635c16ffcee407162e057",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "full-base": {
+      "pass": true,
+      "note": "Opaque full cell coverage and parallel edges passed; repeated placement retains 128px pitch and height overlap."
+    },
+    "visible-height": {
+      "pass": true,
+      "note": "The inspected cutout has a complete 128x128 top and 64px darker front wall; SVG face masks own that geometry, with fresh generated stone detail."
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  },
+  "limitations": [
+    "One fresh attempt per case does not estimate reliability.",
+    "Landmark/perspective judgments are approximate; no AI geometric exactness is claimed."
+  ],
+  "inspection": "Original generated art, actual light/dark cutouts, registration placement and repeated terrain images inspected."
+}

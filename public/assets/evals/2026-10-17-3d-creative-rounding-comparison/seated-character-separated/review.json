@@ -1,0 +1,108 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (rounding comparison)",
+  "independent": true,
+  "spriteSHA256": {
+    "stool": "3b89502d05bd6f12f8bed042601c81bec2c21f356468c4b43b6a0e1976bb1a90",
+    "character": "965f9cc805cb178341d9e57e4946ad9e82eb2a5a4b32443f4f9a7ca571868af3"
+  },
+  "sourceSHA256": {
+    "source-01.png": "e92c56a6847efc12dff3ba3984f65d68405416262a3cdb7f6f222beb9d56f8af",
+    "source-02.png": "771b7c85e146febd0b7fcf5d039b2da65d642c51b056e63beeaa5fad4dcdb28c"
+  },
+  "resultSHA256": "132f76ccc848a2ceb12653a4446c74da4726f31fd217575cf4bad9d8efdb663f",
+  "guideSHA256": "bab6e12e42fd1515e8dec46d2b4071666153cd758d929ea9d2b8bb54786a512b",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The finished stool keeps its screen-aligned seat, visible top and front thickness, and parallel leg arrangement. The character retains the frontal top-down oblique view, with the top of the hair and shoulders readable. The supplied runtime layers share the same camera convention; the separate registration concern below is not a camera rotation.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/stool-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/character-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-dark-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Both layers are wholly present inside their delivered frames. The character has complete hair, hands, boots, and clothing edges; the stool has a complete seat, front rail, crossbar, and legs. Light/dark native and 2x cutouts show no clipping or undeclared floor/shadow.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-01/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-02/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/character-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/character-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "The horizontal centerline and actual seat contact are visually coherent in the stored placement/recomposition. The redesigned seated anatomy changes the head, torso and limb relationships to the crude 3D pose, while the opaque torso/thighs obscure the pelvis attachment. I cannot confidently establish the exact projected ground root or nominal standing scale from these seated images alone without treating primitive contours or toe/alpha bounds as invariants. This criterion remains open; metadata is not visual proof of the root.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/character-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/stool-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/seated-character-separated/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/seated-character-separated/placement-1-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/seated-character-separated/reviewer-same-frame-support-comparison-2x.png"
+      ]
+    },
+    "layer-separation": {
+      "pass": true,
+      "note": "The character-only cutouts contain the person and clothing without a stool seat, wooden legs, floor, guide, or support-shaped remnants. The stool-only cutouts contain the full wooden stool without anatomy or character-shaped contamination. This holds on both backgrounds at native and 2x.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/character-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/character-dark-2x.png"
+      ]
+    },
+    "seated-contact": {
+      "pass": true,
+      "note": "At the stored root/support transforms, the finished thighs and pelvis visibly meet the seat without an air gap, and the hands and feet hang consistently in front of the stool. The seat remains visible beside and between the thighs and the legs are ordered plausibly. This establishes usable actual contact without manual adjustment; it does not independently certify the obscured ground root or nominal standing scale.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-dark-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-dark-2x.png"
+      ]
+    },
+    "complete-layers": {
+      "pass": true,
+      "note": "The independently saved stool source and stool-only runtime image show the whole uninterrupted seat beneath the future character, the complete front rail and crossbar, and both full visible legs. The character is separately present as a complete cutout. No body-shaped hole or flattened-overlap slicing is visible in the supplied layers.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-01/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-02/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-2x.png"
+      ]
+    },
+    "support-height": {
+      "pass": true,
+      "note": "The finished stool preserves the reference seat level and the visual seat-to-ground span appropriate to the 48px support target. The supplied recomposition places the character on this seat without the obvious upward displacement an additional 48px application would produce. The packet stores support separately and marks it baked into the character; the image establishes plausible once-applied contact, not numerical proof of elevation.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/stool-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/seated-character-separated/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-dark-2x.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Each delivered layer faithfully resamples its independently supplied AI source: wood grain and plank details remain in the stool, and facial features, tunic folds, hands, trousers and boots remain in the character. There is no visible replacement art or per-part fitting introduced by processing. The redesigned character anatomy is already present in its generated source; this source-faithfulness pass does not certify its obscured ground root or nominal standing scale.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-01/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-02/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-2x.png"
+      ]
+    }
+  }
+}

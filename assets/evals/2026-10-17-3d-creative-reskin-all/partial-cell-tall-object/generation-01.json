@@ -1,0 +1,41 @@
+{
+  "prompt": "Reskin image 1, the floor-free authored 3D lantern-post capture, into a finished hand-painted fantasy game lantern. Image 2 is only an auxiliary ground registration square: use it to understand the ground plane and scale; do not include its pink floor in the output. Preserve the useful modeled stone plinth base, centered upright metal shaft, lantern body and roof outer form, and their height and support positions. Refine these into weathered stone, dark forged metal with small warm brass trim, beveled edges, luminous amber glass panes and readable painted surface detail. Keep decorative details within the existing overall crown-to-base envelope. The centered base is 48x48 runtime pixels (3/8 of one 128px ground-cell width); the nominal complete lantern height is 160px (1.25 cell widths), including its crown. Preserve the reference square-grid top-down oblique camera, screen-aligned square base, parallel edges and upright position. Preserve the complete 384x640 canvas and 3:5 aspect with its transparent margins; runtime frame 192x320 and projected ground root (96,248). Keep the scale and ground root independent of the lantern's alpha bounds. Return one complete isolated lantern post on genuine transparency, no pink calibration floor, no other ground, cast shadow, detached light bloom, labels or added props.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "references": [
+    "references/edit-target.png",
+    "references/ground-registration.png"
+  ],
+  "referenceSHA256": {
+    "references/edit-target.png": "05ce463ebd20827d800931f1e4bdf672f72a64d80c4d00b8e448ba37797676aa",
+    "references/ground-registration.png": "0eed985d270cd165cc76c2d7e95405f4c8958835443d83a33bc88560af3add72"
+  },
+  "referenceRoles": {
+    "references/edit-target.png": "floor-free modeled 3D geometry edit target",
+    "references/ground-registration.png": "auxiliary ground placement and scale registration; excluded from output"
+  },
+  "toolArguments": {
+    "prompt": "Reskin image 1, the floor-free authored 3D lantern-post capture, into a finished hand-painted fantasy game lantern. Image 2 is only an auxiliary ground registration square: use it to understand the ground plane and scale; do not include its pink floor in the output. Preserve the useful modeled stone plinth base, centered upright metal shaft, lantern body and roof outer form, and their height and support positions. Refine these into weathered stone, dark forged metal with small warm brass trim, beveled edges, luminous amber glass panes and readable painted surface detail. Keep decorative details within the existing overall crown-to-base envelope. The centered base is 48x48 runtime pixels (3/8 of one 128px ground-cell width); the nominal complete lantern height is 160px (1.25 cell widths), including its crown. Preserve the reference square-grid top-down oblique camera, screen-aligned square base, parallel edges and upright position. Preserve the complete 384x640 canvas and 3:5 aspect with its transparent margins; runtime frame 192x320 and projected ground root (96,248). Keep the scale and ground root independent of the lantern's alpha bounds. Return one complete isolated lantern post on genuine transparency, no pink calibration floor, no other ground, cast shadow, detached light bloom, labels or added props.",
+    "referenced_image_paths": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/references/edit-target.png",
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/references/ground-registration.png"
+    ],
+    "transparent_background": true
+  },
+  "shapeEditPolicy": "Preserve rigid lantern modeled base/shaft/crown geometry, nominal height and support; refine materials, glass, bevels and small decorative detail.",
+  "workflow": "3d-imagegen-reskin",
+  "status": "generated",
+  "attempt": 1,
+  "attemptBudget": 1,
+  "imageGenerationCalls": 1,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "geometryReferenceBundle": "authored-render",
+  "predeclaredProcessing": {
+    "kind": "object",
+    "minAlpha": 32,
+    "guide": "guide.json",
+    "perPoseFitting": false
+  },
+  "sourceSHA256": "325d5c533845b3cea48cbd0f86e20fbc8cc078bbec1c6fe3fd5a36a9465de705",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-1f91b3be-5ce8-4b10-b47d-51582bad997e.png"
+}

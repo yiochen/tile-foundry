@@ -1,0 +1,29 @@
+{
+  "caseId": "floating-object",
+  "expected": {
+    "size": [
+      192,
+      320
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "elevationPx": 64,
+    "elevationTolerancePx": 2,
+    "groundClearancePx": 48,
+    "groundClearanceTolerancePx": 3,
+    "supportCells": []
+  },
+  "supersample": 2
+}

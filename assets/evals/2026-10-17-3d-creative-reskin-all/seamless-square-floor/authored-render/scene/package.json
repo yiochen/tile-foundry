@@ -1,0 +1,9 @@
+{
+  "name": "fresh-direct-static-3d-control",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "three": "0.186.1",
+    "playwright": "1.64.0"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "caseId": "full-cell-raised-object",
+  "workflow": "3d-imagegen-reskin",
+  "callCount": 1,
+  "imageGenerationCalls": 1,
+  "attemptBudget": 1,
+  "shapeEditPolicy": "Preserve modeled rigid outer geometry, square base and 64px wall height; refine stone materials, bevel shading and detail.",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-2df94f15-746c-4a9f-aacd-a2ee57c665c1.png",
+  "sourceSHA256": "632d736dc3839a33bebd7b86cec3973a4f37fe475620321191fee308eb64ba4a",
+  "processingStatus": "processed",
+  "guidePreparedBeforeGeneration": true,
+  "referencesInspectedBeforeGeneration": true,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "freshRender": false,
+  "sourceSize": [
+    971,
+    1619
+  ],
+  "processingCommand": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/guide.json",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/processed",
+    "--kind",
+    "object",
+    "--min-alpha",
+    "32"
+  ],
+  "processingExitCode": 0,
+  "processingStdout": "{\n  \"kind\": \"object\",\n  \"sprites\": 1,\n  \"sourceSHA256\": \"632d736dc3839a33bebd7b86cec3973a4f37fe475620321191fee308eb64ba4a\",\n  \"removedAlphaMass\": 63231,\n  \"output\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/full-cell-raised-object/processed\"\n}\n",
+  "processingStderr": "",
+  "processingInfo": {
+    "processor": "processing-tools/extract_registered_sheet.py",
+    "sha256": "3a5608f99967d58a4e71e1d2473a8651a5eb6c5f6bfccb539465677a1ea291a6",
+    "predeclaredMinAlpha": 32,
+    "fitting": false,
+    "clipping": false,
+    "rendererSilhouetteApplied": false,
+    "colorKeyApplied": false
+  },
+  "processingResult": "result.json",
+  "resultSHA256": "693f67dd529de9bf19e97a2b89ba0e87a76c5ca07d755e9ff71c86d96d184a74",
+  "submissionSHA256": "b9b78e9ea7008a0c11120351f6d939fc37f4df32163c0af6c09ff1dcb30bd5fc",
+  "reviewPreviews": [
+    "previews/full-cell-raised-object-dark-2x.png",
+    "previews/full-cell-raised-object-dark-native.png",
+    "previews/full-cell-raised-object-light-2x.png",
+    "previews/full-cell-raised-object-light-native.png",
+    "previews/full-cell-raised-object-stored-anchor-grid.png"
+  ],
+  "deliveryIntegrityChecked": true,
+  "savedPreviewsInspected": true
+}

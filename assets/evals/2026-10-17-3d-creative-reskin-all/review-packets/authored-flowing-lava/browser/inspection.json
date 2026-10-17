@@ -1,0 +1,532 @@
+{
+  "kind": "candidate-browser-playback",
+  "input": "../playback.html",
+  "fps": 12,
+  "visitedFrames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "wraps": 2,
+  "samples": [
+    {
+      "elapsedMs": 8,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 24.700000000000003,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 41.3,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 57.900000000000006,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 74.6,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 91.30000000000001,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 108,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 124.69999999999999,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 141.3,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 158,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 174.7,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 191.3,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 208,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 224.60000000000002,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 241.3,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 258,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 274.6,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 291.3,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 307.9,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 324.6,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 341.3,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 358,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 374.6,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 391.3,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 407.9,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 424.7,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 441.3,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 458,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 474.6,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 491.29999999999995,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 507.9,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 524.6,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 541.3,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 558,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 574.7,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 591.2,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 608,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 624.6,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 641.3,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 658,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 674.6,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 691.2,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 708,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 724.6,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 741.3,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 757.9,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 774.7,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 791.3,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 807.9,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 824.6,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 841.3,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 857.9,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 874.6,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 891.3,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 907.9,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 924.6,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 941.3,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 957.9,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 974.6,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 991.3,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 1007.9000000000001,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 1024.6,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 1041.3,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 1057.9,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 1074.6,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 1091.3,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 1107.9,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 1124.6,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 1141.3,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 1158,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 1174.6,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 1191.3,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 1207.9,
+      "frame": 2
+    },
+    {
+      "elapsedMs": 1224.6,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 1241.2,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 1257.9,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 1274.6,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 1291.2,
+      "frame": 3
+    },
+    {
+      "elapsedMs": 1307.9,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 1324.6,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 1341.3,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 1357.9,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 1374.6,
+      "frame": 4
+    },
+    {
+      "elapsedMs": 1391.2,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 1408,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 1424.6,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 1441.3,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 1458,
+      "frame": 5
+    },
+    {
+      "elapsedMs": 1474.5,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 1491.2,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 1507.9,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 1524.6,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 1541.3,
+      "frame": 6
+    },
+    {
+      "elapsedMs": 1557.9,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 1574.6,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 1591.2,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 1607.9,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 1624.6,
+      "frame": 7
+    },
+    {
+      "elapsedMs": 1641.3,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 1657.9,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 1674.6,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 1691.2,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 1707.9,
+      "frame": 8
+    },
+    {
+      "elapsedMs": 1724.6,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 1741.2,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 1757.9,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 1774.6,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 1791.2,
+      "frame": 9
+    },
+    {
+      "elapsedMs": 1807.9,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 1824.6,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 1841.3,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 1857.9,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 1874.6,
+      "frame": 10
+    },
+    {
+      "elapsedMs": 1891.2,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 1907.9,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 1924.5,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 1941.3,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 1957.9,
+      "frame": 11
+    },
+    {
+      "elapsedMs": 1974.6,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 1991.2,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 2007.9,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 2024.5,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 2041.1999999999998,
+      "frame": 0
+    },
+    {
+      "elapsedMs": 2057.9,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 2074.6,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 2091.3,
+      "frame": 1
+    },
+    {
+      "elapsedMs": 2107.9,
+      "frame": 1
+    }
+  ],
+  "browserErrors": [],
+  "note": "Actual candidate sprites at stored roots. No control/reference animation substituted. Screenshots include all 12 phases and phase-offset neighbors."
+}

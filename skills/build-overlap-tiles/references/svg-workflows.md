@@ -1,5 +1,10 @@
 # SVG geometry and AI appearance
 
+The default final-art workflow is [3D capture followed by imagegen reskin](three-dimensional.md).
+The SVG/material methods below are optional authoring helpers or explicitly requested
+alternatives. When used to author geometry/motion, capture that result and apply
+the final reskin too; do not substitute a material-only/direct render for it.
+
 Choose what owns geometry. A whole-object model render can drift from a guide;
 authored SVG faces with generated material keep the silhouette deterministic.
 Use the latter when exact full-base joins or specific elevations are required.

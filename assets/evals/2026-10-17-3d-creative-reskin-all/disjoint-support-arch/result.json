@@ -1,0 +1,421 @@
+{
+  "version": 2,
+  "kind": "object",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "heightAxis": [
+    0,
+    -1
+  ],
+  "elevationScale": 1,
+  "workflow": "3d-imagegen-reskin",
+  "sprites": [
+    {
+      "id": "disjoint-support-arch",
+      "image": "sprites/whole.png",
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "footprint": [
+        384,
+        128
+      ],
+      "occupiedCells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "supportCells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "overheadCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "artRect": [
+        44,
+        89,
+        424,
+        298
+      ],
+      "reskinSources": [
+        "source-01.png",
+        "source-02.png"
+      ],
+      "composition": {
+        "operation": "alpha composite complete rear then front AI depth pieces",
+        "inputs": [
+          "sprites/arch-rear.png",
+          "sprites/arch-front.png"
+        ],
+        "offsetsPx": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "commonGroundAnchor": [
+          256,
+          312
+        ],
+        "elevationOffsetAppliedPx": 0
+      },
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "guide.json",
+        "scope": "Authored roots and frame only; generated geometry requires independent visual review"
+      }
+    }
+  ],
+  "depthPieces": [
+    {
+      "id": "arch-rear",
+      "index": 0,
+      "image": "sprites/arch-rear.png",
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "footprint": [
+        384,
+        128
+      ],
+      "artRect": [
+        44,
+        89,
+        424,
+        259
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "guides/arch-rear.json",
+        "guideSHA256": "0b6c184d68b644ade757a44df0f5b8afd2d8dfc82e741ce8052dfc0afa30d7d9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          0,
+          0,
+          1024,
+          896
+        ],
+        "sourceRect": [
+          0.0,
+          0.0,
+          1340.8141592920354,
+          1173.212389380531
+        ],
+        "sourceEnvelope": [
+          0,
+          0,
+          1341,
+          1174
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.38185754263688687,
+          0.38185754263688687
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          670.4070796460177,
+          817.058628318584
+        ],
+        "anchorOut": [
+          256,
+          312
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "role": "arch-depth-piece",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "supportCells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "overheadCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "drawOrder": 0,
+      "worldZInterval": [
+        -0.5,
+        0
+      ],
+      "worldXInterval": [
+        -1.5,
+        1.5
+      ],
+      "worldYInterval": [
+        0,
+        1.25
+      ],
+      "transform": {
+        "offsetPx": [
+          0,
+          0
+        ],
+        "groundAnchor": [
+          256,
+          312
+        ],
+        "elevationOffsetAppliedPx": 0
+      },
+      "reskinSource": "source-01.png",
+      "reskinRecipe": "generation-01.json",
+      "geometryReference": "references/arch-rear-3d.png",
+      "processingResult": "processed-01/result.json",
+      "derivation": "Complete independent 3D depth piece reskinned by one imagegen call; fixed authored frame extraction; no raster slicing"
+    },
+    {
+      "id": "arch-front",
+      "index": 0,
+      "image": "sprites/arch-front.png",
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "footprint": [
+        384,
+        128
+      ],
+      "artRect": [
+        45,
+        125,
+        423,
+        262
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "guides/arch-front.json",
+        "guideSHA256": "cac354dcb1f44e686217c92421014f5568394cce98e085744441d1ae80720d29",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          0,
+          0,
+          1024,
+          896
+        ],
+        "sourceRect": [
+          0.0,
+          0.0,
+          1340.8141592920354,
+          1173.212389380531
+        ],
+        "sourceEnvelope": [
+          0,
+          0,
+          1341,
+          1174
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.38185754263688687,
+          0.38185754263688687
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          670.4070796460177,
+          817.058628318584
+        ],
+        "anchorOut": [
+          256,
+          312
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "role": "arch-depth-piece",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "elevationPx": 160,
+      "supportCells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "overheadCells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "drawOrder": 2,
+      "worldZInterval": [
+        0,
+        0.5
+      ],
+      "worldXInterval": [
+        -1.5,
+        1.5
+      ],
+      "worldYInterval": [
+        0,
+        1.25
+      ],
+      "transform": {
+        "offsetPx": [
+          0,
+          0
+        ],
+        "groundAnchor": [
+          256,
+          312
+        ],
+        "elevationOffsetAppliedPx": 0
+      },
+      "reskinSource": "source-02.png",
+      "reskinRecipe": "generation-02.json",
+      "geometryReference": "references/arch-front-3d.png",
+      "processingResult": "processed-02/result.json",
+      "derivation": "Complete independent 3D depth piece reskinned by one imagegen call; fixed authored frame extraction; no raster slicing"
+    }
+  ],
+  "supportCells": [
+    [
+      0,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "overheadCells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "processing": {
+    "operation": "frozen fixed-sheet extraction then authored composition",
+    "minAlpha": 32,
+    "perPieceFit": false,
+    "crop": false,
+    "silhouetteMask": false,
+    "colorKey": false,
+    "sourcePixelsRetainedExceptDeclaredGlobalAlphaThreshold": true
+  },
+  "provenance": {
+    "imageGenerationCalls": 2,
+    "reskinSources": [
+      "source-01.png",
+      "source-02.png"
+    ],
+    "geometryReferenceRun": "2026-10-17-3d-control-all",
+    "stage": "3d-capture-then-imagegen",
+    "geometryReference": "provenance/reused-geometry.json"
+  },
+  "independentReviewPending": true
+}

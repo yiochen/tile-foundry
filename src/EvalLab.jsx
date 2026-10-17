@@ -180,7 +180,7 @@ function TrialResult({trial, entry, showAnchors}) {
       {trial.previewSequence&&<SpritePlayer sprites={trial.previewSequence.frames} kind={entry.kind} showAnchors={showAnchors} rawSequence={trial.previewSequence}/>}
       {trial.previewUnavailable&&<p className="eval-player-note">Raw sequence unavailable: {trial.previewUnavailable}</p>}
     </>}
-    <div className="eval-downloads">{[['result','Result metadata'],['report','Full eval report'],['review','LLM review evidence'],['policyRecord','Grading policy'],['processing','Processing diagnostic'],['submission','Submission'],['sheet','Spritesheet'],['guide','Guide metadata']].filter(([key])=>trial[key]).map(([key,label])=><a key={key} href={base+trial[key]} target="_blank" rel="noreferrer">{label} ↗</a>)}</div>
+    <div className="eval-downloads">{[['result','Result metadata'],['report','Full eval report'],['review','LLM review evidence'],['styleReview','Art transformation assessment'],['policyRecord','Grading policy'],['processing','Processing diagnostic'],['submission','Submission'],['sheet','Spritesheet'],['guide','Guide metadata']].filter(([key])=>trial[key]).map(([key,label])=><a key={key} href={base+trial[key]} target="_blank" rel="noreferrer">{label} ↗</a>)}</div>
     <CheckList title="Delivery checks" checks={trial.automaticChecks}/><CheckList title={trial.policy?'LLM visual review':'Visual review'} checks={trial.visualChecks}/>
     <Diagnostics checks={trial.diagnostics}/>
     {!!trial.previews.length&&<div className="eval-artifacts">{trial.previews.map(p=><figure key={p.image}><a href={base+p.image} target="_blank" rel="noreferrer"><img src={base+p.image} alt={p.label.replaceAll('-',' ')} loading="lazy"/></a><figcaption>{p.label.replaceAll('-',' ')}</figcaption></figure>)}</div>}

@@ -1,0 +1,41 @@
+{
+  "prompt": "Reskin image 1, the floor-free authored 3D floating treasure-orb capture, into a finished hand-painted magical treasure orb. Image 2 is only an auxiliary ground registration square: it establishes the ground root below the floating orb and must not appear in output. Replace the plain primitive surface with a rich translucent turquoise magical gem, readable internal facets and delicate gold filigree, bright controlled highlights and small jewel-like decorative details. You may refine its local gem/filigree silhouette into finished artwork while keeping the same overall size, height, centered position and lowest support/clearance limit; do not enlarge it with a crown, wings, rays or outer glow. Keep the modeled floating pose and scale: the orb is 64px tall at runtime, half one 128px cell width, with its lowest point 48px above the ground-center root. The root remains below the orb at runtime (96,248); do not recenter the orb onto that root or add a stand. Preserve square-grid top-down oblique projection, fixed reference camera, full 384x640 reference canvas and 3:5 aspect, transparent margins and original placement. Return one complete isolated floating treasure orb on genuine transparency; no floor, shadow, stand, glow halo, labels or other objects.",
+  "tool": "image_gen.imagegen",
+  "transparentBackground": true,
+  "references": [
+    "references/edit-target.png",
+    "references/ground-registration.png"
+  ],
+  "referenceSHA256": {
+    "references/edit-target.png": "cb8d65263cb7b9c6b1711d08b5859e308fdf1bc47be6e2f2edfd664b816f8abc",
+    "references/ground-registration.png": "0eed985d270cd165cc76c2d7e95405f4c8958835443d83a33bc88560af3add72"
+  },
+  "referenceRoles": {
+    "references/edit-target.png": "floor-free modeled 3D geometry edit target",
+    "references/ground-registration.png": "auxiliary ground placement and scale registration; excluded from output"
+  },
+  "toolArguments": {
+    "prompt": "Reskin image 1, the floor-free authored 3D floating treasure-orb capture, into a finished hand-painted magical treasure orb. Image 2 is only an auxiliary ground registration square: it establishes the ground root below the floating orb and must not appear in output. Replace the plain primitive surface with a rich translucent turquoise magical gem, readable internal facets and delicate gold filigree, bright controlled highlights and small jewel-like decorative details. You may refine its local gem/filigree silhouette into finished artwork while keeping the same overall size, height, centered position and lowest support/clearance limit; do not enlarge it with a crown, wings, rays or outer glow. Keep the modeled floating pose and scale: the orb is 64px tall at runtime, half one 128px cell width, with its lowest point 48px above the ground-center root. The root remains below the orb at runtime (96,248); do not recenter the orb onto that root or add a stand. Preserve square-grid top-down oblique projection, fixed reference camera, full 384x640 reference canvas and 3:5 aspect, transparent margins and original placement. Return one complete isolated floating treasure orb on genuine transparency; no floor, shadow, stand, glow halo, labels or other objects.",
+    "referenced_image_paths": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/references/edit-target.png",
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/references/ground-registration.png"
+    ],
+    "transparent_background": true
+  },
+  "shapeEditPolicy": "Organic/decorative prop: refine local gem/filigree silhouette while retaining overall 64px height, center and 48px ground clearance.",
+  "workflow": "3d-imagegen-reskin",
+  "status": "generated",
+  "attempt": 1,
+  "attemptBudget": 1,
+  "imageGenerationCalls": 1,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "geometryReferenceBundle": "authored-render",
+  "predeclaredProcessing": {
+    "kind": "object",
+    "minAlpha": 32,
+    "guide": "guide.json",
+    "perPoseFitting": false
+  },
+  "sourceSHA256": "edcda3268d25100b79a08c98d61b1ddbc87678ccd041c82113b49468a025b104",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-66aeaa3b-7926-43c1-bb90-323058b9721d.png"
+}

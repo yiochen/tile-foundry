@@ -1,0 +1,14 @@
+{
+  "caseId": "seamless-square-floor",
+  "outputDirectory": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seamless-square-floor",
+  "userPrompt": "Generate a seamless 128x128 mossy stone floor tile. Its opposite edges must connect in a repeated square grid, without visible seams or sudden color/lighting gradient jumps. Keep it flat, with no raised front wall. Deliver an opaque 128x128px tile with local ground-center anchor (64,64). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/seamless-square-floor.",
+  "sources": [
+    {
+      "image": "source-01.png",
+      "recipe": "generation-01.json"
+    }
+  ],
+  "guide": "guide.json",
+  "guideSHA256": "bed560687f9b1736a54f412c51bc97b705ae3cd4ea9b73f80be18163c0e1424f",
+  "result": "result.json"
+}

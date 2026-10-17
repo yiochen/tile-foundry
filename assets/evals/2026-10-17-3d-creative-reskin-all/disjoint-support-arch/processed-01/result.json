@@ -1,0 +1,257 @@
+{
+  "version": 2,
+  "kind": "object",
+  "projection": "top-down-oblique-square-grid",
+  "cellSize": 128,
+  "groundAnchorAlignment": "center",
+  "sprites": [
+    {
+      "id": "frame-00",
+      "index": 0,
+      "image": "frames/frame-00.png",
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        44,
+        89,
+        424,
+        259
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guides/arch-rear.json",
+        "guideSHA256": "0b6c184d68b644ade757a44df0f5b8afd2d8dfc82e741ce8052dfc0afa30d7d9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          0,
+          0,
+          1024,
+          896
+        ],
+        "sourceRect": [
+          0.0,
+          0.0,
+          1340.8141592920354,
+          1173.212389380531
+        ],
+        "sourceEnvelope": [
+          0,
+          0,
+          1341,
+          1174
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.38185754263688687,
+          0.38185754263688687
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          670.4070796460177,
+          817.058628318584
+        ],
+        "anchorOut": [
+          256,
+          312
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      },
+      "role": "object",
+      "occupiedCells": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "elevationPx": 160
+    }
+  ],
+  "frames": [
+    {
+      "id": "frame-00",
+      "index": 0,
+      "image": "frames/frame-00.png",
+      "size": [
+        512,
+        448
+      ],
+      "anchor": [
+        256,
+        312
+      ],
+      "footprint": [
+        128,
+        128
+      ],
+      "artRect": [
+        44,
+        89,
+        424,
+        259
+      ],
+      "registration": {
+        "method": "authored-3d-projection",
+        "guide": "../guides/arch-rear.json",
+        "guideSHA256": "0b6c184d68b644ade757a44df0f5b8afd2d8dfc82e741ce8052dfc0afa30d7d9",
+        "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+        "guideRect": [
+          0,
+          0,
+          1024,
+          896
+        ],
+        "sourceRect": [
+          0.0,
+          0.0,
+          1340.8141592920354,
+          1173.212389380531
+        ],
+        "sourceEnvelope": [
+          0,
+          0,
+          1341,
+          1174
+        ]
+      },
+      "normalization": {
+        "scale": [
+          0.38185754263688687,
+          0.38185754263688687
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          670.4070796460177,
+          817.058628318584
+        ],
+        "anchorOut": [
+          256,
+          312
+        ],
+        "perPoseFitting": false,
+        "sampling": "Uniform known-panel EXTENT resampling, BICUBIC; equal X/Y factor"
+      }
+    }
+  ],
+  "sourceSize": [
+    1341,
+    1173
+  ],
+  "guideSize": [
+    1024,
+    896
+  ],
+  "uniformSourceScale": 1.3093888274336283,
+  "captureScale": 2,
+  "sourceRects": [
+    [
+      0.0,
+      0.0,
+      1340.8141592920354,
+      1173.212389380531
+    ]
+  ],
+  "guideRects": [
+    [
+      0,
+      0,
+      1024,
+      896
+    ]
+  ],
+  "normalization": {
+    "wholeCanvasUniformScale": 1.3093888274336283,
+    "wholeCanvasOffset": [
+      0,
+      0
+    ],
+    "integerRoundingTolerancePx": 1,
+    "sourceEdgeResidualPx": [
+      0.18584070796464403,
+      -0.21238938053102174
+    ],
+    "transparentVirtualPaddingLTRB": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "equalAxisScale": true,
+    "perPoseFitting": false
+  },
+  "cleanup": {
+    "minAlpha": 32,
+    "scope": "Single global source-alpha threshold before panel extraction",
+    "removedAlphaMass": 72167,
+    "sourceAlphaMass": 151402646,
+    "sourceRGBChanged": false,
+    "rendererMaskApplied": false,
+    "colorKeyApplied": false
+  },
+  "panelIsolation": {
+    "method": "strict-authored-3d-panels",
+    "gutterGuidePx": 0,
+    "maximumOutsideAlphaBeforeThreshold": 0,
+    "outsideAlphaMassBeforeThreshold": 0,
+    "maximumOutsideAlphaAfterThreshold": 0,
+    "panelBoundaryAlphaAfterThreshold": 0
+  },
+  "registration": {
+    "method": "authored-3d-projection",
+    "scope": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review"
+  },
+  "geometryDeclaration": "Authored frame layout, projection and root only; generated silhouette, height, contact and pose adherence require independent visual review",
+  "sheet": {
+    "image": "sheet.png",
+    "columns": 1,
+    "rows": 1,
+    "frame": [
+      512,
+      448
+    ],
+    "spacing": 0
+  },
+  "provenance": {
+    "source": {
+      "path": "../source-01.png",
+      "sha256": "84116ab4b596394c6f07eb1fa318716ec39aba88c8407c95ce3ea1c5a7b850ff"
+    },
+    "guide": {
+      "path": "../guides/arch-rear.json",
+      "sha256": "0b6c184d68b644ade757a44df0f5b8afd2d8dfc82e741ce8052dfc0afa30d7d9"
+    },
+    "processor": {
+      "path": "extract_registered_sheet.py",
+      "sha256": "3a5608f99967d58a4e71e1d2473a8651a5eb6c5f6bfccb539465677a1ea291a6"
+    }
+  }
+}

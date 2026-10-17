@@ -1,0 +1,73 @@
+{
+  "caseId": "animated-waves",
+  "status": "source-only-extraction-rejected",
+  "imageGenerationCalls": 1,
+  "shapePolicy": "Retain the useful modeled block geometry, full square 128x128 base, 32px front wall, root and full panel layout; polish surface artwork and moving phase detail.",
+  "geometryInput": {
+    "kind": "supplied-existing-3d-capture",
+    "originalPath": "assets/evals/2026-10-17-3d-control-all/animated-waves/render",
+    "copiedTo": "render",
+    "newRenderPerformed": false
+  },
+  "processing": {
+    "processor": "../skill-snapshot/scripts/extract_registered_sheet.py",
+    "minAlpha": 32,
+    "wholeCanvasUniformScale": true,
+    "rectangles": "render/guide.json",
+    "perPoseFitting": false,
+    "clipping": false,
+    "rendererStencil": false,
+    "fallback3D": false,
+    "command": [
+      ".venv/bin/python",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/animated-waves/source-01.png",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/animated-waves/render/guide.json",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/animated-waves/processed",
+      "--kind",
+      "animation",
+      "--min-alpha",
+      "32"
+    ],
+    "exitCode": 1,
+    "result": "source-only-extraction-rejected",
+    "error": "ValueError: Art crosses a sheet gutter/outside declared panels (alpha 253); regenerate isolated fixed-layout panels instead of clipping"
+  },
+  "requestedArtifact": {
+    "kind": "animation",
+    "frame": [
+      192,
+      320
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "columns": 4,
+    "rows": 3,
+    "frameCount": 12,
+    "fps": 12
+  },
+  "sourceSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/animated-waves/source-01.png",
+  "workflow": "3d-imagegen-reskin",
+  "sourceSHA256": "ffb3944026a61ec6c35cb1cf16f7f698998782368504f4ab1864f789b3132f77",
+  "originalSavedPath": "/Users/yiouchen/.codex/generated_images/01a14b96-446a-7232-80d7-91d923e3f2bd/exec-85846b6c-611f-47ad-ab27-7f7efe0a6469.png",
+  "resultSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/animated-waves/result.json",
+  "submissionSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/animated-waves/submission.json",
+  "previewEvidence": {
+    "browserInspection": "previews/browser/inspection.json",
+    "mobileScreenshot": "previews/browser/mobile.png",
+    "desktopScreenshot": "previews/browser/desktop.png",
+    "inspectedScreenshots": [
+      "previews/browser/mobile.png"
+    ],
+    "sourceOnly": true,
+    "fps": 12,
+    "displayedFrameCount": 12,
+    "observedLoopWraps": 2
+  },
+  "deliveryIntegrityChecked": true,
+  "submittedResultSHA256": "5276a0684aef248f77c0055abc19fe0e8aa5ca673df9b5ff1bb067f201b298de",
+  "sourceUnchangedVerified": true,
+  "gradingPerformedByExecutor": false
+}

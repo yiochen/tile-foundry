@@ -1,0 +1,59 @@
+{
+  "reviewer": "Root assistant, independent of fresh executor agents",
+  "independent": true,
+  "spriteSHA256": {},
+  "resultSHA256": "50123a931ab6fcef304875a5e050a9bbb584794bef5f4ed3c80131025489895f",
+  "guideSHA256": "63cd2892517ba902632db5d0fc2e94894acbe582ab99b1cd857eaba841556074",
+  "checks": {
+    "projection": {
+      "pass": false,
+      "note": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    "complete-art": {
+      "pass": false,
+      "note": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    "anchor-placement": {
+      "pass": false,
+      "note": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    "same-player": {
+      "pass": true,
+      "note": "The twelve source poses keep recognizable hair, red jacket, trousers and shoes."
+    },
+    "dancing-poses": {
+      "pass": true,
+      "note": "Inspected all twelve original poses: distinct arm/stance variations form a dance sequence without obvious missing limbs."
+    },
+    "design-height": {
+      "pass": false,
+      "note": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    "contact-stability": {
+      "pass": false,
+      "note": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    "cutout-quality": {
+      "pass": false,
+      "note": "Twelve complete raw panels remain, but green floors could not be calibrated and removed under the frozen aspect tolerance; no usable transparent runtime sprites were delivered."
+    },
+    "loop": {
+      "pass": false,
+      "note": "Transparent separator recovery preserved the panels, but every floor failed aspect validation. No complete registered runtime result exists to establish this criterion."
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Strict failure and documented transparent-separator recovery retained; all pixels assigned once. Floor aspect ratios 1.062\u20131.133 then failed normalization, so no warping or false runtime sprites were produced."
+    }
+  },
+  "limitations": [
+    "One fresh attempt per case does not estimate reliability.",
+    "Landmark/perspective judgments are approximate; no AI geometric exactness is claimed."
+  ],
+  "inspection": "Original generated art, actual light/dark cutouts, registration placement and repeated terrain images inspected.",
+  "measurements": {
+    "neutralHeightPx": [],
+    "rootDriftPx": []
+  },
+  "measurementMethod": "Runtime calibration failed; raw-panel anatomy/contact estimates cannot substitute for registered-frame measurements."
+}

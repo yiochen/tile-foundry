@@ -1,0 +1,27 @@
+{
+  "caseId": "seamless-square-floor",
+  "expected": {
+    "size": [
+      128,
+      128
+    ],
+    "footprint": [
+      128,
+      128
+    ],
+    "anchor": [
+      64,
+      64
+    ],
+    "occupiedCells": [
+      [
+        0,
+        0
+      ]
+    ],
+    "elevationPx": 0,
+    "minimumAlpha": 250,
+    "seamMeanChannelDeltaMax": 8
+  },
+  "supersample": 2
+}

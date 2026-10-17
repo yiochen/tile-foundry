@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "freshGeometryCaptured": false,
+  "reusedFor": "Pose/scale/support/camera guidance for fresh imagegen calls",
+  "inputs": [
+    {
+      "sourceRun": "2026-10-17-3d-control-all",
+      "sourcePath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/render/highres/arch-rear.png",
+      "copiedPath": "../references/arch-rear-3d.png",
+      "sha256": "daf9ccee655949bd6c86de3ffa3d347bfab11099bae2fcae4999d81839b8bb26",
+      "role": "existing authored 3D geometry reference; not fresh geometry and never final candidate art"
+    },
+    {
+      "sourceRun": "2026-10-17-3d-control-all",
+      "sourcePath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/render/highres/arch-front.png",
+      "copiedPath": "../references/arch-front-3d.png",
+      "sha256": "407284d746aab7a1a8e1ffcd930e56fa5d53301fdb383f03366021432b8450d4",
+      "role": "existing authored 3D geometry reference; not fresh geometry and never final candidate art"
+    },
+    {
+      "sourceRun": "2026-10-17-3d-control-all",
+      "sourcePath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-control-all/disjoint-support-arch/render/highres/whole.png",
+      "copiedPath": "../references/whole-3d.png",
+      "sha256": "315e97d787b40c1d0bd0ceee89ae52a609f0dfc9e42331b051b125ec405fae42",
+      "role": "existing authored 3D geometry reference; not fresh geometry and never final candidate art"
+    }
+  ],
+  "retainedBundle": [
+    {
+      "path": "../geometry-reference/capture.json",
+      "sha256": "015e53c4b6a4a66404ebdc169139fecee9a0c2c706f12d0cc1f3666164020eb3"
+    },
+    {
+      "path": "../geometry-reference/guide.json",
+      "sha256": "9e1486528dfffa57aa0ed5572101fed7c9d945929207b759a7780ae8eb6badf0"
+    },
+    {
+      "path": "../geometry-reference/render/actor-behind.png",
+      "sha256": "5a0b20ab06d62d8976e2c32302b581f2d7e69ce673d44ba26b757055999f5952"
+    },
+    {
+      "path": "../geometry-reference/render/actor-center.png",
+      "sha256": "1c8c3406693df12dfa4413d47765c637f150620bdba754c8e08d81074c3722b8"
+    },
+    {
+      "path": "../geometry-reference/render/actor-foreground.png",
+      "sha256": "b226894f990e2f1d6f99932b1a8ac0239e6f9c06c8fe02ea64904d75338a9187"
+    },
+    {
+      "path": "../geometry-reference/render/arch-front.png",
+      "sha256": "7d706135d63351697d1a913ef601c8d3e5ccad1d067b2d000481f0758b3253fa"
+    },
+    {
+      "path": "../geometry-reference/render/arch-rear.png",
+      "sha256": "ec6e49264ad7645312afd440a9115f55bc3af069e709f95e1f4cedee7e296dc6"
+    },
+    {
+      "path": "../geometry-reference/render/depth.png",
+      "sha256": "f4b0c3e0b3a3323a9f32a14733111d13627908a17f386979b9649c7fe34d5e18"
+    },
+    {
+      "path": "../geometry-reference/render/floor-registration.png",
+      "sha256": "31abbd352e872f53e58295f9b79717ef269dfcab1018f692609a5c4b8b73bcef"
+    },
+    {
+      "path": "../geometry-reference/render/highres/actor-behind.png",
+      "sha256": "a2b316e5ae177e88c4ac432e04b840848faf28d28064a7a5d32105e2353831f4"
+    },
+    {
+      "path": "../geometry-reference/render/highres/actor-center.png",
+      "sha256": "0882f57d283edd60d57e130722076500f8b66c3028ec7d5ad86e89addcef98f5"
+    },
+    {
+      "path": "../geometry-reference/render/highres/actor-foreground.png",
+      "sha256": "36e417d02577aeea64f081ff7dd2572737373407e18d65bae1705d3903d89310"
+    },
+    {
+      "path": "../geometry-reference/render/highres/arch-front.png",
+      "sha256": "407284d746aab7a1a8e1ffcd930e56fa5d53301fdb383f03366021432b8450d4"
+    },
+    {
+      "path": "../geometry-reference/render/highres/arch-rear.png",
+      "sha256": "daf9ccee655949bd6c86de3ffa3d347bfab11099bae2fcae4999d81839b8bb26"
+    },
+    {
+      "path": "../geometry-reference/render/highres/depth.png",
+      "sha256": "a6b208365b8067f7c98d6d72bbd7d5bcd8333fa713ed144525412c27845b66d1"
+    },
+    {
+      "path": "../geometry-reference/render/highres/floor-registration.png",
+      "sha256": "65781ecd875c601b7ac514100d2aa30b42f9e1e43d9d3f6bee54dba7ffe82d15"
+    },
+    {
+      "path": "../geometry-reference/render/highres/on-floor.png",
+      "sha256": "cd35ff829bc913353e9f8eb842537666bc0876c349a055912504b6e974d28a9f"
+    },
+    {
+      "path": "../geometry-reference/render/highres/passage-behind.png",
+      "sha256": "cd35ff829bc913353e9f8eb842537666bc0876c349a055912504b6e974d28a9f"
+    },
+    {
+      "path": "../geometry-reference/render/highres/passage-center.png",
+      "sha256": "447a532e07c1c0fe0eae15ac6178dfe023d7cc16a4c80ea5081c6c8d776e66e2"
+    },
+    {
+      "path": "../geometry-reference/render/highres/passage-foreground.png",
+      "sha256": "cb538725c99aff7003e540aa17758c196131ff640c6ea178b6eb1da0e4f04318"
+    },
+    {
+      "path": "../geometry-reference/render/highres/whole.png",
+      "sha256": "315e97d787b40c1d0bd0ceee89ae52a609f0dfc9e42331b051b125ec405fae42"
+    },
+    {
+      "path": "../geometry-reference/render/on-floor.png",
+      "sha256": "f61e9b0d494d1848472b6cd7ce5abce4f5e8a4099cdbe585d8719a0867bb30c8"
+    },
+    {
+      "path": "../geometry-reference/render/passage-behind.png",
+      "sha256": "f61e9b0d494d1848472b6cd7ce5abce4f5e8a4099cdbe585d8719a0867bb30c8"
+    },
+    {
+      "path": "../geometry-reference/render/passage-center.png",
+      "sha256": "e07cf14824237e8573ed49f996bc1a65e4d9025e4f46e99575595cc50aa70a9e"
+    },
+    {
+      "path": "../geometry-reference/render/passage-foreground.png",
+      "sha256": "4399f28fef41e34bb33a8aa08206d416d0bb7849cc2f7bbb3dd33ab5ab91ec0a"
+    },
+    {
+      "path": "../geometry-reference/render/whole.png",
+      "sha256": "afd8f275f29765d9f015d2954d0eb8ab33b941fcdf94dfbbbee3d13e99dd57df"
+    },
+    {
+      "path": "../geometry-reference/scene/3d_controls_static.mjs",
+      "sha256": "aa1626fb33b56706df2ac41cb49184f15d3c1a2bad3a0100fbeee3c163ce5293"
+    },
+    {
+      "path": "../geometry-reference/scene/3d_controls_static_previews.py",
+      "sha256": "34bbe6cb84d92fd7fac21e6f2af732858225bca87df83a8fa138d6af8682a66b"
+    },
+    {
+      "path": "../geometry-reference/scene/3d_controls_static_rig.js",
+      "sha256": "d230aa3ef97b16be2edb9552e2ddf9993b2a565604af06770fafab8cd3e8154e"
+    },
+    {
+      "path": "../geometry-reference/scene/3d_controls_static_scene.js",
+      "sha256": "b8b8ec7c78563307503aad06e8da3281cf3dadd0981d066edb52ba60f41e1306"
+    },
+    {
+      "path": "../geometry-reference/scene/README.md",
+      "sha256": "b71da7b80315e2c65a87f449c047875c9dc278337aefd0edaabd3aef437fe89d"
+    },
+    {
+      "path": "../geometry-reference/scene/case.json",
+      "sha256": "e18b4e2eeb5165eada6766dee3241e84207636e9ea2586c400f714f082d517b8"
+    },
+    {
+      "path": "../geometry-reference/scene/model.json",
+      "sha256": "66d448381fd5b86d41bd1453c4bd70375f4a2f2fd191decad1b9557b816dafc9"
+    },
+    {
+      "path": "../geometry-reference/scene/package.json",
+      "sha256": "0469ee05f264fb7393594715f8f8ee173a87835d6806c17310de40cb4e07c762"
+    },
+    {
+      "path": "../geometry-reference/scene/render-options.json",
+      "sha256": "19977b056dc72f0adcad35b9e993d5f775fa1efe86706a2f8264ece916c72230"
+    },
+    {
+      "path": "../geometry-reference/scene/suite.json",
+      "sha256": "507fca7650f10d9ddae0c37bc9804d38c3b5f5c9cb362c5aabdc1a4c0a29ff1e"
+    },
+    {
+      "path": "../geometry-reference/scene/tile_tools.py",
+      "sha256": "836e1935bbd733cdca0aa4e82728ca3748ad820aec2da5ce86c6d19d75865490"
+    }
+  ]
+}

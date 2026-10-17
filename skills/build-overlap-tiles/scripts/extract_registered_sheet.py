@@ -126,8 +126,8 @@ def _border_max(alpha):
 def extract(source_path, guide_path, output_directory, kind=None, min_alpha=0):
     """Write complete registered frames using exact authored panel rectangles.
 
-    A <=1 source-pixel rounding discrepancy between whole-canvas X/Y dimensions
-    is tolerated. A least-squares scalar is used on both axes, with zero offset;
+    Each whole-canvas dimension may differ by <=1 source pixel from the same
+    least-squares scalar. That scalar is used on both axes, with zero offset;
     no independent axis resize or inferred crop is permitted. The scalar and
     residuals are recorded. Fractional canvas rounding may require at most one
     pixel of transparent virtual padding, never removal of source pixels.
@@ -145,11 +145,10 @@ def extract(source_path, guide_path, output_directory, kind=None, min_alpha=0):
         if opened.format != "PNG":
             raise ValueError("Preserve and supply the original generated PNG")
         source = opened.convert("RGBA")
-    sx, sy = source.width / size[0], source.height / size[1]
-    if abs(source.height - size[1] * sx) > 1 + 1e-9 or abs(source.width - size[0] * sy) > 1 + 1e-9:
-        raise ValueError("Generated whole-sheet aspect differs from guide beyond one source pixel; no axis stretching")
     scale = (source.width * size[0] + source.height * size[1]) / (size[0] ** 2 + size[1] ** 2)
     residual = [source.width - size[0] * scale, source.height - size[1] * scale]
+    if any(abs(value) > 1 + 1e-9 for value in residual):
+        raise ValueError("Generated whole-sheet aspect differs from guide beyond one source pixel; no axis stretching")
     mapped = [[v * scale for v in rect] for rect in rects]
     # Integer envelopes include every source pixel intersecting each known panel.
     # Transparent borders below ensure fractional edges contain no clipped art.

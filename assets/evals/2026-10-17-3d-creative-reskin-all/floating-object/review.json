@@ -1,0 +1,73 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "independent": true,
+  "spriteSHA256": {
+    "floating-object": "a997e7b10a8f03f1d9a6e4b7a6fe0040e00bf6662d735cf1c4edad826185f31c"
+  },
+  "sourceSHA256": {
+    "source-01.png": "edcda3268d25100b79a08c98d61b1ddbc87678ccd041c82113b49468a025b104"
+  },
+  "resultSHA256": "649bebdfc2f57fae1fe518fbe07a0c378c8657ee0bfbb90144564a875cb3eeab",
+  "guideSHA256": "e1c383042116ec69f640ecc0cfadf75edd404a5f7b48e0634faa0d56cd989e41",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "The upright oval treasure form and centered orientation remain consistent with the supplied reference. The gem and metal bands introduce local volume without a rotated ground-grid cue.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-light-2x.png"
+      ]
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "The full orb and pointed metal fittings fit inside the frame at native and 2x; no external effect or clipped ornament is visible.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-dark-2x.png"
+      ]
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "The stored cross remains beneath the orb on its central vertical axis, with a deliberate gap. The orb is not snapped down to its ground point.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/references/ground-registration.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/floating-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-stored-anchor-grid.png"
+      ]
+    },
+    "floating-placement": {
+      "pass": true,
+      "note": "The lowest solid ornament stays visibly above the projected ground point by roughly the requested clearance. The jeweled treatment slightly enlarges the primitive silhouette, but the gap still reads near 48px and clearly as floating.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/references/edit-target.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/floating-object/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-stored-anchor-grid.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-light-2x.png"
+      ]
+    },
+    "cutout": {
+      "pass": true,
+      "note": "No floor, calibration marks, or detached ground shadow remains. The light and dark previews show an isolated transparent orb with intact interior artwork.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/references/ground-registration.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-dark-2x.png"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "The original faceted turquoise body, gold cage, and jewel placements are retained through the declared fixed uniform registration and alpha cleanup, with no apparent fitted replacement.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/processed/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/previews/floating-object-light-2x.png"
+      ]
+    }
+  }
+}

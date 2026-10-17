@@ -1,0 +1,78 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (motion/character creative reskin)",
+  "independent": true,
+  "spriteSHA256": {},
+  "sourceSHA256": {
+    "source-01.png": "ffb3944026a61ec6c35cb1cf16f7f698998782368504f4ab1864f789b3132f77"
+  },
+  "resultSHA256": "5276a0684aef248f77c0055abc19fe0e8aa5ca673df9b5ff1bb067f201b298de",
+  "guideSHA256": "6a901e4149ae5b94b40453b195298116225f5fe16fd7de72aba42411d4b3d5fd",
+  "checks": {
+    "projection": {
+      "pass": null,
+      "note": "No normalized runtime frames were delivered, so this criterion cannot earn a runtime visual pass from the attractive raw sheet. Raw panels show a detailed moving surface; fixed registration/contact and repeats remain unestablished.",
+      "evidence": [
+        "source-01.png",
+        "result.json"
+      ]
+    },
+    "complete-art": {
+      "pass": null,
+      "note": "No normalized runtime frames were delivered, so this criterion cannot earn a runtime visual pass from the attractive raw sheet. Raw panels show a detailed moving surface; fixed registration/contact and repeats remain unestablished.",
+      "evidence": [
+        "source-01.png",
+        "result.json"
+      ]
+    },
+    "anchor-placement": {
+      "pass": null,
+      "note": "No normalized runtime frames were delivered, so this criterion cannot earn a runtime visual pass from the attractive raw sheet. Raw panels show a detailed moving surface; fixed registration/contact and repeats remain unestablished.",
+      "evidence": [
+        "source-01.png",
+        "result.json"
+      ]
+    },
+    "animated-height": {
+      "pass": null,
+      "note": "No normalized runtime frames were delivered, so this criterion cannot earn a runtime visual pass from the attractive raw sheet. Raw panels show a detailed moving surface; fixed registration/contact and repeats remain unestablished.",
+      "evidence": [
+        "source-01.png",
+        "result.json"
+      ]
+    },
+    "spatial-seams": {
+      "pass": null,
+      "note": "No normalized runtime frames were delivered, so this criterion cannot earn a runtime visual pass from the attractive raw sheet. Raw panels show a detailed moving surface; fixed registration/contact and repeats remain unestablished.",
+      "evidence": [
+        "source-01.png",
+        "result.json"
+      ]
+    },
+    "temporal-loop": {
+      "pass": null,
+      "note": "No normalized runtime frames were delivered, so this criterion cannot earn a runtime visual pass from the attractive raw sheet. Raw panels show a detailed moving surface; fixed registration/contact and repeats remain unestablished.",
+      "evidence": [
+        "source-01.png",
+        "result.json"
+      ]
+    },
+    "frame-consistency": {
+      "pass": null,
+      "note": "No normalized runtime frames were delivered, so this criterion cannot earn a runtime visual pass from the attractive raw sheet. Raw panels show a detailed moving surface; fixed registration/contact and repeats remain unestablished.",
+      "evidence": [
+        "source-01.png",
+        "result.json"
+      ]
+    },
+    "source-faithfulness": {
+      "pass": null,
+      "note": "No normalized runtime frames were delivered, so this criterion cannot earn a runtime visual pass from the attractive raw sheet. Raw panels show a detailed moving surface; fixed registration/contact and repeats remain unestablished.",
+      "evidence": [
+        "source-01.png",
+        "result.json"
+      ]
+    }
+  }
+}

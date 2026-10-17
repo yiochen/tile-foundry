@@ -1,0 +1,41 @@
+{
+  "tool": "image_gen.imagegen",
+  "toolArguments": {
+    "prompt": "Use case: style-transfer. Asset: one complete independent FRONT depth-piece sprite of a stone game arch.\nImage 1 is the EDIT TARGET: the front world-depth half of an arch rendered alone, containing its own complete two pillars and overhead masonry. It determines the output canvas, shape and placement. Image 2 is APPEARANCE CONTINUITY ONLY: the newly painted rear piece of this arch, with weathered pale gray limestone blocks, fine granular faces, subtly chipped bevels and masonry seams. Image 3 shows the whole 3D arch for context only.\nPaint image 1 with the same finished hand-painted stone materials, palette, block scale, bevels and lighting as image 2. The edit must follow image 1's front-half geometry and placement, NOT image 2's rear-half placement. Retain useful outer geometry, full width, existing visible top depth, arch curve and straight pillar bases. Small surface refinement is allowed; do not redesign the structure or fill the passage.\nPreserve the exact complete 1024x896 canvas of image 1, with its art in the same position and scale and with the same transparent margins. The runtime frame is 512x448 with ground root (256,312), doubled in the edit target. Keep this FRONT half only: world depth 0 through 0.5. Do not add the rear depth half or return a whole assembled arch. Do not vertically center, crop, fit or enlarge the art.\nSquare-grid top-down oblique projection, front-facing three-quarter RPG view; screen-aligned ground cells, parallel edges, visible top and front, no diamond rotation or perspective convergence. The full structure spans three 128px cells, with left/right pillars and a walkable empty center cell; nominal height 160px, 1.25 cell widths.\nReturn only the complete isolated front arch piece with genuine transparency around it and throughout the center opening. No floor, cast ground shadow, checkerboard paint, guides, labels, text, people or scenery.",
+    "referenced_image_paths": [
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/arch-front-3d.png",
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/rear-finished.png",
+      "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/whole-3d.png"
+    ],
+    "transparent_background": true
+  },
+  "prompt": "Use case: style-transfer. Asset: one complete independent FRONT depth-piece sprite of a stone game arch.\nImage 1 is the EDIT TARGET: the front world-depth half of an arch rendered alone, containing its own complete two pillars and overhead masonry. It determines the output canvas, shape and placement. Image 2 is APPEARANCE CONTINUITY ONLY: the newly painted rear piece of this arch, with weathered pale gray limestone blocks, fine granular faces, subtly chipped bevels and masonry seams. Image 3 shows the whole 3D arch for context only.\nPaint image 1 with the same finished hand-painted stone materials, palette, block scale, bevels and lighting as image 2. The edit must follow image 1's front-half geometry and placement, NOT image 2's rear-half placement. Retain useful outer geometry, full width, existing visible top depth, arch curve and straight pillar bases. Small surface refinement is allowed; do not redesign the structure or fill the passage.\nPreserve the exact complete 1024x896 canvas of image 1, with its art in the same position and scale and with the same transparent margins. The runtime frame is 512x448 with ground root (256,312), doubled in the edit target. Keep this FRONT half only: world depth 0 through 0.5. Do not add the rear depth half or return a whole assembled arch. Do not vertically center, crop, fit or enlarge the art.\nSquare-grid top-down oblique projection, front-facing three-quarter RPG view; screen-aligned ground cells, parallel edges, visible top and front, no diamond rotation or perspective convergence. The full structure spans three 128px cells, with left/right pillars and a walkable empty center cell; nominal height 160px, 1.25 cell widths.\nReturn only the complete isolated front arch piece with genuine transparency around it and throughout the center opening. No floor, cast ground shadow, checkerboard paint, guides, labels, text, people or scenery.",
+  "transparentBackground": true,
+  "references": [
+    "references/arch-front-3d.png",
+    "references/rear-finished.png",
+    "references/whole-3d.png"
+  ],
+  "referenceRoles": {
+    "references/arch-front-3d.png": "Complete independent front depth-piece 3D edit target",
+    "references/rear-finished.png": "Fresh rear AI piece; stone identity and material continuity only",
+    "references/whole-3d.png": "Whole-arch geometry context only; not output target"
+  },
+  "sourceRole": "AI reskin of independent front depth piece",
+  "generationCalls": 1,
+  "imageGenerationCalls": 1,
+  "sourceSHA256": "678378f5d16ace4f172d940d90a3b94b4390691eb60614d96d76ff01a622d64a",
+  "referenceSHA256": {
+    "references/arch-front-3d.png": "407284d746aab7a1a8e1ffcd930e56fa5d53301fdb383f03366021432b8450d4",
+    "references/rear-finished.png": "84116ab4b596394c6f07eb1fa318716ec39aba88c8407c95ce3ea1c5a7b850ff",
+    "references/whole-3d.png": "315e97d787b40c1d0bd0ceee89ae52a609f0dfc9e42331b051b125ec405fae42"
+  },
+  "processing": {
+    "guide": "guides/arch-front.json",
+    "command": ".venv/bin/python assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/source-02.png assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/guides/arch-front.json assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/processed-02 --kind object --min-alpha 32",
+    "result": "processed-02/result.json"
+  },
+  "originalToolOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-87a3-7573-8abc-a5b9a86402dd/exec-76cd27a5-7e78-4933-a616-0736b48cf6a8.png",
+  "untouchedSourceCopy": "source-02.png",
+  "allInputRastersInspectedBeforeCall": true
+}

@@ -1,0 +1,73 @@
+{
+  "caseId": "character-directions",
+  "status": "processed",
+  "imageGenerationCalls": 1,
+  "shapePolicy": "Refine local character anatomy, silhouette, face, hair, hands, clothing and boots; retain nominal body scale, pose/facing, root/support contacts and full panel layout.",
+  "geometryInput": {
+    "kind": "supplied-existing-3d-capture",
+    "originalPath": "assets/evals/2026-10-17-3d-control-all/character-directions/render",
+    "copiedTo": "render",
+    "newRenderPerformed": false
+  },
+  "processing": {
+    "processor": "../skill-snapshot/scripts/extract_registered_sheet.py",
+    "minAlpha": 32,
+    "wholeCanvasUniformScale": true,
+    "rectangles": "render/guide.json",
+    "perPoseFitting": false,
+    "clipping": false,
+    "rendererStencil": false,
+    "fallback3D": false,
+    "command": [
+      ".venv/bin/python",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/character-directions/source-01.png",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/character-directions/render/guide.json",
+      "assets/evals/2026-10-17-3d-creative-reskin-all/character-directions/processed",
+      "--kind",
+      "directions",
+      "--min-alpha",
+      "32"
+    ],
+    "exitCode": 0,
+    "result": "processed",
+    "error": null
+  },
+  "requestedArtifact": {
+    "kind": "directions",
+    "frame": [
+      192,
+      320
+    ],
+    "anchor": [
+      96,
+      248
+    ],
+    "columns": 4,
+    "rows": 2,
+    "frameCount": 8,
+    "fps": null
+  },
+  "sourceSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/character-directions/source-01.png",
+  "workflow": "3d-imagegen-reskin",
+  "sourceSHA256": "dec24f98d2b99318a710760d0116dd0fe0e28f51a133b949c68c44d7d741e83b",
+  "originalSavedPath": "/Users/yiouchen/.codex/generated_images/01a14b96-446a-7232-80d7-91d923e3f2bd/exec-66ee9a1d-2aee-4390-93d5-d02f5b86042c.png",
+  "resultSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/character-directions/result.json",
+  "submissionSavedPath": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/character-directions/submission.json",
+  "previewEvidence": {
+    "browserInspection": "previews/browser/inspection.json",
+    "mobileScreenshot": "previews/browser/mobile.png",
+    "desktopScreenshot": "previews/browser/desktop.png",
+    "inspectedScreenshots": [
+      "previews/browser/mobile.png"
+    ],
+    "sourceOnly": false,
+    "fps": null,
+    "displayedFrameCount": 8,
+    "observedLoopWraps": null
+  },
+  "deliveryIntegrityChecked": true,
+  "submittedResultSHA256": "aa7f904b87455d9794b2b0f20216a3b633472f601d83ce49ab411f8bf8052135",
+  "sourceUnchangedVerified": true,
+  "gradingPerformedByExecutor": false
+}

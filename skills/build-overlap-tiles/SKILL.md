@@ -1,6 +1,6 @@
 ---
 name: build-overlap-tiles
-description: Generate square-grid game floors, objects, characters, and animation sheets using projected 3D references or SVG geometry and AI artwork, with reusable ground anchors, independent footprints, and 12 fps animation.
+description: Generate square-grid game floors, objects, characters, and animation sheets using projected 3D blockouts and subject-aware AI reskinning, with reusable ground anchors, independent footprints, and 12 fps animation.
 ---
 
 # Build overlap tiles
@@ -29,69 +29,58 @@ not specify a physical camera angle. Read [projection](references/projection.md)
 and inspect the bundled reference when choosing a guide. Record the projection
 profile with the result, and use it consistently across poses and frames.
 
-## Choose geometry and guidance
+## Capture geometry, then reskin every final asset
 
-- **Modeled objects, characters, directions or skeletal animation:** use a rigged
-  3D model and fixed parallel capture for controlled shape, scale and contact.
-  Model/materials, skeleton and poses are editable source assets; capture all
-  poses with one camera, pixel scale and ground root. An AI reskin is an optional
-  art pass that must be evaluated against the untouched render. Read
-  [3D capture and reskin](references/three-dimensional.md). If exact registration
-  must survive, keep final geometry in the renderer and stylize materials before
-  capture; a post-capture reskin may redraw geometry and is not pixel-exact.
-- **Flat floor:** generate an opaque square surface from a sparse SVG raster.
-  Keep the complete square. Inspect repeated neighbors for color/pattern continuity,
-  not just full alpha. Read [floor and object workflow](references/floor-and-objects.md).
-- **Full-cell raised object:** retain a full square logical base and explicit
-  elevation. A raised lava tile includes a front wall. For exact joins, use
-  authored SVG faces plus generated materials; for a whole-object AI render,
-  measure and report any geometry drift. Read [SVG workflows](references/svg-workflows.md).
-- **Partial-base or floating object / character:** use a plain, explicitly reserved
-  calibration color and sparse height/pose guide. Measure the intact visible floor,
-  normalize uniformly, remove the calibration substrate, and retain that frame
-  and anchor. Sparse guides leave appearance to the model. Treat the raster as a
-  layout edit: replace the subject placeholder while preserving the calibration
-  square. A top limit must describe the entire subject, including head/hair/cap,
-  rather than just a post or torso. See the envelope example in the floor workflow.
-- **Directions or animation:** keep the camera, anatomy scale, floor registration,
-  and root fixed. Turn or pose the subject. All animations use **12 fps**
-  (`1000/12` ms per frame). A changing pose may change silhouette bounds; never
-  resize each frame to force an equal bounding-box height.
-  Choose the source contract before writing the prompt: transparent isolated
-  object panels and an opaque appearance-material atlas are different routes.
-  For flowing terrain, prefer one opaque AI material with authored periodic
-  texture motion; model-drawn phase atlases remain an alternative. Read
-  [material animation](references/material-animation.md) before generation.
-- **Multi-cell, disjoint support, arch, or stacked layers:** declare footprint,
-  occupied/support cells, overhead extent, support elevation, and layer/depth
-  pieces before generation. Read [geometry and output contract](references/geometry.md).
-  Preserve complete separate assets. Do not slice a flattened overlapping scene.
-  The floor processor only supports a visible single calibration floor per panel. For other
-  geometry, choose authored registration and a documented extractor before making
-  an image call; do not assume the single-cell detector will handle it later.
+Use **3D blockout → registered capture → imagegen reskin** for floors, objects,
+characters, multi-cell structures, separated layers, directions and animations.
+The untouched render is a geometry reference/control; it is not the final artwork.
+Apply the image-generation pass to every delivered asset, including simple blocks
+and every separately authored layer or depth piece. Read
+[3D capture and reskin](references/three-dimensional.md).
 
-For the 3D route, use the captured floor-free pose sheet as the edit target and
-describe style in text. Capture the calibration floor separately, so it need not
-be removed from the reskin by color. Transfer the authored panel layout and root;
-do not infer new roots from generated feet. Reject merged or clipped panels and
-review whether the generated anatomy actually follows the render.
-When scale is the priority, request a material-and-lighting finish on the existing
-forms. Preserve specific features that a character redraw might reinterpret,
-including hair contour, shoe shape and whether the face is visible. Requests for
-new anatomy, hairstyle or costume detail can compete with the geometry lock;
-put those design decisions into the 3D model before capture. A restricted surface
-pass offers less redesign freedom and still needs visual validation.
+Choose the shape freedom by what the model already accomplishes:
 
-For SVG routes, use a sole SVG raster reference by default, with style described in text. Supply
-an identity or support reference when continuity/attachment needs it and record
-its role. The bundled scene illustrates projection; it is not a default style
-reference to supply to every image call. A style image's object shape can bias
-geometry. Inspect each input raster before using it.
+- **Characters and difficult organic forms:** treat the crude mesh as pose, scale
+  and support guidance. Redesign its local silhouette, anatomy, face, hair, hands,
+  footwear and clothing into finished artwork. Replace primitive-looking shapes;
+  do not ask to preserve every contour or restrict the call to painting materials.
+  Keep nominal body scale, facing, joint action and support contacts consistent
+  across views. Hair and fabric can change edges within the authored frame.
+- **Blocks, floors and simple modeled structures:** preserve their useful outer
+  geometry, base extents, height and straight alignment. Improve materials,
+  shading, bevels and small details without unnecessary shape redesign.
+- **Mixed subjects:** state these freedoms per part. For example, retain a stool's
+  modeled seat/support geometry while refining the seated character's silhouette.
 
-Read the call-scoping rule in [prompt clauses](references/prompts.md): a generation
-prompt describes its intermediate source, while the full user request stays in
-provenance. In particular, retain temporary floors in image calls that need floor
-calibration, and leave projection/height to authored faces in material-only calls.
+For both, keep the same camera, logical footprint, ground root, support elevation,
+attachment points and complete panel layout. Shape freedom does not authorize a
+larger character, a moved foot anchor, a rotated ground base or a resized frame.
+Declare usable clearance before capture, rather than fitting or clipping the
+result later. Judge creative refinement and registration separately.
+
+Capture floor-free object/pose sheets as edit targets and calibration floors as
+auxiliary references. A flat visible floor is an opaque square plane and remains
+opaque after reskinning; use the whole-square processing command in
+[floor and object workflow](references/floor-and-objects.md). Raised terrain keeps
+its full base and explicit front-wall height. Inspect spatial repeats through
+all animation phases, including offset phases. Use [material animation](references/material-animation.md)
+for optional motion authoring, then reskin the captured phase sheet as well.
+All animations use **12 fps** (`1000/12` ms per frame).
+
+For large objects, arches or stacked layers, declare footprints, support/overhead
+cells, attachment elevations and depth pieces before generation. Capture and
+reskin each complete independent layer/piece. Derive a whole-object preview by
+compositing those pieces at stored roots; never slice a flattened overlapping
+scene. Read [geometry and output contract](references/geometry.md).
+
+Describe style in text by default. An identity/support image may be supplied when
+continuity or attachment needs it; record its role. The bundled scene illustrates
+projection and is not a default style image. Inspect every input raster.
+
+[Sparse SVG workflows](references/svg-workflows.md) remain useful for historical
+comparisons or explicitly requested alternatives. They do not replace the 3D plus
+imagegen final-art pass in this workflow. Read [prompt clauses](references/prompts.md)
+to keep source-generation instructions separate from final export instructions.
 
 ## Anchors and extraction
 

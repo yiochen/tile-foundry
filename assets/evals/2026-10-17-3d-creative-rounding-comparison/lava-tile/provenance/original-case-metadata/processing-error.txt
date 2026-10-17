@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py", line 287, in <module>
+    main()
+    ~~~~^^
+  File "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py", line 279, in main
+    result = extract(args.source, args.guide, args.output, args.kind, args.min_alpha)
+  File "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py", line 150, in extract
+    raise ValueError("Generated whole-sheet aspect differs from guide beyond one source pixel; no axis stretching")
+ValueError: Generated whole-sheet aspect differs from guide beyond one source pixel; no axis stretching

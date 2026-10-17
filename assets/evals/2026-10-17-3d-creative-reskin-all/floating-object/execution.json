@@ -1,0 +1,54 @@
+{
+  "caseId": "floating-object",
+  "workflow": "3d-imagegen-reskin",
+  "callCount": 1,
+  "imageGenerationCalls": 1,
+  "attemptBudget": 1,
+  "shapeEditPolicy": "Organic/decorative prop: refine local gem/filigree silhouette while retaining overall 64px height, center and 48px ground clearance.",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-66aeaa3b-7926-43c1-bb90-323058b9721d.png",
+  "sourceSHA256": "edcda3268d25100b79a08c98d61b1ddbc87678ccd041c82113b49468a025b104",
+  "processingStatus": "processed",
+  "guidePreparedBeforeGeneration": true,
+  "referencesInspectedBeforeGeneration": true,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "freshRender": false,
+  "sourceSize": [
+    971,
+    1619
+  ],
+  "processingCommand": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/guide.json",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/processed",
+    "--kind",
+    "object",
+    "--min-alpha",
+    "32"
+  ],
+  "processingExitCode": 0,
+  "processingStdout": "{\n  \"kind\": \"object\",\n  \"sprites\": 1,\n  \"sourceSHA256\": \"edcda3268d25100b79a08c98d61b1ddbc87678ccd041c82113b49468a025b104\",\n  \"removedAlphaMass\": 16029,\n  \"output\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/floating-object/processed\"\n}\n",
+  "processingStderr": "",
+  "processingInfo": {
+    "processor": "processing-tools/extract_registered_sheet.py",
+    "sha256": "3a5608f99967d58a4e71e1d2473a8651a5eb6c5f6bfccb539465677a1ea291a6",
+    "predeclaredMinAlpha": 32,
+    "fitting": false,
+    "clipping": false,
+    "rendererSilhouetteApplied": false,
+    "colorKeyApplied": false
+  },
+  "processingResult": "result.json",
+  "resultSHA256": "649bebdfc2f57fae1fe518fbe07a0c378c8657ee0bfbb90144564a875cb3eeab",
+  "submissionSHA256": "fc139bd4f17601ed4c5b00b5e9b4f6baf8dce93177a2412ea6bf97809c9d4ce0",
+  "reviewPreviews": [
+    "previews/floating-object-dark-2x.png",
+    "previews/floating-object-dark-native.png",
+    "previews/floating-object-light-2x.png",
+    "previews/floating-object-light-native.png",
+    "previews/floating-object-stored-anchor-grid.png"
+  ],
+  "deliveryIntegrityChecked": true,
+  "savedPreviewsInspected": true
+}

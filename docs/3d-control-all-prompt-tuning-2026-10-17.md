@@ -1,5 +1,10 @@
 # Full-suite 3D controls and scale-preserving reskin prompts
 
+Historical experiment. The later [subject-aware full reskin run](3d-creative-reskin-all-2026-10-17.md)
+replaces the material-only character recommendation: characters may refine crude
+shapes, while simple blocks retain their useful form. All final eval candidates
+now require an imagegen pass. The results below remain unchanged.
+
 Fresh direct 3D controls pass **11 of 14 cases**. The three animated terrain cases
 fail on visible spatial material seams; their geometry, delivery and timing pass.
 A directly tuned material-finish prompt passes both character cases. A fresh

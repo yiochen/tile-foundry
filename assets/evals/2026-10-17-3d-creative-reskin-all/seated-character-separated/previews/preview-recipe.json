@@ -1,0 +1,35 @@
+{
+  "script": "../art/assemble_and_preview.py",
+  "sourceImages": [
+    "../source-01.png",
+    "../source-02.png"
+  ],
+  "rawOverlay": {
+    "operation": "alpha composite unmodified generated source canvases at identical original top-left origins",
+    "sourceSizes": [
+      [
+        971,
+        1619
+      ],
+      [
+        971,
+        1620
+      ]
+    ],
+    "offsetsPx": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "resampling": false,
+    "purpose": "Unregistered source diagnostic only; character extraction failed; never a runtime candidate"
+  },
+  "runtimeRecompositionAvailable": false,
+  "reason": "Generated whole-sheet aspect differs from guide beyond one source pixel; no axis stretching",
+  "fallback": false
+}

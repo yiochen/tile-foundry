@@ -1,0 +1,54 @@
+{
+  "caseId": "large-object-2x2",
+  "workflow": "3d-imagegen-reskin",
+  "callCount": 1,
+  "imageGenerationCalls": 1,
+  "attemptBudget": 1,
+  "shapeEditPolicy": "Mixed prop: preserve rigid full square base, basins/columns and 128px structure height; refine stone/water materials and local fluid shape within authored envelope.",
+  "originalOutputPath": "/Users/yiouchen/.codex/generated_images/01a14b96-6341-7c13-b991-a276d4515e62/exec-6bd49082-92e6-45a0-b9cf-0c7df2796e10.png",
+  "sourceSHA256": "2e84ee88eb0dc1b878378ae3c46a2d88179cc22007342d1b29f3ab7da2153c1e",
+  "processingStatus": "processed",
+  "guidePreparedBeforeGeneration": true,
+  "referencesInspectedBeforeGeneration": true,
+  "geometryReferenceRun": "2026-10-17-3d-control-all",
+  "freshRender": false,
+  "sourceSize": [
+    1024,
+    1536
+  ],
+  "processingCommand": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/.venv/bin/python",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/scripts/extract_registered_sheet.py",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/guide.json",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/processed",
+    "--kind",
+    "object",
+    "--min-alpha",
+    "32"
+  ],
+  "processingExitCode": 0,
+  "processingStdout": "{\n  \"kind\": \"object\",\n  \"sprites\": 1,\n  \"sourceSHA256\": \"2e84ee88eb0dc1b878378ae3c46a2d88179cc22007342d1b29f3ab7da2153c1e\",\n  \"removedAlphaMass\": 28514,\n  \"output\": \"/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/large-object-2x2/processed\"\n}\n",
+  "processingStderr": "",
+  "processingInfo": {
+    "processor": "processing-tools/extract_registered_sheet.py",
+    "sha256": "3a5608f99967d58a4e71e1d2473a8651a5eb6c5f6bfccb539465677a1ea291a6",
+    "predeclaredMinAlpha": 32,
+    "fitting": false,
+    "clipping": false,
+    "rendererSilhouetteApplied": false,
+    "colorKeyApplied": false
+  },
+  "processingResult": "result.json",
+  "resultSHA256": "80c582a14967ef70ce856f3ed5daa85c793569d8261bdf2cef7030034be760a7",
+  "submissionSHA256": "87672d51c021e7864527a388d434821f8f950c951383991a4b77544003834cf6",
+  "reviewPreviews": [
+    "previews/large-object-2x2-dark-2x.png",
+    "previews/large-object-2x2-dark-native.png",
+    "previews/large-object-2x2-light-2x.png",
+    "previews/large-object-2x2-light-native.png",
+    "previews/large-object-2x2-stored-anchor-grid.png"
+  ],
+  "deliveryIntegrityChecked": true,
+  "savedPreviewsInspected": true
+}

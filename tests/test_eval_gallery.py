@@ -70,6 +70,29 @@ class EvalGalleryTests(unittest.TestCase):
         self.assertEqual(trial['sprites'],[])
         self.assertTrue((self.root/'public'/trial['sources'][0]['image']).is_file())
 
+    def test_failed_directions_expose_raw_player_without_creating_runtime_sprites(self):
+        case=dict(self.case,kind='directions')
+        self.suite.write_text(json.dumps({'version':2,'cases':[case]}))
+        self.run_record('2026-01-01',status='failed',case=case,no_result=True)
+        directory=self.root/'runs/2026-01-01/floor'
+        from PIL import ImageDraw
+        source=Image.new('RGBA',(128,128),(0,0,0,0))
+        draw=ImageDraw.Draw(source)
+        cells=[]
+        for index in range(8):
+            x,y=(index%4)*32,(index//4)*64
+            draw.rectangle((x+12,y+12,x+20,y+52),fill=(20,100,200,255))
+            cells.append({'index':index,'rect':[x+3,y+3,x+29,y+61]})
+        source.save(directory/'source.png')
+        original=(directory/'source.png').read_bytes()
+        (directory/'guide.json').write_text(json.dumps({'kind':'rendered-3d-sheet',
+            'size':[128,128],'columns':4,'rows':2,'cells':cells}))
+        trial=self.build()['cases'][0]['latest']
+        self.assertEqual(trial['sprites'],[])
+        self.assertFalse(trial['previewSequence']['isProcessedSprite'])
+        self.assertEqual(len(trial['previewSequence']['frames']),8)
+        self.assertEqual((directory/'source.png').read_bytes(),original)
+
     def test_direct_render_inputs_publish_as_files_instead_of_broken_images(self):
         self.run_record('2026-01-01',status='passed')
         run=self.root/'runs/2026-01-01';directory=run/'floor'

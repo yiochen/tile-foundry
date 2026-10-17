@@ -1,0 +1,40 @@
+{
+  "reviewer": "Root assistant, independent of fresh executor agents",
+  "independent": true,
+  "spriteSHA256": {
+    "treasure-orb": "7637879b88c75a6627c41a955df4d79503bc6945cefe7dcf11f4d2b5075fddf0"
+  },
+  "resultSHA256": "c06168c22112e59335e625df87fe977a9f729be1f1271ada4b03e79210614859",
+  "guideSHA256": "d0a42bbd5b3a8e7b1dd0cebff8931dfa4315200e7e8e2f359e97b97979471010",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "floating-placement": {
+      "pass": false,
+      "note": "The orb is genuinely above its preserved root; observed clearance is 51px (within the 3px tolerance), but its retained ornamented silhouette is 85px tall rather than the requested 64px."
+    },
+    "cutout": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  },
+  "limitations": [
+    "One fresh attempt per case does not estimate reliability.",
+    "Landmark/perspective judgments are approximate; no AI geometric exactness is claimed."
+  ],
+  "inspection": "Original generated art, actual light/dark cutouts, registration placement and repeated terrain images inspected."
+}

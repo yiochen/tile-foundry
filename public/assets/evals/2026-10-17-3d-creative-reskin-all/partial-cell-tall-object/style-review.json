@@ -1,0 +1,28 @@
+{
+  "policy": "llm-visual-v1",
+  "reviewerType": "llm",
+  "reviewer": "Independent Codex vision review (static/structural creative reskin)",
+  "independent": true,
+  "spriteSHA256": {
+    "partial-cell-tall-object": "3672b73fe209a49eafcb24ca5e6064d40c8b296374871d2ddfc10faf75d0be86"
+  },
+  "sourceSHA256": {
+    "source-01.png": "325d5c533845b3cea48cbd0f86e20fbc8cc078bbec1c6fe3fd5a36a9465de705"
+  },
+  "resultSHA256": "694194b610fb51e428e5ee453aac008700dcd021904817885b1b3e3eb02dbded",
+  "guideSHA256": "30e339fbdeefd2bb91cab36320fe25188f4c79d82d1c07e1142b0b78ef0a06cb",
+  "assessment": "Qualitative requested shape policy; separate from geometric visual grading",
+  "shapePolicy": "Blocks retain useful form with visual improvement; organic props refine local forms; characters replace primitive appearance.",
+  "realized": "yes",
+  "note": "The primitive lantern is refined with a pointed finial, faceted roof, gold fittings, glowing glass, and chipped stone support. Local form refinement is clear while the post and compact support remain useful.",
+  "evidence": [
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/references/edit-target.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/source-01.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/processed/frames/frame-00.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-light-2x.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-dark-2x.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/references/ground-registration.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/partial-cell-tall-object/placement-0-light.png",
+    "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/partial-cell-tall-object/previews/partial-cell-tall-object-stored-anchor-grid.png"
+  ]
+}

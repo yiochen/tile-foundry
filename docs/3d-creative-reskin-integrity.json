@@ -1,0 +1,25 @@
+{
+  "experiments": [
+    {
+      "run": "2026-10-17-3d-creative-reskin-all",
+      "skillSnapshotIntact": true,
+      "suiteUnchanged": true,
+      "suiteSHA256": "a1513b13f5311fc0cc47862bb518d47a03697ac4dd10e22d9def3184bd01e337",
+      "newImagegenCalls": 16
+    },
+    {
+      "run": "2026-10-17-3d-creative-rounding-comparison",
+      "skillSnapshotIntact": true,
+      "suiteUnchanged": true,
+      "suiteSHA256": "a1513b13f5311fc0cc47862bb518d47a03697ac4dd10e22d9def3184bd01e337",
+      "newImagegenCalls": 0
+    }
+  ],
+  "freshSources": 16,
+  "freshCases": 14,
+  "directRenderFallbacks": 0,
+  "processingComparisonNewImageCalls": 0,
+  "rubricChanged": false,
+  "reviewPolicy": "llm-visual-v1",
+  "coverageAudit": "assets/evals/2026-10-17-3d-creative-reskin-all/reskin-coverage-audit.json"
+}

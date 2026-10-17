@@ -1,0 +1,69 @@
+{
+  "reviewer": "Root assistant, independent of fresh executor agents",
+  "independent": true,
+  "spriteSHA256": {
+    "north": "7474791362b1ab3ee900a2a39e64f5f93806f5d209e8a948849e0d4ed66b3f52",
+    "northeast": "7c58c2ddaaa7787ac698fb4b6867050394bb341fcaf9c47e7f2252f05ce7c81c",
+    "east": "11d2675fcf2537bbf06c5278dcff17713c4ec39bd997d5c7eab192e2fbda7e45",
+    "southeast": "a2c1fdb25dd158a898de01a8702f9b5fac1d212d1d55c769e4e30af8ff7b450d",
+    "south": "2d7a26bcb32047a12b1ac8cb9cca3315d500992b104459576670a332bf949f53",
+    "southwest": "479ba4526aea0ec5407605e271c9006b63a2718bbb918bbf66bd158a6bc1fd04",
+    "west": "79022b09deaef0d17e006fd165a29f4082baa43c29c7484cc25206d2360c2854",
+    "northwest": "b091477067235a72dd594c72fcb52db396234f2abf3759e330aeccc25809bf9c"
+  },
+  "resultSHA256": "85d0711c7db540c853f0780292bce40817f48c68768e7c7d1c9bbb1e86d88132",
+  "guideSHA256": "664e321ee4f2b45cc7d7ab9d4e3e0a082bcb14a82f4655e28e646330c50459e3",
+  "checks": {
+    "projection": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "complete-art": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "anchor-placement": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "same-character": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "direction-height": {
+      "pass": false,
+      "note": "Neutral upright head-to-root estimates are 180\u2013182px in the actual normalized frames. Spread is small, but the requested nominal height is 160px."
+    },
+    "direction-contact": {
+      "pass": false,
+      "note": "Stored floor roots are identical; physical heel/support centers are approximate and some rotated views visibly shift. Independent inspection cannot establish the required 2px physical-contact tolerance from these shoe silhouettes."
+    },
+    "cutout": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    },
+    "source-faithfulness": {
+      "pass": true,
+      "note": "Inspected complete source and normalized placement/cutout/repeat output; recorded operations preserve the declared frame and source art."
+    }
+  },
+  "limitations": [
+    "One fresh attempt per case does not estimate reliability.",
+    "Landmark/perspective judgments are approximate; no AI geometric exactness is claimed."
+  ],
+  "inspection": "Original generated art, actual light/dark cutouts, registration placement and repeated terrain images inspected.",
+  "measurements": {
+    "neutralHeightPx": [
+      181,
+      182,
+      181,
+      180,
+      182,
+      181,
+      181,
+      181
+    ],
+    "rootDriftPx": []
+  },
+  "measurementMethod": "Head-to-ground-root upright height estimates in normalized frames; physical root/contact drift not confidently measurable within 2px, so no fabricated measurements supplied."
+}

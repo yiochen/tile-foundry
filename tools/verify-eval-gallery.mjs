@@ -53,6 +53,9 @@ export async function verifyEvalGallery(page,root,port){
   await page.goto(url+'/?view=evals',{waitUntil:'networkidle'});
   await page.locator('[data-evals-ready="true"]').waitFor();
   await page.locator('[data-eval-case="authored-flowing-lava"]').click();
+  const clockTrial=gallery.cases.find(c=>c.id==='authored-flowing-lava').trials.findLast(t=>t.sprites.length===12||t.previewSequence?.frames.length===12);
+  assert.ok(clockTrial,'Retained twelve-frame playback fixture');
+  await page.getByLabel('Eval attempt',{exact:true}).selectOption(clockTrial.id);
   await page.locator('.eval-player[data-frame-count="12"]').waitFor();
   await verifyPlaybackClock(page);
   const floor = gallery.cases.find(c=>c.id==='seamless-square-floor');
@@ -194,8 +197,9 @@ export async function verifyEvalGallery(page,root,port){
     await page.setViewportSize({width,height:844});
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Eval ${width}px overflow`);
     await page.locator('[data-eval-case="floating-object"]').click();
-    await page.locator('.eval-sprite-preview[data-ready="true"]').waitFor();
-    const inputSummary=page.locator('.eval-artifacts details>summary').filter({hasText:/^Renderer inputs/}).first();
+    const floating=gallery.cases.find(c=>c.id==='floating-object');
+    if(floating.latest.sprites.length)await page.locator('.eval-sprite-preview[data-ready="true"]').waitFor();
+    const inputSummary=page.locator('.eval-artifacts details>summary').filter({hasText:/^(Renderer inputs|Supplied references)/}).first();
     if(!await inputSummary.evaluate(summary=>summary.parentElement.open))await inputSummary.click();
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Renderer input links ${width}px overflow`);
     if(width===390)await page.screenshot({path:root+'docs/preview-evals-mobile.png',fullPage:true});
@@ -210,9 +214,16 @@ export async function verifyEvalGallery(page,root,port){
     const entry=gallery.cases.find(c=>c.id===id);
     const runtime=entry.latest.sprites.length>0;
     if(runtime)assert.equal(entry.latest.sprites.length,12);
-    else{
+    else if(entry.latest.previewSequence){
       assert.equal(entry.latest.previewSequence.isProcessedSprite,false);
       assert.equal(entry.latest.previewSequence.frames.length,12);
+    }else{
+      assert.ok(entry.latest.previewUnavailable,'A rejected source without safe panel isolation needs a visible reason');
+      await page.locator(`[data-eval-case="${id}"]`).click();
+      await page.getByAltText('Original generation 1',{exact:true}).waitFor();
+      assert.ok((await page.locator('.eval-player-note').innerText()).includes('Raw sequence unavailable'));
+      assert.equal(await page.locator('.eval-player').count(),0,'Do not invent playback panels from overlapping art');
+      continue;
     }
     await page.locator(`[data-eval-case="${id}"]`).click();
     await page.locator(`.eval-player[data-player-source="${runtime?'runtime':'raw'}"][data-frame-count="12"]`).waitFor();

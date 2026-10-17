@@ -1,0 +1,7 @@
+{
+  "kind": "animation",
+  "sprites": 12,
+  "sourceSHA256": "6fe9470cded0c55b737185b1b60f95d3300a5efb562434e9ff30950bf148ae4c",
+  "removedAlphaMass": 414080,
+  "output": "assets/evals/2026-10-17-3d-creative-reskin-all/dancing-player/processed"
+}

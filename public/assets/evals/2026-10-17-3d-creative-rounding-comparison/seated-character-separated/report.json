@@ -1,0 +1,273 @@
+{
+  "version": 3,
+  "policy": "llm-visual-v1",
+  "caseId": "seated-character-separated",
+  "status": "needs-visual-review",
+  "automaticChecks": [
+    {
+      "check": "requested-output-location",
+      "pass": true,
+      "detail": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated"
+    },
+    {
+      "check": "case-and-request",
+      "pass": true,
+      "detail": "First generate an isolated wooden stool centered on a 128x128 tile with a 48px-high seat. Then use the stool as a support reference to generate a 160px nominal-height player sitting on it. Deliver the stool and the sitting character as separate transparent layers. The character-only sprite must contain no stool or floor and retain its projected ground anchor plus a 48px support elevation so it aligns when recomposed. Deliver each sprite in a 192x320px frame with local projected ground anchor (96,248). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated."
+    },
+    {
+      "check": "generation-sources",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "check": "source-0-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-0-unchanged",
+      "pass": true,
+      "detail": "e92c56a6847efc12dff3ba3984f65d68405416262a3cdb7f6f222beb9d56f8af"
+    },
+    {
+      "check": "source-0-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-0-references",
+      "pass": true,
+      "detail": [
+        "references/stool-3d.png"
+      ]
+    },
+    {
+      "check": "source-0-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-0-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-0-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "source-1-role",
+      "pass": true,
+      "detail": "whole-asset"
+    },
+    {
+      "check": "source-1-unchanged",
+      "pass": true,
+      "detail": "771b7c85e146febd0b7fcf5d039b2da65d642c51b056e63beeaa5fad4dcdb28c"
+    },
+    {
+      "check": "source-1-actual-prompt",
+      "pass": true,
+      "detail": "Expanded submitted prompt"
+    },
+    {
+      "check": "source-1-references",
+      "pass": true,
+      "detail": [
+        "references/character-3d.png",
+        "references/stool-finished.png"
+      ]
+    },
+    {
+      "check": "source-1-reference-hashes",
+      "pass": true,
+      "detail": "Every generation input raster is hashed"
+    },
+    {
+      "check": "source-1-recipe-fields",
+      "pass": true,
+      "detail": "Tool, transparency mode, and input roles recorded"
+    },
+    {
+      "check": "source-1-png",
+      "pass": true,
+      "detail": "PNG"
+    },
+    {
+      "check": "unchanged-guide-layout",
+      "pass": true,
+      "detail": "bab6e12e42fd1515e8dec46d2b4071666153cd758d929ea9d2b8bb54786a512b"
+    },
+    {
+      "check": "registered-guide",
+      "pass": true,
+      "detail": "Declared registration exists; placement still needs independent visual review"
+    },
+    {
+      "check": "kind-and-projection",
+      "pass": true,
+      "detail": {
+        "kind": "layered",
+        "projection": "top-down-oblique-square-grid"
+      }
+    },
+    {
+      "check": "sprite-count",
+      "pass": true,
+      "detail": 2
+    },
+    {
+      "check": "unique-sprite-ids",
+      "pass": true,
+      "detail": [
+        "stool",
+        "character"
+      ]
+    },
+    {
+      "check": "declared-geometry",
+      "pass": true,
+      "detail": "Size, center anchor, occupancy and declared elevation; metadata does not prove visual geometry"
+    },
+    {
+      "check": "separate-layer-roles",
+      "pass": true,
+      "detail": [
+        "stool",
+        "character"
+      ]
+    },
+    {
+      "check": "support-elevation-once",
+      "pass": true,
+      "detail": 48
+    }
+  ],
+  "visualChecks": [
+    {
+      "check": "independent-current-artifacts",
+      "pass": true,
+      "detail": "Independent LLM identity, grading policy and hashes of originals, sprites, registration and result metadata"
+    },
+    {
+      "check": "projection",
+      "pass": true,
+      "detail": "The finished stool keeps its screen-aligned seat, visible top and front thickness, and parallel leg arrangement. The character retains the frontal top-down oblique view, with the top of the hair and shoulders readable. The supplied runtime layers share the same camera convention; the separate registration concern below is not a camera rotation.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/stool-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/character-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-dark-2x.png"
+      ]
+    },
+    {
+      "check": "complete-art",
+      "pass": true,
+      "detail": "Both layers are wholly present inside their delivered frames. The character has complete hair, hands, boots, and clothing edges; the stool has a complete seat, front rail, crossbar, and legs. Light/dark native and 2x cutouts show no clipping or undeclared floor/shadow.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-01/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-02/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/character-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/character-dark-2x.png"
+      ]
+    },
+    {
+      "check": "anchor-placement",
+      "pass": null,
+      "detail": "The horizontal centerline and actual seat contact are visually coherent in the stored placement/recomposition. The redesigned seated anatomy changes the head, torso and limb relationships to the crude 3D pose, while the opaque torso/thighs obscure the pelvis attachment. I cannot confidently establish the exact projected ground root or nominal standing scale from these seated images alone without treating primitive contours or toe/alpha bounds as invariants. This criterion remains open; metadata is not visual proof of the root.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/character-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/stool-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/seated-character-separated/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/seated-character-separated/placement-1-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/seated-character-separated/reviewer-same-frame-support-comparison-2x.png"
+      ]
+    },
+    {
+      "check": "layer-separation",
+      "pass": true,
+      "detail": "The character-only cutouts contain the person and clothing without a stool seat, wooden legs, floor, guide, or support-shaped remnants. The stool-only cutouts contain the full wooden stool without anatomy or character-shaped contamination. This holds on both backgrounds at native and 2x.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-dark-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/character-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/character-dark-2x.png"
+      ]
+    },
+    {
+      "check": "seated-contact",
+      "pass": true,
+      "detail": "At the stored root/support transforms, the finished thighs and pelvis visibly meet the seat without an air gap, and the hands and feet hang consistently in front of the stool. The seat remains visible beside and between the thighs and the legs are ordered plausibly. This establishes usable actual contact without manual adjustment; it does not independently certify the obscured ground root or nominal standing scale.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-dark-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-dark-2x.png"
+      ]
+    },
+    {
+      "check": "complete-layers",
+      "pass": true,
+      "detail": "The independently saved stool source and stool-only runtime image show the whole uninterrupted seat beneath the future character, the complete front rail and crossbar, and both full visible legs. The character is separately present as a complete cutout. No body-shaped hole or flattened-overlap slicing is visible in the supplied layers.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-01/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-02/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-2x.png"
+      ]
+    },
+    {
+      "check": "support-height",
+      "pass": true,
+      "detail": "The finished stool preserves the reference seat level and the visual seat-to-ground span appropriate to the 48px support target. The supplied recomposition places the character on this seat without the obvious upward displacement an additional 48px application would produce. The packet stores support separately and marks it baked into the character; the image establishes plausible once-applied contact, not numerical proof of elevation.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/references/stool-3d.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/stool-light-2x.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/review-packets/seated-character-separated/placement-0-light.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-native.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-dark-2x.png"
+      ]
+    },
+    {
+      "check": "source-faithfulness",
+      "pass": true,
+      "detail": "Each delivered layer faithfully resamples its independently supplied AI source: wood grain and plank details remain in the stool, and facial features, tunic folds, hands, trousers and boots remain in the character. There is no visible replacement art or per-part fitting introduced by processing. The redesigned character anatomy is already present in its generated source; this source-faithfulness pass does not certify its obscured ground root or nominal standing scale.",
+      "evidence": [
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-01.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/source-02.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-01/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/processed-02/frames/frame-00.png",
+        "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-rounding-comparison/seated-character-separated/previews/recomposed-light-2x.png"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "check": "stool-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    },
+    {
+      "check": "character-frame-margin",
+      "detail": {
+        "edgeAlphaMax": 0,
+        "note": "Inspect complete art visually; edge alpha alone does not establish clipping."
+      },
+      "gating": false
+    }
+  ],
+  "reviewArtifacts": {},
+  "reviewer": "Independent Codex vision review (rounding comparison)",
+  "scope": "Delivery integrity plus qualitative LLM visual review. Image metrics are non-gating diagnostics; no new artwork is generated."
+}

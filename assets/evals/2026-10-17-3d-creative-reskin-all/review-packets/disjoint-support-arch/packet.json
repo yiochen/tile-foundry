@@ -1,0 +1,278 @@
+{
+  "policy": "llm-visual-v1",
+  "caseId": "disjoint-support-arch",
+  "request": "Generate a stone arch spanning three cells across one row. Its two pillars occupy only the left and right 128x128 cells; the center cell is walkable. The arch is 160px tall. Deliver transparent art with explicit disjoint support occupancy and a separate overhead span. Deliver each sprite in a 512x448px frame with local projected ground anchor (256,312). Save original generated images, exact prompts, all references, processed sprites, result.json, and review previews in /Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch.",
+  "criteria": {
+    "projection": "Screen-aligned square grid; top and front readable; parallel edges, no depth-dependent scale or camera drift.",
+    "complete-art": "Full silhouette and effects fit the declared frame; no clipped limbs or undeclared shadows.",
+    "anchor-placement": "Ground/root location matches the guide independently of alpha bounds or visible toe tips.",
+    "open-passage": "The center cell is open at ground level; the arch overhead must not become a filled base or ground collision.",
+    "arch-depth": "Foreground/background passage previews show correct occlusion using authored depth pieces; a single Y-sort or flattened-scene cut is insufficient.",
+    "support-placement": "Both pillar bases land on their declared cells with no support in the center.",
+    "source-faithfulness": "Compare original generated sources with processed sprites and declared operations; no invented replacement art or unreported geometry fitting."
+  },
+  "registration": {
+    "kind": "object",
+    "projection": "top-down-oblique-square-grid",
+    "cellSize": 128,
+    "heightAxis": [
+      0,
+      -1
+    ],
+    "elevationScale": 1,
+    "groundAnchorAlignment": "center",
+    "supportCells": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "overheadCells": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "sprites": [
+      {
+        "id": "disjoint-support-arch",
+        "image": "sprites/whole.png",
+        "size": [
+          512,
+          448
+        ],
+        "anchor": [
+          256,
+          312
+        ],
+        "footprint": [
+          384,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "elevationPx": 160
+      }
+    ],
+    "depthPieces": [
+      {
+        "id": "arch-rear",
+        "image": "sprites/arch-rear.png",
+        "size": [
+          512,
+          448
+        ],
+        "anchor": [
+          256,
+          312
+        ],
+        "footprint": [
+          384,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 0,
+        "role": "arch-depth-piece",
+        "drawOrder": 0
+      },
+      {
+        "id": "arch-front",
+        "image": "sprites/arch-front.png",
+        "size": [
+          512,
+          448
+        ],
+        "anchor": [
+          256,
+          312
+        ],
+        "footprint": [
+          384,
+          128
+        ],
+        "occupiedCells": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "elevationPx": 160,
+        "index": 0,
+        "role": "arch-depth-piece",
+        "drawOrder": 2
+      }
+    ]
+  },
+  "operations": [
+    {
+      "sprite": "disjoint-support-arch",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {},
+      "sourceRect": null,
+      "cleanup": {}
+    },
+    {
+      "sprite": "arch-rear",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.38185754263688687,
+          0.38185754263688687
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          670.4070796460177,
+          817.058628318584
+        ],
+        "anchorOut": [
+          256,
+          312
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        0.0,
+        0.0,
+        1340.8141592920354,
+        1173.212389380531
+      ],
+      "cleanup": {}
+    },
+    {
+      "sprite": "arch-front",
+      "registrationMethod": "authored-3d-projection",
+      "transform": {
+        "scale": [
+          0.38185754263688687,
+          0.38185754263688687
+        ],
+        "sourceOrigin": [
+          0.0,
+          0.0
+        ],
+        "anchorIn": [
+          670.4070796460177,
+          817.058628318584
+        ],
+        "anchorOut": [
+          256,
+          312
+        ],
+        "perPoseFitting": false
+      },
+      "sourceRect": [
+        0.0,
+        0.0,
+        1340.8141592920354,
+        1173.212389380531
+      ],
+      "cleanup": {}
+    }
+  ],
+  "guide": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/guide.json",
+  "assets": [
+    {
+      "role": "source",
+      "sourceRole": "rear-depth-piece",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/source-01.png"
+    },
+    {
+      "role": "source",
+      "sourceRole": "front-depth-piece",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/source-02.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/arch-rear-3d.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/whole-3d.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/arch-front-3d.png"
+    },
+    {
+      "role": "input-reference",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/references/rear-finished.png"
+    },
+    {
+      "role": "processed",
+      "id": "disjoint-support-arch",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/whole.png"
+    },
+    {
+      "role": "processed",
+      "id": "arch-rear",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/arch-rear.png"
+    },
+    {
+      "role": "processed",
+      "id": "arch-front",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/disjoint-support-arch/sprites/arch-front.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/disjoint-support-arch/placement-0-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/disjoint-support-arch/placement-0-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/disjoint-support-arch/placement-1-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/disjoint-support-arch/placement-1-dark.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/disjoint-support-arch/placement-2-light.png"
+    },
+    {
+      "role": "placement-preview",
+      "path": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/review-packets/disjoint-support-arch/placement-2-dark.png"
+    }
+  ],
+  "instructions": "/Users/yiouchen/.codex/worktrees/1834/tile-foundry/assets/evals/2026-10-17-3d-creative-reskin-all/skill-snapshot/references/visual-review.md"
+}
