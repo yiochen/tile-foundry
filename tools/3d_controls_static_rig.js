@@ -143,4 +143,3 @@ export function setPose(character, mode, index, count = mode === 'dance' ? 12 : 
   } else if (mode !== 'neutral') throw new Error(`Unknown pose mode ${mode}`);
   group.updateMatrixWorld(true); character.skeleton.update();
 }
-
