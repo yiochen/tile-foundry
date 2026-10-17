@@ -5,6 +5,8 @@ export async function verifyPlaybackClock(page){
   // A frame timestamp can precede the performance.now() call that schedules it.
   // Drive RAF independently to cover that boundary and the complete 12 fps loop.
   await page.getByRole('slider',{name:'Sprite progress',exact:true}).press('Home');
+  // Initialize Playwright's polling with native RAF before temporarily replacing it.
+  await page.waitForFunction(()=>document.querySelector('.eval-sprite-preview')?.dataset.ready==='true');
   await page.evaluate(()=>{
     const originalRequest=window.requestAnimationFrame,originalCancel=window.cancelAnimationFrame;
     const clock={callbacks:new Map(),nextId:1,firstRequest:null};
